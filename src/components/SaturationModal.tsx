@@ -4,15 +4,17 @@
  * Role: Saturation alert modal handling architectural equilibrium and rotation blacklist.
  */
 
-import React, { useCallback, useEffect, useId, type FC, type MouseEvent } from 'react';
-import { ShieldAlert, Ban, RotateCcw, X, FileCode, AlertCircle } from 'lucide-react';
+import React, { useCallback, useEffect, useId, useState, type FC, type MouseEvent } from 'react';
+import { ShieldAlert, Ban, RotateCcw, X, FileCode, AlertCircle, CheckSquare, Square, Play } from 'lucide-react';
 import type { SaturationAlert } from '@/lib/types';
 
 export interface SaturationModalProps {
   readonly alert: SaturationAlert | null;
   readonly onClose: () => void;
-  readonly onAddToBlacklist: (path: string) => void;
+  readonly onAddToBlacklist: (path: string, alwaysAutoBlacklist?: boolean) => void;
   readonly onKeepInRotation: () => void;
+  readonly onResumeBatch?: () => void;
+  readonly isBatchPaused?: boolean;
 }
 
 export const SaturationModal: FC<SaturationModalProps> = ({
@@ -20,9 +22,12 @@ export const SaturationModal: FC<SaturationModalProps> = ({
   onClose,
   onAddToBlacklist,
   onKeepInRotation,
+  onResumeBatch,
+  isBatchPaused = false,
 }) => {
   const modalTitleId = useId();
   const modalDescriptionId = useId();
+  const [alwaysAutoBlacklist, setAlwaysAutoBlacklist] = useState(true);
 
   const handleKeyDown = useCallback(
     (event: KeyboardEvent) => {
@@ -54,9 +59,12 @@ export const SaturationModal: FC<SaturationModalProps> = ({
     }
   };
 
-  const handleBlacklistAction = () => {
+  const handleBlacklistAction = (alwaysAuto: boolean) => {
     try {
-      onAddToBlacklist(alert.path);
+      onAddToBlacklist(alert.path, alwaysAuto);
+      if (alwaysAuto && isBatchPaused && onResumeBatch) {
+        onResumeBatch();
+      }
     } catch (error) {
       console.error('Failed to add path to rotation blacklist:', error);
     }
@@ -131,13 +139,34 @@ export const SaturationModal: FC<SaturationModalProps> = ({
             </p>
           </div>
 
-          <div className="pt-1">
+          <div className="pt-1 space-y-2">
             <span className="text-[10px] font-bold text-gray-200 font-mono uppercase tracking-wider block mb-1">
               Blacklist Decision:
             </span>
             <p className="text-xs text-gray-400">
               Would you like to add <span className="text-cyan-300 font-mono font-semibold">{alert.path}</span> to the engine blacklist so subsequent autonomous passes skip it?
             </p>
+
+            <button
+              id="toggle-always-auto-blacklist"
+              type="button"
+              onClick={() => setAlwaysAutoBlacklist(!alwaysAutoBlacklist)}
+              className="flex items-center gap-2 p-2.5 rounded-lg bg-black/50 border border-red-900/40 hover:border-amber-500/50 transition-colors w-full text-left cursor-pointer group"
+            >
+              {alwaysAutoBlacklist ? (
+                <CheckSquare className="w-4 h-4 text-amber-400 shrink-0" />
+              ) : (
+                <Square className="w-4 h-4 text-gray-500 shrink-0 group-hover:text-gray-400" />
+              )}
+              <div className="text-[11px] leading-tight">
+                <span className="font-semibold text-gray-200 block">
+                  Always Auto-Blacklist &amp; Auto-Skip Saturated Files
+                </span>
+                <span className="text-[10px] text-gray-400">
+                  Do not show this popup again. Automatically skip future 0-diff files during autonomous cycles.
+                </span>
+              </div>
+            </button>
           </div>
         </div>
 
@@ -154,12 +183,28 @@ export const SaturationModal: FC<SaturationModalProps> = ({
           <button
             id="btn-add-blacklist"
             type="button"
-            onClick={handleBlacklistAction}
+            onClick={() => handleBlacklistAction(alwaysAutoBlacklist)}
             className="w-full sm:w-auto px-4 py-2 rounded bg-amber-500 hover:bg-amber-400 text-black text-xs font-mono font-bold transition-all shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2 cursor-pointer"
           >
             <Ban className="w-3.5 h-3.5" />
-            <span>Add to Blacklist & Skip</span>
+            <span>
+              {alwaysAutoBlacklist ? 'Auto-Blacklist & Don\'t Pop Up Again' : 'Add to Blacklist & Skip'}
+            </span>
           </button>
+          {isBatchPaused && onResumeBatch && (
+            <button
+              id="btn-resume-batch-sat"
+              type="button"
+              onClick={() => {
+                handleBlacklistAction(true);
+                onResumeBatch();
+              }}
+              className="w-full sm:w-auto px-4 py-2 rounded bg-red-600 hover:bg-red-500 text-white text-xs font-mono font-bold transition-all shadow-lg shadow-red-600/20 flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <Play className="w-3.5 h-3.5" />
+              <span>Resume Batch</span>
+            </button>
+          )}
         </div>
       </div>
     </div>

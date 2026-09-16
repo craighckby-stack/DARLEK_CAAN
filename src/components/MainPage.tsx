@@ -13,6 +13,7 @@ import MutationDiffView from '@/components/MutationDiffView';
 import AgentOrchestra from '@/components/AgentOrchestra';
 import DosConsoleModal from '@/components/DosConsoleModal';
 import { msDosEngine } from '@/lib/msDosEngine';
+import { evolutionLock } from '@/lib/evolutionLock';
 import { saveLogToRag, saveMutationToRag, synthesizeRagMutation, type HotswappedFileEntry } from '@/lib/ragBrain';
 import { syncAllLogsToGitHub, scheduleGitHubLogSync } from '@/lib/githubLogSync';
 import { clearAllFirebaseData } from '@/lib/firebase';
@@ -232,7 +233,7 @@ export default function Home() {
   const [hasServerGeminiKey, setHasServerGeminiKey] = useState(false);
 
   // ── Saturation Logic & Equilibrium states ──
-  const [autoPauseOnSaturation, setAutoPauseOnSaturation] = useState(true);
+  const [autoPauseOnSaturation, setAutoPauseOnSaturation] = useState(false);
   const [autoSkipSaturated, setAutoSkipSaturated] = useState(true);
   const [blacklistedFiles, setBlacklistedFiles] = useState<string[]>([]);
   const [manualBlacklistInput, setManualBlacklistInput] = useState('');
@@ -2943,6 +2944,7 @@ export default function Home() {
               return;
             }
 
+            await evolutionLock.acquireAsync('manual-propose', 60_000);
             try {
               let fileContent = sourceFile.content || '';
               let fileSha = (sourceFile as any).sha || '';
@@ -3047,16 +3049,21 @@ export default function Home() {
                         localStorage.setItem('darlek_cann_blacklisted_files', JSON.stringify(updated));
                         return updated;
                       });
+                      toast({
+                        title: 'AUTO-BLACKLISTED (0 DIFFS)',
+                        description: `${sourceFile.path} automatically added to blacklist. Peak equilibrium reached.`,
+                      });
+                    } else {
+                      setSaturationAlert({
+                        path: sourceFile.path,
+                        content: fileContent,
+                        summary: proposeData.analysis || 'AI optimization engine determined this file achieves maximum architectural efficiency (0 diffs).',
+                        timestamp: new Date().toLocaleTimeString(),
+                      });
                     }
-                    if (autoPauseOnSaturation) {
+                    if (autoPauseOnSaturation && !autoSkipSaturated) {
                       setBatchMode(false);
                     }
-                    setSaturationAlert({
-                      path: sourceFile.path,
-                      content: fileContent,
-                      summary: proposeData.analysis || 'AI optimization engine determined this file achieves maximum architectural efficiency (0 diffs).',
-                      timestamp: new Date().toLocaleTimeString(),
-                    });
                     setIsLoading(false);
                     return;
                   }
@@ -3221,6 +3228,7 @@ export default function Home() {
               addLogEntry('ERROR', 'Mutation network error.');
             } finally {
               setIsLoading(false);
+              await evolutionLock.releaseAsync('manual-propose');
             }
           } else {
             addCaanMessage(
@@ -3297,6 +3305,7 @@ export default function Home() {
             `[BATCH ${batchProgress + 1}/${batchQueue.length}] Analyzing ${nextFile.path}...`
           );
 
+          await evolutionLock.acquireAsync('batch-evolution', 60_000);
           try {
             let fileContent = nextFile.content || '';
             let fileSha = (nextFile as any).sha || '';
@@ -3403,20 +3412,23 @@ export default function Home() {
                     localStorage.setItem('darlek_cann_blacklisted_files', JSON.stringify(updated));
                     return updated;
                   });
+                  addCaanMessage(`[AUTO-BLACKLIST] ${nextFile.path} automatically added to blacklist. Continuing autonomous cycle...`);
+                } else {
+                  setSaturationAlert({
+                    path: nextFile.path,
+                    content: fileContent,
+                    summary: proposeData.analysis || 'File reached peak architectural equilibrium in autonomous batch cycle (0 diffs).',
+                    timestamp: new Date().toLocaleTimeString(),
+                  });
+                  if (autoPauseOnSaturation) {
+                    setBatchMode(false);
+                    addCaanMessage('Auto-Pause on Saturation engaged: Autonomous batch paused.');
+                  }
                 }
-                if (autoPauseOnSaturation) {
-                  setBatchMode(false);
-                  addCaanMessage('Auto-Pause on Saturation engaged: Autonomous batch paused.');
-                }
-                setSaturationAlert({
-                  path: nextFile.path,
-                  content: fileContent,
-                  summary: proposeData.analysis || 'File reached peak architectural equilibrium in autonomous batch cycle (0 diffs).',
-                  timestamp: new Date().toLocaleTimeString(),
-                });
                 setBatchProgress((prev) => prev + 1);
                 setPendingMutation(null);
                 setDebateActive(false);
+                setIsLoading(false);
               } else if (proposeData.success) {
                 // === Code-Enhancer AST Validation ===
                 const validationResult = await validateSourceCode(proposeData.proposedCode, nextFile.path);
@@ -3572,6 +3584,7 @@ export default function Home() {
             setBatchMode(false);
           } finally {
             setIsLoading(false);
+            await evolutionLock.releaseAsync('batch-evolution');
           }
           break;
         }
@@ -6264,16 +6277,27 @@ export default function Home() {
       <SaturationModal
         alert={saturationAlert}
         onClose={() => setSaturationAlert(null)}
-        onAddToBlacklist={(filePath) => {
+        isBatchPaused={!batchMode && batchQueue.length > 0 && batchProgress < batchQueue.length}
+        onResumeBatch={() => {
+          setBatchMode(true);
+          addCaanMessage('Autonomous batch mode resumed.');
+        }}
+        onAddToBlacklist={(filePath, alwaysAutoAdd) => {
           if (!blacklistedFiles.includes(filePath)) {
             const updated = [...blacklistedFiles, filePath];
             setBlacklistedFiles(updated);
             localStorage.setItem('darlek_cann_blacklisted_files', JSON.stringify(updated));
           }
+          if (alwaysAutoAdd) {
+            setAutoSkipSaturated(true);
+            setAutoPauseOnSaturation(false);
+            localStorage.setItem('darlek_cann_auto_skip_saturation', 'true');
+            localStorage.setItem('darlek_cann_auto_pause_saturation', 'false');
+          }
           setSaturationAlert(null);
           toast({
             title: 'FILE BLACKLISTED',
-            description: `${filePath} added to saturation blacklist.`,
+            description: `${filePath} added to saturation blacklist.${alwaysAutoAdd ? ' Auto-blacklist enabled (popups disabled).' : ''}`,
           });
         }}
         onKeepInRotation={() => {

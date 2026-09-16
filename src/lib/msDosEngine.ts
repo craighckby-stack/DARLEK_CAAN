@@ -22,6 +22,7 @@ import {
 import { AUTONOMOUS_HOTSWAP_ENABLED } from './config';
 import { clearAllFirebaseData } from './firebase';
 import { ingestArchaeologyDatasetToFirebase, ARCHAEOLOGY_PAIRS } from './archaeology-dataset';
+import { evolutionLock } from './evolutionLock';
 
 const LOCAL_STORAGE_GEN_KEY = 'darlek_cann_msdos_generation_state';
 
@@ -137,9 +138,14 @@ class MsDosEngineService {
         this.addLog(chosen.tag, chosen.msg, hex, false);
       }
 
-      // Execute autonomous hotswap only if explicitly active
+      // Execute autonomous hotswap only if explicitly active and no manual propose/debate is in flight
       if (tickCounter % 8 === 0 && this.autonomousHotswap && !this.isProcessingHotswap) {
-        await this.triggerAutonomousHotswap();
+        if (evolutionLock.isLocked()) {
+          const lockOwner = evolutionLock.getOwner() || 'evolution process';
+          this.addLog('LOCK_WAIT', `Autonomous hotswap deferred: system busy with [${lockOwner}].`, undefined, false);
+        } else {
+          await this.triggerAutonomousHotswap();
+        }
       }
     }, 2400);
 
@@ -231,6 +237,19 @@ class MsDosEngineService {
    */
   public async triggerAutonomousHotswap(targetPath?: string): Promise<HotswappedFileEntry | null> {
     if (this.isProcessingHotswap) return null;
+
+    if (evolutionLock.isLocked()) {
+      const lockOwner = evolutionLock.getOwner() || 'manual operation';
+      this.addLog('LOCK_WAIT', `Autonomous hotswap refused: engine locked by [${lockOwner}].`, undefined, false);
+      return null;
+    }
+
+    const acquired = await evolutionLock.acquireAsync('msdos-autonomous-hotswap', 60_000);
+    if (!acquired) {
+      this.addLog('LOCK_WAIT', 'Autonomous hotswap deferred: could not acquire global execution lock.', undefined, false);
+      return null;
+    }
+
     this.isProcessingHotswap = true;
 
     const path = targetPath || this.activeTarget;
@@ -312,6 +331,7 @@ class MsDosEngineService {
       return null;
     } finally {
       this.isProcessingHotswap = false;
+      await evolutionLock.releaseAsync('msdos-autonomous-hotswap');
     }
   }
 

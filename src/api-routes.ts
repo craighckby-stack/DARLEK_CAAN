@@ -27,6 +27,7 @@ import * as route25 from './app/api/setup/test-connection/route.ts';
 import * as route26 from './app/api/system/reboot/route.ts';
 import * as route27 from './app/api/system/scaffold/route.ts';
 import * as route28 from './app/api/validate/route.ts';
+import * as route29 from './app/api/evolution/lock/route.ts';
 
 const apiRoutes = {};
 apiRoutes['/api/brain'] = route0;
@@ -38,6 +39,7 @@ apiRoutes['/api/evolution/debate'] = route5;
 apiRoutes['/api/evolution/health'] = route6;
 apiRoutes['/api/evolution/orchestra'] = route7;
 apiRoutes['/api/evolution/propose'] = route8;
+apiRoutes['/api/evolution/lock'] = route29;
 apiRoutes['/api/extract-text'] = route9;
 apiRoutes['/api/github/branches'] = route10;
 apiRoutes['/api/github/bulk-commit'] = route11;

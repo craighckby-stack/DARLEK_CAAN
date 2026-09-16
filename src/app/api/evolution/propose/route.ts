@@ -6,6 +6,7 @@ import { db } from '@/lib/db';
 import { retrieveRelevantMutations } from '@/lib/ragBrain';
 import { RAG_RETRIEVAL_ENABLED } from '@/lib/config';
 import { safeReqJson } from '@/lib/safe-json';
+import { evolutionLock } from '@/lib/evolutionLock';
 
 export const maxDuration = 120;
 export const dynamic = 'force-dynamic';
@@ -455,6 +456,23 @@ export async function GET(): Promise<NextResponse> {
  * Handles POST requests for cognitive mutation proposals with fully optimized error bounds.
  */
 export async function POST(req: NextRequest): Promise<NextResponse> {
+  const lockAcquired = evolutionLock.acquire('server-propose', 60_000);
+  if (!lockAcquired) {
+    const becameFree = await evolutionLock.waitForFree(6_000);
+    if (!becameFree || !evolutionLock.acquire('server-propose', 60_000)) {
+      const owner = evolutionLock.getOwner() || 'background process';
+      return NextResponse.json({
+        analysis: `Evolution engine is currently busy with ${owner}. Please wait a moment and retry.`,
+        proposedCode: '',
+        riskScore: 0,
+        affectedFiles: [],
+        success: false,
+        error: `Engine busy with ${owner}`,
+        isBusy: true,
+      }, { status: 429 });
+    }
+  }
+
   try {
     const body = await safeReqJson<ExtendedProposeBody>(req, {} as ExtendedProposeBody);
     const { fileContent, filePath, apiKeys, sessionId } = body;
@@ -648,5 +666,7 @@ If NO improvements can be safely or confidently made, output ONLY a JSON object 
       { analysis: '', proposedCode: '', riskScore: 0, affectedFiles: [], success: false, error: errorMessage },
       { status: 500 }
     );
+  } finally {
+    evolutionLock.release('server-propose');
   }
 }

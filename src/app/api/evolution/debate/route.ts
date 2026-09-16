@@ -11,8 +11,29 @@ import { db } from '@/lib/db';
 import { dalekBrainDebateVote, dalekBrainSynthesize } from '@/lib/dalek-brain';
 import { safeReqJson } from '@/lib/safe-json';
 import type { ApiKeys } from '@/lib/types';
+import { evolutionLock } from '@/lib/evolutionLock';
 
 export const dynamic = 'force-dynamic';
+
+/**
+ * Executes async tasks with bounded concurrency to prevent slamming LLM quotas
+ * and memory ceilings on Cloud Run.
+ */
+async function runWithConcurrencyLimit<T>(
+  tasks: Array<() => Promise<T>>,
+  concurrency = 2
+): Promise<T[]> {
+  const results: T[] = new Array(tasks.length);
+  let nextIndex = 0;
+  const workers = Array.from({ length: Math.min(concurrency, tasks.length) }, async () => {
+    while (nextIndex < tasks.length) {
+      const idx = nextIndex++;
+      results[idx] = await tasks[idx]();
+    }
+  });
+  await Promise.all(workers);
+  return results;
+}
 
 // ============================================================================
 // Types & Interfaces
@@ -250,6 +271,19 @@ export async function GET(): Promise<NextResponse> {
 }
 
 export async function POST(req: NextRequest): Promise<NextResponse> {
+  const lockAcquired = evolutionLock.acquire('server-debate', 120_000);
+  if (!lockAcquired) {
+    const becameFree = await evolutionLock.waitForFree(8_000);
+    if (!becameFree || !evolutionLock.acquire('server-debate', 120_000)) {
+      const owner = evolutionLock.getOwner() || 'background process';
+      return NextResponse.json({
+        error: `Debate chamber is currently busy with ${owner}. Please wait a moment and retry.`,
+        isBusy: true,
+        success: false,
+      }, { status: 429 });
+    }
+  }
+
   try {
     const body = await safeReqJson<DebateBody>(req, {});
     const filePath = body.filePath ?? '';
@@ -335,7 +369,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       }
 
       if (roundIndex === 1) {
-        const agentPromises = selectedPersonas.map(async (agent): Promise<AgentVote> => {
+        const agentTasks = selectedPersonas.map((agent) => async (): Promise<AgentVote> => {
           const userPrompt = [
             `MUTATION UNDER REVIEW:\n${diffSummary}${readmeContext}${appliedMutationsContext}`,
             `REPOSITORY STRUCTURE:\n${fileTreeSummary}`,
@@ -431,13 +465,13 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
           };
         });
 
-        currentVotes = await Promise.all(agentPromises);
+        currentVotes = await runWithConcurrencyLimit(agentTasks, 2);
       } else {
         const transcript = currentVotes
           .map((v) => `- ${v.agentName} voted [${v.vote.toUpperCase()}] (${v.confidence}% confidence) stating: "${v.reasoning}"`)
           .join('\n');
 
-        const agentPromises = selectedPersonas.map(async (agent): Promise<AgentVote> => {
+        const agentTasks = selectedPersonas.map((agent) => async (): Promise<AgentVote> => {
           const userPrompt = [
             `MUTATION UNDER REVIEW:\n${diffSummary}${readmeContext}${appliedMutationsContext}`,
             `ORIGINAL CODE:\n\`\`\`\n${truncatedOriginal}\n\`\`\``,
@@ -512,7 +546,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
           };
         });
 
-        currentVotes = await Promise.all(agentPromises);
+        currentVotes = await runWithConcurrencyLimit(agentTasks, 2);
       }
 
       let roundRejections = 0;
@@ -653,5 +687,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     return NextResponse.json({ error: errorMessage }, { status: 500 });
+  } finally {
+    evolutionLock.release('server-debate');
   }
 }
