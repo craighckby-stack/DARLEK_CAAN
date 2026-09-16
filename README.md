@@ -1,7 +1,4 @@
-still calling both llm rag at the same time making it crash out.
-
-
-.
+fixed was making 5 simultaneously api calls with rag at same time. 
 
 # 🚀 DARLEK CAAN — Autonomous Cognitive Engine & Code Base Evolution Center
 ### Google AI Studio & Cloud Run Implementation Guide
