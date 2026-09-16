@@ -1,7 +1,7 @@
-still calling both at the same time ugh
+still calling both llm rag at the same time making it crash out.
 
 
-soon to be updated with self check rag before llm call to save tokens.
+.
 
 # 🚀 DARLEK CAAN — Autonomous Cognitive Engine & Code Base Evolution Center
 ### Google AI Studio & Cloud Run Implementation Guide
