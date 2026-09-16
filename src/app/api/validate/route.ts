@@ -5,7 +5,7 @@
  * Architecture: Type-safe modular unit with resilient state interfaces.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from '@/lib/next-mock';
 import ts from 'typescript';
 
 interface ValidateRequestBody {

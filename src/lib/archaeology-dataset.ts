@@ -109,6 +109,75 @@ index 89abcdef..c1d2e3f 100644
 -    if not raw_token:
 -        return {"error": "Invalid token"}, 401
      return {"user": "profile_data"}`
+  },
+  {
+    id: 'archaeology_pair_a1b2c3d4',
+    pairId: 'a1b2c3d4',
+    title: 'async error boundary with abort controller',
+    date: 'Mon Sep 14 14:20:00 2026 +0000',
+    author: 'craighckby <craighckby@example.com>',
+    filesTouched: ['src/lib/async-fetcher.ts'],
+    category: 'ASYNC_TIMEOUT_ABORT_SAFETY',
+    wrongCommitMessage: `feat: unhandled async fetch call
+Raw fetch call without AbortController signal or timeout fallback, leading to potential hanging promises.`,
+    wrongDiff: `diff --git a/src/lib/async-fetcher.ts b/src/lib/async-fetcher.ts
+--- a/src/lib/async-fetcher.ts
++++ b/src/lib/async-fetcher.ts
+@@ -5,4 +5,3 @@ export async function fetchData(url: string) {
+-  const res = await fetch(url);
+-  return await res.json();
++  const res = await fetch(url);
++  return res.json();
+}`,
+    correctCommitMessage: `fix: wrap async fetch with AbortController and fallback boundary
+Added 10s timeout abort signal and defensive try/catch fallback state.`,
+    correctDiff: `diff --git a/src/lib/async-fetcher.ts b/src/lib/async-fetcher.ts
+--- a/src/lib/async-fetcher.ts
++++ b/src/lib/async-fetcher.ts
+@@ -5,4 +5,14 @@ export async function fetchData(url: string) {
++  const controller = new AbortController();
++  const timeout = setTimeout(() => controller.abort(), 10000);
++  try {
++    const res = await fetch(url, { signal: controller.signal });
++    if (!res.ok) throw new Error("HTTP " + res.status);
++    return await res.json();
++  } catch (err) {
++    console.warn("[ARCHAEOLOGY_FETCH] Request failed or timed out:", err);
++    return { fallback: true, data: null };
++  } finally {
++    clearTimeout(timeout);
++  }
+}`
+  },
+  {
+    id: 'archaeology_pair_d4e5f6a7',
+    pairId: 'd4e5f6a7',
+    title: 'memory leak listener cleanup in react hook',
+    date: 'Mon Sep 14 16:45:00 2026 +0000',
+    author: 'craighckby <craighckby@example.com>',
+    filesTouched: ['src/hooks/useWindowResize.ts'],
+    category: 'MEMORY_LEAK_CLEANUP',
+    wrongCommitMessage: `bug: window resize listener missing cleanup
+Mounted event listener inside useEffect without returning cleanup function.`,
+    wrongDiff: `diff --git a/src/hooks/useWindowResize.ts b/src/hooks/useWindowResize.ts
+--- a/src/hooks/useWindowResize.ts
++++ b/src/hooks/useWindowResize.ts
+@@ -4,3 +4,4 @@ export function useWindowResize(onResize: () => void) {
+   useEffect(() => {
+     window.addEventListener('resize', onResize);
+   }, [onResize]);
+}`,
+    correctCommitMessage: `fix: add cleanup return handler to useWindowResize
+Properly remove event listener on unmount to prevent component memory leak.`,
+    correctDiff: `diff --git a/src/hooks/useWindowResize.ts b/src/hooks/useWindowResize.ts
+--- a/src/hooks/useWindowResize.ts
++++ b/src/hooks/useWindowResize.ts
+@@ -4,4 +4,5 @@ export function useWindowResize(onResize: () => void) {
+   useEffect(() => {
+     window.addEventListener('resize', onResize);
++    return () => window.removeEventListener('resize', onResize);
+   }, [onResize]);
+}`
   }
 ];
 

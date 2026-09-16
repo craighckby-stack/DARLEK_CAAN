@@ -5,7 +5,7 @@
  * Architecture: Type-safe modular unit with resilient state interfaces.
  */
 
-import { NextResponse } from 'next/server';
+import { NextResponse } from '@/lib/next-mock';
 import { syncPostmortemsToFirebase, getLearningLogs } from '@/lib/learningLogs';
 
 export const dynamic = 'force-dynamic';

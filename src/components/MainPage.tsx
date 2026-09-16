@@ -471,6 +471,15 @@ export default function Home() {
         }));
       }
 
+      const savedGithubToken = localStorage.getItem('af_github_token') || localStorage.getItem('darlek_cann_github_token');
+      if (savedGithubToken) {
+        setTokenInput(savedGithubToken);
+        setSystemState((prev) => ({
+          ...prev,
+          apiKeys: { ...prev.apiKeys, github: savedGithubToken },
+        }));
+      }
+
       const savedModel = localStorage.getItem('darlek_cann_selected_model');
       if (savedModel) {
         setSelectedModel(savedModel as GeminiModelId);
@@ -1400,30 +1409,20 @@ export default function Home() {
         setSetupError(data.message || "GITHUB VERIFICATION DENIED. Check your Personal Access Token.");
         addLogEntry('ERROR', 'GitHub verification denied.');
       }
-    } catch (err) {
-      // Network Exception fallback: immediately launch autonomous mode with preloaded workspace files
-      addLogEntry('WARN', 'Network exception encountered. Activating autonomous offline cognitive engine...');
-      setSetupError(null);
+    } catch (err: any) {
+      // Network Exception fallback: surface error instead of forcing offline
+      addLogEntry('ERROR', `Network exception encountered: ${err.message || String(err)}`);
+      setSetupError(`Connection failed: ${err.message || String(err)}. Check your repository name. Make sure it doesn't have a trailing dash if it shouldn't!`);
       setSystemState((prev) => ({
         ...prev,
-        setupComplete: true,
+        setupComplete: false,
         connectionStatus: { ...prev.connectionStatus, github: 'disconnected' },
       }));
-      setAutoApprove(true);
-      setAutoDebate(true);
-      const codeFiles = (scannedFiles && scannedFiles.length > 0 ? scannedFiles : DEFAULT_PRELOADED_FILES);
-      setScannedFiles(codeFiles);
-      setBatchQueue(codeFiles);
-      setBatchProgress(0);
-      setBatchMode(true);
-      addCaanMessage(
-        `AUTONOMOUS COGNITIVE PIPELINE LAUNCHED (OFFLINE / RAG RETRIEVAL ACTIVE).\n\nNetwork portal bypassed. Evolving ${codeFiles.length} workspace files with deterministic mutation heuristics.`
-      );
     } finally {
       setSetupTesting(false);
       setIsLoading(false);
     }
-  }, [tokenInput, ownerInput, repoInput, branchInput, addLogEntry, addCaanMessage, setSystemState]);
+  }, [tokenInput, ownerInput, repoInput, branchInput, addLogEntry, addCaanMessage, setSystemState, geminiKeyInput, selectedModel, autoPauseOnSaturation, autoSkipSaturated, blacklistedFiles]);
 
   // ─────────────────────────────────────────────
   // handleUpdateKey / handleUpdateRepoConfig
@@ -1560,9 +1559,13 @@ export default function Home() {
 
   const applyMutation = useCallback(
     async (mutation: PendingMutation, currentBackupToBranch: boolean) => {
-      const { apiKeys, repoConfig } = systemState;
-      if (!apiKeys.github) {
-        addCaanMessage(`AUTONOMOUS LOCAL APPLICATION: Applying mutation to ${mutation.filePath}...`);
+      const activeToken = systemState.apiKeys.github || tokenInput.trim() || (typeof window !== 'undefined' ? (localStorage.getItem('af_github_token') || localStorage.getItem('darlek_cann_github_token') || '') : '');
+      const activeOwner = systemState.repoConfig.owner || ownerInput.trim() || 'craighckby-stack';
+      const activeRepo = systemState.repoConfig.repo || repoInput.trim() || 'DARLEK-CAAN-Cognitive-Engine';
+      const activeBranch = systemState.repoConfig.branch || branchInput.trim() || 'main';
+
+      if (!activeToken) {
+        addCaanMessage(`AUTONOMOUS LOCAL APPLICATION: Applying mutation to ${mutation.filePath}... (No GitHub token set in settings)`);
         addLogEntry('APPROVE', `[LOCAL AUTONOMOUS] Applied mutation to ${mutation.filePath}`);
 
         // Update scannedFiles with new content in local state
@@ -1622,9 +1625,18 @@ export default function Home() {
         return;
       }
 
+      // Sync activeToken into systemState if missing
+      if (!systemState.apiKeys.github && activeToken) {
+        setSystemState((prev) => ({
+          ...prev,
+          apiKeys: { ...prev.apiKeys, github: activeToken },
+          repoConfig: { owner: activeOwner, repo: activeRepo, branch: activeBranch },
+        }));
+      }
+
       setIsLoading(true);
 
-      let targetBranch = repoConfig.branch;
+      let targetBranch = activeBranch;
       let needsBranchCreation = false;
 
       if (mutation.targetBranch) {
@@ -1639,10 +1651,10 @@ export default function Home() {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              token: apiKeys.github,
-              owner: repoConfig.owner,
-              repo: repoConfig.repo,
-              baseBranch: repoConfig.branch,
+              token: activeToken,
+              owner: activeOwner,
+              repo: activeRepo,
+              baseBranch: activeBranch,
               newBranch: backupBranchName,
             }),
           });
@@ -1650,7 +1662,7 @@ export default function Home() {
         } catch (err) {
           console.warn('Backup branch creation error:', err);
         }
-        targetBranch = repoConfig.branch;
+        targetBranch = activeBranch;
       }
 
       if (needsBranchCreation) {
@@ -1659,10 +1671,10 @@ export default function Home() {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              token: apiKeys.github,
-              owner: repoConfig.owner,
-              repo: repoConfig.repo,
-              baseBranch: repoConfig.branch,
+              token: activeToken,
+              owner: activeOwner,
+              repo: activeRepo,
+              baseBranch: activeBranch,
               newBranch: targetBranch,
             }),
           });
@@ -1670,12 +1682,12 @@ export default function Home() {
           if (bsData.success) {
             addSystemMessage(`BRANCH ENGINE: Successfully created branch ${targetBranch}.`);
           } else {
-            addSystemMessage(`BRANCH ERROR: ${bsData.error}. Falling back to ${repoConfig.branch}.`);
-            targetBranch = repoConfig.branch;
+            addSystemMessage(`BRANCH ERROR: ${bsData.error}. Falling back to ${activeBranch}.`);
+            targetBranch = activeBranch;
           }
         } catch (err) {
           addSystemMessage('BRANCH ERROR: Could not reach create-branch endpoint.');
-          targetBranch = repoConfig.branch;
+          targetBranch = activeBranch;
         }
       }
 
@@ -1686,7 +1698,7 @@ export default function Home() {
         addLogEntry('REJECT', `Mutation push aborted: 0 diff detected for ${mutation.filePath}`);
         setIsLoading(false);
         setPendingMutation(null);
-          setDebateActive(false);
+        setDebateActive(false);
         return;
       }
 
@@ -1700,9 +1712,9 @@ export default function Home() {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            token: apiKeys.github,
-            owner: repoConfig.owner,
-            repo: repoConfig.repo,
+            token: activeToken,
+            owner: activeOwner,
+            repo: activeRepo,
             branch: targetBranch,
             path: mutation.filePath,
             content: mutation.proposedCode,
@@ -4599,7 +4611,24 @@ export default function Home() {
                   type="password"
                   placeholder="ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
                   value={tokenInput}
-                  onChange={(e) => setTokenInput(e.target.value)}
+                  onChange={(e) => {
+                    const val = e.target.value;
+                    setTokenInput(val);
+                    const trimmed = val.trim();
+                    if (typeof window !== 'undefined') {
+                      if (trimmed) {
+                        localStorage.setItem('af_github_token', trimmed);
+                        localStorage.setItem('darlek_cann_github_token', trimmed);
+                      } else {
+                        localStorage.removeItem('af_github_token');
+                        localStorage.removeItem('darlek_cann_github_token');
+                      }
+                    }
+                    setSystemState((prev) => ({
+                      ...prev,
+                      apiKeys: { ...prev.apiKeys, github: trimmed },
+                    }));
+                  }}
                   style={{ unicodeBidi: 'normal', direction: 'ltr' }}
                   className="w-full pl-9 pr-3 py-2 text-xs text-red-100 bg-[#060000] border border-red-900/20 rounded font-mono focus:border-red-500/60 focus:ring-1 focus:ring-red-500/30 focus:outline-none transition-all duration-200"
                 />
@@ -4780,7 +4809,14 @@ export default function Home() {
                   dir="ltr"
                   type="text"
                   value={ownerInput}
-                  onChange={(e) => setOwnerInput(e.target.value)}
+                  onChange={(e) => {
+                    const val = e.target.value;
+                    setOwnerInput(val);
+                    setSystemState((prev) => ({
+                      ...prev,
+                      repoConfig: { ...prev.repoConfig, owner: val.trim() },
+                    }));
+                  }}
                   style={{ unicodeBidi: 'normal', direction: 'ltr' }}
                   className="w-full px-3 py-2 text-xs text-gray-200 bg-[#060000] border border-red-900/20 rounded font-mono focus:border-red-500/60 focus:outline-none transition-all duration-200"
                 />
@@ -4793,7 +4829,14 @@ export default function Home() {
                   dir="ltr"
                   type="text"
                   value={repoInput}
-                  onChange={(e) => setRepoInput(e.target.value)}
+                  onChange={(e) => {
+                    const val = e.target.value;
+                    setRepoInput(val);
+                    setSystemState((prev) => ({
+                      ...prev,
+                      repoConfig: { ...prev.repoConfig, repo: val.trim() },
+                    }));
+                  }}
                   style={{ unicodeBidi: 'normal', direction: 'ltr' }}
                   className="w-full px-3 py-2 text-xs text-gray-200 bg-[#060000] border border-red-900/20 rounded font-mono focus:border-red-500/60 focus:outline-none transition-all duration-200"
                   placeholder="e.g. darlek-caan-core"
@@ -4807,7 +4850,14 @@ export default function Home() {
                   dir="ltr"
                   type="text"
                   value={branchInput}
-                  onChange={(e) => setBranchInput(e.target.value)}
+                  onChange={(e) => {
+                    const val = e.target.value;
+                    setBranchInput(val);
+                    setSystemState((prev) => ({
+                      ...prev,
+                      repoConfig: { ...prev.repoConfig, branch: val.trim() },
+                    }));
+                  }}
                   style={{ unicodeBidi: 'normal', direction: 'ltr' }}
                   className="w-full px-3 py-2 text-xs text-gray-200 bg-[#060000] border border-red-900/20 rounded font-mono focus:border-red-500/60 focus:outline-none transition-all duration-200"
                 />

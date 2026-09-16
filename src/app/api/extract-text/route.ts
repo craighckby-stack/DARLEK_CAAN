@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from '@/lib/next-mock';
 import mammoth from 'mammoth';
 
 export const dynamic = 'force-dynamic';

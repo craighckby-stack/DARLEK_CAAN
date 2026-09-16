@@ -5,10 +5,9 @@
  * Architecture: Type-safe modular unit with resilient state interfaces.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from '@/lib/next-mock';
 import { callGemini } from '@/lib/gemini';
 import { getDefaultGeminiKey } from '@/lib/llm-provider';
-import ZAI from 'z-ai-web-dev-sdk';
 import { safeReqJson } from '@/lib/safe-json';
 import { sanitizeContent } from '@/lib/scanner';
 
@@ -202,23 +201,8 @@ async function compileBlueprintToFiles(params: CompileBlueprintParams): Promise<
     });
   } catch (geminiError: unknown) {
     const errorMessage = geminiError instanceof Error ? geminiError.message : String(geminiError);
-    console.warn('[Create repo] Gemini call failed, attempting fallback to Z-AI SDK:', errorMessage);
-    try {
-      const zai = await ZAI.create();
-      const completion = await zai.chat.completions.create({
-        messages: [
-          { role: 'system', content: params.systemPrompt },
-          { role: 'user', content: params.userPrompt },
-        ],
-        max_tokens: 8192,
-        thinking: { type: 'disabled' },
-      });
-      generatedText = completion.choices?.[0]?.message?.content || null;
-    } catch (sdkError: unknown) {
-      const sdkErrorMessage = sdkError instanceof Error ? sdkError.message : String(sdkError);
-      console.error('[Create repo] Fallback SDK failed:', sdkErrorMessage);
-      useDeterministicFallback = true;
-    }
+    console.warn('[Create repo] Gemini call failed, using deterministic fallback structure:', errorMessage);
+    useDeterministicFallback = true;
   }
 
   let compilation: CompilationOutput;

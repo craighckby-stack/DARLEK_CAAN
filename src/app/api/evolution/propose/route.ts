@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from '@/lib/next-mock';
 import { callLlm, getDefaultGeminiKey } from '@/lib/llm-provider';
 import { mainWorker } from '@/lib/main-worker';
 import type { ProposeBody } from '@/lib/types';

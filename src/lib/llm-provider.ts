@@ -7,7 +7,12 @@
  * No network required. No API keys. No excuses.
  */
 
-import ZAI from 'z-ai-web-dev-sdk';
+// Safe fallback stub for optional SDK
+const ZAI = {
+  create: async () => {
+    throw new Error('SDK provider not available in this environment');
+  },
+};
 import { callGemini, callGeminiMultiTurn } from './gemini';
 import { dalekBrainAnalyze, dalekBrainChat, dalekBrainMultiTurn } from './dalek-brain';
 import { getFormattedConstraints } from './learningLogs';
@@ -399,7 +404,13 @@ export async function callLlmChat(
  * Get the default Gemini API key from environment.
  */
 export function getDefaultGeminiKey(): string {
-  return process.env['GEMINI_API_KEY'] || '';
+  return (
+    process.env['GEMINI_API_KEY'] ||
+    process.env['GOOGLE_API_KEY'] ||
+    process.env['GEMINI_KEY'] ||
+    process.env['VITE_GEMINI_API_KEY'] ||
+    ''
+  );
 }
 
 export { buildMutationPrompt } from './gemini';

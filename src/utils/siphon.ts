@@ -38,6 +38,7 @@ interface GitHubUserResponse {
 }
 
 export const SOURCES: readonly SiphonSource[] = [
+  { owner: "craighckby-stack", repo: "Archaeology-Engine", branch: "main", label: "ARCHAEOLOGY ENGINE (CORRECT/WRONG PAIRS)" },
   { owner: "craighckby-stack", repo: "Tt", branch: "main", label: "RAG COGNITIVE RESOLUTION ENGINE" },
   { owner: "craighckby-stack", repo: "DARLEK-CAAN-Cognitive-Engine", branch: "main", label: "DARLEKCANNV3 MAIN" },
   { owner: "craighckby-stack", repo: "Huxley-Singularity-Loop-Main", branch: "main", label: "SINGULARITY LOOP" },

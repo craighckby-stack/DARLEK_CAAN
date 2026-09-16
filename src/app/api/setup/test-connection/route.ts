@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from '@/lib/next-mock';
 import type { TestConnectionBody } from '@/lib/types';
 import { callGemini } from '@/lib/gemini';
 import { safeReqJson } from '@/lib/safe-json';

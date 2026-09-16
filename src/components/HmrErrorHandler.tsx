@@ -16,6 +16,9 @@ const SUPPRESSED_MESSAGE_PATTERNS = [
   'turbopack',
   'error.js',
   'global-error.js',
+  'WebSocket server error',
+  'Port is already in use',
+  'failed to connect to websocket',
 ] as const;
 
 /**
@@ -90,10 +93,18 @@ export default function HmrErrorHandler(): JSX.Element | null {
       }
     };
 
-    window.addEventListener('unhandledrejection', handleUnhandledRejection, { passive: true });
+    const handleError = (event: ErrorEvent): void => {
+      if (shouldSuppressError(event.error || event.message)) {
+        event.preventDefault();
+      }
+    };
+
+    window.addEventListener('unhandledrejection', handleUnhandledRejection, { passive: false });
+    window.addEventListener('error', handleError, { passive: false });
 
     return () => {
       window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+      window.removeEventListener('error', handleError);
     };
   }, []);
 

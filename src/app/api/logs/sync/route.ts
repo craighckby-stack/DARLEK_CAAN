@@ -5,7 +5,7 @@
  *       and pushes them directly to the GitHub repository under the 'logs/' folder.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from '@/lib/next-mock';
 import { promises as fs } from 'fs';
 import { resolve, join } from 'path';
 import { getLearningLogs } from '@/lib/learningLogs';

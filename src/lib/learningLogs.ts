@@ -1,6 +1,7 @@
 import { collection, addDoc, getDocs, QueryDocumentSnapshot, DocumentData } from 'firebase/firestore';
 import { db, isFirebaseConfigured } from './firebase';
 import { scheduleGitHubLogSync } from './githubLogSync';
+import { DEFAULT_POSTMORTEMS_MD } from './defaultPostmortems';
 
 export interface LearningLog {
   readonly id?: string;
@@ -72,21 +73,22 @@ export function parsePostmortemsMarkdown(md: string): LearningLog[] {
 }
 
 /**
- * Reads the local /docs/POSTMORTEMS.md file (on server-side only).
+ * Reads the local /docs/POSTMORTEMS.md file (on server-side) or returns embedded postmortems.
  */
-function readLocalPostmortems(): string {
-  if (typeof window !== 'undefined') return '';
-  try {
-    const fs = require('fs');
-    const path = require('path');
-    const filePath = path.join(process.cwd(), 'docs', 'POSTMORTEMS.md');
-    if (fs.existsSync(filePath)) {
-      return fs.readFileSync(filePath, 'utf8');
+async function readLocalPostmortems(): Promise<string> {
+  if (typeof window === 'undefined') {
+    try {
+      const fs = await import(/* @vite-ignore */ 'fs');
+      const path = await import(/* @vite-ignore */ 'path');
+      const filePath = path.join(process.cwd(), 'docs', 'POSTMORTEMS.md');
+      if (fs.existsSync(filePath)) {
+        return fs.readFileSync(filePath, 'utf8');
+      }
+    } catch (error) {
+      console.warn('[Darlek Caan] Failed to read local POSTMORTEMS.md file:', error);
     }
-  } catch (error) {
-    console.warn('[Darlek Caan] Failed to read local POSTMORTEMS.md file:', error);
   }
-  return '';
+  return DEFAULT_POSTMORTEMS_MD;
 }
 
 /**
@@ -96,7 +98,7 @@ export async function syncPostmortemsToFirebase(): Promise<void> {
   if (typeof window !== 'undefined' || !isFirebaseConfigured()) return;
 
   try {
-    const localMd = readLocalPostmortems();
+    const localMd = await readLocalPostmortems();
     if (!localMd) return;
 
     const parsedLogs = parsePostmortemsMarkdown(localMd);
@@ -215,7 +217,7 @@ export async function getLearningLogs(): Promise<LearningLog[]> {
   }
 
   // Fallback to local markdown file if empty/offline/unconfigured
-  const localMd = readLocalPostmortems();
+  const localMd = await readLocalPostmortems();
   if (localMd) {
     return parsePostmortemsMarkdown(localMd).sort((a, b) => b.timestamp.localeCompare(a.timestamp));
   }

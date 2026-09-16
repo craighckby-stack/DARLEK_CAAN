@@ -5,7 +5,7 @@
  * Architecture: Type-safe modular unit with resilient state interfaces.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from '@/lib/next-mock';
 import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import type { WriteFileBody } from '@/lib/types';
@@ -226,7 +226,9 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     await ensureBranchExists(token, owner, repo, branch);
 
     // 3. Resolve live SHA and submit payload
-    const finalSha = (await getFileSha(token, owner, repo, branch, cleanPath)) ?? sha ?? null;
+    const isValidHexSha = (s?: string | null) => typeof s === 'string' && /^[0-9a-f]{40}$/i.test(s);
+    const liveSha = await getFileSha(token, owner, repo, branch, cleanPath);
+    const finalSha = liveSha || (isValidHexSha(sha) ? sha : null);
     const encodedPath = encodePathSegments(cleanPath);
     const url = `${GITHUB_API_BASE}/repos/${owner}/${repo}/contents/${encodedPath}`;
 

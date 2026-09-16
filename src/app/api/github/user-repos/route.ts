@@ -5,7 +5,7 @@
  * Architecture: Type-safe modular unit with resilient state interfaces and defensive fallbacks.
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from '@/lib/next-mock';
 import { safeReqJson } from '@/lib/safe-json';
 
 export const dynamic = 'force-dynamic';
@@ -125,6 +125,17 @@ const DEFAULT_GLOBAL_SIPHON_REPOSITORIES: readonly SanitizedRepository[] = [
     defaultBranch: 'main',
     url: 'https://github.com/craighckby-stack/Huxley-Singularity-Loop-Main',
     description: 'Singularity loop architecture and evolutionary mutations.',
+    language: 'TypeScript',
+    isGlobalSiphon: true,
+  },
+  {
+    id: 10009,
+    name: 'Archaeology-Engine',
+    fullName: 'craighckby-stack/Archaeology-Engine',
+    owner: 'craighckby-stack',
+    defaultBranch: 'main',
+    url: 'https://github.com/craighckby-stack/Archaeology-Engine',
+    description: 'Archaeology Engine dataset (CORRECT.md & WRONG.md pairs for autonomous code optimization).',
     language: 'TypeScript',
     isGlobalSiphon: true,
   },

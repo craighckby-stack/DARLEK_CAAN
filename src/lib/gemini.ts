@@ -10,9 +10,34 @@ import { GoogleGenAI } from '@google/genai';
 import { retrieveRelevantMutations } from './ragBrain';
 import { RAG_RETRIEVAL_ENABLED } from './config';
 
+const MODEL_MAPPING: Record<string, string> = {
+  'gemini-3.7-flash': 'gemini-3.6-flash',
+  'gemini-3.6-flash': 'gemini-3.6-flash',
+  'gemini-3.8-flash': 'gemini-3.8-flash',
+  'gemini-3.5': 'gemini-3.6-flash',
+  'gemini-3.1-pro-preview': 'gemini-3.1-pro-preview',
+  'gemini-flash-lite-latest': 'gemini-flash-lite-latest',
+  'gemini-flash-latest': 'gemini-flash-latest',
+  'gemini-2.5-flash': 'gemini-2.5-flash',
+  'gemini-2.5-pro': 'gemini-2.5-pro',
+  'gemini-2.0-flash': 'gemini-2.5-flash',
+  'gemini-1.5-flash': 'gemini-1.5-flash',
+};
+
+function normalizeModelName(modelName?: string): string {
+  if (!modelName) return 'gemini-3.6-flash';
+  const trimmed = modelName.trim();
+  return MODEL_MAPPING[trimmed] || trimmed;
+}
+
 const MODEL_CANDIDATES = [
   'gemini-3.6-flash',
+  'gemini-3.8-flash',
+  'gemini-3.1-pro-preview',
+  'gemini-2.5-flash',
+  'gemini-1.5-flash',
   'gemini-flash-latest',
+  'gemini-flash-lite-latest',
 ] as const;
 
 const DEFAULT_TEMPERATURE = 0.6;
@@ -169,9 +194,14 @@ function handleGeminiError(error: unknown, model: string, apiKey: string): void 
   const errorMessage = error instanceof Error ? error.message : String(error);
   const cleanKey = apiKey.trim();
 
+  const isNotFound = errorMessage.includes('404') || errorMessage.includes('not found') || errorMessage.includes('NOT_FOUND') || errorMessage.includes('403') || errorMessage.toLowerCase().includes('permission denied') || errorMessage.includes('PERMISSION_DENIED');
+  if (isNotFound) {
+    console.warn(`[Gemini API] Model ${model} not found or permission denied — trying next candidate.`);
+    return;
+  }
+
   const isInvalidKey = 
     errorMessage.includes('401') ||
-    errorMessage.includes('403') ||
     errorMessage.includes('API_KEY_INVALID') ||
     errorMessage.includes('API key not valid') ||
     errorMessage.includes('invalid API key') ||
@@ -180,7 +210,7 @@ function handleGeminiError(error: unknown, model: string, apiKey: string): void 
   if (isInvalidKey) {
     invalidKeyUntil = Date.now() + INVALID_KEY_COOLDOWN_MS;
     lastInvalidKey = cleanKey;
-    console.warn('[Gemini API] API key validation failed (401/403) — falling back to local engine.');
+    console.warn('[Gemini API] API key validation failed (401) — falling back to local engine.');
     return;
   }
 
@@ -221,9 +251,11 @@ export async function callGemini(
     const ai = getGeminiClient(cleanKey);
     const config = buildGenerationConfig(systemInstruction, options);
 
-    const candidates = options?.model
-      ? [options.model, ...MODEL_CANDIDATES.filter((m) => m !== options.model)]
-      : MODEL_CANDIDATES;
+    const requestedModel = normalizeModelName(options?.model);
+    const candidates = [
+      requestedModel,
+      ...MODEL_CANDIDATES.filter((m) => m !== requestedModel),
+    ];
 
     for (const model of candidates) {
       try {
@@ -277,7 +309,13 @@ export async function callGeminiMultiTurn(
 
     const config = buildGenerationConfig(systemInstruction, options);
 
-    for (const model of MODEL_CANDIDATES) {
+    const requestedModel = normalizeModelName(options?.model);
+    const candidates = [
+      requestedModel,
+      ...MODEL_CANDIDATES.filter((m) => m !== requestedModel),
+    ];
+
+    for (const model of candidates) {
       try {
         const response = await ai.models.generateContent({
           model,
