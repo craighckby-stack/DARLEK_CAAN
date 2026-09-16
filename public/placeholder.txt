@@ -1,0 +1,43 @@
+# Public Assets Directory (`public/`)
+
+> **EMG Core v49 Execution:** Optimized for rapid comprehension, clean asset governance, and high-performance frontend delivery.
+
+## Executive Summary
+
+The `public/` directory stores raw, unprocessed static assets—including images, fonts, and media—that are served directly to the client without build-step transformation. This document outlines structural organization standards, strict naming conventions, and correct root-relative referencing methods to maintain optimal application performance and prevent broken links.
+
+---
+
+## Table of Contents
+
+1. [Usage Guidelines](#usage-guidelines)
+2. [Referencing Public Assets](#referencing-public-assets)
+
+---
+
+## Usage Guidelines
+
+To ensure consistency and scalability across the frontend architecture, adhere to the following governance model when managing static assets:
+
+| Category         | Best Practice                                                       | Example                                    |
+| :--------------- | :------------------------------------------------------------------ | :----------------------------------------- |
+| **Organization** | Group files into descriptive subdirectories as the project scales.  | `images/`, `icons/`, `fonts/`              |
+| **Naming**       | Use lowercase, kebab-case identifiers with explicit semantics.      | `company-logo.svg`, `hero-background.webp` |
+| **Performance**  | Compress and properly size all assets prior to repository addition. | Fast client-side loading times             |
+
+---
+
+## Referencing Public Assets
+
+Reference assets stored in the `public/` directory directly from the application root URL (`/`) within your components, templates, and stylesheets:
+
+```html
+<!-- EMG Core v49: Referencing an optimized image from the public root directory -->
+<img 
+  src="/images/company-logo.svg" 
+  alt="Company Logo" 
+  width="150" 
+  height="40" 
+  loading="lazy" 
+/>
+```
