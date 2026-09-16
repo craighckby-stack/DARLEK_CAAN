@@ -1,3 +1,6 @@
+still calling both at the same time ugh
+
+
 soon to be updated with self check rag before llm call to save tokens.
 
 # 🚀 DARLEK CAAN — Autonomous Cognitive Engine & Code Base Evolution Center
