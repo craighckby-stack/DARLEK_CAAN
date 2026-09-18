@@ -18,6 +18,7 @@ import { saveLogToRag, saveMutationToRag, synthesizeRagMutation, type Hotswapped
 import { syncAllLogsToGitHub, scheduleGitHubLogSync } from '@/lib/githubLogSync';
 import { clearAllFirebaseData } from '@/lib/firebase';
 import { ingestArchaeologyDatasetToFirebase, ARCHAEOLOGY_PAIRS } from '@/lib/archaeology-dataset';
+import { syncArchaeologyRagFromGitHub } from '@/lib/archaeology-live-sync';
 import type {
   Message,
   SystemState,
@@ -4186,21 +4187,53 @@ export default function Home() {
         // INGEST ARCHAEOLOGY
         // ────────────────────────────────
         case 'ingest-archaeology': {
-          addCaanMessage(`Ingesting ${ARCHAEOLOGY_PAIRS.length} paired exemplars from Archaeology Engine (CORRECT.md & WRONG.md)...`);
-          addLogEntry('ARCHAEOLOGY', `Ingestion starting: processing ${ARCHAEOLOGY_PAIRS.length} commit pairs from craighckby-stack/Archaeology-Engine...`);
+          addCaanMessage(`Syncing Archaeology Engine (craighckby-stack/Archaeology-Engine)... scanning correct/*.md and wrong/*.md for anything not yet in RAG.`);
+          addLogEntry('ARCHAEOLOGY', 'Live sync starting: listing correct/wrong commit records from GitHub...');
           try {
-            const res = await ingestArchaeologyDatasetToFirebase();
-            if (res.success) {
-              addCaanMessage(`Archaeology Engine ingestion complete!\n\n• Successfully stored ${res.ingestedCount} pairs in RAG mutation memory.\n• Firestore sync: ${res.firestoreConfigured ? 'Active & indexed' : 'Offline (saved to local fallback store)'}\n\nIndexed Pairs:\n${ARCHAEOLOGY_PAIRS.map(p => `• Pair ${p.pairId} [${p.filesTouched.join(', ')}]: ${p.title}`).join('\n')}`);
-              addLogEntry('ARCHAEOLOGY', `Successfully indexed ${res.ingestedCount} pairs into RAG & Firebase.`);
+            const res = await syncArchaeologyRagFromGitHub({ token: apiKeys.github || undefined });
+            if (res.errors.length === 0) {
+              addCaanMessage(
+                `Archaeology Engine sync complete!\n\n` +
+                `• Scanned: ${res.scanned} commit files in the repo\n` +
+                `• New this run: ${res.newFilesFound}\n` +
+                `• Ingested into RAG: ${res.ingested}\n` +
+                (res.deferredForNextRun > 0
+                  ? `• Deferred to next run (rate-limit safety cap): ${res.deferredForNextRun} — run "ingest-archaeology" again to continue.\n`
+                  : '') +
+                `• Already-ingested total: ${res.alreadyIngestedTotal}`
+              );
+              addLogEntry('ARCHAEOLOGY', `Live sync: +${res.ingested} new records ingested, ${res.deferredForNextRun} deferred.`);
             } else {
-              addCaanMessage(`Archaeology ingestion finished with warnings:\n${res.errors.join('\n')}`);
-              addLogEntry('WARNING', `Archaeology ingestion warnings: ${res.errors.join('; ')}`);
+              addCaanMessage(`Archaeology Engine sync finished with warnings:\n${res.errors.join('\n')}\n\nIngested ${res.ingested} of ${res.newFilesFound} new records.`);
+              addLogEntry('WARNING', `Archaeology sync warnings: ${res.errors.join('; ')}`);
             }
           } catch (err: unknown) {
             const errStr = err instanceof Error ? err.message : String(err);
-            addCaanMessage(`Archaeology ingestion failed: ${errStr}`);
-            addLogEntry('ERROR', `Archaeology ingestion error: ${errStr}`);
+            addCaanMessage(`Archaeology Engine sync failed: ${errStr}`);
+            addLogEntry('ERROR', `Archaeology sync error: ${errStr}`);
+          }
+          break;
+        }
+
+        // ────────────────────────────────
+        // SEED ARCHAEOLOGY (bootstrap only)
+        // ────────────────────────────────
+        case 'seed-archaeology': {
+          addCaanMessage(`Seeding ${ARCHAEOLOGY_PAIRS.length} bootstrap exemplar pairs (use "ingest-archaeology" for the live GitHub sync instead)...`);
+          addLogEntry('ARCHAEOLOGY', `Bootstrap seed: processing ${ARCHAEOLOGY_PAIRS.length} hardcoded example pairs...`);
+          try {
+            const res = await ingestArchaeologyDatasetToFirebase();
+            if (res.success) {
+              addCaanMessage(`Bootstrap seed complete!\n\n• Stored ${res.ingestedCount} example pairs in RAG mutation memory.\n• Firestore sync: ${res.firestoreConfigured ? 'Active & indexed' : 'Offline (saved to local fallback store)'}`);
+              addLogEntry('ARCHAEOLOGY', `Bootstrap seed indexed ${res.ingestedCount} pairs.`);
+            } else {
+              addCaanMessage(`Bootstrap seed finished with warnings:\n${res.errors.join('\n')}`);
+              addLogEntry('WARNING', `Bootstrap seed warnings: ${res.errors.join('; ')}`);
+            }
+          } catch (err: unknown) {
+            const errStr = err instanceof Error ? err.message : String(err);
+            addCaanMessage(`Bootstrap seed failed: ${errStr}`);
+            addLogEntry('ERROR', `Bootstrap seed error: ${errStr}`);
           }
           break;
         }

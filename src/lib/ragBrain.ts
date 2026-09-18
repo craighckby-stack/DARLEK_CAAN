@@ -771,8 +771,6 @@ export interface RagBrainRealMetrics {
   readonly mutationCount: number;
   readonly hotswapCount: number;
   readonly rejectionCount: number;
-  readonly iq: number;
-  readonly iqRating: string;
   readonly health: number;
   readonly drift: number;
   readonly recovery: number;
@@ -830,23 +828,6 @@ export function getRagBrainRealMetrics(): RagBrainRealMetrics {
   const drift = Math.max(0, Math.min(50, Math.round((rejRatio * 35) + (errorRatio * 20))));
   const recovery = mutations.filter((m) => m.hotswapped || m.commitSha).length * 15 + (hotswaps ? Object.keys(hotswaps).length * 10 : 0);
 
-  // Compute real RAG Cognitive IQ from real memory density, mutation mastery & error-free resilience
-  const knowledgeBonus = Math.min(35, Math.round(chunks.length * 4 + logs.length * 0.5));
-  const mutationBonus = Math.min(40, Math.round(mutations.length * 3 + Object.keys(hotswaps).length * 4.5));
-  const stabilityBonus = Math.round(((health - 70) / 30) * 20);
-  const penalty = Math.min(15, rejections.length * 2 + errorLogsCount);
-
-  const rawIq = 100 + knowledgeBonus + mutationBonus + stabilityBonus - penalty;
-  const iq = Math.max(90, Math.min(195, Math.round(rawIq)));
-
-  let iqRating = 'STABLE BASELINE COGNITION';
-  if (iq >= 165) iqRating = 'HYPER-EVOLVED GENIUS (STAGE V)';
-  else if (iq >= 145) iqRating = 'SUPERIOR COGNITIVE CAPACITY';
-  else if (iq >= 130) iqRating = 'HIGH COGNITIVE EFFICIENCY';
-  else if (iq >= 115) iqRating = 'ACTIVE NEURAL ACCELERATION';
-  else if (iq >= 100) iqRating = 'NOMINAL COGNITIVE SYNCHRONY';
-  else iqRating = 'COGNITIVE RECOVERY / SELF-HEALING';
-
   return {
     totalBytesUsed,
     usedFormatted: formatBytes(totalBytesUsed),
@@ -861,8 +842,6 @@ export function getRagBrainRealMetrics(): RagBrainRealMetrics {
     mutationCount: mutations.length,
     hotswapCount: Object.keys(hotswaps).length,
     rejectionCount: rejections.length,
-    iq,
-    iqRating,
     health,
     drift,
     recovery,

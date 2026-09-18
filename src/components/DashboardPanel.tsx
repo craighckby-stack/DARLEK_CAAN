@@ -278,7 +278,7 @@ export default function DashboardPanel({
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-1.5 px-2 py-0.5 rounded border border-white/30 bg-white/10 text-white font-mono text-[9.5px] font-bold shadow-[0_0_8px_rgba(255,255,255,0.1)]">
               <Brain size={12} className="text-[#ff2020] animate-pulse" />
-              <span>RAG IQ: <span className="text-white text-[11px] font-extrabold">{ragMetrics.iq}</span></span>
+              <span>ABILITY: <span className="text-white text-[11px] font-extrabold">{ragMetrics.mutationCount}m / {ragMetrics.hotswapCount}h</span></span>
             </div>
             <span className="text-[8px] font-mono text-gray-400 uppercase hidden sm:inline">Resilience: ACTIVE</span>
           </div>
@@ -289,7 +289,7 @@ export default function DashboardPanel({
           <div className="flex flex-wrap items-center justify-between text-[9px] font-mono border-b border-white/[0.04] pb-2 text-gray-400">
             <div className="flex items-center gap-1.5">
               <Zap size={11} className="text-[#ff2020]" />
-              <span>COGNITIVE RATING: <span className="text-white font-bold">{ragMetrics.iqRating}</span></span>
+              <span>REJECTIONS: <span className="text-white font-bold">{ragMetrics.rejectionCount}</span></span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-white font-bold flex items-center gap-1">
@@ -336,10 +336,10 @@ export default function DashboardPanel({
             <div className="p-2 rounded bg-black/60 border border-white/10 space-y-0.5">
               <div className="text-[8px] font-mono text-gray-400 uppercase flex items-center gap-1">
                 <Brain size={9} className="text-[#ff2020]" />
-                <span>RAG IQ</span>
+                <span>ABILITY</span>
               </div>
-              <div className="text-sm font-mono font-bold text-white">{ragMetrics.iq}</div>
-              <div className="text-[7.5px] font-mono text-gray-400 truncate">{ragMetrics.iqRating.split(' ')[0]}</div>
+              <div className="text-sm font-mono font-bold text-white">{ragMetrics.mutationCount}</div>
+              <div className="text-[7.5px] font-mono text-gray-400 truncate">{ragMetrics.hotswapCount} hotswapped</div>
             </div>
 
             <div className="p-2 rounded bg-black/60 border border-white/10 space-y-0.5">

@@ -130,7 +130,7 @@ class MsDosEngineService {
         const hex = `0x${baseOffset.toString(16).toUpperCase().padStart(8, '0')}`;
         const telemetryMessages = [
           { tag: 'RAG_INDEX', msg: `RAG memory vector aligned. Total chunks: ${rag.chunkCount}, Free: ${rag.availableFormatted}.` },
-          { tag: 'AST_WATCH', msg: `Codebase watcher: active file trees verified normal. RAG IQ: ${rag.iq}.` },
+          { tag: 'AST_WATCH', msg: `Codebase watcher: active file trees verified normal. Mutations: ${rag.mutationCount}, Hotswaps: ${rag.hotswapCount}.` },
           { tag: 'MEM_POOL', msg: `Allocated quota: ${rag.totalLimitFormatted}. Used: ${rag.usedFormatted} (${rag.usedPercent}%).` },
           { tag: 'SANITY_OK', msg: `Emergency breaker: Health ${rag.health}%, Drift ${rag.drift}%, Syntax clean.` },
         ];
@@ -473,7 +473,7 @@ class MsDosEngineService {
         const metrics = getRagBrainRealMetrics();
         this.addLog('RAG', `===============================================================`, undefined, false);
         this.addLog('RAG', `RAG BRAIN COGNITIVE HEALTH & REAL MEASUREMENTS:`, undefined, false);
-        this.addLog('RAG', `  COGNITIVE IQ:     ${metrics.iq} [${metrics.iqRating}]`, undefined, false);
+        this.addLog('RAG', `  REJECTIONS:       ${metrics.rejectionCount}`, undefined, false);
         this.addLog('RAG', `  HEALTH INDEX:     ${metrics.health}% | SEMANTIC DRIFT: ${metrics.drift}%`, undefined, false);
         this.addLog('RAG', `  STORAGE USED:     ${metrics.usedFormatted} / ${metrics.totalLimitFormatted} (${metrics.usedPercent}%)`, undefined, false);
         this.addLog('RAG', `  SPACE AVAILABLE:  ${metrics.availableFormatted} (${metrics.availablePercent}% FREE)`, undefined, false);

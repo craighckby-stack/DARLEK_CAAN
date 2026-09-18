@@ -245,7 +245,7 @@ export default function DosConsoleModal({
                 <>
                   <span className="text-[#00ffcc] font-bold flex items-center gap-1">
                     <Brain size={10} />
-                    RAG IQ: {rag.iq}
+                    ABILITY: {rag.mutationCount}m / {rag.hotswapCount}h
                   </span>
                   <span className="text-emerald-300 flex items-center gap-1">
                     <HardDrive size={10} />
