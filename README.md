@@ -8,7 +8,7 @@ self updating rag
 
 plus
 
-automouns code swapping
+automouns code swapping " work in progress buggy" fixable.
 
 
 =
