@@ -88,10 +88,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       return NextResponse.json({ error: 'GitHub Token and Repository Name are required.' }, { status: 400 });
     }
 
-    const geminiKey = apiKeys?.gemini || getDefaultGeminiKey();
-    if (!geminiKey) {
-      return NextResponse.json({ error: 'Gemini API Key is required for compiling specifications.' }, { status: 400 });
-    }
+    const geminiKey = (apiKeys?.gemini || getDefaultGeminiKey() || '').trim();
 
     const owner = await validateGitHubTokenAndGetOwner(token);
     if (!owner) {
@@ -192,17 +189,34 @@ async function compileBlueprintToFiles(params: CompileBlueprintParams): Promise<
   let generatedText: string | null = null;
   let useDeterministicFallback = false;
 
-  try {
-    generatedText = await callGemini(params.systemPrompt, params.userPrompt, params.geminiKey, {
-      maxTokens: 8192,
-      temperature: 0.2,
-      responseMimeType: 'application/json',
-      responseSchema: RESPONSE_SCHEMA,
-    });
-  } catch (geminiError: unknown) {
-    const errorMessage = geminiError instanceof Error ? geminiError.message : String(geminiError);
-    console.warn('[Create repo] Gemini call failed, using deterministic fallback structure:', errorMessage);
+  if (!params.geminiKey) {
     useDeterministicFallback = true;
+  } else {
+    try {
+      generatedText = await callGemini(params.systemPrompt, params.userPrompt, params.geminiKey, {
+        maxTokens: 8192,
+        temperature: 0.2,
+        responseMimeType: 'application/json',
+        responseSchema: RESPONSE_SCHEMA,
+      });
+
+      if (!generatedText) {
+        generatedText = await callGemini(params.systemPrompt, params.userPrompt, params.geminiKey, {
+          maxTokens: 8192,
+          temperature: 0.2,
+          responseMimeType: 'application/json',
+        });
+      }
+    } catch (geminiError: unknown) {
+      const errorMessage = geminiError instanceof Error ? geminiError.message : String(geminiError);
+      console.warn('[Create repo] Gemini call failed, using deterministic fallback structure:', errorMessage);
+      useDeterministicFallback = true;
+    }
+
+    if (!generatedText || !generatedText.trim()) {
+      console.warn('[Create repo] Gemini API returned empty compilation output. Activating deterministic fallback structure.');
+      useDeterministicFallback = true;
+    }
   }
 
   let compilation: CompilationOutput;
@@ -214,31 +228,47 @@ async function compileBlueprintToFiles(params: CompileBlueprintParams): Promise<
       params.blueprintContent || ''
     );
   } else {
-    if (!generatedText) {
-      throw new Error('Gemini API returned empty compilation output.');
-    }
-    generatedText = generatedText.trim();
+    generatedText = (generatedText || '').trim();
     try {
       compilation = parseCompilationJson(generatedText);
     } catch (parseErr: unknown) {
-      console.error('Failed to parse compiled JSON. Raw text was:', generatedText);
+      console.warn('Failed to parse compiled JSON directly, trying regex extraction. Raw text was:', generatedText.slice(0, 300));
       const jsonMatch = generatedText.match(/{[\s\S]*}/);
       if (jsonMatch) {
         try {
           compilation = parseCompilationJson(jsonMatch[0]);
         } catch (matchErr: unknown) {
-          const matchErrorMsg = matchErr instanceof Error ? matchErr.message : String(matchErr);
-          throw new Error(`Gemini output could not be parsed as safety JSON schema. Spec compilation broke with error: ${matchErrorMsg}`);
+          console.warn('[Create repo] JSON match parse failed, activating deterministic fallback structure:', matchErr);
+          useDeterministicFallback = true;
+          compilation = generateDeterministicFallbackStructure(
+            params.repoName || 'untitled-system',
+            params.description || '',
+            params.blueprintName || '',
+            params.blueprintContent || ''
+          );
         }
       } else {
-        const parseErrorMsg = parseErr instanceof Error ? parseErr.message : String(parseErr);
-        throw new Error(`Gemini output could not be parsed as standard files schema. Parsing error: ${parseErrorMsg}`);
+        console.warn('[Create repo] No JSON found in output, activating deterministic fallback structure:', parseErr);
+        useDeterministicFallback = true;
+        compilation = generateDeterministicFallbackStructure(
+          params.repoName || 'untitled-system',
+          params.description || '',
+          params.blueprintName || '',
+          params.blueprintContent || ''
+        );
       }
     }
   }
 
-  if (!compilation.files || !Array.isArray(compilation.files)) {
-    throw new Error('Invalid compilation output format: files array is missing.');
+  if (!compilation || !compilation.files || !Array.isArray(compilation.files) || compilation.files.length === 0) {
+    console.warn('[Create repo] Compilation output missing files array, activating deterministic fallback structure.');
+    useDeterministicFallback = true;
+    compilation = generateDeterministicFallbackStructure(
+      params.repoName || 'untitled-system',
+      params.description || '',
+      params.blueprintName || '',
+      params.blueprintContent || ''
+    );
   }
 
   return { compilation, useDeterministicFallback };
@@ -503,8 +533,84 @@ export const dynamic = 'force-dynamic';
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-[#050811] text-white min-h-screen">{children}</body>
     </html>
+  );
+}`;
+
+  const safeDesc = (description || 'Autonomous cognitive system scaffolded under Dalek Caan architecture.').replace(/["`\\]/g, ' ');
+  const safeBlueprint = (blueprintContent || 'Autonomous Next.js system ready for continuous mutation and cognitive evolution.').slice(0, 2000).replace(/["`\\]/g, ' ');
+
+  const pageTsx = `'use client';
+
+import React from 'react';
+import { Terminal, Shield, Activity, Cpu } from 'lucide-react';
+
+export default function HomePage() {
+  return (
+    <main className="min-h-screen bg-[#050811] text-gray-100 font-sans p-6 sm:p-12">
+      <div className="max-w-5xl mx-auto space-y-8">
+        <header className="border-b border-cyan-500/20 pb-6 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <div className="flex items-center gap-2 text-cyan-400 font-mono text-xs uppercase tracking-widest">
+              <Cpu className="w-4 h-4 animate-pulse" />
+              <span>DALEK CAAN // AUTONOMOUS ARCHITECTURE</span>
+            </div>
+            <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-white mt-1">
+              ${repoName.toUpperCase()}
+            </h1>
+            <p className="text-gray-400 text-sm mt-1 max-w-2xl">
+              ${safeDesc}
+            </p>
+          </div>
+          <div className="px-3 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/40 text-cyan-300 font-mono text-xs flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+            <span>OPERATIONAL // ONLINE</span>
+          </div>
+        </header>
+
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-[#0a0f1d] border border-white/10 rounded-xl p-5 space-y-2">
+            <div className="flex items-center gap-2 text-cyan-400">
+              <Terminal className="w-4 h-4" />
+              <h2 className="text-sm font-semibold uppercase tracking-wider font-mono">SPECIFICATION</h2>
+            </div>
+            <p className="text-xs text-gray-300 font-mono">
+              ${blueprintName || 'Active Parameter Spec'}
+            </p>
+          </div>
+
+          <div className="bg-[#0a0f1d] border border-white/10 rounded-xl p-5 space-y-2">
+            <div className="flex items-center gap-2 text-emerald-400">
+              <Shield className="w-4 h-4" />
+              <h2 className="text-sm font-semibold uppercase tracking-wider font-mono">LICENSE &amp; AUTHOR</h2>
+            </div>
+            <p className="text-xs text-gray-300 font-mono">
+              CC BY-NC-SA 4.0 // Craighckby
+            </p>
+          </div>
+
+          <div className="bg-[#0a0f1d] border border-white/10 rounded-xl p-5 space-y-2">
+            <div className="flex items-center gap-2 text-indigo-400">
+              <Activity className="w-4 h-4" />
+              <h2 className="text-sm font-semibold uppercase tracking-wider font-mono">EVOLUTION PIPELINE</h2>
+            </div>
+            <p className="text-xs text-gray-300 font-mono">
+              Ready for RAG Brain Mutation &amp; Autonomous Evolution
+            </p>
+          </div>
+        </section>
+
+        <section className="bg-[#080d1a] border border-white/10 rounded-xl p-6 space-y-4">
+          <h2 className="text-lg font-bold text-white font-mono flex items-center gap-2">
+            <span className="text-cyan-400">&gt;</span> Blueprinted Architecture Details
+          </h2>
+          <div className="bg-black/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 whitespace-pre-wrap max-h-80 overflow-y-auto">
+            {\`${safeBlueprint}\`}
+          </div>
+        </section>
+      </div>
+    </main>
   );
 }`;
 
@@ -518,6 +624,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       },
       { path: 'src/app/globals.css', content: globalsCss },
       { path: 'src/app/layout.tsx', content: layoutTsx },
+      { path: 'src/app/page.tsx', content: pageTsx },
     ],
   };
 }
