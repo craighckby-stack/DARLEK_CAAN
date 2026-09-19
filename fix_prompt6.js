@@ -52,7 +52,12 @@ function getValidatedFilePath(targetRelativePath) {
     throw new Error('SECURITY_VIOLATION: Invalid target path provided.');
   }
 
-  const resolvedPath = path.resolve(CWD, targetRelativePath);
+  // Prevent null-byte injection and normalize slashes
+  if (targetRelativePath.includes('\0')) {
+    throw new Error('SECURITY_VIOLATION: Null byte detected in path.');
+  }
+
+  const resolvedPath = path.resolve(CWD, path.normalize(targetRelativePath));
 
   if (!resolvedPath.startsWith(EXPECTED_BASE_DIR) && !resolvedPath.startsWith(ALLOWED_SOURCE_DIR)) {
     throw new Error('SECURITY_VIOLATION: Access denied to target file path.');
