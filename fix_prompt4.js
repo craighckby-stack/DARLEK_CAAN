@@ -6,7 +6,7 @@
  */
 
 import { readFileSync, statSync, writeFileSync } from 'node:fs';
-import { resolve, normalize } from 'node:path';
+import { resolve, normalize, sep } from 'node:path';
 
 /**
  * System configuration parameters bound to immutable frozen structures.
@@ -19,6 +19,16 @@ const CONFIG = Object.freeze({
     TARGET_STRING: '}``````tsx// Complete proposed code for the active file goes here.// MUST BE COMPLETE FILE, NO PLACEHOLDERS OR TRUNCATIONS```',
     REPLACEMENT_STRING: '\n`'
 });
+
+/**
+ * Extracts a human-readable string from an unknown error object.
+ * 
+ * @param {unknown} error - The caught error instance or value.
+ * @returns {string} Extracted error message string.
+ */
+function getErrorMessage(error) {
+    return error instanceof Error ? error.message : String(error);
+}
 
 /**
  * Validates path security against directory traversal vulnerabilities.
@@ -34,9 +44,12 @@ function resolveAndValidatePath(baseDir, relativePath) {
     const normalizedBase = normalize(baseDir);
     const normalizedTarget = normalize(resolvedPath);
 
-    if (!normalizedTarget.startsWith(normalizedBase + (normalizedBase.endsWith('/') ? '' : '/'))) {
+    const baseWithSeparator = normalizedBase.endsWith(sep) ? normalizedBase : `${normalizedBase}${sep}`;
+
+    if (!normalizedTarget.startsWith(baseWithSeparator)) {
         throw new Error('SECURITY ERROR: Unauthorized file access attempt detected.');
     }
+
     return normalizedTarget;
 }
 
@@ -52,8 +65,7 @@ function validateFileConstraints(filePath, maxSize) {
     try {
         stats = statSync(filePath);
     } catch (err) {
-        const errorMessage = err instanceof Error ? err.message : String(err);
-        throw new Error(`SECURITY ERROR: Failed to stat target file: ${errorMessage}`);
+        throw new Error(`SECURITY ERROR: Failed to stat target file: ${getErrorMessage(err)}`);
     }
 
     if (!stats.isFile()) {
@@ -76,16 +88,19 @@ function validateFileConstraints(filePath, maxSize) {
  * @throws {Error} If the target string pattern cannot be located.
  */
 function sanitizeSourceCode(filePath, targetStr, replacementStr, encoding) {
-    const code = readFileSync(filePath, encoding);
+    const content = readFileSync(filePath, encoding);
 
-    const index = code.indexOf(targetStr);
-    if (index === -1) {
+    const targetIndex = content.indexOf(targetStr);
+    if (targetIndex === -1) {
         throw new Error('SECURITY ERROR: Target string pattern not found within safe bounds.');
     }
 
-    // Direct slice and concatenation for peak performance over string.replace
-    const updatedCode = code.slice(0, index) + replacementStr + code.slice(index + targetStr.length);
-    writeFileSync(filePath, updatedCode, encoding);
+    const updatedContent = 
+        content.slice(0, targetIndex) + 
+        replacementStr + 
+        content.slice(targetIndex + targetStr.length);
+
+    writeFileSync(filePath, updatedContent, encoding);
 }
 
 /**
@@ -99,8 +114,7 @@ function executeEvolutionaryPromptFix() {
         validateFileConstraints(targetPath, CONFIG.MAX_FILE_SIZE_BYTES);
         sanitizeSourceCode(targetPath, CONFIG.TARGET_STRING, CONFIG.REPLACEMENT_STRING, CONFIG.ENCODING);
     } catch (error) {
-        const errorMessage = error instanceof Error ? error.message : String(error);
-        console.error(`[EMG CORE v49 FATAL]: ${errorMessage}`);
+        console.error(`[EMG CORE v49 FATAL]: ${getErrorMessage(error)}`);
         process.exitCode = 1;
         throw error;
     }
