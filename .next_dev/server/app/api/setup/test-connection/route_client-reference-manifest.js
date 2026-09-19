@@ -7,7 +7,16 @@
 
 // Initialize global RSC Manifest store safely
 if (typeof globalThis.__RSC_MANIFEST !== "object" || globalThis.__RSC_MANIFEST === null) {
-  globalThis.__RSC_MANIFEST = {};
+  try {
+    Object.defineProperty(globalThis, "__RSC_MANIFEST", {
+      value: {},
+      writable: true,
+      configurable: true,
+      enumerable: true
+    });
+  } catch {
+    globalThis.__RSC_MANIFEST = {};
+  }
 }
 
 const ROUTE_PATH = "/api/setup/test-connection/route";
@@ -142,12 +151,16 @@ const entryCSSFiles = Object.freeze({
 });
 
 // Register manifest entry with immutability guarantees
-globalThis.__RSC_MANIFEST[ROUTE_PATH] = Object.freeze({
-  moduleLoading: MODULE_LOADING_CONFIG,
-  ssrModuleMapping: buildBrowserMapping(SSR_MODULE_PATHS, "ssr"),
-  edgeSSRModuleMapping: Object.freeze({}),
-  clientModules: buildClientModulesMap(),
-  entryCSSFiles,
-  rscModuleMapping: buildBrowserMapping(RSC_MODULE_PATHS, "rsc"),
-  edgeRscModuleMapping: Object.freeze({}),
-});
+try {
+  globalThis.__RSC_MANIFEST[ROUTE_PATH] = Object.freeze({
+    moduleLoading: MODULE_LOADING_CONFIG,
+    ssrModuleMapping: buildBrowserMapping(SSR_MODULE_PATHS, "ssr"),
+    edgeSSRModuleMapping: Object.freeze({}),
+    clientModules: buildClientModulesMap(),
+    entryCSSFiles,
+    rscModuleMapping: buildBrowserMapping(RSC_MODULE_PATHS, "rsc"),
+    edgeRscModuleMapping: Object.freeze({}),
+  });
+} catch {
+  // Defensive fallback if globalThis is frozen or sealed
+}
