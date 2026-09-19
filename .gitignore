@@ -105,3 +105,27 @@ cypress/screenshots/
 # TypeScript Cache
 *.tsbuildinfo
 next-env.d.ts.bak
+
+# DARLEK CAAN Defensive Enhancements - Additional Sensitive Files & Backups
+*.bak.*
+*.backup
+*.bkp
+*.old
+*.orig
+*~
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.vite/
+.temp/
+.tmp/
+tmp/
+temp/
+.auth/
+auth.json
+session.json
+*.pem.*
+*.key.*
+passwords.txt
+api_keys.json
