@@ -8,6 +8,7 @@
 'use strict';
 
 const { readFileSync, writeFileSync } = require('node:fs');
+const path = require('node:path');
 
 /** @type {string} */
 const TARGET_FILE_PATH = 'src/app/api/evolution/propose/route.ts';
@@ -48,22 +49,29 @@ function applyFormattingTransforms(content) {
 }
 
 /**
- * Normalizes code block formatting within the target file with robust error handling.
+ * Normalizes code block formatting within the target file with robust error handling and path traversal defense.
  * 
  * @param {string} filePath - Path to the target file.
- * @throws {Error} If file read/write operations fail.
+ * @throws {Error} If file read/write operations fail or path resolution is unsafe.
  */
 function normalizeCodeBlockFormatting(filePath) {
     if (typeof filePath !== 'string' || filePath.trim() === '') {
         throw new TypeError('Expected a valid non-empty file path string.');
     }
 
+    // Defensive path validation to mitigate arbitrary file access / path traversal
+    const resolvedPath = path.resolve(filePath);
+    const resolvedBase = path.resolve(process.cwd());
+    if (!resolvedPath.startsWith(resolvedBase)) {
+        throw new Error(`Security Violation: Path traversal detected outside working directory for "${filePath}".`);
+    }
+
     try {
-        const originalContent = readFileSync(filePath, 'utf8');
+        const originalContent = readFileSync(resolvedPath, 'utf8');
         const normalizedContent = applyFormattingTransforms(originalContent);
 
         if (originalContent !== normalizedContent) {
-            writeFileSync(filePath, normalizedContent, 'utf8');
+            writeFileSync(resolvedPath, normalizedContent, 'utf8');
         }
     } catch (error) {
         const err = /** @type {Error} */ (error);
