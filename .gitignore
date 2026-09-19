@@ -129,3 +129,63 @@ session.json
 *.key.*
 passwords.txt
 api_keys.json
+
+# DARLEK CAAN Synthesis G-7: Package Manager Auth & Token Leakage Defense
+.npmrc
+!*.npmrc.example
+.yarnrc
+.yarnrc.yml
+!*.yarnrc.example
+npm-token*
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Cloud, Infrastructure & Secret Management Exclusions
+.aws/
+.azure/
+.gcloud/
+.wrangler/
+.serverless/
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+*.override.tf
+*.override.tf.json
+k8s-secrets*.yaml
+k8s-secrets*.yml
+kubeconfig
+kubeconfig.*
+.kube/
+
+# Signing Keystores, Cryptographic Containers & Key Rings
+*.keystore
+*.jks
+*.mobileprovision
+*.provisionprofile
+*.der
+*.csr
+*.kdb
+*.asc
+gpg.conf
+secring.*
+
+# Database Dumps, Snapshots & Diagnostic Memory Dumps
+*.sql
+*.sql.gz
+*.dump
+*.rdb
+*.heapsnapshot
+*.heapdump
+*.cpuprofile
+core
+core.*
+*.core
+
+# Security Scanners & Incident Audit Dumps
+gitleaks-report.*
+trivy-results.*
+snyk-report.*
+semgrep-results.*
+audit-report.*
