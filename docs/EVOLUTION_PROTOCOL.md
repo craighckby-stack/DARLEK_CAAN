@@ -62,7 +62,8 @@ By decoupling target state fetching (via the GitHub API module) from the local t
 | **Timeout Protection** | 15,000 ms limit for upstream state retrieval    |
 | **State Tracking**      | Git Blob SHA matching + Base64 content decoding |
 | **Mutation Engine**     | Idempotent AST/Regex Boundary Replacement       |
--
+
+---
 
 ## Autonomous Execution Lifecycle
 
