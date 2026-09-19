@@ -130,6 +130,8 @@ export interface RejectionMemoryItem {
   readonly reason: string;
   readonly analysis: string;
   readonly riskScore: number;
+  readonly originalCode?: string;
+  readonly proposedCode?: string;
 }
 
 export interface MutationProposal {
@@ -177,6 +179,8 @@ export interface RejectionMemory {
   readonly analysis: string;
   readonly riskScore: number;
   readonly timestamp: Date;
+  readonly originalCode?: string;
+  readonly proposedCode?: string;
 }
 
 // ─────────────────────────────────────────────

@@ -64,9 +64,29 @@ const getSessionStorageItem = (key: string): string | null => {
  * @returns {GitHubConfig} The frozen configuration object.
  */
 export const getGitHubConfig = (): GitHubConfig => {
-  const storedUsername = getLocalStorageItem(STORAGE_KEYS.USERNAME);
-  const storedRepoName = getLocalStorageItem(STORAGE_KEYS.REPO);
-  const storedToken = getSessionStorageItem(STORAGE_KEYS.TOKEN) ?? getLocalStorageItem(STORAGE_KEYS.TOKEN);
+  let storedUsername = getLocalStorageItem(STORAGE_KEYS.USERNAME);
+  let storedRepoName = getLocalStorageItem(STORAGE_KEYS.REPO);
+  let storedToken = getSessionStorageItem(STORAGE_KEYS.TOKEN) ?? getLocalStorageItem(STORAGE_KEYS.TOKEN);
+
+  if (!storedToken) {
+    storedToken = getLocalStorageItem('darlek_cann_github_token');
+  }
+
+  const rawState = getLocalStorageItem('darlek_cann_system_state');
+  if (rawState) {
+    try {
+      const parsed = JSON.parse(rawState);
+      if (!storedToken && parsed?.apiKeys?.github) {
+        storedToken = parsed.apiKeys.github;
+      }
+      if (!storedRepoName && parsed?.repoConfig?.repo) {
+        storedRepoName = parsed.repoConfig.repo;
+      }
+      if (!storedUsername && parsed?.repoConfig?.owner) {
+        storedUsername = parsed.repoConfig.owner;
+      }
+    } catch {}
+  }
 
   if (!storedUsername && !storedRepoName && !storedToken) {
     return DEFAULT_CONFIG;

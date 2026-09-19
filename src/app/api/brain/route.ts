@@ -89,7 +89,7 @@ export async function POST(req: NextRequest) {
       }
 
       case 'record-rejection': {
-        const { sessionId, filePath, reason, analysis, riskScore, patternTags } = body;
+        const { sessionId, filePath, reason, analysis, riskScore, patternTags, originalCode, proposedCode } = body;
         if (!sessionId || !filePath) {
           return NextResponse.json({ error: 'sessionId and filePath required' }, { status: 400 });
         }
@@ -101,6 +101,10 @@ export async function POST(req: NextRequest) {
             analysis: analysis || '',
             riskScore: riskScore || 5,
             patternTags: JSON.stringify(patternTags || []),
+            originalCode: originalCode || '',
+            proposedCode: proposedCode || '',
+            verdict: 'wrong',
+            createdAt: new Date().toISOString(),
           },
         });
         return NextResponse.json({ success: true, rejection });

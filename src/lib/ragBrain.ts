@@ -50,6 +50,9 @@ export interface RagMutationRecord {
   readonly embedding?: number[];
   readonly similarityScore?: number;
   readonly similarity?: number;
+  readonly verdict?: 'correct' | 'wrong';
+  readonly source?: string;
+  readonly rejectionReason?: string;
 }
 
 function getLocalLogs(): RagLogRecord[] {
@@ -229,7 +232,7 @@ export async function saveBrainChunk(
   const existingChunks = getLocalChunks();
   saveLocalChunks([...existingChunks.slice(-200), chunk]);
 
-  if (isFirebaseConfigured()) {
+  if (isFirebaseConfigured() && db) {
     try {
       await addDoc(collection(db, COLLECTION_NAME), {
         ...chunk,
@@ -240,7 +243,37 @@ export async function saveBrainChunk(
     }
   }
 
+  // Auto-sync to GitHub repository in background
+  try {
+    scheduleGitHubLogSync();
+  } catch {}
+
   return id;
+}
+
+/**
+ * Retrieves all stored RAG brain chunks from Firebase and local vector memory.
+ */
+export async function getBrainChunks(): Promise<BrainChunk[]> {
+  let chunks: BrainChunk[] = getLocalChunks();
+  if (isFirebaseConfigured() && db) {
+    try {
+      const snap = await getDocs(collection(db, COLLECTION_NAME));
+      if (!snap.empty) {
+        const firestoreChunks = snap.docs.map(
+          (d: QueryDocumentSnapshot<DocumentData, DocumentData>) =>
+            ({ id: d.id, ...d.data() } as BrainChunk)
+        );
+        const map = new Map<string, BrainChunk>();
+        chunks.forEach((c) => map.set(c.id || `${c.fileName}_${c.timestamp}`, c));
+        firestoreChunks.forEach((c) => map.set(c.id || `${c.fileName}_${c.timestamp}`, c));
+        chunks = Array.from(map.values());
+      }
+    } catch (e) {
+      console.warn('[RAG] Failed to fetch brain chunks from Firestore:', e);
+    }
+  }
+  return chunks.sort((a, b) => (b.timestamp || '').localeCompare(a.timestamp || ''));
 }
 
 /**
@@ -303,6 +336,9 @@ export async function saveMutationToRag(mutation: {
   readonly generation?: number;
   readonly commitSha?: string;
   readonly hotswapped?: boolean;
+  readonly verdict?: 'correct' | 'wrong';
+  readonly source?: string;
+  readonly rejectionReason?: string;
 }): Promise<string> {
   const timestamp = new Date().toISOString();
   const mutUuid = typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID().slice(0, 8) : Date.now().toString(36);
@@ -310,27 +346,33 @@ export async function saveMutationToRag(mutation: {
   
   let embedding: number[] = [];
   try {
-     embedding = await embedText(`${mutation.originalCode}\n---\n${mutation.rationale || ''}`);
+     embedding = await embedText(`${mutation.originalCode}\n---\n${mutation.rationale || ''}\n${mutation.rejectionReason || ''}`);
   } catch(e) {
      console.warn('Failed to embed mutation', e);
   }
 
   const resolvedFilePath = mutation.filePath || 'anonymous_mutation.ts';
+  const resolvedVerdict = mutation.verdict ?? 'correct';
+  const defaultRisk = resolvedVerdict === 'wrong' ? 0.85 : 0.1;
+
   const record: RagMutationRecord = {
     id,
     filePath: resolvedFilePath,
     originalCode: mutation.originalCode,
     mutatedCode: mutation.mutatedCode,
     rationale: mutation.rationale,
-    riskScore: mutation.riskScore ?? 0.1,
+    riskScore: mutation.riskScore ?? defaultRisk,
     generation: mutation.generation ?? 1,
     commitSha: mutation.commitSha,
     timestamp,
-    hotswapped: mutation.hotswapped ?? true,
+    hotswapped: resolvedVerdict === 'wrong' ? false : (mutation.hotswapped ?? true),
+    verdict: resolvedVerdict,
+    source: mutation.source || (resolvedVerdict === 'wrong' ? 'DARLEK_REJECTION_MEMORY' : 'DARLEK_AUTONOMOUS_CYCLE'),
+    rejectionReason: mutation.rejectionReason,
     embedding
   };
 
-  if (isFirebaseConfigured()) {
+  if (isFirebaseConfigured() && db) {
     try {
       await addDoc(collection(db, 'mutations_staging'), {
         ...record,
@@ -339,27 +381,54 @@ export async function saveMutationToRag(mutation: {
     } catch (e) {
       console.warn('Failed to save to mutations_staging', e);
     }
-  }
 
+    try {
+      await addDoc(collection(db, 'mutations'), {
+        pairId: id,
+        filePath: resolvedFilePath,
+        title: `DARLEK ${resolvedVerdict.toUpperCase()}: ${resolvedFilePath}`,
+        verdict: resolvedVerdict,
+        diff: mutation.mutatedCode,
+        originalCode: mutation.originalCode,
+        wrongDiff: resolvedVerdict === 'wrong' ? mutation.mutatedCode : '',
+        correctDiff: resolvedVerdict === 'correct' ? mutation.mutatedCode : '',
+        rationale: mutation.rationale || '',
+        rejectionReason: mutation.rejectionReason || '',
+        riskScore: mutation.riskScore ?? defaultRisk,
+        generation: mutation.generation ?? 1,
+        commitSha: mutation.commitSha || id,
+        source: mutation.source || (resolvedVerdict === 'wrong' ? 'DARLEK_REJECTION_MEMORY' : 'DARLEK_APPROVED_MUTATION'),
+        createdAt: serverTimestamp()
+      });
+    } catch (e) {
+      console.warn('Failed to log mutation to Firebase mutations collection', e);
+    }
+  }
 
   // 1. Save to dedicated local RAG mutations store
   const existingMutations = getLocalMutations();
   saveLocalMutations([...existingMutations, record]);
 
-  // 2. Index mutated code chunk into main RAG brain vector memory
+  // 2. Index mutated code chunk into main RAG brain vector memory with positive or negative marker
   try {
+    const chunkTag = resolvedVerdict === 'wrong' ? `REJECTED_MUTATION:${resolvedFilePath}` : `MUTATION:${resolvedFilePath}`;
+    const chunkContent = resolvedVerdict === 'wrong'
+      ? `// [NEGATIVE EXEMPLAR - REJECTED PATTERN - DO NOT REPEAT]\n// REASON: ${mutation.rejectionReason || mutation.rationale || 'Failed validation'}\n${mutation.mutatedCode}`
+      : mutation.mutatedCode;
     await saveBrainChunk(
-      `MUTATION:${resolvedFilePath}`,
+      chunkTag,
       resolvedFilePath,
-      mutation.mutatedCode,
+      chunkContent,
       mutation.generation ?? 1
     );
   } catch (err) {
     console.warn('[RAG] Fallback indexing mutation to brain chunk:', err);
   }
 
-  // 3. Register in active hotswap registry
-  hotswapFileInRegistry(resolvedFilePath, mutation.mutatedCode, mutation.commitSha);
+  // 3. Register in active hotswap registry (ONLY if approved and not wrong)
+  if (resolvedVerdict !== 'wrong' && mutation.hotswapped !== false) {
+    hotswapFileInRegistry(resolvedFilePath, mutation.mutatedCode, mutation.commitSha);
+  }
 
   // 4. Auto-sync to GitHub 'logs/' folder in background
   try {
@@ -370,10 +439,42 @@ export async function saveMutationToRag(mutation: {
 }
 
 /**
- * Retrieves all recorded mutations from RAG.
+ * Retrieves all recorded mutations from RAG (Firebase Firestore + local vector memory).
  */
 export async function getRagMutations(): Promise<RagMutationRecord[]> {
-  return getLocalMutations().sort((a, b) => b.timestamp.localeCompare(a.timestamp));
+  let mutations = getLocalMutations();
+  if (isFirebaseConfigured() && db) {
+    try {
+      const snap = await getDocs(collection(db, 'mutations'));
+      if (!snap.empty) {
+        const firestoreMutations = snap.docs.map((d: QueryDocumentSnapshot<DocumentData, DocumentData>) => {
+          const data = d.data();
+          return {
+            id: d.id,
+            filePath: data.filePath || 'unknown.ts',
+            originalCode: data.originalCode || '',
+            mutatedCode: data.diff || data.correctDiff || data.wrongDiff || '',
+            rationale: data.rationale || '',
+            riskScore: data.riskScore ?? 0.1,
+            generation: data.generation ?? 1,
+            commitSha: data.commitSha || '',
+            timestamp: data.createdAt?.toDate?.() ? data.createdAt.toDate().toISOString() : (data.timestamp || new Date().toISOString()),
+            hotswapped: data.verdict !== 'wrong',
+            verdict: data.verdict || 'correct',
+            source: data.source || 'DARLEK_FIREBASE',
+            rejectionReason: data.rejectionReason,
+          } as RagMutationRecord;
+        });
+        const map = new Map<string, RagMutationRecord>();
+        mutations.forEach((m) => map.set(m.id || `${m.filePath}_${m.timestamp}`, m));
+        firestoreMutations.forEach((m) => map.set(m.id || `${m.filePath}_${m.timestamp}`, m));
+        mutations = Array.from(map.values());
+      }
+    } catch (e) {
+      console.warn('[RAG] Failed to pull mutations from Firestore:', e);
+    }
+  }
+  return mutations.sort((a, b) => (b.timestamp || '').localeCompare(a.timestamp || ''));
 }
 
 // ─────────────────────────────────────────────
@@ -651,6 +752,7 @@ export function executeNeuralSequence(state: NeuralGeneState): NeuralGeneState {
     const SIMILARITY_THRESHOLD = 0.82;
 
     const bestSemanticMatch = relevantPastFixes.find((m) => {
+      if (m.verdict === 'wrong') return false; // CRITICAL: Never reapply a rejected/wrong mutation as a positive exemplar
       if (!m.mutatedCode || m.mutatedCode.trim() === originalCode.trim()) return false;
       if (m.filePath && filePath && m.filePath !== filePath) return false; // no cross-file paste
       const sim = typeof m.similarity === 'number' ? m.similarity : (typeof m.similarityScore === 'number' ? m.similarityScore : undefined);
@@ -876,10 +978,26 @@ export async function retrieveRelevantMutations(
     if (isFirebaseConfigured()) {
        try {
            const querySnapshot = await getDocs(collection(db, "mutations"));
-           dbMutations = querySnapshot.docs.map((doc: QueryDocumentSnapshot<DocumentData, DocumentData>) => ({
-             id: doc.id,
-             ...(doc.data() as Omit<RagMutationRecord, 'id'>)
-           }));
+           dbMutations = querySnapshot.docs.map((doc: QueryDocumentSnapshot<DocumentData, DocumentData>) => {
+             const data = doc.data();
+             const isWrong = data.verdict === 'wrong' || !!data.wrongDiff;
+             return {
+               id: doc.id,
+               filePath: (data.filePath as string) || '',
+               originalCode: (data.originalCode as string) || '',
+               mutatedCode: (data.diff as string) || (data.mutatedCode as string) || (data.correctDiff as string) || (data.wrongDiff as string) || '',
+               rationale: (data.rationale as string) || (data.title as string) || (data.commitMessage as string) || (data.rejectionReason as string) || '',
+               riskScore: (data.riskScore as number) ?? (isWrong ? 0.85 : 0.1),
+               generation: (data.generation as number) ?? 1,
+               commitSha: (data.commitSha as string) || (data.pairId as string) || '',
+               timestamp: data.createdAt?.toDate ? data.createdAt.toDate().toISOString() : new Date().toISOString(),
+               verdict: isWrong ? 'wrong' : 'correct',
+               source: (data.source as string) || 'FIREBASE_MUTATIONS',
+               rejectionReason: (data.rejectionReason as string) || '',
+               hotswapped: false,
+               embedding: Array.isArray(data.embedding) ? data.embedding : undefined,
+             } as RagMutationRecord;
+           });
            if (dbMutations.length === 0) {
              const stagingSnapshot = await getDocs(collection(db, "mutations_staging"));
              dbMutations = stagingSnapshot.docs.map((doc: QueryDocumentSnapshot<DocumentData, DocumentData>) => ({

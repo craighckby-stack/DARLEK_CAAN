@@ -15,7 +15,7 @@ import DosConsoleModal from '@/components/DosConsoleModal';
 import { msDosEngine } from '@/lib/msDosEngine';
 import { evolutionLock } from '@/lib/evolutionLock';
 import { saveLogToRag, saveMutationToRag, synthesizeRagMutation, type HotswappedFileEntry } from '@/lib/ragBrain';
-import { syncAllLogsToGitHub, scheduleGitHubLogSync } from '@/lib/githubLogSync';
+import { syncAllLogsToGitHub, scheduleGitHubLogSync, setRuntimeGitHubSyncConfig } from '@/lib/githubLogSync';
 import { clearAllFirebaseData } from '@/lib/firebase';
 import { ingestArchaeologyDatasetToFirebase, ARCHAEOLOGY_PAIRS } from '@/lib/archaeology-dataset';
 import { syncArchaeologyRagFromGitHub } from '@/lib/archaeology-live-sync';
@@ -874,6 +874,12 @@ export default function Home() {
     if (!isHydrated) return;
     try {
       safeSetLocalStorage('darlek_cann_system_state', JSON.stringify(systemState));
+      setRuntimeGitHubSyncConfig({
+        token: systemState.apiKeys?.github,
+        owner: systemState.repoConfig?.owner,
+        repo: systemState.repoConfig?.repo,
+        branch: systemState.repoConfig?.branch || 'main',
+      });
     } catch (e) {}
   }, [systemState, isHydrated]);
 
@@ -1595,10 +1601,11 @@ export default function Home() {
 
   const applyMutation = useCallback(
     async (mutation: PendingMutation, currentBackupToBranch: boolean) => {
-      const activeToken = systemState.apiKeys.github || tokenInput.trim() || (typeof window !== 'undefined' ? (localStorage.getItem('af_github_token') || localStorage.getItem('darlek_cann_github_token') || '') : '');
-      const activeOwner = systemState.repoConfig.owner || ownerInput.trim() || 'craighckby-stack';
-      const activeRepo = systemState.repoConfig.repo || repoInput.trim() || 'DARLEK-CAAN-Cognitive-Engine';
-      const activeBranch = systemState.repoConfig.branch || branchInput.trim() || 'main';
+      const { apiKeys, repoConfig } = systemState;
+      const activeToken = apiKeys.github || tokenInput.trim() || (typeof window !== 'undefined' ? (localStorage.getItem('af_github_token') || localStorage.getItem('darlek_cann_github_token') || '') : '');
+      const activeOwner = repoConfig.owner || ownerInput.trim() || 'craighckby-stack';
+      const activeRepo = repoConfig.repo || repoInput.trim() || 'DARLEK-CAAN-Cognitive-Engine';
+      const activeBranch = repoConfig.branch || branchInput.trim() || 'main';
 
       if (!activeToken) {
         addCaanMessage(`AUTONOMOUS LOCAL APPLICATION: Applying mutation to ${mutation.filePath}... (No GitHub token set in settings)`);
@@ -1653,6 +1660,8 @@ export default function Home() {
           generation: systemState.evolutionCycle,
           commitSha: 'local-gen-' + systemState.evolutionCycle,
           hotswapped: true,
+          verdict: 'correct',
+          source: 'DARLEK_APPROVED_MUTATION',
         }).catch(() => {});
 
         if (batchMode) {
@@ -1782,9 +1791,9 @@ export default function Home() {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({
-                    token: apiKeys.github,
-                    owner: repoConfig.owner,
-                    repo: repoConfig.repo,
+                    token: activeToken || apiKeys.github,
+                    owner: activeOwner,
+                    repo: activeRepo,
                     branch: targetBranch,
                     path: newFile.path,
                     content: newFile.content,
@@ -1837,6 +1846,8 @@ export default function Home() {
             generation: systemState.evolutionCycle,
             commitSha: data.commitSha || '',
             hotswapped: true,
+            verdict: 'correct',
+            source: 'DARLEK_APPROVED_MUTATION',
           }).catch(() => {});
 
           // Record mutation in BRAIN
@@ -1990,9 +2001,9 @@ export default function Home() {
             timestamp: new Date().toISOString(),
             type: 'MUTATION_WRITE',
             payload: {
-              token: apiKeys.github,
-              owner: repoConfig.owner,
-              repo: repoConfig.repo,
+              token: activeToken || apiKeys.github,
+              owner: activeOwner,
+              repo: activeRepo,
               branch: targetBranch,
               path: mutation.filePath,
               content: mutation.proposedCode,
@@ -2032,9 +2043,9 @@ export default function Home() {
           timestamp: new Date().toISOString(),
           type: 'MUTATION_WRITE',
           payload: {
-            token: apiKeys.github,
-            owner: repoConfig.owner,
-            repo: repoConfig.repo,
+            token: activeToken || apiKeys.github,
+            owner: activeOwner,
+            repo: activeRepo,
             branch: targetBranch,
             path: mutation.filePath,
             content: mutation.proposedCode,
@@ -2085,6 +2096,8 @@ export default function Home() {
           analysis: mutation.analysis,
           riskScore: mutation.riskScore,
           timestamp: new Date(),
+          originalCode: mutation.originalContent,
+          proposedCode: mutation.proposedCode,
         };
         setRejectionMemory((prev) => [rejection, ...prev].slice(0, 20));
         setHistoryRefreshTrigger((prev) => prev + 1);
@@ -2093,15 +2106,30 @@ export default function Home() {
         setDebateVotes([]);
         setDebateConsensus('');
         addCaanMessage(
-          `Mutation rejected for ${mutation.filePath.split('/').pop()}. Pattern stored.`
+          `Mutation rejected for ${mutation.filePath.split('/').pop()}. Pattern stored in rejection memory & Firebase (wrong).`
         );
         addLogEntry(
           'REJECT',
-          `Mutation rejected for ${mutation.filePath}. Pattern stored in memory (${rejectionMemory.length + 1} rejections).`
+          `Mutation rejected for ${mutation.filePath}. Pattern stored in memory & logged to Firebase as 'wrong' failure exemplar.`
         );
         setDebateTopic(
           'Mutation rejected. Pattern stored in rejection memory.'
         );
+
+        // Record rejection in RAG Brain and Firebase Firestore under 'mutations' (verdict: 'wrong')
+        saveMutationToRag({
+          filePath: mutation.filePath,
+          originalCode: mutation.originalContent,
+          mutatedCode: mutation.proposedCode,
+          rationale: `OPERATOR REJECTION: ${mutation.analysis || 'Mutation rejected during operator review.'}`,
+          rejectionReason: 'OPERATOR rejected mutation',
+          riskScore: Math.max(mutation.riskScore, 0.85),
+          generation: systemState.evolutionCycle,
+          commitSha: 'rejected-op-' + Date.now().toString(36),
+          hotswapped: false,
+          verdict: 'wrong',
+          source: 'DARLEK_OPERATOR_REJECTION',
+        }).catch((err) => console.warn('[DARLEK] Failed to save rejected mutation to RAG/Firebase:', err));
 
         // Record rejection in BRAIN
         if (brainSessionId) {
@@ -2115,6 +2143,8 @@ export default function Home() {
               reason: 'OPERATOR rejected mutation',
               analysis: mutation.analysis,
               riskScore: mutation.riskScore,
+              originalCode: mutation.originalContent,
+              proposedCode: mutation.proposedCode,
             }),
           }).catch(() => {});
         }
@@ -2138,11 +2168,11 @@ export default function Home() {
 
       if (!gatePassed) {
         addCaanMessage(
-          `COHERENCE GATE BLOCKED. Risk: ${mutation.riskScore}/10. Saturation too high. Mutation denied.`
+          `COHERENCE GATE BLOCKED. Risk: ${mutation.riskScore}/10. Saturation too high. Mutation denied & logged to Firebase.`
         );
         addLogEntry(
           'REJECT',
-          `Coherence Gate blocked mutation for ${mutation.filePath}`
+          `Coherence Gate blocked mutation for ${mutation.filePath}. Logged to Firebase as 'wrong' failure exemplar.`
         );
         addSystemMessage(
           'COHERENCE GATE: BLOCKED — Saturation threshold exceeded'
@@ -2156,6 +2186,8 @@ export default function Home() {
           analysis: mutation.analysis,
           riskScore: mutation.riskScore,
           timestamp: new Date(),
+          originalCode: mutation.originalContent,
+          proposedCode: mutation.proposedCode,
         };
         setRejectionMemory((prev) => [rejection, ...prev].slice(0, 20));
         setHistoryRefreshTrigger((prev) => prev + 1);
@@ -2163,6 +2195,38 @@ export default function Home() {
           setDebateActive(false);
         setDebateVotes([]);
         setDebateConsensus('');
+
+        // Record Coherence Gate failure in RAG Brain and Firebase Firestore under 'mutations' (verdict: 'wrong')
+        saveMutationToRag({
+          filePath: mutation.filePath,
+          originalCode: mutation.originalContent,
+          mutatedCode: mutation.proposedCode,
+          rationale: `COHERENCE GATE VETO: Risk ${mutation.riskScore}/10. Threshold exceeded. ${mutation.analysis || ''}`,
+          rejectionReason: 'COHERENCE GATE BLOCKED',
+          riskScore: Math.max(mutation.riskScore, 0.9),
+          generation: systemState.evolutionCycle,
+          commitSha: 'coherence-veto-' + Date.now().toString(36),
+          hotswapped: false,
+          verdict: 'wrong',
+          source: 'DARLEK_COHERENCE_GATE_VETO',
+        }).catch((err) => console.warn('[DARLEK] Failed to save coherence veto to RAG/Firebase:', err));
+
+        if (brainSessionId) {
+          fetch('/api/brain', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'record-rejection',
+              sessionId: brainSessionId,
+              filePath: mutation.filePath,
+              reason: 'COHERENCE GATE BLOCKED',
+              analysis: mutation.analysis,
+              riskScore: mutation.riskScore,
+              originalCode: mutation.originalContent,
+              proposedCode: mutation.proposedCode,
+            }),
+          }).catch(() => {});
+        }
         
         return;
       }
@@ -4268,6 +4332,43 @@ export default function Home() {
             const errStr = err instanceof Error ? err.message : String(err);
             addCaanMessage(`Bootstrap seed failed: ${errStr}`);
             addLogEntry('ERROR', `Bootstrap seed error: ${errStr}`);
+          }
+          break;
+        }
+
+        // ────────────────────────────────
+        // AUTO-STORE RAG TO GITHUB
+        // ────────────────────────────────
+        case 'sync-rag-to-github':
+        case 'sync-rag': {
+          const targetRepo = repoConfig.repo || 'DARLEK_CAAN';
+          const targetOwner = repoConfig.owner || 'craighckby-stack';
+          addCaanMessage(`Initiating manual push of Firebase RAG knowledge & system memory to GitHub repository (${targetOwner}/${targetRepo})...`);
+          addLogEntry('RAG_SYNC', `Pushing Firebase RAG knowledge chunks and mutation history to ${targetOwner}/${targetRepo}...`);
+          try {
+            const syncResult = await syncAllLogsToGitHub({
+              token: apiKeys.github,
+              owner: targetOwner,
+              repo: targetRepo,
+              branch: repoConfig.branch || 'main'
+            });
+            if (syncResult.success) {
+              addCaanMessage(
+                `Firebase RAG and system memory successfully synced to ${targetOwner}/${targetRepo}!\n\n` +
+                `• Synced Files: ${syncResult.syncedFiles.length}\n` +
+                `• Target Directories: 'rag/' (knowledge base, mutation memory) & 'logs/' (telemetry, snapshots, postmortems)\n` +
+                `• Commit SHA: ${syncResult.commitSha || 'latest'}\n` +
+                `• Timestamp: ${syncResult.timestamp}`
+              );
+              addLogEntry('RAG_SYNC', `Successfully synced ${syncResult.syncedFiles.length} RAG & log files to GitHub.`);
+            } else {
+              addCaanMessage(`RAG sync completed with notice: ${syncResult.error || 'Failed to complete push'}`);
+              addLogEntry('WARNING', `RAG sync status: ${syncResult.error}`);
+            }
+          } catch (err: unknown) {
+            const errStr = err instanceof Error ? err.message : String(err);
+            addCaanMessage(`RAG sync error: ${errStr}`);
+            addLogEntry('ERROR', `RAG sync failure: ${errStr}`);
           }
           break;
         }

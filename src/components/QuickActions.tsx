@@ -96,6 +96,7 @@ const QUICK_ACTION_REGISTRY: ActionDefinition[] = [
   { id: 'deploy-new-repo', label: 'DEPLOY NEW REPO', icon: Rocket, color: '#ff6600' },
   { id: 'undo-mutation', label: 'UNDO MUTATION', icon: Undo2, color: '#ff3366' },
   { id: 'ingest-archaeology', label: 'INGEST ARCHAEOLOGY', icon: FileCode, color: '#00ffff' },
+  { id: 'sync-rag-to-github', label: 'AUTO-STORE RAG TO GITHUB', icon: Upload, color: '#00ffcc' },
   { id: 'empty-firebase', label: 'EMPTY FIREBASE', icon: Trash2, color: '#ff0055' },
   { id: 'reboot-system', label: 'REBOOT SYSTEM', icon: RotateCcw, color: '#ff00ff' },
 ];
