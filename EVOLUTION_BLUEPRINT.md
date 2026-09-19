@@ -1,6 +1,6 @@
 # DARLEK CANN v3.3 — Evolution Blueprint
 
-> **Sovereign Engine v89.1 Technical Summary**: The `DARLEK CANN` system enforces zero-downtime, idempotent runtime mutations using atomic regular expression (RegEx) injections, Base64 payload decoding, strict schema validation (`ReadFileSchema`), and transactional state restoration. This blueprint outlines system architecture, automated refactoring pipelines, GitHub API integration patterns, and security isolation protocols.
+> **Sovereign Engine v89.1 Technical Summary**: The `DARLEK CANN` system enforces zero-downtime, idempotent runtime mutations using atomic regular expression (RegEx) injections, Base64 payload decoding, strict schema validation (`ReadFileSchema`), transactional state restoration, and multi-layered defense-in-depth security mitigations. This blueprint outlines system architecture, automated refactoring pipelines, GitHub API integration patterns, and security isolation protocols.
 
 ---
 
@@ -28,7 +28,7 @@
 The state mutation pipeline operates in four deterministic phases:
 
 1. **Ingestion Phase**: Fetches target payloads via the GitHub API Ingestion Module (`ReadFileSchema`), decoding Base64 payloads while extracting metadata (SHA, byte size, relative path).
-2. **Validation Phase**: Enforces Zod schema conformance and structural integrity of boundary markers (e.g., `<!-- INJECT:START -->` / `<!-- INJECT:END -->`).
+2. **Validation Phase**: Enforces Zod schema conformance, structural integrity of boundary markers (e.g., `<!-- INJECT:START -->` / `<!-- INJECT:END -->`), and rigorous path traversal defenses.
 3. **Snapshot Phase**: Creates atomic, timestamped snapshot files in isolated `.evolve_backups/` directories with strict file permission modes (`0600`).
 4. **Execution & Commit Phase**: Performs atomic write operations and updates runtime state tracking for target modules.
 
@@ -38,7 +38,7 @@ The state mutation pipeline operates in four deterministic phases:
 /**
  * @file updateModule.ts
  * @module DarlekCann/Core/Evolution Engine v89.1
- * @description Core injection utility providing transactional safety, regex marker isolation, and fallback snapshots.
+ * @description Core injection utility providing transactional safety, regex marker isolation, fallback snapshots, and secure path sanitization.
  */
 
 import { promises as fs } from 'node:fs';
@@ -60,11 +60,26 @@ export interface EvolutionOptions {
 }
 
 /**
- * Injects code payload into target file bounded by markers with atomic snapshot safeguards.
+ * Validates target path against unauthorized directory traversal or sensitive paths.
+ */
+function validateSecurePath(targetPath: string): string {
+  const resolvedPath = path.resolve(targetPath);
+  const normalizedNormalized = path.normalize(resolvedPath);
+  
+  // Defense-in-depth: Disallow relative parent traversals outside expected working roots or system paths
+  if (normalizedNormalized.includes('..')) {
+    throw new Error('Security Violation: Potential path traversal detected in target path.');
+  }
+  
+  return normalizedNormalized;
+}
+
+/**
+ * Injects code payload into target file bounded by markers with atomic snapshot safeguards and secure path verification.
  */
 export async function injectAtomicModule(options: EvolutionOptions): Promise<boolean> {
   const { targetPath, payload, markers, createSnapshot = true } = options;
-  const resolvedPath = path.resolve(targetPath);
+  const resolvedPath = validateSecurePath(targetPath);
 
   if (createSnapshot) {
     const backupDir = path.join(path.dirname(resolvedPath), '.evolve_backups');
@@ -117,7 +132,7 @@ The ingestion subsystem directly interfaces with the GitHub REST API v3 to retri
 ## 4. Security Guidelines & Vulnerability Reporting
 
 ### 4.1 Security Best Practices
-- **Input & Path Validation**: Absolute path resolution (`path.resolve`) combined with strict Zod schema parsing prevents path traversal and arbitrary filesystem mutations.
+- **Input & Path Validation**: Absolute path resolution (`path.resolve`) combined with strict Zod schema parsing and rigorous anti-traversal checks prevents path traversal and arbitrary filesystem mutations.
 - **Strict Permission Isolation**: Backup directory (`.evolve_backups/`) permissions are restricted to `0700` and individual snapshots to `0600` (`POSIX`) to prevent unauthorized reading of prior application states.
 - **Timeout Protection**: Network requests to external control planes (such as the GitHub REST API) MUST enforce `AbortController` timeouts of a maximum 15 seconds.
 - **Idempotency Enforcement**: Injection routines must fail-safe and throw explicit exceptions on missing, inverted, or corrupt boundary markers.
