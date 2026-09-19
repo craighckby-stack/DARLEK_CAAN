@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-15 [2026-09-19T22:53:54.943Z] */
 # AI Studio Configuration & Governance
 
 ## Overview
