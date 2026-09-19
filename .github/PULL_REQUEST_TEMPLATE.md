@@ -1,6 +1,6 @@
 <!--
  * ARCHITECTURAL SYSTEM HEADER: PULL REQUEST SPECIFICATION TEMPLATE
- *
+ * Engine: EMG Core Neural Code and Documentation Optimizer Engine
  * 1. PURPOSE & FUNCTIONALITY:
  *    - Serves as the standardized pull request submission template for the repository.
  *    - Enforces structured technical documentation, scope classification, risk assessment,
@@ -15,14 +15,6 @@
  *    - Integrates with GitHub PR workflows and automated CI gatekeeper actions.
  *    - References Diagnostic Engine telemetry outputs (lib/diagnostic-engine.ts, src/Tessera/diagnostics.py).
  *    - Connects with Security Assurance Frameworks, SAST analyzers, and Responsible Disclosure protocols.
--->
-
-<!--
-# ARCHITECTURAL HEADER: ENTERPRISE PULL REQUEST TEMPLATE (EVOLVED)
-# Engine: EMG Core v49 Neural Code and Documentation Optimizer Engine
-# Role: Enforces strict quality gates, architectural compliance, automated verification, and security controls.
-# Integration: Aligns PR submissions with Zero-Leak Sandbox, Dynamic Consensus Weighting (DCW), Diagnostic Engine, and Security Assurance Framework.
-# Version: 3.2.1-TYPE-SAFE-OPTIMIZED
 -->
 
 ## ⚡ Executive Summary
@@ -96,7 +88,7 @@
 
 ### 3.2 Dynamic Consensus Weighting (DCW)
 
-- [ ] **Consensus Invariance:** Confirms changes prevent deadlocks, livelocks, race conditions, and resource starvation.
+- [ ] **Consensus Invariance:** Confirms changes eliminate deadlocks, livelocks, race conditions, and resource starvation.
 - [ ] **Algorithm Mutation:** Modifies agent decision weights or scoring algorithms.
   *(If checked, document weight derivation and validation model below)*
 
@@ -106,8 +98,8 @@
 
 ### 3.3 Concurrency, Thread Safety & Sandboxing
 
-- [ ] **Reentrancy Protection:** All asynchronous and multi-threaded paths verify state lock bounds.
-- [ ] **Sandboxed Execution:** Dynamic code evaluation or third-party execution paths are strictly constrained within isolated contexts.
+- [ ] **Reentrancy Protection:** Asynchronous and multi-threaded paths enforce state lock boundaries.
+- [ ] **Sandboxed Execution:** Dynamic code evaluation and third-party execution paths run exclusively inside isolated contexts.
 - [ ] **Fail-Safe Defaults:** System falls back gracefully to deterministic safe states upon unhandled exceptions.
 
 ---
@@ -116,14 +108,14 @@
 
 ### 4.1 Threat Modeling & Input Boundaries
 
-- [ ] **Input Sanitization:** All ingress parameters, network inputs, and serialized payloads are validated against strict schemas.
-- [ ] **Injection Prevention:** Zero raw query constructions, unsanitized shell executions, or unescaped HTML injections.
-- [ ] **Least Privilege Principle:** Scoped tokens, process capabilities, and minimal filesystem access boundaries applied.
-- [ ] **Data Minimization:** No PII, bearer tokens, private keys, or credentials stored in persistent logs or telemetry.
+- [ ] **Input Sanitization:** Validates all ingress parameters, network inputs, and serialized payloads against strict schemas.
+- [ ] **Injection Prevention:** Eliminates raw query constructions, unsanitized shell executions, and unescaped HTML rendering.
+- [ ] **Least Privilege:** Enforces scoped tokens, process isolation, and minimal filesystem access boundaries.
+- [ ] **Data Minimization:** Excludes PII, bearer tokens, private keys, and sensitive credentials from persistent logs and telemetry.
 
 ### 4.2 Security Verification Checklist
 
-- [ ] Static Application Security Testing (SAST) executed with zero critical/high alerts.
+- [ ] Static Application Security Testing (SAST) executed with zero critical or high alerts.
 - [ ] Software Bill of Materials (SBOM) and dependency audit completed (`npm audit` / `pip-audit` / `cargo audit`).
 - [ ] Cryptographic operations employ constant-time comparisons and FIPS-compliant primitives.
 
@@ -133,10 +125,10 @@
 
 ### 5.1 Automated Test Verification
 
-| Test Suite                | Pass / Total  | Coverage Baseline | Result Summary               |
-| :------------------------ | :------------ | :---------------- | :--------------------------- |
-| **Unit Tests**            | `[   /   ]`   | `>= 90%`          | `[ Pass / Fail ]`            |
-| **Integration Tests**     | `[   /   ]`   | `>= 85%`          | `[ Pass / Fail ]`            |
+| Test Suite                | Pass / Total  | Coverage Baseline | Result Summary     |
+| :------------------------ | :------------ | :---------------- | :----------------- |
+| **Unit Tests**            | `[   /   ]`   | `>= 90%`          | `[ Pass / Fail ]`  |
+| **Integration Tests**     | `[   /   ]`   | `>= 85%`          | `[ Pass / Fail ]`  |
 | **Diagnostic Benchmarks** | `[   /   ]`   | `Within +/- 2%`   | `[ Pass / Fail ]`            |
 | **Memory Leak Tests**     | `[   /   ]`   | `0 Bytes Delta`   | `[ Pass / Fail ]`            |
 
@@ -164,13 +156,13 @@ If you have discovered a vulnerability or security-critical defect:
 
 - [ ] **Atomic Rollback:** This change can be cleanly reverted via `git revert` without schema corruption or state divergence.
 - [ ] **Feature Flag Guard:** Critical paths are shielded behind a dynamic toggle (`FEATURE_NAME_ENABLED`).
-- [ ] **Database / Schema Forward Compatibility:** Any database migrations are backwards-compatible with N-1 engine versions.
+- [ ] **Schema Compatibility:** Database migrations remain backwards-compatible with N-1 engine versions.
 
 ### 7.2 Rollback Procedure
 
-```
+```text
 1. Identify regression via Diagnostic Engine telemetry alert.
-2. Disable active feature flag: [ FLAG_NAME ]
-3. Execute standard atomic revert: git revert -m 1 [MERGE_COMMIT_SHA]
+2. Disable the active feature flag: [ FLAG_NAME ]
+3. Execute standard atomic revert: git revert -m 1 [ MERGE_COMMIT_SHA ]
 4. Trigger emergency gatekeeper pipeline to restore prior stable baseline.
 ```
