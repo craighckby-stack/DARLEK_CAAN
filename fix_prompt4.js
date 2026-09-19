@@ -34,7 +34,7 @@ function resolveAndValidatePath(baseDir, relativePath) {
     const normalizedBase = normalize(baseDir);
     const normalizedTarget = normalize(resolvedPath);
 
-    if (!normalizedTarget.startsWith(normalizedBase)) {
+    if (!normalizedTarget.startsWith(normalizedBase + (normalizedBase.endsWith('/') ? '' : '/'))) {
         throw new Error('SECURITY ERROR: Unauthorized file access attempt detected.');
     }
     return normalizedTarget;
