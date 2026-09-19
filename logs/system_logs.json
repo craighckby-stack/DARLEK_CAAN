@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-19T22:42:17.762Z",
+    "generatedAt": "2026-09-19T22:42:26.685Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789857743671_cbceb81c",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-19T22:42:23.671Z"
+    },
     {
       "id": "rag_log_1789857733544_554887c5",
       "type": "HEALTH",
@@ -150,12 +156,6 @@
       "type": "HEALTH",
       "description": "Auto-test: PASSED — 5 passed, 0 failed",
       "timestamp": "2026-09-19T22:41:28.410Z"
-    },
-    {
-      "id": "rag_log_1789857688064_e27313d2",
-      "type": "APPROVE",
-      "description": "Mutation applied to .env.example",
-      "timestamp": "2026-09-19T22:41:28.064Z"
     }
   ],
   "telemetryBuffer": [
@@ -438,6 +438,13 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-4d175943",
+      "time": "08:42:23",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }
