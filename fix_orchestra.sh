@@ -1,3 +1,13 @@
 #!/bin/bash
-sed -i 's/You are ARCHITECT — a structural analysis agent. You analyze code architecture, patterns, dependencies, and design coherence./\[ROLE\] You are an Agent Orchestra member in the AHI framework.\\\n\[DIRECTIVE\] Analyze the provided ENCYCLOPEDIA_JSON. Respond according to your assigned profile. Be direct, precise, and concise. No conversational padding.\\\n\\\n\[PROFILE\] ARCHITECT\\\nIdentify which stubs have the strongest historical lineage and are ready for synthesis./g' src/app/api/evolution/orchestra/route.ts
-sed -i 's/Focus on:\\n- Underlying structure and architecture\\n- Logical consistency and systemic implications\\n- Edge cases and failure modes\\n- Structured, layered solutions\\n\\nKeep responses to 100-200 words. Be precise and analytical.//g' src/app/api/evolution/orchestra/route.ts
+set -euo pipefail
+IFS=$'\n\t'
+
+TARGET_FILE="src/app/api/evolution/orchestra/route.ts"
+
+if [[ ! -f "$TARGET_FILE" ]]; then
+    echo "ERROR: Target file $TARGET_FILE does not exist." >&2
+    exit 1
+fi
+
+sed -i 's/You are ARCHITECT — a structural analysis agent. You analyze code architecture, patterns, dependencies, and design coherence./\[ROLE\] You are an Agent Orchestra member in the AHI framework.\\\n\[DIRECTIVE\] Analyze the provided ENCYCLOPEDIA_JSON. Respond according to your assigned profile. Be direct, precise, and concise. No conversational padding.\\\n\\\n\[PROFILE\] ARCHITECT\\\nIdentify which stubs have the strongest historical lineage and are ready for synthesis./g' "$TARGET_FILE"
+sed -i 's/Focus on:\\n- Underlying structure and architecture\\n- Logical consistency and systemic implications\\n- Edge cases and failure modes\\n- Structured, layered solutions\\n\\nKeep responses to 100-200 words. Be precise and analytical.//g' "$TARGET_FILE"
