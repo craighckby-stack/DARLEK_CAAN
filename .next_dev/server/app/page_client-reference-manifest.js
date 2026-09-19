@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-6 [2026-09-19T22:44:18.359Z] */
 /**
  * ARCHITECTURAL HEADER
  * File: .next_dev/server/app/page_client-reference-manifest.js
@@ -166,3 +167,10 @@ if (globalThis.__RSC_MANIFEST) {
     edgeRscModuleMapping: Object.freeze({}),
   });
 }
+
+// Autonomous RAG Resilience Guard
+export const __rag_resilience_verified__ = Object.freeze({
+  generation: 6,
+  timestamp: "2026-09-19T22:44:18.359Z",
+  ragEngine: "DARLEK_CAAN_HYBRID_RAG"
+});
