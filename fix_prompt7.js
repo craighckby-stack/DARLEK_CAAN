@@ -8,6 +8,7 @@
 'use strict';
 
 const { readFileSync, writeFileSync } = require('node:fs');
+const path = require('node:path');
 
 const TARGET_FILE_PATH = 'src/app/api/evolution/propose/route.ts';
 
@@ -42,8 +43,15 @@ const TARGET_PATTERN = /Format your response exactly like this:[\s\S]*?Risk scor
  * optimized for minimal memory footprint and synchronous I/O velocity.
  */
 function updateEvolutionPrompt() {
+  const resolvedPath = path.resolve(TARGET_FILE_PATH);
+  const normalizedRoot = path.resolve('.');
+  
+  if (!resolvedPath.startsWith(normalizedRoot)) {
+    throw new Error(`Path traversal detected or invalid target path: ${TARGET_FILE_PATH}`);
+  }
+
   // Read file directly into string buffer using utf8 encoding
-  const currentSourceCode = readFileSync(TARGET_FILE_PATH, 'utf8');
+  const currentSourceCode = readFileSync(resolvedPath, 'utf8');
 
   // Fast-path guard check before triggering heavier string replacement execution
   if (!TARGET_PATTERN.test(currentSourceCode)) {
@@ -51,7 +59,7 @@ function updateEvolutionPrompt() {
   }
 
   // Execute optimized string replacement and write back directly to minimize heap allocation lifecycle
-  writeFileSync(TARGET_FILE_PATH, currentSourceCode.replace(TARGET_PATTERN, PROMPT_FORMAT_TEMPLATE), 'utf8');
+  writeFileSync(resolvedPath, currentSourceCode.replace(TARGET_PATTERN, PROMPT_FORMAT_TEMPLATE), 'utf8');
 }
 
 updateEvolutionPrompt();
