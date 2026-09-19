@@ -1,4 +1,4 @@
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-8 [2026-09-19T11:05:18.139Z] */
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-4 [2026-09-19T22:43:30.071Z] */
 /**
  * DARLEK CANN ARCHITECTURAL HEADER
  * File: .next_dev/server/app/api/brain/route_client-reference-manifest.js
