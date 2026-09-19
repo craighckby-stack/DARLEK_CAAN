@@ -17,17 +17,39 @@ const LOCAL_DIR = 'src';
 const OUTPUT_FILE = 'missing_files.json';
 
 /**
+ * Validates path parameters to ensure defense against directory traversal exploits.
+ * @param {string} basePath - The expected root directory.
+ * @param {string} targetPath - The path to validate.
+ * @returns {boolean} True if safe, false otherwise.
+ */
+function isSafePath(basePath, targetPath) {
+  const resolvedBase = path.resolve(basePath);
+  const resolvedTarget = path.resolve(resolvedBase, targetPath);
+  return resolvedTarget.startsWith(resolvedBase);
+}
+
+/**
  * Fetches repository structure from GitHub API asynchronously with resilience.
  * @param {string} url - Target endpoint URL.
  * @returns {Promise<Object>} Resolves with JSON response object.
  */
 function fetchRemoteTree(url) {
   return new Promise((resolve, reject) => {
+    try {
+      const parsedUrl = new URL(url);
+      if (parsedUrl.protocol !== 'https:') {
+        return reject(new Error('Insecure protocol detected. HTTPS required.'));
+      }
+    } catch (err) {
+      return reject(new Error(`Invalid API endpoint URL: ${err.message}`));
+    }
+
     const requestOptions = {
       headers: {
         'User-Agent': 'node.js/EMG-Core-v49',
         'Accept': 'application/vnd.github.v3+json'
-      }
+      },
+      timeout: 10000 // 10 seconds timeout protection
     };
 
     const req = https.get(url, requestOptions, (res) => {
@@ -38,7 +60,18 @@ function fetchRemoteTree(url) {
       }
 
       const chunks = [];
-      res.on('data', (chunk) => chunks.push(chunk));
+      let totalBytes = 0;
+      const MAX_PAYLOAD_SIZE = 10 * 1024 * 1024; // 10MB safety limit
+
+      res.on('data', (chunk) => {
+        totalBytes += chunk.length;
+        if (totalBytes > MAX_PAYLOAD_SIZE) {
+          res.destroy(new Error('Payload size exceeded maximum allowed limit.'));
+          return;
+        }
+        chunks.push(chunk);
+      });
+
       res.on('end', () => {
         try {
           const rawString = Buffer.concat(chunks).toString('utf8');
@@ -52,6 +85,10 @@ function fetchRemoteTree(url) {
 
     req.on('error', (err) => {
       reject(new Error(`Network transmission failed: ${err.message}`));
+    });
+
+    req.on('timeout', () => {
+      req.destroy(new Error('Network request timed out.'));
     });
 
     req.end();
@@ -78,6 +115,11 @@ async function walkDirectory(dir) {
     await Promise.all(
       entries.map(async (entry) => {
         const fullPath = path.join(currentDir, entry.name);
+        
+        if (!isSafePath(dir, fullPath)) {
+          return; // Skip unsafe paths escaping the base directory
+        }
+
         if (entry.isDirectory()) {
           await scan(fullPath);
         } else if (entry.isFile()) {
@@ -112,8 +154,11 @@ async function run() {
 
     const missingFiles = remotePayload.tree.filter((item) => {
       return (
+        item &&
         item.type === 'blob' &&
+        typeof item.path === 'string' &&
         item.path.startsWith(targetPrefix) &&
+        !item.path.includes('..') &&
         !localFileSet.has(item.path)
       );
     });
