@@ -11,32 +11,43 @@ import { retrieveRelevantMutations } from './ragBrain';
 import { RAG_RETRIEVAL_ENABLED } from './config';
 
 const MODEL_MAPPING: Record<string, string> = {
-  'gemini-3.7-flash': 'gemini-3.6-flash',
-  'gemini-3.6-flash': 'gemini-3.6-flash',
   'gemini-3.8-flash': 'gemini-3.8-flash',
+  'gemini-3.7-flash': 'gemini-3.8-flash',
+  'gemini-3.6-flash': 'gemini-3.6-flash',
   'gemini-3.5': 'gemini-3.6-flash',
   'gemini-3.1-pro-preview': 'gemini-3.1-pro-preview',
-  'gemini-flash-lite-latest': 'gemini-flash-lite-latest',
   'gemini-flash-latest': 'gemini-flash-latest',
+  'gemini-flash-lite-latest': 'gemini-flash-lite-latest',
+  'gemini-3.1-flash-lite': 'gemini-flash-lite-latest',
   'gemini-2.5-flash': 'gemini-2.5-flash',
   'gemini-2.5-pro': 'gemini-2.5-pro',
   'gemini-2.0-flash': 'gemini-2.5-flash',
-  'gemini-1.5-flash': 'gemini-1.5-flash',
+  'gemini-1.5-flash': 'gemini-2.5-flash',
+  'gemini-1.5-pro': 'gemini-2.5-pro',
 };
 
 function normalizeModelName(modelName?: string): string {
-  if (!modelName) return 'gemini-3.6-flash';
+  if (!modelName) {
+    if (typeof window !== 'undefined') {
+      try {
+        const saved = localStorage.getItem('darlek_cann_selected_model');
+        if (saved && MODEL_MAPPING[saved.trim()]) {
+          return MODEL_MAPPING[saved.trim()];
+        }
+      } catch {}
+    }
+    return 'gemini-3.8-flash';
+  }
   const trimmed = modelName.trim();
   return MODEL_MAPPING[trimmed] || trimmed;
 }
 
 const MODEL_CANDIDATES = [
-  'gemini-3.6-flash',
   'gemini-3.8-flash',
+  'gemini-3.6-flash',
+  'gemini-flash-latest',
   'gemini-3.1-pro-preview',
   'gemini-2.5-flash',
-  'gemini-1.5-flash',
-  'gemini-flash-latest',
   'gemini-flash-lite-latest',
 ] as const;
 

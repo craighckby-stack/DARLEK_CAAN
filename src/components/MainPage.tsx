@@ -41,6 +41,14 @@ import { useToast } from '@/hooks/use-toast';
 import { ToastAction } from '@/components/ui/toast';
 import { safeApiFetch } from '@/lib/api-client';
 import { validateSourceCode, ValidationResult } from '@/lib/validator';
+import {
+  capAndDedupeBlacklist,
+  safeSetLocalStorage,
+  safeRemoveLocalStorage,
+  safeGetLocalStorage,
+  syncBlacklistToFirestore,
+  loadBlacklistFromFirestore,
+} from '@/lib/safeStorage';
 
 export interface FailedSave {
   id: string;
@@ -230,7 +238,7 @@ export default function Home() {
   // ── API & Model Configuration states ──
   const [geminiKeyInput, setGeminiKeyInput] = useState('');
   const [showGeminiKey, setShowGeminiKey] = useState(false);
-  const [selectedModel, setSelectedModel] = useState<GeminiModelId>('gemini-3.7-flash');
+  const [selectedModel, setSelectedModel] = useState<GeminiModelId>('gemini-3.8-flash');
   const [hasServerGeminiKey, setHasServerGeminiKey] = useState(false);
 
   // ── Saturation Logic & Equilibrium states ──
@@ -497,13 +505,20 @@ export default function Home() {
         setAutoSkipSaturated(savedAutoSkipSat === 'true');
       }
 
-      const savedBlacklist = localStorage.getItem('darlek_cann_blacklisted_files');
+      const savedBlacklist = safeGetLocalStorage('darlek_cann_blacklisted_files');
       if (savedBlacklist) {
         try {
           const bl = JSON.parse(savedBlacklist);
-          if (Array.isArray(bl)) setBlacklistedFiles(bl);
+          if (Array.isArray(bl)) setBlacklistedFiles(capAndDedupeBlacklist(bl, 250));
         } catch {}
       }
+
+      // Synchronize with Firestore cloud blacklist if available
+      loadBlacklistFromFirestore().then((cloudList) => {
+        if (cloudList && cloudList.length > 0) {
+          setBlacklistedFiles((prev) => capAndDedupeBlacklist([...prev, ...cloudList], 250));
+        }
+      }).catch(() => {});
 
       // Check server API status for Gemini key injection
       fetch('/api/setup/test-connection')
@@ -858,28 +873,35 @@ export default function Home() {
   useEffect(() => {
     if (!isHydrated) return;
     try {
-      localStorage.setItem('darlek_cann_system_state', JSON.stringify(systemState));
+      safeSetLocalStorage('darlek_cann_system_state', JSON.stringify(systemState));
     } catch (e) {}
   }, [systemState, isHydrated]);
 
   useEffect(() => {
     if (!isHydrated) return;
     try {
-      localStorage.setItem('darlek_cann_mutations_applied', String(mutationsApplied));
+      safeSetLocalStorage('darlek_cann_mutations_applied', String(mutationsApplied));
     } catch (e) {}
   }, [mutationsApplied, isHydrated]);
 
   useEffect(() => {
     if (!isHydrated) return;
     try {
-      localStorage.setItem('darlek_cann_scanned_files', JSON.stringify(scannedFiles));
+      // Strip heavy file contents from cached scanned files to prevent localStorage quota exhaustion
+      const lightFiles = (scannedFiles || []).map((f) => ({
+        path: f.path,
+        size: f.size,
+        type: f.type,
+        sha: f.sha,
+      }));
+      safeSetLocalStorage('darlek_cann_scanned_files', JSON.stringify(lightFiles));
     } catch (e) {}
   }, [scannedFiles, isHydrated]);
 
   useEffect(() => {
     if (!isHydrated) return;
     try {
-      localStorage.setItem('darlek_cann_selected_file_index', String(selectedFileIndex));
+      safeSetLocalStorage('darlek_cann_selected_file_index', String(selectedFileIndex));
     } catch (e) {}
   }, [selectedFileIndex, isHydrated]);
 
@@ -887,9 +909,9 @@ export default function Home() {
     if (!isHydrated) return;
     try {
       if (messages && messages.length > 0) {
-        localStorage.setItem('darlek_cann_messages', JSON.stringify(messages.slice(-100)));
+        safeSetLocalStorage('darlek_cann_messages', JSON.stringify(messages.slice(-50)));
       } else {
-        localStorage.removeItem('darlek_cann_messages');
+        safeRemoveLocalStorage('darlek_cann_messages');
       }
     } catch (e) {}
   }, [messages, isHydrated]);
@@ -898,9 +920,9 @@ export default function Home() {
     if (!isHydrated) return;
     try {
       if (logEntries && logEntries.length > 0) {
-        localStorage.setItem('darlek_cann_log_entries', JSON.stringify(logEntries.slice(-100)));
+        safeSetLocalStorage('darlek_cann_log_entries', JSON.stringify(logEntries.slice(-50)));
       } else {
-        localStorage.removeItem('darlek_cann_log_entries');
+        safeRemoveLocalStorage('darlek_cann_log_entries');
       }
     } catch (e) {}
   }, [logEntries, isHydrated]);
@@ -908,17 +930,27 @@ export default function Home() {
   useEffect(() => {
     if (!isHydrated) return;
     try {
-      localStorage.setItem('darlek_cann_rejection_memory', JSON.stringify(rejectionMemory));
+      const capped = (rejectionMemory || []).slice(-50);
+      safeSetLocalStorage('darlek_cann_rejection_memory', JSON.stringify(capped));
     } catch (e) {}
   }, [rejectionMemory, isHydrated]);
 
   useEffect(() => {
     if (!isHydrated) return;
     try {
+      const capped = capAndDedupeBlacklist(blacklistedFiles, 250);
+      safeSetLocalStorage('darlek_cann_blacklisted_files', JSON.stringify(capped));
+      syncBlacklistToFirestore(capped).catch(() => {});
+    } catch (e) {}
+  }, [blacklistedFiles, isHydrated]);
+
+  useEffect(() => {
+    if (!isHydrated) return;
+    try {
       if (pendingMutation) {
-        localStorage.setItem('darlek_cann_pending_mutation', JSON.stringify(pendingMutation));
+        safeSetLocalStorage('darlek_cann_pending_mutation', JSON.stringify(pendingMutation));
       } else {
-        localStorage.removeItem('darlek_cann_pending_mutation');
+        safeRemoveLocalStorage('darlek_cann_pending_mutation');
       }
     } catch (e) {}
   }, [pendingMutation, isHydrated]);
@@ -1377,12 +1409,14 @@ export default function Home() {
           }));
 
           if (geminiKeyInput.trim()) {
-            localStorage.setItem('darlek_cann_gemini_key', geminiKeyInput.trim());
+            safeSetLocalStorage('darlek_cann_gemini_key', geminiKeyInput.trim());
           }
-          localStorage.setItem('darlek_cann_selected_model', selectedModel);
-          localStorage.setItem('darlek_cann_auto_pause_saturation', String(autoPauseOnSaturation));
-          localStorage.setItem('darlek_cann_auto_skip_saturation', String(autoSkipSaturated));
-          localStorage.setItem('darlek_cann_blacklisted_files', JSON.stringify(blacklistedFiles));
+          safeSetLocalStorage('darlek_cann_selected_model', selectedModel);
+          safeSetLocalStorage('darlek_cann_auto_pause_saturation', String(autoPauseOnSaturation));
+          safeSetLocalStorage('darlek_cann_auto_skip_saturation', String(autoSkipSaturated));
+          const cappedBl = capAndDedupeBlacklist(blacklistedFiles, 250);
+          safeSetLocalStorage('darlek_cann_blacklisted_files', JSON.stringify(cappedBl));
+          syncBlacklistToFirestore(cappedBl).catch(() => {});
 
           addLogEntry('SCAN', `Scanned ${ownerInput.trim()}/${repoInput.trim()} — ${scanData.total} files.`);
 
@@ -1970,7 +2004,7 @@ export default function Home() {
             retryCount: 0,
           };
           setFailedSave(savePayload);
-          localStorage.setItem('darlek_cann_failed_save', JSON.stringify(savePayload));
+          safeSetLocalStorage('darlek_cann_failed_save', JSON.stringify(savePayload));
           toast({
             variant: 'destructive',
             title: '❌ SAVE FAILED',
@@ -2012,7 +2046,7 @@ export default function Home() {
           retryCount: 0,
         };
         setFailedSave(savePayload);
-        localStorage.setItem('darlek_cann_failed_save', JSON.stringify(savePayload));
+        safeSetLocalStorage('darlek_cann_failed_save', JSON.stringify(savePayload));
         toast({
           variant: 'destructive',
           title: '❌ SAVE FAILED (NETWORK ERROR)',
@@ -3045,9 +3079,9 @@ export default function Home() {
                     addLogEntry('INFO', `[NO-OP] Code saturation reached for [${sourceFile.path}] (0 diffs).`);
                     if (autoSkipSaturated) {
                       setBlacklistedFiles((prev) => {
-                        if (prev.includes(sourceFile.path)) return prev;
-                        const updated = [...prev, sourceFile.path];
-                        localStorage.setItem('darlek_cann_blacklisted_files', JSON.stringify(updated));
+                        const updated = capAndDedupeBlacklist([...prev, sourceFile.path], 250);
+                        safeSetLocalStorage('darlek_cann_blacklisted_files', JSON.stringify(updated));
+                        syncBlacklistToFirestore(updated).catch(() => {});
                         return updated;
                       });
                       toast({
@@ -3408,9 +3442,9 @@ export default function Home() {
                 addLogEntry('INFO', `[NO-OP] Code saturation reached in batch for ${nextFile.path}`);
                 if (autoSkipSaturated) {
                   setBlacklistedFiles((prev) => {
-                    if (prev.includes(nextFile.path)) return prev;
-                    const updated = [...prev, nextFile.path];
-                    localStorage.setItem('darlek_cann_blacklisted_files', JSON.stringify(updated));
+                    const updated = capAndDedupeBlacklist([...prev, nextFile.path], 250);
+                    safeSetLocalStorage('darlek_cann_blacklisted_files', JSON.stringify(updated));
+                    syncBlacklistToFirestore(updated).catch(() => {});
                     return updated;
                   });
                   addCaanMessage(`[AUTO-BLACKLIST] ${nextFile.path} automatically added to blacklist. Continuing autonomous cycle...`);
@@ -4453,7 +4487,7 @@ export default function Home() {
         addLogEntry('SYSTEM', `Created new file: ${createFileModal.path}`);
         setCreateFileModal({ isOpen: false, path: '', content: '// New component\n' });
         setFailedSave(null);
-        localStorage.removeItem('darlek_cann_failed_save');
+        safeRemoveLocalStorage('darlek_cann_failed_save');
         quickActionRef.current?.('scan');
       } else {
         const errorMsg = data.error || 'Failed to create file on repository';
@@ -4467,7 +4501,7 @@ export default function Home() {
           retryCount: 0,
         };
         setFailedSave(savePayload);
-        localStorage.setItem('darlek_cann_failed_save', JSON.stringify(savePayload));
+        safeSetLocalStorage('darlek_cann_failed_save', JSON.stringify(savePayload));
         toast({
           variant: 'destructive',
           title: '❌ FILE CREATION FAILED',
@@ -4491,7 +4525,7 @@ export default function Home() {
         retryCount: 0,
       };
       setFailedSave(savePayload);
-      localStorage.setItem('darlek_cann_failed_save', JSON.stringify(savePayload));
+      safeSetLocalStorage('darlek_cann_failed_save', JSON.stringify(savePayload));
       toast({
         variant: 'destructive',
         title: '❌ SAVE FAILED (NETWORK ERROR)',
@@ -4728,8 +4762,11 @@ export default function Home() {
                 }}
                 className="w-full bg-[#060000] border border-red-900/30 rounded p-2 text-xs text-red-100 outline-none focus:border-red-500/60 transition-colors font-mono cursor-pointer"
               >
-                <option value="gemini-3.7-flash" className="bg-[#0a0202] text-white">
-                  ⚡ Gemini 3.7 Flash — State-of-the-Art (Fast, High Quality)
+                <option value="gemini-3.8-flash" className="bg-[#0a0202] text-white">
+                  ⚡ Gemini 3.8 Flash — High-Velocity, Modern Code & Multimodal (Recommended)
+                </option>
+                <option value="gemini-3.1-pro-preview" className="bg-[#0a0202] text-white">
+                  🧠 Gemini 3.1 Pro — Deep Complex Architecture & Multi-File Reasoning
                 </option>
                 <option value="gemini-3.6-flash" className="bg-[#0a0202] text-white">
                   💨 Gemini 3.6 Flash — Fast, High Efficiency Generation
@@ -4738,10 +4775,7 @@ export default function Home() {
                   🪶 Gemini Flash Lite — Ultra Lightweight & High Throughput
                 </option>
                 <option value="gemini-2.5-flash" className="bg-[#0a0202] text-white">
-                  🚀 Gemini 2.5 Flash — Stable High-Velocity Generation
-                </option>
-                <option value="gemini-3.1-pro-preview" className="bg-[#0a0202] text-white">
-                  🧠 Gemini 3.1 Pro — Deep Complex Architecture Reasoning
+                  🚀 Gemini 2.5 Flash — Stable Baseline Generation
                 </option>
               </select>
               <p className="text-[9px] text-gray-500 font-mono leading-relaxed">
@@ -5050,7 +5084,8 @@ export default function Home() {
                       type="button"
                       onClick={() => {
                         setBlacklistedFiles([]);
-                        localStorage.removeItem('darlek_cann_blacklisted_files');
+                        safeRemoveLocalStorage('darlek_cann_blacklisted_files');
+                        syncBlacklistToFirestore([]).catch(() => {});
                       }}
                       className="text-[8px] font-mono text-red-400 hover:text-red-300 flex items-center gap-1 cursor-pointer"
                     >
@@ -5071,9 +5106,10 @@ export default function Home() {
                         <button
                           type="button"
                           onClick={() => {
-                            const updated = blacklistedFiles.filter((f) => f !== file);
+                            const updated = capAndDedupeBlacklist(blacklistedFiles.filter((f) => f !== file), 250);
                             setBlacklistedFiles(updated);
-                            localStorage.setItem('darlek_cann_blacklisted_files', JSON.stringify(updated));
+                            safeSetLocalStorage('darlek_cann_blacklisted_files', JSON.stringify(updated));
+                            syncBlacklistToFirestore(updated).catch(() => {});
                           }}
                           className="hover:text-white cursor-pointer text-amber-500 ml-0.5"
                         >
@@ -5099,11 +5135,10 @@ export default function Home() {
                       if (e.key === 'Enter' && manualBlacklistInput.trim()) {
                         e.preventDefault();
                         const p = manualBlacklistInput.trim();
-                        if (!blacklistedFiles.includes(p)) {
-                          const updated = [...blacklistedFiles, p];
-                          setBlacklistedFiles(updated);
-                          localStorage.setItem('darlek_cann_blacklisted_files', JSON.stringify(updated));
-                        }
+                        const updated = capAndDedupeBlacklist([...blacklistedFiles, p], 250);
+                        setBlacklistedFiles(updated);
+                        safeSetLocalStorage('darlek_cann_blacklisted_files', JSON.stringify(updated));
+                        syncBlacklistToFirestore(updated).catch(() => {});
                         setManualBlacklistInput('');
                       }
                     }}
@@ -5114,11 +5149,10 @@ export default function Home() {
                     onClick={() => {
                       if (manualBlacklistInput.trim()) {
                         const p = manualBlacklistInput.trim();
-                        if (!blacklistedFiles.includes(p)) {
-                          const updated = [...blacklistedFiles, p];
-                          setBlacklistedFiles(updated);
-                          localStorage.setItem('darlek_cann_blacklisted_files', JSON.stringify(updated));
-                        }
+                        const updated = capAndDedupeBlacklist([...blacklistedFiles, p], 250);
+                        setBlacklistedFiles(updated);
+                        safeSetLocalStorage('darlek_cann_blacklisted_files', JSON.stringify(updated));
+                        syncBlacklistToFirestore(updated).catch(() => {});
                         setManualBlacklistInput('');
                       }
                     }}
@@ -6316,16 +6350,15 @@ export default function Home() {
           addCaanMessage('Autonomous batch mode resumed.');
         }}
         onAddToBlacklist={(filePath, alwaysAutoAdd) => {
-          if (!blacklistedFiles.includes(filePath)) {
-            const updated = [...blacklistedFiles, filePath];
-            setBlacklistedFiles(updated);
-            localStorage.setItem('darlek_cann_blacklisted_files', JSON.stringify(updated));
-          }
+          const updated = capAndDedupeBlacklist([...blacklistedFiles, filePath], 250);
+          setBlacklistedFiles(updated);
+          safeSetLocalStorage('darlek_cann_blacklisted_files', JSON.stringify(updated));
+          syncBlacklistToFirestore(updated).catch(() => {});
           if (alwaysAutoAdd) {
             setAutoSkipSaturated(true);
             setAutoPauseOnSaturation(false);
-            localStorage.setItem('darlek_cann_auto_skip_saturation', 'true');
-            localStorage.setItem('darlek_cann_auto_pause_saturation', 'false');
+            safeSetLocalStorage('darlek_cann_auto_skip_saturation', 'true');
+            safeSetLocalStorage('darlek_cann_auto_pause_saturation', 'false');
           }
           setSaturationAlert(null);
           toast({

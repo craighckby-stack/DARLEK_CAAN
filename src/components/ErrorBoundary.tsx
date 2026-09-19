@@ -6,7 +6,8 @@
  */
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home, Database } from 'lucide-react';
+import { isQuotaExceededError, evictNonEssentialStorage } from '@/lib/safeStorage';
 
 export interface ErrorBoundaryProps {
   children: ReactNode;
@@ -22,6 +23,7 @@ export interface ErrorBoundaryState {
 interface ParsedErrorDetails {
   errorMessage: string;
   isFirestoreError: boolean;
+  isQuotaError: boolean;
 }
 
 const CHUNK_RELOAD_COOLDOWN_MS = 10000;
@@ -95,7 +97,17 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
 
   private parseErrorDetails(error: Error | null): ParsedErrorDetails {
     if (!error?.message) {
-      return { errorMessage: 'An unexpected system anomaly occurred.', isFirestoreError: false };
+      return { errorMessage: 'An unexpected system anomaly occurred.', isFirestoreError: false, isQuotaError: false };
+    }
+
+    if (isQuotaExceededError(error)) {
+      // Proactively evict non-essential caches so immediate Reboot will succeed without manual reset
+      evictNonEssentialStorage();
+      return {
+        errorMessage: 'Storage Quota Exceeded (browser localStorage quota reached). Bloated cache keys have been automatically evicted. Click "Reboot" to restore normal operation without losing keys.',
+        isFirestoreError: false,
+        isQuotaError: true,
+      };
     }
 
     try {
@@ -108,11 +120,12 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
         return {
           errorMessage: `Firestore ${operation} error at path: ${path}. ${detailError}`,
           isFirestoreError: true,
+          isQuotaError: false,
         };
       }
-      return { errorMessage: String(error.message || error), isFirestoreError: false };
+      return { errorMessage: String(error.message || error), isFirestoreError: false, isQuotaError: false };
     } catch {
-      return { errorMessage: String(error.message || error), isFirestoreError: false };
+      return { errorMessage: String(error.message || error), isFirestoreError: false, isQuotaError: false };
     }
   }
 
