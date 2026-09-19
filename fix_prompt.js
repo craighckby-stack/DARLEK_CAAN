@@ -21,7 +21,7 @@ const CONFIG = Object.freeze({
 });
 
 /**
- * Compiled regular expression patterns for high-performance string matching and substitution.
+ * Compiled regular expression patterns for prompt matching and substitution.
  */
 const PROMPT_PATTERNS = Object.freeze({
   PRIMARY_REGEX: /Your response MUST contain two parts:[\s\S]*?NO PLACEHOLDERS OR TRUNCATIONS"/,
@@ -55,8 +55,7 @@ Format your response exactly like this:
 
 /**
  * Validates path security boundaries to prevent directory traversal vulnerabilities.
- * Utilizes path normalization to ensure absolute security against path manipulation exploits.
- * 
+ *
  * @param {string} targetPath - The absolute path to validate.
  * @param {string} basePath - The allowed root boundary path.
  * @throws {Error} If the target path falls outside the allowed base directory.
@@ -72,7 +71,7 @@ function assertSecurePath(targetPath, basePath) {
 
 /**
  * Validates file content integrity and sizing boundaries to prevent memory starvation attacks.
- * 
+ *
  * @param {string} content - The file content to validate.
  * @throws {Error} If content type is invalid or exceeds safety limits.
  */
@@ -83,6 +82,28 @@ function assertValidFileContent(content) {
 }
 
 /**
+ * Applies regex pattern transformations to update prompt instructions in source text.
+ *
+ * @param {string} sourceCode - Raw route file content.
+ * @returns {string} Updated route content with transformed prompt text.
+ */
+function applyPromptTransformations(sourceCode) {
+  let updatedCode = sourceCode;
+
+  if (!PROMPT_PATTERNS.PRIMARY_REGEX.test(updatedCode)) {
+    console.warn('[EMG Warning] Primary prompt pattern not found in target file. Skipping primary replacement.');
+  } else {
+    updatedCode = updatedCode.replace(PROMPT_PATTERNS.PRIMARY_REGEX, PROMPT_PATTERNS.REPLACEMENT_TEXT);
+  }
+
+  if (PROMPT_PATTERNS.SECONDARY_REGEX.test(updatedCode)) {
+    updatedCode = updatedCode.replace(PROMPT_PATTERNS.SECONDARY_REGEX, '');
+  }
+
+  return updatedCode;
+}
+
+/**
  * Safely executes the prompt string replacement on the target route file
  * with robust error handling, strict path resolution bounds-checking, and defensive validation.
  */
@@ -90,27 +111,19 @@ function executePromptFix() {
   try {
     assertSecurePath(CONFIG.TARGET_FILE, CONFIG.BASE_DIR);
 
-    let code;
+    let rawContent;
     try {
-      code = readFileSync(CONFIG.TARGET_FILE, 'utf8');
+      rawContent = readFileSync(CONFIG.TARGET_FILE, 'utf8');
     } catch (readError) {
-      const readErrorMessage = readError instanceof Error ? readError.message : String(readError);
-      throw new Error(`Target evolution route file not found at: ${CONFIG.TARGET_FILE}. Details: ${readErrorMessage}`);
+      const details = readError instanceof Error ? readError.message : String(readError);
+      throw new Error(`Target evolution route file not found at: ${CONFIG.TARGET_FILE}. Details: ${details}`);
     }
 
-    assertValidFileContent(code);
+    assertValidFileContent(rawContent);
 
-    if (!PROMPT_PATTERNS.PRIMARY_REGEX.test(code)) {
-      console.warn('[EMG Warning] Primary prompt pattern not found in target file. Skipping primary replacement.');
-    } else {
-      code = code.replace(PROMPT_PATTERNS.PRIMARY_REGEX, PROMPT_PATTERNS.REPLACEMENT_TEXT);
-    }
+    const transformedContent = applyPromptTransformations(rawContent);
 
-    if (PROMPT_PATTERNS.SECONDARY_REGEX.test(code)) {
-      code = code.replace(PROMPT_PATTERNS.SECONDARY_REGEX, '');
-    }
-
-    writeFileSync(CONFIG.TARGET_FILE, code, 'utf8');
+    writeFileSync(CONFIG.TARGET_FILE, transformedContent, 'utf8');
     console.log(`[EMG Success] Successfully optimized and updated prompt structures in ${CONFIG.TARGET_FILE}`);
   } catch (error) {
     const errMessage = error instanceof Error ? error.message : String(error);
