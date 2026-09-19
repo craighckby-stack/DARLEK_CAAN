@@ -1,9 +1,14 @@
 # Dependency directories
 node_modules/
+.pnpm-store/
+jspm_packages/
+web_modules/
 
 # Next.js build output
 .next/
 out/
+.turbo/
+.vercel/
 
 # Production build output
 dist/
@@ -16,14 +21,45 @@ build/
 .env.test.local
 .env.production.local
 .env*.local
+.env.backup
+.env.vault
+*.env
+*.env.*
+!*.env.example
+!*.env.template
 
 # Firebase configs containing API keys
 firebase-applet-config.json
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+*serviceAccountKey*.json
+*service-account*.json
+
+# Credentials, Keys and Certificates
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+*.pub
+secrets/
+credentials.json
+token.json
 
 # Local databases and SQLite
 *.db
 *.sqlite
+*.sqlite3
 *.sqlite-journal
+*.sqlite3-journal
+*.db-shm
+*.db-wal
 
 # IDEs and Editors
 .idea/
@@ -33,6 +69,10 @@ firebase-applet-config.json
 *.njsproj
 *.sln
 *.sw?
+*.swo
+*.swn
+*.bak
+*~
 .DS_Store
 
 # Logs
@@ -41,6 +81,27 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+logs/
+*.log
 
 # OS Files
 Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Testing and Coverage
+coverage/
+*.lcov
+.nyc_output/
+playwright-report/
+test-results/
+cypress/videos/
+cypress/screenshots/
+
+# TypeScript Cache
+*.tsbuildinfo
+next-env.d.ts.bak
