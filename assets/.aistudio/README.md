@@ -13,48 +13,6 @@ This directory serves as the control plane for the DARLEK CANN v3.0 evolution en
 2. **Execution**: Run agent simulations using the local `assets/.aistudio` context.
 3. **Cleanup**: Use `npm run clean:artifacts` to purge ephemeral simulation buffers.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - Fixed undefined currentStep crashes during initialization.
 - Updated default GitHub repository targets to Darlek-Caan-vs-Jesus-Chess on main branch to prevent 404 tree scanning errors.
 
