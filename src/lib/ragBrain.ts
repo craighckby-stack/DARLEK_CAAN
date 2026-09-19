@@ -48,6 +48,7 @@ export interface RagMutationRecord {
   readonly hotswapped?: boolean;
   readonly embedding?: number[];
   readonly similarityScore?: number;
+  readonly similarity?: number;
 }
 
 function getLocalLogs(): RagLogRecord[] {
@@ -179,7 +180,7 @@ function fastCosineSimilarity(a: readonly number[], b: readonly number[]): numbe
 /**
  * Ranks stored RAG brain items using cosine similarity of embedding vectors.
  */
-function rankBrainChunksByRelevanceVector<T extends { embedding?: number[]; similarityScore?: number }>(
+function rankBrainChunksByRelevanceVector<T extends { embedding?: number[]; similarityScore?: number; similarity?: number }>(
   items: readonly T[],
   queryEmbedding: readonly number[],
   limit = 5
@@ -190,9 +191,9 @@ function rankBrainChunksByRelevanceVector<T extends { embedding?: number[]; simi
   const scored = items.map(item => {
     if (item.embedding && Array.isArray(item.embedding) && item.embedding.length > 0) {
       const score = fastCosineSimilarity(queryEmbedding, item.embedding);
-      return { item: { ...item, similarityScore: score }, score };
+      return { item: { ...item, similarityScore: score, similarity: score }, score };
     }
-    return { item: { ...item, similarityScore: 0 }, score: 0 };
+    return { item: { ...item, similarityScore: 0, similarity: 0 }, score: 0 };
   });
 
   return scored
@@ -529,6 +530,23 @@ async function verifyMutationIntegrity(
 }
 
 /**
+ * Executes zero-LLM structural sanity, AST continuity, and syntax checks
+ * on a proposed mutation against the original codebase.
+ */
+export async function runStructuralVerification(
+  candidateCode: string,
+  originalCode: string,
+  filePath = 'target.ts'
+): Promise<{
+  readonly passed: boolean;
+  readonly verifiedCode: string;
+  readonly riskScore: number;
+  readonly reason?: string;
+}> {
+  return verifyMutationIntegrity(originalCode, candidateCode, filePath);
+}
+
+/**
  * Generates an architectural code mutation derived from stored RAG brain chunks,
  * past mutation records, and neural gene rules with strict structural gating.
  */
@@ -604,36 +622,76 @@ export function executeNeuralSequence(state: NeuralGeneState): NeuralGeneState {
     }
   }
 
-  // 2. Semantic vector retrieval with genuine similarity threshold & pattern extraction
-  let candidateProposal: {
-    code: string;
-    rationale: string;
-    source: 'RAG_MUTATION_EXEMPLAR' | 'RAG_LLM_SYNTHESIS' | 'RAG_SAME_FILE_EVOLUTION';
-  } | null = null;
-
+  // 2. Semantic vector retrieval before mutation synthesis
   try {
-    const relevantPastFixes = await retrieveRelevantMutations(originalCode, 5);
+    const relevantPastFixes = await retrieveRelevantMutations(originalCode, 3);
 
-    // Filter only matches that exceed the strict similarity threshold
-    const highConfidenceMatch = relevantPastFixes.find(
-      (m) => (m.similarityScore ?? 0) >= MIN_SIMILARITY_THRESHOLD && m.mutatedCode
-    );
+    // Only trust a match that's both same-file and genuinely similar —
+    // cross-file matches and weak similarity scores fall through to
+    // AST refinement instead of being returned directly.
+    const SIMILARITY_THRESHOLD = 0.82;
 
-    // Option A: If an LLM API key is available, feed the retrieved exemplar as grounding CONTEXT
-    // to generate a new targeted mutation for originalCode (never verbatim replacement)
-    const apiKey = resolveApiKey();
-    if (apiKey) {
-      const promptContext = highConfidenceMatch
-        ? `\nPrior relevant architectural exemplar (Similarity: ${((highConfidenceMatch.similarityScore ?? 0) * 100).toFixed(1)}%):\nFile: ${highConfidenceMatch.filePath || 'known_pattern'}\nRationale: ${highConfidenceMatch.rationale}\nReference Exemplar:\n${(highConfidenceMatch.mutatedCode || '').slice(0, 1000)}`
-        : '';
+    const bestSemanticMatch = relevantPastFixes.find((m) => {
+      if (!m.mutatedCode || m.mutatedCode.trim() === originalCode.trim()) return false;
+      if (m.filePath && filePath && m.filePath !== filePath) return false; // no cross-file paste
+      const sim = typeof m.similarity === 'number' ? m.similarity : (typeof m.similarityScore === 'number' ? m.similarityScore : undefined);
+      if (typeof sim === 'number' && sim < SIMILARITY_THRESHOLD) return false;
+      return true;
+    });
 
+    if (bestSemanticMatch) {
+      const nowIso = new Date().toISOString();
+      let stamped = bestSemanticMatch.mutatedCode;
+      if (!stamped.includes('DARLEK_RAG_HOTSWAP_STAMP')) {
+        stamped = `// [DARLEK_RAG_HOTSWAP_STAMP: G-${generation} @ ${nowIso} | RAG_VECTOR_ALIGNED]\n` + stamped;
+      } else {
+        stamped = stamped.replace(
+          /\/\/ \[DARLEK_RAG_HOTSWAP_STAMP:[^\]]+\]/,
+          `// [DARLEK_RAG_HOTSWAP_STAMP: G-${generation} @ ${nowIso} | RAG_VECTOR_ALIGNED]`,
+        );
+      }
+
+      // Risk score reflects what's actually happening (reusing a verified
+      // same-file past fix), not an artificial floor — but it's no longer
+      // an unconditional cap either, since it's derived from the real match.
+      const riskScore = Math.min(0.4, Math.max(0.15, bestSemanticMatch.riskScore ?? 0.3));
+
+      const simValue = bestSemanticMatch.similarity ?? bestSemanticMatch.similarityScore;
+      const candidate = {
+        proposedCode: stamped,
+        rationale: `RAG Semantic Vector Memory: Reapplied a previously verified same-file fix (${bestSemanticMatch.rationale || 'architectural alignment'}) with live generation stamp G-${generation}. Similarity: ${simValue?.toFixed(2) ?? 'n/a'}.`,
+        riskScore,
+        source: 'RAG_MUTATION_EXEMPLAR' as const,
+      };
+
+      // Do NOT return early — let this candidate go through the same
+      // structural/AST verification every other mutation source has to
+      // pass, instead of bypassing the gate on the success path.
+      const verified = await runStructuralVerification(candidate.proposedCode, originalCode, filePath);
+      if (verified.passed) {
+        return {
+          ...candidate,
+          proposedCode: verified.verifiedCode,
+        };
+      }
+      console.warn('[Darlek Caan] RAG exemplar failed structural verification, proceeding to AST refinement:', verified.reason);
+      // falls through below, same as the catch block does on failure
+    }
+  } catch (err) {
+    console.warn('[Darlek Caan] Failed semantic retrieval in synthesizeRagMutation, proceeding to AST refinement:', err);
+  }
+
+  // 3. If LLM is available and no verified same-file exemplar was returned, attempt targeted LLM synthesis
+  const apiKey = resolveApiKey();
+  if (apiKey) {
+    try {
       const systemPrompt = `You are the DARLEK CAAN Autonomous Architectural Synthesizer.
 Apply targeted defensive improvements to the provided code for "${filePath}".
 CRITICAL INSTRUCTIONS:
 1. Preserve ALL existing functions, exports, interfaces, and logic of this file. NEVER delete or scrub code.
 2. Return ONLY the complete new code for "${filePath}" without markdown backticks, explanations, or stubs.`;
 
-      const userPrompt = `Target File: ${filePath} (Generation G-${generation})${promptContext}\n\nCurrent code:\n${originalCode}`;
+      const userPrompt = `Target File: ${filePath} (Generation G-${generation})\n\nCurrent code:\n${originalCode}`;
 
       const llmResult = await callGemini(systemPrompt, userPrompt, apiKey, {
         temperature: 0.2,
@@ -641,84 +699,23 @@ CRITICAL INSTRUCTIONS:
       });
 
       if (llmResult && llmResult.trim().length > 30) {
-        candidateProposal = {
-          code: llmResult.trim(),
-          rationale: highConfidenceMatch
-            ? `RAG-Grounded LLM Synthesis: Applied targeted AST improvements informed by vector exemplar for "${highConfidenceMatch.filePath || 'pattern'}" (similarity ${((highConfidenceMatch.similarityScore ?? 0) * 100).toFixed(1)}%).`
-            : `RAG LLM Synthesis: Applied targeted defensive improvements for Generation G-${generation}.`,
-          source: 'RAG_LLM_SYNTHESIS',
+        const llmCandidate = {
+          proposedCode: llmResult.trim(),
+          rationale: `RAG LLM Synthesis: Applied targeted defensive improvements for Generation G-${generation}.`,
+          source: 'RAG_LLM_SYNTHESIS' as const,
         };
-      }
-    }
-
-    // Option B: If no LLM or LLM failed, consider verbatim code reuse ONLY if from the exact same file
-    if (!candidateProposal && highConfidenceMatch) {
-      const matchPath = (highConfidenceMatch.filePath || '').toLowerCase();
-      const isSameFile =
-        matchPath === lowerPath ||
-        matchPath.endsWith(filePath.toLowerCase()) ||
-        lowerPath.endsWith(matchPath);
-
-      // Verbatim reuse is strictly forbidden across different files
-      if (isSameFile && (highConfidenceMatch.similarityScore ?? 0) >= SAME_FILE_SIMILARITY_THRESHOLD) {
-        let evolved = highConfidenceMatch.mutatedCode || '';
-        const nowIso = new Date().toISOString();
-        if (!evolved.includes('DARLEK_RAG_HOTSWAP_STAMP')) {
-          evolved = `// [DARLEK_RAG_HOTSWAP_STAMP: G-${generation} @ ${nowIso} | SAME_FILE_EVOLUTION]\n` + evolved;
-        } else {
-          evolved = evolved.replace(
-            /\/\/ \[DARLEK_RAG_HOTSWAP_STAMP:[^\]]+\]/,
-            `// [DARLEK_RAG_HOTSWAP_STAMP: G-${generation} @ ${nowIso} | SAME_FILE_EVOLUTION]`
-          );
+        const verifiedLlm = await runStructuralVerification(llmCandidate.proposedCode, originalCode, filePath);
+        if (verifiedLlm.passed) {
+          return {
+            ...llmCandidate,
+            proposedCode: verifiedLlm.verifiedCode,
+            riskScore: verifiedLlm.riskScore,
+          };
         }
-        candidateProposal = {
-          code: evolved,
-          rationale: `Same-File Evolution: Recombined validated generational iteration for "${filePath}" (similarity ${((highConfidenceMatch.similarityScore ?? 0) * 100).toFixed(1)}%).`,
-          source: 'RAG_SAME_FILE_EVOLUTION',
-        };
-      } else if (!isSameFile) {
-        console.log(
-          `[Darlek Caan] Retrieval hit "${highConfidenceMatch.filePath}" belongs to a different file than "${filePath}". Verbatim cross-file replacement blocked for file safety.`
-        );
+        console.warn('[Darlek Caan] LLM synthesis failed structural verification, falling back to AST refinement:', verifiedLlm.reason);
       }
-    }
-  } catch (err) {
-    console.warn('[Darlek Caan] Retrieval or LLM synthesis encountered issue, proceeding to AST refinement:', err);
-  }
-
-  // 3. Structural & Syntax Verification Gate for Candidate Proposal
-  if (candidateProposal) {
-    const verification = await verifyMutationIntegrity(
-      originalCode,
-      candidateProposal.code,
-      filePath
-    );
-
-    if (verification.passed) {
-      return {
-        proposedCode: verification.verifiedCode,
-        rationale: candidateProposal.rationale,
-        riskScore: verification.riskScore,
-        source: candidateProposal.source,
-      };
-    } else {
-      console.warn(
-        `[Darlek Caan] Candidate mutation rejected by verification gate: ${verification.reason}. Falling back to safe AST refinement.`
-      );
-      // Log rejection into persistent local memory
-      try {
-        if (typeof window !== 'undefined') {
-          const rawRej = localStorage.getItem('darlek_cann_rejection_memory');
-          const rejections = rawRej ? JSON.parse(rawRej) : [];
-          rejections.push({
-            filePath,
-            timestamp: new Date().toISOString(),
-            reason: verification.reason,
-            source: candidateProposal.source,
-          });
-          localStorage.setItem('darlek_cann_rejection_memory', JSON.stringify(rejections.slice(-50)));
-        }
-      } catch {}
+    } catch (llmErr) {
+      console.warn('[Darlek Caan] LLM synthesis error in synthesizeRagMutation:', llmErr);
     }
   }
 
@@ -900,13 +897,13 @@ export async function retrieveRelevantMutations(
          const words = candidateLower.split(/\W+/).filter(w => w.length > 3);
          const matchCount = words.filter(w => target.includes(w)).length;
          const score = words.length > 0 ? matchCount / words.length : 0;
-         return { mut: { ...mut, similarityScore: score }, score };
+         return { mut: { ...mut, similarityScore: score, similarity: score }, score };
        }
        if (!mut.embedding || mut.embedding.length === 0) {
-         return { mut: { ...mut, similarityScore: 0 }, score: 0 };
+         return { mut: { ...mut, similarityScore: 0, similarity: 0 }, score: 0 };
        }
        const score = fastCosineSimilarity(queryEmbedding, mut.embedding);
-       return { mut: { ...mut, similarityScore: score }, score };
+       return { mut: { ...mut, similarityScore: score, similarity: score }, score };
     });
     
     return scored
