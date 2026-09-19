@@ -1,5 +1,5 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-19T22:40:35.577Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-19T22:40:44.262Z]
 ======================================================================
 
 [00:00:00] [0x00400000] [BOOT      ] Microsoft(R) MS-DOS(R) Version 6.22
@@ -21,3 +21,4 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-19T22:40:35.577Z]
 [08:40:30] [0x0057BCD9] [CONNECT   ] Successfully loaded 29 user and 27 global designs in portfolio context.
 [08:40:31] [0x00888B5E] [SCAN      ] Scanned craighckby-stack/DARLEK_CAAN — 244 files.
 [08:40:32] [0x00716238] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/AI-Project-Genesis-Scaffold under 'rag/' & 'logs/' [10 files committed]
+[08:40:41] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
