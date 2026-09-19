@@ -8,9 +8,18 @@
 'use strict';
 
 const { readFileSync, writeFileSync } = require('node:fs');
-const { normalize } = require('node:path');
+const { normalize, resolve, isAbsolute } = require('node:path');
 
-const TARGET_ROUTE_PATH = normalize('src/app/api/evolution/propose/route.ts');
+// DEFENSIVE HARDENING: Validate root boundaries and avoid directory traversal
+const ALLOWED_BASE_DIR = normalize(process.cwd());
+const RAW_TARGET_PATH = normalize('src/app/api/evolution/propose/route.ts');
+const TARGET_ROUTE_PATH = resolve(ALLOWED_BASE_DIR, RAW_TARGET_PATH);
+
+if (!TARGET_ROUTE_PATH.startsWith(ALLOWED_BASE_DIR)) {
+    process.stderr.write(`[CRITICAL SECURITY ERROR] Path traversal detected: ${RAW_TARGET_PATH}\n`);
+    process.exit(1);
+}
+
 const ENCODING_UTF8 = 'utf8';
 const SANITIZE_PATTERN = /```json|```tsx|}\n```\n|\n```\nRisk/g;
 
