@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789858071557_9a70cb31",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-19T22:47:51.557Z"
+  },
+  {
+    "id": "rag_log_1789858069684_08219c42",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-19T22:47:49.684Z"
+  },
+  {
+    "id": "rag_log_1789858069682_96eef571",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-19T22:47:49.682Z"
+  },
+  {
+    "id": "rag_log_1789858068851_5bb95986",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-19T22:47:48.851Z"
+  },
+  {
+    "id": "rag_log_1789858068849_bd447308",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-19T22:47:48.849Z"
+  },
+  {
+    "id": "rag_log_1789858068270_13df44bc",
+    "type": "APPROVE",
+    "description": "Mutation applied to STYLE_MIGRATION_README.md",
+    "timestamp": "2026-09-19T22:47:48.270Z"
+  },
+  {
+    "id": "rag_log_1789858068268_bb603de0",
+    "type": "APPROVE",
+    "description": "Mutation applied to STYLE_MIGRATION_README.md",
+    "timestamp": "2026-09-19T22:47:48.268Z"
+  },
+  {
     "id": "rag_log_1789858034792_f0400b58",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -106,47 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: PASSED — 5 passed, 0 failed",
     "timestamp": "2026-09-19T22:46:33.814Z"
-  },
-  {
-    "id": "rag_log_1789857993432_13ce071e",
-    "type": "APPROVE",
-    "description": "Mutation applied to README.md",
-    "timestamp": "2026-09-19T22:46:33.432Z"
-  },
-  {
-    "id": "rag_log_1789857993427_f1107dc0",
-    "type": "APPROVE",
-    "description": "Mutation applied to README.md",
-    "timestamp": "2026-09-19T22:46:33.427Z"
-  },
-  {
-    "id": "rag_log_1789857991381_b81e10b0",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-19T22:46:31.381Z"
-  },
-  {
-    "id": "rag_log_1789857981963_85c00aea",
-    "type": "MUTATE",
-    "description": "[Batch 12/243] Proposed mutation for README.md (risk: LOW)",
-    "timestamp": "2026-09-19T22:46:21.963Z"
-  },
-  {
-    "id": "rag_log_1789857981954_6c14326f",
-    "type": "MUTATE",
-    "description": "[Batch 12/243] Proposed mutation for README.md (risk: LOW)",
-    "timestamp": "2026-09-19T22:46:21.954Z"
-  },
-  {
-    "id": "rag_log_1789857980031_94add764",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-19T22:46:20.031Z"
-  },
-  {
-    "id": "rag_log_1789857970369_93892fc3",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-19T22:46:10.369Z"
   }
 ]
