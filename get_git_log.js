@@ -36,13 +36,13 @@ const REQUEST_OPTIONS = Object.freeze({
 const URL_CACHE = new Map();
 
 /**
- * Validates the repository input parameter.
+ * Validates the repository input parameter securely, mitigating command injection and path traversal vectors.
  * 
  * @param {string} repo - The repository name to validate.
  * @returns {boolean} True if valid, false otherwise.
  */
 function isValidRepository(repo) {
-  return typeof repo === 'string' && repo.trim().length > 0;
+  return typeof repo === 'string' && /^[a-zA-Z0-9_\-]+$/.test(repo) && repo.trim().length > 0;
 }
 
 /**
@@ -54,7 +54,9 @@ function isValidRepository(repo) {
 function buildGitHubApiUrl(repo) {
   let url = URL_CACHE.get(repo);
   if (!url) {
-    url = `https://api.github.com/repos/craighckby-stack/${repo}/commits?path=${GITHUB_CONFIG.TARGET_PATH}`;
+    const encodedRepo = encodeURIComponent(repo);
+    const encodedPath = encodeURIComponent(GITHUB_CONFIG.TARGET_PATH);
+    url = `https://api.github.com/repos/craighckby-stack/${encodedRepo}/commits?path=${encodedPath}`;
     URL_CACHE.set(repo, url);
   }
   return url;
@@ -107,8 +109,17 @@ function handleResponse(res, repo, resolve) {
   res.setEncoding('utf8');
   
   const responseChunks = [];
+  let currentLength = 0;
+  const MAX_RESPONSE_SIZE = 1024 * 1024; // 1MB payload protection limit
 
   res.on('data', (chunk) => {
+    currentLength += chunk.length;
+    if (currentLength > MAX_RESPONSE_SIZE) {
+      console.error(`Response payload exceeded safe memory limits for ${repo}`);
+      res.destroy();
+      resolve();
+      return;
+    }
     responseChunks.push(chunk);
   });
 
