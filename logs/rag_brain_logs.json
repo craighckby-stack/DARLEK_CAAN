@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789858092715_8bc34db6",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-19T22:48:12.715Z"
+  },
+  {
+    "id": "rag_log_1789858092713_d9e1a3d1",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-19T22:48:12.713Z"
+  },
+  {
+    "id": "rag_log_1789858092116_37912c12",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-19T22:48:12.116Z"
+  },
+  {
+    "id": "rag_log_1789858092114_1f1672a8",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-19T22:48:12.114Z"
+  },
+  {
+    "id": "rag_log_1789858091524_0abff328",
+    "type": "APPROVE",
+    "description": "Mutation applied to assets/.aistudio/ARCHITECTURE.md",
+    "timestamp": "2026-09-19T22:48:11.524Z"
+  },
+  {
+    "id": "rag_log_1789858091518_091570b6",
+    "type": "APPROVE",
+    "description": "Mutation applied to assets/.aistudio/ARCHITECTURE.md",
+    "timestamp": "2026-09-19T22:48:11.518Z"
+  },
+  {
+    "id": "rag_log_1789858090235_d869e2d6",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-19T22:48:10.235Z"
+  },
+  {
     "id": "rag_log_1789858081768_00f4c950",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -106,47 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: PASSED — 5 passed, 0 failed",
     "timestamp": "2026-09-19T22:46:56.604Z"
-  },
-  {
-    "id": "rag_log_1789858016246_ff30c1cb",
-    "type": "APPROVE",
-    "description": "Mutation applied to SECURITY.md",
-    "timestamp": "2026-09-19T22:46:56.246Z"
-  },
-  {
-    "id": "rag_log_1789858016237_e831e9ac",
-    "type": "APPROVE",
-    "description": "Mutation applied to SECURITY.md",
-    "timestamp": "2026-09-19T22:46:56.237Z"
-  },
-  {
-    "id": "rag_log_1789858015742_691e57d2",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-19T22:46:55.742Z"
-  },
-  {
-    "id": "rag_log_1789858005527_47c691d0",
-    "type": "MUTATE",
-    "description": "[Batch 13/243] Proposed mutation for SECURITY.md (risk: LOW)",
-    "timestamp": "2026-09-19T22:46:45.527Z"
-  },
-  {
-    "id": "rag_log_1789858005517_97a67754",
-    "type": "MUTATE",
-    "description": "[Batch 13/243] Proposed mutation for SECURITY.md (risk: LOW)",
-    "timestamp": "2026-09-19T22:46:45.517Z"
-  },
-  {
-    "id": "rag_log_1789858003070_62ef4a75",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-19T22:46:43.070Z"
-  },
-  {
-    "id": "rag_log_1789857994211_732e99d4",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-19T22:46:34.211Z"
   }
 ]
