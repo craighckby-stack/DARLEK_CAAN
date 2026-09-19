@@ -4,6 +4,7 @@ import { embedText, resolveApiKey, callGemini } from './gemini';
 import { scheduleGitHubLogSync } from './githubLogSync';
 import { validateSourceCode } from './validator';
 import { validateStructuralSanity } from './structural-sanity-guard';
+import { safeSetLocalStorage, safeGetLocalStorage } from './safeStorage';
 
 const LOCAL_STORAGE_KEY = 'nexus_rag_brain_local_chunks';
 const LOCAL_STORAGE_LOGS_KEY = 'nexus_rag_brain_logs';
@@ -13,7 +14,7 @@ const LOCAL_STORAGE_HOTSWAP_KEY = 'darlek_cann_hotswap_registry';
 function getLocalChunks(): BrainChunk[] {
   if (typeof window === 'undefined') return [];
   try {
-    const raw = localStorage.getItem(LOCAL_STORAGE_KEY);
+    const raw = safeGetLocalStorage(LOCAL_STORAGE_KEY);
     return raw ? (JSON.parse(raw) as BrainChunk[]) : [];
   } catch {
     return [];
@@ -23,7 +24,7 @@ function getLocalChunks(): BrainChunk[] {
 function saveLocalChunks(chunks: BrainChunk[]): void {
   if (typeof window === 'undefined') return;
   try {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(chunks));
+    safeSetLocalStorage(LOCAL_STORAGE_KEY, JSON.stringify(chunks.slice(-15)));
   } catch {}
 }
 
@@ -54,7 +55,7 @@ export interface RagMutationRecord {
 function getLocalLogs(): RagLogRecord[] {
   if (typeof window === 'undefined') return [];
   try {
-    const raw = localStorage.getItem(LOCAL_STORAGE_LOGS_KEY);
+    const raw = safeGetLocalStorage(LOCAL_STORAGE_LOGS_KEY);
     return raw ? (JSON.parse(raw) as RagLogRecord[]) : [];
   } catch {
     return [];
@@ -64,15 +65,15 @@ function getLocalLogs(): RagLogRecord[] {
 function saveLocalLogs(logs: RagLogRecord[]): void {
   if (typeof window === 'undefined') return;
   try {
-    // Keep last 300 logs in local storage
-    localStorage.setItem(LOCAL_STORAGE_LOGS_KEY, JSON.stringify(logs.slice(-300)));
+    // Keep last 25 logs in local storage to prevent quota saturation
+    safeSetLocalStorage(LOCAL_STORAGE_LOGS_KEY, JSON.stringify(logs.slice(-25)));
   } catch {}
 }
 
 function getLocalMutations(): RagMutationRecord[] {
   if (typeof window === 'undefined') return [];
   try {
-    const raw = localStorage.getItem(LOCAL_STORAGE_MUTATIONS_KEY);
+    const raw = safeGetLocalStorage(LOCAL_STORAGE_MUTATIONS_KEY);
     return raw ? (JSON.parse(raw) as RagMutationRecord[]) : [];
   } catch {
     return [];
@@ -82,8 +83,12 @@ function getLocalMutations(): RagMutationRecord[] {
 function saveLocalMutations(mutations: RagMutationRecord[]): void {
   if (typeof window === 'undefined') return;
   try {
-    // Keep last 100 mutations
-    localStorage.setItem(LOCAL_STORAGE_MUTATIONS_KEY, JSON.stringify(mutations.slice(-100)));
+    // Keep last 10 mutations and omit heavy 768-float embeddings from local cache
+    const light = mutations.slice(-10).map((m) => {
+      const { embedding, ...rest } = m;
+      return rest;
+    });
+    safeSetLocalStorage(LOCAL_STORAGE_MUTATIONS_KEY, JSON.stringify(light));
   } catch {}
 }
 
@@ -387,7 +392,7 @@ export interface HotswappedFileEntry {
 export function getAllHotswappedFiles(): Record<string, HotswappedFileEntry> {
   if (typeof window === 'undefined') return {};
   try {
-    const raw = localStorage.getItem(LOCAL_STORAGE_HOTSWAP_KEY);
+    const raw = safeGetLocalStorage(LOCAL_STORAGE_HOTSWAP_KEY);
     return raw ? JSON.parse(raw) : {};
   } catch {
     return {};
@@ -413,9 +418,23 @@ export function hotswapFileInRegistry(
   };
 
   current[filePath] = entry;
+
+  // Prune registry to latest 8 entries to avoid multi-megabyte localStorage bloat
+  const keys = Object.keys(current);
+  if (keys.length > 8) {
+    const sorted = keys.sort((a, b) => {
+      const timeA = new Date(current[a]?.hotswappedAt || 0).getTime();
+      const timeB = new Date(current[b]?.hotswappedAt || 0).getTime();
+      return timeB - timeA;
+    });
+    for (const oldKey of sorted.slice(8)) {
+      delete current[oldKey];
+    }
+  }
+
   if (typeof window !== 'undefined') {
     try {
-      localStorage.setItem(LOCAL_STORAGE_HOTSWAP_KEY, JSON.stringify(current));
+      safeSetLocalStorage(LOCAL_STORAGE_HOTSWAP_KEY, JSON.stringify(current));
     } catch {}
   }
   return entry;

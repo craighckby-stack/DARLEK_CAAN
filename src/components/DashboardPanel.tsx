@@ -41,6 +41,7 @@ import {
 } from 'recharts';
 import { safeResponseJson } from '@/lib/safe-json';
 import { getRagBrainRealMetrics, type RagBrainRealMetrics } from '@/lib/ragBrain';
+import { safeSetLocalStorage, safeGetLocalStorage } from '@/lib/safeStorage';
 
 interface DashboardPanelProps {
   systemState: SystemState;
@@ -137,7 +138,7 @@ export default function DashboardPanel({
   const [ragBrainHealthHistory, setRagBrainHealthHistory] = useState<RagHealthPoint[]>(() => {
     if (typeof window === 'undefined') return DEFAULT_RAG_HISTORY;
     try {
-      const saved = localStorage.getItem(STORAGE_KEY);
+      const saved = safeGetLocalStorage(STORAGE_KEY);
       if (!saved) return DEFAULT_RAG_HISTORY;
       const parsed = JSON.parse(saved);
       if (Array.isArray(parsed) && parsed.length > 0) {
@@ -168,7 +169,7 @@ export default function DashboardPanel({
         recovery: metrics.recovery
       };
       const updated = [...prev.slice(-(MAX_HISTORY_POINTS - 1)), newPoint];
-      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(updated)); } catch {}
+      safeSetLocalStorage(STORAGE_KEY, JSON.stringify(updated));
       return updated;
     });
   }, []);

@@ -765,7 +765,7 @@ export default function Home() {
           retryCount: (targetSave.retryCount || 0) + 1,
         };
         setFailedSave(updatedSave);
-        localStorage.setItem(
+        safeSetLocalStorage(
           'darlek_cann_failed_save',
           JSON.stringify(updatedSave)
         );
@@ -909,7 +909,7 @@ export default function Home() {
     if (!isHydrated) return;
     try {
       if (messages && messages.length > 0) {
-        safeSetLocalStorage('darlek_cann_messages', JSON.stringify(messages.slice(-50)));
+        safeSetLocalStorage('darlek_cann_messages', JSON.stringify(messages.slice(-25)));
       } else {
         safeRemoveLocalStorage('darlek_cann_messages');
       }
@@ -920,7 +920,7 @@ export default function Home() {
     if (!isHydrated) return;
     try {
       if (logEntries && logEntries.length > 0) {
-        safeSetLocalStorage('darlek_cann_log_entries', JSON.stringify(logEntries.slice(-50)));
+        safeSetLocalStorage('darlek_cann_log_entries', JSON.stringify(logEntries.slice(-25)));
       } else {
         safeRemoveLocalStorage('darlek_cann_log_entries');
       }
@@ -930,7 +930,7 @@ export default function Home() {
   useEffect(() => {
     if (!isHydrated) return;
     try {
-      const capped = (rejectionMemory || []).slice(-50);
+      const capped = (rejectionMemory || []).slice(-25);
       safeSetLocalStorage('darlek_cann_rejection_memory', JSON.stringify(capped));
     } catch (e) {}
   }, [rejectionMemory, isHydrated]);
@@ -938,7 +938,7 @@ export default function Home() {
   useEffect(() => {
     if (!isHydrated) return;
     try {
-      const capped = capAndDedupeBlacklist(blacklistedFiles, 250);
+      const capped = capAndDedupeBlacklist(blacklistedFiles, 150);
       safeSetLocalStorage('darlek_cann_blacklisted_files', JSON.stringify(capped));
       syncBlacklistToFirestore(capped).catch(() => {});
     } catch (e) {}
@@ -958,14 +958,14 @@ export default function Home() {
   useEffect(() => {
     if (!isHydrated) return;
     try {
-      localStorage.setItem('darlek_cann_active_tab', activeTab);
+      safeSetLocalStorage('darlek_cann_active_tab', activeTab);
     } catch (e) {}
   }, [activeTab, isHydrated]);
 
   useEffect(() => {
     if (!isHydrated) return;
     try {
-      localStorage.setItem('darlek_cann_controls', JSON.stringify({
+      safeSetLocalStorage('darlek_cann_controls', JSON.stringify({
         batchMode,
         autoApprove,
         autoApproveRisk,
@@ -983,7 +983,7 @@ export default function Home() {
   useEffect(() => {
     if (!isHydrated) return;
     try {
-      localStorage.setItem('darlek_cann_debate', JSON.stringify({
+      safeSetLocalStorage('darlek_cann_debate', JSON.stringify({
         debateTopic,
         debateActive,
         debateConsensus,

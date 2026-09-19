@@ -1,6 +1,7 @@
 import { db, isFirebaseConfigured } from './firebase';
 import { collection, doc, setDoc, getDocs, addDoc, serverTimestamp } from 'firebase/firestore';
 import { saveMutationToRag } from './ragBrain';
+import { safeSetLocalStorage, safeGetLocalStorage } from './safeStorage';
 
 /**
  * Live sync from craighckby-stack/Archaeology-Engine into DARLEK's RAG.
@@ -146,7 +147,7 @@ async function getAlreadyIngestedPaths(): Promise<Set<string>> {
   }
   if (typeof window !== 'undefined') {
     try {
-      const raw = localStorage.getItem(LOCAL_INGESTED_KEY);
+      const raw = safeGetLocalStorage(LOCAL_INGESTED_KEY);
       return new Set(raw ? (JSON.parse(raw) as string[]) : []);
     } catch {
       return new Set();
@@ -171,7 +172,8 @@ async function markIngested(paths: string[], alreadyKnown: Set<string>): Promise
     try {
       const merged = new Set(alreadyKnown);
       paths.forEach(p => merged.add(p));
-      localStorage.setItem(LOCAL_INGESTED_KEY, JSON.stringify(Array.from(merged)));
+      const capped = Array.from(merged).slice(-100);
+      safeSetLocalStorage(LOCAL_INGESTED_KEY, JSON.stringify(capped));
     } catch {
       // Best effort only — a missed local mark just means the next run re-scans it.
     }

@@ -2,28 +2,55 @@ import { db, isFirebaseConfigured } from './firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 /**
- * High-priority keys that should be preserved during storage eviction.
+ * In-memory resilient storage layer.
+ * Guarantees that any state written is always retrievable during the user session,
+ * even when the browser's persistent localStorage quota (typically 5MB) is completely saturated.
+ */
+const memoryFallback = new Map<string, string>();
+
+/**
+ * High-priority keys that MUST be preserved during storage eviction.
+ * Critical credentials and configuration needed to authenticate and resume.
  */
 const CRITICAL_KEYS = new Set([
   'af_github_token',
   'darlek_cann_github_token',
   'darlek_cann_gemini_key',
   'darlek_cann_selected_model',
-  'darlek_cann_blacklisted_files',
   'darlek_cann_system_state',
+  'darlek_cann_language',
+  'darlek_cann_controls',
+  'darlek_cann_auto_pause_saturation',
+  'darlek_cann_auto_skip_saturation',
+  'darlek_cann_center_view',
+  'darlek_cann_booted',
 ]);
 
 /**
- * Keys that can be pruned or dropped when localStorage hits its storage quota.
+ * Tier 1 Purgeable Keys: Heavy RAG vector chunks, historical mutations, and raw scanned files.
+ * These can consume multiple megabytes and are completely regenerable or already saved in Firestore.
  */
-const PURGEABLE_KEYS = [
-  'darlek_cann_failed_save',
-  'darlek_cann_log_entries',
-  'darlek_cann_messages',
-  'darlek_cann_rejection_memory',
-  'darlek_cann_pending_mutation',
+const TIER_1_PURGE_KEYS = [
+  'nexus_rag_brain_local_chunks',
+  'nexus_rag_brain_mutations',
+  'nexus_rag_brain_logs',
+  'darlek_cann_hotswap_registry',
+  'archaeology_ingested_files_cache',
   'darlek_cann_scanned_files',
+  'darlek_cann_failed_save',
+];
+
+/**
+ * Tier 2 Purgeable Keys: Ephemeral runtime memory and verbose chat/log histories.
+ */
+const TIER_2_PURGE_KEYS = [
+  'darlek_cann_log_entries',
+  'darlek_cann_rejection_memory',
   'darlek_cann_debate',
+  'nexus_perspective_details',
+  'darlek_cann_pending_mutation',
+  'darlek_cann_messages',
+  'darlek_cann_rag_health_history',
 ];
 
 /**
@@ -32,7 +59,7 @@ const PURGEABLE_KEYS = [
  */
 export function capAndDedupeBlacklist(
   list: readonly string[] | null | undefined,
-  maxItems = 250
+  maxItems = 150
 ): string[] {
   if (!list || !Array.isArray(list)) return [];
 
@@ -54,50 +81,66 @@ export function capAndDedupeBlacklist(
 }
 
 /**
- * Purges non-essential cache entries when localStorage space is exhausted.
+ * Computes approximate byte length of current localStorage contents.
+ */
+export function getEstimatedLocalStorageUsage(): number {
+  if (typeof window === 'undefined' || !window.localStorage) return 0;
+  let totalBytes = 0;
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key) {
+        const val = localStorage.getItem(key);
+        totalBytes += (key.length + (val ? val.length : 0)) * 2;
+      }
+    }
+  } catch {
+    return 0;
+  }
+  return totalBytes;
+}
+
+/**
+ * Purges non-essential and heavy cache entries when localStorage space is exhausted.
+ * CRITICAL: NEVER calls localStorage.setItem during eviction to prevent recursive quota faults.
  */
 export function evictNonEssentialStorage(): void {
   if (typeof window === 'undefined' || !window.localStorage) return;
 
   try {
-    for (const key of PURGEABLE_KEYS) {
-      if (key === 'darlek_cann_scanned_files') {
-        const raw = localStorage.getItem(key);
-        if (raw) {
-          try {
-            const parsed = JSON.parse(raw);
-            if (Array.isArray(parsed)) {
-              // Strip heavy 'content' fields from scanned files cache
-              const light = parsed.map((f: { path?: string; size?: number; type?: string; sha?: string }) => ({
-                path: f.path || '',
-                size: f.size || 0,
-                type: f.type || 'file',
-                sha: f.sha,
-              }));
-              localStorage.setItem(key, JSON.stringify(light));
-              continue;
-            }
-          } catch {}
-        }
+    // 1. Purge Tier 1 keys completely
+    for (const key of TIER_1_PURGE_KEYS) {
+      try {
         localStorage.removeItem(key);
-      } else if (key === 'darlek_cann_messages' || key === 'darlek_cann_log_entries') {
-        const raw = localStorage.getItem(key);
-        if (raw) {
-          try {
-            const parsed = JSON.parse(raw);
-            if (Array.isArray(parsed)) {
-              localStorage.setItem(key, JSON.stringify(parsed.slice(-15)));
-              continue;
-            }
-          } catch {}
-        }
+      } catch {}
+    }
+
+    // 2. Purge Tier 2 keys if needed
+    for (const key of TIER_2_PURGE_KEYS) {
+      try {
         localStorage.removeItem(key);
-      } else {
-        localStorage.removeItem(key);
+      } catch {}
+    }
+
+    // 3. Dynamic size-based scavenger for any remaining large unclassified keys
+    const items: Array<{ key: string; length: number }> = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && !CRITICAL_KEYS.has(k)) {
+        const val = localStorage.getItem(k);
+        items.push({ key: k, length: val ? val.length : 0 });
       }
     }
+
+    // Sort descending by payload size and prune the largest items
+    items.sort((a, b) => b.length - a.length);
+    for (const item of items.slice(0, 5)) {
+      try {
+        localStorage.removeItem(item.key);
+      } catch {}
+    }
   } catch (err) {
-    console.warn('[SafeStorage] Storage eviction encountered warning:', err);
+    console.warn('[SafeStorage] Storage eviction completed with warning:', err);
   }
 }
 
@@ -121,40 +164,85 @@ export function isQuotaExceededError(err: unknown): boolean {
 }
 
 /**
- * Sets a value in localStorage safely without throwing QuotaExceededError.
- * Automatically evicts expendable caches if quota is reached, then retries.
+ * Safely compacts array-based or JSON data when writing to localStorage to prevent quota bloat.
  */
-export function safeSetLocalStorage(key: string, value: string): boolean {
-  if (typeof window === 'undefined' || !window.localStorage) return false;
+function compactPayloadIfNeeded(key: string, value: string): string {
+  if (value.length < 15000) return value;
 
   try {
-    localStorage.setItem(key, value);
+    const parsed = JSON.parse(value);
+    if (Array.isArray(parsed)) {
+      if (key.includes('messages')) {
+        return JSON.stringify(parsed.slice(-20));
+      }
+      if (key.includes('log_entries')) {
+        return JSON.stringify(parsed.slice(-20));
+      }
+      if (key.includes('rejection_memory')) {
+        return JSON.stringify(parsed.slice(-20));
+      }
+      if (key.includes('blacklisted_files')) {
+        return JSON.stringify(parsed.slice(-100));
+      }
+      return JSON.stringify(parsed.slice(-25));
+    }
+  } catch {}
+
+  return value;
+}
+
+/**
+ * Sets a value safely without throwing or bubbling QuotaExceededError.
+ * 1. Synchronously mirrors to in-memory fallback.
+ * 2. Attempts localStorage.setItem.
+ * 3. On quota failure, executes tiered cache eviction and retries with compacted payload.
+ * 4. If browser storage remains full, retains in memoryFallback gracefully without console errors.
+ */
+export function safeSetLocalStorage(key: string, value: string): boolean {
+  // Always mirror in session memory
+  memoryFallback.set(key, value);
+
+  if (typeof window === 'undefined' || !window.localStorage) return true;
+
+  const targetValue = compactPayloadIfNeeded(key, value);
+
+  try {
+    localStorage.setItem(key, targetValue);
     return true;
   } catch (err) {
     if (isQuotaExceededError(err)) {
-      console.warn(`[SafeStorage] LocalStorage quota exceeded while writing "${key}". Initiating cache eviction...`);
       evictNonEssentialStorage();
 
       try {
-        localStorage.setItem(key, value);
-        console.info(`[SafeStorage] Successfully wrote "${key}" after storage eviction.`);
+        localStorage.setItem(key, targetValue);
         return true;
-      } catch (retryErr) {
-        console.error(`[SafeStorage] Failed write for "${key}" even after cache eviction:`, retryErr);
-        // Do not crash the application
-        return false;
+      } catch {
+        // If still failing, try an ultra-compact version if it's an array
+        try {
+          const parsed = JSON.parse(targetValue);
+          if (Array.isArray(parsed)) {
+            const ultraCompact = JSON.stringify(parsed.slice(-5));
+            localStorage.setItem(key, ultraCompact);
+            return true;
+          }
+        } catch {}
+
+        // Graceful degradation: safely stored in memoryFallback
+        console.warn(`[SafeStorage] Stored "${key}" in memory fallback due to browser quota constraint.`);
+        return true;
       }
     }
 
-    console.warn(`[SafeStorage] Non-quota error while writing "${key}":`, err);
-    return false;
+    console.warn(`[SafeStorage] Non-quota warning writing "${key}":`, err);
+    return true;
   }
 }
 
 /**
- * Safely removes an item from localStorage.
+ * Safely removes an item from both localStorage and memory fallback.
  */
 export function safeRemoveLocalStorage(key: string): void {
+  memoryFallback.delete(key);
   if (typeof window === 'undefined' || !window.localStorage) return;
   try {
     localStorage.removeItem(key);
@@ -162,15 +250,34 @@ export function safeRemoveLocalStorage(key: string): void {
 }
 
 /**
- * Safely reads an item from localStorage.
+ * Safely reads an item, checking localStorage first, then falling back to memory.
  */
 export function safeGetLocalStorage(key: string): string | null {
-  if (typeof window === 'undefined' || !window.localStorage) return null;
-  try {
-    return localStorage.getItem(key);
-  } catch {
-    return null;
+  if (typeof window !== 'undefined' && window.localStorage) {
+    try {
+      const val = localStorage.getItem(key);
+      if (val !== null) return val;
+    } catch {}
   }
+  return memoryFallback.get(key) || null;
+}
+
+/**
+ * Proactive startup hygiene: Prunes old heavy cache blobs if total storage exceeds 2MB.
+ */
+export function initStorageSanityCheck(): void {
+  if (typeof window === 'undefined' || !window.localStorage) return;
+  try {
+    const usage = getEstimatedLocalStorageUsage();
+    if (usage > 2_000_000) {
+      evictNonEssentialStorage();
+    }
+  } catch {}
+}
+
+// Auto-run sanity check on script load
+if (typeof window !== 'undefined') {
+  initStorageSanityCheck();
 }
 
 /**
@@ -180,7 +287,7 @@ export async function syncBlacklistToFirestore(list: readonly string[]): Promise
   if (!isFirebaseConfigured()) return false;
 
   try {
-    const capped = capAndDedupeBlacklist(list, 500);
+    const capped = capAndDedupeBlacklist(list, 250);
     const docRef = doc(db, 'system_config', 'blacklist');
     await setDoc(
       docRef,
@@ -210,7 +317,7 @@ export async function loadBlacklistFromFirestore(): Promise<string[] | null> {
     if (snap.exists()) {
       const data = snap.data();
       if (data && Array.isArray(data.blacklistedFiles)) {
-        return capAndDedupeBlacklist(data.blacklistedFiles, 500);
+        return capAndDedupeBlacklist(data.blacklistedFiles, 250);
       }
     }
     return null;

@@ -10,6 +10,7 @@ import React, { useMemo, useCallback, useState, useEffect } from 'react';
 import type { DebateAgent, AgentVote } from '@/lib/types';
 import { COLORS } from '@/lib/constants';
 import { Users, Info, Edit3, Save, X } from 'lucide-react';
+import { safeSetLocalStorage, safeGetLocalStorage } from '@/lib/safeStorage';
 
 export interface DebateChamberProps {
   agents: DebateAgent[];
@@ -243,7 +244,7 @@ export default function DebateChamber({
   const [selectedAgentId, setSelectedAgentId] = useState<string>('archivist');
   const [perspectiveDetails, setPerspectiveDetails] = useState<Record<string, PerspectiveDetail>>(() => {
     try {
-      const saved = localStorage.getItem('nexus_perspective_details');
+      const saved = safeGetLocalStorage('nexus_perspective_details');
       return saved ? JSON.parse(saved) : DEFAULT_PERSPECTIVE_DETAILS;
     } catch {
       return DEFAULT_PERSPECTIVE_DETAILS;
@@ -277,11 +278,7 @@ export default function DebateChamber({
       }
     };
     setPerspectiveDetails(updated);
-    try {
-      localStorage.setItem('nexus_perspective_details', JSON.stringify(updated));
-    } catch (e) {
-      console.error('Error saving perspective details:', e);
-    }
+    safeSetLocalStorage('nexus_perspective_details', JSON.stringify(updated));
     setIsEditing(false);
   };
 
