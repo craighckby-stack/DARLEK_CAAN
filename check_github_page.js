@@ -1,10 +1,3 @@
-/**
- * DARLEK CANN ARCHITECTURAL HEADER
- * File: check_github_page.js
- * Role: GitHub Raw Content & State Ingestion Verification Utility
- * Architecture: ES-Next async network client with AbortController timeout bounds and structured reporting.
- */
-
 const { URL } = require('node:url');
 
 /**
