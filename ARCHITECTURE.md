@@ -133,5 +133,3 @@ graph TD
     D -->|15s Timeout / Base64 Decode| E[GitHub REST API v3]
     B -->|Autonomous Refactor| F[Sandbox Mutation Pipeline]
 ```
-
----
