@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-19T22:45:07.035Z",
+    "generatedAt": "2026-09-19T22:45:15.548Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789857912528_49996b60",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-19T22:45:12.528Z"
+    },
+    {
+      "id": "rag_log_1789857908230_8b8a8616",
+      "type": "MUTATE",
+      "description": "[Batch 9/243] Proposed mutation for ARCHITECTURE.md (risk: LOW)",
+      "timestamp": "2026-09-19T22:45:08.230Z"
+    },
+    {
+      "id": "rag_log_1789857908222_c6ef5a82",
+      "type": "MUTATE",
+      "description": "[Batch 9/243] Proposed mutation for ARCHITECTURE.md (risk: LOW)",
+      "timestamp": "2026-09-19T22:45:08.222Z"
+    },
     {
       "id": "rag_log_1789857904025_29f066d3",
       "type": "LOG_SYNC",
@@ -138,24 +156,6 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-19T22:44:07.922Z"
-    },
-    {
-      "id": "rag_log_1789857847918_8d3b2421",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-19T22:44:07.918Z"
-    },
-    {
-      "id": "rag_log_1789857847372_e7efc376",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-19T22:44:07.372Z"
-    },
-    {
-      "id": "rag_log_1789857847366_fa8cf054",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-19T22:44:07.366Z"
     }
   ],
   "telemetryBuffer": [
@@ -659,6 +659,20 @@
     {
       "id": "dos-b4f3c5b6",
       "time": "08:45:04",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-cc1d037a",
+      "time": "08:45:08",
+      "addr": "0x00642F0B",
+      "tag": "MUTATE",
+      "message": "[Batch 9/243] Proposed mutation for ARCHITECTURE.md (risk: LOW)"
+    },
+    {
+      "id": "dos-55fe87d0",
+      "time": "08:45:12",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
