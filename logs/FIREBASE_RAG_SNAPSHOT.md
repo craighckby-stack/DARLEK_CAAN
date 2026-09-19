@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-19T22:54:07.760Z`
+*Last Synchronized:* `2026-09-19T22:54:16.758Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,79 +14,73 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:54:13.705Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-19T22:54:13.705Z
+```
+
+### 2. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:54:04.593Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-19T22:54:04.592Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 3. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:54:04.586Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-19T22:54:04.585Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:54:03.916Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-19T22:54:03.916Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:54:03.914Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-19T22:54:03.914Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:54:03.473Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to assets/.aistudio/README.md | TIME:2026-09-19T22:54:03.472Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:54:03.464Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to assets/.aistudio/README.md | TIME:2026-09-19T22:54:03.463Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:54:01.716Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-19T22:54:01.716Z
 ```
 
-### 8. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:53:54.948Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 16/243] Proposed mutation for assets/.aistudio/README.md (risk: LOW) | TIME:2026-09-19T22:53:54.948Z
 ```
 
-### 9. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:53:54.945Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 16/243] Proposed mutation for assets/.aistudio/README.md (risk: LOW) | TIME:2026-09-19T22:53:54.945Z
-```
-
-### 10. `assets/.aistudio/ARCHITECTURE.md` (Gen 14)
-*Source:* `MUTATION:assets/.aistudio/ARCHITECTURE.md` | *Indexed:* `2026-09-19T22:48:18.716Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-14 [2026-09-19T22:48:00.446Z] */
-# DARLEK CANN v3.0: Sovereign Architectural Blueprint
-
-## Executive Summary
-
-The DARLEK CANN (OMEGA-CORE) architecture represents an autonomous, self-refactoring evolutionary runtime environment. Operating at the intersection of multi-tier LLM fallbacks, agent s
-// ... [truncated]
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
