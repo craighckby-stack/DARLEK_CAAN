@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-19T22:44:13.742Z`
+*Last Synchronized:* `2026-09-19T22:44:22.747Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -13,7 +13,28 @@
 
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
-### 1. `.next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js` (Gen 5)
+### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:19.730Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-19T22:44:19.729Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:19.085Z`
+
+```typescript
+[LOG:MUTATE] [Batch 7/243] Proposed mutation for .next_dev/server/app/page_client-reference-manifest.js (risk: LOW) | TIME:2026-09-19T22:44:19.085Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:19.078Z`
+
+```typescript
+[LOG:MUTATE] [Batch 7/243] Proposed mutation for .next_dev/server/app/page_client-reference-manifest.js (risk: LOW) | TIME:2026-09-19T22:44:19.078Z
+```
+
+### 4. `.next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js` (Gen 5)
 *Source:* `MUTATION:.next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js` | *Indexed:* `2026-09-19T22:44:10.721Z`
 
 ```typescript
@@ -26,67 +47,46 @@
 // ... [truncated]
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:07.923Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-19T22:44:07.922Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:07.919Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-19T22:44:07.918Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:07.373Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-19T22:44:07.372Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:07.367Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-19T22:44:07.366Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:06.934Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to .next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js | TIME:2026-09-19T22:44:06.934Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:06.930Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to .next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js | TIME:2026-09-19T22:44:06.930Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:04.767Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-19T22:44:04.767Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:43:56.237Z`
-
-```typescript
-[LOG:MUTATE] [Batch 6/243] Proposed mutation for .next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js (risk: LOW) | TIME:2026-09-19T22:43:56.236Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:43:56.231Z`
-
-```typescript
-[LOG:MUTATE] [Batch 6/243] Proposed mutation for .next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js (risk: LOW) | TIME:2026-09-19T22:43:56.231Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
