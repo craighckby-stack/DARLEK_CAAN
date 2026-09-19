@@ -17,6 +17,29 @@ const CONCURRENCY_LIMIT = 5;
 const REPOSITORY_BASE_URL_OBJ = new URL(REPOSITORY_BASE_URL);
 
 /**
+ * Safely formats an error message for logging, preventing information leakage or injection.
+ * @param {unknown} error - The error caught in a try/catch block.
+ * @returns {string} Sanitized string message.
+ */
+function formatErrorMessage(error) {
+  if (error instanceof Error) {
+    return error.message;
+  }
+  return String(error);
+}
+
+/**
+ * Validates whether an object conforms to the RemoteBlob structure.
+ * @param {unknown} blob - The item to validate.
+ * @returns {boolean} True if valid, false otherwise.
+ */
+function isValidRemoteBlob(blob) {
+  if (!blob || typeof blob !== 'object') return false;
+  const b = /** @type {Record<string, unknown>} */ (blob);
+  return typeof b.path === 'string' && b.path.trim().length > 0;
+}
+
+/**
  * Safely loads and parses remote_blobs.json asynchronously with structure validation.
  * @returns {Promise<RemoteBlob[]>}
  */
