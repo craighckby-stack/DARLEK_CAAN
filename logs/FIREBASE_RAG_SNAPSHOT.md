@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-19T22:43:59.244Z`
+*Last Synchronized:* `2026-09-19T22:44:13.742Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -13,85 +13,99 @@
 
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
-### 1. `system.log` (Gen 1)
+### 1. `.next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js` (Gen 5)
+*Source:* `MUTATION:.next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js` | *Indexed:* `2026-09-19T22:44:10.721Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-5 [2026-09-19T22:43:55.572Z] */
+/**
+ * Core RSC Reference Manifest Definition
+ * File: .next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js
+ * Role: Manages React Server Components (RSC) manifest routing for setup API endpoint.
+ * @module route_client-reference-mani
+// ... [truncated]
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:07.923Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-19T22:44:07.922Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:07.919Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-19T22:44:07.918Z
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:07.373Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-19T22:44:07.372Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:07.367Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-19T22:44:07.366Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:06.934Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to .next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js | TIME:2026-09-19T22:44:06.934Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:06.930Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to .next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js | TIME:2026-09-19T22:44:06.930Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:44:04.767Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-19T22:44:04.767Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:43:56.237Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 6/243] Proposed mutation for .next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js (risk: LOW) | TIME:2026-09-19T22:43:56.236Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:43:56.231Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 6/243] Proposed mutation for .next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js (risk: LOW) | TIME:2026-09-19T22:43:56.231Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:43:54.161Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `.next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `5`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-5 with verified AST structural sanity.
 ```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-19T22:43:54.161Z
-```
-
-### 4. `.next_dev/server/app/api/brain/route_client-reference-manifest.js` (Gen 4)
-*Source:* `MUTATION:.next_dev/server/app/api/brain/route_client-reference-manifest.js` | *Indexed:* `2026-09-19T22:43:45.028Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-4 [2026-09-19T22:43:30.071Z] */
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-5 [2026-09-19T22:43:55.572Z] */
 /**
- * DARLEK CANN ARCHITECTURAL HEADER
- * File: .next_dev/server/app/api/brain/route_client-reference-manifest.js
- * Role: Core system component participating in autonomous cognitive evolution cycles.
- * Architecture: Type-safe modular unit with resilient state 
+ * Core RSC Reference Manifest Definition
+ * File: .next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js
+ * Role: Manages React Server Components (RSC) manifest routing for setup API endpoint.
+ * @module route_client-reference-mani
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:43:43.708Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-19T22:43:43.708Z
-```
-
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:43:43.707Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-19T22:43:43.707Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:43:42.871Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-19T22:43:42.871Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:43:42.870Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-19T22:43:42.870Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:43:42.418Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to .next_dev/server/app/api/brain/route_client-reference-manifest.js | TIME:2026-09-19T22:43:42.417Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:43:42.416Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to .next_dev/server/app/api/brain/route_client-reference-manifest.js | TIME:2026-09-19T22:43:42.416Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `.next_dev/server/app/api/brain/route_client-reference-manifest.js`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `.next_dev/server/app/api/brain/route_client-reference-manifest.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `4`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-4 with verified AST structural sanity.
@@ -105,7 +119,7 @@
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `.gitignore`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `.gitignore`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `3`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-3 with verified AST structural sanity.
@@ -136,7 +150,7 @@ build/
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `.github/PULL_REQUEST_TEMPLATE.md`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `.github/PULL_REQUEST_TEMPLATE.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `2`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-2 with verified AST structural sanity.
@@ -151,7 +165,7 @@ build/
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `.env.example`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `.env.example`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `1`
 - **Rationale:** RAG LLM Synthesis: Applied targeted defensive improvements for Generation G-1.
@@ -164,7 +178,7 @@ build/
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `00_Foundational_Knowledge/knowledge_base/__init__.py`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `00_Foundational_Knowledge/knowledge_base/__init__.py`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `66`
 - **Rationale:** RAG LLM Synthesis: Applied targeted defensive improvements for Generation G-66.
@@ -180,7 +194,7 @@ syste
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `00_Foundational_Knowledge/encyclopedia_of_engineering/telemetry_types.py`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `00_Foundational_Knowledge/encyclopedia_of_engineering/telemetry_types.py`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `65`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-65 with verified AST structural sanity.
@@ -194,7 +208,7 @@ Integration: Used by registry_telemetry.py and telemetry_stats_engine.py to ensu
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `00_Foundational_Knowledge/encyclopedia_of_engineering/telemetry_stats_engine.py`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `00_Foundational_Knowledge/encyclopedia_of_engineering/telemetry_stats_engine.py`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `64`
 - **Rationale:** RAG LLM Synthesis: Applied targeted defensive improvements for Generation G-64.
@@ -211,7 +225,7 @@ from typing import List, Dict, Any, Optional, Fi
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `00_Foundational_Knowledge/encyclopedia_of_engineering/telemetry_diagnostic_core.py`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `00_Foundational_Knowledge/encyclopedia_of_engineering/telemetry_diagnostic_core.py`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `63`
 - **Rationale:** RAG LLM Synthesis: Applied targeted defensive improvements for Generation G-63.
@@ -229,7 +243,7 @@ im
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `00_Foundational_Knowledge/encyclopedia_of_engineering/schema_diagnostic_utils.py`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `00_Foundational_Knowledge/encyclopedia_of_engineering/schema_diagnostic_utils.py`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `62`
 - **Rationale:** RAG LLM Synthesis: Applied targeted defensive improvements for Generation G-62.
@@ -245,21 +259,6 @@ import copy
 import math
 import time
 from typing import Any, Fina
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `00_Foundational_Knowledge/encyclopedia_of_engineering/registry_types.py`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `61`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-61 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-61 [2026-09-19T14:38:27.506Z] */
-"""
-REGISTRY TYPES DEFINITION
-Role: Defines the core data structures and type schemas for the Knowledge Registry 
-      and its associated diagnostic framework.
-Integration: Used by knowledge_registry.py, diagnostic_engine.py, and registry_schema_utils.py 
-     
 // ... [truncated]
 ```
 
