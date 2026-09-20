@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789873454310_35d6c00e",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:04:14.309Z"
+  },
+  {
     "id": "rag_log_1789873445313_c3d741b3",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -142,11 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: PASSED — 5 passed, 0 failed",
     "timestamp": "2026-09-20T03:03:18.207Z"
-  },
-  {
-    "id": "rag_log_1789873398205_6f7a4f0c",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T03:03:18.205Z"
   }
 ]
