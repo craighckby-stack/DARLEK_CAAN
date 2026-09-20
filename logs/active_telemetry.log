@@ -1,11 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:32:03.411Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:32:11.193Z]
 ======================================================================
 
-[15:24:17] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:24:17] [0x00324000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 341.1 KB (3.33%).
-[15:24:22] [0x00326000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
-[15:24:25] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:24:26] [0x0037BBD9] [MUTATE    ] [Batch 59/253] Proposed mutation for fix_synthesizer.sh (risk: LOW)
 [15:24:27] [0x00328000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.67 MB.
 [15:24:27] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
@@ -253,3 +249,7 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:32:03.411Z]
 [15:31:58] [0x003E4000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 312.8 KB (3.05%).
 [15:32:00] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:32:03] [0x003E6000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
+[15:32:06] [0x002F2DC9] [MUTATE    ] [Batch 88/253] Proposed mutation for restore_repo_fast.js (risk: LOW)
+[15:32:07] [0x003E8000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.71 MB.
+[15:32:07] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
+[15:32:08] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
