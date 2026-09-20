@@ -1,11 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:59:03.849Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:59:13.437Z]
 ======================================================================
 
-[15:51:03] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:51:04] [0x007CDA35] [MUTATE    ] [Batch 140/253] Proposed mutation for src/components/ErrorBoundary.tsx (risk: LOW)
-[15:51:05] [0x005C2000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
-[15:51:10] [0x005C4000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 1.63 MB (16.27%).
 [15:51:14] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:51:15] [0x005C6000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
 [15:51:16] [0x0038F150] [APPROVE   ] Mutation applied to src/components/ErrorBoundary.tsx
@@ -253,3 +249,7 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:59:03.849Z]
 [15:59:00] [0x00688000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.26 MB.
 [15:59:00] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
 [15:59:00] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[15:59:05] [0x0068A000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[15:59:08] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:59:10] [0x0068C000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 782.0 KB (7.64%).
+[15:59:10] [0x007EDDE5] [MUTATE    ] [Batch 162/253] Proposed mutation for src/hooks/use-toast.ts (risk: LOW)
