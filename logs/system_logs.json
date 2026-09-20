@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T02:56:03.854Z",
+    "generatedAt": "2026-09-20T02:56:12.148Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789872969137_30af219d",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T02:56:09.137Z"
+    },
+    {
+      "id": "rag_log_1789872965377_52e3309c",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T02:56:05.377Z"
+    },
+    {
+      "id": "rag_log_1789872965375_f21f4842",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T02:56:05.375Z"
+    },
+    {
+      "id": "rag_log_1789872964753_4ecb4211",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T02:56:04.753Z"
+    },
+    {
+      "id": "rag_log_1789872964746_d48a697b",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T02:56:04.746Z"
+    },
+    {
+      "id": "rag_log_1789872964305_74760adb",
+      "type": "APPROVE",
+      "description": "Mutation applied to LICENSE",
+      "timestamp": "2026-09-20T02:56:04.305Z"
+    },
+    {
+      "id": "rag_log_1789872964302_a66cdf2c",
+      "type": "APPROVE",
+      "description": "Mutation applied to LICENSE",
+      "timestamp": "2026-09-20T02:56:04.302Z"
+    },
     {
       "id": "rag_log_1789872960848_237eee9e",
       "type": "LOG_SYNC",
@@ -114,79 +156,9 @@
       "type": "HEALTH",
       "description": "Auto-test: PASSED — 5 passed, 0 failed",
       "timestamp": "2026-09-20T02:55:20.713Z"
-    },
-    {
-      "id": "rag_log_1789872920205_f59c7d1b",
-      "type": "APPROVE",
-      "description": "Mutation applied to ARCHITECTURE.md",
-      "timestamp": "2026-09-20T02:55:20.205Z"
-    },
-    {
-      "id": "rag_log_1789872920201_c1838cb4",
-      "type": "APPROVE",
-      "description": "Mutation applied to ARCHITECTURE.md",
-      "timestamp": "2026-09-20T02:55:20.201Z"
-    },
-    {
-      "id": "rag_log_1789872917272_2f416974",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:55:17.272Z"
-    },
-    {
-      "id": "rag_log_1789872908587_667c07b3",
-      "type": "MUTATE",
-      "description": "[Batch 9/253] Proposed mutation for ARCHITECTURE.md (risk: LOW)",
-      "timestamp": "2026-09-20T02:55:08.587Z"
-    },
-    {
-      "id": "rag_log_1789872908583_88f94088",
-      "type": "MUTATE",
-      "description": "[Batch 9/253] Proposed mutation for ARCHITECTURE.md (risk: LOW)",
-      "timestamp": "2026-09-20T02:55:08.583Z"
-    },
-    {
-      "id": "rag_log_1789872908108_3fcd0860",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:55:08.108Z"
-    },
-    {
-      "id": "rag_log_1789872899030_4f4fd0f8",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T02:54:59.030Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "b2",
-      "time": "00:00:00",
-      "addr": "0x00400004",
-      "tag": "BOOT",
-      "message": "(C)Copyright Microsoft Corp 1981-1994."
-    },
-    {
-      "id": "b3",
-      "time": "12:47:45",
-      "addr": "0x00401000",
-      "tag": "INIT",
-      "message": "DALEK CAAN KERNEL ENGINE INITIALIZED [OPT-IN OPERATOR CONTROL]"
-    },
-    {
-      "id": "b4",
-      "time": "12:47:45",
-      "addr": "0x00401020",
-      "tag": "RAG_SYNC",
-      "message": "RAG PERSISTENCE: Mutation telemetry indexed on event"
-    },
-    {
-      "id": "b5",
-      "time": "12:47:45",
-      "addr": "0x00401040",
-      "tag": "HOTSWAP",
-      "message": "AUTONOMOUS HOTSWAP: PAUSED (Opt-in via AUTORUN ON)"
-    },
     {
       "id": "b6",
       "time": "12:47:45",
@@ -855,6 +827,34 @@
     {
       "id": "dos-ad512850",
       "time": "12:56:00",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-eb0a5e27",
+      "time": "12:56:04",
+      "addr": "0x0014281C",
+      "tag": "APPROVE",
+      "message": "Mutation applied to LICENSE"
+    },
+    {
+      "id": "dos-9be4aaa9",
+      "time": "12:56:04",
+      "addr": "0x007EEE12",
+      "tag": "HEALTH",
+      "message": "Auto-test: PASSED — 5 passed, 0 failed"
+    },
+    {
+      "id": "dos-e388442c",
+      "time": "12:56:05",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-f86b6623",
+      "time": "12:56:09",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
