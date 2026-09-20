@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T04:14:10.037Z",
+    "generatedAt": "2026-09-20T04:14:17.730Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789877654701_48bf3b87",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T04:14:14.701Z"
+    },
     {
       "id": "rag_log_1789877646990_283742eb",
       "type": "MUTATE",
@@ -150,22 +156,9 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T04:13:17.727Z"
-    },
-    {
-      "id": "rag_log_1789877588302_0d87b021",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T04:13:08.302Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-deaaa6e2",
-      "time": "14:07:30",
-      "addr": "0x00952163",
-      "tag": "APPROVE",
-      "message": "Mutation applied to src/lib/languages.ts"
-    },
     {
       "id": "dos-cc4b660b",
       "time": "14:07:31",
@@ -858,6 +851,13 @@
       "addr": "0x006B0B3A",
       "tag": "MUTATE",
       "message": "[Batch 210/253] Proposed mutation for src/lib/structural-sanity-guard.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-afe9d381",
+      "time": "14:14:14",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }
