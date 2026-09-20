@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-38 [2026-09-20T05:18:35.345Z] */
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
