@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T03:22:55.397Z`
+*Last Synchronized:* `2026-09-20T03:23:04.983Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,86 +14,73 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:23:01.958Z`
+
+```typescript
+[LOG:MUTATE] [Batch 74/253] Proposed mutation for patch.js (risk: LOW) | TIME:2026-09-20T03:23:01.958Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:23:01.957Z`
+
+```typescript
+[LOG:MUTATE] [Batch 74/253] Proposed mutation for patch.js (risk: LOW) | TIME:2026-09-20T03:23:01.957Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:23:00.630Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:23:00.630Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:22:52.357Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for package.json | TIME:2026-09-20T03:22:52.356Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:22:52.356Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for package.json | TIME:2026-09-20T03:22:52.355Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:22:51.712Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:22:51.712Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:22:42.615Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for missing_files.json | TIME:2026-09-20T03:22:42.615Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:22:42.614Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for missing_files.json | TIME:2026-09-20T03:22:42.614Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:22:40.977Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:22:40.977Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:22:32.354Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:22:32.353Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:22:32.354Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:22:32.354Z
-```
-
-### 9. `metadata.json` (Gen 59)
-*Source:* `MUTATION:metadata.json` | *Indexed:* `2026-09-20T03:22:31.973Z`
-
-```typescript
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/craighckby-stack/Darlek-Caan-vs-Jesus-Chess/main/metadata.json",
-  "title": "ExtensionMetadata",
-  "type": "object",
-  "required": [
-    "name",
-    "description",
-    "requestFramePermissions",
-    "majorCapabilities"
-  ],
-  "properties": {
- 
-// ... [truncated]
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:22:31.434Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T03:22:31.433Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
