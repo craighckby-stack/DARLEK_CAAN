@@ -1,13 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:32:11.193Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:32:21.938Z]
 ======================================================================
 
-[15:24:26] [0x0037BBD9] [MUTATE    ] [Batch 59/253] Proposed mutation for fix_synthesizer.sh (risk: LOW)
-[15:24:27] [0x00328000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.67 MB.
-[15:24:27] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
-[15:24:31] [0x0032A000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
-[15:24:34] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:24:36] [0x0032C000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 341.4 KB (3.33%).
 [15:24:37] [0x00913C38] [APPROVE   ] Mutation applied to fix_synthesizer.sh
 [15:24:38] [0x0074FAF3] [HEALTH    ] Auto-test: REJECTED — 4 passed, 1 failed
 [15:24:38] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
@@ -253,3 +247,9 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:32:11.193Z]
 [15:32:07] [0x003E8000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.71 MB.
 [15:32:07] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
 [15:32:08] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:32:12] [0x003EA000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[15:32:16] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:32:17] [0x005B326C] [APPROVE   ] Mutation applied to restore_repo_fast.js
+[15:32:17] [0x003EC000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 275.0 KB (2.69%).
+[15:32:17] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
+[15:32:18] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)

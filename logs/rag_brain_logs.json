@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789882338660_04b872b7",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T05:32:18.660Z"
+  },
+  {
+    "id": "rag_log_1789882338659_dd46aaf3",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T05:32:18.659Z"
+  },
+  {
+    "id": "rag_log_1789882337769_b1b01c56",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T05:32:17.769Z"
+  },
+  {
+    "id": "rag_log_1789882337767_4e530185",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T05:32:17.767Z"
+  },
+  {
+    "id": "rag_log_1789882337332_ab06412c",
+    "type": "APPROVE",
+    "description": "Mutation applied to restore_repo_fast.js",
+    "timestamp": "2026-09-20T05:32:17.332Z"
+  },
+  {
+    "id": "rag_log_1789882337329_4927c4d9",
+    "type": "APPROVE",
+    "description": "Mutation applied to restore_repo_fast.js",
+    "timestamp": "2026-09-20T05:32:17.329Z"
+  },
+  {
+    "id": "rag_log_1789882336493_767d83b0",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:32:16.493Z"
+  },
+  {
     "id": "rag_log_1789882328145_dc1082cb",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -106,47 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: PASSED — 5 passed, 0 failed",
     "timestamp": "2026-09-20T05:31:48.020Z"
-  },
-  {
-    "id": "rag_log_1789882308019_ba146cbc",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T05:31:48.019Z"
-  },
-  {
-    "id": "rag_log_1789882307503_92120ace",
-    "type": "APPROVE",
-    "description": "Mutation applied to renameVars.js",
-    "timestamp": "2026-09-20T05:31:47.503Z"
-  },
-  {
-    "id": "rag_log_1789882307502_ec265cbe",
-    "type": "APPROVE",
-    "description": "Mutation applied to renameVars.js",
-    "timestamp": "2026-09-20T05:31:47.502Z"
-  },
-  {
-    "id": "rag_log_1789882304829_a0301a21",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:31:44.829Z"
-  },
-  {
-    "id": "rag_log_1789882296648_5d899185",
-    "type": "MUTATE",
-    "description": "[Batch 86/253] Proposed mutation for renameVars.js (risk: LOW)",
-    "timestamp": "2026-09-20T05:31:36.648Z"
-  },
-  {
-    "id": "rag_log_1789882296646_1a7648e0",
-    "type": "MUTATE",
-    "description": "[Batch 86/253] Proposed mutation for renameVars.js (risk: LOW)",
-    "timestamp": "2026-09-20T05:31:36.646Z"
-  },
-  {
-    "id": "rag_log_1789882295550_610d8b6a",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:31:35.550Z"
   }
 ]
