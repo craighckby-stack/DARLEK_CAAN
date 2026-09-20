@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T03:01:17.389Z`
+*Last Synchronized:* `2026-09-20T03:01:29.357Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -13,91 +13,103 @@
 
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
-### 1. `system.log` (Gen 1)
+### 1. `download_changed_fast.js` (Gen 23)
+*Source:* `MUTATION:download_changed_fast.js` | *Indexed:* `2026-09-20T03:01:26.344Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-23 [2026-09-20T03:01:13.682Z] */
+import fs from 'node:fs/promises';
+import { existsSync } from 'node:fs';
+import path from 'node:path';
+
+const REMOTE_BLOBS_PATH = 'remote_blobs.json';
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/craighckby-stack/epistemic_debate_engine/main/';
+con
+// ... [truncated]
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:26.033Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:01:26.033Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:26.031Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:01:26.031Z
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:25.746Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T03:01:25.746Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:25.745Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T03:01:25.744Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:25.451Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to download_changed_fast.js | TIME:2026-09-20T03:01:25.451Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:25.449Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to download_changed_fast.js | TIME:2026-09-20T03:01:25.449Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:23.612Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:01:23.612Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:14.378Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 27/253] Proposed mutation for download_changed_fast.js (risk: LOW) | TIME:2026-09-20T03:01:14.378Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:14.376Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 27/253] Proposed mutation for download_changed_fast.js (risk: LOW) | TIME:2026-09-20T03:01:14.376Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:14.098Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `download_changed_fast.js`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `23`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-23 with verified AST structural sanity.
 ```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:01:14.098Z
-```
-
-### 4. `download_changed.js` (Gen 22)
-*Source:* `MUTATION:download_changed.js` | *Indexed:* `2026-09-20T03:01:05.061Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-22 [2026-09-20T03:00:51.984Z] */
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-23 [2026-09-20T03:01:13.682Z] */
 import fs from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import path from 'node:path';
 
-/**
- * RemoteBlob definition.
- * @typedef {Object} RemoteBlob
- * @property {string} path
- * @property {string} [sha]
- */
-
-const REPOSITORY_BASE_URL = 'https://raw.githubusercontent.com/craighckby-
+const REMOTE_BLOBS_PATH = 'remote_blobs.json';
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/craighckby-stack/epistemic_debate_engine/main/';
+con
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:04.476Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:01:04.476Z
-```
-
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:04.474Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:01:04.474Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:03.905Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T03:01:03.905Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:03.903Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T03:01:03.903Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:03.587Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to download_changed.js | TIME:2026-09-20T03:01:03.587Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:01:03.580Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to download_changed.js | TIME:2026-09-20T03:01:03.579Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `download_changed.js`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `download_changed.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `22`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-22 with verified AST structural sanity.
@@ -117,7 +129,7 @@ const REPOSITORY_BASE_URL = 'https://raw.githubusercontent.com/craighckby-
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `docs/EVOLUTION_PROTOCOL.md`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `docs/EVOLUTION_PROTOCOL.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `21`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-21 with verified AST structural sanity.
@@ -129,7 +141,7 @@ const REPOSITORY_BASE_URL = 'https://raw.githubusercontent.com/craighckby-
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `docs/ARCHITECTURE_MANIFESTO.md`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `docs/ARCHITECTURE_MANIFESTO.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `20`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-20 with verified AST structural sanity.
@@ -141,7 +153,7 @@ const REPOSITORY_BASE_URL = 'https://raw.githubusercontent.com/craighckby-
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `docs/ARCHITECTURE.md`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `docs/ARCHITECTURE.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `19`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-19 with verified AST structural sanity.
@@ -155,7 +167,7 @@ The **DARLEK CANN Ecosystem** is an autonomous, self-refactoring quantum dialogu
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `check_github_page.js`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `check_github_page.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `18`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-18 with verified AST structural sanity.
@@ -172,7 +184,7 @@ const NETWORK_CONFIG = Object.freeze({
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `bun.lock`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `bun.lock`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `17`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-17 with verified AST structural sanity.
@@ -191,7 +203,7 @@ const NETWORK_CONFIG = Object.freeze({
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `assets/.aistudio/SECURITY_PROTOCOL.md`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `assets/.aistudio/SECURITY_PROTOCOL.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `16`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-16 with verified AST structural sanity.
@@ -209,7 +221,7 @@ const NETWORK_CONFIG = Object.freeze({
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `assets/.aistudio/README.md`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `assets/.aistudio/README.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `15`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-15 with verified AST structural sanity.
@@ -224,7 +236,7 @@ This directory serves as the control plane for the DARLEK CANN v3.0 evolution en
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `assets/.aistudio/ARCHITECTURE.md`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `assets/.aistudio/ARCHITECTURE.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `14`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-14 with verified AST structural sanity.
@@ -235,22 +247,6 @@ This directory serves as the control plane for the DARLEK CANN v3.0 evolution en
 ## Executive Summary
 
 The DARLEK CANN (OMEGA-CORE) architecture represents an autonomous, self-refactoring evolutionary runtime environment. Operating at the intersection of multi-tier LLM fallbacks, agent s
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `STYLE_MIGRATION_README.md`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `13`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-13 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-13 [2026-09-20T02:56:59.633Z] */
-# Style Migration Protocol
-
-> **Executive Summary:** This module automates the transition of UI tokens from legacy "Zinc" palettes to the modern "Glass-Emergent" design system (`darlek-cann-v3`) via deterministic regex mapping and atomic disk writes.
-
----
-
-## Ta
 // ... [truncated]
 ```
 
