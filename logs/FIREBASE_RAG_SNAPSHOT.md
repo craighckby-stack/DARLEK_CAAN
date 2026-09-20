@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:15:04.982Z`
+*Last Synchronized:* `2026-09-20T05:15:14.629Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,20 +14,41 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:15:11.619Z`
+
+```typescript
+[LOG:MUTATE] [Batch 31/253] Proposed mutation for examples/websocket/frontend.tsx (risk: LOW) | TIME:2026-09-20T05:15:11.619Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:15:11.618Z`
+
+```typescript
+[LOG:MUTATE] [Batch 31/253] Proposed mutation for examples/websocket/frontend.tsx (risk: LOW) | TIME:2026-09-20T05:15:11.617Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:15:11.119Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:15:11.118Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:15:01.972Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:15:01.972Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:15:01.970Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:15:01.970Z
 ```
 
-### 3. `eslint.config.mjs` (Gen 28)
+### 6. `eslint.config.mjs` (Gen 28)
 *Source:* `MUTATION:eslint.config.mjs` | *Indexed:* `2026-09-20T05:15:01.722Z`
 
 ```typescript
@@ -53,53 +74,32 @@ const IGNORED_PATHS = [
 // ... [truncated]
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:15:01.398Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:15:01.397Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:15:01.396Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:15:01.396Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:15:00.991Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to eslint.config.mjs | TIME:2026-09-20T05:15:00.991Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:15:00.989Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to eslint.config.mjs | TIME:2026-09-20T05:15:00.989Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:53.629Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:14:53.629Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:50.136Z`
-
-```typescript
-[LOG:MUTATE] [Batch 30/253] Proposed mutation for eslint.config.mjs (risk: LOW) | TIME:2026-09-20T05:14:50.136Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:50.134Z`
-
-```typescript
-[LOG:MUTATE] [Batch 30/253] Proposed mutation for eslint.config.mjs (risk: LOW) | TIME:2026-09-20T05:14:50.133Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)

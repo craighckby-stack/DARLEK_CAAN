@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:15:04.982Z",
+    "generatedAt": "2026-09-20T05:15:14.629Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789881311619_b8688c71",
+      "type": "MUTATE",
+      "description": "[Batch 31/253] Proposed mutation for examples/websocket/frontend.tsx (risk: LOW)",
+      "timestamp": "2026-09-20T05:15:11.619Z"
+    },
+    {
+      "id": "rag_log_1789881311617_66dea752",
+      "type": "MUTATE",
+      "description": "[Batch 31/253] Proposed mutation for examples/websocket/frontend.tsx (risk: LOW)",
+      "timestamp": "2026-09-20T05:15:11.617Z"
+    },
+    {
+      "id": "rag_log_1789881311118_4b86324f",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:15:11.118Z"
+    },
     {
       "id": "rag_log_1789881301972_534d055d",
       "type": "HEALTH",
@@ -138,62 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T05:14:19.638Z"
-    },
-    {
-      "id": "rag_log_1789881259373_54591487",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:14:19.373Z"
-    },
-    {
-      "id": "rag_log_1789881259371_856b0be9",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:14:19.371Z"
-    },
-    {
-      "id": "rag_log_1789881258954_20ee6265",
-      "type": "APPROVE",
-      "description": "Mutation applied to download_missing.js",
-      "timestamp": "2026-09-20T05:14:18.954Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-734f9072",
-      "time": "15:12:04",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-3f2f7515",
-      "time": "15:12:07",
-      "addr": "0x001F4000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 1.44 MB (14.36%)."
-    },
-    {
-      "id": "dos-8f0a0dec",
-      "time": "15:12:12",
-      "addr": "0x001F6000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
-    {
-      "id": "dos-303ba6a2",
-      "time": "15:12:12",
-      "addr": "0x0070FC79",
-      "tag": "APPROVE",
-      "message": "Mutation applied to compare.js"
-    },
-    {
-      "id": "dos-12c7a6b3",
-      "time": "15:12:13",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
     {
       "id": "dos-9404eb58",
       "time": "15:12:14",
@@ -858,6 +823,41 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-75c4aa02",
+      "time": "15:15:05",
+      "addr": "0x0023E000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-fcb92181",
+      "time": "15:15:10",
+      "addr": "0x00240000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.50 MB."
+    },
+    {
+      "id": "dos-a36ebb6a",
+      "time": "15:15:10",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-5833a3f1",
+      "time": "15:15:11",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-61ee9442",
+      "time": "15:15:11",
+      "addr": "0x0074C425",
+      "tag": "MUTATE",
+      "message": "[Batch 31/253] Proposed mutation for examples/websocket/frontend.tsx (risk: LOW)"
     }
   ]
 }
