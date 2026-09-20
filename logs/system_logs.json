@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:18:35.585Z",
+    "generatedAt": "2026-09-20T03:18:43.956Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789874320946_ae343b18",
+      "type": "MUTATE",
+      "description": "[Batch 62/253] Proposed mutation for index.html (risk: LOW)",
+      "timestamp": "2026-09-20T03:18:40.946Z"
+    },
+    {
+      "id": "rag_log_1789874320944_16c1f4fd",
+      "type": "MUTATE",
+      "description": "[Batch 62/253] Proposed mutation for index.html (risk: LOW)",
+      "timestamp": "2026-09-20T03:18:40.944Z"
+    },
+    {
+      "id": "rag_log_1789874320520_26a43dee",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:18:40.520Z"
+    },
     {
       "id": "rag_log_1789874311814_b88f3481",
       "type": "HEALTH",
@@ -138,41 +156,9 @@
       "type": "INFO",
       "description": "[NO-OP] Code saturation reached in batch for fix_synthesizer.sh",
       "timestamp": "2026-09-20T03:17:44.756Z"
-    },
-    {
-      "id": "rag_log_1789874263130_9516b18d",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:17:43.130Z"
-    },
-    {
-      "id": "rag_log_1789874255596_86ae48f6",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:17:35.596Z"
-    },
-    {
-      "id": "rag_log_1789874255132_2b715ca3",
-      "type": "ERROR",
-      "description": "Mutation apply failed: Server error (200): Non-JSON response received (possible route crash or payload limit).",
-      "timestamp": "2026-09-20T03:17:35.132Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-42461064",
-      "time": "13:09:33",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-7ebf0403",
-      "time": "13:09:42",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-46d76550",
       "time": "13:09:49",
@@ -858,6 +844,20 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-222081a5",
+      "time": "13:18:40",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-a5edb29e",
+      "time": "13:18:40",
+      "addr": "0x0034885E",
+      "tag": "MUTATE",
+      "message": "[Batch 62/253] Proposed mutation for index.html (risk: LOW)"
     }
   ]
 }
