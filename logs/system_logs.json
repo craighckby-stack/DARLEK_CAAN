@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:13:18.121Z",
+    "generatedAt": "2026-09-20T05:13:30.080Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789881206907_f723e190",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:13:26.907Z"
+    },
+    {
+      "id": "rag_log_1789881206905_290882e2",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:13:26.905Z"
+    },
+    {
+      "id": "rag_log_1789881206667_bffd331d",
+      "type": "HEALTH",
+      "description": "Auto-test: REJECTED — 4 passed, 1 failed",
+      "timestamp": "2026-09-20T05:13:26.667Z"
+    },
+    {
+      "id": "rag_log_1789881206666_b5f286de",
+      "type": "HEALTH",
+      "description": "Auto-test: REJECTED — 4 passed, 1 failed",
+      "timestamp": "2026-09-20T05:13:26.666Z"
+    },
+    {
+      "id": "rag_log_1789881206267_582c17c3",
+      "type": "APPROVE",
+      "description": "Mutation applied to docs/EVOLUTION_PROTOCOL.md",
+      "timestamp": "2026-09-20T05:13:26.267Z"
+    },
+    {
+      "id": "rag_log_1789881206266_6d053b22",
+      "type": "APPROVE",
+      "description": "Mutation applied to docs/EVOLUTION_PROTOCOL.md",
+      "timestamp": "2026-09-20T05:13:26.266Z"
+    },
+    {
+      "id": "rag_log_1789881204697_edbc70fa",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:13:24.697Z"
+    },
     {
       "id": "rag_log_1789881195108_48e34dc7",
       "type": "LOG_SYNC",
@@ -114,100 +156,9 @@
       "type": "APPROVE",
       "description": "Mutation applied to docs/ARCHITECTURE.md",
       "timestamp": "2026-09-20T05:12:43.688Z"
-    },
-    {
-      "id": "rag_log_1789881163687_537ead52",
-      "type": "APPROVE",
-      "description": "Mutation applied to docs/ARCHITECTURE.md",
-      "timestamp": "2026-09-20T05:12:43.687Z"
-    },
-    {
-      "id": "rag_log_1789881163154_06b61cb2",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:12:43.154Z"
-    },
-    {
-      "id": "rag_log_1789881152841_3f211933",
-      "type": "MUTATE",
-      "description": "[Batch 23/253] Proposed mutation for docs/ARCHITECTURE.md (risk: LOW)",
-      "timestamp": "2026-09-20T05:12:32.841Z"
-    },
-    {
-      "id": "rag_log_1789881152839_6c27be77",
-      "type": "MUTATE",
-      "description": "[Batch 23/253] Proposed mutation for docs/ARCHITECTURE.md (risk: LOW)",
-      "timestamp": "2026-09-20T05:12:32.839Z"
-    },
-    {
-      "id": "rag_log_1789881152563_a466930b",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:12:32.563Z"
-    },
-    {
-      "id": "rag_log_1789881143378_95696427",
-      "type": "INFO",
-      "description": "[NO-OP] Code saturation reached in batch for components.json",
-      "timestamp": "2026-09-20T05:12:23.378Z"
-    },
-    {
-      "id": "rag_log_1789881143376_03ef43a3",
-      "type": "INFO",
-      "description": "[NO-OP] Code saturation reached in batch for components.json",
-      "timestamp": "2026-09-20T05:12:23.376Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-fa13be9f",
-      "time": "15:10:03",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
-    {
-      "id": "dos-33956cf1",
-      "time": "15:10:04",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-bc55213a",
-      "time": "15:10:05",
-      "addr": "0x005772D7",
-      "tag": "MUTATE",
-      "message": "[Batch 16/253] Proposed mutation for assets/.aistudio/README.md (risk: LOW)"
-    },
-    {
-      "id": "dos-dc2c8de2",
-      "time": "15:10:07",
-      "addr": "0x001C2000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
-    {
-      "id": "dos-2a73a659",
-      "time": "15:10:12",
-      "addr": "0x001C4000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 501.5 KB (4.9%)."
-    },
-    {
-      "id": "dos-c133b7a3",
-      "time": "15:10:13",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-018993a8",
-      "time": "15:10:16",
-      "addr": "0x0076B247",
-      "tag": "APPROVE",
-      "message": "Mutation applied to assets/.aistudio/README.md"
-    },
     {
       "id": "dos-ba8f29ea",
       "time": "15:10:16",
@@ -858,6 +809,55 @@
       "addr": "0x002B4AF9",
       "tag": "LOCK_WAIT",
       "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-202f7fc9",
+      "time": "15:13:19",
+      "addr": "0x00212000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-790d49b9",
+      "time": "15:13:24",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-40d12a8a",
+      "time": "15:13:24",
+      "addr": "0x00214000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 1.42 MB (14.2%)."
+    },
+    {
+      "id": "dos-0a35fbce",
+      "time": "15:13:26",
+      "addr": "0x00341E0E",
+      "tag": "APPROVE",
+      "message": "Mutation applied to docs/EVOLUTION_PROTOCOL.md"
+    },
+    {
+      "id": "dos-dbc4a8a9",
+      "time": "15:13:26",
+      "addr": "0x0074FAF3",
+      "tag": "HEALTH",
+      "message": "Auto-test: REJECTED — 4 passed, 1 failed"
+    },
+    {
+      "id": "dos-b661630d",
+      "time": "15:13:26",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-546d24ed",
+      "time": "15:13:29",
+      "addr": "0x00216000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
     }
   ]
 }
