@@ -1,12 +1,66 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:26:17.444Z",
+    "generatedAt": "2026-09-20T05:26:34.128Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789881990906_1f560126",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:26:30.906Z"
+    },
+    {
+      "id": "rag_log_1789881990905_48e6b8be",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:26:30.905Z"
+    },
+    {
+      "id": "rag_log_1789881990612_79fbfcd1",
+      "type": "HEALTH",
+      "description": "Auto-test: REJECTED — 4 passed, 2 failed",
+      "timestamp": "2026-09-20T05:26:30.612Z"
+    },
+    {
+      "id": "rag_log_1789881990610_e46ff549",
+      "type": "HEALTH",
+      "description": "Auto-test: REJECTED — 4 passed, 2 failed",
+      "timestamp": "2026-09-20T05:26:30.610Z"
+    },
+    {
+      "id": "rag_log_1789881990149_1fdd136b",
+      "type": "APPROVE",
+      "description": "Mutation applied to logs/POSTMORTEMS.md",
+      "timestamp": "2026-09-20T05:26:30.149Z"
+    },
+    {
+      "id": "rag_log_1789881990147_7520575c",
+      "type": "APPROVE",
+      "description": "Mutation applied to logs/POSTMORTEMS.md",
+      "timestamp": "2026-09-20T05:26:30.147Z"
+    },
+    {
+      "id": "rag_log_1789881983285_64b30187",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:26:23.285Z"
+    },
+    {
+      "id": "rag_log_1789881978272_1d14e10e",
+      "type": "MUTATE",
+      "description": "[Batch 65/253] Proposed mutation for logs/POSTMORTEMS.md (risk: LOW)",
+      "timestamp": "2026-09-20T05:26:18.272Z"
+    },
+    {
+      "id": "rag_log_1789881978271_fd43afca",
+      "type": "MUTATE",
+      "description": "[Batch 65/253] Proposed mutation for logs/POSTMORTEMS.md (risk: LOW)",
+      "timestamp": "2026-09-20T05:26:18.271Z"
+    },
     {
       "id": "rag_log_1789881974421_3828d26d",
       "type": "LOG_SYNC",
@@ -102,133 +156,9 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T05:25:49.827Z"
-    },
-    {
-      "id": "rag_log_1789881940622_f236b85d",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:25:40.622Z"
-    },
-    {
-      "id": "rag_log_1789881940620_cd81a81f",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:25:40.620Z"
-    },
-    {
-      "id": "rag_log_1789881940259_fa9cc41a",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:25:40.259Z"
-    },
-    {
-      "id": "rag_log_1789881940258_4b3196e1",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:25:40.258Z"
-    },
-    {
-      "id": "rag_log_1789881939973_70ab0c41",
-      "type": "APPROVE",
-      "description": "Mutation applied to index.html",
-      "timestamp": "2026-09-20T05:25:39.972Z"
-    },
-    {
-      "id": "rag_log_1789881939971_27f79caf",
-      "type": "APPROVE",
-      "description": "Mutation applied to index.html",
-      "timestamp": "2026-09-20T05:25:39.971Z"
-    },
-    {
-      "id": "rag_log_1789881938547_efd15f85",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:25:38.547Z"
-    },
-    {
-      "id": "rag_log_1789881930975_db8003ba",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:25:30.975Z"
-    },
-    {
-      "id": "rag_log_1789881929021_73471f11",
-      "type": "MUTATE",
-      "description": "[Batch 62/253] Proposed mutation for index.html (risk: LOW)",
-      "timestamp": "2026-09-20T05:25:29.021Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-78bbc8ca",
-      "time": "15:23:19",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-d4daf7e8",
-      "time": "15:23:19",
-      "addr": "0x0030C000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 377.6 KB (3.69%)."
-    },
-    {
-      "id": "dos-0875f010",
-      "time": "15:23:21",
-      "addr": "0x0076F11E",
-      "tag": "APPROVE",
-      "message": "Mutation applied to fix_prompt6.js"
-    },
-    {
-      "id": "dos-a251fbca",
-      "time": "15:23:22",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
-    {
-      "id": "dos-3b42106b",
-      "time": "15:23:23",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-432b4a39",
-      "time": "15:23:24",
-      "addr": "0x0030E000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
-    {
-      "id": "dos-5224a091",
-      "time": "15:23:29",
-      "addr": "0x00310000",
-      "tag": "RAG_INDEX",
-      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.55 MB."
-    },
-    {
-      "id": "dos-8f3f7845",
-      "time": "15:23:29",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
-    {
-      "id": "dos-ad71208b",
-      "time": "15:23:31",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-2f65e495",
-      "time": "15:23:32",
-      "addr": "0x004B288A",
-      "tag": "MUTATE",
-      "message": "[Batch 56/253] Proposed mutation for fix_prompt7.js (risk: LOW)"
-    },
     {
       "id": "dos-6fdd09d4",
       "time": "15:23:34",
@@ -858,6 +788,76 @@
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-449fcab3",
+      "time": "15:26:17",
+      "addr": "0x00356000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-32620f3e",
+      "time": "15:26:18",
+      "addr": "0x005ECB11",
+      "tag": "MUTATE",
+      "message": "[Batch 65/253] Proposed mutation for logs/POSTMORTEMS.md (risk: LOW)"
+    },
+    {
+      "id": "dos-9a7d2661",
+      "time": "15:26:22",
+      "addr": "0x00358000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.67 MB."
+    },
+    {
+      "id": "dos-3dae5807",
+      "time": "15:26:22",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-388eb5a3",
+      "time": "15:26:23",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-032f33d3",
+      "time": "15:26:27",
+      "addr": "0x0035A000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-30f3ae67",
+      "time": "15:26:30",
+      "addr": "0x006EFD79",
+      "tag": "APPROVE",
+      "message": "Mutation applied to logs/POSTMORTEMS.md"
+    },
+    {
+      "id": "dos-f0a70062",
+      "time": "15:26:30",
+      "addr": "0x0046288B",
+      "tag": "HEALTH",
+      "message": "Auto-test: REJECTED — 4 passed, 2 failed"
+    },
+    {
+      "id": "dos-a6f59d47",
+      "time": "15:26:30",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-b6949839",
+      "time": "15:26:31",
+      "addr": "0x0035C000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 454.8 KB (4.44%)."
     }
   ]
 }
