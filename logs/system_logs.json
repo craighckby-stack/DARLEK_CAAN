@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T02:04:35.051Z",
+    "generatedAt": "2026-09-20T02:04:44.037Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789869880739_df2e328e",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T02:04:40.739Z"
+    },
     {
       "id": "rag_log_1789869871522_e94d3031",
       "type": "LOG_SYNC",
@@ -150,22 +156,9 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T02:01:08.040Z"
-    },
-    {
-      "id": "rag_log_1789869659455_e01237cd",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:00:59.455Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "b1",
-      "time": "00:00:00",
-      "addr": "0x00400000",
-      "tag": "BOOT",
-      "message": "Microsoft(R) MS-DOS(R) Version 6.22"
-    },
     {
       "id": "b2",
       "time": "00:00:00",
@@ -855,6 +848,13 @@
     {
       "id": "dos-120d3c34",
       "time": "12:04:31",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-6e307668",
+      "time": "12:04:40",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
