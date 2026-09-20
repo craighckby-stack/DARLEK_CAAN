@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:21:18.010Z",
+    "generatedAt": "2026-09-20T05:21:25.497Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789881682494_f2905a82",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:21:22.494Z"
+    },
     {
       "id": "rag_log_1789881674986_4f42be39",
       "type": "MUTATE",
@@ -150,36 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T05:20:21.721Z"
-    },
-    {
-      "id": "rag_log_1789881621720_29415010",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:20:21.720Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-feebfba1",
-      "time": "15:18:15",
-      "addr": "0x0088FC4C",
-      "tag": "APPROVE",
-      "message": "Mutation applied to find_changed.js"
-    },
-    {
-      "id": "dos-9a742d42",
-      "time": "15:18:15",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
-    {
-      "id": "dos-d0e07759",
-      "time": "15:18:16",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
     {
       "id": "dos-69fb56bb",
       "time": "15:18:17",
@@ -858,6 +837,27 @@
       "addr": "0x002B4AF9",
       "tag": "LOCK_WAIT",
       "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-5fcbae12",
+      "time": "15:21:19",
+      "addr": "0x002DA000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-3502637b",
+      "time": "15:21:22",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-4173adaa",
+      "time": "15:21:24",
+      "addr": "0x002DC000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 324.6 KB (3.17%)."
     }
   ]
 }
