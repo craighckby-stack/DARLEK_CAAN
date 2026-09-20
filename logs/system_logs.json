@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T02:56:12.148Z",
+    "generatedAt": "2026-09-20T02:56:21.176Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789872978164_dde9a2aa",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T02:56:18.164Z"
+    },
+    {
+      "id": "rag_log_1789872974896_d7f24e82",
+      "type": "MUTATE",
+      "description": "[Batch 12/253] Proposed mutation for README.md (risk: LOW)",
+      "timestamp": "2026-09-20T02:56:14.896Z"
+    },
+    {
+      "id": "rag_log_1789872974893_e15606ca",
+      "type": "MUTATE",
+      "description": "[Batch 12/253] Proposed mutation for README.md (risk: LOW)",
+      "timestamp": "2026-09-20T02:56:14.893Z"
+    },
     {
       "id": "rag_log_1789872969137_30af219d",
       "type": "LOG_SYNC",
@@ -138,41 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T02:55:21.675Z"
-    },
-    {
-      "id": "rag_log_1789872921672_4e784da7",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T02:55:21.672Z"
-    },
-    {
-      "id": "rag_log_1789872920716_4bdd78dc",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T02:55:20.716Z"
-    },
-    {
-      "id": "rag_log_1789872920713_4cbc7101",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T02:55:20.713Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "b6",
-      "time": "12:47:45",
-      "addr": "0x00401060",
-      "tag": "SYS",
-      "message": "Type HELP for commands. Running in safe mode."
-    },
-    {
-      "id": "dos-136bb1b0",
-      "time": "12:47:48",
-      "addr": "0x00328C5D",
-      "tag": "CONNECT",
-      "message": "Synced 29 user portfolios and 27 global architectures."
-    },
     {
       "id": "dos-41436597",
       "time": "12:47:57",
@@ -855,6 +841,20 @@
     {
       "id": "dos-f86b6623",
       "time": "12:56:09",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-bbb139f0",
+      "time": "12:56:14",
+      "addr": "0x0073E1D8",
+      "tag": "MUTATE",
+      "message": "[Batch 12/253] Proposed mutation for README.md (risk: LOW)"
+    },
+    {
+      "id": "dos-e92f8d67",
+      "time": "12:56:18",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
