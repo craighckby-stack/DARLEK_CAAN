@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T02:59:19.686Z",
+    "generatedAt": "2026-09-20T02:59:29.889Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789873166878_86be563f",
+      "type": "INFO",
+      "description": "[NO-OP] Code saturation reached in batch for compare.js",
+      "timestamp": "2026-09-20T02:59:26.878Z"
+    },
+    {
+      "id": "rag_log_1789873166876_2c83169a",
+      "type": "INFO",
+      "description": "[NO-OP] Code saturation reached in batch for compare.js",
+      "timestamp": "2026-09-20T02:59:26.876Z"
+    },
+    {
+      "id": "rag_log_1789873166423_561f3dd9",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T02:59:26.423Z"
+    },
     {
       "id": "rag_log_1789873156671_6543141c",
       "type": "HEALTH",
@@ -138,41 +156,9 @@
       "type": "MUTATE",
       "description": "[Batch 18/253] Proposed mutation for bun.lock (risk: LOW)",
       "timestamp": "2026-09-20T02:58:27.924Z"
-    },
-    {
-      "id": "rag_log_1789873107922_026744cf",
-      "type": "MUTATE",
-      "description": "[Batch 18/253] Proposed mutation for bun.lock (risk: LOW)",
-      "timestamp": "2026-09-20T02:58:27.922Z"
-    },
-    {
-      "id": "rag_log_1789873104826_39ad76c2",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:58:24.826Z"
-    },
-    {
-      "id": "rag_log_1789873096735_62faa071",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T02:58:16.735Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-c98f2ef1",
-      "time": "12:53:03",
-      "addr": "0x0051E209",
-      "tag": "MUTATE",
-      "message": "[Batch 5/253] Proposed mutation for .next_dev/server/app/api/brain/route_client-reference-manifest.js (risk: LOW)"
-    },
-    {
-      "id": "dos-273900c5",
-      "time": "12:53:08",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-0296308c",
       "time": "12:53:14",
@@ -858,6 +844,20 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-18bd131e",
+      "time": "12:59:26",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-6329bf27",
+      "time": "12:59:26",
+      "addr": "0x00193293",
+      "tag": "INFO",
+      "message": "[NO-OP] Code saturation reached in batch for compare.js"
     }
   ]
 }
