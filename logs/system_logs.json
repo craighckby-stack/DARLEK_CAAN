@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:59:44.773Z",
+    "generatedAt": "2026-09-20T03:59:52.865Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789876789863_384f0d63",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:59:49.863Z"
+    },
+    {
+      "id": "rag_log_1789876785189_e849ff15",
+      "type": "MUTATE",
+      "description": "[Batch 174/253] Proposed mutation for src/lib/archaeology-dataset.ts (risk: LOW)",
+      "timestamp": "2026-09-20T03:59:45.189Z"
+    },
+    {
+      "id": "rag_log_1789876785188_c6f6c40b",
+      "type": "MUTATE",
+      "description": "[Batch 174/253] Proposed mutation for src/lib/archaeology-dataset.ts (risk: LOW)",
+      "timestamp": "2026-09-20T03:59:45.188Z"
+    },
     {
       "id": "rag_log_1789876781736_367614bd",
       "type": "LOG_SYNC",
@@ -138,41 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T03:58:47.954Z"
-    },
-    {
-      "id": "rag_log_1789876727953_3a4f74de",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:58:47.953Z"
-    },
-    {
-      "id": "rag_log_1789876727214_3a483d5b",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T03:58:47.214Z"
-    },
-    {
-      "id": "rag_log_1789876727212_651946c9",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T03:58:47.212Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-7c1538a3",
-      "time": "13:53:19",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
-    {
-      "id": "dos-11905b12",
-      "time": "13:53:20",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
     {
       "id": "dos-366f632b",
       "time": "13:53:29",
@@ -855,6 +841,20 @@
     {
       "id": "dos-52538be6",
       "time": "13:59:41",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-5e12d04b",
+      "time": "13:59:45",
+      "addr": "0x0014E41D",
+      "tag": "MUTATE",
+      "message": "[Batch 174/253] Proposed mutation for src/lib/archaeology-dataset.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-d0bb7f91",
+      "time": "13:59:49",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
