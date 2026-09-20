@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789880837834_6dbdd7cf",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:07:17.834Z"
+  },
+  {
     "id": "rag_log_1789880829993_b997d898",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -142,11 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 8/253] Proposed mutation for .next_dev/types/app/api/brain/route.ts (risk: LOW)",
     "timestamp": "2026-09-20T05:06:09.297Z"
-  },
-  {
-    "id": "rag_log_1789880757313_7b6c7831",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T05:05:57.313Z"
   }
 ]

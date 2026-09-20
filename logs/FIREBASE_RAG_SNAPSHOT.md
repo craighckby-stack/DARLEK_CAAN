@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:07:13.137Z`
+*Last Synchronized:* `2026-09-20T05:07:21.110Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,20 +14,27 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:07:17.835Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:07:17.834Z
+```
+
+### 2. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:07:09.994Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:07:09.993Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 3. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:07:09.973Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:07:09.971Z
 ```
 
-### 3. `EVOLUTION_BLUEPRINT.md` (Gen 11)
+### 4. `EVOLUTION_BLUEPRINT.md` (Gen 11)
 *Source:* `MUTATION:EVOLUTION_BLUEPRINT.md` | *Indexed:* `2026-09-20T05:07:09.136Z`
 
 ```typescript
@@ -38,60 +45,46 @@
 // ... [truncated]
 ```
 
-### 4. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:07:06.066Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:07:06.065Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:07:06.057Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:07:06.055Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:07:04.014Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to EVOLUTION_BLUEPRINT.md | TIME:2026-09-20T05:07:04.013Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:07:04.003Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to EVOLUTION_BLUEPRINT.md | TIME:2026-09-20T05:07:04.003Z
 ```
 
-### 8. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:06:53.356Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 10/253] Proposed mutation for EVOLUTION_BLUEPRINT.md (risk: LOW) | TIME:2026-09-20T05:06:53.356Z
 ```
 
-### 9. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:06:53.353Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 10/253] Proposed mutation for EVOLUTION_BLUEPRINT.md (risk: LOW) | TIME:2026-09-20T05:06:53.353Z
-```
-
-### 10. `ARCHITECTURE.md` (Gen 10)
-*Source:* `MUTATION:ARCHITECTURE.md` | *Indexed:* `2026-09-20T05:06:44.980Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-10 [2026-09-20T05:06:31.858Z] */
-# ARCHITECTURAL BLUEPRINT: OMEGA-EMERGENT-INTELLIGENCE
-
-> **System Designation:** `OMEGA-EMERGENT-INTELLIGENCE`  
-> **Kernel Version:** `Core v89.1`  
-> **Classification:** Autonomous Self-Refactoring Multi-Agent System  
-> **Ecosystem Integration:** `Darlek Caa
-// ... [truncated]
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
