@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789874827093_cd03ab6c",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:27:07.093Z"
+  },
+  {
+    "id": "rag_log_1789874823412_6a8974b5",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T03:27:03.412Z"
+  },
+  {
+    "id": "rag_log_1789874823411_5487da4b",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T03:27:03.411Z"
+  },
+  {
+    "id": "rag_log_1789874822791_6915ca30",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T03:27:02.791Z"
+  },
+  {
+    "id": "rag_log_1789874822790_f618c157",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T03:27:02.790Z"
+  },
+  {
+    "id": "rag_log_1789874822375_b4f92898",
+    "type": "APPROVE",
+    "description": "Mutation applied to restore_repo.js",
+    "timestamp": "2026-09-20T03:27:02.375Z"
+  },
+  {
+    "id": "rag_log_1789874822374_9b3222b1",
+    "type": "APPROVE",
+    "description": "Mutation applied to restore_repo.js",
+    "timestamp": "2026-09-20T03:27:02.374Z"
+  },
+  {
     "id": "rag_log_1789874819266_ec81506e",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -106,47 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: PASSED — 5 passed, 0 failed",
     "timestamp": "2026-09-20T03:26:18.653Z"
-  },
-  {
-    "id": "rag_log_1789874778053_0d6750cd",
-    "type": "APPROVE",
-    "description": "Mutation applied to remote_tree.txt",
-    "timestamp": "2026-09-20T03:26:18.053Z"
-  },
-  {
-    "id": "rag_log_1789874778052_b31b61b0",
-    "type": "APPROVE",
-    "description": "Mutation applied to remote_tree.txt",
-    "timestamp": "2026-09-20T03:26:18.052Z"
-  },
-  {
-    "id": "rag_log_1789874775507_94751b3b",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:26:15.507Z"
-  },
-  {
-    "id": "rag_log_1789874767409_82ca86f5",
-    "type": "MUTATE",
-    "description": "[Batch 85/253] Proposed mutation for remote_tree.txt (risk: LOW)",
-    "timestamp": "2026-09-20T03:26:07.409Z"
-  },
-  {
-    "id": "rag_log_1789874767408_7fa98cc1",
-    "type": "MUTATE",
-    "description": "[Batch 85/253] Proposed mutation for remote_tree.txt (risk: LOW)",
-    "timestamp": "2026-09-20T03:26:07.408Z"
-  },
-  {
-    "id": "rag_log_1789874766954_1bb074e3",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:26:06.954Z"
-  },
-  {
-    "id": "rag_log_1789874758109_13872ac7",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T03:25:58.109Z"
   }
 ]
