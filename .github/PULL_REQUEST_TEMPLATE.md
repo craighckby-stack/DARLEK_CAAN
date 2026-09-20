@@ -23,9 +23,9 @@
 | Parameter              | Specification / PR State                                                                                    |
 | :--------------------- | :---------------------------------------------------------------------------------------------------------- |
 | **PR Classification**  | `[ ] Fix` &nbsp;•&nbsp; `[ ] Feature` &nbsp;•&nbsp; `[ ] Breaking` &nbsp;•&nbsp; `[ ] Sandbox` &nbsp;•&nbsp; `[ ] Telemetry` &nbsp;•&nbsp; `[ ] Security` |
-| **Target Subsystems**  | `[ e.g., Core Engine, DCW Consensus, Sandbox Runtime, Telemetry Pipeline ]`                                 |
+| **Target Subsystems**  | `[ e.g., Core Engine, DCW Consensus, Sandbox Runtime, Telemetry Pipeline, CI/CD Workflows ]`                |
 | **Tracking Reference** | Closes / Fixes #`<!-- Issue Number -->`                                                                     |
-| **Automated Gates**    | `[ ] Zero-Leak Sandbox` &nbsp;\|&nbsp; `[ ] DCW Liveness` &nbsp;\|&nbsp; `[ ] Diagnostic Engine` &nbsp;\|&nbsp; `[ ] SAST / Security` |
+| **Automated Gates**    | `[ ] Zero-Leak Sandbox` &nbsp;\|&nbsp; `[ ] DCW Liveness` &nbsp;\|&nbsp; `[ ] Diagnostic Engine` &nbsp;\|&nbsp; `[ ] SAST / Security` &nbsp;\|&nbsp; `[ ] Secret Scan` |
 
 > [!CAUTION]
 > **CRITICAL SECURITY NOTICE:** If this pull request resolves an unpatched vulnerability, active zero-day, or credential leak, **DO NOT** submit it publicly. Follow the [Responsible Vulnerability Disclosure](#6-responsible-vulnerability-disclosure) protocol immediately.
@@ -72,6 +72,7 @@
 - [ ] `ARCHITECTURAL BREAK` — Interface or protocol mutation *(requires Lead Architect & Security Lead approval)*.
 - [ ] `SANDBOXED MODULE` — Isolated experimental module scoped under `modules/`.
 - [ ] `TELEMETRY / DIAGNOSTIC` — Metric pipelines, tracing, logging infrastructure, or diagnostic registries.
+- [ ] `CI/CD & INFRASTRUCTURE` — Modifications to build pipelines, GitHub Actions workflows, or deployment manifests.
 
 ---
 
@@ -86,6 +87,7 @@
 - [ ] **Deterministic Teardown:** Registers explicit cleanup routines for all event listeners, streams, and active timers.
 - [ ] **GC Optimization:** Employs `WeakMap` / `WeakSet` primitives in cache layers to ensure non-blocking garbage collection.
 - [ ] **Memory Health:** Validates static baselines and runtime memory profiles via `DiagnosticEngine`.
+- [ ] **Resource Quotas:** Enforces strict CPU/Memory bounds and execution limits to prevent Denial of Service (DoS) via resource exhaustion.
 
 ### 3.2 Dynamic Consensus Weighting (DCW)
 
@@ -93,15 +95,14 @@
 - [ ] **Algorithm Mutation:** Modifies agent decision weights or scoring algorithms.
   *(If checked, document weight derivation and validation model below)*
 
-```markdown
 <!-- If DCW algorithms are altered, describe the weight convergence and liveness proof here -->
-```
 
 ### 3.3 Concurrency, Thread Safety & Sandboxing
 
 - [ ] **Reentrancy Protection:** Asynchronous and multi-threaded paths enforce state lock boundaries.
 - [ ] **Sandboxed Execution:** Dynamic code evaluation and third-party execution paths run exclusively inside isolated contexts.
 - [ ] **Fail-Safe Defaults:** System falls back gracefully to deterministic safe states upon unhandled exceptions.
+- [ ] **Timeout Enforcement:** All asynchronous operations, IPC communications, and network calls implement strict, deterministic timeouts.
 
 ---
 
@@ -109,16 +110,20 @@
 
 ### 4.1 Threat Modeling & Input Boundaries
 
-- [ ] **Input Sanitization:** Validates all ingress parameters, network inputs, and serialized payloads against strict schemas.
+- [ ] **Input Sanitization:** Validates all ingress parameters, network inputs, environment variables, and serialized payloads against strict schemas.
 - [ ] **Injection Prevention:** Eliminates raw query constructions, unsanitized shell executions, and unescaped HTML rendering.
 - [ ] **Least Privilege:** Enforces scoped tokens, process isolation, and minimal filesystem access boundaries.
+- [ ] **Authorization & RBAC:** Verifies that all new endpoints, IPC channels, or state mutations enforce strict Role-Based Access Control.
 - [ ] **Data Minimization:** Excludes PII, bearer tokens, private keys, and sensitive credentials from persistent logs and telemetry.
+- [ ] **Error Masking:** Ensures stack traces, internal system states, and database schemas are never exposed in API responses or unprivileged logs.
 
 ### 4.2 Security Verification Checklist
 
 - [ ] Static Application Security Testing (SAST) executed with zero critical or high alerts.
+- [ ] Secret Scanning executed (e.g., TruffleHog, GitHub Advanced Security) confirming zero leaked credentials or hardcoded keys.
 - [ ] Software Bill of Materials (SBOM) and dependency audit completed (`npm audit` / `pip-audit` / `cargo audit`).
 - [ ] Cryptographic operations employ constant-time comparisons and FIPS-compliant primitives.
+- [ ] CI/CD Integrity: Modifications to GitHub Actions workflows (`.github/workflows`) have been explicitly reviewed for supply chain risks and script injection vulnerabilities.
 
 ---
 
@@ -130,14 +135,13 @@
 | :------------------------ | :------------ | :---------------- | :----------------- |
 | **Unit Tests**            | `[   /   ]`   | `>= 90%`          | `[ Pass / Fail ]`  |
 | **Integration Tests**     | `[   /   ]`   | `>= 85%`          | `[ Pass / Fail ]`  |
-| **Diagnostic Benchmarks** | `[   /   ]`   | `Within +/- 2%`   | `[ Pass / Fail ]`            |
-| **Memory Leak Tests**     | `[   /   ]`   | `0 Bytes Delta`   | `[ Pass / Fail ]`            |
+| **Fuzz / Boundary Tests** | `[   /   ]`   | `N/A`             | `[ Pass / Fail ]`  |
+| **Diagnostic Benchmarks** | `[   /   ]`   | `Within +/- 2%`   | `[ Pass / Fail ]`  |
+| **Memory Leak Tests**     | `[   /   ]`   | `0 Bytes Delta`   | `[ Pass / Fail ]`  |
 
 ### 5.2 Diagnostic Engine Profiling Output
 
-```
 <!-- Paste summary snippet from `DiagnosticEngine` or test run output below -->
-```
 
 ---
 
@@ -161,9 +165,7 @@ If you have discovered a vulnerability or security-critical defect:
 
 ### 7.2 Rollback Procedure
 
-```text
 1. Identify regression via Diagnostic Engine telemetry alert.
 2. Disable the active feature flag: [ FLAG_NAME ]
 3. Execute standard atomic revert: git revert -m 1 [ MERGE_COMMIT_SHA ]
 4. Trigger emergency gatekeeper pipeline to restore prior stable baseline.
-```
