@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:18:55.545Z",
+    "generatedAt": "2026-09-20T03:19:05.498Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789874342475_7f109789",
+      "type": "MUTATE",
+      "description": "[Batch 63/253] Proposed mutation for lib/env-validator.ts (risk: LOW)",
+      "timestamp": "2026-09-20T03:19:02.475Z"
+    },
+    {
+      "id": "rag_log_1789874342473_14aa978c",
+      "type": "MUTATE",
+      "description": "[Batch 63/253] Proposed mutation for lib/env-validator.ts (risk: LOW)",
+      "timestamp": "2026-09-20T03:19:02.473Z"
+    },
+    {
+      "id": "rag_log_1789874340816_ada8f08b",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:19:00.816Z"
+    },
     {
       "id": "rag_log_1789874332261_424cef07",
       "type": "HEALTH",
@@ -138,41 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T03:18:07.551Z"
-    },
-    {
-      "id": "rag_log_1789874286787_de8888d6",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 4 passed, 0 failed",
-      "timestamp": "2026-09-20T03:18:06.787Z"
-    },
-    {
-      "id": "rag_log_1789874286786_436a47a1",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 4 passed, 0 failed",
-      "timestamp": "2026-09-20T03:18:06.786Z"
-    },
-    {
-      "id": "rag_log_1789874286281_3aa7ffec",
-      "type": "APPROVE",
-      "description": "Mutation applied to generate-routes.js",
-      "timestamp": "2026-09-20T03:18:06.281Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-93297ee4",
-      "time": "13:10:01",
-      "addr": "0x0074FAF3",
-      "tag": "HEALTH",
-      "message": "Auto-test: REJECTED — 4 passed, 1 failed"
-    },
-    {
-      "id": "dos-245ae78e",
-      "time": "13:10:02",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
     {
       "id": "dos-4dcc07eb",
       "time": "13:10:05",
@@ -858,6 +844,20 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-d6ff6e1b",
+      "time": "13:19:00",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-57f70f13",
+      "time": "13:19:02",
+      "addr": "0x0033A732",
+      "tag": "MUTATE",
+      "message": "[Batch 63/253] Proposed mutation for lib/env-validator.ts (risk: LOW)"
     }
   ]
 }

@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789874342475_7f109789",
+    "type": "MUTATE",
+    "description": "[Batch 63/253] Proposed mutation for lib/env-validator.ts (risk: LOW)",
+    "timestamp": "2026-09-20T03:19:02.475Z"
+  },
+  {
+    "id": "rag_log_1789874342473_14aa978c",
+    "type": "MUTATE",
+    "description": "[Batch 63/253] Proposed mutation for lib/env-validator.ts (risk: LOW)",
+    "timestamp": "2026-09-20T03:19:02.473Z"
+  },
+  {
+    "id": "rag_log_1789874340816_ada8f08b",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:19:00.816Z"
+  },
+  {
     "id": "rag_log_1789874332261_424cef07",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
     "timestamp": "2026-09-20T03:18:07.551Z"
-  },
-  {
-    "id": "rag_log_1789874286787_de8888d6",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 4 passed, 0 failed",
-    "timestamp": "2026-09-20T03:18:06.787Z"
-  },
-  {
-    "id": "rag_log_1789874286786_436a47a1",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 4 passed, 0 failed",
-    "timestamp": "2026-09-20T03:18:06.786Z"
-  },
-  {
-    "id": "rag_log_1789874286281_3aa7ffec",
-    "type": "APPROVE",
-    "description": "Mutation applied to generate-routes.js",
-    "timestamp": "2026-09-20T03:18:06.281Z"
   }
 ]
