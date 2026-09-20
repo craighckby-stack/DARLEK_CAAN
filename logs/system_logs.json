@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:29:18.918Z",
+    "generatedAt": "2026-09-20T05:29:29.274Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789882166268_206f209e",
+      "type": "MUTATE",
+      "description": "[Batch 78/253] Proposed mutation for public/placeholder.txt (risk: LOW)",
+      "timestamp": "2026-09-20T05:29:26.268Z"
+    },
+    {
+      "id": "rag_log_1789882166267_d35c82a3",
+      "type": "MUTATE",
+      "description": "[Batch 78/253] Proposed mutation for public/placeholder.txt (risk: LOW)",
+      "timestamp": "2026-09-20T05:29:26.267Z"
+    },
+    {
+      "id": "rag_log_1789882164270_bbada88d",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:29:24.270Z"
+    },
     {
       "id": "rag_log_1789882155707_b9c21468",
       "type": "HEALTH",
@@ -138,55 +156,9 @@
       "type": "MUTATE",
       "description": "[Batch 75/253] Proposed mutation for postcss.config.mjs (risk: LOW)",
       "timestamp": "2026-09-20T05:28:33.123Z"
-    },
-    {
-      "id": "rag_log_1789882112117_6b9c32a3",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:28:32.116Z"
-    },
-    {
-      "id": "rag_log_1789882103584_f99035c8",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:28:23.584Z"
-    },
-    {
-      "id": "rag_log_1789882103583_7cc29fd5",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:28:23.583Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-da4ae956",
-      "time": "15:26:04",
-      "addr": "0x007E5991",
-      "tag": "HOTSWAP_OK",
-      "message": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-8 [Source: RAG_GENE_HOTSWAP]."
-    },
-    {
-      "id": "dos-15bf61e7",
-      "time": "15:26:04",
-      "addr": "0x001B8777",
-      "tag": "RAG_WRITE",
-      "message": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-9, rai..."
-    },
-    {
-      "id": "dos-0f1eb6f4",
-      "time": "15:26:07",
-      "addr": "0x00148580",
-      "tag": "INFO",
-      "message": "[NO-OP] Code saturation reached in batch for logs/FIREBASE_RAG_SNAPSHOT.md"
-    },
-    {
-      "id": "dos-6a247268",
-      "time": "15:26:07",
-      "addr": "0x00352000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
     {
       "id": "dos-2f2a1c18",
       "time": "15:26:12",
@@ -858,6 +830,34 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-a2886cd8",
+      "time": "15:29:19",
+      "addr": "0x003A2000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-444d34eb",
+      "time": "15:29:24",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-0cfc0b3c",
+      "time": "15:29:24",
+      "addr": "0x003A4000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 433.4 KB (4.23%)."
+    },
+    {
+      "id": "dos-25d0a275",
+      "time": "15:29:26",
+      "addr": "0x00151A9A",
+      "tag": "MUTATE",
+      "message": "[Batch 78/253] Proposed mutation for public/placeholder.txt (risk: LOW)"
     }
   ]
 }

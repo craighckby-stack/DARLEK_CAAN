@@ -1,11 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:29:18.918Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:29:29.274Z]
 ======================================================================
 
-[15:21:29] [0x002DE000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
-[15:21:31] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:21:34] [0x002E0000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.69 MB.
-[15:21:34] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
 [15:21:35] [0x0037D91B] [MUTATE    ] [Batch 50/253] Proposed mutation for fix_prompt.js (risk: LOW)
 [15:21:39] [0x002E2000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
 [15:21:39] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
@@ -253,3 +249,7 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:29:18.918Z]
 [15:29:15] [0x003A0000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.62 MB.
 [15:29:15] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
 [15:29:15] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[15:29:19] [0x003A2000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[15:29:24] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:29:24] [0x003A4000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 433.4 KB (4.23%).
+[15:29:26] [0x00151A9A] [MUTATE    ] [Batch 78/253] Proposed mutation for public/placeholder.txt (risk: LOW)
