@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T06:02:49.055Z",
+    "generatedAt": "2026-09-20T06:02:56.866Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789884173748_67ebd47d",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T06:02:53.748Z"
+    },
     {
       "id": "rag_log_1789884166013_0bbbc160",
       "type": "MUTATE",
@@ -150,43 +156,9 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T06:01:57.595Z"
-    },
-    {
-      "id": "rag_log_1789884109930_e862ad13",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T06:01:49.930Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-52cf685d",
-      "time": "15:59:42",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-9d5c7e8a",
-      "time": "15:59:43",
-      "addr": "0x0069A000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
-    {
-      "id": "dos-23299e2a",
-      "time": "15:59:44",
-      "addr": "0x004AAD65",
-      "tag": "APPROVE",
-      "message": "Mutation applied to src/hooks/useAgentOrchestra.ts"
-    },
-    {
-      "id": "dos-eca9fb0a",
-      "time": "15:59:45",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
     {
       "id": "dos-16fd3828",
       "time": "15:59:46",
@@ -858,6 +830,34 @@
       "addr": "0x006E6000",
       "tag": "SANITY_OK",
       "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-63cb927a",
+      "time": "16:02:51",
+      "addr": "0x006E8000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.62 MB."
+    },
+    {
+      "id": "dos-36f06df6",
+      "time": "16:02:51",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-5a47e28c",
+      "time": "16:02:53",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-d39f8e7f",
+      "time": "16:02:55",
+      "addr": "0x006EA000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
     }
   ]
 }
