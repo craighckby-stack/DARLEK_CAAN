@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:32:53.686Z`
+*Last Synchronized:* `2026-09-20T05:33:01.844Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -13,7 +13,28 @@
 
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
-### 1. `server.ts` (Gen 70)
+### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:58.807Z`
+
+```typescript
+[LOG:MUTATE] [Batch 91/253] Proposed mutation for src/App.tsx (risk: LOW) | TIME:2026-09-20T05:32:58.807Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:58.806Z`
+
+```typescript
+[LOG:MUTATE] [Batch 91/253] Proposed mutation for src/App.tsx (risk: LOW) | TIME:2026-09-20T05:32:58.805Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:58.504Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:32:58.504Z
+```
+
+### 4. `server.ts` (Gen 70)
 *Source:* `MUTATION:server.ts` | *Indexed:* `2026-09-20T05:32:50.671Z`
 
 ```typescript
@@ -29,67 +50,46 @@ async function createNextMockRequest(req: express.Request): Promise<any> {
 // ... [truncated]
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:49.693Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:32:49.693Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:49.691Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:32:49.691Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:49.212Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 4 passed, 0 failed | TIME:2026-09-20T05:32:49.212Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:49.203Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 4 passed, 0 failed | TIME:2026-09-20T05:32:49.203Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:48.668Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to server.ts | TIME:2026-09-20T05:32:48.668Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:48.666Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to server.ts | TIME:2026-09-20T05:32:48.666Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:45.910Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:32:45.909Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:37.814Z`
-
-```typescript
-[LOG:MUTATE] [Batch 90/253] Proposed mutation for server.ts (risk: LOW) | TIME:2026-09-20T05:32:37.813Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:37.812Z`
-
-```typescript
-[LOG:MUTATE] [Batch 90/253] Proposed mutation for server.ts (risk: LOW) | TIME:2026-09-20T05:32:37.811Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)

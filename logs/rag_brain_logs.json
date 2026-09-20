@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789882378807_c2a9e74d",
+    "type": "MUTATE",
+    "description": "[Batch 91/253] Proposed mutation for src/App.tsx (risk: LOW)",
+    "timestamp": "2026-09-20T05:32:58.807Z"
+  },
+  {
+    "id": "rag_log_1789882378805_8438568a",
+    "type": "MUTATE",
+    "description": "[Batch 91/253] Proposed mutation for src/App.tsx (risk: LOW)",
+    "timestamp": "2026-09-20T05:32:58.805Z"
+  },
+  {
+    "id": "rag_log_1789882378504_cd73e808",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:32:58.504Z"
+  },
+  {
     "id": "rag_log_1789882369693_b93f7ed8",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 88/253] Proposed mutation for restore_repo_fast.js (risk: LOW)",
     "timestamp": "2026-09-20T05:32:06.325Z"
-  },
-  {
-    "id": "rag_log_1789882326323_a7df1f9d",
-    "type": "MUTATE",
-    "description": "[Batch 88/253] Proposed mutation for restore_repo_fast.js (risk: LOW)",
-    "timestamp": "2026-09-20T05:32:06.323Z"
-  },
-  {
-    "id": "rag_log_1789882320350_ffc8576e",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:32:00.350Z"
-  },
-  {
-    "id": "rag_log_1789882316386_2e204509",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T05:31:56.386Z"
   }
 ]
