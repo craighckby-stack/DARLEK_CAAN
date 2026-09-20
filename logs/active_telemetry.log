@@ -1,11 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:02:18.451Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:02:27.779Z]
 ======================================================================
 
-[15:54:23] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:54:24] [0x0049D408] [MUTATE    ] [Batch 149/253] Proposed mutation for src/components/MutationHistoryPanel.tsx (risk: LOW)
-[15:54:27] [0x00616000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
-[15:54:31] [0x00618000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 8.82 MB.
 [15:54:31] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
 [15:54:33] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:54:35] [0x006CCF65] [APPROVE   ] Mutation applied to src/components/MutationHistoryPanel.tsx
@@ -253,3 +249,7 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:02:18.451Z]
 [16:02:13] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
 [16:02:15] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [16:02:17] [0x006DA000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[16:02:22] [0x006DC000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 393.5 KB (3.84%).
+[16:02:23] [0x001F6BFA] [MUTATE    ] [Batch 170/253] Proposed mutation for src/hooks/useSystemState.ts (risk: LOW)
+[16:02:24] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[16:02:27] [0x006DE000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
