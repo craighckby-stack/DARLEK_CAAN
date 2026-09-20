@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789876436704_d6aa9061",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:53:56.704Z"
+  },
+  {
+    "id": "rag_log_1789876436124_081a1ba3",
+    "type": "MUTATE",
+    "description": "[Batch 159/253] Proposed mutation for src/components/TemporalParadoxLog.tsx (risk: LOW)",
+    "timestamp": "2026-09-20T03:53:56.124Z"
+  },
+  {
+    "id": "rag_log_1789876436118_1d477acc",
+    "type": "MUTATE",
+    "description": "[Batch 159/253] Proposed mutation for src/components/TemporalParadoxLog.tsx (risk: LOW)",
+    "timestamp": "2026-09-20T03:53:56.118Z"
+  },
+  {
     "id": "rag_log_1789876426875_ad946b58",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
     "timestamp": "2026-09-20T03:53:00.124Z"
-  },
-  {
-    "id": "rag_log_1789876376212_4e0a8fea",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T03:52:56.212Z"
-  },
-  {
-    "id": "rag_log_1789876376210_dd61b1a9",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T03:52:56.210Z"
-  },
-  {
-    "id": "rag_log_1789876375592_104a5d74",
-    "type": "HEALTH",
-    "description": "Auto-test: REJECTED — 4 passed, 2 failed",
-    "timestamp": "2026-09-20T03:52:55.592Z"
   }
 ]
