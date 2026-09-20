@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:02:16.409Z",
+    "generatedAt": "2026-09-20T03:02:26.575Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789873343568_aab292f9",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:02:23.568Z"
+    },
+    {
+      "id": "rag_log_1789873341977_fcba16f0",
+      "type": "MUTATE",
+      "description": "[Batch 30/253] Proposed mutation for eslint.config.mjs (risk: LOW)",
+      "timestamp": "2026-09-20T03:02:21.977Z"
+    },
+    {
+      "id": "rag_log_1789873341974_f7e31efc",
+      "type": "MUTATE",
+      "description": "[Batch 30/253] Proposed mutation for eslint.config.mjs (risk: LOW)",
+      "timestamp": "2026-09-20T03:02:21.974Z"
+    },
     {
       "id": "rag_log_1789873333381_6118330c",
       "type": "LOG_SYNC",
@@ -138,41 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T03:01:26.033Z"
-    },
-    {
-      "id": "rag_log_1789873286031_c42a77c2",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:01:26.031Z"
-    },
-    {
-      "id": "rag_log_1789873285746_545009cb",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T03:01:25.746Z"
-    },
-    {
-      "id": "rag_log_1789873285744_c1701803",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T03:01:25.744Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-f86b6623",
-      "time": "12:56:09",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-bbb139f0",
-      "time": "12:56:14",
-      "addr": "0x0073E1D8",
-      "tag": "MUTATE",
-      "message": "[Batch 12/253] Proposed mutation for README.md (risk: LOW)"
-    },
     {
       "id": "dos-e92f8d67",
       "time": "12:56:18",
@@ -855,6 +841,20 @@
     {
       "id": "dos-88113b88",
       "time": "13:02:13",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-62362513",
+      "time": "13:02:21",
+      "addr": "0x008605F1",
+      "tag": "MUTATE",
+      "message": "[Batch 30/253] Proposed mutation for eslint.config.mjs (risk: LOW)"
+    },
+    {
+      "id": "dos-fccd8a6f",
+      "time": "13:02:23",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
