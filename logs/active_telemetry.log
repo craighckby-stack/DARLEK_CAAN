@@ -1,15 +1,7 @@
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-58 [2026-09-20T03:20:07.071Z] */
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T03:19:49.075Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T03:20:19.197Z]
 ======================================================================
 
-[13:01:48] [0x007C49C6] [APPROVE   ] Mutation applied to download_missing.js
-[13:01:48] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
-[13:01:49] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
-[13:01:55] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[13:01:59] [0x007E30B1] [MUTATE    ] [Batch 29/253] Proposed mutation for download_page.js (risk: LOW)
-[13:02:04] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[13:02:10] [0x005FFCB0] [APPROVE   ] Mutation applied to download_page.js
 [13:02:10] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
 [13:02:11] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
 [13:02:13] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
@@ -254,3 +246,10 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T03:19:49.075Z]
 [13:19:36] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
 [13:19:45] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [13:19:46] [0x005ECB11] [MUTATE    ] [Batch 65/253] Proposed mutation for logs/POSTMORTEMS.md (risk: LOW)
+[13:19:54] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[13:19:57] [0x006EFD79] [APPROVE   ] Mutation applied to logs/POSTMORTEMS.md
+[13:19:57] [0x0046288B] [HEALTH    ] Auto-test: REJECTED — 4 passed, 2 failed
+[13:19:57] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[13:20:07] [0x009672BB] [MUTATE    ] [Batch 66/253] Proposed mutation for logs/active_telemetry.log (risk: LOW)
+[13:20:08] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[13:20:16] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
