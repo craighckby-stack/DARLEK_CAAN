@@ -1,5 +1,5 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:04:42.475Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:04:55.654Z]
 ======================================================================
 
 [00:00:00] [0x00400000] [BOOT      ] Microsoft(R) MS-DOS(R) Version 6.22
@@ -114,3 +114,10 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:04:42.475Z]
 [15:04:36] [0x0015A000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
 [15:04:39] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:04:41] [0x0015C000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 6.41 MB (64.11%).
+[15:04:46] [0x0015E000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
+[15:04:48] [0x0021F196] [REJECT    ] Coherence Gate blocked mutation for .next_dev/cache/webpack/client-development/8.pack.gz_. Logged to Firebase as 'wrong' failure exemplar.
+[15:04:51] [0x00160000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 10.00 MB.
+[15:04:51] [0x007FC719] [HOTSWAP   ] Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts
+[15:04:52] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:04:52] [0x009EC667] [HOTSWAP_OK] HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-4 [Source: RAG_GENE_HOTSWAP].
+[15:04:52] [0x0019CCAA] [RAG_WRITE ] Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-5, rai...

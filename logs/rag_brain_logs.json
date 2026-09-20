@@ -1,5 +1,41 @@
 [
   {
+    "id": "rag_log_1789880692640_30ca2a46",
+    "type": "HOTSWAP_OK",
+    "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-4 [Source: RAG_GENE_HOTSWAP].",
+    "timestamp": "2026-09-20T05:04:52.640Z"
+  },
+  {
+    "id": "rag_log_1789880692640_989fe349",
+    "type": "RAG_WRITE",
+    "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-5, rai...",
+    "timestamp": "2026-09-20T05:04:52.640Z"
+  },
+  {
+    "id": "rag_log_1789880692483_674b21fa",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:04:52.483Z"
+  },
+  {
+    "id": "rag_log_1789880691426_b025283a",
+    "type": "HOTSWAP",
+    "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
+    "timestamp": "2026-09-20T05:04:51.426Z"
+  },
+  {
+    "id": "rag_log_1789880688411_3f9abf48",
+    "type": "REJECT",
+    "description": "Coherence Gate blocked mutation for .next_dev/cache/webpack/client-development/8.pack.gz_. Logged to Firebase as 'wrong' failure exemplar.",
+    "timestamp": "2026-09-20T05:04:48.411Z"
+  },
+  {
+    "id": "rag_log_1789880688334_780614f4",
+    "type": "REJECT",
+    "description": "Coherence Gate blocked mutation for .next_dev/cache/webpack/client-development/8.pack.gz_. Logged to Firebase as 'wrong' failure exemplar.",
+    "timestamp": "2026-09-20T05:04:48.334Z"
+  },
+  {
     "id": "rag_log_1789880679361_345c0c0e",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -112,41 +148,5 @@
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
     "timestamp": "2026-09-20T05:03:06.383Z"
-  },
-  {
-    "id": "rag_log_1789880585832_91ad36e3",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T05:03:05.832Z"
-  },
-  {
-    "id": "rag_log_1789880585830_054cfa01",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T05:03:05.830Z"
-  },
-  {
-    "id": "rag_log_1789880585219_7bacc0c0",
-    "type": "APPROVE",
-    "description": "Mutation applied to .gitignore",
-    "timestamp": "2026-09-20T05:03:05.219Z"
-  },
-  {
-    "id": "rag_log_1789880585215_538e3b94",
-    "type": "APPROVE",
-    "description": "Mutation applied to .gitignore",
-    "timestamp": "2026-09-20T05:03:05.214Z"
-  },
-  {
-    "id": "rag_log_1789880582560_d099e602",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:03:02.560Z"
-  },
-  {
-    "id": "rag_log_1789880574551_e745adaa",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:02:54.551Z"
   }
 ]
