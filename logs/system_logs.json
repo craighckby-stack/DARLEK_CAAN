@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:22:45.616Z",
+    "generatedAt": "2026-09-20T03:22:55.397Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789874572356_0ffc1cb9",
+      "type": "INFO",
+      "description": "[NO-OP] Code saturation reached in batch for package.json",
+      "timestamp": "2026-09-20T03:22:52.356Z"
+    },
+    {
+      "id": "rag_log_1789874572355_f588be61",
+      "type": "INFO",
+      "description": "[NO-OP] Code saturation reached in batch for package.json",
+      "timestamp": "2026-09-20T03:22:52.355Z"
+    },
+    {
+      "id": "rag_log_1789874571712_62cd6df6",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:22:51.712Z"
+    },
     {
       "id": "rag_log_1789874562615_09459c2e",
       "type": "INFO",
@@ -138,41 +156,9 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T03:21:19.485Z"
-    },
-    {
-      "id": "rag_log_1789874471071_a77ed7f1",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:21:11.071Z"
-    },
-    {
-      "id": "rag_log_1789874461897_90e8914f",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:21:01.897Z"
-    },
-    {
-      "id": "rag_log_1789874452954_e6e496df",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:20:52.954Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-ae1deccb",
-      "time": "13:13:40",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-c036d18b",
-      "time": "13:13:49",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-64d0b44e",
       "time": "13:13:57",
@@ -858,6 +844,20 @@
       "addr": "0x0013653B",
       "tag": "INFO",
       "message": "[NO-OP] Code saturation reached in batch for missing_files.json"
+    },
+    {
+      "id": "dos-0dee40c7",
+      "time": "13:22:51",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-c4b2431b",
+      "time": "13:22:52",
+      "addr": "0x001CDD3F",
+      "tag": "INFO",
+      "message": "[NO-OP] Code saturation reached in batch for package.json"
     }
   ]
 }
