@@ -1,11 +1,25 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:34:31.888Z",
+    "generatedAt": "2026-09-20T05:34:42.352Z",
     "totalMutations": 10,
     "correctCount": 10,
     "wrongCount": 0
   },
   "mutations": [
+    {
+      "id": "rag_mut_1789882478150_a03fb5ce",
+      "filePath": "src/app/api/brain/types.ts",
+      "originalCode": "/**\n * @file src/app/api/brain/types.ts\n * @module NeuralCode/BrainTypes\n * @version 49.3.1\n * @description Sovereign Darlek Caan type definitions for neural mutations and cognitive health metrics with enhanced precision.\n */\n\n/**\n * Represents the strict execution lifecycle status of a neural code mutation.\n * @public\n */\nexport type MutationStatus = 'pending' | 'applied' | 'rejected' | 'stabilizing';\n\n/**\n * Immutable payload structure describing a code mutation event.\n * Enforces strict readonly boundaries and branded types for optimal memory efficiency and state predictability.\n * @public\n */\nexport interface MutationPayload {\n  readonly sessionId: string;\n  readonly filePath: string;\n  readonly status: MutationStatus;\n  readonly riskScore: number;\n  readonly analysis: string;\n  readonly timestamp: number;\n}\n\n/**\n * Quantitative telemetry metrics measuring structural integrity and semantic health.\n * @public\n */\nexport interface HealthMetrics {\n  readonly structuralChange: number;\n  readonly semanticSaturation: number;\n  readonly velocity: number;\n  readonly identityPreservation: number;\n  readonly capabilityAlignment: number;\n  readonly crossFileImpact: number;\n  readonly entropyCoefficient: number;\n}",
+      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-75 [2026-09-20T05:34:27.104Z] */\n/**\n * @file src/app/api/brain/types.ts\n * @module NeuralCode/BrainTypes\n * @version 49.3.1\n * @description Sovereign Darlek Caan type definitions for neural mutations and cognitive health metrics with enhanced precision.\n */\n\n/**\n * Represents the strict execution lifecycle status of a neural code mutation.\n * @public\n */\nexport type MutationStatus = 'pending' | 'applied' | 'rejected' | 'stabilizing';\n\n/**\n * Immutable payload structure describing a code mutation event.\n * Enforces strict readonly boundaries and branded types for optimal memory efficiency and state predictability.\n * @public\n */\nexport interface MutationPayload {\n  readonly sessionId: string;\n  readonly filePath: string;\n  readonly status: MutationStatus;\n  readonly riskScore: number;\n  readonly analysis: string;\n  readonly timestamp: number;\n}\n\n/**\n * Quantitative telemetry metrics measuring structural integrity and semantic health.\n * @public\n */\nexport interface HealthMetrics {\n  readonly structuralChange: number;\n  readonly semanticSaturation: number;\n  readonly velocity: number;\n  readonly identityPreservation: number;\n  readonly capabilityAlignment: number;\n  readonly crossFileImpact: number;\n  readonly entropyCoefficient: number;\n}\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 75,\n  timestamp: \"2026-09-20T05:34:27.104Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
+      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-75 with verified AST structural sanity.",
+      "riskScore": 1,
+      "generation": 75,
+      "commitSha": "80f4a825c0412459bc1ad93c3c866bcdf83f9e9c",
+      "timestamp": "2026-09-20T05:34:38.150Z",
+      "hotswapped": true,
+      "verdict": "correct",
+      "source": "DARLEK_APPROVED_MUTATION"
+    },
     {
       "id": "rag_mut_1789882455318_758581a4",
       "filePath": "src/app/api/brain/route.ts",
@@ -127,20 +141,6 @@
       "generation": 67,
       "commitSha": "8c39a0f5c9d0a442414103442bf7cdb9a026754f",
       "timestamp": "2026-09-20T05:31:47.504Z",
-      "hotswapped": true,
-      "verdict": "correct",
-      "source": "DARLEK_APPROVED_MUTATION"
-    },
-    {
-      "id": "rag_mut_1789882286443_7c3e0289",
-      "filePath": "remote_tree.txt",
-      "originalCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-66 [2026-09-20T03:26:07.407Z] */\n# Remote Repository Tree\n\n## Overview\nThis document provides a structural representation of the remote repository tree, detailing the organization of directories, modules, and core files.\n\n## Repository Structure\n```text\nremote_repository/\n├── .github/                 # CI/CD workflows and GitHub templates\n├── src/                     # Core source code modules\n│   ├── core/                # System initialization and main logic\n│   ├── utils/               # Helper functions and utilities\n│   └── api/                 # Endpoint definitions and routing\n├── tests/                   # Automated test suites\n├── docs/                    # Project documentation\n├── README.md                # Project overview and instructions\n└── package.json             # Project dependencies and metadata\n```\n\n## Maintenance & Usage\n- **Navigation:** Use this tree as a reference map when locating modules or planning cross-component refactoring.\n- **Updates:** Ensure this file is updated whenever the top-level repository architecture changes significantly.",
-      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-66 [2026-09-20T05:31:13.881Z] */\n# Remote Repository Tree\n\n## Overview\nThis document provides a structural representation of the remote repository tree, detailing the organization of directories, modules, and core files.\n\n## Repository Structure\n```text\nremote_repository/\n├── .github/                 # CI/CD workflows and GitHub templates\n├── src/                     # Core source code modules\n│   ├── core/                # System initialization and main logic\n│   ├── utils/               # Helper functions and utilities\n│   └── api/                 # Endpoint definitions and routing\n├── tests/                   # Automated test suites\n├── docs/                    # Project documentation\n├── README.md                # Project overview and instructions\n└── package.json             # Project dependencies and metadata\n```\n\n## Maintenance & Usage\n- **Navigation:** Use this tree as a reference map when locating modules or planning cross-component refactoring.\n- **Updates:** Ensure this file is updated whenever the top-level repository architecture changes significantly.",
-      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-66 with verified AST structural sanity.",
-      "riskScore": 1,
-      "generation": 66,
-      "commitSha": "1bfc007cd4d44f58b9c0263e3eb77b9b1ecfbb43",
-      "timestamp": "2026-09-20T05:31:26.443Z",
       "hotswapped": true,
       "verdict": "correct",
       "source": "DARLEK_APPROVED_MUTATION"
