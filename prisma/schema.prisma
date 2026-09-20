@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-62 [2026-09-20T03:23:56.103Z] */
 generator client {
   provider = "prisma-client-js"
 }
