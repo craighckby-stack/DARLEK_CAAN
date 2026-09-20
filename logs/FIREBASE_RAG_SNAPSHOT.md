@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:58:26.930Z`
+*Last Synchronized:* `2026-09-20T05:58:39.774Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -13,88 +13,107 @@
 
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
-### 1. `system.log` (Gen 1)
+### 1. `src/components/ui/toast.tsx` (Gen 137)
+*Source:* `MUTATION:src/components/ui/toast.tsx` | *Indexed:* `2026-09-20T05:58:36.683Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-137 [2026-09-20T05:58:23.869Z] */
+
+import * as React from "react"
+import * as ToastPrimitives from "@radix-ui/react-toast"
+import { cva, type VariantProps } from "class-variance-authority"
+import { X } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+
+// -----------------------------------
+// ... [truncated]
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:36.671Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:58:36.671Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:36.669Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:58:36.668Z
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:35.622Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:58:35.621Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:35.619Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:58:35.618Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:34.824Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to src/components/ui/toast.tsx | TIME:2026-09-20T05:58:34.824Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:34.822Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to src/components/ui/toast.tsx | TIME:2026-09-20T05:58:34.821Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:32.394Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:58:32.394Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:23.875Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 160/253] Proposed mutation for src/components/ui/toast.tsx (risk: LOW) | TIME:2026-09-20T05:58:23.875Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:23.872Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 160/253] Proposed mutation for src/components/ui/toast.tsx (risk: LOW) | TIME:2026-09-20T05:58:23.872Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:22.712Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/ui/toast.tsx`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `137`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-137 with verified AST structural sanity.
 ```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:58:22.712Z
-```
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-137 [2026-09-20T05:58:23.869Z] */
 
-### 4. `src/components/TemporalParadoxLog.tsx` (Gen 136)
-*Source:* `MUTATION:src/components/TemporalParadoxLog.tsx` | *Indexed:* `2026-09-20T05:58:14.240Z`
+import * as React from "react"
+import * as ToastPrimitives from "@radix-ui/react-toast"
+import { cva, type VariantProps } from "class-variance-authority"
+import { X } from "lucide-react"
 
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-136 [2026-09-20T05:58:00.653Z] */
-/**
- * DARLEK CANN ARCHITECTURAL HEADER
- * File: src/components/TemporalParadoxLog.tsx
- * Role: Core system component participating in autonomous cognitive evolution cycles.
- * Architecture: Type-safe modular unit with resilient state interfaces.
- */
+import { cn } from "@/lib/utils"
 
-import Re
+// -----------------------------------
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:13.595Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:58:13.594Z
-```
-
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:13.590Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:58:13.590Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:12.619Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 4 passed, 0 failed | TIME:2026-09-20T05:58:12.619Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:12.616Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 4 passed, 0 failed | TIME:2026-09-20T05:58:12.616Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:11.758Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/components/TemporalParadoxLog.tsx | TIME:2026-09-20T05:58:11.758Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:58:11.755Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/components/TemporalParadoxLog.tsx | TIME:2026-09-20T05:58:11.754Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/TemporalParadoxLog.tsx`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/TemporalParadoxLog.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `136`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-136 with verified AST structural sanity.
@@ -111,7 +130,7 @@ import Re
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/StatusBar.tsx`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/StatusBar.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `135`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-135 with verified AST structural sanity.
@@ -129,7 +148,7 @@ import React, { u
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/SoundEngine.ts`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/SoundEngine.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `134`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-134 with verified AST structural sanity.
@@ -146,7 +165,7 @@ import React, { u
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/SnippetScanner.tsx`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/SnippetScanner.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `133`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-133 with verified AST structural sanity.
@@ -160,7 +179,7 @@ import Co
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/SaturationModal.tsx`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/SaturationModal.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `132`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-132 with verified AST structural sanity.
@@ -176,7 +195,7 @@ import React, { useCallback, useEffect, useId, useState, t
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/SaturationMetrics.tsx`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/SaturationMetrics.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `131`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-131 with verified AST structural sanity.
@@ -194,7 +213,7 @@ import Re
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `0.12` | **Gen:** `11`
 - **Rationale:** RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-12, raised power ceiling to 2500, and validated functional sequence hotswapping.
@@ -214,7 +233,7 @@ export interface NeuralGeneState {
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/QuickActions.tsx`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/QuickActions.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `130`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-130 with verified AST structural sanity.
@@ -231,7 +250,7 @@ import React, {
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/PageClient.tsx`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/PageClient.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `129`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-129 with verified AST structural sanity.
@@ -246,23 +265,6 @@ import React, {
 
 
 import { useStat
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/MutationStatusIndicator.tsx`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `128`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-128 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-128 [2026-09-20T05:54:47.395Z] */
-/**
- * DARLEK CANN ARCHITECTURAL HEADER
- * File: src/components/MutationStatusIndicator.tsx
- * Role: Core system component participating in autonomous cognitive evolution cycles.
- * Architecture: Type-safe modular unit with resilient state interfaces.
- */
-
-impo
 // ... [truncated]
 ```
 

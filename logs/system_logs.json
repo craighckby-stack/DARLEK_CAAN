@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:58:26.930Z",
+    "generatedAt": "2026-09-20T05:58:39.774Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789883916671_57743803",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:58:36.671Z"
+    },
+    {
+      "id": "rag_log_1789883916668_2f1983c1",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:58:36.668Z"
+    },
+    {
+      "id": "rag_log_1789883915621_657a3aaf",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T05:58:35.621Z"
+    },
+    {
+      "id": "rag_log_1789883915618_fd80136b",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T05:58:35.618Z"
+    },
+    {
+      "id": "rag_log_1789883914824_26d07ac6",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/components/ui/toast.tsx",
+      "timestamp": "2026-09-20T05:58:34.824Z"
+    },
+    {
+      "id": "rag_log_1789883914821_98004336",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/components/ui/toast.tsx",
+      "timestamp": "2026-09-20T05:58:34.821Z"
+    },
+    {
+      "id": "rag_log_1789883912394_0bf1aa58",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:58:32.394Z"
+    },
     {
       "id": "rag_log_1789883903875_7c38808d",
       "type": "MUTATE",
@@ -114,100 +156,9 @@
       "type": "APPROVE",
       "description": "Mutation applied to src/components/StatusBar.tsx",
       "timestamp": "2026-09-20T05:57:47.777Z"
-    },
-    {
-      "id": "rag_log_1789883867771_5669d960",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/components/StatusBar.tsx",
-      "timestamp": "2026-09-20T05:57:47.771Z"
-    },
-    {
-      "id": "rag_log_1789883864875_936cf99a",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:57:44.875Z"
-    },
-    {
-      "id": "rag_log_1789883856660_7a304df1",
-      "type": "MUTATE",
-      "description": "[Batch 158/253] Proposed mutation for src/components/StatusBar.tsx (risk: LOW)",
-      "timestamp": "2026-09-20T05:57:36.660Z"
-    },
-    {
-      "id": "rag_log_1789883856655_0d577dd5",
-      "type": "MUTATE",
-      "description": "[Batch 158/253] Proposed mutation for src/components/StatusBar.tsx (risk: LOW)",
-      "timestamp": "2026-09-20T05:57:36.655Z"
-    },
-    {
-      "id": "rag_log_1789883855711_718de8b6",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:57:35.711Z"
-    },
-    {
-      "id": "rag_log_1789883846921_b3a226c1",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:57:26.921Z"
-    },
-    {
-      "id": "rag_log_1789883846917_2844cf7f",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:57:26.917Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-9c6b2886",
-      "time": "15:55:17",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-f99fa082",
-      "time": "15:55:19",
-      "addr": "0x00353280",
-      "tag": "APPROVE",
-      "message": "Mutation applied to src/components/PageClient.tsx"
-    },
-    {
-      "id": "dos-5d0af2cc",
-      "time": "15:55:20",
-      "addr": "0x0062C000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 880.3 KB (8.6%)."
-    },
-    {
-      "id": "dos-6064114f",
-      "time": "15:55:21",
-      "addr": "0x003D0A96",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 4 passed, 0 failed"
-    },
-    {
-      "id": "dos-14682d95",
-      "time": "15:55:22",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-10d151e4",
-      "time": "15:55:24",
-      "addr": "0x0062E000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
-    {
-      "id": "dos-872e9c4b",
-      "time": "15:55:29",
-      "addr": "0x00630000",
-      "tag": "RAG_INDEX",
-      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.13 MB."
-    },
     {
       "id": "dos-1af21bbb",
       "time": "15:55:29",
@@ -858,6 +809,55 @@
       "addr": "0x00646269",
       "tag": "MUTATE",
       "message": "[Batch 160/253] Proposed mutation for src/components/ui/toast.tsx (risk: LOW)"
+    },
+    {
+      "id": "dos-86cdb65d",
+      "time": "15:58:27",
+      "addr": "0x0067A000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-a81b452e",
+      "time": "15:58:32",
+      "addr": "0x0067C000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 820.4 KB (8.01%)."
+    },
+    {
+      "id": "dos-ff45c49e",
+      "time": "15:58:32",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-f1abcc6f",
+      "time": "15:58:34",
+      "addr": "0x005611D5",
+      "tag": "APPROVE",
+      "message": "Mutation applied to src/components/ui/toast.tsx"
+    },
+    {
+      "id": "dos-5af8a75e",
+      "time": "15:58:35",
+      "addr": "0x007EEE12",
+      "tag": "HEALTH",
+      "message": "Auto-test: PASSED — 5 passed, 0 failed"
+    },
+    {
+      "id": "dos-28452410",
+      "time": "15:58:36",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-93d1a6bc",
+      "time": "15:58:37",
+      "addr": "0x0067E000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
     }
   ]
 }
