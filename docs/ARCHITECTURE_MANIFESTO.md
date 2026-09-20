@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-20 [2026-09-20T03:00:08.361Z] */
 # DARLEK CANN v3.0: Architectural Manifesto
 
 > **Sovereign Engine v89.1 Architecture Update**: Standardized architecture manifesto governing autonomous self-refactoring workflows, GitHub API ingestion pipelines, real-time agent coordination, and security isolation layers.
