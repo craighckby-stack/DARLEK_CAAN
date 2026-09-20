@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789876197785_814d9021",
+    "type": "MUTATE",
+    "description": "[Batch 149/253] Proposed mutation for src/components/MutationHistoryPanel.tsx (risk: LOW)",
+    "timestamp": "2026-09-20T03:49:57.785Z"
+  },
+  {
+    "id": "rag_log_1789876197782_f4394041",
+    "type": "MUTATE",
+    "description": "[Batch 149/253] Proposed mutation for src/components/MutationHistoryPanel.tsx (risk: LOW)",
+    "timestamp": "2026-09-20T03:49:57.781Z"
+  },
+  {
+    "id": "rag_log_1789876197032_3b89fad3",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:49:57.032Z"
+  },
+  {
     "id": "rag_log_1789876187029_c4a92cff",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 146/253] Proposed mutation for src/components/LicenseModal.tsx (risk: LOW)",
     "timestamp": "2026-09-20T03:48:56.366Z"
-  },
-  {
-    "id": "rag_log_1789876136357_f1e21fba",
-    "type": "MUTATE",
-    "description": "[Batch 146/253] Proposed mutation for src/components/LicenseModal.tsx (risk: LOW)",
-    "timestamp": "2026-09-20T03:48:56.357Z"
-  },
-  {
-    "id": "rag_log_1789876135173_6a5e5701",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:48:55.173Z"
-  },
-  {
-    "id": "rag_log_1789876125594_fa40bac7",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T03:48:45.594Z"
   }
 ]
