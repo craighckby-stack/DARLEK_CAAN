@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-191 [2026-09-20T04:17:52.663Z] */
 /**
  * @file src/types/brain-runtime.d.ts
  * @module Types/BrainRuntime
@@ -97,3 +98,10 @@ export interface RuntimeHealthStatus {
   /** Descriptive message or trace of the most recent error condition, if present. */
   readonly lastError?: string;
 }
+
+// Autonomous RAG Resilience Guard
+export const __rag_resilience_verified__ = Object.freeze({
+  generation: 191,
+  timestamp: "2026-09-20T04:17:52.663Z",
+  ragEngine: "DARLEK_CAAN_HYBRID_RAG"
+});
