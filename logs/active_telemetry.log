@@ -1,11 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:00:29.493Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:00:37.159Z]
 ======================================================================
 
-[15:52:28] [0x008CB56C] [APPROVE   ] Mutation applied to src/components/FolderScanner.tsx
-[15:52:29] [0x003D0A96] [HEALTH    ] Auto-test: PASSED — 4 passed, 0 failed
-[15:52:29] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
-[15:52:31] [0x005E6000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
 [15:52:33] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:52:36] [0x005E8000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 8.68 MB.
 [15:52:36] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
@@ -253,3 +249,7 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:00:29.493Z]
 [16:00:25] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [16:00:26] [0x005A5818] [MUTATE    ] [Batch 165/253] Proposed mutation for src/hooks/useGithubScanner.ts (risk: LOW)
 [16:00:27] [0x006AC000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 635.1 KB (6.2%).
+[16:00:32] [0x006AE000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
+[16:00:34] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[16:00:36] [0x006B0000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.38 MB.
+[16:00:36] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].

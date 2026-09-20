@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T06:00:29.493Z`
+*Last Synchronized:* `2026-09-20T06:00:37.159Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,48 +14,55 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:34.110Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T06:00:34.110Z
+```
+
+### 2. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:26.428Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 165/253] Proposed mutation for src/hooks/useGithubScanner.ts (risk: LOW) | TIME:2026-09-20T06:00:26.428Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 3. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:26.425Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 165/253] Proposed mutation for src/hooks/useGithubScanner.ts (risk: LOW) | TIME:2026-09-20T06:00:26.424Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:25.153Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T06:00:25.153Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:17.342Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T06:00:17.341Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:09.501Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T06:00:09.501Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:09.497Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T06:00:09.497Z
 ```
 
-### 7. `src/hooks/useFolderScanner.ts` (Gen 141)
+### 8. `src/hooks/useFolderScanner.ts` (Gen 141)
 *Source:* `MUTATION:src/hooks/useFolderScanner.ts` | *Indexed:* `2026-09-20T06:00:09.390Z`
 
 ```typescript
@@ -69,25 +76,18 @@ export interface FolderScanFileResult {
 // ... [truncated]
 ```
 
-### 8. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:08.574Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T06:00:08.574Z
 ```
 
-### 9. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:08.572Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T06:00:08.572Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:06.984Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/hooks/useFolderScanner.ts | TIME:2026-09-20T06:00:06.984Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
