@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789869139468_07488f94",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T01:52:19.468Z"
+  },
+  {
     "id": "rag_log_1789869130857_2fa81f82",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -142,11 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 17/243] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW)",
     "timestamp": "2026-09-19T22:54:49.372Z"
-  },
-  {
-    "id": "rag_log_1789858489358_28b2163c",
-    "type": "MUTATE",
-    "description": "[Batch 17/243] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW)",
-    "timestamp": "2026-09-19T22:54:49.358Z"
   }
 ]
