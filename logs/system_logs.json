@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T08:05:00.591Z",
+    "generatedAt": "2026-09-20T08:05:09.050Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789891506040_dbc3e6e5",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T08:05:06.040Z"
+    },
     {
       "id": "rag_log_1789891497587_bfd48ad4",
       "type": "RAG_WRITE",
@@ -150,12 +156,6 @@
       "type": "HOTSWAP_OK",
       "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-20 [Source: RAG_GENE_HOTSWAP].",
       "timestamp": "2026-09-20T07:57:02.576Z"
-    },
-    {
-      "id": "rag_log_1789891021730_d4f72cab",
-      "type": "HOTSWAP",
-      "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
-      "timestamp": "2026-09-20T07:57:01.730Z"
     }
   ],
   "telemetryBuffer": [
@@ -277,6 +277,20 @@
       "addr": "0x0010A000",
       "tag": "AST_WATCH",
       "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 1."
+    },
+    {
+      "id": "dos-5782612c",
+      "time": "18:05:04",
+      "addr": "0x0010C000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 180.1 KB (1.76%)."
+    },
+    {
+      "id": "dos-9c67c77d",
+      "time": "18:05:06",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }
