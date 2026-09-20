@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:14:28.874Z`
+*Last Synchronized:* `2026-09-20T05:14:39.325Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,13 +14,34 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:36.315Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:14:36.315Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:29.220Z`
+
+```typescript
+[LOG:MUTATE] [Batch 29/253] Proposed mutation for download_page.js (risk: LOW) | TIME:2026-09-20T05:14:29.220Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:29.217Z`
+
+```typescript
+[LOG:MUTATE] [Batch 29/253] Proposed mutation for download_page.js (risk: LOW) | TIME:2026-09-20T05:14:29.217Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:25.861Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:14:25.861Z
 ```
 
-### 2. `download_missing.js` (Gen 26)
+### 5. `download_missing.js` (Gen 26)
 *Source:* `MUTATION:download_missing.js` | *Indexed:* `2026-09-20T05:14:19.824Z`
 
 ```typescript
@@ -36,60 +57,39 @@ import { existsSync } from '
 // ... [truncated]
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:19.639Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:14:19.639Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:19.638Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:14:19.638Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:19.373Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:14:19.373Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:19.371Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:14:19.371Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:18.954Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to download_missing.js | TIME:2026-09-20T05:14:18.954Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:18.952Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to download_missing.js | TIME:2026-09-20T05:14:18.952Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:15.649Z`
-
-```typescript
-[LOG:MUTATE] [Batch 28/253] Proposed mutation for download_missing.js (risk: LOW) | TIME:2026-09-20T05:14:15.649Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:15.647Z`
-
-```typescript
-[LOG:MUTATE] [Batch 28/253] Proposed mutation for download_missing.js (risk: LOW) | TIME:2026-09-20T05:14:15.646Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
