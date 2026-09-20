@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:26:01.906Z",
+    "generatedAt": "2026-09-20T03:26:10.416Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789874767409_82ca86f5",
+      "type": "MUTATE",
+      "description": "[Batch 85/253] Proposed mutation for remote_tree.txt (risk: LOW)",
+      "timestamp": "2026-09-20T03:26:07.409Z"
+    },
+    {
+      "id": "rag_log_1789874767408_7fa98cc1",
+      "type": "MUTATE",
+      "description": "[Batch 85/253] Proposed mutation for remote_tree.txt (risk: LOW)",
+      "timestamp": "2026-09-20T03:26:07.408Z"
+    },
+    {
+      "id": "rag_log_1789874766954_1bb074e3",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:26:06.954Z"
+    },
     {
       "id": "rag_log_1789874758109_13872ac7",
       "type": "HEALTH",
@@ -138,41 +156,9 @@
       "type": "MUTATE",
       "description": "[Batch 82/253] Proposed mutation for remote_App.tsx (risk: LOW)",
       "timestamp": "2026-09-20T03:25:14.390Z"
-    },
-    {
-      "id": "rag_log_1789874714389_6278658e",
-      "type": "MUTATE",
-      "description": "[Batch 82/253] Proposed mutation for remote_App.tsx (risk: LOW)",
-      "timestamp": "2026-09-20T03:25:14.389Z"
-    },
-    {
-      "id": "rag_log_1789874710617_71cacd93",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:25:10.617Z"
-    },
-    {
-      "id": "rag_log_1789874701718_b4b81425",
-      "type": "INFO",
-      "description": "[NO-OP] Code saturation reached in batch for rag/rag_knowledge_base.json",
-      "timestamp": "2026-09-20T03:25:01.718Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-b8905cfb",
-      "time": "13:18:52",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-d6ff6e1b",
-      "time": "13:19:00",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-57f70f13",
       "time": "13:19:02",
@@ -858,6 +844,20 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-236cd519",
+      "time": "13:26:06",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-4765f243",
+      "time": "13:26:07",
+      "addr": "0x0044D6E9",
+      "tag": "MUTATE",
+      "message": "[Batch 85/253] Proposed mutation for remote_tree.txt (risk: LOW)"
     }
   ]
 }
