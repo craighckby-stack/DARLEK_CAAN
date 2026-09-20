@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789882401703_b437ae55",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:33:21.703Z"
+  },
+  {
+    "id": "rag_log_1789882401296_b391d589",
+    "type": "MUTATE",
+    "description": "[Batch 92/253] Proposed mutation for src/api-routes.ts (risk: LOW)",
+    "timestamp": "2026-09-20T05:33:21.296Z"
+  },
+  {
+    "id": "rag_log_1789882401295_20ef74da",
+    "type": "MUTATE",
+    "description": "[Batch 92/253] Proposed mutation for src/api-routes.ts (risk: LOW)",
+    "timestamp": "2026-09-20T05:33:21.295Z"
+  },
+  {
     "id": "rag_log_1789882394264_5439dfa8",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "INFO",
     "description": "[NO-OP] Code saturation reached in batch for robust_parser.js",
     "timestamp": "2026-09-20T05:32:28.160Z"
-  },
-  {
-    "id": "rag_log_1789882348158_74992024",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for robust_parser.js",
-    "timestamp": "2026-09-20T05:32:28.158Z"
-  },
-  {
-    "id": "rag_log_1789882346639_0710b030",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:32:26.639Z"
-  },
-  {
-    "id": "rag_log_1789882338660_04b872b7",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T05:32:18.660Z"
   }
 ]
