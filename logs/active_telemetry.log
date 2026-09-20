@@ -1,10 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:34:07.427Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:34:15.084Z]
 ======================================================================
 
-[15:26:17] [0x00356000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
-[15:26:18] [0x005ECB11] [MUTATE    ] [Batch 65/253] Proposed mutation for logs/POSTMORTEMS.md (risk: LOW)
-[15:26:22] [0x00358000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.67 MB.
 [15:26:22] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
 [15:26:23] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:26:27] [0x0035A000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
@@ -253,3 +250,6 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:34:07.427Z]
 [15:34:03] [0x00418000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.70 MB.
 [15:34:03] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
 [15:34:04] [0x009498EC] [MUTATE    ] [Batch 94/253] Proposed mutation for src/app/api/brain/route.ts (risk: LOW)
+[15:34:08] [0x0041A000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[15:34:12] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:34:12] [0x0041C000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 251.3 KB (2.45%).
