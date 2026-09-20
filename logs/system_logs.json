@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:47:56.667Z",
+    "generatedAt": "2026-09-20T03:48:05.893Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789876082860_49804f58",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:48:02.860Z"
+    },
     {
       "id": "rag_log_1789876073612_bb994145",
       "type": "INFO",
@@ -150,22 +156,9 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T03:46:58.132Z"
-    },
-    {
-      "id": "rag_log_1789876017416_bacb3f36",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:46:57.416Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-e6a189e7",
-      "time": "13:41:46",
-      "addr": "0x00178299",
-      "tag": "APPROVE",
-      "message": "Mutation applied to src/app/error.tsx"
-    },
     {
       "id": "dos-51f79d6d",
       "time": "13:41:47",
@@ -858,6 +851,13 @@
       "addr": "0x003EEB97",
       "tag": "INFO",
       "message": "[NO-OP] Code saturation reached in batch for src/components/FolderScanner.tsx"
+    },
+    {
+      "id": "dos-65e325fa",
+      "time": "13:48:02",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }
