@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:16:54.896Z",
+    "generatedAt": "2026-09-20T05:17:03.793Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789881420786_33af1c43",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:17:00.786Z"
+    },
+    {
+      "id": "rag_log_1789881420386_6bfc6750",
+      "type": "MUTATE",
+      "description": "[Batch 36/253] Proposed mutation for fetch_remote_app.js (risk: LOW)",
+      "timestamp": "2026-09-20T05:17:00.386Z"
+    },
+    {
+      "id": "rag_log_1789881420384_f83d2950",
+      "type": "MUTATE",
+      "description": "[Batch 36/253] Proposed mutation for fetch_remote_app.js (risk: LOW)",
+      "timestamp": "2026-09-20T05:17:00.384Z"
+    },
     {
       "id": "rag_log_1789881411250_6da560fe",
       "type": "HEALTH",
@@ -138,55 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T05:16:08.383Z"
-    },
-    {
-      "id": "rag_log_1789881367592_2903520b",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:16:07.592Z"
-    },
-    {
-      "id": "rag_log_1789881367591_307dc5a8",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:16:07.591Z"
-    },
-    {
-      "id": "rag_log_1789881367162_1b992899",
-      "type": "APPROVE",
-      "description": "Mutation applied to fetch_engine.js",
-      "timestamp": "2026-09-20T05:16:07.162Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-f3a94c8b",
-      "time": "15:13:59",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-0d4b8192",
-      "time": "15:13:59",
-      "addr": "0x0056B269",
-      "tag": "MUTATE",
-      "message": "[Batch 27/253] Proposed mutation for download_changed_fast.js (risk: LOW)"
-    },
-    {
-      "id": "dos-2c867c05",
-      "time": "15:14:03",
-      "addr": "0x00224000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 1.68 MB (16.76%)."
-    },
-    {
-      "id": "dos-888587ed",
-      "time": "15:14:07",
-      "addr": "0x00226000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
     {
       "id": "dos-e6ab1ec5",
       "time": "15:14:10",
@@ -858,6 +830,34 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-856f1a18",
+      "time": "15:16:55",
+      "addr": "0x0026C000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 517.9 KB (5.06%)."
+    },
+    {
+      "id": "dos-9ddf40b8",
+      "time": "15:17:00",
+      "addr": "0x001F3449",
+      "tag": "MUTATE",
+      "message": "[Batch 36/253] Proposed mutation for fetch_remote_app.js (risk: LOW)"
+    },
+    {
+      "id": "dos-fa7620e7",
+      "time": "15:17:00",
+      "addr": "0x0026E000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-062177c8",
+      "time": "15:17:00",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }
