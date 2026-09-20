@@ -1,5 +1,5 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:03:09.491Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:03:18.144Z]
 ======================================================================
 
 [00:00:00] [0x00400000] [BOOT      ] Microsoft(R) MS-DOS(R) Version 6.22
@@ -77,3 +77,7 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:03:09.491Z]
 [15:03:05] [0x00134000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 401.5 KB (3.92%).
 [15:03:05] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
 [15:03:06] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[15:03:10] [0x00136000] [SANITY_OK ] Emergency breaker: Health 93%, Drift 8%, Syntax clean.
+[15:03:15] [0x00138000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.58 MB.
+[15:03:15] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
+[15:03:15] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
