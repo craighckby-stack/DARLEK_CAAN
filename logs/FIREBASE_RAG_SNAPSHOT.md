@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T06:04:49.284Z`
+*Last Synchronized:* `2026-09-20T06:05:00.687Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -13,84 +13,97 @@
 
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
-### 1. `system.log` (Gen 1)
+### 1. `src/lib/ast-diff-gate.ts` (Gen 153)
+*Source:* `MUTATION:src/lib/ast-diff-gate.ts` | *Indexed:* `2026-09-20T06:04:57.678Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-153 [2026-09-20T06:04:43.857Z] */
+/**
+ * ── AST DIFF GATE (PROGRAMMATIC SYNTAX & SYMBOL MUTATION VERIFIER) ──
+ * This module performs AST-level structural diffing between original and proposed code.
+ * Optimized for execution speed, memory footprint reduction, caching, and allocation efficiency
+// ... [truncated]
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:57.670Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T06:04:57.670Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:57.664Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T06:04:57.663Z
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:56.620Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: REJECTED — 4 passed, 3 failed | TIME:2026-09-20T06:04:56.620Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:56.617Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: REJECTED — 4 passed, 3 failed | TIME:2026-09-20T06:04:56.617Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:55.638Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to src/lib/ast-diff-gate.ts | TIME:2026-09-20T06:04:55.638Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:55.635Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to src/lib/ast-diff-gate.ts | TIME:2026-09-20T06:04:55.634Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:54.402Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T06:04:54.401Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:46.279Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T06:04:46.279Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:43.868Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 176/253] Proposed mutation for src/lib/ast-diff-gate.ts (risk: LOW) | TIME:2026-09-20T06:04:43.868Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:43.865Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/ast-diff-gate.ts`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `153`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-153 with verified AST structural sanity.
 ```typescript
-[LOG:MUTATE] [Batch 176/253] Proposed mutation for src/lib/ast-diff-gate.ts (risk: LOW) | TIME:2026-09-20T06:04:43.864Z
-```
-
-### 4. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:37.249Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T06:04:37.249Z
-```
-
-### 5. `src/lib/archaeology-live-sync.ts` (Gen 152)
-*Source:* `MUTATION:src/lib/archaeology-live-sync.ts` | *Indexed:* `2026-09-20T06:04:34.468Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-152 [2026-09-20T06:04:20.806Z] */
-import { db, isFirebaseConfigured } from './firebase';
-import { collection, doc, setDoc, getDocs, addDoc, serverTimestamp } from 'firebase/firestore';
-import { saveMutationToRag } from './ragBrain';
-import { safeSetLocalStorage, safeGetLocalStorage } from './sa
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-153 [2026-09-20T06:04:43.857Z] */
+/**
+ * ── AST DIFF GATE (PROGRAMMATIC SYNTAX & SYMBOL MUTATION VERIFIER) ──
+ * This module performs AST-level structural diffing between original and proposed code.
+ * Optimized for execution speed, memory footprint reduction, caching, and allocation efficiency
 // ... [truncated]
 ```
 
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:33.973Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T06:04:33.973Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:33.970Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T06:04:33.970Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:32.950Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: REJECTED — 4 passed, 2 failed | TIME:2026-09-20T06:04:32.950Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:32.947Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: REJECTED — 4 passed, 2 failed | TIME:2026-09-20T06:04:32.947Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:31.927Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/lib/archaeology-live-sync.ts | TIME:2026-09-20T06:04:31.926Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/archaeology-live-sync.ts`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/archaeology-live-sync.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `152`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-152 with verified AST structural sanity.
@@ -103,7 +116,7 @@ import { safeSetLocalStorage, safeGetLocalStorage } from './sa
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/archaeology-dataset.ts`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/archaeology-dataset.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `151`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-151 with verified AST structural sanity.
@@ -119,7 +132,7 @@ export interface CorrectWrongPair {
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/api-client.ts`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/api-client.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `150`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-150 with verified AST structural sanity.
@@ -137,7 +150,7 @@ export interface ApiResult<T> {
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/LifecycleManager.ts`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/LifecycleManager.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `149`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-149 with verified AST structural sanity.
@@ -156,7 +169,7 @@ export class LifecycleManager {
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/index.css`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/index.css`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `148`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-148 with verified AST structural sanity.
@@ -169,7 +182,7 @@ export class LifecycleManager {
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/hooks/useSystemState.ts`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/hooks/useSystemState.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `147`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-147 with verified AST structural sanity.
@@ -187,7 +200,7 @@ export type ConnectionStatus = 'idle' | 'connecting' | 'connected' | 'error' | (
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/hooks/useSystemOrchestrator.ts`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/hooks/useSystemOrchestrator.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `146`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-146 with verified AST structural sanity.
@@ -205,7 +218,7 @@ const HANDSHAKE_DELAY_MS = 150 as const
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/hooks/useSystemBootstrap.ts`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/hooks/useSystemBootstrap.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `145`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-145 with verified AST structural sanity.
@@ -222,7 +235,7 @@ import { useE
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/hooks/useQuantumState.ts`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/hooks/useQuantumState.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `144`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-144 with verified AST structural sanity.
@@ -233,27 +246,6 @@ import { useState, useCallback, useMemo } from 'react';
 export type QuantumState<T> = T & { readonly timestamp: number };
 export type QuantumUpdater<T> = (prev: QuantumState<T>) => T;
 export type UseQuantumStateReturn<T> = readonly [QuantumState<T>, (updater: 
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/hooks/useMutationData.ts`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `143`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-143 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-143 [2026-09-20T06:00:50.042Z] */
-import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
-
-export interface MutationRecord {
-  id?: string;
-  timestamp?: number;
-  filePath?: string;
-  type?: string;
-  description?: string;
-}
-
-export interface UseMutationDataResult {
-  mutati
 // ... [truncated]
 ```
 

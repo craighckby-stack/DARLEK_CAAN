@@ -1,13 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:04:49.284Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:05:00.687Z]
 ======================================================================
 
-[15:56:51] [0x00652000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
-[15:56:55] [0x00654000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 775.3 KB (7.57%).
-[15:56:59] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:57:00] [0x00656000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
-[15:57:01] [0x006821D6] [APPROVE   ] Mutation applied to src/components/SnippetScanner.tsx
-[15:57:02] [0x0046288B] [HEALTH    ] Auto-test: REJECTED — 4 passed, 2 failed
 [15:57:03] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
 [15:57:05] [0x00658000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 8.98 MB.
 [15:57:05] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
@@ -253,3 +247,9 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:04:49.284Z]
 [16:04:46] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [16:04:46] [0x00718000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.50 MB.
 [16:04:46] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
+[16:04:51] [0x0071A000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[16:04:54] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[16:04:55] [0x00496761] [APPROVE   ] Mutation applied to src/lib/ast-diff-gate.ts
+[16:04:56] [0x0071C000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 515.7 KB (5.04%).
+[16:04:56] [0x0097545B] [HEALTH    ] Auto-test: REJECTED — 4 passed, 3 failed
+[16:04:57] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
