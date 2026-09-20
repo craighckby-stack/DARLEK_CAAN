@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T08:04:40.763Z`
+*Last Synchronized:* `2026-09-20T08:04:49.410Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,34 +14,41 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T08:04:46.400Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T08:04:46.399Z
+```
+
+### 2. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T08:04:37.744Z`
 
 ```typescript
 [LOG:CONNECT] Synced 28 user portfolios and 27 global architectures. | TIME:2026-09-20T08:04:37.744Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 3. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T08:04:37.741Z`
 
 ```typescript
 [LOG:CONNECT] Synced 28 user portfolios and 27 global architectures. | TIME:2026-09-20T08:04:37.739Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T07:58:38.706Z`
 
 ```typescript
 [LOG:RAG_WRITE] Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-26, ra... | TIME:2026-09-20T07:58:38.705Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T07:58:38.701Z`
 
 ```typescript
 [LOG:HOTSWAP_OK] HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-25 [Source: RAG_GENE_HOTSWAP]. | TIME:2026-09-20T07:58:38.700Z
 ```
 
-### 5. `src/lib/neuralActiveGene.ts` (Gen 25)
+### 6. `src/lib/neuralActiveGene.ts` (Gen 25)
 *Source:* `MUTATION:src/lib/neuralActiveGene.ts` | *Indexed:* `2026-09-20T07:58:38.693Z`
 
 ```typescript
@@ -60,28 +67,28 @@ export interface NeuralGeneState {
 // ... [truncated]
 ```
 
-### 6. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T07:58:37.761Z`
 
 ```typescript
 [LOG:HOTSWAP] Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts | TIME:2026-09-20T07:58:37.760Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T07:58:19.716Z`
 
 ```typescript
 [LOG:RAG_WRITE] Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-25, ra... | TIME:2026-09-20T07:58:19.716Z
 ```
 
-### 8. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T07:58:19.712Z`
 
 ```typescript
 [LOG:HOTSWAP_OK] HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-24 [Source: RAG_GENE_HOTSWAP]. | TIME:2026-09-20T07:58:19.712Z
 ```
 
-### 9. `src/lib/neuralActiveGene.ts` (Gen 24)
+### 10. `src/lib/neuralActiveGene.ts` (Gen 24)
 *Source:* `MUTATION:src/lib/neuralActiveGene.ts` | *Indexed:* `2026-09-20T07:58:19.701Z`
 
 ```typescript
@@ -98,13 +105,6 @@ export interface NeuralGeneState {
   isOptimized: boolean;
   lastMut
 // ... [truncated]
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T07:58:18.812Z`
-
-```typescript
-[LOG:HOTSWAP] Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts | TIME:2026-09-20T07:58:18.811Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)

@@ -1,5 +1,5 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T08:04:40.766Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T08:04:49.411Z]
 ======================================================================
 
 [00:00:00] [0x00400000] [BOOT      ] Microsoft(R) MS-DOS(R) Version 6.22
@@ -10,3 +10,5 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T08:04:40.766Z]
 [18:04:35] [0x00401060] [SYS       ] Type HELP for commands. Running in safe mode.
 [18:04:37] [0x005AFD74] [CONNECT   ] Synced 28 user portfolios and 27 global architectures.
 [18:04:40] [0x00102000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 0.
+[18:04:45] [0x00104000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 176.2 KB (1.72%).
+[18:04:46] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
