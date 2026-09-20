@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T04:03:05.228Z",
+    "generatedAt": "2026-09-20T04:03:14.004Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789876990980_11674bca",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T04:03:10.980Z"
+    },
+    {
+      "id": "rag_log_1789876990218_805cb2ee",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T04:03:10.218Z"
+    },
+    {
+      "id": "rag_log_1789876990207_914a150b",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T04:03:10.206Z"
+    },
+    {
+      "id": "rag_log_1789876989530_752d8489",
+      "type": "HEALTH",
+      "description": "Auto-test: REJECTED — 4 passed, 2 failed",
+      "timestamp": "2026-09-20T04:03:09.530Z"
+    },
+    {
+      "id": "rag_log_1789876989529_d7b1adbb",
+      "type": "HEALTH",
+      "description": "Auto-test: REJECTED — 4 passed, 2 failed",
+      "timestamp": "2026-09-20T04:03:09.529Z"
+    },
+    {
+      "id": "rag_log_1789876988243_3b477ecb",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/lib/defaultPostmortems.ts",
+      "timestamp": "2026-09-20T04:03:08.243Z"
+    },
+    {
+      "id": "rag_log_1789876988241_cc09fb8d",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/lib/defaultPostmortems.ts",
+      "timestamp": "2026-09-20T04:03:08.241Z"
+    },
     {
       "id": "rag_log_1789876982089_68f4b0f5",
       "type": "LOG_SYNC",
@@ -114,79 +156,9 @@
       "type": "HEALTH",
       "description": "Auto-test: REJECTED — 4 passed, 2 failed",
       "timestamp": "2026-09-20T04:02:20.851Z"
-    },
-    {
-      "id": "rag_log_1789876940849_ff5d25d7",
-      "type": "HEALTH",
-      "description": "Auto-test: REJECTED — 4 passed, 2 failed",
-      "timestamp": "2026-09-20T04:02:20.849Z"
-    },
-    {
-      "id": "rag_log_1789876940103_55547926",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/lib/dalek-brain.ts",
-      "timestamp": "2026-09-20T04:02:20.103Z"
-    },
-    {
-      "id": "rag_log_1789876940101_c91c9832",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/lib/dalek-brain.ts",
-      "timestamp": "2026-09-20T04:02:20.101Z"
-    },
-    {
-      "id": "rag_log_1789876936065_2655ecf4",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T04:02:16.065Z"
-    },
-    {
-      "id": "rag_log_1789876927977_fde63566",
-      "type": "MUTATE",
-      "description": "[Batch 180/253] Proposed mutation for src/lib/dalek-brain.ts (risk: LOW)",
-      "timestamp": "2026-09-20T04:02:07.976Z"
-    },
-    {
-      "id": "rag_log_1789876927974_a5552926",
-      "type": "MUTATE",
-      "description": "[Batch 180/253] Proposed mutation for src/lib/dalek-brain.ts (risk: LOW)",
-      "timestamp": "2026-09-20T04:02:07.974Z"
-    },
-    {
-      "id": "rag_log_1789876925649_9414c11c",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T04:02:05.649Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-e39055f1",
-      "time": "13:57:00",
-      "addr": "0x00957150",
-      "tag": "MUTATE",
-      "message": "[Batch 167/253] Proposed mutation for src/hooks/useQuantumState.ts (risk: LOW)"
-    },
-    {
-      "id": "dos-784e631a",
-      "time": "13:57:09",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-1a1e6cad",
-      "time": "13:57:12",
-      "addr": "0x009D1A94",
-      "tag": "APPROVE",
-      "message": "Mutation applied to src/hooks/useQuantumState.ts"
-    },
-    {
-      "id": "dos-c5bd0427",
-      "time": "13:57:13",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
     {
       "id": "dos-159bd990",
       "time": "13:57:14",
@@ -855,6 +827,34 @@
     {
       "id": "dos-ffc005f0",
       "time": "14:03:02",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-c997f019",
+      "time": "14:03:08",
+      "addr": "0x005E686B",
+      "tag": "APPROVE",
+      "message": "Mutation applied to src/lib/defaultPostmortems.ts"
+    },
+    {
+      "id": "dos-dc454c4b",
+      "time": "14:03:09",
+      "addr": "0x0046288B",
+      "tag": "HEALTH",
+      "message": "Auto-test: REJECTED — 4 passed, 2 failed"
+    },
+    {
+      "id": "dos-ac4efd7b",
+      "time": "14:03:10",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-e5e6af22",
+      "time": "14:03:10",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"

@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:03:05.228Z`
+*Last Synchronized:* `2026-09-20T04:03:14.004Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,87 +14,90 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:10.980Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:03:10.980Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:10.219Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:03:10.218Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:10.207Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:03:10.206Z
+```
+
+### 4. `src/lib/defaultPostmortems.ts` (Gen 156)
+*Source:* `MUTATION:src/lib/defaultPostmortems.ts` | *Indexed:* `2026-09-20T04:03:10.201Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-156 [2026-09-20T04:02:56.241Z] */
+export const DEFAULT_POSTMORTEMS_MD = "# Neural Engine Post-Mortems\n\n## System Overview & Constraint Mechanics\n\n> **Executive\n\n### ❌ [2026-09-12] compare.js `source: mutation-cycle`\n**Symptom:** AST / TypeScript Compiler Validation Rejected\n**EVIDENCE (
+// ... [truncated]
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:09.531Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: REJECTED — 4 passed, 2 failed | TIME:2026-09-20T04:03:09.530Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:09.529Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: REJECTED — 4 passed, 2 failed | TIME:2026-09-20T04:03:09.529Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:08.243Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to src/lib/defaultPostmortems.ts | TIME:2026-09-20T04:03:08.243Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:08.241Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to src/lib/defaultPostmortems.ts | TIME:2026-09-20T04:03:08.241Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:02.089Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:03:02.089Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:02:57.136Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 182/253] Proposed mutation for src/lib/defaultPostmortems.ts (risk: LOW) | TIME:2026-09-20T04:02:57.136Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:02:57.130Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/defaultPostmortems.ts`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `156`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-156 with verified AST structural sanity.
 ```typescript
-[LOG:MUTATE] [Batch 182/253] Proposed mutation for src/lib/defaultPostmortems.ts (risk: LOW) | TIME:2026-09-20T04:02:57.129Z
-```
-
-### 4. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:02:53.530Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:02:53.530Z
-```
-
-### 5. `src/lib/db.ts` (Gen 155)
-*Source:* `MUTATION:src/lib/db.ts` | *Indexed:* `2026-09-20T04:02:45.642Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-155 [2026-09-20T04:02:32.270Z] */
-import * as fs from 'fs';
-import * as path from 'path';
-import * as crypto from 'crypto';
-
-/**
- * Resilient Zero-Dependency SQLite/JSON Database Manager
- * Implements Prisma-compatible API without native binary dependencies.
- * Guarantees 100% compatibility in 
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-156 [2026-09-20T04:02:56.241Z] */
+export const DEFAULT_POSTMORTEMS_MD = "# Neural Engine Post-Mortems\n\n## System Overview & Constraint Mechanics\n\n> **Executive\n\n### ❌ [2026-09-12] compare.js `source: mutation-cycle`\n**Symptom:** AST / TypeScript Compiler Validation Rejected\n**EVIDENCE (
 // ... [truncated]
 ```
 
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:02:45.617Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:02:45.617Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:02:45.613Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:02:45.613Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:02:44.969Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 4 passed, 0 failed | TIME:2026-09-20T04:02:44.968Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:02:44.964Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 4 passed, 0 failed | TIME:2026-09-20T04:02:44.964Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:02:44.222Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/lib/db.ts | TIME:2026-09-20T04:02:44.222Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/db.ts`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/db.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `155`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-155 with verified AST structural sanity.
@@ -111,7 +114,7 @@ import * as crypto from 'crypto';
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/dalek-brain.ts`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/dalek-brain.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `154`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-154 with verified AST structural sanity.
@@ -126,7 +129,7 @@ import * as crypto from 'crypto';
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/constants.ts`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/constants.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `153`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-153 with verified AST structural sanity.
@@ -144,7 +147,7 @@ export const COLORS = {
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/config.ts`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/config.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `152`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-152 with verified AST structural sanity.
@@ -158,7 +161,7 @@ export const AUTONOMOUS
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/binaryShield.ts`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/binaryShield.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `151`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-151 with verified AST structural sanity.
@@ -174,7 +177,7 @@ export interface
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/ast-diff-gate.ts`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/ast-diff-gate.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `150`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-150 with verified AST structural sanity.
@@ -187,7 +190,7 @@ export interface
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/archaeology-live-sync.ts`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/archaeology-live-sync.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `149`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-149 with verified AST structural sanity.
@@ -200,7 +203,7 @@ import { safeSetLocalStorage, safeGetLocalStorage } from './sa
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/archaeology-dataset.ts`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/archaeology-dataset.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `148`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-148 with verified AST structural sanity.
@@ -216,7 +219,7 @@ export interface CorrectWrongPair {
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/api-client.ts`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/api-client.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `147`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-147 with verified AST structural sanity.
@@ -231,25 +234,6 @@ import { safeFetchJson } from './safe-json';
 export interface ApiResult<T> {
   readonly success: boolean;
   readonly 
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/LifecycleManager.ts`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `146`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-146 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-146 [2026-09-20T03:58:58.084Z] */
-export interface SubscriptionTeardown {
-  readonly unsubscribe: () => void;
-}
-
-/**
- * Manages resource lifecycles and ensures safe, ordered teardown of subscriptions.
- */
-export class LifecycleManager {
-  private subscriptions: SubscriptionTeardown[] = [];
-  pr
 // ... [truncated]
 ```
 
