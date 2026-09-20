@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789883129876_22bb2f8b",
+    "type": "MUTATE",
+    "description": "[Batch 125/253] Proposed mutation for src/app/api/system/scaffold/route.ts (risk: LOW)",
+    "timestamp": "2026-09-20T05:45:29.876Z"
+  },
+  {
+    "id": "rag_log_1789883129873_6c87a39a",
+    "type": "MUTATE",
+    "description": "[Batch 125/253] Proposed mutation for src/app/api/system/scaffold/route.ts (risk: LOW)",
+    "timestamp": "2026-09-20T05:45:29.873Z"
+  },
+  {
+    "id": "rag_log_1789883128519_792bbf52",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:45:28.519Z"
+  },
+  {
     "id": "rag_log_1789883120365_4ac36036",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -126,27 +144,9 @@
     "timestamp": "2026-09-20T05:44:43.851Z"
   },
   {
-    "id": "rag_log_1789883075118_9cfa1fc0",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T05:44:35.118Z"
-  },
-  {
     "id": "rag_log_1789883075119_a89318f6",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
     "timestamp": "2026-09-20T05:44:35.118Z"
-  },
-  {
-    "id": "rag_log_1789883074537_86fb8c11",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T05:44:34.537Z"
-  },
-  {
-    "id": "rag_log_1789883074537_c4d80096",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T05:44:34.537Z"
   }
 ]
