@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:42:24.614Z",
+    "generatedAt": "2026-09-20T05:42:34.065Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789882950983_8bb09f86",
+      "type": "MUTATE",
+      "description": "[Batch 117/253] Proposed mutation for src/app/api/github/repo-status/route.ts (risk: LOW)",
+      "timestamp": "2026-09-20T05:42:30.983Z"
+    },
+    {
+      "id": "rag_log_1789882950978_08cd03df",
+      "type": "MUTATE",
+      "description": "[Batch 117/253] Proposed mutation for src/app/api/github/repo-status/route.ts (risk: LOW)",
+      "timestamp": "2026-09-20T05:42:30.978Z"
+    },
+    {
+      "id": "rag_log_1789882950322_9d337800",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:42:30.322Z"
+    },
     {
       "id": "rag_log_1789882940968_2a01cf1a",
       "type": "HEALTH",
@@ -138,55 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T05:41:35.729Z"
-    },
-    {
-      "id": "rag_log_1789882895198_77a4981b",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:41:35.198Z"
-    },
-    {
-      "id": "rag_log_1789882895177_e5729ebe",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:41:35.177Z"
-    },
-    {
-      "id": "rag_log_1789882894233_df2f3fb2",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/app/api/github/delete-file/route.ts",
-      "timestamp": "2026-09-20T05:41:34.233Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-0fc73fac",
-      "time": "15:39:16",
-      "addr": "0x0094A248",
-      "tag": "APPROVE",
-      "message": "Mutation applied to src/app/api/github/README.md"
-    },
-    {
-      "id": "dos-68aab910",
-      "time": "15:39:16",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
-    {
-      "id": "dos-ffe52fd1",
-      "time": "15:39:17",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-6ba0b360",
-      "time": "15:39:19",
-      "addr": "0x0049C000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 696.4 KB (6.8%)."
-    },
     {
       "id": "dos-bcc69e04",
       "time": "15:39:24",
@@ -858,6 +830,34 @@
       "addr": "0x002B4AF9",
       "tag": "LOCK_WAIT",
       "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-188333da",
+      "time": "15:42:27",
+      "addr": "0x004EA000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-cde334aa",
+      "time": "15:42:30",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-bf6059d9",
+      "time": "15:42:30",
+      "addr": "0x001B45D8",
+      "tag": "MUTATE",
+      "message": "[Batch 117/253] Proposed mutation for src/app/api/github/repo-status/route.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-743da8d0",
+      "time": "15:42:31",
+      "addr": "0x004EC000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 981.8 KB (9.59%)."
     }
   ]
 }
