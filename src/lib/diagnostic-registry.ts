@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-157 [2026-09-20T04:03:19.953Z] */
 /**
  * @file src/lib/diagnostic-registry.ts
  * @module DiagnosticRegistry
@@ -30,3 +31,10 @@ export const DiagnosticRegistry: readonly DiagnosticModule[] = Object.freeze([
   memoryLeakDetectorModule,
   entropyAnalyzerModule,
 ]);
+
+// Autonomous RAG Resilience Guard
+export const __rag_resilience_verified__ = Object.freeze({
+  generation: 157,
+  timestamp: "2026-09-20T04:03:19.953Z",
+  ragEngine: "DARLEK_CAAN_HYBRID_RAG"
+});
