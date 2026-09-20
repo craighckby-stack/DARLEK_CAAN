@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789884260817_26527270",
+    "type": "MUTATE",
+    "description": "[Batch 175/253] Proposed mutation for src/lib/archaeology-live-sync.ts (risk: LOW)",
+    "timestamp": "2026-09-20T06:04:20.817Z"
+  },
+  {
+    "id": "rag_log_1789884260813_fb7d34f0",
+    "type": "MUTATE",
+    "description": "[Batch 175/253] Proposed mutation for src/lib/archaeology-live-sync.ts (risk: LOW)",
+    "timestamp": "2026-09-20T06:04:20.813Z"
+  },
+  {
+    "id": "rag_log_1789884258972_bca6b72d",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T06:04:18.971Z"
+  },
+  {
     "id": "rag_log_1789884250464_1e371813",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
     "timestamp": "2026-09-20T06:03:23.097Z"
-  },
-  {
-    "id": "rag_log_1789884202050_b971aeea",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T06:03:22.050Z"
-  },
-  {
-    "id": "rag_log_1789884202047_9f05bdb5",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T06:03:22.046Z"
-  },
-  {
-    "id": "rag_log_1789884201059_74ec5706",
-    "type": "APPROVE",
-    "description": "Mutation applied to src/lib/LifecycleManager.ts",
-    "timestamp": "2026-09-20T06:03:21.059Z"
   }
 ]
