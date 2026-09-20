@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:14:02.887Z`
+*Last Synchronized:* `2026-09-20T05:14:18.671Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,90 +14,134 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:13:59.875Z`
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:15.649Z`
 
 ```typescript
-[LOG:MUTATE] [Batch 27/253] Proposed mutation for download_changed_fast.js (risk: LOW) | TIME:2026-09-20T05:13:59.875Z
+[LOG:MUTATE] [Batch 28/253] Proposed mutation for download_missing.js (risk: LOW) | TIME:2026-09-20T05:14:15.649Z
 ```
 
 ### 2. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:13:59.873Z`
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:15.647Z`
 
 ```typescript
-[LOG:MUTATE] [Batch 27/253] Proposed mutation for download_changed_fast.js (risk: LOW) | TIME:2026-09-20T05:13:59.873Z
+[LOG:MUTATE] [Batch 28/253] Proposed mutation for download_missing.js (risk: LOW) | TIME:2026-09-20T05:14:15.646Z
 ```
 
 ### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:13:59.854Z`
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:13.592Z`
 
 ```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:13:59.853Z
+[LOG:RAG_WRITE] Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-8, rai... | TIME:2026-09-20T05:14:13.592Z
 ```
 
-### 4. `download_changed.js` (Gen 24)
-*Source:* `MUTATION:download_changed.js` | *Indexed:* `2026-09-20T05:13:50.988Z`
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:13.589Z`
 
 ```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-24 [2026-09-20T05:13:38.398Z] */
-import fs from 'node:fs/promises';
-import path from 'node:path';
+[LOG:HOTSWAP_OK] HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-7 [Source: RAG_GENE_HOTSWAP]. | TIME:2026-09-20T05:14:13.589Z
+```
 
+### 5. `src/lib/neuralActiveGene.ts` (Gen 7)
+*Source:* `MUTATION:src/lib/neuralActiveGene.ts` | *Indexed:* `2026-09-20T05:14:13.585Z`
+
+```typescript
 /**
- * RemoteBlob definition.
- * @typedef {Object} RemoteBlob
- * @property {string} path
- * @property {string} [sha]
+ * @file src/lib/neuralActiveGene.ts
+ * @description Active neural gene evolved and hotswapped autonomously via DARLEK CAAN RAG Engine.
+ * Generation: G-8 | RAG Vector Anchored | Hotswap Verified
  */
 
-const REPOSITORY_BASE_URL = 'https://raw.githubusercontent.com/craighckby-
+export interface NeuralGeneState {
+  generation: number;
+  dalekPowerLevel: number;
+  activeConsensus: string;
+  isOptimized: boolean;
+  lastMuta
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:13:50.276Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:13:50.276Z
-```
-
 ### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:13:50.274Z`
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:13.019Z`
 
 ```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:13:50.274Z
+[LOG:HOTSWAP] Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts | TIME:2026-09-20T05:14:13.019Z
 ```
 
 ### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:13:49.962Z`
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:11.784Z`
 
 ```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:13:49.962Z
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:14:11.783Z
 ```
 
 ### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:13:49.961Z`
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:11.780Z`
 
 ```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:13:49.960Z
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:14:11.780Z
 ```
 
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:13:49.608Z`
+### 9. `download_changed_fast.js` (Gen 25)
+*Source:* `MUTATION:download_changed_fast.js` | *Indexed:* `2026-09-20T05:14:11.391Z`
 
 ```typescript
-[LOG:APPROVE] Mutation applied to download_changed.js | TIME:2026-09-20T05:13:49.607Z
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-25 [2026-09-20T05:13:59.871Z] */
+import fs from 'node:fs/promises';
+import { existsSync } from 'node:fs';
+import path from 'node:path';
+
+const REMOTE_BLOBS_PATH = 'remote_blobs.json';
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/craighckby-stack/epistemic_debate_engine/main/';
+con
+// ... [truncated]
 ```
 
 ### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:13:49.606Z`
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:14:11.047Z`
 
 ```typescript
-[LOG:APPROVE] Mutation applied to download_changed.js | TIME:2026-09-20T05:13:49.605Z
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:14:11.046Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `download_changed.js`
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
+- **Verdict:** `correct`
+- **Risk Score:** `0.12` | **Gen:** `7`
+- **Rationale:** RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-8, raised power ceiling to 2000, and validated functional sequence hotswapping.
+```typescript
+/**
+ * @file src/lib/neuralActiveGene.ts
+ * @description Active neural gene evolved and hotswapped autonomously via DARLEK CAAN RAG Engine.
+ * Generation: G-8 | RAG Vector Anchored | Hotswap Verified
+ */
+
+export interface NeuralGeneState {
+  generation: number;
+  dalekPowerLevel: number;
+  activeConsensus: string;
+  isOptimized: boolean;
+  lastMuta
+// ... [truncated]
+```
+
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `download_changed_fast.js`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `25`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-25 with verified AST structural sanity.
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-25 [2026-09-20T05:13:59.871Z] */
+import fs from 'node:fs/promises';
+import { existsSync } from 'node:fs';
+import path from 'node:path';
+
+const REMOTE_BLOBS_PATH = 'remote_blobs.json';
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/craighckby-stack/epistemic_debate_engine/main/';
+con
+// ... [truncated]
+```
+
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `download_changed.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `24`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-24 with verified AST structural sanity.
@@ -117,7 +161,7 @@ const REPOSITORY_BASE_URL = 'https://raw.githubusercontent.com/craighckby-
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `docs/EVOLUTION_PROTOCOL.md`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `docs/EVOLUTION_PROTOCOL.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `23`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-23 with verified AST structural sanity.
@@ -129,7 +173,7 @@ const REPOSITORY_BASE_URL = 'https://raw.githubusercontent.com/craighckby-
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `docs/ARCHITECTURE_MANIFESTO.md`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `docs/ARCHITECTURE_MANIFESTO.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `22`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-22 with verified AST structural sanity.
@@ -141,7 +185,7 @@ const REPOSITORY_BASE_URL = 'https://raw.githubusercontent.com/craighckby-
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `docs/ARCHITECTURE.md`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `docs/ARCHITECTURE.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `21`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-21 with verified AST structural sanity.
@@ -155,7 +199,7 @@ The **DARLEK CANN Ecosystem** is an autonomous, self-refactoring quantum dialogu
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `compare.js`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `compare.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `20`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-20 with verified AST structural sanity.
@@ -172,7 +216,7 @@ interface CompareOption
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `check_github_page.js`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `check_github_page.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `19`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-19 with verified AST structural sanity.
@@ -189,7 +233,7 @@ const NETWORK_CONFIG = Object.freeze({
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `bun.lock`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `bun.lock`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `18`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-18 with verified AST structural sanity.
@@ -208,7 +252,7 @@ const NETWORK_CONFIG = Object.freeze({
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `assets/.aistudio/SECURITY_PROTOCOL.md`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `assets/.aistudio/SECURITY_PROTOCOL.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `17`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-17 with verified AST structural sanity.
@@ -223,35 +267,6 @@ const NETWORK_CONFIG = Object.freeze({
 ---
 
 ## Executive S
-// ... [truncated]
-```
-
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `assets/.aistudio/README.md`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `16`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-16 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-16 [2026-09-20T05:10:05.451Z] */
-# AI Studio Configuration & Governance
-
-## Overview
-This directory serves as the control plane for the DARLEK CANN v3.0 evolution engine. It manages environment-specific configurations, agent state persistence, and security policies for the repository.
-
-## Archi
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `assets/.aistudio/ARCHITECTURE.md`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `15`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-15 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-15 [2026-09-20T05:09:44.369Z] */
-# DARLEK CANN v3.0: Sovereign Architectural Blueprint
-
-## Executive Summary
-
-The DARLEK CANN (OMEGA-CORE) architecture represents an autonomous, self-refactoring evolutionary runtime environment. Operating at the intersection of multi-tier LLM fallbacks, agent s
 // ... [truncated]
 ```
 
