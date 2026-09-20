@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:29:37.321Z",
+    "generatedAt": "2026-09-20T05:29:44.980Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789882181937_17d43315",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:29:41.937Z"
+    },
+    {
+      "id": "rag_log_1789882178288_eed53292",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:29:38.288Z"
+    },
+    {
+      "id": "rag_log_1789882178287_af9216e4",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:29:38.287Z"
+    },
+    {
+      "id": "rag_log_1789882177957_88866545",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T05:29:37.957Z"
+    },
+    {
+      "id": "rag_log_1789882177956_e54d5db0",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T05:29:37.956Z"
+    },
+    {
+      "id": "rag_log_1789882177426_5e1cb60f",
+      "type": "APPROVE",
+      "description": "Mutation applied to public/placeholder.txt",
+      "timestamp": "2026-09-20T05:29:37.426Z"
+    },
+    {
+      "id": "rag_log_1789882177424_07ea0150",
+      "type": "APPROVE",
+      "description": "Mutation applied to public/placeholder.txt",
+      "timestamp": "2026-09-20T05:29:37.424Z"
+    },
     {
       "id": "rag_log_1789882174292_ca3933a0",
       "type": "LOG_SYNC",
@@ -114,93 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T05:28:45.047Z"
-    },
-    {
-      "id": "rag_log_1789882125046_28648087",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:28:45.046Z"
-    },
-    {
-      "id": "rag_log_1789882124706_02ef602f",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:28:44.706Z"
-    },
-    {
-      "id": "rag_log_1789882124705_af445e01",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:28:44.705Z"
-    },
-    {
-      "id": "rag_log_1789882124112_7e90008e",
-      "type": "APPROVE",
-      "description": "Mutation applied to postcss.config.mjs",
-      "timestamp": "2026-09-20T05:28:44.112Z"
-    },
-    {
-      "id": "rag_log_1789882124110_3131ddfd",
-      "type": "APPROVE",
-      "description": "Mutation applied to postcss.config.mjs",
-      "timestamp": "2026-09-20T05:28:44.110Z"
-    },
-    {
-      "id": "rag_log_1789882122070_a5ee0a58",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:28:42.070Z"
-    },
-    {
-      "id": "rag_log_1789882113124_fef7e7d3",
-      "type": "MUTATE",
-      "description": "[Batch 75/253] Proposed mutation for postcss.config.mjs (risk: LOW)",
-      "timestamp": "2026-09-20T05:28:33.124Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-9a7d2661",
-      "time": "15:26:22",
-      "addr": "0x00358000",
-      "tag": "RAG_INDEX",
-      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.67 MB."
-    },
-    {
-      "id": "dos-3dae5807",
-      "time": "15:26:22",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
-    {
-      "id": "dos-388eb5a3",
-      "time": "15:26:23",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-032f33d3",
-      "time": "15:26:27",
-      "addr": "0x0035A000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
-    {
-      "id": "dos-30f3ae67",
-      "time": "15:26:30",
-      "addr": "0x006EFD79",
-      "tag": "APPROVE",
-      "message": "Mutation applied to logs/POSTMORTEMS.md"
-    },
-    {
-      "id": "dos-f0a70062",
-      "time": "15:26:30",
-      "addr": "0x0046288B",
-      "tag": "HEALTH",
-      "message": "Auto-test: REJECTED — 4 passed, 2 failed"
-    },
     {
       "id": "dos-a6f59d47",
       "time": "15:26:30",
@@ -858,6 +816,48 @@
       "addr": "0x002B4AF9",
       "tag": "LOCK_WAIT",
       "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-1b6aaef0",
+      "time": "15:29:37",
+      "addr": "0x00264E45",
+      "tag": "APPROVE",
+      "message": "Mutation applied to public/placeholder.txt"
+    },
+    {
+      "id": "dos-3b74c453",
+      "time": "15:29:37",
+      "addr": "0x007EEE12",
+      "tag": "HEALTH",
+      "message": "Auto-test: PASSED — 5 passed, 0 failed"
+    },
+    {
+      "id": "dos-8c5fcde7",
+      "time": "15:29:38",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-2a81a5be",
+      "time": "15:29:39",
+      "addr": "0x003AA000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-9de60629",
+      "time": "15:29:41",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-e440e57a",
+      "time": "15:29:43",
+      "addr": "0x003AC000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 467.0 KB (4.56%)."
     }
   ]
 }
