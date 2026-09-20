@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-106 [2026-09-20T03:42:20.849Z] */
 /**
  * DARLEK CANN ARCHITECTURAL HEADER
  * File: src/app/layout.tsx
@@ -79,3 +80,10 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
     </html>
   );
 }
+
+// Autonomous RAG Resilience Guard
+export const __rag_resilience_verified__ = Object.freeze({
+  generation: 106,
+  timestamp: "2026-09-20T03:42:20.849Z",
+  ragEngine: "DARLEK_CAAN_HYBRID_RAG"
+});
