@@ -1,4 +1,4 @@
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-23 [2026-09-20T05:02:29.778Z] */
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-24 [2026-09-20T05:30:00.000Z] */
 <!--
  * ARCHITECTURAL SYSTEM HEADER: PULL REQUEST SPECIFICATION TEMPLATE
  * Engine: EMG Core Neural Code and Documentation Optimizer Engine
@@ -20,12 +20,12 @@
 
 ## ⚡ Executive Summary
 
-| Parameter              | Specification / PR State                                                                                    |
-| :--------------------- | :---------------------------------------------------------------------------------------------------------- |
+| Parameter              | Specification / PR State                                                                                                                              |
+| :--------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **PR Classification**  | `[ ] Fix` &nbsp;•&nbsp; `[ ] Feature` &nbsp;•&nbsp; `[ ] Breaking` &nbsp;•&nbsp; `[ ] Sandbox` &nbsp;•&nbsp; `[ ] Telemetry` &nbsp;•&nbsp; `[ ] Security` |
-| **Target Subsystems**  | `[ e.g., Core Engine, DCW Consensus, Sandbox Runtime, Telemetry Pipeline, CI/CD Workflows ]`                |
-| **Tracking Reference** | Closes / Fixes #`<!-- Issue Number -->`                                                                     |
-| **Automated Gates**    | `[ ] Zero-Leak Sandbox` &nbsp;\|&nbsp; `[ ] DCW Liveness` &nbsp;\|&nbsp; `[ ] Diagnostic Engine` &nbsp;\|&nbsp; `[ ] SAST / Security` &nbsp;\|&nbsp; `[ ] Secret Scan` |
+| **Target Subsystems**  | `[ e.g., Core Engine, DCW Consensus, Sandbox Runtime, Telemetry Pipeline, CI/CD Workflows ]`                                                          |
+| **Tracking Reference** | Closes / Fixes #`<!-- Issue Number -->`                                                                                                               |
+| **Automated Gates**    | `[ ] Zero-Leak Sandbox` &nbsp;\|&nbsp; `[ ] DCW Liveness` &nbsp;\|&nbsp; `[ ] Diagnostic Engine` &nbsp;\|&nbsp; `[ ] SAST / Security` &nbsp;\|&nbsp; `[ ] Secret Scan` &nbsp;\|&nbsp; `[ ] Supply Chain Audit` |
 
 > [!CAUTION]
 > **CRITICAL SECURITY NOTICE:** If this pull request resolves an unpatched vulnerability, active zero-day, or credential leak, **DO NOT** submit it publicly. Follow the [Responsible Vulnerability Disclosure](#6-responsible-vulnerability-disclosure) protocol immediately.
@@ -85,13 +85,17 @@
 
 - [ ] **State Isolation:** Prevents global state pollution, cross-request leaks, and unhandled memory allocations.
 - [ ] **Deterministic Teardown:** Registers explicit cleanup routines for all event listeners, streams, and active timers.
+- [ ] **Off-Heap & Native Teardown:** Explicitly frees WebAssembly instances, native C/C++ memory bindings, Buffers, and off-heap allocations upon termination.
 - [ ] **GC Optimization:** Employs `WeakMap` / `WeakSet` primitives in cache layers to ensure non-blocking garbage collection.
 - [ ] **Memory Health:** Validates static baselines and runtime memory profiles via `DiagnosticEngine`.
 - [ ] **Resource Quotas:** Enforces strict CPU/Memory bounds and execution limits to prevent Denial of Service (DoS) via resource exhaustion.
+- [ ] **Thread & Worker Lifecycle:** Terminates worker threads, child processes, and asynchronous IPC handles cleanly within sandbox boundaries.
 
 ### 3.2 Dynamic Consensus Weighting (DCW)
 
 - [ ] **Consensus Invariance:** Confirms changes eliminate deadlocks, livelocks, race conditions, and resource starvation.
+- [ ] **Quorum & BFT Resilience:** Verifies Byzantine Fault Tolerance thresholds and prevents single-agent split-brain scenarios.
+- [ ] **Weight Drift Detection:** Establishes mathematical convergence bounds preventing runaway feedback loops or unbounded score accumulation.
 - [ ] **Algorithm Mutation:** Modifies agent decision weights or scoring algorithms.
   *(If checked, document weight derivation and validation model below)*
 
@@ -103,6 +107,8 @@
 - [ ] **Sandboxed Execution:** Dynamic code evaluation and third-party execution paths run exclusively inside isolated contexts.
 - [ ] **Fail-Safe Defaults:** System falls back gracefully to deterministic safe states upon unhandled exceptions.
 - [ ] **Timeout Enforcement:** All asynchronous operations, IPC communications, and network calls implement strict, deterministic timeouts.
+- [ ] **Abort & Cancellation Propagation:** Propagates `AbortSignal` / cancellation tokens across all asynchronous chains and pending I/O operations.
+- [ ] **Backpressure & Queue Bounds:** Enforces finite capacities and backpressure policies on all internal event queues and message streams.
 
 ---
 
@@ -111,6 +117,10 @@
 ### 4.1 Threat Modeling & Input Boundaries
 
 - [ ] **Input Sanitization:** Validates all ingress parameters, network inputs, environment variables, and serialized payloads against strict schemas.
+- [ ] **Prototype Pollution Mitigation:** Hardens dictionary objects via `Object.create(null)` or validates JSON schema structures against `__proto__` and `constructor` injections.
+- [ ] **ReDoS Defense:** Confirms all regular expressions run in linear time and avoid exponential backtracking patterns.
+- [ ] **Path Traversal & Canonicalization:** Enforces canonical path verification (`realpath`) to block arbitrary filesystem escapes.
+- [ ] **SSRF & Network Hardening:** Restricts outgoing egress calls to validated destination allowlists and rejects internal IP ranges (RFC 1918 / RFC 4193).
 - [ ] **Injection Prevention:** Eliminates raw query constructions, unsanitized shell executions, and unescaped HTML rendering.
 - [ ] **Least Privilege:** Enforces scoped tokens, process isolation, and minimal filesystem access boundaries.
 - [ ] **Authorization & RBAC:** Verifies that all new endpoints, IPC channels, or state mutations enforce strict Role-Based Access Control.
@@ -123,7 +133,8 @@
 - [ ] Secret Scanning executed (e.g., TruffleHog, GitHub Advanced Security) confirming zero leaked credentials or hardcoded keys.
 - [ ] Software Bill of Materials (SBOM) and dependency audit completed (`npm audit` / `pip-audit` / `cargo audit`).
 - [ ] Cryptographic operations employ constant-time comparisons and FIPS-compliant primitives.
-- [ ] CI/CD Integrity: Modifications to GitHub Actions workflows (`.github/workflows`) have been explicitly reviewed for supply chain risks and script injection vulnerabilities.
+- [ ] Supply Chain Integrity: Pinned all external dependencies to immutable SHAs or exact semantic versions; verified lockfile consistency.
+- [ ] CI/CD Integrity: Modifications to GitHub Actions workflows (`.github/workflows`) have been explicitly reviewed for supply chain risks, runner security, and script injection vulnerabilities.
 
 ---
 
@@ -136,6 +147,7 @@
 | **Unit Tests**            | `[   /   ]`   | `>= 90%`          | `[ Pass / Fail ]`  |
 | **Integration Tests**     | `[   /   ]`   | `>= 85%`          | `[ Pass / Fail ]`  |
 | **Fuzz / Boundary Tests** | `[   /   ]`   | `N/A`             | `[ Pass / Fail ]`  |
+| **Chaos / Fault Injection**| `[   /   ]`  | `Resilient`       | `[ Pass / Fail ]`  |
 | **Diagnostic Benchmarks** | `[   /   ]`   | `Within +/- 2%`   | `[ Pass / Fail ]`  |
 | **Memory Leak Tests**     | `[   /   ]`   | `0 Bytes Delta`   | `[ Pass / Fail ]`  |
 
@@ -162,10 +174,12 @@ If you have discovered a vulnerability or security-critical defect:
 - [ ] **Atomic Rollback:** This change can be cleanly reverted via `git revert` without schema corruption or state divergence.
 - [ ] **Feature Flag Guard:** Critical paths are shielded behind a dynamic toggle (`FEATURE_NAME_ENABLED`).
 - [ ] **Schema Compatibility:** Database migrations remain backwards-compatible with N-1 engine versions.
+- [ ] **State Convergence:** Rollback preserves consensus state and does not create orphaned persistent transactions or cache inconsistencies.
 
 ### 7.2 Rollback Procedure
 
 1. Identify regression via Diagnostic Engine telemetry alert.
-2. Disable the active feature flag: [ FLAG_NAME ]
-3. Execute standard atomic revert: git revert -m 1 [ MERGE_COMMIT_SHA ]
-4. Trigger emergency gatekeeper pipeline to restore prior stable baseline.
+2. Disable the active feature flag: `[ FEATURE_NAME_ENABLED ]`
+3. Execute standard atomic revert: `git revert -m 1 [ MERGE_COMMIT_SHA ]`
+4. Flush or invalidate dependent distributed cache layers and re-sync consensus baseline.
+5. Trigger emergency gatekeeper pipeline to restore and verify prior stable baseline.
