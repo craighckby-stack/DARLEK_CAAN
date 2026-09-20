@@ -5,20 +5,28 @@
 # --- [ CORE ENVIRONMENT & SECURITY ] ---
 # Never commit active secrets or environment overrides
 .env
+.env.*
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 !.env.example
+!.env.template
 *.pem
 *.key
 *.pub
 *.cert
+*.crt
+*.csr
 *.p12
 *.pfx
 *.jks
 *.kdbx
+*.keystore
 id_rsa*
+id_ed25519*
+id_ecdsa*
+id_dsa*
 .ssh/
 .aws/
 .netrc
@@ -26,7 +34,30 @@ _netrc
 oauth*.json
 secrets/
 credentials.json
+client_secret*.json
+service-account*.json
+*gcp*.json
+*firebase*.json
+*.token
+*.secret
 .npmrc
+.yarnrc
+.vault-token
+.gnupg/
+secring.*
+
+# Cloud & Orchestration Secret State
+kubeconfig
+*.kubeconfig
+.kube/
+*.tfvars
+*.tfvars.json
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+docker-compose.override.yml
+.docker/
 
 # --- [ DEPENDENCIES & RUNTIMES ] ---
 # Node.js / JavaScript
@@ -34,7 +65,12 @@ node_modules/
 jspm_packages/
 .npm/
 .yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
 .pnp.*
+.pnpm-store/
+.bun/
 
 # Python / Research Scripts
 venv/
@@ -46,6 +82,10 @@ __pycache__/
 .tox/
 .pytest_cache/
 .mypy_cache/
+.ipynb_checkpoints/
+*.egg-info/
+eggs/
+.eggs/
 
 # --- [ BUILD, DISTRIBUTION & RELAY ] ---
 # High-performance build targets and Relay Chain state
@@ -53,6 +93,11 @@ build/
 dist/
 out/
 target/
+.next/
+.nuxt/
+.svelte-kit/
+.turbo/
+*.tsbuildinfo
 .relay_chain/
 build_relay.state
 system_fingerprint.json
@@ -63,6 +108,8 @@ system_fingerprint.json
 *.sqlite
 *.sqlite3
 *.db
+*.wal
+*.shm
 
 # --- [ DIAGNOSTICS & TELEMETRY ] ---
 # Test coverage and execution logs
@@ -74,6 +121,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+pnpm-debug.log*
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 *.dmp
 *.core
@@ -93,6 +141,8 @@ memory_dumps/
 *.shc
 *.apk
 *.dex
+*.elf
+*.ioc
 
 # --- [ IDE & EDITOR METADATA ] ---
 # Visual Studio Code
@@ -112,6 +162,7 @@ memory_dumps/
 *~
 .project
 .settings/
+.fleet/
 
 # --- [ OS SPECIFIC ] ---
 .DS_Store
