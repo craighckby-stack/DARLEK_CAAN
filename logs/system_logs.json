@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:23:26.687Z",
+    "generatedAt": "2026-09-20T03:23:38.982Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789874615325_ac09577a",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 1 issues (0 high)",
+      "timestamp": "2026-09-20T03:23:35.325Z"
+    },
+    {
+      "id": "rag_log_1789874615324_036525eb",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 1 issues (0 high)",
+      "timestamp": "2026-09-20T03:23:35.324Z"
+    },
+    {
+      "id": "rag_log_1789874615078_8d92befe",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T03:23:35.078Z"
+    },
+    {
+      "id": "rag_log_1789874615077_19600783",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T03:23:35.077Z"
+    },
+    {
+      "id": "rag_log_1789874614523_fce98275",
+      "type": "APPROVE",
+      "description": "Mutation applied to postcss.config.mjs",
+      "timestamp": "2026-09-20T03:23:34.523Z"
+    },
+    {
+      "id": "rag_log_1789874614522_115e6efa",
+      "type": "APPROVE",
+      "description": "Mutation applied to postcss.config.mjs",
+      "timestamp": "2026-09-20T03:23:34.522Z"
+    },
+    {
+      "id": "rag_log_1789874612668_c5a24eac",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:23:32.668Z"
+    },
     {
       "id": "rag_log_1789874603685_3abb82e0",
       "type": "MUTATE",
@@ -114,79 +156,9 @@
       "type": "INFO",
       "description": "[NO-OP] Code saturation reached in batch for missing_files.json",
       "timestamp": "2026-09-20T03:22:42.614Z"
-    },
-    {
-      "id": "rag_log_1789874560977_182d383b",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:22:40.977Z"
-    },
-    {
-      "id": "rag_log_1789874552354_4d357d1d",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:22:32.354Z"
-    },
-    {
-      "id": "rag_log_1789874552353_e4dcb704",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:22:32.353Z"
-    },
-    {
-      "id": "rag_log_1789874551434_f0fd9cf4",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T03:22:31.434Z"
-    },
-    {
-      "id": "rag_log_1789874551433_90c1dc6e",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T03:22:31.433Z"
-    },
-    {
-      "id": "rag_log_1789874551054_1df1be43",
-      "type": "APPROVE",
-      "description": "Mutation applied to metadata.json",
-      "timestamp": "2026-09-20T03:22:31.054Z"
-    },
-    {
-      "id": "rag_log_1789874551053_020b16ff",
-      "type": "APPROVE",
-      "description": "Mutation applied to metadata.json",
-      "timestamp": "2026-09-20T03:22:31.053Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-04e0bd10",
-      "time": "13:15:05",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-c8620800",
-      "time": "13:15:13",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-05f48548",
-      "time": "13:15:20",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-348537e7",
-      "time": "13:15:28",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-fc68b2ac",
       "time": "13:15:36",
@@ -858,6 +830,34 @@
       "addr": "0x00460943",
       "tag": "MUTATE",
       "message": "[Batch 75/253] Proposed mutation for postcss.config.mjs (risk: LOW)"
+    },
+    {
+      "id": "dos-18548eee",
+      "time": "13:23:32",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-31dd40c7",
+      "time": "13:23:34",
+      "addr": "0x00969CAF",
+      "tag": "APPROVE",
+      "message": "Mutation applied to postcss.config.mjs"
+    },
+    {
+      "id": "dos-56c6d596",
+      "time": "13:23:35",
+      "addr": "0x007EEE12",
+      "tag": "HEALTH",
+      "message": "Auto-test: PASSED — 5 passed, 0 failed"
+    },
+    {
+      "id": "dos-bc31c25e",
+      "time": "13:23:35",
+      "addr": "0x002EA506",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 1 issues (0 high)"
     }
   ]
 }
