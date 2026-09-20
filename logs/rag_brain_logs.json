@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789883101406_54f83ba9",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:45:01.406Z"
+  },
+  {
+    "id": "rag_log_1789883097543_a8f2fa96",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T05:44:57.543Z"
+  },
+  {
+    "id": "rag_log_1789883097542_35c73d15",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T05:44:57.542Z"
+  },
+  {
+    "id": "rag_log_1789883096965_d667b5ff",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T05:44:56.965Z"
+  },
+  {
+    "id": "rag_log_1789883096964_3f1f50ab",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T05:44:56.964Z"
+  },
+  {
+    "id": "rag_log_1789883095976_279f63a2",
+    "type": "APPROVE",
+    "description": "Mutation applied to src/app/api/setup/test-connection/route.ts",
+    "timestamp": "2026-09-20T05:44:55.976Z"
+  },
+  {
+    "id": "rag_log_1789883095974_aa880405",
+    "type": "APPROVE",
+    "description": "Mutation applied to src/app/api/setup/test-connection/route.ts",
+    "timestamp": "2026-09-20T05:44:55.974Z"
+  },
+  {
     "id": "rag_log_1789883092839_fcb5075a",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -106,47 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: PASSED — 5 passed, 0 failed",
     "timestamp": "2026-09-20T05:44:12.297Z"
-  },
-  {
-    "id": "rag_log_1789883052295_f74478fa",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T05:44:12.295Z"
-  },
-  {
-    "id": "rag_log_1789883051578_8572ba9d",
-    "type": "APPROVE",
-    "description": "Mutation applied to src/app/api/learning-logs/sync/route.ts",
-    "timestamp": "2026-09-20T05:44:11.578Z"
-  },
-  {
-    "id": "rag_log_1789883051576_055e1fe0",
-    "type": "APPROVE",
-    "description": "Mutation applied to src/app/api/learning-logs/sync/route.ts",
-    "timestamp": "2026-09-20T05:44:11.576Z"
-  },
-  {
-    "id": "rag_log_1789883048490_b7193268",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:44:08.490Z"
-  },
-  {
-    "id": "rag_log_1789883040216_cd7e51aa",
-    "type": "MUTATE",
-    "description": "[Batch 121/253] Proposed mutation for src/app/api/learning-logs/sync/route.ts (risk: LOW)",
-    "timestamp": "2026-09-20T05:44:00.216Z"
-  },
-  {
-    "id": "rag_log_1789883040211_a0950d91",
-    "type": "MUTATE",
-    "description": "[Batch 121/253] Proposed mutation for src/app/api/learning-logs/sync/route.ts (risk: LOW)",
-    "timestamp": "2026-09-20T05:44:00.211Z"
-  },
-  {
-    "id": "rag_log_1789883039507_3374cccf",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:43:59.507Z"
   }
 ]
