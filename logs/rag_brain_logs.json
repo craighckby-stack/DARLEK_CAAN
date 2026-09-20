@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789880984381_16292820",
+    "type": "MUTATE",
+    "description": "[Batch 15/253] Proposed mutation for assets/.aistudio/ARCHITECTURE.md (risk: LOW)",
+    "timestamp": "2026-09-20T05:09:44.381Z"
+  },
+  {
+    "id": "rag_log_1789880984377_61f286ec",
+    "type": "MUTATE",
+    "description": "[Batch 15/253] Proposed mutation for assets/.aistudio/ARCHITECTURE.md (risk: LOW)",
+    "timestamp": "2026-09-20T05:09:44.377Z"
+  },
+  {
+    "id": "rag_log_1789880984065_67bdc921",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:09:44.065Z"
+  },
+  {
     "id": "rag_log_1789880974322_b8684433",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
     "timestamp": "2026-09-20T05:07:49.289Z"
-  },
-  {
-    "id": "rag_log_1789880860794_e3afbdda",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for README.md",
-    "timestamp": "2026-09-20T05:07:40.794Z"
-  },
-  {
-    "id": "rag_log_1789880860774_f088aed3",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for README.md",
-    "timestamp": "2026-09-20T05:07:40.774Z"
-  },
-  {
-    "id": "rag_log_1789880857759_ea3e80ed",
-    "type": "RAG_WRITE",
-    "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-6, rai...",
-    "timestamp": "2026-09-20T05:07:37.759Z"
   }
 ]
