@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:11:26.331Z`
+*Last Synchronized:* `2026-09-20T05:11:36.360Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,41 +14,62 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:11:33.317Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:11:33.317Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:11:32.058Z`
+
+```typescript
+[LOG:MUTATE] [Batch 20/253] Proposed mutation for check_github_page.js (risk: LOW) | TIME:2026-09-20T05:11:32.058Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:11:32.028Z`
+
+```typescript
+[LOG:MUTATE] [Batch 20/253] Proposed mutation for check_github_page.js (risk: LOW) | TIME:2026-09-20T05:11:32.027Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:11:23.279Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:11:23.278Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:11:22.289Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for changed_files.json | TIME:2026-09-20T05:11:22.289Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:11:22.262Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for changed_files.json | TIME:2026-09-20T05:11:22.261Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:11:12.985Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:11:12.985Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:11:12.943Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:11:12.942Z
 ```
 
-### 6. `bun.lock` (Gen 18)
+### 9. `bun.lock` (Gen 18)
 *Source:* `MUTATION:bun.lock` | *Indexed:* `2026-09-20T05:11:12.749Z`
 
 ```typescript
@@ -66,32 +87,11 @@
 // ... [truncated]
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:11:11.594Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:11:11.594Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:11:11.593Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:11:11.593Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:11:10.323Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to bun.lock | TIME:2026-09-20T05:11:10.323Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:11:10.322Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to bun.lock | TIME:2026-09-20T05:11:10.321Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
