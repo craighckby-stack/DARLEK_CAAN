@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789881887255_fb2e401c",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:24:47.255Z"
+  },
+  {
+    "id": "rag_log_1789881886809_20ed09e7",
+    "type": "MUTATE",
+    "description": "[Batch 60/253] Proposed mutation for generate-routes.js (risk: LOW)",
+    "timestamp": "2026-09-20T05:24:46.809Z"
+  },
+  {
+    "id": "rag_log_1789881886808_53c4ef52",
+    "type": "MUTATE",
+    "description": "[Batch 60/253] Proposed mutation for generate-routes.js (risk: LOW)",
+    "timestamp": "2026-09-20T05:24:46.808Z"
+  },
+  {
     "id": "rag_log_1789881878474_17ca54d0",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 57/253] Proposed mutation for fix_prompt8.js (risk: LOW)",
     "timestamp": "2026-09-20T05:23:54.034Z"
-  },
-  {
-    "id": "rag_log_1789881834032_1269f6da",
-    "type": "MUTATE",
-    "description": "[Batch 57/253] Proposed mutation for fix_prompt8.js (risk: LOW)",
-    "timestamp": "2026-09-20T05:23:54.032Z"
-  },
-  {
-    "id": "rag_log_1789881828475_dbfa8e99",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:23:48.475Z"
-  },
-  {
-    "id": "rag_log_1789881823930_b7ad43db",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T05:23:43.930Z"
   }
 ]
