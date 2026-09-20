@@ -1,15 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:04:00.065Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:04:13.476Z]
 ======================================================================
 
-[15:56:02] [0x0019207C] [MUTATE    ] [Batch 154/253] Proposed mutation for src/components/SaturationMetrics.tsx (risk: LOW)
-[15:56:03] [0x0063E000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
-[15:56:07] [0x00640000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 8.61 MB.
-[15:56:07] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
-[15:56:10] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:56:12] [0x00642000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
-[15:56:13] [0x003ACBC0] [APPROVE   ] Mutation applied to src/components/SaturationMetrics.tsx
-[15:56:14] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
 [15:56:14] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
 [15:56:17] [0x00644000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 898.7 KB (8.78%).
 [15:56:22] [0x00646000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
@@ -253,3 +245,11 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:04:00.065Z]
 [16:03:56] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [16:03:57] [0x0014E41D] [MUTATE    ] [Batch 174/253] Proposed mutation for src/lib/archaeology-dataset.ts (risk: LOW)
 [16:03:58] [0x00704000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 362.9 KB (3.54%).
+[16:04:03] [0x00706000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
+[16:04:05] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[16:04:07] [0x00624057] [APPROVE   ] Mutation applied to src/lib/archaeology-dataset.ts
+[16:04:08] [0x00708000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.65 MB.
+[16:04:08] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
+[16:04:09] [0x0043193E] [HEALTH    ] Auto-test: REJECTED — 3 passed, 1 failed
+[16:04:10] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[16:04:12] [0x0070A000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
