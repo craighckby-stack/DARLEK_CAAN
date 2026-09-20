@@ -1,13 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:36:04.444Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:36:15.236Z]
 ======================================================================
 
-[15:28:22] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
-[15:28:23] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
-[15:28:27] [0x0038C000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 421.2 KB (4.11%).
-[15:28:31] [0x0038E000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
-[15:28:32] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:28:33] [0x00460943] [MUTATE    ] [Batch 75/253] Proposed mutation for postcss.config.mjs (risk: LOW)
 [15:28:36] [0x00390000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.59 MB.
 [15:28:36] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
 [15:28:41] [0x00392000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
@@ -253,3 +247,9 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:36:04.444Z]
 [15:35:59] [0x005EF7C2] [MUTATE    ] [Batch 99/253] Proposed mutation for src/app/api/evolution/auto-test/route.ts (risk: LOW)
 [15:36:01] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:36:03] [0x0044A000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[15:36:07] [0x0044C000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 384.8 KB (3.76%).
+[15:36:09] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:36:10] [0x00877F1D] [APPROVE   ] Mutation applied to src/app/api/evolution/auto-test/route.ts
+[15:36:11] [0x006572A6] [HEALTH    ] Auto-test: REJECTED — 3 passed, 3 failed
+[15:36:12] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[15:36:12] [0x0044E000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
