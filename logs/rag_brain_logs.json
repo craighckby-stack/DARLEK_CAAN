@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789878095177_a08744ad",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T04:21:35.177Z"
+  },
+  {
+    "id": "rag_log_1789878087205_e2335f18",
+    "type": "MUTATE",
+    "description": "[Batch 229/253] Proposed mutation for src/utils/cognitive-engine.ts (risk: LOW)",
+    "timestamp": "2026-09-20T04:21:27.205Z"
+  },
+  {
+    "id": "rag_log_1789878087201_2cef4e77",
+    "type": "MUTATE",
+    "description": "[Batch 229/253] Proposed mutation for src/utils/cognitive-engine.ts (risk: LOW)",
+    "timestamp": "2026-09-20T04:21:27.201Z"
+  },
+  {
     "id": "rag_log_1789878082776_b2ffd655",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
     "timestamp": "2026-09-20T04:20:35.189Z"
-  },
-  {
-    "id": "rag_log_1789878026932_2677c2ea",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T04:20:26.932Z"
-  },
-  {
-    "id": "rag_log_1789878026931_df6525bc",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T04:20:26.931Z"
-  },
-  {
-    "id": "rag_log_1789878026203_97fa6744",
-    "type": "HEALTH",
-    "description": "Auto-test: REJECTED — 4 passed, 1 failed",
-    "timestamp": "2026-09-20T04:20:26.203Z"
   }
 ]
