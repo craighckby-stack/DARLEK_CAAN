@@ -1,9 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T04:26:41.588Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T04:26:52.422Z]
 ======================================================================
 
-[14:10:10] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[14:10:19] [0x0071F263] [MUTATE    ] [Batch 201/253] Proposed mutation for src/lib/omega-bootstrap.ts (risk: LOW)
 [14:10:20] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [14:10:29] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [14:10:30] [0x00507DB8] [APPROVE   ] Mutation applied to src/lib/omega-bootstrap.ts
@@ -253,3 +251,5 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T04:26:41.588Z]
 [14:26:36] [0x009BFD21] [APPROVE   ] Mutation applied to test-pdf.js
 [14:26:37] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
 [14:26:38] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[14:26:46] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[14:26:49] [0x0043B572] [MUTATE    ] [Batch 242/253] Proposed mutation for test-propose-header.js (risk: LOW)
