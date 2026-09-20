@@ -1,14 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:44:11.554Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:44:19.932Z]
 ======================================================================
 
-[15:36:12] [0x0044E000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
-[15:36:17] [0x00450000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.28 MB.
-[15:36:17] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
-[15:36:20] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:36:21] [0x003117C9] [MUTATE    ] [Batch 100/253] Proposed mutation for src/app/api/evolution/coherence-gate/route.ts (risk: LOW)
-[15:36:22] [0x00452000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
-[15:36:27] [0x00454000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 698.9 KB (6.83%).
 [15:36:30] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:36:31] [0x00456000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
 [15:36:32] [0x0088F8B8] [APPROVE   ] Mutation applied to src/app/api/evolution/coherence-gate/route.ts
@@ -253,3 +246,10 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:44:11.554Z]
 [15:44:03] [0x00512000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
 [15:44:07] [0x00514000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 951.1 KB (9.29%).
 [15:44:08] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:44:11] [0x00400A08] [APPROVE   ] Mutation applied to src/app/api/learning-logs/sync/route.ts
+[15:44:12] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
+[15:44:12] [0x00516000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
+[15:44:13] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[15:44:16] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:44:17] [0x00518000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.27 MB.
+[15:44:17] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
