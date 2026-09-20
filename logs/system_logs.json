@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T04:10:46.489Z",
+    "generatedAt": "2026-09-20T04:10:59.857Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789877456821_88c4f6ec",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T04:10:56.821Z"
+    },
+    {
+      "id": "rag_log_1789877456818_2cbd9f09",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T04:10:56.818Z"
+    },
+    {
+      "id": "rag_log_1789877455925_01dd959d",
+      "type": "HEALTH",
+      "description": "Auto-test: REJECTED — 4 passed, 1 failed",
+      "timestamp": "2026-09-20T04:10:55.925Z"
+    },
+    {
+      "id": "rag_log_1789877455924_004a7791",
+      "type": "HEALTH",
+      "description": "Auto-test: REJECTED — 4 passed, 1 failed",
+      "timestamp": "2026-09-20T04:10:55.924Z"
+    },
+    {
+      "id": "rag_log_1789877454501_f492f29a",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/lib/persistence-layer.ts",
+      "timestamp": "2026-09-20T04:10:54.501Z"
+    },
+    {
+      "id": "rag_log_1789877454500_da88f97d",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/lib/persistence-layer.ts",
+      "timestamp": "2026-09-20T04:10:54.500Z"
+    },
+    {
+      "id": "rag_log_1789877452017_2a749a8c",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T04:10:52.017Z"
+    },
     {
       "id": "rag_log_1789877443435_c5df6eb2",
       "type": "MUTATE",
@@ -114,79 +156,9 @@
       "type": "HEALTH",
       "description": "Auto-test: PASSED — 5 passed, 0 failed",
       "timestamp": "2026-09-20T04:10:06.451Z"
-    },
-    {
-      "id": "rag_log_1789877405756_554b5e07",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/lib/next-mock.ts",
-      "timestamp": "2026-09-20T04:10:05.756Z"
-    },
-    {
-      "id": "rag_log_1789877405754_4da6a206",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/lib/next-mock.ts",
-      "timestamp": "2026-09-20T04:10:05.754Z"
-    },
-    {
-      "id": "rag_log_1789877400807_fc322807",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T04:10:00.807Z"
-    },
-    {
-      "id": "rag_log_1789877394867_ca65f679",
-      "type": "MUTATE",
-      "description": "[Batch 200/253] Proposed mutation for src/lib/next-mock.ts (risk: LOW)",
-      "timestamp": "2026-09-20T04:09:54.867Z"
-    },
-    {
-      "id": "rag_log_1789877394865_496d95de",
-      "type": "MUTATE",
-      "description": "[Batch 200/253] Proposed mutation for src/lib/next-mock.ts (risk: LOW)",
-      "timestamp": "2026-09-20T04:09:54.865Z"
-    },
-    {
-      "id": "rag_log_1789877391685_0e89b84c",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T04:09:51.685Z"
-    },
-    {
-      "id": "rag_log_1789877383207_72105d6a",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T04:09:43.207Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-6781a7b8",
-      "time": "14:04:30",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-f26651cf",
-      "time": "14:04:32",
-      "addr": "0x0035C6A6",
-      "tag": "MUTATE",
-      "message": "[Batch 186/253] Proposed mutation for src/lib/firebase.ts (risk: LOW)"
-    },
-    {
-      "id": "dos-882697d2",
-      "time": "14:04:40",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-c069e5e4",
-      "time": "14:04:42",
-      "addr": "0x00933397",
-      "tag": "APPROVE",
-      "message": "Mutation applied to src/lib/firebase.ts"
-    },
     {
       "id": "dos-43ae0afc",
       "time": "14:04:43",
@@ -858,6 +830,34 @@
       "addr": "0x004C0F32",
       "tag": "MUTATE",
       "message": "[Batch 202/253] Proposed mutation for src/lib/persistence-layer.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-9e18a0a3",
+      "time": "14:10:52",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-b593f330",
+      "time": "14:10:54",
+      "addr": "0x00303685",
+      "tag": "APPROVE",
+      "message": "Mutation applied to src/lib/persistence-layer.ts"
+    },
+    {
+      "id": "dos-25d0b4bd",
+      "time": "14:10:55",
+      "addr": "0x0074FAF3",
+      "tag": "HEALTH",
+      "message": "Auto-test: REJECTED — 4 passed, 1 failed"
+    },
+    {
+      "id": "dos-4a708603",
+      "time": "14:10:56",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
     }
   ]
 }
