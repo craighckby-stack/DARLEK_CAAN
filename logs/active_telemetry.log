@@ -1,11 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:20:34.585Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:20:42.969Z]
 ======================================================================
 
-[15:12:55] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
-[15:13:00] [0x0020A000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
-[15:13:03] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:13:04] [0x00504500] [APPROVE   ] Mutation applied to docs/ARCHITECTURE_MANIFESTO.md
 [15:13:04] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
 [15:13:05] [0x0020C000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 1.44 MB (14.4%).
 [15:13:05] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
@@ -253,3 +249,7 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:20:34.585Z]
 [15:20:29] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:20:31] [0x0010B761] [MUTATE    ] [Batch 47/253] Proposed mutation for fix6.js (risk: LOW)
 [15:20:31] [0x002C6000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
+[15:20:36] [0x002C8000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.65 MB.
+[15:20:36] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
+[15:20:39] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:20:41] [0x002CA000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
