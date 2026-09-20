@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T03:27:24.991Z`
+*Last Synchronized:* `2026-09-20T03:27:33.277Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,88 +14,98 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:30.241Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:27:30.241Z
+```
+
+### 2. `restore_repo_fast.js` (Gen 69)
+*Source:* `MUTATION:restore_repo_fast.js` | *Indexed:* `2026-09-20T03:27:26.951Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-69 [2026-09-20T03:27:13.285Z] */
+/**
+ * @file restore_repo_fast.js
+ * @version 49.6.0
+ * @author EMG Core v49 Neural Code and Documentation Optimizer Engine
+ * @description Sovereign-grade, high-throughput repository restoration engine featuring hardened concurrency control, advanced memory poo
+// ... [truncated]
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:26.402Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:27:26.402Z
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:26.401Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:27:26.401Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:26.028Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T03:27:26.028Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:26.027Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T03:27:26.027Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:25.461Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to restore_repo_fast.js | TIME:2026-09-20T03:27:25.460Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:25.459Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to restore_repo_fast.js | TIME:2026-09-20T03:27:25.459Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:21.982Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:27:21.982Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:14.492Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:27:14.492Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:14.172Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `restore_repo_fast.js`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `69`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-69 with verified AST structural sanity.
 ```typescript
-[LOG:MUTATE] [Batch 88/253] Proposed mutation for restore_repo_fast.js (risk: LOW) | TIME:2026-09-20T03:27:14.172Z
-```
-
-### 4. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:14.170Z`
-
-```typescript
-[LOG:MUTATE] [Batch 88/253] Proposed mutation for restore_repo_fast.js (risk: LOW) | TIME:2026-09-20T03:27:14.170Z
-```
-
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:07.094Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:27:07.093Z
-```
-
-### 6. `restore_repo.js` (Gen 68)
-*Source:* `MUTATION:restore_repo.js` | *Indexed:* `2026-09-20T03:27:06.756Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-68 [2026-09-20T03:26:50.465Z] */
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-69 [2026-09-20T03:27:13.285Z] */
 /**
- * DARLEK CANN ARCHITECTURAL HEADER
- * File: restore_repo.js
- * Role: Core system component participating in autonomous cognitive evolution cycles.
- * Architecture: Type-safe modular unit with resilient state interfaces.
- */
-
-const https = require('https');
-
+ * @file restore_repo_fast.js
+ * @version 49.6.0
+ * @author EMG Core v49 Neural Code and Documentation Optimizer Engine
+ * @description Sovereign-grade, high-throughput repository restoration engine featuring hardened concurrency control, advanced memory poo
 // ... [truncated]
 ```
 
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:03.412Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:27:03.412Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:03.411Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:27:03.411Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:02.791Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T03:27:02.791Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:27:02.790Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T03:27:02.790Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `restore_repo.js`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `restore_repo.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `68`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-68 with verified AST structural sanity.
@@ -113,7 +123,7 @@ const https = require('https');
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `renameVars.js`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `renameVars.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `67`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-67 with verified AST structural sanity.
@@ -130,7 +140,7 @@ import { readFileSync, writeFileSy
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `remote_tree.txt`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `remote_tree.txt`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `66`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-66 with verified AST structural sanity.
@@ -148,7 +158,7 @@ remote_repository/
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `remote_main.tsx`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `remote_main.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `65`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-65 with verified AST structural sanity.
@@ -165,7 +175,7 @@ import { StrictMode } from 'reac
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `remote_App.tsx`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `remote_App.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `64`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-64 with verified AST structural sanity.
@@ -182,7 +192,7 @@ import React, { useState, useEffe
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `public/placeholder.txt`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `public/placeholder.txt`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `63`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-63 with verified AST structural sanity.
@@ -198,7 +208,7 @@ The `public/` directory stores raw, unprocessed static assets—including
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `prisma/schema.prisma`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `prisma/schema.prisma`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `62`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-62 with verified AST structural sanity.
@@ -221,7 +231,7 @@ model User {
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `postcss.config.mjs`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `postcss.config.mjs`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `61`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-61 with verified AST structural sanity.
@@ -236,7 +246,7 @@ export default {
 
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `patch.js`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `patch.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `60`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-60 with verified AST structural sanity.
@@ -251,27 +261,6 @@ const { readFileSync, writeFileSync } = require('node:fs');
 
 const TARGET_FILE_PATH = 'src/app/api/evolution/propose/route.ts';
 const SEARCH
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `metadata.json`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `59`
-- **Rationale:** RAG LLM Synthesis: Applied targeted defensive improvements for Generation G-59.
-```typescript
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/craighckby-stack/Darlek-Caan-vs-Jesus-Chess/main/metadata.json",
-  "title": "ExtensionMetadata",
-  "type": "object",
-  "required": [
-    "name",
-    "description",
-    "requestFramePermissions",
-    "majorCapabilities"
-  ],
-  "properties": {
- 
 // ... [truncated]
 ```
 
