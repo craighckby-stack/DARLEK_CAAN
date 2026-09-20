@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789882113124_fef7e7d3",
+    "type": "MUTATE",
+    "description": "[Batch 75/253] Proposed mutation for postcss.config.mjs (risk: LOW)",
+    "timestamp": "2026-09-20T05:28:33.124Z"
+  },
+  {
+    "id": "rag_log_1789882113123_15648ca0",
+    "type": "MUTATE",
+    "description": "[Batch 75/253] Proposed mutation for postcss.config.mjs (risk: LOW)",
+    "timestamp": "2026-09-20T05:28:33.123Z"
+  },
+  {
+    "id": "rag_log_1789882112117_6b9c32a3",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:28:32.116Z"
+  },
+  {
     "id": "rag_log_1789882103584_f99035c8",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
     "timestamp": "2026-09-20T05:27:33.460Z"
-  },
-  {
-    "id": "rag_log_1789882043798_87886b87",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for logs/rag_brain_logs.json",
-    "timestamp": "2026-09-20T05:27:23.798Z"
-  },
-  {
-    "id": "rag_log_1789882043794_17f4279a",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for logs/rag_brain_logs.json",
-    "timestamp": "2026-09-20T05:27:23.794Z"
-  },
-  {
-    "id": "rag_log_1789882042592_99868d66",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:27:22.592Z"
   }
 ]
