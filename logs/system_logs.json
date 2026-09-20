@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:18:30.940Z",
+    "generatedAt": "2026-09-20T05:18:38.970Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789881515959_d9bb2637",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:18:35.959Z"
+    },
+    {
+      "id": "rag_log_1789881515348_9236eb24",
+      "type": "MUTATE",
+      "description": "[Batch 41/253] Proposed mutation for firestore.rules (risk: LOW)",
+      "timestamp": "2026-09-20T05:18:35.348Z"
+    },
+    {
+      "id": "rag_log_1789881515346_49750281",
+      "type": "MUTATE",
+      "description": "[Batch 41/253] Proposed mutation for firestore.rules (risk: LOW)",
+      "timestamp": "2026-09-20T05:18:35.346Z"
+    },
     {
       "id": "rag_log_1789881507930_1960369f",
       "type": "LOG_SYNC",
@@ -138,55 +156,9 @@
       "type": "MUTATE",
       "description": "[Batch 38/253] Proposed mutation for fetch_siphon.js (risk: LOW)",
       "timestamp": "2026-09-20T05:17:43.088Z"
-    },
-    {
-      "id": "rag_log_1789881463087_e4211557",
-      "type": "MUTATE",
-      "description": "[Batch 38/253] Proposed mutation for fetch_siphon.js (risk: LOW)",
-      "timestamp": "2026-09-20T05:17:43.086Z"
-    },
-    {
-      "id": "rag_log_1789881462210_87f13a50",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:17:42.210Z"
-    },
-    {
-      "id": "rag_log_1789881453744_fba8ee6d",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:17:33.744Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-dca201da",
-      "time": "15:15:27",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-3c4c12fa",
-      "time": "15:15:29",
-      "addr": "0x00248000",
-      "tag": "RAG_INDEX",
-      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.37 MB."
-    },
-    {
-      "id": "dos-733317d9",
-      "time": "15:15:29",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
-    {
-      "id": "dos-0282d5bb",
-      "time": "15:15:32",
-      "addr": "0x0031A30E",
-      "tag": "MUTATE",
-      "message": "[Batch 32/253] Proposed mutation for examples/websocket/server.ts (risk: LOW)"
-    },
     {
       "id": "dos-69917865",
       "time": "15:15:34",
@@ -858,6 +830,34 @@
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-35d3beff",
+      "time": "15:18:31",
+      "addr": "0x00294000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 467.8 KB (4.57%)."
+    },
+    {
+      "id": "dos-244a41a1",
+      "time": "15:18:35",
+      "addr": "0x0077CD91",
+      "tag": "MUTATE",
+      "message": "[Batch 41/253] Proposed mutation for firestore.rules (risk: LOW)"
+    },
+    {
+      "id": "dos-8e2d76f3",
+      "time": "15:18:35",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-0d3e4517",
+      "time": "15:18:36",
+      "addr": "0x00296000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
     }
   ]
 }

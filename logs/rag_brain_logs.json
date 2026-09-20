@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789881515959_d9bb2637",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:18:35.959Z"
+  },
+  {
+    "id": "rag_log_1789881515348_9236eb24",
+    "type": "MUTATE",
+    "description": "[Batch 41/253] Proposed mutation for firestore.rules (risk: LOW)",
+    "timestamp": "2026-09-20T05:18:35.348Z"
+  },
+  {
+    "id": "rag_log_1789881515346_49750281",
+    "type": "MUTATE",
+    "description": "[Batch 41/253] Proposed mutation for firestore.rules (risk: LOW)",
+    "timestamp": "2026-09-20T05:18:35.346Z"
+  },
+  {
     "id": "rag_log_1789881507930_1960369f",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 38/253] Proposed mutation for fetch_siphon.js (risk: LOW)",
     "timestamp": "2026-09-20T05:17:43.088Z"
-  },
-  {
-    "id": "rag_log_1789881463087_e4211557",
-    "type": "MUTATE",
-    "description": "[Batch 38/253] Proposed mutation for fetch_siphon.js (risk: LOW)",
-    "timestamp": "2026-09-20T05:17:43.086Z"
-  },
-  {
-    "id": "rag_log_1789881462210_87f13a50",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:17:42.210Z"
-  },
-  {
-    "id": "rag_log_1789881453744_fba8ee6d",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T05:17:33.744Z"
   }
 ]

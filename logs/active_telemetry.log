@@ -1,11 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:18:30.940Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:18:38.970Z]
 ======================================================================
 
-[15:10:41] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
-[15:10:46] [0x001D2000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
-[15:10:47] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:10:51] [0x001D4000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 421.1 KB (4.11%).
 [15:10:55] [0x001D6000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
 [15:10:56] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:10:57] [0x0094638B] [MUTATE    ] [Batch 18/253] Proposed mutation for bun.lock (risk: LOW)
@@ -253,3 +249,7 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:18:30.940Z]
 [15:18:25] [0x0093E287] [INFO      ] [NO-OP] Code saturation reached in batch for firebase-blueprint.json
 [15:18:27] [0x00292000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
 [15:18:27] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:18:31] [0x00294000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 467.8 KB (4.57%).
+[15:18:35] [0x0077CD91] [MUTATE    ] [Batch 41/253] Proposed mutation for firestore.rules (risk: LOW)
+[15:18:35] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:18:36] [0x00296000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
