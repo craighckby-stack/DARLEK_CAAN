@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T04:09:22.091Z",
+    "generatedAt": "2026-09-20T04:09:36.969Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789877369682_7e4cd85b",
+      "type": "MUTATE",
+      "description": "[Batch 199/253] Proposed mutation for src/lib/neural_codec.ts (risk: LOW)",
+      "timestamp": "2026-09-20T04:09:29.681Z"
+    },
+    {
+      "id": "rag_log_1789877369680_a59162ff",
+      "type": "MUTATE",
+      "description": "[Batch 199/253] Proposed mutation for src/lib/neural_codec.ts (risk: LOW)",
+      "timestamp": "2026-09-20T04:09:29.680Z"
+    },
+    {
+      "id": "rag_log_1789877367169_2ef8d5ed",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T04:09:27.169Z"
+    },
     {
       "id": "rag_log_1789877359088_cb031ef5",
       "type": "HEALTH",
@@ -138,41 +156,9 @@
       "type": "MUTATE",
       "description": "[Batch 196/253] Proposed mutation for src/lib/main-worker.ts (risk: LOW)",
       "timestamp": "2026-09-20T04:08:33.220Z"
-    },
-    {
-      "id": "rag_log_1789877313215_e849be58",
-      "type": "MUTATE",
-      "description": "[Batch 196/253] Proposed mutation for src/lib/main-worker.ts (risk: LOW)",
-      "timestamp": "2026-09-20T04:08:33.215Z"
-    },
-    {
-      "id": "rag_log_1789877305941_8219e691",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T04:08:25.941Z"
-    },
-    {
-      "id": "rag_log_1789877302188_805b9c52",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T04:08:22.188Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-e5e6af22",
-      "time": "14:03:10",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-ee430aa2",
-      "time": "14:03:19",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-eaa427dd",
       "time": "14:03:20",
@@ -858,6 +844,20 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-f468fc43",
+      "time": "14:09:27",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-3f77a73f",
+      "time": "14:09:29",
+      "addr": "0x0046EC64",
+      "tag": "MUTATE",
+      "message": "[Batch 199/253] Proposed mutation for src/lib/neural_codec.ts (risk: LOW)"
     }
   ]
 }

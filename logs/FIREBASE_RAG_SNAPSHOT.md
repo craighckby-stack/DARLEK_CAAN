@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:09:22.091Z`
+*Last Synchronized:* `2026-09-20T04:09:36.969Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,20 +14,41 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:29.682Z`
+
+```typescript
+[LOG:MUTATE] [Batch 199/253] Proposed mutation for src/lib/neural_codec.ts (risk: LOW) | TIME:2026-09-20T04:09:29.681Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:29.681Z`
+
+```typescript
+[LOG:MUTATE] [Batch 199/253] Proposed mutation for src/lib/neural_codec.ts (risk: LOW) | TIME:2026-09-20T04:09:29.680Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:27.170Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:09:27.169Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:19.088Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:09:19.088Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:19.087Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:09:19.087Z
 ```
 
-### 3. `src/lib/neuralActiveGene.ts` (Gen 171)
+### 6. `src/lib/neuralActiveGene.ts` (Gen 171)
 *Source:* `MUTATION:src/lib/neuralActiveGene.ts` | *Indexed:* `2026-09-20T04:09:19.065Z`
 
 ```typescript
@@ -46,53 +67,32 @@ export interface NeuralGeneState {
 // ... [truncated]
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:18.350Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:09:18.350Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:18.349Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:09:18.348Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:17.444Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to src/lib/neuralActiveGene.ts | TIME:2026-09-20T04:09:17.444Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:17.443Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to src/lib/neuralActiveGene.ts | TIME:2026-09-20T04:09:17.443Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:14.866Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:09:14.865Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:06.203Z`
-
-```typescript
-[LOG:MUTATE] [Batch 198/253] Proposed mutation for src/lib/neuralActiveGene.ts (risk: LOW) | TIME:2026-09-20T04:09:06.203Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:06.202Z`
-
-```typescript
-[LOG:MUTATE] [Batch 198/253] Proposed mutation for src/lib/neuralActiveGene.ts (risk: LOW) | TIME:2026-09-20T04:09:06.201Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
