@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:27:26.842Z",
+    "generatedAt": "2026-09-20T05:27:36.509Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789882053470_005cc640",
+      "type": "INFO",
+      "description": "[NO-OP] Code saturation reached in batch for logs/system_logs.json",
+      "timestamp": "2026-09-20T05:27:33.470Z"
+    },
+    {
+      "id": "rag_log_1789882053466_46670c87",
+      "type": "INFO",
+      "description": "[NO-OP] Code saturation reached in batch for logs/system_logs.json",
+      "timestamp": "2026-09-20T05:27:33.466Z"
+    },
+    {
+      "id": "rag_log_1789882053460_c24ad086",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:27:33.460Z"
+    },
     {
       "id": "rag_log_1789882043798_87886b87",
       "type": "INFO",
@@ -138,55 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T05:26:30.905Z"
-    },
-    {
-      "id": "rag_log_1789881990612_79fbfcd1",
-      "type": "HEALTH",
-      "description": "Auto-test: REJECTED — 4 passed, 2 failed",
-      "timestamp": "2026-09-20T05:26:30.612Z"
-    },
-    {
-      "id": "rag_log_1789881990610_e46ff549",
-      "type": "HEALTH",
-      "description": "Auto-test: REJECTED — 4 passed, 2 failed",
-      "timestamp": "2026-09-20T05:26:30.610Z"
-    },
-    {
-      "id": "rag_log_1789881990149_1fdd136b",
-      "type": "APPROVE",
-      "description": "Mutation applied to logs/POSTMORTEMS.md",
-      "timestamp": "2026-09-20T05:26:30.149Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-f1c4636c",
-      "time": "15:24:26",
-      "addr": "0x0037BBD9",
-      "tag": "MUTATE",
-      "message": "[Batch 59/253] Proposed mutation for fix_synthesizer.sh (risk: LOW)"
-    },
-    {
-      "id": "dos-76b09020",
-      "time": "15:24:27",
-      "addr": "0x00328000",
-      "tag": "RAG_INDEX",
-      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.67 MB."
-    },
-    {
-      "id": "dos-14292524",
-      "time": "15:24:27",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
-    {
-      "id": "dos-1d8de0aa",
-      "time": "15:24:31",
-      "addr": "0x0032A000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
     {
       "id": "dos-c1943c28",
       "time": "15:24:34",
@@ -858,6 +830,34 @@
       "addr": "0x00372000",
       "tag": "AST_WATCH",
       "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-d6169590",
+      "time": "15:27:29",
+      "addr": "0x00374000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 868.0 KB (8.48%)."
+    },
+    {
+      "id": "dos-36297846",
+      "time": "15:27:33",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-42071065",
+      "time": "15:27:33",
+      "addr": "0x0013EF82",
+      "tag": "INFO",
+      "message": "[NO-OP] Code saturation reached in batch for logs/system_logs.json"
+    },
+    {
+      "id": "dos-9eb81266",
+      "time": "15:27:34",
+      "addr": "0x00376000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
     }
   ]
 }
