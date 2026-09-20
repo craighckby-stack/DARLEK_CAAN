@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789881152841_3f211933",
+    "type": "MUTATE",
+    "description": "[Batch 23/253] Proposed mutation for docs/ARCHITECTURE.md (risk: LOW)",
+    "timestamp": "2026-09-20T05:12:32.841Z"
+  },
+  {
+    "id": "rag_log_1789881152839_6c27be77",
+    "type": "MUTATE",
+    "description": "[Batch 23/253] Proposed mutation for docs/ARCHITECTURE.md (risk: LOW)",
+    "timestamp": "2026-09-20T05:12:32.839Z"
+  },
+  {
+    "id": "rag_log_1789881152563_a466930b",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:12:32.563Z"
+  },
+  {
     "id": "rag_log_1789881143378_95696427",
     "type": "INFO",
     "description": "[NO-OP] Code saturation reached in batch for components.json",
@@ -130,23 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 20/253] Proposed mutation for check_github_page.js (risk: LOW)",
     "timestamp": "2026-09-20T05:11:32.058Z"
-  },
-  {
-    "id": "rag_log_1789881092027_daca34ce",
-    "type": "MUTATE",
-    "description": "[Batch 20/253] Proposed mutation for check_github_page.js (risk: LOW)",
-    "timestamp": "2026-09-20T05:11:32.027Z"
-  },
-  {
-    "id": "rag_log_1789881083278_3e95ae21",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:11:23.278Z"
-  },
-  {
-    "id": "rag_log_1789881082289_319b2d9d",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for changed_files.json",
-    "timestamp": "2026-09-20T05:11:22.289Z"
   }
 ]
