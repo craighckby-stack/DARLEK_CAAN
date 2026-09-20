@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:17:46.103Z`
+*Last Synchronized:* `2026-09-20T05:17:57.936Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -13,90 +13,109 @@
 
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
-### 1. `system.log` (Gen 1)
+### 1. `fetch_siphon.js` (Gen 36)
+*Source:* `MUTATION:fetch_siphon.js` | *Indexed:* `2026-09-20T05:17:54.914Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-36 [2026-09-20T05:17:43.085Z] */
+/**
+ * DARLEK CANN ARCHITECTURAL HEADER
+ * File: fetch_siphon.js
+ * Role: Core system component participating in autonomous cognitive evolution cycles.
+ * Architecture: Clean JavaScript module with robust error handling and stream limits.
+ */
+
+'use strict';
+
+con
+// ... [truncated]
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:54.768Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:17:54.767Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:54.766Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:17:54.766Z
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:54.366Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:17:54.366Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:54.365Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:17:54.364Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:53.949Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to fetch_siphon.js | TIME:2026-09-20T05:17:53.949Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:53.948Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to fetch_siphon.js | TIME:2026-09-20T05:17:53.948Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:51.946Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:17:51.946Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:43.088Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 38/253] Proposed mutation for fetch_siphon.js (risk: LOW) | TIME:2026-09-20T05:17:43.088Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:43.087Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 38/253] Proposed mutation for fetch_siphon.js (risk: LOW) | TIME:2026-09-20T05:17:43.086Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:42.211Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_siphon.js`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `36`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-36 with verified AST structural sanity.
 ```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:17:42.210Z
-```
-
-### 4. `fetch_repo.js` (Gen 35)
-*Source:* `MUTATION:fetch_repo.js` | *Indexed:* `2026-09-20T05:17:34.380Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-35 [2026-09-20T05:17:22.288Z] */
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-36 [2026-09-20T05:17:43.085Z] */
 /**
  * DARLEK CANN ARCHITECTURAL HEADER
- * File: fetch_repo.js
+ * File: fetch_siphon.js
  * Role: Core system component participating in autonomous cognitive evolution cycles.
- * Architecture: Type-safe modular unit with resilient state interfaces.
+ * Architecture: Clean JavaScript module with robust error handling and stream limits.
  */
 
 'use strict';
 
-const https = requi
+con
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:33.744Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:17:33.744Z
-```
-
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:33.743Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:17:33.742Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:33.392Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:17:33.391Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:33.390Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:17:33.390Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:32.959Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to fetch_repo.js | TIME:2026-09-20T05:17:32.959Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:17:32.957Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to fetch_repo.js | TIME:2026-09-20T05:17:32.957Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_repo.js`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_repo.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `35`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-35 with verified AST structural sanity.
@@ -115,7 +134,7 @@ const https = requi
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_remote_app.js`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_remote_app.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `34`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-34 with verified AST structural sanity.
@@ -135,7 +154,7 @@ const https = requi
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_readme.js`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_readme.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `33`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-33 with verified AST structural sanity.
@@ -154,7 +173,7 @@ const https = require('node
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_missing.js`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_missing.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `32`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-32 with verified AST structural sanity.
@@ -169,7 +188,7 @@ const https = require('node
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_engine.js`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_engine.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `31`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-31 with verified AST structural sanity.
@@ -190,7 +209,7 @@ con
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `examples/websocket/server.ts`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `examples/websocket/server.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `30`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-30 with verified AST structural sanity.
@@ -205,7 +224,7 @@ con
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `examples/websocket/frontend.tsx`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `examples/websocket/frontend.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `29`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-29 with verified AST structural sanity.
@@ -228,7 +247,7 @@ import { Button } from '@/components/ui/button
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `eslint.config.mjs`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `eslint.config.mjs`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `28`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-28 with verified AST structural sanity.
@@ -255,7 +274,7 @@ const IGNORED_PATHS = [
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `download_page.js`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `download_page.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `27`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-27 with verified AST structural sanity.
@@ -270,23 +289,6 @@ const SHA_HASH_PATTERN = /^[a-fA-F0-9]{40}$/;
 const SYSTEM_TIMEOUT_MS = 15_000;
 
 if (!SHA_H
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `download_missing.js`
-- **Verdict:** `correct`
-- **Risk Score:** `3` | **Gen:** `26`
-- **Rationale:** Enhanced download_missing.js by adding a comprehensive architectural JSDoc header and validating module structure.
-```typescript
-/**
- * DARLEK CANN ARCHITECTURAL HEADER
- * File: download_missing.js
- * Role: Core system component participating in autonomous cognitive evolution cycles.
- * Architecture: Type-safe modular unit with resilient state interfaces.
- */
-
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-24 [2026-09-20T03:01:35.706Z] */
-import { existsSync } from '
 // ... [truncated]
 ```
 
