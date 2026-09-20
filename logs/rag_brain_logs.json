@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789873084636_3d696cdc",
+    "type": "MUTATE",
+    "description": "[Batch 17/253] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW)",
+    "timestamp": "2026-09-20T02:58:04.636Z"
+  },
+  {
+    "id": "rag_log_1789873084634_2b6b2af9",
+    "type": "MUTATE",
+    "description": "[Batch 17/253] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW)",
+    "timestamp": "2026-09-20T02:58:04.634Z"
+  },
+  {
+    "id": "rag_log_1789873083426_92dd3407",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T02:58:03.426Z"
+  },
+  {
     "id": "rag_log_1789873075112_9d72283a",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
     "timestamp": "2026-09-20T02:57:11.825Z"
-  },
-  {
-    "id": "rag_log_1789873031824_be378e95",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T02:57:11.824Z"
-  },
-  {
-    "id": "rag_log_1789873031007_89b16595",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T02:57:11.007Z"
-  },
-  {
-    "id": "rag_log_1789873031006_3ba344d9",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T02:57:11.006Z"
   }
 ]
