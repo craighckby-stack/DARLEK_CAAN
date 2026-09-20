@@ -1,10 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:46:40.983Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:46:48.570Z]
 ======================================================================
 
-[15:38:51] [0x00490000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.16 MB.
-[15:38:51] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
-[15:38:53] [0x008CC8EF] [APPROVE   ] Mutation applied to src/app/api/extract-text/route.ts
 [15:38:54] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
 [15:38:54] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
 [15:38:55] [0x00492000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
@@ -253,3 +250,6 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:46:40.983Z]
 [15:46:35] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:46:36] [0x00552000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
 [15:46:37] [0x001AA4AF] [MUTATE    ] [Batch 128/253] Proposed mutation for src/app/globals.css (risk: LOW)
+[15:46:41] [0x00554000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 468.6 KB (4.58%).
+[15:46:45] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:46:46] [0x00556000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.

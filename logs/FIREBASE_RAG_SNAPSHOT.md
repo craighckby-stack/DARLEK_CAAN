@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:46:40.983Z`
+*Last Synchronized:* `2026-09-20T05:46:48.570Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,27 +14,34 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:46:45.557Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:46:45.556Z
+```
+
+### 2. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:46:37.891Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 128/253] Proposed mutation for src/app/globals.css (risk: LOW) | TIME:2026-09-20T05:46:37.891Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 3. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:46:37.889Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 128/253] Proposed mutation for src/app/globals.css (risk: LOW) | TIME:2026-09-20T05:46:37.889Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:46:35.537Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:46:35.537Z
 ```
 
-### 4. `src/app/error.tsx` (Gen 106)
+### 5. `src/app/error.tsx` (Gen 106)
 *Source:* `MUTATION:src/app/error.tsx` | *Indexed:* `2026-09-20T05:46:27.670Z`
 
 ```typescript
@@ -51,46 +58,39 @@ import { useEffect, useCallb
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:46:27.397Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:46:27.397Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:46:27.396Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:46:27.396Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:46:26.874Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 4 passed, 0 failed | TIME:2026-09-20T05:46:26.874Z
 ```
 
-### 8. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:46:26.872Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 4 passed, 0 failed | TIME:2026-09-20T05:46:26.872Z
 ```
 
-### 9. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:46:26.290Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to src/app/error.tsx | TIME:2026-09-20T05:46:26.290Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:46:26.288Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/app/error.tsx | TIME:2026-09-20T05:46:26.288Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)

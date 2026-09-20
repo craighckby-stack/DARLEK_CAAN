@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:46:40.983Z",
+    "generatedAt": "2026-09-20T05:46:48.570Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789883205556_27ce2959",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:46:45.556Z"
+    },
     {
       "id": "rag_log_1789883197891_1f977304",
       "type": "MUTATE",
@@ -150,36 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T05:45:42.353Z"
-    },
-    {
-      "id": "rag_log_1789883142351_99f2a5ca",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:45:42.351Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-5c3facc9",
-      "time": "15:43:36",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-9dd05670",
-      "time": "15:43:38",
-      "addr": "0x0084F844",
-      "tag": "MUTATE",
-      "message": "[Batch 120/253] Proposed mutation for src/app/api/github/write-file/route.ts (risk: LOW)"
-    },
-    {
-      "id": "dos-740e1979",
-      "time": "15:43:39",
-      "addr": "0x00508000",
-      "tag": "RAG_INDEX",
-      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.14 MB."
-    },
     {
       "id": "dos-312c6d1e",
       "time": "15:43:39",
@@ -858,6 +837,27 @@
       "addr": "0x001AA4AF",
       "tag": "MUTATE",
       "message": "[Batch 128/253] Proposed mutation for src/app/globals.css (risk: LOW)"
+    },
+    {
+      "id": "dos-841e180f",
+      "time": "15:46:41",
+      "addr": "0x00554000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 468.6 KB (4.58%)."
+    },
+    {
+      "id": "dos-2b324dad",
+      "time": "15:46:45",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-d3040ad7",
+      "time": "15:46:46",
+      "addr": "0x00556000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
     }
   ]
 }
