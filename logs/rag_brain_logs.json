@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789881173961_af92351a",
+    "type": "MUTATE",
+    "description": "[Batch 24/253] Proposed mutation for docs/ARCHITECTURE_MANIFESTO.md (risk: LOW)",
+    "timestamp": "2026-09-20T05:12:53.961Z"
+  },
+  {
+    "id": "rag_log_1789881173959_1893cdc8",
+    "type": "MUTATE",
+    "description": "[Batch 24/253] Proposed mutation for docs/ARCHITECTURE_MANIFESTO.md (risk: LOW)",
+    "timestamp": "2026-09-20T05:12:53.959Z"
+  },
+  {
+    "id": "rag_log_1789881173388_067a112d",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:12:53.388Z"
+  },
+  {
     "id": "rag_log_1789881164291_009a89e8",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 21/253] Proposed mutation for compare.js (risk: LOW)",
     "timestamp": "2026-09-20T05:12:01.630Z"
-  },
-  {
-    "id": "rag_log_1789881115837_def4f7f1",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:11:55.837Z"
-  },
-  {
-    "id": "rag_log_1789881105882_371a1a04",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T05:11:45.882Z"
-  },
-  {
-    "id": "rag_log_1789881105841_f17be40f",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T05:11:45.841Z"
   }
 ]
