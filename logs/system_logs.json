@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T04:08:01.908Z",
+    "generatedAt": "2026-09-20T04:08:11.965Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789877288958_9e67b653",
+      "type": "MUTATE",
+      "description": "[Batch 195/253] Proposed mutation for src/lib/llm-provider.ts (risk: LOW)",
+      "timestamp": "2026-09-20T04:08:08.958Z"
+    },
+    {
+      "id": "rag_log_1789877288953_82364ad4",
+      "type": "MUTATE",
+      "description": "[Batch 195/253] Proposed mutation for src/lib/llm-provider.ts (risk: LOW)",
+      "timestamp": "2026-09-20T04:08:08.953Z"
+    },
+    {
+      "id": "rag_log_1789877287407_436e2115",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T04:08:07.407Z"
+    },
     {
       "id": "rag_log_1789877278478_37424dd1",
       "type": "HEALTH",
@@ -138,41 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T04:07:09.363Z"
-    },
-    {
-      "id": "rag_log_1789877229362_f419b6c6",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T04:07:09.362Z"
-    },
-    {
-      "id": "rag_log_1789877229360_558e907a",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T04:07:09.360Z"
-    },
-    {
-      "id": "rag_log_1789877228664_cc51f5e1",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T04:07:08.664Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-f74e754b",
-      "time": "14:01:56",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
-    {
-      "id": "dos-3a4b2c41",
-      "time": "14:01:56",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
     {
       "id": "dos-682f6717",
       "time": "14:02:05",
@@ -858,6 +844,20 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-49264e21",
+      "time": "14:08:07",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-44d7a0ca",
+      "time": "14:08:08",
+      "addr": "0x007E6752",
+      "tag": "MUTATE",
+      "message": "[Batch 195/253] Proposed mutation for src/lib/llm-provider.ts (risk: LOW)"
     }
   ]
 }
