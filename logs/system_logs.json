@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:10:26.809Z",
+    "generatedAt": "2026-09-20T03:10:36.985Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789873833961_4e22eb1c",
+      "type": "MUTATE",
+      "description": "[Batch 53/253] Proposed mutation for fix_prompt4.js (risk: LOW)",
+      "timestamp": "2026-09-20T03:10:33.961Z"
+    },
+    {
+      "id": "rag_log_1789873833958_b3797ce3",
+      "type": "MUTATE",
+      "description": "[Batch 53/253] Proposed mutation for fix_prompt4.js (risk: LOW)",
+      "timestamp": "2026-09-20T03:10:33.958Z"
+    },
+    {
+      "id": "rag_log_1789873831600_0cc3efb1",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:10:31.600Z"
+    },
     {
       "id": "rag_log_1789873823269_9c4323be",
       "type": "HEALTH",
@@ -138,41 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T03:09:33.484Z"
-    },
-    {
-      "id": "rag_log_1789873773483_6b63bf9f",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:09:33.483Z"
-    },
-    {
-      "id": "rag_log_1789873773418_4d6f4fec",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:09:33.418Z"
-    },
-    {
-      "id": "rag_log_1789873773209_e1d642f1",
-      "type": "HEALTH",
-      "description": "Auto-test: REJECTED — 4 passed, 1 failed",
-      "timestamp": "2026-09-20T03:09:33.209Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-3bd91251",
-      "time": "13:04:28",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
-    {
-      "id": "dos-d0f9794f",
-      "time": "13:04:28",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
     {
       "id": "dos-1759181d",
       "time": "13:04:32",
@@ -858,6 +844,20 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-315b0c21",
+      "time": "13:10:31",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-3adb3626",
+      "time": "13:10:33",
+      "addr": "0x00388EF0",
+      "tag": "MUTATE",
+      "message": "[Batch 53/253] Proposed mutation for fix_prompt4.js (risk: LOW)"
     }
   ]
 }
