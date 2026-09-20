@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789882394264_5439dfa8",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:33:14.264Z"
+  },
+  {
+    "id": "rag_log_1789882391131_1c4289dc",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T05:33:11.131Z"
+  },
+  {
+    "id": "rag_log_1789882391130_d8c34da7",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T05:33:11.130Z"
+  },
+  {
+    "id": "rag_log_1789882390544_4759e1f0",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T05:33:10.544Z"
+  },
+  {
+    "id": "rag_log_1789882390541_c9e02921",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T05:33:10.541Z"
+  },
+  {
+    "id": "rag_log_1789882389839_74127f13",
+    "type": "APPROVE",
+    "description": "Mutation applied to src/App.tsx",
+    "timestamp": "2026-09-20T05:33:09.839Z"
+  },
+  {
+    "id": "rag_log_1789882389838_4f96ddb4",
+    "type": "APPROVE",
+    "description": "Mutation applied to src/App.tsx",
+    "timestamp": "2026-09-20T05:33:09.838Z"
+  },
+  {
     "id": "rag_log_1789882386456_17a4a12c",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -106,47 +148,5 @@
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
     "timestamp": "2026-09-20T05:32:18.660Z"
-  },
-  {
-    "id": "rag_log_1789882338659_dd46aaf3",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T05:32:18.659Z"
-  },
-  {
-    "id": "rag_log_1789882337769_b1b01c56",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T05:32:17.769Z"
-  },
-  {
-    "id": "rag_log_1789882337767_4e530185",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T05:32:17.767Z"
-  },
-  {
-    "id": "rag_log_1789882337332_ab06412c",
-    "type": "APPROVE",
-    "description": "Mutation applied to restore_repo_fast.js",
-    "timestamp": "2026-09-20T05:32:17.332Z"
-  },
-  {
-    "id": "rag_log_1789882337329_4927c4d9",
-    "type": "APPROVE",
-    "description": "Mutation applied to restore_repo_fast.js",
-    "timestamp": "2026-09-20T05:32:17.329Z"
-  },
-  {
-    "id": "rag_log_1789882336493_767d83b0",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:32:16.493Z"
-  },
-  {
-    "id": "rag_log_1789882328145_dc1082cb",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:32:08.145Z"
   }
 ]
