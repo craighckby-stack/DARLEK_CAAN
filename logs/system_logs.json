@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:03:45.198Z",
+    "generatedAt": "2026-09-20T05:03:58.996Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789880635894_bd9d5461",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:03:55.894Z"
+    },
     {
       "id": "rag_log_1789880622078_4b6e1955",
       "type": "HEALTH",
@@ -150,12 +156,6 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T05:02:42.271Z"
-    },
-    {
-      "id": "rag_log_1789880561956_7a5bd583",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:02:41.956Z"
     }
   ],
   "telemetryBuffer": [
@@ -802,6 +802,41 @@
       "addr": "0x00144000",
       "tag": "MEM_POOL",
       "message": "Allocated quota: 10.00 MB. Used: 9.74 MB (97.39%)."
+    },
+    {
+      "id": "dos-83a27903",
+      "time": "15:03:48",
+      "addr": "0x00146000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 93%, Drift 8%, Syntax clean."
+    },
+    {
+      "id": "dos-e82a1ab1",
+      "time": "15:03:53",
+      "addr": "0x00148000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 267.7 KB."
+    },
+    {
+      "id": "dos-e26cf250",
+      "time": "15:03:53",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-bbed3d42",
+      "time": "15:03:55",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-c579ca37",
+      "time": "15:03:58",
+      "addr": "0x0014A000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
     }
   ]
 }
