@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789881648367_b5f84b82",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:20:48.367Z"
+  },
+  {
+    "id": "rag_log_1789881643923_eeebeb28",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T05:20:43.923Z"
+  },
+  {
+    "id": "rag_log_1789881643922_7f424db0",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T05:20:43.922Z"
+  },
+  {
+    "id": "rag_log_1789881643624_b459a5aa",
+    "type": "HEALTH",
+    "description": "Auto-test: REJECTED — 4 passed, 1 failed",
+    "timestamp": "2026-09-20T05:20:43.624Z"
+  },
+  {
+    "id": "rag_log_1789881643623_7f06b6bc",
+    "type": "HEALTH",
+    "description": "Auto-test: REJECTED — 4 passed, 1 failed",
+    "timestamp": "2026-09-20T05:20:43.623Z"
+  },
+  {
+    "id": "rag_log_1789881643148_776b7442",
+    "type": "APPROVE",
+    "description": "Mutation applied to fix6.js",
+    "timestamp": "2026-09-20T05:20:43.148Z"
+  },
+  {
+    "id": "rag_log_1789881643147_71a56504",
+    "type": "APPROVE",
+    "description": "Mutation applied to fix6.js",
+    "timestamp": "2026-09-20T05:20:43.147Z"
+  },
+  {
     "id": "rag_log_1789881639945_69dabb55",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -106,47 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: REJECTED — 4 passed, 1 failed",
     "timestamp": "2026-09-20T05:20:00.061Z"
-  },
-  {
-    "id": "rag_log_1789881599625_9042be50",
-    "type": "APPROVE",
-    "description": "Mutation applied to fix4.js",
-    "timestamp": "2026-09-20T05:19:59.625Z"
-  },
-  {
-    "id": "rag_log_1789881599624_74e22837",
-    "type": "APPROVE",
-    "description": "Mutation applied to fix4.js",
-    "timestamp": "2026-09-20T05:19:59.624Z"
-  },
-  {
-    "id": "rag_log_1789881597162_22194907",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:19:57.162Z"
-  },
-  {
-    "id": "rag_log_1789881588975_33f59549",
-    "type": "MUTATE",
-    "description": "[Batch 45/253] Proposed mutation for fix4.js (risk: LOW)",
-    "timestamp": "2026-09-20T05:19:48.975Z"
-  },
-  {
-    "id": "rag_log_1789881588974_7e59bc3a",
-    "type": "MUTATE",
-    "description": "[Batch 45/253] Proposed mutation for fix4.js (risk: LOW)",
-    "timestamp": "2026-09-20T05:19:48.974Z"
-  },
-  {
-    "id": "rag_log_1789881588201_d9e8cc6b",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:19:48.201Z"
-  },
-  {
-    "id": "rag_log_1789881579628_aa118a94",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T05:19:39.628Z"
   }
 ]
