@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:20:55.998Z",
+    "generatedAt": "2026-09-20T03:21:04.904Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789874461897_90e8914f",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:21:01.897Z"
+    },
     {
       "id": "rag_log_1789874452954_e6e496df",
       "type": "LOG_SYNC",
@@ -150,22 +156,9 @@
       "type": "HEALTH",
       "description": "Auto-test: REJECTED — 4 passed, 2 failed",
       "timestamp": "2026-09-20T03:19:57.352Z"
-    },
-    {
-      "id": "rag_log_1789874397036_f916f6f9",
-      "type": "APPROVE",
-      "description": "Mutation applied to logs/POSTMORTEMS.md",
-      "timestamp": "2026-09-20T03:19:57.036Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-299cd20b",
-      "time": "13:11:53",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
     {
       "id": "dos-4889d78f",
       "time": "13:11:53",
@@ -855,6 +848,13 @@
     {
       "id": "dos-ac93f291",
       "time": "13:20:52",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-6f31d721",
+      "time": "13:21:01",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"

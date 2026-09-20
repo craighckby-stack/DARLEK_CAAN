@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789874461897_90e8914f",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:21:01.897Z"
+  },
+  {
     "id": "rag_log_1789874452954_e6e496df",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -142,11 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: REJECTED — 4 passed, 2 failed",
     "timestamp": "2026-09-20T03:19:57.352Z"
-  },
-  {
-    "id": "rag_log_1789874397036_f916f6f9",
-    "type": "APPROVE",
-    "description": "Mutation applied to logs/POSTMORTEMS.md",
-    "timestamp": "2026-09-20T03:19:57.036Z"
   }
 ]
