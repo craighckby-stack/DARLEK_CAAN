@@ -1,14 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:02:27.779Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:02:38.768Z]
 ======================================================================
 
-[15:54:31] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
-[15:54:33] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:54:35] [0x006CCF65] [APPROVE   ] Mutation applied to src/components/MutationHistoryPanel.tsx
-[15:54:36] [0x003D0A96] [HEALTH    ] Auto-test: PASSED — 4 passed, 0 failed
-[15:54:37] [0x0061A000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
-[15:54:37] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
-[15:54:41] [0x0061C000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 1.32 MB (13.19%).
 [15:54:46] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:54:46] [0x0061E000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
 [15:54:47] [0x00430F15] [MUTATE    ] [Batch 150/253] Proposed mutation for src/components/MutationStatusIndicator.tsx (risk: LOW)
@@ -253,3 +246,10 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:02:27.779Z]
 [16:02:23] [0x001F6BFA] [MUTATE    ] [Batch 170/253] Proposed mutation for src/hooks/useSystemState.ts (risk: LOW)
 [16:02:24] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [16:02:27] [0x006DE000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
+[16:02:32] [0x006E0000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.65 MB.
+[16:02:32] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
+[16:02:32] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[16:02:33] [0x0061C8BE] [APPROVE   ] Mutation applied to src/hooks/useSystemState.ts
+[16:02:34] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
+[16:02:35] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[16:02:36] [0x006E2000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
