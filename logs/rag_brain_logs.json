@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789875273172_77dc97e6",
+    "type": "MUTATE",
+    "description": "[Batch 108/253] Proposed mutation for src/app/api/github/README.md (risk: LOW)",
+    "timestamp": "2026-09-20T03:34:33.172Z"
+  },
+  {
+    "id": "rag_log_1789875273170_256b9313",
+    "type": "MUTATE",
+    "description": "[Batch 108/253] Proposed mutation for src/app/api/github/README.md (risk: LOW)",
+    "timestamp": "2026-09-20T03:34:33.170Z"
+  },
+  {
+    "id": "rag_log_1789875271881_19689798",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:34:31.880Z"
+  },
+  {
     "id": "rag_log_1789875261997_80b88d5f",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 105/253] Proposed mutation for src/app/api/evolution/orchestra/route.ts (risk: LOW)",
     "timestamp": "2026-09-20T03:33:33.273Z"
-  },
-  {
-    "id": "rag_log_1789875213271_314092d4",
-    "type": "MUTATE",
-    "description": "[Batch 105/253] Proposed mutation for src/app/api/evolution/orchestra/route.ts (risk: LOW)",
-    "timestamp": "2026-09-20T03:33:33.271Z"
-  },
-  {
-    "id": "rag_log_1789875207449_a1509697",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:33:27.449Z"
-  },
-  {
-    "id": "rag_log_1789875203032_630738f8",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T03:33:23.032Z"
   }
 ]
