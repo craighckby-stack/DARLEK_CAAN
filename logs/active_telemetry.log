@@ -1,9 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T03:34:01.470Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T03:34:12.448Z]
 ======================================================================
 
-[13:17:35] [0x00786632] [ERROR     ] Mutation apply failed: Server error (200): Non-JSON response received (possible route crash or payload limit).
-[13:17:35] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [13:17:43] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [13:17:44] [0x00827C57] [INFO      ] [NO-OP] Code saturation reached in batch for fix_synthesizer.sh
 [13:17:53] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
@@ -253,3 +251,5 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T03:34:01.470Z]
 [13:33:47] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
 [13:33:57] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [13:33:58] [0x004FB67B] [INFO      ] [NO-OP] Code saturation reached in batch for src/app/api/evolution/propose/route.ts
+[13:34:07] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[13:34:09] [0x0015E051] [MUTATE    ] [Batch 107/253] Proposed mutation for src/app/api/extract-text/route.ts (risk: LOW)

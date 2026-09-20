@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T03:34:01.470Z`
+*Last Synchronized:* `2026-09-20T03:34:12.448Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,27 +14,48 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:34:09.401Z`
+
+```typescript
+[LOG:MUTATE] [Batch 107/253] Proposed mutation for src/app/api/extract-text/route.ts (risk: LOW) | TIME:2026-09-20T03:34:09.401Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:34:09.398Z`
+
+```typescript
+[LOG:MUTATE] [Batch 107/253] Proposed mutation for src/app/api/extract-text/route.ts (risk: LOW) | TIME:2026-09-20T03:34:09.398Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:34:07.870Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:34:07.870Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:33:58.465Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for src/app/api/evolution/propose/route.ts | TIME:2026-09-20T03:33:58.465Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:33:58.462Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for src/app/api/evolution/propose/route.ts | TIME:2026-09-20T03:33:58.462Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:33:57.313Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:33:57.313Z
 ```
 
-### 4. `src/app/api/evolution/orchestra/route.ts` (Gen 85)
+### 7. `src/app/api/evolution/orchestra/route.ts` (Gen 85)
 *Source:* `MUTATION:src/app/api/evolution/orchestra/route.ts` | *Indexed:* `2026-09-20T03:33:47.916Z`
 
 ```typescript
@@ -50,46 +71,25 @@ import
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:33:47.631Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:33:47.631Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:33:47.630Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:33:47.629Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:33:47.169Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T03:33:47.169Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:33:47.168Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T03:33:47.168Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:33:46.273Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/app/api/evolution/orchestra/route.ts | TIME:2026-09-20T03:33:46.273Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:33:46.272Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/app/api/evolution/orchestra/route.ts | TIME:2026-09-20T03:33:46.272Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
