@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789882025944_7be11c97",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:27:05.944Z"
+  },
+  {
+    "id": "rag_log_1789882023227_28b213d2",
+    "type": "INFO",
+    "description": "[NO-OP] Code saturation reached in batch for logs/learning_logs.json",
+    "timestamp": "2026-09-20T05:27:03.227Z"
+  },
+  {
+    "id": "rag_log_1789882023221_7ba3d11b",
+    "type": "INFO",
+    "description": "[NO-OP] Code saturation reached in batch for logs/learning_logs.json",
+    "timestamp": "2026-09-20T05:27:03.221Z"
+  },
+  {
     "id": "rag_log_1789882017712_25b29afe",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "INFO",
     "description": "[NO-OP] Code saturation reached in batch for logs/FIREBASE_RAG_SNAPSHOT.md",
     "timestamp": "2026-09-20T05:26:07.325Z"
-  },
-  {
-    "id": "rag_log_1789881967323_57e43395",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for logs/FIREBASE_RAG_SNAPSHOT.md",
-    "timestamp": "2026-09-20T05:26:07.323Z"
-  },
-  {
-    "id": "rag_log_1789881964068_81520560",
-    "type": "RAG_WRITE",
-    "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-9, rai...",
-    "timestamp": "2026-09-20T05:26:04.068Z"
-  },
-  {
-    "id": "rag_log_1789881964066_0e5494f6",
-    "type": "HOTSWAP_OK",
-    "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-8 [Source: RAG_GENE_HOTSWAP].",
-    "timestamp": "2026-09-20T05:26:04.066Z"
   }
 ]
