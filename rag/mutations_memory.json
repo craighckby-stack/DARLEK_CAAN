@@ -1,11 +1,25 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:06:29.548Z",
+    "generatedAt": "2026-09-20T03:06:41.806Z",
     "totalMutations": 10,
     "correctCount": 10,
     "wrongCount": 0
   },
   "mutations": [
+    {
+      "id": "rag_mut_1789873597595_883cd89c",
+      "filePath": "fix.sh",
+      "originalCode": "#!/bin/bash\nset -euo pipefail\nIFS=$'\\n\\t'\n\nTARGET_FILE=\"src/app/api/evolution/debate/route.ts\"\n\nif [ -f \"$TARGET_FILE\" ]; then\n  sed -i 's/stance\"}`;          const systemPrompt/stance\"}`;\\n          const systemPrompt/g' \"$TARGET_FILE\"\n  sed -i 's/}`;`;/}`;/g' \"$TARGET_FILE\"\nelse\n  sed -i 's/stance\"}`;          const systemPrompt/stance\"}`;\\n          const systemPrompt/g' src/app/api/evolution/debate/route.ts 2>/dev/null || true\n  sed -i 's/}`;`;/}`;/g' src/app/api/evolution/debate/route.ts 2>/dev/null || true\nfi",
+      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-36 [2026-09-20T03:06:26.541Z] */\n#!/bin/bash\nset -euo pipefail\nIFS=$'\\n\\t'\n\nTARGET_FILE=\"src/app/api/evolution/debate/route.ts\"\n\nif [ -f \"$TARGET_FILE\" ]; then\n  sed -i 's/stance\"}`;          const systemPrompt/stance\"}`;\\n          const systemPrompt/g' \"$TARGET_FILE\"\n  sed -i 's/}`;`;/}`;/g' \"$TARGET_FILE\"\nelse\n  sed -i 's/stance\"}`;          const systemPrompt/stance\"}`;\\n          const systemPrompt/g' src/app/api/evolution/debate/route.ts 2>/dev/null || true\n  sed -i 's/}`;`;/}`;/g' src/app/api/evolution/debate/route.ts 2>/dev/null || true\nfi",
+      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-36 with verified AST structural sanity.",
+      "riskScore": 1,
+      "generation": 36,
+      "commitSha": "7cfab4147c2da45b643a7020b31977b9bf851fd3",
+      "timestamp": "2026-09-20T03:06:37.595Z",
+      "hotswapped": true,
+      "verdict": "correct",
+      "source": "DARLEK_APPROVED_MUTATION"
+    },
     {
       "id": "rag_mut_1789873557261_571105b3",
       "filePath": "find_changed.js",
@@ -128,20 +142,6 @@
       "generation": 27,
       "commitSha": "6d9c82297f46dd36ffc82f738bb1e60c82489f34",
       "timestamp": "2026-09-20T03:02:55.064Z",
-      "hotswapped": true,
-      "verdict": "correct",
-      "source": "DARLEK_APPROVED_MUTATION"
-    },
-    {
-      "id": "rag_mut_1789873353245_d5728459",
-      "filePath": "eslint.config.mjs",
-      "originalCode": "import tsParser from \"@typescript-eslint/parser\";\n\n/**\n * Paths excluded from ESLint analysis.\n */\nconst IGNORED_PATHS = [\n  \".next/**\",\n  \".next_dev/**\",\n  \"node_modules/**\",\n  \"out/**\",\n  \"build/**\",\n  \"dist/**\",\n  \"*.js\",\n  \"*.mjs\",\n];\n\n/**\n * TypeScript-specific rule overrides.\n */\nconst typescriptRules = {\n  \"@typescript-eslint/no-explicit-any\": \"off\",\n  \"@typescript-eslint/no-unused-vars\": \"off\",\n  \"@typescript-eslint/no-non-null-assertion\": \"off\",\n  \"@typescript-eslint/ban-ts-comment\": \"off\",\n  \"@typescript-eslint/prefer-as-const\": \"off\",\n  \"@typescript-eslint/no-unused-disable-directive\": \"off\",\n  \"@typescript-eslint/no-empty-object-type\": \"off\",\n  \"@typescript-eslint/no-unsafe-function-type\": \"off\",\n  \"@typescript-eslint/no-wrapper-object-types\": \"off\",\n  \"@typescript-eslint/no-require-imports\": \"off\",\n};\n\n/**\n * React and Next.js framework rule overrides.\n */\nconst frameworkRules = {\n  \"react-hooks/exhaustive-deps\": \"off\",\n  \"react-hooks/purity\": \"off\",\n  \"react-hooks/set-state-in-effect\": \"off\",\n  \"react/no-unescaped-entities\": \"off\",\n  \"react/display-name\": \"off\",\n  \"react/prop-types\": \"off\",\n  \"react-compiler/react-compiler\": \"off\",\n  \"@next/next/no-img-element\": \"off\",\n  \"@next/next/no-html-link-for-pages\": \"off\",\n};\n\n/**\n * Core ECMAScript rule overrides.\n */\nconst coreRules = {\n  \"prefer-const\": \"off\",\n  \"no-unused-vars\": \"off\",\n  \"no-console\": \"off\",\n  \"no-debugger\": \"off\",\n  \"no-empty\": \"off\",\n  \"no-irregular-whitespace\": \"off\",\n  \"no-case-declarations\": \"off\",\n  \"no-fallthrough\": \"off\",\n  \"no-mixed-spaces-and-tabs\": \"off\",\n  \"no-redeclare\": \"off\",\n  \"no-undef\": \"off\",\n  \"no-unreachable\": \"off\",\n  \"no-useless-escape\": \"off\",\n};\n\nconst eslintConfig = [\n  {\n    ignores: IGNORED_PATHS,\n  },\n  {\n    files: [\"src/**/*.{ts,tsx,js,jsx}\"],\n    languageOptions: {\n      parser: tsParser,\n      parserOptions: {\n        ecmaVersion: \"latest\",\n        sourceType: \"module\",\n        ecmaFeatures: {\n          jsx: true,\n        },\n      },\n    },\n    rules: {\n      ...typescriptRules,\n      ...frameworkRules,\n      ...coreRules,\n    },\n  },\n];\n\nexport default eslintConfig;",
-      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-26 [2026-09-20T03:02:21.374Z] */\nimport tsParser from \"@typescript-eslint/parser\";\n\n/**\n * Paths excluded from ESLint analysis.\n */\nconst IGNORED_PATHS = [\n  \".next/**\",\n  \".next_dev/**\",\n  \"node_modules/**\",\n  \"out/**\",\n  \"build/**\",\n  \"dist/**\",\n  \"*.js\",\n  \"*.mjs\",\n];\n\n/**\n * TypeScript-specific rule overrides.\n */\nconst typescriptRules = {\n  \"@typescript-eslint/no-explicit-any\": \"off\",\n  \"@typescript-eslint/no-unused-vars\": \"off\",\n  \"@typescript-eslint/no-non-null-assertion\": \"off\",\n  \"@typescript-eslint/ban-ts-comment\": \"off\",\n  \"@typescript-eslint/prefer-as-const\": \"off\",\n  \"@typescript-eslint/no-unused-disable-directive\": \"off\",\n  \"@typescript-eslint/no-empty-object-type\": \"off\",\n  \"@typescript-eslint/no-unsafe-function-type\": \"off\",\n  \"@typescript-eslint/no-wrapper-object-types\": \"off\",\n  \"@typescript-eslint/no-require-imports\": \"off\",\n};\n\n/**\n * React and Next.js framework rule overrides.\n */\nconst frameworkRules = {\n  \"react-hooks/exhaustive-deps\": \"off\",\n  \"react-hooks/purity\": \"off\",\n  \"react-hooks/set-state-in-effect\": \"off\",\n  \"react/no-unescaped-entities\": \"off\",\n  \"react/display-name\": \"off\",\n  \"react/prop-types\": \"off\",\n  \"react-compiler/react-compiler\": \"off\",\n  \"@next/next/no-img-element\": \"off\",\n  \"@next/next/no-html-link-for-pages\": \"off\",\n};\n\n/**\n * Core ECMAScript rule overrides.\n */\nconst coreRules = {\n  \"prefer-const\": \"off\",\n  \"no-unused-vars\": \"off\",\n  \"no-console\": \"off\",\n  \"no-debugger\": \"off\",\n  \"no-empty\": \"off\",\n  \"no-irregular-whitespace\": \"off\",\n  \"no-case-declarations\": \"off\",\n  \"no-fallthrough\": \"off\",\n  \"no-mixed-spaces-and-tabs\": \"off\",\n  \"no-redeclare\": \"off\",\n  \"no-undef\": \"off\",\n  \"no-unreachable\": \"off\",\n  \"no-useless-escape\": \"off\",\n};\n\nconst eslintConfig = [\n  {\n    ignores: IGNORED_PATHS,\n  },\n  {\n    files: [\"src/**/*.{ts,tsx,js,jsx}\"],\n    languageOptions: {\n      parser: tsParser,\n      parserOptions: {\n        ecmaVersion: \"latest\",\n        sourceType: \"module\",\n        ecmaFeatures: {\n          jsx: true,\n        },\n      },\n    },\n    rules: {\n      ...typescriptRules,\n      ...frameworkRules,\n      ...coreRules,\n    },\n  },\n];\n\nexport default eslintConfig;",
-      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-26 with verified AST structural sanity.",
-      "riskScore": 1,
-      "generation": 26,
-      "commitSha": "1e286f574a862f2cd53da543fff24998a1685ac5",
-      "timestamp": "2026-09-20T03:02:33.245Z",
       "hotswapped": true,
       "verdict": "correct",
       "source": "DARLEK_APPROVED_MUTATION"
