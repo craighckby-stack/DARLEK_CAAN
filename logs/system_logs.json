@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:24:11.345Z",
+    "generatedAt": "2026-09-20T03:24:20.423Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789874657373_43bd20d1",
+      "type": "MUTATE",
+      "description": "[Batch 78/253] Proposed mutation for public/placeholder.txt (risk: LOW)",
+      "timestamp": "2026-09-20T03:24:17.373Z"
+    },
+    {
+      "id": "rag_log_1789874657371_7ee95760",
+      "type": "MUTATE",
+      "description": "[Batch 78/253] Proposed mutation for public/placeholder.txt (risk: LOW)",
+      "timestamp": "2026-09-20T03:24:17.371Z"
+    },
+    {
+      "id": "rag_log_1789874656212_107ad26e",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:24:16.212Z"
+    },
     {
       "id": "rag_log_1789874648016_04dbb87c",
       "type": "HEALTH",
@@ -138,41 +156,9 @@
       "type": "MUTATE",
       "description": "[Batch 75/253] Proposed mutation for postcss.config.mjs (risk: LOW)",
       "timestamp": "2026-09-20T03:23:23.684Z"
-    },
-    {
-      "id": "rag_log_1789874601949_2e9a0ee4",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:23:21.949Z"
-    },
-    {
-      "id": "rag_log_1789874593654_141cbb78",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:23:13.654Z"
-    },
-    {
-      "id": "rag_log_1789874593653_00e3a43f",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:23:13.653Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-1a7a5fbc",
-      "time": "13:16:38",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-041c5d0c",
-      "time": "13:16:46",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-3c903a87",
       "time": "13:16:55",
@@ -858,6 +844,20 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-2cffff82",
+      "time": "13:24:16",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-42150703",
+      "time": "13:24:17",
+      "addr": "0x00151A9A",
+      "tag": "MUTATE",
+      "message": "[Batch 78/253] Proposed mutation for public/placeholder.txt (risk: LOW)"
     }
   ]
 }
