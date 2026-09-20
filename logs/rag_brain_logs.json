@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789872560682_59f00caf",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T02:49:20.682Z"
+  },
+  {
     "id": "rag_log_1789872551885_8c78900b",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -136,12 +142,6 @@
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
     "timestamp": "2026-09-20T02:48:15.027Z"
-  },
-  {
-    "id": "rag_log_1789872494566_f282027a",
-    "type": "CONNECT",
-    "description": "Verifying GitHub access key...",
-    "timestamp": "2026-09-20T02:48:14.566Z"
   },
   {
     "id": "rag_log_1789872494566_56b77f82",
