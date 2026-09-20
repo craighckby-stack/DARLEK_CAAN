@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789877481743_9d0004c6",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T04:11:21.743Z"
+  },
+  {
+    "id": "rag_log_1789877479914_6d841181",
+    "type": "MUTATE",
+    "description": "[Batch 204/253] Proposed mutation for src/lib/safe-json.ts (risk: LOW)",
+    "timestamp": "2026-09-20T04:11:19.913Z"
+  },
+  {
+    "id": "rag_log_1789877479911_9e2a5330",
+    "type": "MUTATE",
+    "description": "[Batch 204/253] Proposed mutation for src/lib/safe-json.ts (risk: LOW)",
+    "timestamp": "2026-09-20T04:11:19.911Z"
+  },
+  {
     "id": "rag_log_1789877473541_f0138136",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
     "timestamp": "2026-09-20T04:10:20.935Z"
-  },
-  {
-    "id": "rag_log_1789877419691_8c5a6022",
-    "type": "MUTATE",
-    "description": "[Batch 201/253] Proposed mutation for src/lib/omega-bootstrap.ts (risk: LOW)",
-    "timestamp": "2026-09-20T04:10:19.691Z"
-  },
-  {
-    "id": "rag_log_1789877419687_ac7dcf4f",
-    "type": "MUTATE",
-    "description": "[Batch 201/253] Proposed mutation for src/lib/omega-bootstrap.ts (risk: LOW)",
-    "timestamp": "2026-09-20T04:10:19.687Z"
-  },
-  {
-    "id": "rag_log_1789877410944_1858c513",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T04:10:10.944Z"
   }
 ]
