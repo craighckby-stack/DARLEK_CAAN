@@ -1,4 +1,4 @@
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-3 [2026-09-19T22:42:01.847Z] */
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-4 [2026-09-19T22:42:01.847Z] */
 # Dependency directories
 node_modules/
 .pnpm-store/
@@ -190,3 +190,29 @@ trivy-results.*
 snyk-report.*
 semgrep-results.*
 audit-report.*
+
+# DARLEK CAAN Synthesis G-8: AI, Container, REPL & Local Config Leakage Defense
+docker-compose.override.yml
+docker-compose.override.yaml
+.docker/
+.aider*
+.copilot/
+.cursor/
+chatgpt_history.json
+.node_repl_history
+.bash_history
+.zsh_history
+.python_history
+config.local.js
+config.local.ts
+config.local.json
+local.json
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+client_secret*.json
+*.htpasswd
+oauth.json
+*.pcap
+*.pcapng
