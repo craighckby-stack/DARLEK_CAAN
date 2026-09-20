@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:16:49.410Z",
+    "generatedAt": "2026-09-20T03:16:58.632Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789874215604_ba48bd53",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:16:55.604Z"
+    },
     {
       "id": "rag_log_1789874206359_bb3d34b8",
       "type": "LOG_SYNC",
@@ -150,22 +156,9 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T03:13:40.962Z"
-    },
-    {
-      "id": "rag_log_1789874012340_52a90d09",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:13:32.340Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-c5e03359",
-      "time": "13:08:28",
-      "addr": "0x0074D6D9",
-      "tag": "APPROVE",
-      "message": "Mutation applied to fix6.js"
-    },
     {
       "id": "dos-48659db4",
       "time": "13:08:29",
@@ -855,6 +848,13 @@
     {
       "id": "dos-041c5d0c",
       "time": "13:16:46",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-3c903a87",
+      "time": "13:16:55",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
