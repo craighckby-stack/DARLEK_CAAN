@@ -7,8 +7,23 @@ interface ExtendedFirebaseOptions extends FirebaseOptions {
   firestoreDatabaseId?: string;
 }
 
-const rawApiKey = process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
-const rawProjectId = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID;
+const getEnvVar = (key: string): string => {
+  if (typeof import.meta !== 'undefined' && (import.meta as unknown as { env?: Record<string, string> }).env) {
+    const metaEnv = (import.meta as unknown as { env: Record<string, string> }).env;
+    if (metaEnv[key]) return metaEnv[key];
+    if (metaEnv[`VITE_${key}`]) return metaEnv[`VITE_${key}`];
+    if (metaEnv[`NEXT_PUBLIC_${key}`]) return metaEnv[`NEXT_PUBLIC_${key}`];
+  }
+  if (typeof process !== 'undefined' && process.env) {
+    if (process.env[key]) return process.env[key]!;
+    if (process.env[`VITE_${key}`]) return process.env[`VITE_${key}`]!;
+    if (process.env[`NEXT_PUBLIC_${key}`]) return process.env[`NEXT_PUBLIC_${key}`]!;
+  }
+  return '';
+};
+
+const rawApiKey = getEnvVar('FIREBASE_API_KEY');
+const rawProjectId = getEnvVar('FIREBASE_PROJECT_ID');
 
 /**
  * Validates whether real Firebase credentials are provided in the environment.
@@ -26,12 +41,12 @@ export const isFirebaseConfigured = (): boolean => {
 
 const firebaseConfig: ExtendedFirebaseOptions = {
   apiKey: rawApiKey || 'dummy-api-key',
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || 'dummy-domain',
+  authDomain: getEnvVar('FIREBASE_AUTH_DOMAIN') || 'dummy-domain',
   projectId: rawProjectId || 'dummy-project-id',
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || 'dummy-bucket',
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || 'dummy-sender-id',
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || 'dummy-app-id',
-  firestoreDatabaseId: process.env.NEXT_PUBLIC_FIREBASE_FIRESTORE_DATABASE_ID || undefined
+  storageBucket: getEnvVar('FIREBASE_STORAGE_BUCKET') || 'dummy-bucket',
+  messagingSenderId: getEnvVar('FIREBASE_MESSAGING_SENDER_ID') || 'dummy-sender-id',
+  appId: getEnvVar('FIREBASE_APP_ID') || 'dummy-app-id',
+  firestoreDatabaseId: getEnvVar('FIREBASE_FIRESTORE_DATABASE_ID') || undefined
 };
 
 let appInstance: FirebaseApp | null = null;
@@ -127,8 +142,10 @@ export async function clearAllFirebaseData(): Promise<{
       const keysToPurge = [
         'nexus_rag_brain_local_chunks',
         'nexus_rag_brain_logs',
+        'nexus_rag_brain_mutations',
         'dalek_learning_logs',
-        'darlek_cann_rejection_memory',
+        'darlek_caan_rejection_memory',
+        'darlek_caan_log_entries',
         'dalek_local_logs',
         'firebase_audit_logs'
       ];

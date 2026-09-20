@@ -4,6 +4,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { join, resolve, dirname } from 'path';
 import { safeReqJson } from '@/lib/safe-json';
 import { sanitizeContent } from '@/lib/scanner';
+import { CodeRetentionPolicy } from '@/lib/retention-policy';
 
 export const maxDuration = 300;
 export const dynamic = 'force-dynamic';
@@ -294,6 +295,23 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
     const baseTreeSha = await resolveBaseTreeSha(owner, repo, refSha, headers);
     const { treeItemsMap, pushDetails } = collectTreeItemsAndDetails(files, projectRoot);
+
+    // Enforce retention gate on all files staged for push
+    for (const item of treeItemsMap.values()) {
+      const auth = await CodeRetentionPolicy.enforceGate({
+        repo: `${owner}/${repo}`,
+        filePath: item.path,
+        content: item.content,
+        actor: 'GITHUB_PUSH_ENHANCEMENTS_API',
+      });
+      if (!auth.authorized) {
+        return NextResponse.json(
+          { error: `Retention Policy rejected push of file "${item.path}": ${auth.error}` },
+          { status: 403 }
+        );
+      }
+    }
+
     const treeItems = Array.from(treeItemsMap.values());
 
     const treeItemsLength = treeItems.length;
@@ -320,7 +338,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     const treeData = await treeResponse.json();
     const newTreeSha: string = treeData.sha;
 
-    const commitMsg = `[DARLEK CANN] Deploy State Backup: ${treeItemsLength} core files`;
+    const commitMsg = `[DARLEK CAAN] Deploy State Backup: ${treeItemsLength} core files`;
     const commitBody = {
       message: commitMsg,
       tree: newTreeSha,
@@ -345,7 +363,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       ? await fetch(`https://api.github.com/repos/${owner}/${repo}/git/refs/heads/${branch}`, {
           method: 'PATCH',
           headers,
-          body: JSON.stringify({ sha: newCommitSha, force: true }),
+          body: JSON.stringify({ sha: newCommitSha, force: false }),
         })
       : await fetch(`https://api.github.com/repos/${owner}/${repo}/git/refs`, {
           method: 'POST',

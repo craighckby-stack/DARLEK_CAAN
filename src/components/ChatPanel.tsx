@@ -8,11 +8,12 @@
 
 
 import { useState, useRef, useEffect, useCallback, type ChangeEvent, type KeyboardEvent } from 'react';
-import { Send, Loader2, GitBranch, RefreshCw, Paperclip, File, X, Languages } from 'lucide-react';
+import { Send, Loader2, GitBranch, RefreshCw, Paperclip, File, X, Languages, Bug } from 'lucide-react';
 import type { Message, SystemState, BranchInfo } from '@/lib/types';
 import { SETUP_STEPS, COLORS } from '@/lib/constants';
 import { ALL_SUPPORTED_LANGUAGES, changeDisplayLanguage, getCurrentLanguage } from '@/lib/languages';
 import ChatMessage from './ChatMessage';
+import BugInspector, { BugKeywordPromptBanner } from './BugInspector';
 
 interface AttachedFile {
   name: string;
@@ -51,6 +52,7 @@ export default function ChatPanel({
   const [attachedFile, setAttachedFile] = useState<AttachedFile | null>(null);
   const [isExtracting, setIsExtracting] = useState<boolean>(false);
   const [selectedLanguage, setSelectedLanguage] = useState<string>('english');
+  const [isBugInspectorOpen, setIsBugInspectorOpen] = useState<boolean>(false);
 
   useEffect(() => {
     setSelectedLanguage(getCurrentLanguage());
@@ -664,15 +666,27 @@ export default function ChatPanel({
             COMMUNICATION CHANNEL
           </span>
         </div>
-        <span
-          style={{
-            fontFamily: 'var(--font-orbitron), sans-serif',
-            fontSize: '10px',
-            color: COLORS.textMuted,
-          }}
-        >
-          {messages.length} MSGS
-        </span>
+        <div className="flex items-center gap-2">
+          {systemState.setupComplete && (
+            <button
+              onClick={() => setIsBugInspectorOpen(true)}
+              className="px-2.5 py-1 rounded bg-[#200a0a] hover:bg-[#300f0f] border border-red-700/60 text-red-300 hover:text-red-200 text-[10px] font-mono flex items-center gap-1.5 transition-all shadow-sm group"
+              title="Open Bug Inspector & Autonomous Repair"
+            >
+              <Bug size={12} className="text-red-400 group-hover:scale-110 transition-transform" />
+              <span>BUG INSPECTOR</span>
+            </button>
+          )}
+          <span
+            style={{
+              fontFamily: 'var(--font-orbitron), sans-serif',
+              fontSize: '10px',
+              color: COLORS.textMuted,
+            }}
+          >
+            {messages.length} MSGS
+          </span>
+        </div>
       </div>
 
       {/* Messages area */}
@@ -721,21 +735,39 @@ export default function ChatPanel({
             paddingBottom: 'max(env(safe-area-inset-bottom), 12px)'
           }}
         >
+          {/* Proactive Bug Keyword Detector Banner */}
+          {!attachedFile && (
+            <BugKeywordPromptBanner
+              inputText={input}
+              onOpenInspector={() => setIsBugInspectorOpen(true)}
+              onTriggerFileAttachment={() => fileInputRef.current?.click()}
+            />
+          )}
+
           {attachedFile && (
             <div className="mb-2 px-3 py-2 bg-[#120808] border border-[#a21f1f]/30 rounded flex items-center justify-between text-xs font-mono text-stone-300">
               <div className="flex items-center gap-1.5 truncate">
                 <File size={13} style={{ color: COLORS.dalekRed }} />
                 <span className="truncate">{attachedFile.name}</span>
               </div>
-              <button 
-                onClick={() => {
-                  setAttachedFile(null);
-                  if (fileInputRef.current) fileInputRef.current.value = '';
-                }}
-                className="text-gray-400 hover:text-red-400 p-0.5 rounded cursor-pointer transition-colors"
-              >
-                <X size={13} />
-              </button>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setIsBugInspectorOpen(true)}
+                  className="text-[11px] text-red-400 hover:text-red-300 px-2 py-0.5 rounded bg-red-950/60 border border-red-800/40"
+                  title="Inspect in Bug Inspector"
+                >
+                  Inspect in Modal
+                </button>
+                <button 
+                  onClick={() => {
+                    setAttachedFile(null);
+                    if (fileInputRef.current) fileInputRef.current.value = '';
+                  }}
+                  className="text-gray-400 hover:text-red-400 p-0.5 rounded cursor-pointer transition-colors"
+                >
+                  <X size={13} />
+                </button>
+              </div>
             </div>
           )}
           <div className="flex items-end gap-2">
@@ -777,7 +809,13 @@ export default function ChatPanel({
                 }, 300);
               }}
               onKeyDown={handleKeyDown}
-              placeholder={attachedFile ? "Description of specification system... Type 'create' with this to compile!" : "Type a command..."}
+              placeholder={
+                attachedFile
+                  ? attachedFile.name.toLowerCase().includes('bug')
+                    ? "Bug specification attached! Type 'bugs' to auto-connect & fix repository bugs..."
+                    : "Specification attached... Type 'create [name]' to compile or 'bugs' to repair!"
+                  : "Type a command (e.g. 'bugs', 'scan', 'propose', 'help')..."
+              }
               rows={1}
               className="dalek-input flex-1 px-4 py-3 text-sm resize-none"
               style={{ 
@@ -797,13 +835,30 @@ export default function ChatPanel({
               {isLoading ? <Loader2 size={16} className="animate-spin" /> : <Send size={16} />}
             </button>
           </div>
-          <div className="mt-1.5 text-[10px] text-gray-500 font-mono text-center select-none w-full flex justify-center gap-3">
-            <span>Type <span className="text-red-400 font-semibold font-sans">help</span> for a list of commands.</span>
+          <div className="mt-1.5 text-[10px] text-gray-500 font-mono text-center select-none w-full flex flex-wrap justify-center gap-2 sm:gap-3">
+            <span>Type <span className="text-red-400 font-semibold font-sans">help</span> for commands.</span>
             <span>•</span>
-            <span>Attach doc & type <strong className="text-red-400 font-mono">create [name]</strong> to compile new system!</span>
+            <span>Attach bug doc & type <strong className="text-red-400 font-mono">bugs</strong> to auto-fix system!</span>
+            <span>•</span>
+            <span>Attach spec & type <strong className="text-red-400 font-mono">create [name]</strong> to compile repo.</span>
           </div>
         </div>
       )}
+
+      {/* Bug Inspector Modal */}
+      <BugInspector
+        isOpen={isBugInspectorOpen}
+        onClose={() => setIsBugInspectorOpen(false)}
+        systemState={systemState}
+        initialKeyword={input}
+        initialAttachedFile={attachedFile}
+        onApplyFixesToState={() => {
+          onSendMessage('scan');
+        }}
+        onAddCaanMessage={(msg) => {
+          // If needed, message handling is triggered
+        }}
+      />
     </div>
   );
 }

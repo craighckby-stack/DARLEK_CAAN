@@ -9,6 +9,7 @@
 
 import { sanitizeContent, type Finding } from '@/lib/scanner';
 import type { AgentVote } from '@/lib/types';
+import { enforceRetentionGate } from '@/lib/retention-policy';
 
 export interface GitHubTarget {
   token: string;
@@ -114,6 +115,19 @@ export async function commitToGitHubFile(
   message: string,
 ): Promise<{ commitSha: string; findings: Finding[] }> {
   if (!validateGitHubTarget(target)) throw new Error('Invalid character sequence detected in repository parameters');
+  
+  // Enforce Centralized CodeRetentionPolicy
+  const retentionGate = await enforceRetentionGate({
+    repo: `${target.owner}/${target.repo}`,
+    filePath,
+    content,
+    actor: 'GITHUB_WRITER_SERVICE',
+  });
+
+  if (!retentionGate.authorized) {
+    throw new Error(`Retention/License Policy Violation: ${retentionGate.error || 'Write unauthorized'}`);
+  }
+
   const { sanitized, findings } = sanitizeContent(content);
   if (findings.length > 0) {
     console.warn(`[github-writer] sanitizeContent redacted ${findings.length} finding(s) in ${filePath}`);

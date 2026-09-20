@@ -12,6 +12,7 @@ import QuickActions from '@/components/QuickActions';
 import MutationDiffView from '@/components/MutationDiffView';
 import AgentOrchestra from '@/components/AgentOrchestra';
 import DosConsoleModal from '@/components/DosConsoleModal';
+import BugInspector from '@/components/BugInspector';
 import { msDosEngine } from '@/lib/msDosEngine';
 import { evolutionLock } from '@/lib/evolutionLock';
 import { saveLogToRag, saveMutationToRag, synthesizeRagMutation, type HotswappedFileEntry } from '@/lib/ragBrain';
@@ -142,6 +143,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [isDosConsoleOpen, setIsDosConsoleOpen] = useState(false);
   const [isDosConsoleDocked, setIsDosConsoleDocked] = useState(false);
+  const [isBugInspectorOpen, setIsBugInspectorOpen] = useState(false);
   const [logEntries, setLogEntries] = useState<EvolutionLogEntry[]>([
     createLogEntry('SYSTEM', 'DARLEK CANN v3.1 online. Coherence Gate ARMED.'),
   ]);
@@ -2348,7 +2350,7 @@ export default function Home() {
 
       const isCrashDiagnostic =
         lowerRaw === 'cradhed' || lowerRaw === 'crashed' || lowerRaw === 'crash' ||
-        lowerRaw.includes('crash') || lowerRaw === 'fault' || lowerRaw === 'bug' || lowerRaw === 'broken';
+        (lowerRaw.includes('crash') && !lowerRaw.includes('bug')) || lowerRaw === 'fault';
 
       const currentState = systemState;
       const lowerContent = cleaned.toLowerCase();
@@ -2373,6 +2375,7 @@ export default function Home() {
         addCaanMessage(
           `DALEK CAAN COMMAND DIRECTIVES:\n\n` +
           `• help / commands — Display this operational command manual.\n` +
+          `• bugs / bug — Auto-connect to repository, analyze attached bug file, and fix all system bugs.\n` +
           `• dos / monitor / console — Launch MS-DOS black screen live system telemetry monitor window.\n` +
           `• reboot / reset — Initiate full system reboot and purge chat, logs & cache.\n` +
           `• scan — Scan target repository (${currentState.repoConfig?.owner || 'owner'}/${currentState.repoConfig?.repo || 'repo'}) for code assets.\n` +
@@ -2624,6 +2627,111 @@ export default function Home() {
         }
       }
 
+      // ── Command Parser: bugs / auto-fix with attached bug file or prompt ──
+      const isBugsCommand =
+        lowerContent === 'bugs' ||
+        lowerContent === '/bugs' ||
+        lowerContent === 'bug' ||
+        lowerContent === '/bug' ||
+        lowerContent.startsWith('bugs ') ||
+        lowerContent.startsWith('/bugs ') ||
+        lowerContent.startsWith('bug ') ||
+        lowerContent.startsWith('/bug ') ||
+        lowerContent.includes('fix bugs') ||
+        lowerContent.includes('fix bug') ||
+        lowerContent.includes('fix-bugs') ||
+        lowerContent.includes('repair system') ||
+        (fileAttachment && (
+          fileAttachment.name.toLowerCase().includes('bug') ||
+          lowerContent === 'bugs' ||
+          lowerContent === 'bug' ||
+          lowerContent === 'fix' ||
+          lowerContent === ''
+        ));
+
+      if (isBugsCommand && currentState.setupComplete) {
+        const targetOwner = currentState.repoConfig?.owner || 'craighckby-stack';
+        const targetRepo = currentState.repoConfig?.repo || 'DARLEK-CAAN-Cognitive-Engine';
+        const targetBranch = currentState.repoConfig?.branch || 'main';
+
+        setMessages((prev) => [
+          ...prev,
+          createMessage('operator', `${content || 'bugs'}${fileAttachment ? ` [Attached: ${fileAttachment.name}]` : ''}`)
+        ]);
+        setIsLoading(true);
+
+        const diagnosticMsg =
+          `🤖 DALEK CAAN AUTONOMOUS BUG RESOLUTION ENGINE ENGAGED\n\n` +
+          `• Target Repository: ${targetOwner}/${targetRepo} (${targetBranch})\n` +
+          `• Bug Specification: "${fileAttachment?.name || 'Live Diagnostic Report'}"\n\n` +
+          `Analyzing codebase for syntax defects, broken imports, missing types, and runtime anomalies... Please hold, OPERATOR...`;
+        addCaanMessage(diagnosticMsg);
+        addLogEntry('SYSTEM', `Autonomous bug diagnosis initiated for ${targetOwner}/${targetRepo}`);
+
+        try {
+          const res = await fetch('/api/system/fix-bugs', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              token: currentState.apiKeys.github,
+              owner: targetOwner,
+              repo: targetRepo,
+              branch: targetBranch,
+              bugSpecName: fileAttachment?.name || 'bug',
+              bugSpecContent: fileAttachment?.content || content,
+              prompt: content,
+              apiKeys: currentState.apiKeys,
+            }),
+          });
+
+          const data = await res.json();
+
+          if (data.success) {
+            const filesList = Array.isArray(data.fixedFiles) && data.fixedFiles.length > 0
+              ? data.fixedFiles.map((f: { path: string; rationale?: string; description?: string }) => `• \`${f.path}\` — ${f.rationale || f.description || 'Patched'}`).join('\n')
+              : '• Core architectural invariants verified without additional file changes.';
+
+            addCaanMessage(
+              `✅ SYSTEM BUG RESOLUTION COMPLETED BY DALEK CAAN!\n\n` +
+              `${data.summary || 'All reported bugs and system anomalies have been diagnosed and resolved.'}\n\n` +
+              `📊 Issues Resolved: ${data.issuesResolved || 0}\n` +
+              `📁 Modified Files:\n${filesList}\n\n` +
+              `🔗 Commit SHA: \`${data.commitSha || 'latest'}\`\n` +
+              `🔗 Repository Dashboard: [Open Repository](${data.commitUrl || `https://github.com/${targetOwner}/${targetRepo}`})\n\n` +
+              `System memory updated with bug resolution postmortems.`
+            );
+            addLogEntry('MUTATION', `Resolved ${data.issuesResolved || 0} bugs in ${targetOwner}/${targetRepo}`);
+
+            // Automatically trigger RAG memory sync
+            try {
+              syncAllLogsToGitHub({
+                token: currentState.apiKeys.github,
+                owner: targetOwner,
+                repo: targetRepo,
+                branch: targetBranch,
+              }).catch(() => {});
+            } catch {}
+
+            // Rescan repository to update UI
+            setTimeout(() => {
+              quickActionRef.current?.('scan');
+            }, 1200);
+          } else {
+            addCaanMessage(
+              `⚠️ BUG RESOLUTION ENCOUNTERED AN ISSUE.\n\nDetails: ${data.error || 'Unable to complete automated bug resolution.'}`
+            );
+            addLogEntry('ERROR', `Bug resolution error: ${data.error || 'Unknown error'}`);
+          }
+        } catch (err: unknown) {
+          const errMsg = err instanceof Error ? err.message : String(err);
+          addCaanMessage(`AUTONOMOUS BUG RESOLUTION FAILED: Host communication error (${errMsg})`);
+          addLogEntry('ERROR', `Network error during bug resolution: ${errMsg}`);
+        } finally {
+          setIsLoading(false);
+        }
+        return;
+      }
+
       // ── Command Parser: create [<repo-name>] with attached spec ──
       const isCreateCommand = lowerContent.startsWith('create') || lowerContent.startsWith('/create') || (fileAttachment && (lowerContent.includes('create') || !lowerContent));
 
@@ -2870,6 +2978,15 @@ export default function Home() {
       const { apiKeys, repoConfig } = systemState;
 
       switch (action) {
+        // ────────────────────────────────
+        // BUG INSPECTOR & REPAIR
+        // ────────────────────────────────
+        case 'bugs': {
+          setIsBugInspectorOpen(true);
+          addLogEntry('SYSTEM', 'Bug Inspector component engaged.');
+          return;
+        }
+
         // ────────────────────────────────
         // SCAN REPOSITORY
         // ────────────────────────────────
@@ -6530,6 +6647,22 @@ export default function Home() {
         systemState={systemState}
         isDocked={isDosConsoleDocked}
         onToggleDock={() => setIsDosConsoleDocked((prev) => !prev)}
+      />
+
+      {/* Bug Inspector & Autonomous Repair Modal */}
+      <BugInspector
+        isOpen={isBugInspectorOpen}
+        onClose={() => setIsBugInspectorOpen(false)}
+        systemState={systemState}
+        onApplyFixesToState={(fixedCount) => {
+          quickActionRef.current?.('scan');
+          toast({
+            title: 'BUG RESOLUTION COMPLETED',
+            description: `Patched ${fixedCount} issues in repository.`,
+          });
+        }}
+        onAddSystemLog={(cat, msg) => addLogEntry(cat, msg)}
+        onAddCaanMessage={(msg) => addCaanMessage(msg)}
       />
     </div>
   );

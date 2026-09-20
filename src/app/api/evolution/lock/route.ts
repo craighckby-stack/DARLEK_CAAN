@@ -28,7 +28,11 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       ttlMs?: number;
     }>(req, {});
 
-    const { action = 'acquire', owner = 'unknown', ttlMs = 60_000 } = body;
+    const { action = 'acquire', owner: rawOwner = 'unknown', ttlMs: rawTtlMs = 60_000 } = body;
+    const owner = typeof rawOwner === 'string' ? rawOwner.trim().slice(0, 64) : 'unknown';
+    const ttlMs = typeof rawTtlMs === 'number' && !isNaN(rawTtlMs)
+      ? Math.max(1_000, Math.min(300_000, rawTtlMs))
+      : 60_000;
 
     if (action === 'acquire') {
       const acquired = evolutionLock.acquire(owner, ttlMs);

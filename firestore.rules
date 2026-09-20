@@ -17,50 +17,70 @@ service cloud.firestore {
     function isAdmin() {
       return isSignedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
     }
-    function incoming() {
-      return request.resource.data;
-    }
-    function existing() {
-      return resource.data;
+    function isValidPayload() {
+      return request.resource.data.size() < 1048576; // Max 1MB document
     }
 
     // Agent Telemetry
     match /agents/{agentId} {
-      allow get: if isValidId(agentId);
-      allow list: if true;
-      allow create, update: if isSignedIn() && isValidId(agentId);
+      allow get, list: if isValidId(agentId);
+      allow create, update: if isValidId(agentId) && isValidPayload();
       allow delete: if isAdmin();
     }
 
     // Shared Substrate World State
     match /world/{docId} {
-      allow get: if isValidId(docId);
-      allow list: if true;
-      allow create, update: if isSignedIn() && isValidId(docId);
+      allow get, list: if isValidId(docId);
+      allow create, update: if isValidId(docId) && isValidPayload();
       allow delete: if isAdmin();
     }
 
     // Cryptographic Audit Logs
     match /audit_logs/{logId} {
-      allow get: if isValidId(logId);
-      allow list: if true;
-      allow create: if isSignedIn() && isValidId(logId);
+      allow get, list: if isValidId(logId);
+      allow create: if isValidId(logId) && isValidPayload();
       allow update, delete: if false; // Immutable log
     }
 
     // Dalek RAG Brain Chunks
     match /dalek_rag_brain/{chunkId} {
-      allow read, write: if true;
+      allow get, list: if isValidId(chunkId);
+      allow create, update: if isValidId(chunkId) && isValidPayload();
+      allow delete: if isAdmin();
+    }
+
+    // Dalek Mutations & Staging
+    match /mutations/{mutationId} {
+      allow get, list: if isValidId(mutationId);
+      allow create, update: if isValidId(mutationId) && isValidPayload();
+      allow delete: if isAdmin();
+    }
+
+    match /mutations_staging/{stagingId} {
+      allow get, list: if isValidId(stagingId);
+      allow create, update: if isValidId(stagingId) && isValidPayload();
+      allow delete: if isAdmin();
     }
 
     // Dalek Learning / Bug / Postmortem Logs
     match /dalek_learning_logs/{logId} {
-      allow read, write: if true;
+      allow get, list: if isValidId(logId);
+      allow create: if isValidId(logId) && isValidPayload();
+      allow update, delete: if false; // Immutable logs
+    }
+
+    // System Config
+    match /system_config/{configId} {
+      allow get, list: if isValidId(configId);
+      allow create, update: if isValidId(configId) && isValidPayload();
+      allow delete: if isAdmin();
     }
 
     // Test connection doc
     match /test/{docId} {
-      allow read, write: if true;
+      allow get: if isValidId(docId);
+      allow create, update: if isValidId(docId) && isValidPayload();
+      allow delete: if isValidId(docId);
     }
   }
 }

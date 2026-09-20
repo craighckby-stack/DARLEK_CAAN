@@ -1,8 +1,8 @@
 {
-  "name": "the-shapes-we-give-it",
+  "name": "darlek-caan-autonomous-engine",
   "version": "1.0.0",
   "private": true,
-  "description": "A story and conceptual sketch of an imagined Autonomous Cognitive Engine, told through the archetypes fiction has used to picture one.",
+  "description": "DARLEK CAAN - Autonomous Architectural Synthesizer, Verification Engine & Cognitive Synthesizer with Enforced Retention Policies & Security Hardening.",
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
@@ -11,6 +11,8 @@
     "lint": "eslint src --max-warnings 0",
     "format": "prettier --write \"src/**/*.{ts,tsx,css,md,json}\"",
     "test": "vitest run",
+    "test:coverage": "vitest run",
+    "clean:artifacts": "rm -rf dist .next_dev *.tmp",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -68,6 +70,6 @@
     "react",
     "typescript"
   ],
-  "author": "Sovereign Evolution Engine",
-  "license": "MIT"
+  "author": "Craighckby / DARLEK CAAN Ecosystem",
+  "license": "CC-BY-NC-SA-4.0"
 }

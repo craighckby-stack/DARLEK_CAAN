@@ -5,11 +5,12 @@ import { scheduleGitHubLogSync } from './githubLogSync';
 import { validateSourceCode } from './validator';
 import { validateStructuralSanity } from './structural-sanity-guard';
 import { safeSetLocalStorage, safeGetLocalStorage } from './safeStorage';
+import { CodeRetentionPolicy } from './retention-policy';
 
 const LOCAL_STORAGE_KEY = 'nexus_rag_brain_local_chunks';
 const LOCAL_STORAGE_LOGS_KEY = 'nexus_rag_brain_logs';
 const LOCAL_STORAGE_MUTATIONS_KEY = 'nexus_rag_brain_mutations';
-const LOCAL_STORAGE_HOTSWAP_KEY = 'darlek_cann_hotswap_registry';
+const LOCAL_STORAGE_HOTSWAP_KEY = 'darlek_caan_hotswap_registry';
 
 function getLocalChunks(): BrainChunk[] {
   if (typeof window === 'undefined') return [];
@@ -219,12 +220,27 @@ export async function saveBrainChunk(
   const timestamp = new Date().toISOString();
   const chunkUuid = typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID().slice(0, 8) : Date.now().toString(36);
   const id = `brain_${Date.now()}_${chunkUuid}`;
+
+  // Enforce Authoritative Code Retention Policy Gate before saving raw code
+  const retentionAuth = CodeRetentionPolicy.authorize({
+    repo: 'craighckby-stack/DARLEK-CAAN',
+    filePath: fileName,
+    content: codeText,
+    authorizedBy: 'RAG_BRAIN_GATEKEEPER',
+    initialState: 'STORED',
+    reason: `RAG Brain Knowledge chunk indexing for ${fileName}`,
+  });
+
+  const safeCodeText = retentionAuth.authorized
+    ? codeText
+    : `// [RETENTION POLICY REDACTED - ${retentionAuth.error || 'UNAUTHORIZED_LICENSE'}]\n// Content Hash: ${retentionAuth.record.contentHash}`;
+
   const chunk: BrainChunk = {
     id,
     sourceName,
     fileName,
-    codeText,
-    binaryCode: textToBinary(codeText),
+    codeText: safeCodeText,
+    binaryCode: textToBinary(safeCodeText),
     generation,
     timestamp,
   };
@@ -355,11 +371,21 @@ export async function saveMutationToRag(mutation: {
   const resolvedVerdict = mutation.verdict ?? 'correct';
   const defaultRisk = resolvedVerdict === 'wrong' ? 0.85 : 0.1;
 
+  // Enforce Authoritative Code Retention Policy Gate on Mutated Code
+  const retentionAuth = CodeRetentionPolicy.authorize({
+    repo: 'craighckby-stack/DARLEK-CAAN',
+    filePath: resolvedFilePath,
+    content: mutation.mutatedCode,
+    authorizedBy: 'RAG_MUTATION_GATEKEEPER',
+    initialState: 'PROCESSED',
+    reason: `RAG Mutation indexing: ${mutation.rationale || 'Code evolution'}`,
+  });
+
   const record: RagMutationRecord = {
     id,
     filePath: resolvedFilePath,
     originalCode: mutation.originalCode,
-    mutatedCode: mutation.mutatedCode,
+    mutatedCode: retentionAuth.authorized ? mutation.mutatedCode : `// [REDACTED BY RETENTION GATE: ${retentionAuth.error}]`,
     rationale: mutation.rationale,
     riskScore: mutation.riskScore ?? defaultRisk,
     generation: mutation.generation ?? 1,

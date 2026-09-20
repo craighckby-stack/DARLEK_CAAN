@@ -1,4 +1,3 @@
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-15 [2026-09-20T05:09:44.369Z] */
 # DARLEK CANN v3.0: Sovereign Architectural Blueprint
 
 ## Executive Summary

@@ -1,6 +1,6 @@
 /* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-99 [2026-09-20T05:43:38.389Z] */
 /**
- * DARLEK CANN ARCHITECTURAL HEADER
+ * DARLEK CAAN ARCHITECTURAL HEADER
  * File: src/app/api/github/write-file/route.ts
  * Role: Core system component participating in autonomous cognitive evolution cycles.
  * Architecture: Type-safe modular unit with resilient state interfaces.
@@ -12,6 +12,7 @@ import { resolve, dirname } from 'node:path';
 import type { WriteFileBody } from '@/lib/types';
 import { sanitizeCode } from '@/lib/sanitizer';
 import { safeResponseJson, safeReqJson } from '@/lib/safe-json';
+import { enforceRetentionGate, transitionLifecycleState } from '@/lib/retention-policy';
 
 export const dynamic = 'force-dynamic';
 
@@ -213,6 +214,25 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     const cleanPath = normalizePath(filePath);
     const sanitizedPathLog = cleanPath.replace(/error/gi, 'err');
 
+    // Central Retention & License Gatekeeper Enforcement
+    const retentionCheck = await enforceRetentionGate({
+      repo: `${owner}/${repo}`,
+      filePath: cleanPath,
+      content,
+      actor: 'GITHUB_WRITE_API',
+    });
+
+    if (!retentionCheck.authorized) {
+      return NextResponse.json(
+        {
+          error: `Retention/License Policy Rejection: ${retentionCheck.error || 'Write unauthorized'}`,
+          policyViolation: true,
+          authorizationRecord: retentionCheck.record,
+        },
+        { status: 403 }
+      );
+    }
+
     // Secret Sanitization Gatekeeper
     const { sanitized: safeContent, findings } = sanitizeCode(content, cleanPath);
     if (findings.length > 0) {
@@ -234,7 +254,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     const url = `${GITHUB_API_BASE}/repos/${owner}/${repo}/contents/${encodedPath}`;
 
     const bodyPayload: PutFileContentBody = {
-      message: commitMessage || `[DARLEK CANN] Mutate ${cleanPath}`,
+      message: commitMessage || `[DARLEK CAAN] Mutate ${cleanPath}`,
       content: Buffer.from(safeContent, 'utf-8').toString('base64'),
       branch,
     };

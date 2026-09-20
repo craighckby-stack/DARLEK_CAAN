@@ -26,7 +26,8 @@ import {
   Sparkles,
   ShieldAlert,
   Ban,
-  Trash2
+  Trash2,
+  Bug
 } from 'lucide-react';
 import { COLORS } from '@/lib/constants';
 import { ALL_SUPPORTED_LANGUAGES, changeDisplayLanguage, getCurrentLanguage } from '@/lib/languages';
@@ -82,6 +83,7 @@ interface ActionDefinition {
 
 const QUICK_ACTION_REGISTRY: ActionDefinition[] = [
   { id: 'scan', label: 'SCAN REPOSITORY', icon: Search, color: COLORS.cyan },
+  { id: 'bugs', label: 'BUG INSPECTOR', icon: Bug, color: '#ff0033' },
   { id: 'analyze', label: 'ANALYZE FILE', icon: FileCode, color: COLORS.gold },
   { id: 'propose', label: 'PROPOSE MUTATION', icon: Dna, color: COLORS.purple },
   { id: 'propose-all', label: 'SELECT ALL', icon: ListChecks, color: '#00ccff' },

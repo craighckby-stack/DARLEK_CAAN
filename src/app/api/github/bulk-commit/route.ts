@@ -11,6 +11,7 @@ import { promises as fs } from 'fs';
 import { resolve, dirname } from 'path';
 import { safeReqJson } from '@/lib/safe-json';
 import { sanitizeContent } from '@/lib/scanner';
+import { CodeRetentionPolicy } from '@/lib/retention-policy';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 300;
@@ -354,6 +355,23 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     }
 
     const safeFiles = sanitizeCommittableFiles(files);
+
+    // Enforce Authoritative Code Retention Policy Gate on all bulk commit payloads
+    for (const f of safeFiles) {
+      const auth = await CodeRetentionPolicy.enforceGate({
+        repo: `${owner}/${repo}`,
+        filePath: f.path,
+        content: f.content,
+        actor: 'GITHUB_BULK_COMMIT_API',
+      });
+      if (!auth.authorized) {
+        return NextResponse.json(
+          { error: `Retention Policy Gatekeeper rejected file "${f.path}": ${auth.error}` },
+          { status: 403 }
+        );
+      }
+    }
+
     const headers = createGitHubHeaders(token);
 
     const repoErrorResponse = await ensureRepositoryExists(owner, repo, headers);
@@ -402,7 +420,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     }
 
     const createCommitUrl = `${GITHUB_API_BASE}/repos/${owner}/${repo}/git/commits`;
-    const defaultCommitMsg = `[DARLEK CANN] Bulk Commit: Staged system evolution of ${files.length} file${files.length > 1 ? 's' : ''}`;
+    const defaultCommitMsg = `[DARLEK CAAN] Bulk Commit: Staged system evolution of ${files.length} file${files.length > 1 ? 's' : ''}`;
     
     const createCommitResponse = await fetch(createCommitUrl, {
       method: 'POST',
@@ -438,7 +456,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       headers,
       body: JSON.stringify({
         sha: newCommitSha,
-        force: true,
+        force: false,
       }),
     });
 

@@ -57,7 +57,9 @@ function saveStore(): void {
     if (!fs.existsSync(PRISMA_DIR)) {
       fs.mkdirSync(PRISMA_DIR, { recursive: true });
     }
-    fs.writeFileSync(STORE_PATH, JSON.stringify(inMemoryStore, null, 2), 'utf-8');
+    const tempPath = `${STORE_PATH}.${Date.now()}.${crypto.randomBytes(4).toString('hex')}.tmp`;
+    fs.writeFileSync(tempPath, JSON.stringify(inMemoryStore, null, 2), 'utf-8');
+    fs.renameSync(tempPath, STORE_PATH);
   } catch (err) {
     console.warn('[DB Store] Error saving store:', err);
   }

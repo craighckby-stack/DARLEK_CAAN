@@ -11,20 +11,19 @@ const memoryFallback = new Map<string, string>();
 
 /**
  * High-priority keys that MUST be preserved during storage eviction.
- * Critical credentials and configuration needed to authenticate and resume.
+ * Critical non-secret configuration needed to resume session states safely.
+ * Security Mandate: Secrets (GitHub PATs, API keys) are held strictly in ephemeral memory
+ * or session memory, never forced into persistent unencrypted localStorage.
  */
 const CRITICAL_KEYS = new Set([
-  'af_github_token',
-  'darlek_cann_github_token',
-  'darlek_cann_gemini_key',
-  'darlek_cann_selected_model',
-  'darlek_cann_system_state',
-  'darlek_cann_language',
-  'darlek_cann_controls',
-  'darlek_cann_auto_pause_saturation',
-  'darlek_cann_auto_skip_saturation',
-  'darlek_cann_center_view',
-  'darlek_cann_booted',
+  'darlek_caan_selected_model',
+  'darlek_caan_system_state',
+  'darlek_caan_language',
+  'darlek_caan_controls',
+  'darlek_caan_auto_pause_saturation',
+  'darlek_caan_auto_skip_saturation',
+  'darlek_caan_center_view',
+  'darlek_caan_booted',
 ]);
 
 /**
@@ -35,23 +34,23 @@ const TIER_1_PURGE_KEYS = [
   'nexus_rag_brain_local_chunks',
   'nexus_rag_brain_mutations',
   'nexus_rag_brain_logs',
-  'darlek_cann_hotswap_registry',
+  'darlek_caan_hotswap_registry',
   'archaeology_ingested_files_cache',
-  'darlek_cann_scanned_files',
-  'darlek_cann_failed_save',
+  'darlek_caan_scanned_files',
+  'darlek_caan_failed_save',
 ];
 
 /**
  * Tier 2 Purgeable Keys: Ephemeral runtime memory and verbose chat/log histories.
  */
 const TIER_2_PURGE_KEYS = [
-  'darlek_cann_log_entries',
-  'darlek_cann_rejection_memory',
-  'darlek_cann_debate',
+  'darlek_caan_log_entries',
+  'darlek_caan_rejection_memory',
+  'darlek_caan_debate',
   'nexus_perspective_details',
-  'darlek_cann_pending_mutation',
-  'darlek_cann_messages',
-  'darlek_cann_rag_health_history',
+  'darlek_caan_pending_mutation',
+  'darlek_caan_messages',
+  'darlek_caan_rag_health_history',
 ];
 
 /**
