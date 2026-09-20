@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:00:01.878Z",
+    "generatedAt": "2026-09-20T03:00:11.372Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789873208365_ead7c26c",
+      "type": "MUTATE",
+      "description": "[Batch 24/253] Proposed mutation for docs/ARCHITECTURE_MANIFESTO.md (risk: LOW)",
+      "timestamp": "2026-09-20T03:00:08.365Z"
+    },
+    {
+      "id": "rag_log_1789873208363_41af34a4",
+      "type": "MUTATE",
+      "description": "[Batch 24/253] Proposed mutation for docs/ARCHITECTURE_MANIFESTO.md (risk: LOW)",
+      "timestamp": "2026-09-20T03:00:08.363Z"
+    },
+    {
+      "id": "rag_log_1789873207843_949e4d2a",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:00:07.843Z"
+    },
     {
       "id": "rag_log_1789873198628_7a411bb3",
       "type": "HEALTH",
@@ -138,41 +156,9 @@
       "type": "APPROVE",
       "description": "Mutation applied to check_github_page.js",
       "timestamp": "2026-09-20T02:59:15.205Z"
-    },
-    {
-      "id": "rag_log_1789873154590_be5821c6",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:59:14.590Z"
-    },
-    {
-      "id": "rag_log_1789873143753_3a045711",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:59:03.753Z"
-    },
-    {
-      "id": "rag_log_1789873143571_bbf037b9",
-      "type": "MUTATE",
-      "description": "[Batch 20/253] Proposed mutation for check_github_page.js (risk: LOW)",
-      "timestamp": "2026-09-20T02:59:03.570Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-54fb69c2",
-      "time": "12:53:55",
-      "addr": "0x00560295",
-      "tag": "MUTATE",
-      "message": "[Batch 6/253] Proposed mutation for .next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js (risk: LOW)"
-    },
-    {
-      "id": "dos-51ff90b9",
-      "time": "12:54:00",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-319cf134",
       "time": "12:54:07",
@@ -858,6 +844,20 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-72d73b6b",
+      "time": "13:00:07",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-2db1c840",
+      "time": "13:00:08",
+      "addr": "0x0057BC77",
+      "tag": "MUTATE",
+      "message": "[Batch 24/253] Proposed mutation for docs/ARCHITECTURE_MANIFESTO.md (risk: LOW)"
     }
   ]
 }

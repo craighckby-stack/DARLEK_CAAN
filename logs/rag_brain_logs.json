@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789873208365_ead7c26c",
+    "type": "MUTATE",
+    "description": "[Batch 24/253] Proposed mutation for docs/ARCHITECTURE_MANIFESTO.md (risk: LOW)",
+    "timestamp": "2026-09-20T03:00:08.365Z"
+  },
+  {
+    "id": "rag_log_1789873208363_41af34a4",
+    "type": "MUTATE",
+    "description": "[Batch 24/253] Proposed mutation for docs/ARCHITECTURE_MANIFESTO.md (risk: LOW)",
+    "timestamp": "2026-09-20T03:00:08.363Z"
+  },
+  {
+    "id": "rag_log_1789873207843_949e4d2a",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:00:07.843Z"
+  },
+  {
     "id": "rag_log_1789873198628_7a411bb3",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "APPROVE",
     "description": "Mutation applied to check_github_page.js",
     "timestamp": "2026-09-20T02:59:15.205Z"
-  },
-  {
-    "id": "rag_log_1789873154590_be5821c6",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T02:59:14.590Z"
-  },
-  {
-    "id": "rag_log_1789873143753_3a045711",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T02:59:03.753Z"
-  },
-  {
-    "id": "rag_log_1789873143571_bbf037b9",
-    "type": "MUTATE",
-    "description": "[Batch 20/253] Proposed mutation for check_github_page.js (risk: LOW)",
-    "timestamp": "2026-09-20T02:59:03.570Z"
   }
 ]

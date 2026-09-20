@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T03:00:01.878Z`
+*Last Synchronized:* `2026-09-20T03:00:11.372Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -13,7 +13,28 @@
 
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
-### 1. `docs/ARCHITECTURE.md` (Gen 19)
+### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:00:08.365Z`
+
+```typescript
+[LOG:MUTATE] [Batch 24/253] Proposed mutation for docs/ARCHITECTURE_MANIFESTO.md (risk: LOW) | TIME:2026-09-20T03:00:08.365Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:00:08.364Z`
+
+```typescript
+[LOG:MUTATE] [Batch 24/253] Proposed mutation for docs/ARCHITECTURE_MANIFESTO.md (risk: LOW) | TIME:2026-09-20T03:00:08.363Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:00:07.843Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:00:07.843Z
+```
+
+### 4. `docs/ARCHITECTURE.md` (Gen 19)
 *Source:* `MUTATION:docs/ARCHITECTURE.md` | *Indexed:* `2026-09-20T02:59:58.861Z`
 
 ```typescript
@@ -26,67 +47,46 @@ The **DARLEK CANN Ecosystem** is an autonomous, self-refactoring quantum dialogu
 // ... [truncated]
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:59:58.628Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T02:59:58.627Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:59:58.626Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T02:59:58.626Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:59:58.331Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T02:59:58.331Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:59:58.330Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T02:59:58.330Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:59:58.012Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to docs/ARCHITECTURE.md | TIME:2026-09-20T02:59:58.012Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:59:58.010Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to docs/ARCHITECTURE.md | TIME:2026-09-20T02:59:58.009Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:59:55.640Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:59:55.640Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:59:46.550Z`
-
-```typescript
-[LOG:MUTATE] [Batch 23/253] Proposed mutation for docs/ARCHITECTURE.md (risk: LOW) | TIME:2026-09-20T02:59:46.550Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:59:46.548Z`
-
-```typescript
-[LOG:MUTATE] [Batch 23/253] Proposed mutation for docs/ARCHITECTURE.md (risk: LOW) | TIME:2026-09-20T02:59:46.548Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
