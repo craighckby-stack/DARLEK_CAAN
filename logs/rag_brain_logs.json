@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789877865984_eba57482",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T04:17:45.984Z"
+  },
+  {
+    "id": "rag_log_1789877862635_597e006d",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T04:17:42.635Z"
+  },
+  {
+    "id": "rag_log_1789877862634_2878cb98",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T04:17:42.634Z"
+  },
+  {
+    "id": "rag_log_1789877861641_332e982d",
+    "type": "HEALTH",
+    "description": "Auto-test: REJECTED — 4 passed, 1 failed",
+    "timestamp": "2026-09-20T04:17:41.641Z"
+  },
+  {
+    "id": "rag_log_1789877861639_85be52c3",
+    "type": "HEALTH",
+    "description": "Auto-test: REJECTED — 4 passed, 1 failed",
+    "timestamp": "2026-09-20T04:17:41.639Z"
+  },
+  {
+    "id": "rag_log_1789877860921_6b55fc10",
+    "type": "APPROVE",
+    "description": "Mutation applied to src/types.ts",
+    "timestamp": "2026-09-20T04:17:40.921Z"
+  },
+  {
+    "id": "rag_log_1789877860920_6be58191",
+    "type": "APPROVE",
+    "description": "Mutation applied to src/types.ts",
+    "timestamp": "2026-09-20T04:17:40.920Z"
+  },
+  {
     "id": "rag_log_1789877857769_eea7907f",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -106,47 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: PASSED — 5 passed, 0 failed",
     "timestamp": "2026-09-20T04:16:54.971Z"
-  },
-  {
-    "id": "rag_log_1789877814970_5f01efb3",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T04:16:54.970Z"
-  },
-  {
-    "id": "rag_log_1789877814311_b481f226",
-    "type": "APPROVE",
-    "description": "Mutation applied to src/middleware/SecurityMiddleware.ts",
-    "timestamp": "2026-09-20T04:16:54.311Z"
-  },
-  {
-    "id": "rag_log_1789877814310_3e3da722",
-    "type": "APPROVE",
-    "description": "Mutation applied to src/middleware/SecurityMiddleware.ts",
-    "timestamp": "2026-09-20T04:16:54.310Z"
-  },
-  {
-    "id": "rag_log_1789877808426_98930179",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T04:16:48.426Z"
-  },
-  {
-    "id": "rag_log_1789877803157_9ad2c574",
-    "type": "MUTATE",
-    "description": "[Batch 217/253] Proposed mutation for src/middleware/SecurityMiddleware.ts (risk: LOW)",
-    "timestamp": "2026-09-20T04:16:43.157Z"
-  },
-  {
-    "id": "rag_log_1789877803156_b853a35a",
-    "type": "MUTATE",
-    "description": "[Batch 217/253] Proposed mutation for src/middleware/SecurityMiddleware.ts (risk: LOW)",
-    "timestamp": "2026-09-20T04:16:43.156Z"
-  },
-  {
-    "id": "rag_log_1789877799491_80d06931",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T04:16:39.491Z"
   }
 ]
