@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:41:48.406Z",
+    "generatedAt": "2026-09-20T05:41:56.805Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789882913771_38465fd0",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:41:53.771Z"
+    },
     {
       "id": "rag_log_1789882905322_4b4a4466",
       "type": "MUTATE",
@@ -150,36 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T05:40:51.114Z"
-    },
-    {
-      "id": "rag_log_1789882851112_567d17d3",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:40:51.112Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-565e6f1f",
-      "time": "15:38:41",
-      "addr": "0x0048C000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 897.9 KB (8.77%)."
-    },
-    {
-      "id": "dos-fa4d37a9",
-      "time": "15:38:42",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-b9c3c8d3",
-      "time": "15:38:42",
-      "addr": "0x0015E051",
-      "tag": "MUTATE",
-      "message": "[Batch 107/253] Proposed mutation for src/app/api/extract-text/route.ts (risk: LOW)"
-    },
     {
       "id": "dos-b71924f9",
       "time": "15:38:46",
@@ -858,6 +837,27 @@
       "addr": "0x0086BE8E",
       "tag": "MUTATE",
       "message": "[Batch 115/253] Proposed mutation for src/app/api/github/push-enhancements/route.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-620c3133",
+      "time": "15:41:48",
+      "addr": "0x004DA000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-adf23b3a",
+      "time": "15:41:53",
+      "addr": "0x004DC000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 1.05 MB (10.51%)."
+    },
+    {
+      "id": "dos-fb78fa48",
+      "time": "15:41:53",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }
