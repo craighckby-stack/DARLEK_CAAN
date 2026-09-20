@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:33:22.114Z",
+    "generatedAt": "2026-09-20T03:33:30.457Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789875207449_a1509697",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:33:27.449Z"
+    },
+    {
+      "id": "rag_log_1789875203032_630738f8",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T03:33:23.032Z"
+    },
+    {
+      "id": "rag_log_1789875203031_6e81c721",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T03:33:23.031Z"
+    },
+    {
+      "id": "rag_log_1789875202586_f9d8f9ba",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T03:33:22.586Z"
+    },
+    {
+      "id": "rag_log_1789875202585_debfc6fd",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T03:33:22.585Z"
+    },
+    {
+      "id": "rag_log_1789875202174_4b19b5de",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/app/api/evolution/orchestra/README.md",
+      "timestamp": "2026-09-20T03:33:22.174Z"
+    },
+    {
+      "id": "rag_log_1789875202173_e562cd73",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/app/api/evolution/orchestra/README.md",
+      "timestamp": "2026-09-20T03:33:22.173Z"
+    },
     {
       "id": "rag_log_1789875199111_3dcdcee0",
       "type": "LOG_SYNC",
@@ -114,79 +156,9 @@
       "type": "HEALTH",
       "description": "Auto-test: PASSED — 5 passed, 0 failed",
       "timestamp": "2026-09-20T03:32:38.193Z"
-    },
-    {
-      "id": "rag_log_1789875157376_2f681fad",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/app/api/evolution/health/route.ts",
-      "timestamp": "2026-09-20T03:32:37.376Z"
-    },
-    {
-      "id": "rag_log_1789875157371_7dc7944d",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/app/api/evolution/health/route.ts",
-      "timestamp": "2026-09-20T03:32:37.371Z"
-    },
-    {
-      "id": "rag_log_1789875155761_4583c520",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:32:35.761Z"
-    },
-    {
-      "id": "rag_log_1789875145996_5347518e",
-      "type": "MUTATE",
-      "description": "[Batch 102/253] Proposed mutation for src/app/api/evolution/health/route.ts (risk: LOW)",
-      "timestamp": "2026-09-20T03:32:25.996Z"
-    },
-    {
-      "id": "rag_log_1789875145989_ba8000d1",
-      "type": "MUTATE",
-      "description": "[Batch 102/253] Proposed mutation for src/app/api/evolution/health/route.ts (risk: LOW)",
-      "timestamp": "2026-09-20T03:32:25.989Z"
-    },
-    {
-      "id": "rag_log_1789875143297_b4e1d504",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:32:23.297Z"
-    },
-    {
-      "id": "rag_log_1789875134467_b4d71dbc",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:32:14.467Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-cc10129d",
-      "time": "13:27:07",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-7a7b6d97",
-      "time": "13:27:14",
-      "addr": "0x002F2DC9",
-      "tag": "MUTATE",
-      "message": "[Batch 88/253] Proposed mutation for restore_repo_fast.js (risk: LOW)"
-    },
-    {
-      "id": "dos-001575de",
-      "time": "13:27:14",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-523866e3",
-      "time": "13:27:21",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-3e970b30",
       "time": "13:27:25",
@@ -855,6 +827,34 @@
     {
       "id": "dos-9b78cbcb",
       "time": "13:33:19",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-2c611f06",
+      "time": "13:33:22",
+      "addr": "0x006E7A7D",
+      "tag": "APPROVE",
+      "message": "Mutation applied to src/app/api/evolution/orchestra/README.md"
+    },
+    {
+      "id": "dos-0ad165a4",
+      "time": "13:33:22",
+      "addr": "0x007EEE12",
+      "tag": "HEALTH",
+      "message": "Auto-test: PASSED — 5 passed, 0 failed"
+    },
+    {
+      "id": "dos-449dca3c",
+      "time": "13:33:23",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-50fc2817",
+      "time": "13:33:27",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
