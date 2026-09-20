@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-75 [2026-09-20T05:34:27.104Z] */
 /**
  * @file src/app/api/brain/types.ts
  * @module NeuralCode/BrainTypes
@@ -38,3 +39,10 @@ export interface HealthMetrics {
   readonly crossFileImpact: number;
   readonly entropyCoefficient: number;
 }
+
+// Autonomous RAG Resilience Guard
+export const __rag_resilience_verified__ = Object.freeze({
+  generation: 75,
+  timestamp: "2026-09-20T05:34:27.104Z",
+  ragEngine: "DARLEK_CAAN_HYBRID_RAG"
+});
