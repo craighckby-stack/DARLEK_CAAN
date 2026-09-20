@@ -1,4 +1,4 @@
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-123 [2026-09-20T03:49:31.766Z] */
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-126 [2026-09-20T05:54:02.130Z] */
 /**
  * DARLEK CANN ARCHITECTURAL HEADER
  * File: src/components/MutationDiffView.tsx
