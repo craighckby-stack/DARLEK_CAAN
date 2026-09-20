@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T02:57:46.700Z`
+*Last Synchronized:* `2026-09-20T02:57:58.189Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -13,85 +13,101 @@
 
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
-### 1. `system.log` (Gen 1)
+### 1. `assets/.aistudio/README.md` (Gen 15)
+*Source:* `MUTATION:assets/.aistudio/README.md` | *Indexed:* `2026-09-20T02:57:55.185Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-15 [2026-09-20T02:57:43.691Z] */
+# AI Studio Configuration & Governance
+
+## Overview
+This directory serves as the control plane for the DARLEK CANN v3.0 evolution engine. It manages environment-specific configurations, agent state persistence, and security policies for the repository.
+
+## Archi
+// ... [truncated]
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:55.112Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T02:57:55.112Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:55.110Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T02:57:55.110Z
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:54.847Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T02:57:54.847Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:54.845Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T02:57:54.845Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:54.413Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to assets/.aistudio/README.md | TIME:2026-09-20T02:57:54.413Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:54.412Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to assets/.aistudio/README.md | TIME:2026-09-20T02:57:54.412Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:52.401Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:57:52.401Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:43.694Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 16/253] Proposed mutation for assets/.aistudio/README.md (risk: LOW) | TIME:2026-09-20T02:57:43.694Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:43.693Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 16/253] Proposed mutation for assets/.aistudio/README.md (risk: LOW) | TIME:2026-09-20T02:57:43.693Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:43.455Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `assets/.aistudio/README.md`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `15`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-15 with verified AST structural sanity.
 ```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:57:43.455Z
-```
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-15 [2026-09-20T02:57:43.691Z] */
+# AI Studio Configuration & Governance
 
-### 4. `assets/.aistudio/ARCHITECTURE.md` (Gen 14)
-*Source:* `MUTATION:assets/.aistudio/ARCHITECTURE.md` | *Indexed:* `2026-09-20T02:57:34.554Z`
+## Overview
+This directory serves as the control plane for the DARLEK CANN v3.0 evolution engine. It manages environment-specific configurations, agent state persistence, and security policies for the repository.
 
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-14 [2026-09-20T02:57:22.027Z] */
-# DARLEK CANN v3.0: Sovereign Architectural Blueprint
-
-## Executive Summary
-
-The DARLEK CANN (OMEGA-CORE) architecture represents an autonomous, self-refactoring evolutionary runtime environment. Operating at the intersection of multi-tier LLM fallbacks, agent s
+## Archi
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:33.599Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T02:57:33.599Z
-```
-
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:33.598Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T02:57:33.597Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:33.333Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T02:57:33.333Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:33.332Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T02:57:33.331Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:32.911Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to assets/.aistudio/ARCHITECTURE.md | TIME:2026-09-20T02:57:32.911Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:57:32.910Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to assets/.aistudio/ARCHITECTURE.md | TIME:2026-09-20T02:57:32.910Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `assets/.aistudio/ARCHITECTURE.md`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `assets/.aistudio/ARCHITECTURE.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `14`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-14 with verified AST structural sanity.
@@ -105,7 +121,7 @@ The DARLEK CANN (OMEGA-CORE) architecture represents an autonomous, self-refacto
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `STYLE_MIGRATION_README.md`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `STYLE_MIGRATION_README.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `13`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-13 with verified AST structural sanity.
@@ -121,7 +137,7 @@ The DARLEK CANN (OMEGA-CORE) architecture represents an autonomous, self-refacto
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `SECURITY.md`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `SECURITY.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `12`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-12 with verified AST structural sanity.
@@ -136,7 +152,7 @@ The DARLEK CANN (OMEGA-CORE) architecture represents an autonomous, self-refacto
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `README.md`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `README.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `11`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-11 with verified AST structural sanity.
@@ -152,7 +168,7 @@ The DARLEK CANN (OMEGA-CORE) architecture represents an autonomous, self-refacto
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `LICENSE`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `LICENSE`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `10`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-10 with verified AST structural sanity.
@@ -168,7 +184,7 @@ The DARLEK CANN (OMEGA-CORE) architecture represents an autonomous, self-refacto
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `EVOLUTION_BLUEPRINT.md`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `EVOLUTION_BLUEPRINT.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `9`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-9 with verified AST structural sanity.
@@ -180,7 +196,7 @@ The DARLEK CANN (OMEGA-CORE) architecture represents an autonomous, self-refacto
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `ARCHITECTURE.md`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `ARCHITECTURE.md`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `8`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-8 with verified AST structural sanity.
@@ -195,7 +211,7 @@ The DARLEK CANN (OMEGA-CORE) architecture represents an autonomous, self-refacto
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `.next_dev/types/app/api/brain/route.ts`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `.next_dev/types/app/api/brain/route.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `7`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-7 with verified AST structural sanity.
@@ -212,7 +228,7 @@ The DARLEK CANN (OMEGA-CORE) architecture represents an autonomous, self-refacto
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `.next_dev/server/app/page_client-reference-manifest.js`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `.next_dev/server/app/page_client-reference-manifest.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `6`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-6 with verified AST structural sanity.
@@ -225,22 +241,6 @@ The DARLEK CANN (OMEGA-CORE) architecture represents an autonomous, self-refacto
  * Architecture: Clean, modular initialization of Next.js server/client component mappings.
  */
 
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `.next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `5`
-- **Rationale:** RAG LLM Synthesis: Applied targeted defensive improvements for Generation G-5.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-5 [2026-09-19T22:43:55.572Z] */
-"use strict";
-
-/**
- * Core RSC Reference Manifest Definition
- * File: .next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js
- * Role: Manages React Server Components (RSC) manifest routing for setup API endpoint.
- * @module route_client
 // ... [truncated]
 ```
 
