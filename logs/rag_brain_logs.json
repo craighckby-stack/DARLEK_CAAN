@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789873305560_d2bc5db5",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:01:45.560Z"
+  },
+  {
     "id": "rag_log_1789873296281_83244117",
     "type": "MUTATE",
     "description": "[Batch 28/253] Proposed mutation for download_missing.js (risk: LOW)",
@@ -142,11 +148,5 @@
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
     "timestamp": "2026-09-20T03:00:42.090Z"
-  },
-  {
-    "id": "rag_log_1789873242088_ecc4e7f8",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T03:00:42.088Z"
   }
 ]
