@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:50:38.153Z",
+    "generatedAt": "2026-09-20T03:50:47.880Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789876244775_e1945d1a",
+      "type": "MUTATE",
+      "description": "[Batch 151/253] Proposed mutation for src/components/PageClient.tsx (risk: LOW)",
+      "timestamp": "2026-09-20T03:50:44.775Z"
+    },
+    {
+      "id": "rag_log_1789876244771_f2acad23",
+      "type": "MUTATE",
+      "description": "[Batch 151/253] Proposed mutation for src/components/PageClient.tsx (risk: LOW)",
+      "timestamp": "2026-09-20T03:50:44.771Z"
+    },
+    {
+      "id": "rag_log_1789876243420_4383f8f2",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:50:43.420Z"
+    },
     {
       "id": "rag_log_1789876234725_eea54c79",
       "type": "HEALTH",
@@ -138,41 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T03:49:47.029Z"
-    },
-    {
-      "id": "rag_log_1789876187015_f3636068",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:49:47.015Z"
-    },
-    {
-      "id": "rag_log_1789876186495_f53baaa9",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 4 passed, 0 failed",
-      "timestamp": "2026-09-20T03:49:46.495Z"
-    },
-    {
-      "id": "rag_log_1789876186492_fb2659bc",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 4 passed, 0 failed",
-      "timestamp": "2026-09-20T03:49:46.491Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-9b7a42ff",
-      "time": "13:44:20",
-      "addr": "0x0023282C",
-      "tag": "MUTATE",
-      "message": "[Batch 134/253] Proposed mutation for src/components/ChatPanel.tsx (risk: LOW)"
-    },
-    {
-      "id": "dos-600bc310",
-      "time": "13:44:22",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-a7b9aa4c",
       "time": "13:44:31",
@@ -858,6 +844,20 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-aa6d20e8",
+      "time": "13:50:43",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-a44672ea",
+      "time": "13:50:44",
+      "addr": "0x005EFDB5",
+      "tag": "MUTATE",
+      "message": "[Batch 151/253] Proposed mutation for src/components/PageClient.tsx (risk: LOW)"
     }
   ]
 }
