@@ -1,11 +1,25 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T06:05:31.931Z",
+    "generatedAt": "2026-09-20T06:05:39.640Z",
     "totalMutations": 10,
     "correctCount": 10,
     "wrongCount": 0
   },
   "mutations": [
+    {
+      "id": "rag_mut_1789884332196_f6e36d9b",
+      "filePath": "src/lib/config.ts",
+      "originalCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-152 [2026-09-20T04:01:19.319Z] */\nexport const RAG_RETRIEVAL_ENABLED =\n  (typeof process === \"undefined\" || process.env?.NEXT_PUBLIC_RAG_RETRIEVAL_ENABLED !== \"false\") &&\n  !(typeof import.meta !== \"undefined\" && import.meta.env?.VITE_RAG_RETRIEVAL_ENABLED === \"false\");\n\nexport const AUTONOMOUS_HOTSWAP_ENABLED =\n  (typeof import.meta !== \"undefined\" && import.meta.env?.VITE_AUTONOMOUS_HOTSWAP_ENABLED === \"true\") ||\n  (typeof process !== \"undefined\" && process.env?.AUTONOMOUS_HOTSWAP_ENABLED === \"true\");\n\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 152,\n  timestamp: \"2026-09-20T04:01:19.319Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
+      "mutatedCode": "/**\n * DARLEK CANN ARCHITECTURAL HEADER\n * File: src/lib/config.ts\n * Role: Core system component participating in autonomous cognitive evolution cycles.\n * Architecture: Type-safe modular unit with resilient state interfaces.\n */\n\n/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-152 [2026-09-20T04:01:19.319Z] */\nexport const RAG_RETRIEVAL_ENABLED =\n  (typeof process === \"undefined\" || process.env?.NEXT_PUBLIC_RAG_RETRIEVAL_ENABLED !== \"false\") &&\n  !(typeof import.meta !== \"undefined\" && import.meta.env?.VITE_RAG_RETRIEVAL_ENABLED === \"false\");\n\nexport const AUTONOMOUS_HOTSWAP_ENABLED =\n  (typeof import.meta !== \"undefined\" && import.meta.env?.VITE_AUTONOMOUS_HOTSWAP_ENABLED === \"true\") ||\n  (typeof process !== \"undefined\" && process.env?.AUTONOMOUS_HOTSWAP_ENABLED === \"true\");\n\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 152,\n  timestamp: \"2026-09-20T04:01:19.319Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
+      "rationale": "Enhanced src/lib/config.ts by adding a comprehensive architectural JSDoc header and validating module structure.",
+      "riskScore": 3,
+      "generation": 155,
+      "commitSha": "25f38d3c880cba70b7f3f250a63f4a4e0001980b",
+      "timestamp": "2026-09-20T06:05:32.196Z",
+      "hotswapped": true,
+      "verdict": "correct",
+      "source": "DARLEK_APPROVED_MUTATION"
+    },
     {
       "id": "rag_mut_1789884325749_aa6c042f",
       "filePath": "src/lib/neuralActiveGene.ts",
@@ -127,20 +141,6 @@
       "generation": 147,
       "commitSha": "7ddfd9f4a441f3cb1df09b082111bf49b758e69a",
       "timestamp": "2026-09-20T06:02:33.915Z",
-      "hotswapped": true,
-      "verdict": "correct",
-      "source": "DARLEK_APPROVED_MUTATION"
-    },
-    {
-      "id": "rag_mut_1789884131453_53fcd7c1",
-      "filePath": "src/hooks/useSystemOrchestrator.ts",
-      "originalCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-143 [2026-09-20T03:57:47.368Z] */\nimport { useState, useEffect, useRef, useCallback } from 'react';\nimport type { SystemState } from '@/lib/types';\n\nexport interface UseSystemOrchestratorReturn {\n  readonly isReady: boolean;\n  readonly latency: number;\n}\n\nconst HANDSHAKE_DELAY_MS = 150 as const;\n\nexport const useSystemOrchestrator = (state: SystemState): UseSystemOrchestratorReturn => {\n  const [isReady, setIsReady] = useState<boolean>(false);\n  const [latency, setLatency] = useState<number>(0);\n  \n  const isMountedRef = useRef<boolean>(true);\n\n  useEffect(() => {\n    isMountedRef.current = true;\n    return () => {\n      isMountedRef.current = false;\n    };\n  }, []);\n\n  const executeHandshake = useCallback((): (() => void) => {\n    const startTime = performance.now();\n    let timeoutId: ReturnType<typeof setTimeout> | null = null;\n\n    try {\n      timeoutId = setTimeout(() => {\n        if (!isMountedRef.current) return;\n        \n        const computedLatency = performance.now() - startTime;\n        setLatency(computedLatency);\n        setIsReady(true);\n      }, HANDSHAKE_DELAY_MS);\n    } catch (error) {\n      if (isMountedRef.current) {\n        setIsReady(false);\n        setLatency(0);\n      }\n      console.error('Darlek Caan: Handshake execution failure', error);\n    }\n\n    return () => {\n      if (timeoutId !== null) {\n        clearTimeout(timeoutId);\n      }\n    };\n  }, []);\n\n  useEffect(() => {\n    const cleanupHandshake = executeHandshake();\n    return cleanupHandshake;\n  }, [state.evolutionCycle, executeHandshake]);\n\n  return { isReady, latency } as const;\n};\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 143,\n  timestamp: \"2026-09-20T03:57:47.368Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
-      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-146 [2026-09-20T06:02:00.326Z] */\nimport { useState, useEffect, useRef, useCallback } from 'react';\nimport type { SystemState } from '@/lib/types';\n\nexport interface UseSystemOrchestratorReturn {\n  readonly isReady: boolean;\n  readonly latency: number;\n}\n\nconst HANDSHAKE_DELAY_MS = 150 as const;\n\nexport const useSystemOrchestrator = (state: SystemState): UseSystemOrchestratorReturn => {\n  const [isReady, setIsReady] = useState<boolean>(false);\n  const [latency, setLatency] = useState<number>(0);\n  \n  const isMountedRef = useRef<boolean>(true);\n\n  useEffect(() => {\n    isMountedRef.current = true;\n    return () => {\n      isMountedRef.current = false;\n    };\n  }, []);\n\n  const executeHandshake = useCallback((): (() => void) => {\n    const startTime = performance.now();\n    let timeoutId: ReturnType<typeof setTimeout> | null = null;\n\n    try {\n      timeoutId = setTimeout(() => {\n        if (!isMountedRef.current) return;\n        \n        const computedLatency = performance.now() - startTime;\n        setLatency(computedLatency);\n        setIsReady(true);\n      }, HANDSHAKE_DELAY_MS);\n    } catch (error) {\n      if (isMountedRef.current) {\n        setIsReady(false);\n        setLatency(0);\n      }\n      console.error('Darlek Caan: Handshake execution failure', error);\n    }\n\n    return () => {\n      if (timeoutId !== null) {\n        clearTimeout(timeoutId);\n      }\n    };\n  }, []);\n\n  useEffect(() => {\n    const cleanupHandshake = executeHandshake();\n    return cleanupHandshake;\n  }, [state.evolutionCycle, executeHandshake]);\n\n  return { isReady, latency } as const;\n};\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 143,\n  timestamp: \"2026-09-20T03:57:47.368Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
-      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-146 with verified AST structural sanity.",
-      "riskScore": 1,
-      "generation": 146,
-      "commitSha": "aa42ae71a25ececdda396fb6048335290d072961",
-      "timestamp": "2026-09-20T06:02:11.453Z",
       "hotswapped": true,
       "verdict": "correct",
       "source": "DARLEK_APPROVED_MUTATION"

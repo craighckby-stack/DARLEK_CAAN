@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789884336625_d8ed1d11",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T06:05:36.625Z"
+  },
+  {
+    "id": "rag_log_1789884334012_6f983746",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T06:05:34.012Z"
+  },
+  {
+    "id": "rag_log_1789884334010_54948caf",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T06:05:34.010Z"
+  },
+  {
+    "id": "rag_log_1789884333087_15cbad92",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T06:05:33.087Z"
+  },
+  {
+    "id": "rag_log_1789884333082_b9122961",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T06:05:33.082Z"
+  },
+  {
+    "id": "rag_log_1789884332194_6f09713d",
+    "type": "APPROVE",
+    "description": "Mutation applied to src/lib/config.ts",
+    "timestamp": "2026-09-20T06:05:32.194Z"
+  },
+  {
+    "id": "rag_log_1789884332191_245e1b77",
+    "type": "APPROVE",
+    "description": "Mutation applied to src/lib/config.ts",
+    "timestamp": "2026-09-20T06:05:32.191Z"
+  },
+  {
     "id": "rag_log_1789884328898_30a11db2",
     "type": "MUTATE",
     "description": "[Batch 178/253] Proposed mutation for src/lib/config.ts (risk: LOW)",
@@ -106,47 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: REJECTED — 4 passed, 3 failed",
     "timestamp": "2026-09-20T06:04:56.620Z"
-  },
-  {
-    "id": "rag_log_1789884296617_f190877c",
-    "type": "HEALTH",
-    "description": "Auto-test: REJECTED — 4 passed, 3 failed",
-    "timestamp": "2026-09-20T06:04:56.617Z"
-  },
-  {
-    "id": "rag_log_1789884295638_7647b524",
-    "type": "APPROVE",
-    "description": "Mutation applied to src/lib/ast-diff-gate.ts",
-    "timestamp": "2026-09-20T06:04:55.638Z"
-  },
-  {
-    "id": "rag_log_1789884295635_544296f5",
-    "type": "APPROVE",
-    "description": "Mutation applied to src/lib/ast-diff-gate.ts",
-    "timestamp": "2026-09-20T06:04:55.634Z"
-  },
-  {
-    "id": "rag_log_1789884294401_543b34f3",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T06:04:54.401Z"
-  },
-  {
-    "id": "rag_log_1789884286279_15c6861c",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T06:04:46.279Z"
-  },
-  {
-    "id": "rag_log_1789884283868_bd19aea6",
-    "type": "MUTATE",
-    "description": "[Batch 176/253] Proposed mutation for src/lib/ast-diff-gate.ts (risk: LOW)",
-    "timestamp": "2026-09-20T06:04:43.868Z"
-  },
-  {
-    "id": "rag_log_1789884283864_0cc26fbb",
-    "type": "MUTATE",
-    "description": "[Batch 176/253] Proposed mutation for src/lib/ast-diff-gate.ts (risk: LOW)",
-    "timestamp": "2026-09-20T06:04:43.864Z"
   }
 ]
