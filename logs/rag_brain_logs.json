@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789881536514_c6cefea5",
+    "type": "MUTATE",
+    "description": "[Batch 42/253] Proposed mutation for fix.sh (risk: LOW)",
+    "timestamp": "2026-09-20T05:18:56.514Z"
+  },
+  {
+    "id": "rag_log_1789881536513_098509d2",
+    "type": "MUTATE",
+    "description": "[Batch 42/253] Proposed mutation for fix.sh (risk: LOW)",
+    "timestamp": "2026-09-20T05:18:56.513Z"
+  },
+  {
+    "id": "rag_log_1789881535627_c481aca5",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:18:55.627Z"
+  },
+  {
     "id": "rag_log_1789881526981_69c068db",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 39/253] Proposed mutation for find_changed.js (risk: LOW)",
     "timestamp": "2026-09-20T05:18:04.356Z"
-  },
-  {
-    "id": "rag_log_1789881484353_95e3c96b",
-    "type": "MUTATE",
-    "description": "[Batch 39/253] Proposed mutation for find_changed.js (risk: LOW)",
-    "timestamp": "2026-09-20T05:18:04.353Z"
-  },
-  {
-    "id": "rag_log_1789881483967_7417b7a3",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:18:03.967Z"
-  },
-  {
-    "id": "rag_log_1789881474767_cd3e2dfc",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T05:17:54.767Z"
   }
 ]
