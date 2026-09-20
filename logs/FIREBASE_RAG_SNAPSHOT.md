@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T02:50:37.454Z`
+*Last Synchronized:* `2026-09-20T02:50:45.497Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,20 +14,27 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:50:42.488Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:50:42.487Z
+```
+
+### 2. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:50:34.446Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:50:34.445Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 3. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:50:24.459Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:50:24.458Z
 ```
 
-### 3. `.gitignore` (Gen 3)
+### 4. `.gitignore` (Gen 3)
 *Source:* `MUTATION:.gitignore` | *Indexed:* `2026-09-20T02:50:20.690Z`
 
 ```typescript
@@ -57,53 +64,46 @@ build/
 // ... [truncated]
 ```
 
-### 4. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:50:20.324Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T02:50:20.324Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:50:20.318Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T02:50:20.318Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:50:20.040Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T02:50:20.040Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:50:20.037Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T02:50:20.037Z
 ```
 
-### 8. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:50:19.748Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to .gitignore | TIME:2026-09-20T02:50:19.747Z
 ```
 
-### 9. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:50:19.745Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to .gitignore | TIME:2026-09-20T02:50:19.744Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:50:16.365Z`
-
-```typescript
-[LOG:MUTATE] [Batch 2/253] Proposed mutation for .gitignore (risk: LOW) | TIME:2026-09-20T02:50:16.365Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
