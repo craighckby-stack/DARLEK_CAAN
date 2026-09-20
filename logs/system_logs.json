@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T04:05:58.933Z",
+    "generatedAt": "2026-09-20T04:06:10.197Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789877167146_08815d22",
+      "type": "MUTATE",
+      "description": "[Batch 190/253] Proposed mutation for src/lib/github-writer.ts (risk: LOW)",
+      "timestamp": "2026-09-20T04:06:07.146Z"
+    },
+    {
+      "id": "rag_log_1789877167144_9bdca5c0",
+      "type": "MUTATE",
+      "description": "[Batch 190/253] Proposed mutation for src/lib/github-writer.ts (risk: LOW)",
+      "timestamp": "2026-09-20T04:06:07.144Z"
+    },
+    {
+      "id": "rag_log_1789877164339_7646419c",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T04:06:04.339Z"
+    },
     {
       "id": "rag_log_1789877155625_92e134ca",
       "type": "HEALTH",
@@ -138,41 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T04:05:08.975Z"
-    },
-    {
-      "id": "rag_log_1789877108971_1bf5e4db",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T04:05:08.971Z"
-    },
-    {
-      "id": "rag_log_1789877108188_e9847f8f",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T04:05:08.188Z"
-    },
-    {
-      "id": "rag_log_1789877108186_ddb1ae8e",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T04:05:08.186Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-6684bda8",
-      "time": "13:59:57",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-70ed3437",
-      "time": "13:59:57",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-88fa693c",
       "time": "14:00:06",
@@ -858,6 +844,20 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-d8b045c4",
+      "time": "14:06:04",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-ce69fc15",
+      "time": "14:06:07",
+      "addr": "0x005D17A5",
+      "tag": "MUTATE",
+      "message": "[Batch 190/253] Proposed mutation for src/lib/github-writer.ts (risk: LOW)"
     }
   ]
 }
