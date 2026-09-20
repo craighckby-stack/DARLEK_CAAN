@@ -10,6 +10,7 @@ import { commitToGitHubFile, type GitHubTarget, validateGitHubTarget } from '@/l
 import { getRagMutations, type RagMutationRecord } from '@/lib/ragBrain';
 import { getGitHubConfig } from '@/lib/github';
 import { safeGetLocalStorage, safeSetLocalStorage } from '@/lib/safeStorage';
+import { DARLEK_CAAN_DEFAULT_OWNER, DARLEK_CAAN_DEFAULT_REPO, DARLEK_CAAN_DEFAULT_BRANCH, isDarlekCaanRepo } from '@/lib/githubLogSync';
 
 export interface MutationMemoryPayload {
   readonly version: string;
@@ -72,27 +73,40 @@ export class PersistenceLayer {
 
   /**
    * Sets or overrides the active GitHub target repository configuration.
+   * Only allows targeting Darlek Caan repository to avoid cross-repo RAG pollution.
    */
   public setTarget(target: GitHubTarget): void {
     if (!validateGitHubTarget(target)) {
       throw new Error('[PersistenceLayer] Invalid GitHub target parameters');
     }
-    this.customTarget = target;
+    if (isDarlekCaanRepo(target.owner, target.repo)) {
+      this.customTarget = target;
+    } else {
+      this.customTarget = {
+        token: target.token,
+        owner: DARLEK_CAAN_DEFAULT_OWNER,
+        repo: DARLEK_CAAN_DEFAULT_REPO,
+        branch: DARLEK_CAAN_DEFAULT_BRANCH,
+      };
+    }
   }
 
   /**
    * Resolves the active GitHub target either from explicit override or system GitHub config.
+   * Strictly keeps RAG mutations inside the Darlek Caan repository.
    */
   public getTarget(): GitHubTarget {
-    if (this.customTarget && validateGitHubTarget(this.customTarget)) {
-      return this.customTarget;
+    const config = getGitHubConfig();
+    const token = this.customTarget?.token || config.token || '';
+    
+    if (this.customTarget && validateGitHubTarget(this.customTarget) && isDarlekCaanRepo(this.customTarget.owner, this.customTarget.repo)) {
+      return { ...this.customTarget, token };
     }
 
-    const config = getGitHubConfig();
-    const token = config.token || '';
-    const owner = config.username || 'craighckby-stack';
-    const repo = config.repoName || 'DARLEK_CAAN';
-    const branch = 'main';
+    const isUserDarlek = isDarlekCaanRepo(config.username, config.repoName);
+    const owner = isUserDarlek ? (config.username || DARLEK_CAAN_DEFAULT_OWNER) : DARLEK_CAAN_DEFAULT_OWNER;
+    const repo = isUserDarlek ? (config.repoName || DARLEK_CAAN_DEFAULT_REPO) : DARLEK_CAAN_DEFAULT_REPO;
+    const branch = DARLEK_CAAN_DEFAULT_BRANCH;
 
     return { token, owner, repo, branch };
   }

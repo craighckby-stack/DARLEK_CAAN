@@ -328,6 +328,12 @@ export async function GET(): Promise<NextResponse> {
   return NextResponse.json({ status: 'online', service: 'GITHUB_BULK_COMMIT_API' });
 }
 
+function isDarlekCaanTarget(owner?: string, repo?: string): boolean {
+  if (!repo) return true;
+  const clean = repo.toLowerCase().replace(/[^a-z0-9]/g, '');
+  return clean.includes('darlek') || clean.includes('caan');
+}
+
 export async function POST(req: NextRequest): Promise<NextResponse> {
   try {
     const body = (await safeReqJson(req, {})) as BulkCommitRequestBody;
@@ -356,8 +362,26 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
     const safeFiles = sanitizeCommittableFiles(files);
 
+    // Cross-Repository RAG Protection:
+    // If the target repository being modified is an external repository, do NOT commit rag/ or logs/ to it.
+    const isTargetDarlek = isDarlekCaanTarget(owner, repo);
+    const committableFiles = isTargetDarlek
+      ? safeFiles
+      : safeFiles.filter(
+          (f) => !f.path.startsWith('rag/') && !f.path.startsWith('logs/')
+        );
+
+    if (committableFiles.length === 0) {
+      // If all files were RAG/logs intended for Darlek Caan repo, avoid erroring out
+      return NextResponse.json({
+        success: true,
+        message: 'RAG and log files filtered out from external repository commit.',
+        commitSha: 'skipped_foreign_repo',
+      });
+    }
+
     // Enforce Authoritative Code Retention Policy Gate on all bulk commit payloads
-    for (const f of safeFiles) {
+    for (const f of committableFiles) {
       const auth = await CodeRetentionPolicy.enforceGate({
         repo: `${owner}/${repo}`,
         filePath: f.path,
@@ -385,9 +409,16 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     if (treeResult.errorResponse) return treeResult.errorResponse;
     const baseTreeSha = treeResult.sha!;
 
-    await writeFilesToLocalDisk(safeFiles);
+    // Persist RAG/log files locally in all contexts
+    const ragAndLogFiles = safeFiles.filter((f) => f.path.startsWith('rag/') || f.path.startsWith('logs/'));
+    if (ragAndLogFiles.length > 0) {
+      await writeFilesToLocalDisk(ragAndLogFiles);
+    }
+    if (isTargetDarlek) {
+      await writeFilesToLocalDisk(safeFiles);
+    }
 
-    const treeItemsResult = await generateTreeItems(owner, repo, safeFiles, headers);
+    const treeItemsResult = await generateTreeItems(owner, repo, committableFiles, headers);
     if (treeItemsResult.errorResponse) return treeItemsResult.errorResponse;
     const treeItems = treeItemsResult.items!;
 

@@ -16,7 +16,7 @@ import BugInspector from '@/components/BugInspector';
 import { msDosEngine } from '@/lib/msDosEngine';
 import { evolutionLock } from '@/lib/evolutionLock';
 import { saveLogToRag, saveMutationToRag, synthesizeRagMutation, type HotswappedFileEntry } from '@/lib/ragBrain';
-import { syncAllLogsToGitHub, scheduleGitHubLogSync, setRuntimeGitHubSyncConfig } from '@/lib/githubLogSync';
+import { syncAllLogsToGitHub, scheduleGitHubLogSync, setRuntimeGitHubSyncConfig, DARLEK_CAAN_DEFAULT_OWNER, DARLEK_CAAN_DEFAULT_REPO, DARLEK_CAAN_DEFAULT_BRANCH } from '@/lib/githubLogSync';
 import { clearAllFirebaseData } from '@/lib/firebase';
 import { ingestArchaeologyDatasetToFirebase, ARCHAEOLOGY_PAIRS } from '@/lib/archaeology-dataset';
 import { syncArchaeologyRagFromGitHub } from '@/lib/archaeology-live-sync';
@@ -876,11 +876,12 @@ export default function Home() {
     if (!isHydrated) return;
     try {
       safeSetLocalStorage('darlek_cann_system_state', JSON.stringify(systemState));
+      // GitHub Log & RAG Sync daemon always targets the central Darlek Caan repo
       setRuntimeGitHubSyncConfig({
         token: systemState.apiKeys?.github,
-        owner: systemState.repoConfig?.owner,
-        repo: systemState.repoConfig?.repo,
-        branch: systemState.repoConfig?.branch || 'main',
+        owner: DARLEK_CAAN_DEFAULT_OWNER,
+        repo: DARLEK_CAAN_DEFAULT_REPO,
+        branch: DARLEK_CAAN_DEFAULT_BRANCH,
       });
     } catch (e) {}
   }, [systemState, isHydrated]);
@@ -2702,13 +2703,10 @@ export default function Home() {
             );
             addLogEntry('MUTATION', `Resolved ${data.issuesResolved || 0} bugs in ${targetOwner}/${targetRepo}`);
 
-            // Automatically trigger RAG memory sync
+            // Automatically trigger RAG memory sync to Darlek Caan repo
             try {
               syncAllLogsToGitHub({
                 token: currentState.apiKeys.github,
-                owner: targetOwner,
-                repo: targetRepo,
-                branch: targetBranch,
               }).catch(() => {});
             } catch {}
 
@@ -4458,16 +4456,16 @@ export default function Home() {
         // ────────────────────────────────
         case 'sync-rag-to-github':
         case 'sync-rag': {
-          const targetRepo = repoConfig.repo || 'DARLEK_CAAN';
-          const targetOwner = repoConfig.owner || 'craighckby-stack';
-          addCaanMessage(`Initiating manual push of Firebase RAG knowledge & system memory to GitHub repository (${targetOwner}/${targetRepo})...`);
+          const targetRepo = DARLEK_CAAN_DEFAULT_REPO;
+          const targetOwner = DARLEK_CAAN_DEFAULT_OWNER;
+          addCaanMessage(`Initiating manual push of Firebase RAG knowledge & system memory to Darlek Caan repository (${targetOwner}/${targetRepo})...`);
           addLogEntry('RAG_SYNC', `Pushing Firebase RAG knowledge chunks and mutation history to ${targetOwner}/${targetRepo}...`);
           try {
             const syncResult = await syncAllLogsToGitHub({
               token: apiKeys.github,
               owner: targetOwner,
               repo: targetRepo,
-              branch: repoConfig.branch || 'main'
+              branch: DARLEK_CAAN_DEFAULT_BRANCH
             });
             if (syncResult.success) {
               addCaanMessage(
