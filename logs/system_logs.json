@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T06:02:10.953Z",
+    "generatedAt": "2026-09-20T06:02:18.450Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789884135378_6c741391",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T06:02:15.378Z"
+    },
+    {
+      "id": "rag_log_1789884133499_bef9c689",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T06:02:13.499Z"
+    },
+    {
+      "id": "rag_log_1789884133491_aff9ded4",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T06:02:13.490Z"
+    },
+    {
+      "id": "rag_log_1789884132428_84fbdf3b",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T06:02:12.428Z"
+    },
+    {
+      "id": "rag_log_1789884132413_5325b803",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T06:02:12.413Z"
+    },
+    {
+      "id": "rag_log_1789884131452_6ada5af8",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/hooks/useSystemOrchestrator.ts",
+      "timestamp": "2026-09-20T06:02:11.452Z"
+    },
+    {
+      "id": "rag_log_1789884131451_7dd140c2",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/hooks/useSystemOrchestrator.ts",
+      "timestamp": "2026-09-20T06:02:11.451Z"
+    },
     {
       "id": "rag_log_1789884127894_c172bc25",
       "type": "LOG_SYNC",
@@ -114,100 +156,9 @@
       "type": "HEALTH",
       "description": "Auto-test: PASSED — 5 passed, 0 failed",
       "timestamp": "2026-09-20T06:01:25.776Z"
-    },
-    {
-      "id": "rag_log_1789884085774_f402aa19",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T06:01:25.774Z"
-    },
-    {
-      "id": "rag_log_1789884084851_6c615f1f",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/hooks/useQuantumState.ts",
-      "timestamp": "2026-09-20T06:01:24.851Z"
-    },
-    {
-      "id": "rag_log_1789884084849_149cf678",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/hooks/useQuantumState.ts",
-      "timestamp": "2026-09-20T06:01:24.849Z"
-    },
-    {
-      "id": "rag_log_1789884081586_5b49b31b",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T06:01:21.586Z"
-    },
-    {
-      "id": "rag_log_1789884073643_7d39db18",
-      "type": "MUTATE",
-      "description": "[Batch 167/253] Proposed mutation for src/hooks/useQuantumState.ts (risk: LOW)",
-      "timestamp": "2026-09-20T06:01:13.643Z"
-    },
-    {
-      "id": "rag_log_1789884073638_9eb8c1ad",
-      "type": "MUTATE",
-      "description": "[Batch 167/253] Proposed mutation for src/hooks/useQuantumState.ts (risk: LOW)",
-      "timestamp": "2026-09-20T06:01:13.638Z"
-    },
-    {
-      "id": "rag_log_1789884071444_a6de47fb",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T06:01:11.444Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-6dcbc448",
-      "time": "15:58:59",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
-    {
-      "id": "dos-c2794761",
-      "time": "15:59:00",
-      "addr": "0x00688000",
-      "tag": "RAG_INDEX",
-      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.26 MB."
-    },
-    {
-      "id": "dos-ae92cfc3",
-      "time": "15:59:00",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
-    {
-      "id": "dos-516440e6",
-      "time": "15:59:00",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-7bb98819",
-      "time": "15:59:05",
-      "addr": "0x0068A000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
-    {
-      "id": "dos-44a42f23",
-      "time": "15:59:08",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-97540b91",
-      "time": "15:59:10",
-      "addr": "0x0068C000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 782.0 KB (7.64%)."
-    },
     {
       "id": "dos-33e22f01",
       "time": "15:59:10",
@@ -858,6 +809,55 @@
       "addr": "0x006D6000",
       "tag": "SANITY_OK",
       "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-235a6abf",
+      "time": "16:02:11",
+      "addr": "0x00685D30",
+      "tag": "APPROVE",
+      "message": "Mutation applied to src/hooks/useSystemOrchestrator.ts"
+    },
+    {
+      "id": "dos-350a592f",
+      "time": "16:02:12",
+      "addr": "0x007EEE12",
+      "tag": "HEALTH",
+      "message": "Auto-test: PASSED — 5 passed, 0 failed"
+    },
+    {
+      "id": "dos-9a65ada6",
+      "time": "16:02:13",
+      "addr": "0x006D8000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.62 MB."
+    },
+    {
+      "id": "dos-49c2b51e",
+      "time": "16:02:13",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-db06b72f",
+      "time": "16:02:13",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-9835d860",
+      "time": "16:02:15",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-5725d4a5",
+      "time": "16:02:17",
+      "addr": "0x006DA000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
     }
   ]
 }
