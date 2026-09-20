@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789884017341_f8c70ec7",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T06:00:17.341Z"
+  },
+  {
     "id": "rag_log_1789884009501_cda4aa3a",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -142,11 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: PASSED — 5 passed, 0 failed",
     "timestamp": "2026-09-20T05:59:22.125Z"
-  },
-  {
-    "id": "rag_log_1789883961197_1bcf31d0",
-    "type": "APPROVE",
-    "description": "Mutation applied to src/hooks/use-toast.ts",
-    "timestamp": "2026-09-20T05:59:21.197Z"
   }
 ]

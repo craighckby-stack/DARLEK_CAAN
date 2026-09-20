@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T06:00:12.538Z",
+    "generatedAt": "2026-09-20T06:00:20.402Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789884017341_f8c70ec7",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T06:00:17.341Z"
+    },
     {
       "id": "rag_log_1789884009501_cda4aa3a",
       "type": "HEALTH",
@@ -150,43 +156,9 @@
       "type": "HEALTH",
       "description": "Auto-test: PASSED — 5 passed, 0 failed",
       "timestamp": "2026-09-20T05:59:22.125Z"
-    },
-    {
-      "id": "rag_log_1789883961197_1bcf31d0",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/hooks/use-toast.ts",
-      "timestamp": "2026-09-20T05:59:21.197Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-13bd089e",
-      "time": "15:57:01",
-      "addr": "0x006821D6",
-      "tag": "APPROVE",
-      "message": "Mutation applied to src/components/SnippetScanner.tsx"
-    },
-    {
-      "id": "dos-129d1b11",
-      "time": "15:57:02",
-      "addr": "0x0046288B",
-      "tag": "HEALTH",
-      "message": "Auto-test: REJECTED — 4 passed, 2 failed"
-    },
-    {
-      "id": "dos-1c2e4cbc",
-      "time": "15:57:03",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-730805e0",
-      "time": "15:57:05",
-      "addr": "0x00658000",
-      "tag": "RAG_INDEX",
-      "message": "RAG memory vector aligned. Total chunks: 15, Free: 8.98 MB."
-    },
     {
       "id": "dos-1366364e",
       "time": "15:57:05",
@@ -858,6 +830,34 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-54b316e6",
+      "time": "16:00:12",
+      "addr": "0x006A6000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-8f782ef5",
+      "time": "16:00:17",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-8df2e8fb",
+      "time": "16:00:17",
+      "addr": "0x006A8000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.35 MB."
+    },
+    {
+      "id": "dos-e1941acc",
+      "time": "16:00:17",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
     }
   ]
 }
