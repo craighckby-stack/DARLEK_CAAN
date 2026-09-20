@@ -1,12 +1,96 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:01:51.915Z",
+    "generatedAt": "2026-09-20T05:02:02.155Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789880519153_55b922ad",
+      "type": "RAG_WRITE",
+      "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-4, rai...",
+      "timestamp": "2026-09-20T05:01:59.153Z"
+    },
+    {
+      "id": "rag_log_1789880519152_8ffff29b",
+      "type": "HOTSWAP_OK",
+      "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-3 [Source: RAG_GENE_HOTSWAP].",
+      "timestamp": "2026-09-20T05:01:59.152Z"
+    },
+    {
+      "id": "rag_log_1789880518903_db575bdc",
+      "type": "SCAN",
+      "description": "Scanned craighckby-stack/DARLEK_CAAN — 254 files.",
+      "timestamp": "2026-09-20T05:01:58.903Z"
+    },
+    {
+      "id": "rag_log_1789880518904_bc81761d",
+      "type": "SCAN",
+      "description": "Scanned craighckby-stack/DARLEK_CAAN — 254 files.",
+      "timestamp": "2026-09-20T05:01:58.903Z"
+    },
+    {
+      "id": "rag_log_1789880518576_d7c36f85",
+      "type": "HOTSWAP",
+      "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
+      "timestamp": "2026-09-20T05:01:58.576Z"
+    },
+    {
+      "id": "rag_log_1789880517729_2cbefc4c",
+      "type": "CONNECT",
+      "description": "Successfully loaded 29 user and 27 global designs in portfolio context.",
+      "timestamp": "2026-09-20T05:01:57.729Z"
+    },
+    {
+      "id": "rag_log_1789880517725_77b41be1",
+      "type": "CONNECT",
+      "description": "Successfully loaded 29 user and 27 global designs in portfolio context.",
+      "timestamp": "2026-09-20T05:01:57.725Z"
+    },
+    {
+      "id": "rag_log_1789880517212_053a45d3",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:01:57.212Z"
+    },
+    {
+      "id": "rag_log_1789880515585_973e5b01",
+      "type": "CONNECT",
+      "description": "Retrieving user portfolio & design context...",
+      "timestamp": "2026-09-20T05:01:55.585Z"
+    },
+    {
+      "id": "rag_log_1789880515585_3413a317",
+      "type": "CONNECT",
+      "description": "Retrieving user portfolio & design context...",
+      "timestamp": "2026-09-20T05:01:55.585Z"
+    },
+    {
+      "id": "rag_log_1789880515584_4b0bffd0",
+      "type": "CONNECT",
+      "description": "GitHub link established with craighckby-stack/DARLEK_CAAN",
+      "timestamp": "2026-09-20T05:01:55.584Z"
+    },
+    {
+      "id": "rag_log_1789880515583_9b8c3b13",
+      "type": "CONNECT",
+      "description": "GitHub link established with craighckby-stack/DARLEK_CAAN",
+      "timestamp": "2026-09-20T05:01:55.583Z"
+    },
+    {
+      "id": "rag_log_1789880514946_433b1b2b",
+      "type": "CONNECT",
+      "description": "Verifying GitHub access key...",
+      "timestamp": "2026-09-20T05:01:54.946Z"
+    },
+    {
+      "id": "rag_log_1789880514945_48370cec",
+      "type": "CONNECT",
+      "description": "Verifying GitHub access key...",
+      "timestamp": "2026-09-20T05:01:54.945Z"
+    },
     {
       "id": "rag_log_1789880508910_003c174d",
       "type": "LOG_SYNC",
@@ -72,90 +156,6 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T05:01:12.165Z"
-    },
-    {
-      "id": "rag_log_1789880463141_db2918a4",
-      "type": "CONNECT",
-      "description": "Synced 29 user portfolios and 27 global architectures.",
-      "timestamp": "2026-09-20T05:01:03.141Z"
-    },
-    {
-      "id": "rag_log_1789880463137_08217b40",
-      "type": "CONNECT",
-      "description": "Synced 29 user portfolios and 27 global architectures.",
-      "timestamp": "2026-09-20T05:01:03.136Z"
-    },
-    {
-      "id": "rag_log_1789879319680_6bf6496e",
-      "type": "SYSTEM",
-      "description": "Batch complete.",
-      "timestamp": "2026-09-20T04:41:59.680Z"
-    },
-    {
-      "id": "rag_log_1789879319680_df37757d",
-      "type": "SYSTEM",
-      "description": "Batch complete.",
-      "timestamp": "2026-09-20T04:41:59.680Z"
-    },
-    {
-      "id": "rag_log_1789879319636_d9dcc5e6",
-      "type": "INFO",
-      "description": "[NO-OP] Code saturation reached in batch for logs/zero_output_error_stop.json",
-      "timestamp": "2026-09-20T04:41:59.636Z"
-    },
-    {
-      "id": "rag_log_1789879319635_92e065de",
-      "type": "INFO",
-      "description": "[NO-OP] Code saturation reached in batch for logs/zero_output_error_stop.json",
-      "timestamp": "2026-09-20T04:41:59.635Z"
-    },
-    {
-      "id": "rag_log_1789879316971_ef49d373",
-      "type": "REJECT",
-      "description": "Coherence Gate blocked mutation for src/app/page.tsx. Logged to Firebase as 'wrong' failure exemplar.",
-      "timestamp": "2026-09-20T04:41:56.970Z"
-    },
-    {
-      "id": "rag_log_1789879316967_ab9a0d18",
-      "type": "REJECT",
-      "description": "Coherence Gate blocked mutation for src/app/page.tsx. Logged to Firebase as 'wrong' failure exemplar.",
-      "timestamp": "2026-09-20T04:41:56.967Z"
-    },
-    {
-      "id": "rag_log_1789879316351_4a188b8c",
-      "type": "MUTATE",
-      "description": "[Batch 2/4] Proposed mutation for src/app/page.tsx (risk: LOW)",
-      "timestamp": "2026-09-20T04:41:56.351Z"
-    },
-    {
-      "id": "rag_log_1789879316350_02866a3b",
-      "type": "MUTATE",
-      "description": "[Batch 2/4] Proposed mutation for src/app/page.tsx (risk: LOW)",
-      "timestamp": "2026-09-20T04:41:56.350Z"
-    },
-    {
-      "id": "rag_log_1789879313075_e1a4bbd5",
-      "type": "REJECT",
-      "description": "Coherence Gate blocked mutation for src/utils/cognitive-engine.ts. Logged to Firebase as 'wrong' failure exemplar.",
-      "timestamp": "2026-09-20T04:41:53.075Z"
-    },
-    {
-      "id": "rag_log_1789879313074_f722d5d1",
-      "type": "REJECT",
-      "description": "Coherence Gate blocked mutation for src/utils/cognitive-engine.ts. Logged to Firebase as 'wrong' failure exemplar.",
-      "timestamp": "2026-09-20T04:41:53.074Z"
-    },
-    {
-      "id": "rag_log_1789879312393_2c0d73ca",
-      "type": "MUTATE",
-      "description": "[Batch 1/4] Proposed mutation for src/utils/cognitive-engine.ts (risk: LOW)",
-      "timestamp": "2026-09-20T04:41:52.393Z"
-    },
-    {
-      "id": "rag_log_1789879312391_04ff1104",
-      "type": "MUTATE",
-      "description": "[Batch 1/4] Proposed mutation for src/utils/cognitive-engine.ts (risk: LOW)",
-      "timestamp": "2026-09-20T04:41:52.391Z"
     }
   ],
   "telemetryBuffer": [
@@ -354,6 +354,83 @@
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-f2dbb272",
+      "time": "15:01:53",
+      "addr": "0x00116000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 93%, Drift 8%, Syntax clean."
+    },
+    {
+      "id": "dos-00e1d47b",
+      "time": "15:01:54",
+      "addr": "0x002B944A",
+      "tag": "CONNECT",
+      "message": "Verifying GitHub access key..."
+    },
+    {
+      "id": "dos-1dc5b9ff",
+      "time": "15:01:55",
+      "addr": "0x00578240",
+      "tag": "CONNECT",
+      "message": "GitHub link established with craighckby-stack/DARLEK_CAAN"
+    },
+    {
+      "id": "dos-db045dc0",
+      "time": "15:01:55",
+      "addr": "0x008B0818",
+      "tag": "CONNECT",
+      "message": "Retrieving user portfolio & design context..."
+    },
+    {
+      "id": "dos-674cd4fe",
+      "time": "15:01:57",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-8e0d968e",
+      "time": "15:01:57",
+      "addr": "0x0057BCD9",
+      "tag": "CONNECT",
+      "message": "Successfully loaded 29 user and 27 global designs in portfolio context."
+    },
+    {
+      "id": "dos-d2b07576",
+      "time": "15:01:58",
+      "addr": "0x00118000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.80 MB."
+    },
+    {
+      "id": "dos-7bc3f248",
+      "time": "15:01:58",
+      "addr": "0x007FC719",
+      "tag": "HOTSWAP",
+      "message": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts"
+    },
+    {
+      "id": "dos-e3ee6d63",
+      "time": "15:01:58",
+      "addr": "0x003CF9A0",
+      "tag": "SCAN",
+      "message": "Scanned craighckby-stack/DARLEK_CAAN — 254 files."
+    },
+    {
+      "id": "dos-61557d8b",
+      "time": "15:01:59",
+      "addr": "0x006EE364",
+      "tag": "HOTSWAP_OK",
+      "message": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-3 [Source: RAG_GENE_HOTSWAP]."
+    },
+    {
+      "id": "dos-908efc89",
+      "time": "15:01:59",
+      "addr": "0x00555CA1",
+      "tag": "RAG_WRITE",
+      "message": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-4, rai..."
     }
   ]
 }
