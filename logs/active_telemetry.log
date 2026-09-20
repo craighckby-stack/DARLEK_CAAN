@@ -1,11 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:54:18.071Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:54:27.577Z]
 ======================================================================
 
-[15:46:27] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
-[15:46:32] [0x00550000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.54 MB.
-[15:46:32] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
-[15:46:35] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:46:36] [0x00552000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
 [15:46:37] [0x001AA4AF] [MUTATE    ] [Batch 128/253] Proposed mutation for src/app/globals.css (risk: LOW)
 [15:46:41] [0x00554000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 468.6 KB (4.58%).
@@ -253,3 +249,7 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:54:18.071Z]
 [15:54:14] [0x003D0A96] [HEALTH    ] Auto-test: PASSED — 4 passed, 0 failed
 [15:54:15] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
 [15:54:17] [0x00612000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[15:54:22] [0x00614000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 1.40 MB (14.01%).
+[15:54:23] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:54:24] [0x0049D408] [MUTATE    ] [Batch 149/253] Proposed mutation for src/components/MutationHistoryPanel.tsx (risk: LOW)
+[15:54:27] [0x00616000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
