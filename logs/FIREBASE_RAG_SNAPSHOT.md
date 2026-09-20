@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:23:41.932Z`
+*Last Synchronized:* `2026-09-20T04:23:55.069Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,88 +14,110 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:52.067Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:23:52.067Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:52.066Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:23:52.065Z
+```
+
+### 3. `test-genai.js` (Gen 205)
+*Source:* `MUTATION:test-genai.js` | *Indexed:* `2026-09-20T04:23:52.062Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-205 [2026-09-20T04:23:38.350Z] */
+/**
+ * @file test-genai.js
+ * @description Gemini API interaction utility providing test content generation with cached client instantiation.
+ * @version 3.0.0-EMG
+ */
+
+'use strict';
+
+const { GoogleGenAI } = require('@google/genai');
+
+const DEFAULT_MODEL = 'gem
+// ... [truncated]
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:51.210Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:23:51.209Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:51.210Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:23:51.210Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:49.679Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to test-genai.js | TIME:2026-09-20T04:23:49.679Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:49.678Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to test-genai.js | TIME:2026-09-20T04:23:49.678Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:48.287Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:23:48.287Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:38.917Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 234/253] Proposed mutation for test-genai.js (risk: LOW) | TIME:2026-09-20T04:23:38.917Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:38.916Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 234/253] Proposed mutation for test-genai.js (risk: LOW) | TIME:2026-09-20T04:23:38.916Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:36.390Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-genai.js`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `205`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-205 with verified AST structural sanity.
 ```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:23:36.390Z
-```
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-205 [2026-09-20T04:23:38.350Z] */
+/**
+ * @file test-genai.js
+ * @description Gemini API interaction utility providing test content generation with cached client instantiation.
+ * @version 3.0.0-EMG
+ */
 
-### 4. `test-gemini.js` (Gen 204)
-*Source:* `MUTATION:test-gemini.js` | *Indexed:* `2026-09-20T04:23:28.463Z`
+'use strict';
 
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-204 [2026-09-20T04:23:15.454Z] */
-import { GoogleGenAI } from '@google/genai';
+const { GoogleGenAI } = require('@google/genai');
 
-async function main() {
-  const key = process.env.GEMINI_API_KEY;
-  try {
-    const ai = new GoogleGenAI({ apiKey: key });
-    const res = await ai.models.generateContent({
-      model: 'gemini-3.6-flash',
-      con
+const DEFAULT_MODEL = 'gem
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:28.456Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 1 issues (0 high) | TIME:2026-09-20T04:23:28.456Z
-```
-
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:28.455Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 1 issues (0 high) | TIME:2026-09-20T04:23:28.454Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:27.589Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:23:27.589Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:27.582Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:23:27.582Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:26.827Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to test-gemini.js | TIME:2026-09-20T04:23:26.827Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:26.826Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to test-gemini.js | TIME:2026-09-20T04:23:26.826Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-gemini.js`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-gemini.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `204`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-204 with verified AST structural sanity.
@@ -113,7 +135,7 @@ async function main() {
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `tailwind.config.js`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `tailwind.config.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `203`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-203 with verified AST structural sanity.
@@ -135,7 +157,7 @@ export default {
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/siphon.ts`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/siphon.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `202`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-202 with verified AST structural sanity.
@@ -153,7 +175,7 @@ export interface SiphonSource {
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/error-parser.ts`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/error-parser.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `201`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-201 with verified AST structural sanity.
@@ -171,7 +193,7 @@ export interface SystemErrorPayload {
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/cognitive-engine.ts`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/cognitive-engine.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `200`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-200 with verified AST structural sanity.
@@ -184,7 +206,7 @@ export interface SystemErrorPayload {
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/system.d.ts`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/system.d.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `199`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-199 with verified AST structural sanity.
@@ -203,7 +225,7 @@ export const enum SystemMode {
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/repository.ts`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/repository.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `198`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-198 with verified AST structural sanity.
@@ -221,7 +243,7 @@ export const enum SystemMode {
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/orchestrator.d.ts`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/orchestrator.d.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `197`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-197 with verified AST structural sanity.
@@ -235,7 +257,7 @@ export const enum SystemMode {
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/omega.d.ts`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/omega.d.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `196`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-196 with verified AST structural sanity.
@@ -249,21 +271,6 @@ export const enum SystemMode {
 
 /**
  * Represents a deeply immutable primitive or structured type for maximum 
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/omega-core.d.ts`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `195`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-195 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-195 [2026-09-20T04:19:25.276Z] */
-/**
- * @file omega-core.d.ts
- * @module OmegaCore
- * @description Darlek Caan type definitions and runtime boundary constraints for the Omega Core architecture.
- *
- * Provides core lifecycle status codes, telemetry state interfaces, execution configuration cont
 // ... [truncated]
 ```
 
