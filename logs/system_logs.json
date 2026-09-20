@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:48:05.893Z",
+    "generatedAt": "2026-09-20T03:48:14.211Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789876091160_a6c38e79",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:48:11.160Z"
+    },
+    {
+      "id": "rag_log_1789876089305_49a74eaf",
+      "type": "MUTATE",
+      "description": "[Batch 144/253] Proposed mutation for src/components/GithubScanner.tsx (risk: LOW)",
+      "timestamp": "2026-09-20T03:48:09.305Z"
+    },
+    {
+      "id": "rag_log_1789876089304_ea8b35e5",
+      "type": "MUTATE",
+      "description": "[Batch 144/253] Proposed mutation for src/components/GithubScanner.tsx (risk: LOW)",
+      "timestamp": "2026-09-20T03:48:09.304Z"
+    },
     {
       "id": "rag_log_1789876082860_49804f58",
       "type": "LOG_SYNC",
@@ -138,41 +156,9 @@
       "type": "MUTATE",
       "description": "[Batch 141/253] Proposed mutation for src/components/EvolutionLog.md (risk: LOW)",
       "timestamp": "2026-09-20T03:47:08.027Z"
-    },
-    {
-      "id": "rag_log_1789876028023_3363608a",
-      "type": "MUTATE",
-      "description": "[Batch 141/253] Proposed mutation for src/components/EvolutionLog.md (risk: LOW)",
-      "timestamp": "2026-09-20T03:47:08.023Z"
-    },
-    {
-      "id": "rag_log_1789876027890_14c78969",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:47:07.890Z"
-    },
-    {
-      "id": "rag_log_1789876018132_f3348e27",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:46:58.132Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-51f79d6d",
-      "time": "13:41:47",
-      "addr": "0x003D0A96",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 4 passed, 0 failed"
-    },
-    {
-      "id": "dos-fc4d78b7",
-      "time": "13:41:48",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
     {
       "id": "dos-c8b68467",
       "time": "13:41:52",
@@ -855,6 +841,20 @@
     {
       "id": "dos-65e325fa",
       "time": "13:48:02",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-ddd8138a",
+      "time": "13:48:09",
+      "addr": "0x004A09A1",
+      "tag": "MUTATE",
+      "message": "[Batch 144/253] Proposed mutation for src/components/GithubScanner.tsx (risk: LOW)"
+    },
+    {
+      "id": "dos-30da1de1",
+      "time": "13:48:11",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
