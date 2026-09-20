@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789876575030_71005d53",
+    "type": "MUTATE",
+    "description": "[Batch 165/253] Proposed mutation for src/hooks/useGithubScanner.ts (risk: LOW)",
+    "timestamp": "2026-09-20T03:56:15.030Z"
+  },
+  {
+    "id": "rag_log_1789876575028_59704b7b",
+    "type": "MUTATE",
+    "description": "[Batch 165/253] Proposed mutation for src/hooks/useGithubScanner.ts (risk: LOW)",
+    "timestamp": "2026-09-20T03:56:15.028Z"
+  },
+  {
+    "id": "rag_log_1789876573350_81fd946d",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:56:13.350Z"
+  },
+  {
     "id": "rag_log_1789876564414_3cd46a34",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "INFO",
     "description": "[NO-OP] Code saturation reached in batch for src/hooks/use-toast.ts",
     "timestamp": "2026-09-20T03:55:08.387Z"
-  },
-  {
-    "id": "rag_log_1789876508385_51c57c5f",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for src/hooks/use-toast.ts",
-    "timestamp": "2026-09-20T03:55:08.385Z"
-  },
-  {
-    "id": "rag_log_1789876506111_d9597ceb",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:55:06.111Z"
-  },
-  {
-    "id": "rag_log_1789876497487_fe43258f",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T03:54:57.487Z"
   }
 ]
