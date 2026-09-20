@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:03:18.144Z",
+    "generatedAt": "2026-09-20T05:03:26.139Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789880603130_93883279",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:03:23.130Z"
+    },
+    {
+      "id": "rag_log_1789880599848_ca3db71f",
+      "type": "MUTATE",
+      "description": "[Batch 3/253] Proposed mutation for .next_dev/cache/webpack/client-development/7.pack.gz_ (risk: LOW)",
+      "timestamp": "2026-09-20T05:03:19.848Z"
+    },
+    {
+      "id": "rag_log_1789880599847_85138345",
+      "type": "MUTATE",
+      "description": "[Batch 3/253] Proposed mutation for .next_dev/cache/webpack/client-development/7.pack.gz_ (risk: LOW)",
+      "timestamp": "2026-09-20T05:03:19.847Z"
+    },
     {
       "id": "rag_log_1789880595137_4aa11da1",
       "type": "LOG_SYNC",
@@ -138,24 +156,6 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T05:02:29.067Z"
-    },
-    {
-      "id": "rag_log_1789880540791_bd3ac0aa",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:02:20.791Z"
-    },
-    {
-      "id": "rag_log_1789880540786_1d29282e",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:02:20.786Z"
-    },
-    {
-      "id": "rag_log_1789880539964_8bc499fb",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:02:19.964Z"
     }
   ],
   "telemetryBuffer": [
@@ -711,6 +711,34 @@
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-d18807ca",
+      "time": "15:03:19",
+      "addr": "0x007C690F",
+      "tag": "MUTATE",
+      "message": "[Batch 3/253] Proposed mutation for .next_dev/cache/webpack/client-development/7.pack.gz_ (risk: LOW)"
+    },
+    {
+      "id": "dos-d01c67c9",
+      "time": "15:03:19",
+      "addr": "0x0013A000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-f2bccde3",
+      "time": "15:03:23",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-73397a21",
+      "time": "15:03:24",
+      "addr": "0x0013C000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 269.2 KB (2.63%)."
     }
   ]
 }

@@ -1,5 +1,5 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:03:18.144Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:03:26.139Z]
 ======================================================================
 
 [00:00:00] [0x00400000] [BOOT      ] Microsoft(R) MS-DOS(R) Version 6.22
@@ -81,3 +81,7 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:03:18.144Z]
 [15:03:15] [0x00138000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.58 MB.
 [15:03:15] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
 [15:03:15] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:03:19] [0x007C690F] [MUTATE    ] [Batch 3/253] Proposed mutation for .next_dev/cache/webpack/client-development/7.pack.gz_ (risk: LOW)
+[15:03:19] [0x0013A000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[15:03:23] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:03:24] [0x0013C000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 269.2 KB (2.63%).
