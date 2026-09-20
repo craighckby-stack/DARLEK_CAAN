@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789874746818_7ebf1d9d",
+    "type": "MUTATE",
+    "description": "[Batch 84/253] Proposed mutation for remote_main.tsx (risk: LOW)",
+    "timestamp": "2026-09-20T03:25:46.818Z"
+  },
+  {
+    "id": "rag_log_1789874746819_db904c9e",
+    "type": "MUTATE",
+    "description": "[Batch 84/253] Proposed mutation for remote_main.tsx (risk: LOW)",
+    "timestamp": "2026-09-20T03:25:46.818Z"
+  },
+  {
+    "id": "rag_log_1789874746002_c4602a41",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:25:46.002Z"
+  },
+  {
     "id": "rag_log_1789874736964_b724af8d",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "INFO",
     "description": "[NO-OP] Code saturation reached in batch for rag/learning_postmortems.json",
     "timestamp": "2026-09-20T03:24:40.138Z"
-  },
-  {
-    "id": "rag_log_1789874680137_212b829e",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for rag/learning_postmortems.json",
-    "timestamp": "2026-09-20T03:24:40.137Z"
-  },
-  {
-    "id": "rag_log_1789874673634_da037909",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:24:33.634Z"
-  },
-  {
-    "id": "rag_log_1789874670353_a6a94dca",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T03:24:30.352Z"
   }
 ]

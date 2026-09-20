@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T03:25:40.006Z`
+*Last Synchronized:* `2026-09-20T03:25:49.844Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,34 +14,55 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:25:46.819Z`
+
+```typescript
+[LOG:MUTATE] [Batch 84/253] Proposed mutation for remote_main.tsx (risk: LOW) | TIME:2026-09-20T03:25:46.818Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:25:46.818Z`
+
+```typescript
+[LOG:MUTATE] [Batch 84/253] Proposed mutation for remote_main.tsx (risk: LOW) | TIME:2026-09-20T03:25:46.818Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:25:46.002Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:25:46.002Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:25:36.964Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:25:36.964Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:25:36.630Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for remote_blobs.json | TIME:2026-09-20T03:25:36.630Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:25:36.629Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for remote_blobs.json | TIME:2026-09-20T03:25:36.628Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:25:28.003Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:25:28.003Z
 ```
 
-### 5. `remote_App.tsx` (Gen 64)
+### 8. `remote_App.tsx` (Gen 64)
 *Source:* `MUTATION:remote_App.tsx` | *Indexed:* `2026-09-20T03:25:26.703Z`
 
 ```typescript
@@ -57,39 +78,18 @@ import React, { useState, useEffe
 // ... [truncated]
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:25:26.443Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:25:26.443Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:25:26.442Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:25:26.442Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:25:25.530Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 4 passed, 0 failed | TIME:2026-09-20T03:25:25.529Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:25:25.530Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 4 passed, 0 failed | TIME:2026-09-20T03:25:25.530Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:25:25.222Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to remote_App.tsx | TIME:2026-09-20T03:25:25.221Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
