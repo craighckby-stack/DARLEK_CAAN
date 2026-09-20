@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789873797813_c03580dd",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:09:57.813Z"
+  },
+  {
     "id": "rag_log_1789873790235_42fdf677",
     "type": "MUTATE",
     "description": "[Batch 51/253] Proposed mutation for fix_prompt2.js (risk: LOW)",
@@ -142,11 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 49/253] Proposed mutation for fix_orchestra.sh (risk: LOW)",
     "timestamp": "2026-09-20T03:09:00.334Z"
-  },
-  {
-    "id": "rag_log_1789873739144_ab30574d",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:08:59.144Z"
   }
 ]
