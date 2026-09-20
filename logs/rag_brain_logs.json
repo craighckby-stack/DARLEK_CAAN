@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789881923461_51072073",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:25:23.461Z"
+  },
+  {
+    "id": "rag_log_1789881919979_ac0c55f0",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T05:25:19.979Z"
+  },
+  {
+    "id": "rag_log_1789881919978_783d5abf",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T05:25:19.978Z"
+  },
+  {
+    "id": "rag_log_1789881919193_4ccf17c3",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T05:25:19.193Z"
+  },
+  {
+    "id": "rag_log_1789881919192_503022c9",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T05:25:19.192Z"
+  },
+  {
+    "id": "rag_log_1789881918729_89ac2521",
+    "type": "APPROVE",
+    "description": "Mutation applied to get_git_log.js",
+    "timestamp": "2026-09-20T05:25:18.729Z"
+  },
+  {
+    "id": "rag_log_1789881918728_7671aa60",
+    "type": "APPROVE",
+    "description": "Mutation applied to get_git_log.js",
+    "timestamp": "2026-09-20T05:25:18.728Z"
+  },
+  {
     "id": "rag_log_1789881915603_d03c3b20",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -106,47 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: REJECTED — 4 passed, 1 failed",
     "timestamp": "2026-09-20T05:24:38.174Z"
-  },
-  {
-    "id": "rag_log_1789881877724_9f90b322",
-    "type": "APPROVE",
-    "description": "Mutation applied to fix_synthesizer.sh",
-    "timestamp": "2026-09-20T05:24:37.724Z"
-  },
-  {
-    "id": "rag_log_1789881877723_c344c5b4",
-    "type": "APPROVE",
-    "description": "Mutation applied to fix_synthesizer.sh",
-    "timestamp": "2026-09-20T05:24:37.723Z"
-  },
-  {
-    "id": "rag_log_1789881874844_b635f882",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:24:34.844Z"
-  },
-  {
-    "id": "rag_log_1789881866430_c61b3940",
-    "type": "MUTATE",
-    "description": "[Batch 59/253] Proposed mutation for fix_synthesizer.sh (risk: LOW)",
-    "timestamp": "2026-09-20T05:24:26.430Z"
-  },
-  {
-    "id": "rag_log_1789881866429_4efde3e4",
-    "type": "MUTATE",
-    "description": "[Batch 59/253] Proposed mutation for fix_synthesizer.sh (risk: LOW)",
-    "timestamp": "2026-09-20T05:24:26.429Z"
-  },
-  {
-    "id": "rag_log_1789881865114_2cadf868",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:24:25.114Z"
-  },
-  {
-    "id": "rag_log_1789881857131_a8c6438f",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:24:17.131Z"
   }
 ]
