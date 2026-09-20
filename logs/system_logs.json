@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:55:45.824Z",
+    "generatedAt": "2026-09-20T03:55:54.076Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789876551066_a44234f9",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:55:51.066Z"
+    },
+    {
+      "id": "rag_log_1789876550272_a3ad520f",
+      "type": "MUTATE",
+      "description": "[Batch 164/253] Proposed mutation for src/hooks/useFolderScanner.ts (risk: LOW)",
+      "timestamp": "2026-09-20T03:55:50.272Z"
+    },
+    {
+      "id": "rag_log_1789876550271_7e58e287",
+      "type": "MUTATE",
+      "description": "[Batch 164/253] Proposed mutation for src/hooks/useFolderScanner.ts (risk: LOW)",
+      "timestamp": "2026-09-20T03:55:50.271Z"
+    },
     {
       "id": "rag_log_1789876542688_c9c96b4a",
       "type": "LOG_SYNC",
@@ -138,41 +156,9 @@
       "type": "MUTATE",
       "description": "[Batch 161/253] Proposed mutation for src/components/ui/toaster.tsx (risk: LOW)",
       "timestamp": "2026-09-20T03:54:44.712Z"
-    },
-    {
-      "id": "rag_log_1789876484709_f369979b",
-      "type": "MUTATE",
-      "description": "[Batch 161/253] Proposed mutation for src/components/ui/toaster.tsx (risk: LOW)",
-      "timestamp": "2026-09-20T03:54:44.709Z"
-    },
-    {
-      "id": "rag_log_1789876481857_3ae0f8c4",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:54:41.857Z"
-    },
-    {
-      "id": "rag_log_1789876472893_3a0d82fb",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:54:32.893Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-24d9acb2",
-      "time": "13:49:17",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-8d124678",
-      "time": "13:49:21",
-      "addr": "0x00311D46",
-      "tag": "INFO",
-      "message": "[NO-OP] Code saturation reached in batch for src/components/MainPage.tsx"
-    },
     {
       "id": "dos-432b0bef",
       "time": "13:49:26",
@@ -855,6 +841,20 @@
     {
       "id": "dos-4c7f2a00",
       "time": "13:55:42",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-8e2f05d0",
+      "time": "13:55:50",
+      "addr": "0x00142DAB",
+      "tag": "MUTATE",
+      "message": "[Batch 164/253] Proposed mutation for src/hooks/useFolderScanner.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-d5c212d4",
+      "time": "13:55:51",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
