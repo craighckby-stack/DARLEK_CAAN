@@ -1,12 +1,66 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:18:18.374Z",
+    "generatedAt": "2026-09-20T03:18:35.585Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789874311814_b88f3481",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T03:18:31.814Z"
+    },
+    {
+      "id": "rag_log_1789874311813_c32a76f9",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T03:18:31.813Z"
+    },
+    {
+      "id": "rag_log_1789874311500_2e288030",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T03:18:31.500Z"
+    },
+    {
+      "id": "rag_log_1789874311499_84f779c9",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T03:18:31.499Z"
+    },
+    {
+      "id": "rag_log_1789874311124_3636467c",
+      "type": "APPROVE",
+      "description": "Mutation applied to get_git_log.js",
+      "timestamp": "2026-09-20T03:18:31.123Z"
+    },
+    {
+      "id": "rag_log_1789874311122_057edd78",
+      "type": "APPROVE",
+      "description": "Mutation applied to get_git_log.js",
+      "timestamp": "2026-09-20T03:18:31.122Z"
+    },
+    {
+      "id": "rag_log_1789874303632_616150d6",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:18:23.632Z"
+    },
+    {
+      "id": "rag_log_1789874300232_b35ed2fb",
+      "type": "MUTATE",
+      "description": "[Batch 61/253] Proposed mutation for get_git_log.js (risk: LOW)",
+      "timestamp": "2026-09-20T03:18:20.232Z"
+    },
+    {
+      "id": "rag_log_1789874300231_93b1cead",
+      "type": "MUTATE",
+      "description": "[Batch 61/253] Proposed mutation for get_git_log.js (risk: LOW)",
+      "timestamp": "2026-09-20T03:18:20.231Z"
+    },
     {
       "id": "rag_log_1789874295349_0bb4e46d",
       "type": "LOG_SYNC",
@@ -98,102 +152,13 @@
       "timestamp": "2026-09-20T03:17:35.596Z"
     },
     {
-      "id": "rag_log_1789874255132_2a684e3b",
-      "type": "ERROR",
-      "description": "Mutation apply failed: Server error (200): Non-JSON response received (possible route crash or payload limit).",
-      "timestamp": "2026-09-20T03:17:35.132Z"
-    },
-    {
       "id": "rag_log_1789874255132_2b715ca3",
       "type": "ERROR",
       "description": "Mutation apply failed: Server error (200): Non-JSON response received (possible route crash or payload limit).",
       "timestamp": "2026-09-20T03:17:35.132Z"
-    },
-    {
-      "id": "rag_log_1789874247656_729b62f3",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:17:27.656Z"
-    },
-    {
-      "id": "rag_log_1789874239689_454a604a",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:17:19.689Z"
-    },
-    {
-      "id": "rag_log_1789874231966_7013c686",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:17:11.966Z"
-    },
-    {
-      "id": "rag_log_1789874224305_4b354cbd",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:17:04.305Z"
-    },
-    {
-      "id": "rag_log_1789874215604_ba48bd53",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:16:55.604Z"
-    },
-    {
-      "id": "rag_log_1789874206359_bb3d34b8",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:16:46.359Z"
-    },
-    {
-      "id": "rag_log_1789874198408_aacee451",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:16:38.408Z"
-    },
-    {
-      "id": "rag_log_1789874190612_19eca444",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:16:30.612Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-0700c29c",
-      "time": "13:09:22",
-      "addr": "0x0037D91B",
-      "tag": "MUTATE",
-      "message": "[Batch 50/253] Proposed mutation for fix_prompt.js (risk: LOW)"
-    },
-    {
-      "id": "dos-f30758a0",
-      "time": "13:09:25",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-71b60843",
-      "time": "13:09:32",
-      "addr": "0x0090A6B5",
-      "tag": "APPROVE",
-      "message": "Mutation applied to fix_prompt.js"
-    },
-    {
-      "id": "dos-0776955e",
-      "time": "13:09:33",
-      "addr": "0x0074FAF3",
-      "tag": "HEALTH",
-      "message": "Auto-test: REJECTED — 4 passed, 1 failed"
-    },
-    {
-      "id": "dos-3f57eaaf",
-      "time": "13:09:33",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-42461064",
       "time": "13:09:33",
@@ -858,6 +823,41 @@
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-ec01d78e",
+      "time": "13:18:20",
+      "addr": "0x0042162A",
+      "tag": "MUTATE",
+      "message": "[Batch 61/253] Proposed mutation for get_git_log.js (risk: LOW)"
+    },
+    {
+      "id": "dos-cb572be4",
+      "time": "13:18:23",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-19cf2b3f",
+      "time": "13:18:31",
+      "addr": "0x00903BB4",
+      "tag": "APPROVE",
+      "message": "Mutation applied to get_git_log.js"
+    },
+    {
+      "id": "dos-f538e67e",
+      "time": "13:18:31",
+      "addr": "0x007EEE12",
+      "tag": "HEALTH",
+      "message": "Auto-test: PASSED — 5 passed, 0 failed"
+    },
+    {
+      "id": "dos-a9c5f9a0",
+      "time": "13:18:31",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
     }
   ]
 }
