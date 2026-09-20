@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:13:11.492Z",
+    "generatedAt": "2026-09-20T03:13:18.982Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789873995957_61e7bd00",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:13:15.957Z"
+    },
     {
       "id": "rag_log_1789873988458_d60651e5",
       "type": "LOG_SYNC",
@@ -150,22 +156,9 @@
       "type": "APPROVE",
       "description": "Mutation applied to fix_prompt7.js",
       "timestamp": "2026-09-20T03:11:52.900Z"
-    },
-    {
-      "id": "rag_log_1789873910029_9b0a5f48",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:11:50.029Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-fb2fa4fb",
-      "time": "13:06:49",
-      "addr": "0x004EB7A6",
-      "tag": "MUTATE",
-      "message": "[Batch 43/253] Proposed mutation for fix2.js (risk: LOW)"
-    },
     {
       "id": "dos-55f16dd4",
       "time": "13:06:57",
@@ -855,6 +848,13 @@
     {
       "id": "dos-8b26ba09",
       "time": "13:13:08",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-2e7ed726",
+      "time": "13:13:15",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"

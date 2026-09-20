@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789873995957_61e7bd00",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:13:15.957Z"
+  },
+  {
     "id": "rag_log_1789873988458_d60651e5",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -142,11 +148,5 @@
     "type": "APPROVE",
     "description": "Mutation applied to fix_prompt7.js",
     "timestamp": "2026-09-20T03:11:52.900Z"
-  },
-  {
-    "id": "rag_log_1789873910029_9b0a5f48",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:11:50.029Z"
   }
 ]
