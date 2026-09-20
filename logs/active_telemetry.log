@@ -1,12 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:58:39.774Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:58:50.099Z]
 ======================================================================
 
-[15:50:41] [0x005B8000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 8.62 MB.
-[15:50:41] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
-[15:50:41] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:50:41] [0x002C0047] [MUTATE    ] [Batch 139/253] Proposed mutation for src/components/DosConsoleModal.tsx (risk: LOW)
-[15:50:46] [0x005BA000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
 [15:50:51] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:50:51] [0x005BC000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 1.32 MB (13.24%).
 [15:50:53] [0x007CD32C] [APPROVE   ] Mutation applied to src/components/DosConsoleModal.tsx
@@ -253,3 +248,8 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:58:39.774Z]
 [15:58:35] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
 [15:58:36] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
 [15:58:37] [0x0067E000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
+[15:58:41] [0x00680000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.12 MB.
+[15:58:41] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
+[15:58:45] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:58:46] [0x00682000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[15:58:47] [0x0079C95A] [MUTATE    ] [Batch 161/253] Proposed mutation for src/components/ui/toaster.tsx (risk: LOW)

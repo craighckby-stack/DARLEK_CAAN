@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:58:39.774Z",
+    "generatedAt": "2026-09-20T05:58:50.098Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789883927070_be1e5dce",
+      "type": "MUTATE",
+      "description": "[Batch 161/253] Proposed mutation for src/components/ui/toaster.tsx (risk: LOW)",
+      "timestamp": "2026-09-20T05:58:47.069Z"
+    },
+    {
+      "id": "rag_log_1789883927065_1c39532c",
+      "type": "MUTATE",
+      "description": "[Batch 161/253] Proposed mutation for src/components/ui/toaster.tsx (risk: LOW)",
+      "timestamp": "2026-09-20T05:58:47.065Z"
+    },
+    {
+      "id": "rag_log_1789883925899_7702d866",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:58:45.899Z"
+    },
     {
       "id": "rag_log_1789883916671_57743803",
       "type": "HEALTH",
@@ -138,62 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T05:57:50.309Z"
-    },
-    {
-      "id": "rag_log_1789883869232_2f395f64",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:57:49.232Z"
-    },
-    {
-      "id": "rag_log_1789883869228_5eac8bd8",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:57:49.228Z"
-    },
-    {
-      "id": "rag_log_1789883867777_220cb36f",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/components/StatusBar.tsx",
-      "timestamp": "2026-09-20T05:57:47.777Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-1af21bbb",
-      "time": "15:55:29",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
-    {
-      "id": "dos-2aa3ec71",
-      "time": "15:55:30",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-8358edc7",
-      "time": "15:55:34",
-      "addr": "0x009C8870",
-      "tag": "MUTATE",
-      "message": "[Batch 152/253] Proposed mutation for src/components/QuickActions.tsx (risk: LOW)"
-    },
-    {
-      "id": "dos-68746a10",
-      "time": "15:55:34",
-      "addr": "0x00632000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
-    {
-      "id": "dos-bede3f7a",
-      "time": "15:55:38",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-3d270625",
       "time": "15:55:39",
@@ -858,6 +823,41 @@
       "addr": "0x0067E000",
       "tag": "SANITY_OK",
       "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-fe2227d9",
+      "time": "15:58:41",
+      "addr": "0x00680000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.12 MB."
+    },
+    {
+      "id": "dos-9befa53e",
+      "time": "15:58:41",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-0f59a1ea",
+      "time": "15:58:45",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-cab7c508",
+      "time": "15:58:46",
+      "addr": "0x00682000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-67c9ca16",
+      "time": "15:58:47",
+      "addr": "0x0079C95A",
+      "tag": "MUTATE",
+      "message": "[Batch 161/253] Proposed mutation for src/components/ui/toaster.tsx (risk: LOW)"
     }
   ]
 }
