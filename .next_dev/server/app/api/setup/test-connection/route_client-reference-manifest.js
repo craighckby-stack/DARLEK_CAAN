@@ -1,4 +1,4 @@
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-5 [2026-09-19T22:43:55.572Z] */
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-7 [2026-09-20T05:05:14.247Z] */
 /**
  * Core RSC Reference Manifest Definition
  * File: .next_dev/server/app/api/setup/test-connection/route_client-reference-manifest.js
