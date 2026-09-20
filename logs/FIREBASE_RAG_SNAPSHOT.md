@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:08:59.691Z`
+*Last Synchronized:* `2026-09-20T04:09:09.206Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,27 +14,48 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:06.203Z`
+
+```typescript
+[LOG:MUTATE] [Batch 198/253] Proposed mutation for src/lib/neuralActiveGene.ts (risk: LOW) | TIME:2026-09-20T04:09:06.203Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:06.202Z`
+
+```typescript
+[LOG:MUTATE] [Batch 198/253] Proposed mutation for src/lib/neuralActiveGene.ts (risk: LOW) | TIME:2026-09-20T04:09:06.201Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:05.766Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:09:05.766Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:08:56.607Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for src/lib/msDosEngine.ts | TIME:2026-09-20T04:08:56.606Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:08:56.603Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for src/lib/msDosEngine.ts | TIME:2026-09-20T04:08:56.603Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:08:55.438Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:08:55.438Z
 ```
 
-### 4. `src/lib/main-worker.ts` (Gen 170)
+### 7. `src/lib/main-worker.ts` (Gen 170)
 *Source:* `MUTATION:src/lib/main-worker.ts` | *Indexed:* `2026-09-20T04:08:46.426Z`
 
 ```typescript
@@ -50,46 +71,25 @@ export interface CodeFile {
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:08:45.917Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:08:45.916Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:08:45.913Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:08:45.913Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:08:45.049Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:08:45.049Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:08:45.046Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:08:45.046Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:08:44.311Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/lib/main-worker.ts | TIME:2026-09-20T04:08:44.311Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:08:44.309Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/lib/main-worker.ts | TIME:2026-09-20T04:08:44.308Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
