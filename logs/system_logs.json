@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:38:35.868Z",
+    "generatedAt": "2026-09-20T05:38:45.654Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789882722616_26bdd782",
+      "type": "MUTATE",
+      "description": "[Batch 107/253] Proposed mutation for src/app/api/extract-text/route.ts (risk: LOW)",
+      "timestamp": "2026-09-20T05:38:42.616Z"
+    },
+    {
+      "id": "rag_log_1789882722613_3ed7ea76",
+      "type": "MUTATE",
+      "description": "[Batch 107/253] Proposed mutation for src/app/api/extract-text/route.ts (risk: LOW)",
+      "timestamp": "2026-09-20T05:38:42.613Z"
+    },
+    {
+      "id": "rag_log_1789882722426_32038409",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:38:42.426Z"
+    },
     {
       "id": "rag_log_1789882712838_f54d7be3",
       "type": "INFO",
@@ -138,55 +156,9 @@
       "type": "MUTATE",
       "description": "[Batch 104/253] Proposed mutation for src/app/api/evolution/orchestra/README.md (risk: LOW)",
       "timestamp": "2026-09-20T05:37:49.986Z"
-    },
-    {
-      "id": "rag_log_1789882668989_c5a46361",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:37:48.989Z"
-    },
-    {
-      "id": "rag_log_1789882660347_32dff6fa",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:37:40.347Z"
-    },
-    {
-      "id": "rag_log_1789882660345_c8f3482f",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:37:40.345Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-bbe1514b",
-      "time": "15:35:29",
-      "addr": "0x0043C000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 747.8 KB (7.3%)."
-    },
-    {
-      "id": "dos-16999c00",
-      "time": "15:35:33",
-      "addr": "0x0081776C",
-      "tag": "MUTATE",
-      "message": "[Batch 98/253] Proposed mutation for src/app/api/evolution/auto-test/README.md (risk: LOW)"
-    },
-    {
-      "id": "dos-14c8ee3a",
-      "time": "15:35:34",
-      "addr": "0x0043E000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
-    {
-      "id": "dos-ff61356f",
-      "time": "15:35:35",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-072dbb3b",
       "time": "15:35:39",
@@ -858,6 +830,34 @@
       "addr": "0x004FB67B",
       "tag": "INFO",
       "message": "[NO-OP] Code saturation reached in batch for src/app/api/evolution/propose/route.ts"
+    },
+    {
+      "id": "dos-84842d2c",
+      "time": "15:38:36",
+      "addr": "0x0048A000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-565e6f1f",
+      "time": "15:38:41",
+      "addr": "0x0048C000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 897.9 KB (8.77%)."
+    },
+    {
+      "id": "dos-fa4d37a9",
+      "time": "15:38:42",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-b9c3c8d3",
+      "time": "15:38:42",
+      "addr": "0x0015E051",
+      "tag": "MUTATE",
+      "message": "[Batch 107/253] Proposed mutation for src/app/api/extract-text/route.ts (risk: LOW)"
     }
   ]
 }
