@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:09:14.813Z`
+*Last Synchronized:* `2026-09-20T05:09:25.106Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -13,7 +13,28 @@
 
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
-### 1. `SECURITY.md` (Gen 13)
+### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:09:21.684Z`
+
+```typescript
+[LOG:MUTATE] [Batch 14/253] Proposed mutation for STYLE_MIGRATION_README.md (risk: LOW) | TIME:2026-09-20T05:09:21.683Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:09:21.679Z`
+
+```typescript
+[LOG:MUTATE] [Batch 14/253] Proposed mutation for STYLE_MIGRATION_README.md (risk: LOW) | TIME:2026-09-20T05:09:21.678Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:09:20.508Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:09:20.507Z
+```
+
+### 4. `SECURITY.md` (Gen 13)
 *Source:* `MUTATION:SECURITY.md` | *Indexed:* `2026-09-20T05:09:11.793Z`
 
 ```typescript
@@ -27,79 +48,46 @@
 // ... [truncated]
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:09:11.689Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:09:11.688Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:09:11.689Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:09:11.689Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:09:10.805Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:09:10.805Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:09:10.801Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:09:10.800Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:09:10.388Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to SECURITY.md | TIME:2026-09-20T05:09:10.387Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:09:10.366Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to SECURITY.md | TIME:2026-09-20T05:09:10.365Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:09:09.487Z`
-
-```typescript
-[LOG:RAG_WRITE] Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-7, rai... | TIME:2026-09-20T05:09:09.486Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:09:09.477Z`
-
-```typescript
-[LOG:HOTSWAP_OK] HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-6 [Source: RAG_GENE_HOTSWAP]. | TIME:2026-09-20T05:09:09.476Z
-```
-
-### 10. `src/lib/neuralActiveGene.ts` (Gen 6)
-*Source:* `MUTATION:src/lib/neuralActiveGene.ts` | *Indexed:* `2026-09-20T05:09:09.461Z`
-
-```typescript
-/**
- * @file src/lib/neuralActiveGene.ts
- * @description Active neural gene evolved and hotswapped autonomously via DARLEK CAAN RAG Engine.
- * Generation: G-7 | RAG Vector Anchored | Hotswap Verified
- */
-
-export interface NeuralGeneState {
-  generation: number;
-  dalekPowerLevel: number;
-  activeConsensus: string;
-  isOptimized: boolean;
-  lastMuta
-// ... [truncated]
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
