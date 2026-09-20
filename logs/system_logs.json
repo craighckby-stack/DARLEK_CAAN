@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T01:53:40.187Z",
+    "generatedAt": "2026-09-20T01:53:48.681Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789869225667_770c0f65",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T01:53:45.667Z"
+    },
     {
       "id": "rag_log_1789869217179_611fe3ec",
       "type": "LOG_SYNC",
@@ -150,12 +156,6 @@
       "type": "CONNECT",
       "description": "Synced 29 user portfolios and 27 global architectures.",
       "timestamp": "2026-09-20T00:25:34.888Z"
-    },
-    {
-      "id": "rag_log_1789863930675_52645fae",
-      "type": "SYSTEM",
-      "description": "Bypassed access portal: Autonomous cognitive pipeline initiated with local cyber core modules.",
-      "timestamp": "2026-09-20T00:25:30.675Z"
     }
   ],
   "telemetryBuffer": [
@@ -330,6 +330,13 @@
     {
       "id": "dos-937786ed",
       "time": "11:53:37",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-35305ac3",
+      "time": "11:53:45",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
