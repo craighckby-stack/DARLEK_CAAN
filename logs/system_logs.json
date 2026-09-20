@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T01:52:22.471Z",
+    "generatedAt": "2026-09-20T01:52:31.568Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789869148561_1debdfe1",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T01:52:28.560Z"
+    },
     {
       "id": "rag_log_1789869139468_07488f94",
       "type": "LOG_SYNC",
@@ -150,12 +156,6 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-19T22:54:52.297Z"
-    },
-    {
-      "id": "rag_log_1789858489372_9408b3ff",
-      "type": "MUTATE",
-      "description": "[Batch 17/243] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW)",
-      "timestamp": "2026-09-19T22:54:49.372Z"
     }
   ],
   "telemetryBuffer": [
@@ -267,6 +267,13 @@
     {
       "id": "dos-1deecbc7",
       "time": "11:52:19",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-021ad076",
+      "time": "11:52:28",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
