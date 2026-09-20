@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:25:34.019Z",
+    "generatedAt": "2026-09-20T05:25:43.796Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789881940622_f236b85d",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:25:40.622Z"
+    },
+    {
+      "id": "rag_log_1789881940620_cd81a81f",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:25:40.620Z"
+    },
+    {
+      "id": "rag_log_1789881940259_fa9cc41a",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T05:25:40.259Z"
+    },
+    {
+      "id": "rag_log_1789881940258_4b3196e1",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T05:25:40.258Z"
+    },
+    {
+      "id": "rag_log_1789881939973_70ab0c41",
+      "type": "APPROVE",
+      "description": "Mutation applied to index.html",
+      "timestamp": "2026-09-20T05:25:39.972Z"
+    },
+    {
+      "id": "rag_log_1789881939971_27f79caf",
+      "type": "APPROVE",
+      "description": "Mutation applied to index.html",
+      "timestamp": "2026-09-20T05:25:39.971Z"
+    },
+    {
+      "id": "rag_log_1789881938547_efd15f85",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:25:38.547Z"
+    },
     {
       "id": "rag_log_1789881930975_db8003ba",
       "type": "LOG_SYNC",
@@ -114,93 +156,9 @@
       "type": "HEALTH",
       "description": "Auto-test: PASSED — 5 passed, 0 failed",
       "timestamp": "2026-09-20T05:24:58.010Z"
-    },
-    {
-      "id": "rag_log_1789881897478_84232420",
-      "type": "APPROVE",
-      "description": "Mutation applied to generate-routes.js",
-      "timestamp": "2026-09-20T05:24:57.478Z"
-    },
-    {
-      "id": "rag_log_1789881897477_40bd6886",
-      "type": "APPROVE",
-      "description": "Mutation applied to generate-routes.js",
-      "timestamp": "2026-09-20T05:24:57.477Z"
-    },
-    {
-      "id": "rag_log_1789881896792_c5e1beb5",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:24:56.792Z"
-    },
-    {
-      "id": "rag_log_1789881887255_fb2e401c",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:24:47.255Z"
-    },
-    {
-      "id": "rag_log_1789881886809_20ed09e7",
-      "type": "MUTATE",
-      "description": "[Batch 60/253] Proposed mutation for generate-routes.js (risk: LOW)",
-      "timestamp": "2026-09-20T05:24:46.809Z"
-    },
-    {
-      "id": "rag_log_1789881886808_53c4ef52",
-      "type": "MUTATE",
-      "description": "[Batch 60/253] Proposed mutation for generate-routes.js (risk: LOW)",
-      "timestamp": "2026-09-20T05:24:46.808Z"
-    },
-    {
-      "id": "rag_log_1789881878474_17ca54d0",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:24:38.474Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-8e2827ef",
-      "time": "15:22:30",
-      "addr": "0x0074FAF3",
-      "tag": "HEALTH",
-      "message": "Auto-test: REJECTED — 4 passed, 1 failed"
-    },
-    {
-      "id": "dos-c74ae049",
-      "time": "15:22:30",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-c9305358",
-      "time": "15:22:31",
-      "addr": "0x002F8000",
-      "tag": "RAG_INDEX",
-      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.55 MB."
-    },
-    {
-      "id": "dos-7bcd375b",
-      "time": "15:22:31",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
-    {
-      "id": "dos-add1c2b1",
-      "time": "15:22:34",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-31f231a0",
-      "time": "15:22:36",
-      "addr": "0x002FA000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
     {
       "id": "dos-3e00ee5f",
       "time": "15:22:40",
@@ -858,6 +816,48 @@
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-686963d6",
+      "time": "15:25:34",
+      "addr": "0x00344000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 384.6 KB (3.76%)."
+    },
+    {
+      "id": "dos-1f192cb8",
+      "time": "15:25:38",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-a5968884",
+      "time": "15:25:39",
+      "addr": "0x00346000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-62529257",
+      "time": "15:25:39",
+      "addr": "0x0059B172",
+      "tag": "APPROVE",
+      "message": "Mutation applied to index.html"
+    },
+    {
+      "id": "dos-e5c557d3",
+      "time": "15:25:40",
+      "addr": "0x007EEE12",
+      "tag": "HEALTH",
+      "message": "Auto-test: PASSED — 5 passed, 0 failed"
+    },
+    {
+      "id": "dos-70290516",
+      "time": "15:25:40",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
     }
   ]
 }
