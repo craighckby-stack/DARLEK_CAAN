@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789869970956_6835d5f8",
+    "type": "CONNECT",
+    "description": "Synced 29 user portfolios and 27 global architectures.",
+    "timestamp": "2026-09-20T02:06:10.956Z"
+  },
+  {
+    "id": "rag_log_1789869970955_dc762d8b",
+    "type": "CONNECT",
+    "description": "Synced 29 user portfolios and 27 global architectures.",
+    "timestamp": "2026-09-20T02:06:10.955Z"
+  },
+  {
+    "id": "rag_log_1789869953694_0f192c07",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T02:05:53.694Z"
+  },
+  {
     "id": "rag_log_1789869944638_b2cdc1ac",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
     "timestamp": "2026-09-20T02:02:34.591Z"
-  },
-  {
-    "id": "rag_log_1789869745828_b7094a68",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T02:02:25.828Z"
-  },
-  {
-    "id": "rag_log_1789869736953_4bd38c5f",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T02:02:16.953Z"
-  },
-  {
-    "id": "rag_log_1789869728553_bfeabf91",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T02:02:08.553Z"
   }
 ]
