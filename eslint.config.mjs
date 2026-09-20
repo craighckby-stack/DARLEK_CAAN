@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-28 [2026-09-20T05:14:50.132Z] */
 import tsParser from "@typescript-eslint/parser";
 
 /**
