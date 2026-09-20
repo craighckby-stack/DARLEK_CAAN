@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:08:54.108Z",
+    "generatedAt": "2026-09-20T03:09:03.340Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789873740336_2aa743b1",
+      "type": "MUTATE",
+      "description": "[Batch 49/253] Proposed mutation for fix_orchestra.sh (risk: LOW)",
+      "timestamp": "2026-09-20T03:09:00.336Z"
+    },
+    {
+      "id": "rag_log_1789873740334_38753cca",
+      "type": "MUTATE",
+      "description": "[Batch 49/253] Proposed mutation for fix_orchestra.sh (risk: LOW)",
+      "timestamp": "2026-09-20T03:09:00.334Z"
+    },
+    {
+      "id": "rag_log_1789873739144_ab30574d",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:08:59.144Z"
+    },
     {
       "id": "rag_log_1789873730735_48b81889",
       "type": "HEALTH",
@@ -138,41 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T03:08:07.347Z"
-    },
-    {
-      "id": "rag_log_1789873686538_a9af8629",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T03:08:06.538Z"
-    },
-    {
-      "id": "rag_log_1789873686524_c7d16bb8",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T03:08:06.524Z"
-    },
-    {
-      "id": "rag_log_1789873686161_0f96b8a9",
-      "type": "APPROVE",
-      "description": "Mutation applied to fix5.js",
-      "timestamp": "2026-09-20T03:08:06.161Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-b97aeb0f",
-      "time": "13:02:55",
-      "addr": "0x003E9585",
-      "tag": "APPROVE",
-      "message": "Mutation applied to examples/websocket/frontend.tsx"
-    },
-    {
-      "id": "dos-9a568dba",
-      "time": "13:02:55",
-      "addr": "0x003D0A96",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 4 passed, 0 failed"
-    },
     {
       "id": "dos-b3b6095f",
       "time": "13:02:55",
@@ -858,6 +844,20 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-e7fca22c",
+      "time": "13:08:59",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-7a2e7b33",
+      "time": "13:09:00",
+      "addr": "0x007F724D",
+      "tag": "MUTATE",
+      "message": "[Batch 49/253] Proposed mutation for fix_orchestra.sh (risk: LOW)"
     }
   ]
 }
