@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789873617048_11b5ff28",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:06:57.048Z"
+  },
+  {
     "id": "rag_log_1789873609168_2a6e2f11",
     "type": "MUTATE",
     "description": "[Batch 43/253] Proposed mutation for fix2.js (risk: LOW)",
@@ -142,11 +148,5 @@
     "type": "APPROVE",
     "description": "Mutation applied to find_changed.js",
     "timestamp": "2026-09-20T03:05:57.261Z"
-  },
-  {
-    "id": "rag_log_1789873557259_7dd768a1",
-    "type": "APPROVE",
-    "description": "Mutation applied to find_changed.js",
-    "timestamp": "2026-09-20T03:05:57.259Z"
   }
 ]

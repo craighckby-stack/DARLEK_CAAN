@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:06:52.176Z",
+    "generatedAt": "2026-09-20T03:07:00.052Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789873617048_11b5ff28",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:06:57.048Z"
+    },
     {
       "id": "rag_log_1789873609168_2a6e2f11",
       "type": "MUTATE",
@@ -150,22 +156,9 @@
       "type": "APPROVE",
       "description": "Mutation applied to find_changed.js",
       "timestamp": "2026-09-20T03:05:57.261Z"
-    },
-    {
-      "id": "rag_log_1789873557259_7dd768a1",
-      "type": "APPROVE",
-      "description": "Mutation applied to find_changed.js",
-      "timestamp": "2026-09-20T03:05:57.259Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-41b1f012",
-      "time": "13:00:42",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
     {
       "id": "dos-02076ebc",
       "time": "13:00:51",
@@ -858,6 +851,13 @@
       "addr": "0x004EB7A6",
       "tag": "MUTATE",
       "message": "[Batch 43/253] Proposed mutation for fix2.js (risk: LOW)"
+    },
+    {
+      "id": "dos-55f16dd4",
+      "time": "13:06:57",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }
