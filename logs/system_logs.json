@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T01:51:04.112Z",
+    "generatedAt": "2026-09-20T01:51:13.330Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789869070321_17c21c4b",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T01:51:10.321Z"
+    },
     {
       "id": "rag_log_1789869061085_769a4446",
       "type": "CONNECT",
@@ -150,12 +156,6 @@
       "type": "HEALTH",
       "description": "Auto-test: PASSED — 5 passed, 0 failed",
       "timestamp": "2026-09-19T22:54:03.916Z"
-    },
-    {
-      "id": "rag_log_1789858443914_3dfa3c65",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-19T22:54:03.914Z"
     }
   ],
   "telemetryBuffer": [
@@ -207,6 +207,13 @@
       "addr": "0x00328C5D",
       "tag": "CONNECT",
       "message": "Synced 29 user portfolios and 27 global architectures."
+    },
+    {
+      "id": "dos-f83abc8a",
+      "time": "11:51:10",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }

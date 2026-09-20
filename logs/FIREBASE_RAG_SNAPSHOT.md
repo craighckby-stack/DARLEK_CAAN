@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T01:51:04.112Z`
+*Last Synchronized:* `2026-09-20T01:51:13.330Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,73 +14,73 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T01:51:10.323Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T01:51:10.321Z
+```
+
+### 2. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T01:51:01.085Z`
 
 ```typescript
 [LOG:CONNECT] Synced 29 user portfolios and 27 global architectures. | TIME:2026-09-20T01:51:01.085Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 3. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T01:51:01.079Z`
 
 ```typescript
 [LOG:CONNECT] Synced 29 user portfolios and 27 global architectures. | TIME:2026-09-20T01:51:01.077Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:54:29.556Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T00:54:29.555Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:43.229Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T00:25:43.229Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:34.891Z`
 
 ```typescript
 [LOG:CONNECT] Synced 29 user portfolios and 27 global architectures. | TIME:2026-09-20T00:25:34.891Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:34.889Z`
 
 ```typescript
 [LOG:CONNECT] Synced 29 user portfolios and 27 global architectures. | TIME:2026-09-20T00:25:34.888Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:30.675Z`
 
 ```typescript
 [LOG:SYSTEM] Bypassed access portal: Autonomous cognitive pipeline initiated with local cyber core modules. | TIME:2026-09-20T00:25:30.675Z
 ```
 
-### 8. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:30.672Z`
 
 ```typescript
 [LOG:SYSTEM] Bypassed access portal: Autonomous cognitive pipeline initiated with local cyber core modules. | TIME:2026-09-20T00:25:30.671Z
 ```
 
-### 9. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:24.421Z`
 
 ```typescript
 [LOG:ERROR] Network exception encountered: Unexpected token '<', "<!doctype "... is not valid JSON | TIME:2026-09-20T00:25:24.421Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:24.419Z`
-
-```typescript
-[LOG:ERROR] Network exception encountered: Unexpected token '<', "<!doctype "... is not valid JSON | TIME:2026-09-20T00:25:24.418Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
