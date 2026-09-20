@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789874408075_240ae5e8",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:20:08.075Z"
+  },
+  {
+    "id": "rag_log_1789874407092_5c0a3511",
+    "type": "MUTATE",
+    "description": "[Batch 66/253] Proposed mutation for logs/active_telemetry.log (risk: LOW)",
+    "timestamp": "2026-09-20T03:20:07.092Z"
+  },
+  {
+    "id": "rag_log_1789874407087_5af5a68f",
+    "type": "MUTATE",
+    "description": "[Batch 66/253] Proposed mutation for logs/active_telemetry.log (risk: LOW)",
+    "timestamp": "2026-09-20T03:20:07.087Z"
+  },
+  {
     "id": "rag_log_1789874397640_71a0f739",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
     "timestamp": "2026-09-20T03:19:15.363Z"
-  },
-  {
-    "id": "rag_log_1789874354329_bb73dc92",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T03:19:14.329Z"
-  },
-  {
-    "id": "rag_log_1789874354328_cb5af98a",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T03:19:14.328Z"
-  },
-  {
-    "id": "rag_log_1789874353846_b7498a89",
-    "type": "APPROVE",
-    "description": "Mutation applied to lib/env-validator.ts",
-    "timestamp": "2026-09-20T03:19:13.846Z"
   }
 ]
