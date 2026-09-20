@@ -1,11 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T03:52:54.854Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T03:53:03.131Z]
 ======================================================================
 
-[13:36:55] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[13:37:01] [0x0086BE8E] [MUTATE    ] [Batch 115/253] Proposed mutation for src/app/api/github/push-enhancements/route.ts (risk: LOW)
-[13:37:03] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[13:37:11] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [13:37:12] [0x001D9EB9] [APPROVE   ] Mutation applied to src/app/api/github/push-enhancements/route.ts
 [13:37:13] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
 [13:37:14] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
@@ -253,3 +249,7 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T03:52:54.854Z]
 [13:52:42] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [13:52:43] [0x001C12D6] [MUTATE    ] [Batch 156/253] Proposed mutation for src/components/SnippetScanner.tsx (risk: LOW)
 [13:52:51] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[13:52:54] [0x006821D6] [APPROVE   ] Mutation applied to src/components/SnippetScanner.tsx
+[13:52:55] [0x0046288B] [HEALTH    ] Auto-test: REJECTED — 4 passed, 2 failed
+[13:52:56] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[13:53:00] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
