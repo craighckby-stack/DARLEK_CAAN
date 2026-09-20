@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789883856660_7a304df1",
+    "type": "MUTATE",
+    "description": "[Batch 158/253] Proposed mutation for src/components/StatusBar.tsx (risk: LOW)",
+    "timestamp": "2026-09-20T05:57:36.660Z"
+  },
+  {
+    "id": "rag_log_1789883856655_0d577dd5",
+    "type": "MUTATE",
+    "description": "[Batch 158/253] Proposed mutation for src/components/StatusBar.tsx (risk: LOW)",
+    "timestamp": "2026-09-20T05:57:36.655Z"
+  },
+  {
+    "id": "rag_log_1789883855711_718de8b6",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:57:35.711Z"
+  },
+  {
     "id": "rag_log_1789883846921_b3a226c1",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
     "timestamp": "2026-09-20T05:56:40.701Z"
-  },
-  {
-    "id": "rag_log_1789883799903_c6cdc889",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 4 passed, 0 failed",
-    "timestamp": "2026-09-20T05:56:39.902Z"
-  },
-  {
-    "id": "rag_log_1789883799900_27863430",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 4 passed, 0 failed",
-    "timestamp": "2026-09-20T05:56:39.900Z"
-  },
-  {
-    "id": "rag_log_1789883798374_f562a9ef",
-    "type": "APPROVE",
-    "description": "Mutation applied to src/components/SaturationModal.tsx",
-    "timestamp": "2026-09-20T05:56:38.374Z"
   }
 ]
