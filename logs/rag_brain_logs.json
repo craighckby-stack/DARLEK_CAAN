@@ -1,5 +1,53 @@
 [
   {
+    "id": "rag_log_1789891515796_f6894388",
+    "type": "CONNECT",
+    "description": "Synced 28 user portfolios and 27 global architectures.",
+    "timestamp": "2026-09-20T08:05:15.796Z"
+  },
+  {
+    "id": "rag_log_1789891515795_972f3f7e",
+    "type": "CONNECT",
+    "description": "Synced 28 user portfolios and 27 global architectures.",
+    "timestamp": "2026-09-20T08:05:15.795Z"
+  },
+  {
+    "id": "rag_log_1789891514981_c1af2e48",
+    "type": "RAG_WRITE",
+    "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-28, ra...",
+    "timestamp": "2026-09-20T08:05:14.981Z"
+  },
+  {
+    "id": "rag_log_1789891514980_e76299f7",
+    "type": "HOTSWAP_OK",
+    "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-27 [Source: RAG_GENE_HOTSWAP].",
+    "timestamp": "2026-09-20T08:05:14.980Z"
+  },
+  {
+    "id": "rag_log_1789891514227_08809ed6",
+    "type": "HOTSWAP",
+    "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
+    "timestamp": "2026-09-20T08:05:14.227Z"
+  },
+  {
+    "id": "rag_log_1789891514054_1d3817c6",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T08:05:14.054Z"
+  },
+  {
+    "id": "rag_log_1789891513560_ceeda493",
+    "type": "CONNECT",
+    "description": "Selected repository configuration: google-deepmind/deepmind-research",
+    "timestamp": "2026-09-20T08:05:13.560Z"
+  },
+  {
+    "id": "rag_log_1789891513556_2e0b939a",
+    "type": "CONNECT",
+    "description": "Selected repository configuration: google-deepmind/deepmind-research",
+    "timestamp": "2026-09-20T08:05:13.556Z"
+  },
+  {
     "id": "rag_log_1789891506040_dbc3e6e5",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -100,53 +148,5 @@
     "type": "HOTSWAP",
     "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
     "timestamp": "2026-09-20T07:57:59.762Z"
-  },
-  {
-    "id": "rag_log_1789891060743_f643dbf1",
-    "type": "RAG_WRITE",
-    "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-23, ra...",
-    "timestamp": "2026-09-20T07:57:40.743Z"
-  },
-  {
-    "id": "rag_log_1789891060740_424a38fe",
-    "type": "HOTSWAP_OK",
-    "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-22 [Source: RAG_GENE_HOTSWAP].",
-    "timestamp": "2026-09-20T07:57:40.740Z"
-  },
-  {
-    "id": "rag_log_1789891059804_d267d1ea",
-    "type": "HOTSWAP",
-    "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
-    "timestamp": "2026-09-20T07:57:39.804Z"
-  },
-  {
-    "id": "rag_log_1789891041758_33885171",
-    "type": "RAG_WRITE",
-    "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-22, ra...",
-    "timestamp": "2026-09-20T07:57:21.758Z"
-  },
-  {
-    "id": "rag_log_1789891041757_b3cf2b6e",
-    "type": "HOTSWAP_OK",
-    "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-21 [Source: RAG_GENE_HOTSWAP].",
-    "timestamp": "2026-09-20T07:57:21.757Z"
-  },
-  {
-    "id": "rag_log_1789891040761_79195bcd",
-    "type": "HOTSWAP",
-    "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
-    "timestamp": "2026-09-20T07:57:20.761Z"
-  },
-  {
-    "id": "rag_log_1789891022579_7c4743c3",
-    "type": "RAG_WRITE",
-    "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-21, ra...",
-    "timestamp": "2026-09-20T07:57:02.579Z"
-  },
-  {
-    "id": "rag_log_1789891022576_3c007ed7",
-    "type": "HOTSWAP_OK",
-    "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-20 [Source: RAG_GENE_HOTSWAP].",
-    "timestamp": "2026-09-20T07:57:02.576Z"
   }
 ]
