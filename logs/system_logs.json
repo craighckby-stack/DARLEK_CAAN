@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:44:59.940Z",
+    "generatedAt": "2026-09-20T03:45:08.599Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789875905508_bb26b2d0",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:45:05.508Z"
+    },
     {
       "id": "rag_log_1789875896466_91bce20f",
       "type": "HEALTH",
@@ -150,22 +156,9 @@
       "type": "HEALTH",
       "description": "Auto-test: PASSED — 4 passed, 0 failed",
       "timestamp": "2026-09-20T03:44:08.509Z"
-    },
-    {
-      "id": "rag_log_1789875848503_128cebd8",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 4 passed, 0 failed",
-      "timestamp": "2026-09-20T03:44:08.503Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-52bdef38",
-      "time": "13:38:48",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
     {
       "id": "dos-036ef736",
       "time": "13:38:50",
@@ -858,6 +851,13 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-3bba6ae0",
+      "time": "13:45:05",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }
