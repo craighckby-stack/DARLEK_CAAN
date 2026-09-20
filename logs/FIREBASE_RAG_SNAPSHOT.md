@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:29:29.274Z`
+*Last Synchronized:* `2026-09-20T05:29:37.321Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,27 +14,34 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:34.292Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:29:34.292Z
+```
+
+### 2. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:26.268Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 78/253] Proposed mutation for public/placeholder.txt (risk: LOW) | TIME:2026-09-20T05:29:26.268Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 3. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:26.267Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 78/253] Proposed mutation for public/placeholder.txt (risk: LOW) | TIME:2026-09-20T05:29:26.267Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:24.270Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:29:24.270Z
 ```
 
-### 4. `prisma/schema.prisma` (Gen 62)
+### 5. `prisma/schema.prisma` (Gen 62)
 *Source:* `MUTATION:prisma/schema.prisma` | *Indexed:* `2026-09-20T05:29:15.905Z`
 
 ```typescript
@@ -56,39 +63,32 @@ model User {
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:15.707Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:29:15.707Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:15.706Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:29:15.706Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:15.062Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:29:15.061Z
 ```
 
-### 8. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:15.062Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:29:15.062Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:14.421Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to prisma/schema.prisma | TIME:2026-09-20T05:29:14.421Z
 ```
 
 ### 10. `system.log` (Gen 1)
