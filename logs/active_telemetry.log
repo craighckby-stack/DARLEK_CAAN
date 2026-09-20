@@ -1,11 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:49:48.674Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:49:57.625Z]
 ======================================================================
 
-[15:42:07] [0x004E2000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
-[15:42:08] [0x00601B37] [MUTATE    ] [Batch 116/253] Proposed mutation for src/app/api/github/read-file/route.ts (risk: LOW)
-[15:42:11] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:42:12] [0x004E4000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 829.7 KB (8.1%).
 [15:42:17] [0x004E6000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
 [15:42:19] [0x006B95F8] [APPROVE   ] Mutation applied to src/app/api/github/read-file/route.ts
 [15:42:20] [0x0046288B] [HEALTH    ] Auto-test: REJECTED — 4 passed, 2 failed
@@ -253,3 +249,7 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:49:48.674Z]
 [15:49:44] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
 [15:49:44] [0x009B28E0] [HEALTH    ] Auto-test: PASSED — 3 passed, 0 failed
 [15:49:44] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[15:49:48] [0x005A2000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[15:49:53] [0x005A4000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 1.33 MB (13.33%).
+[15:49:53] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:49:54] [0x005B25A7] [MUTATE    ] [Batch 137/253] Proposed mutation for src/components/DebateChamber.md (risk: LOW)
