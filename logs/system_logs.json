@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:50:44.900Z",
+    "generatedAt": "2026-09-20T05:50:57.983Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789883454641_69c9548f",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:50:54.641Z"
+    },
+    {
+      "id": "rag_log_1789883454636_8e12d13c",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:50:54.636Z"
+    },
+    {
+      "id": "rag_log_1789883454061_3b487785",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 4 passed, 0 failed",
+      "timestamp": "2026-09-20T05:50:54.061Z"
+    },
+    {
+      "id": "rag_log_1789883454057_a3699061",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 4 passed, 0 failed",
+      "timestamp": "2026-09-20T05:50:54.057Z"
+    },
+    {
+      "id": "rag_log_1789883453311_712c80c7",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/components/DosConsoleModal.tsx",
+      "timestamp": "2026-09-20T05:50:53.311Z"
+    },
+    {
+      "id": "rag_log_1789883453307_42da1886",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/components/DosConsoleModal.tsx",
+      "timestamp": "2026-09-20T05:50:53.307Z"
+    },
+    {
+      "id": "rag_log_1789883451123_c30efaa9",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:50:51.123Z"
+    },
     {
       "id": "rag_log_1789883441893_539a02e7",
       "type": "MUTATE",
@@ -114,100 +156,9 @@
       "type": "APPROVE",
       "description": "Mutation applied to src/components/DebateChamber.md",
       "timestamp": "2026-09-20T05:50:05.892Z"
-    },
-    {
-      "id": "rag_log_1789883405886_8b91ffbb",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/components/DebateChamber.md",
-      "timestamp": "2026-09-20T05:50:05.886Z"
-    },
-    {
-      "id": "rag_log_1789883403721_0fe76c5a",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:50:03.721Z"
-    },
-    {
-      "id": "rag_log_1789883394575_5ae986e8",
-      "type": "MUTATE",
-      "description": "[Batch 137/253] Proposed mutation for src/components/DebateChamber.md (risk: LOW)",
-      "timestamp": "2026-09-20T05:49:54.575Z"
-    },
-    {
-      "id": "rag_log_1789883394570_0cb7e5db",
-      "type": "MUTATE",
-      "description": "[Batch 137/253] Proposed mutation for src/components/DebateChamber.md (risk: LOW)",
-      "timestamp": "2026-09-20T05:49:54.570Z"
-    },
-    {
-      "id": "rag_log_1789883393909_21d88f74",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:49:53.909Z"
-    },
-    {
-      "id": "rag_log_1789883384825_a0f5ef42",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:49:44.825Z"
-    },
-    {
-      "id": "rag_log_1789883384823_c23462ff",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:49:44.823Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-1d284ed1",
-      "time": "15:47:34",
-      "addr": "0x0056A000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
-    {
-      "id": "dos-bb54502b",
-      "time": "15:47:39",
-      "addr": "0x0056C000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 371.9 KB (3.63%)."
-    },
-    {
-      "id": "dos-fd39bf23",
-      "time": "15:47:40",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-69e2e117",
-      "time": "15:47:43",
-      "addr": "0x00308C2C",
-      "tag": "APPROVE",
-      "message": "Mutation applied to src/app/page.tsx"
-    },
-    {
-      "id": "dos-bf48a3fc",
-      "time": "15:47:44",
-      "addr": "0x0056E000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
-    {
-      "id": "dos-17c242b6",
-      "time": "15:47:44",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
-    {
-      "id": "dos-d702f6c7",
-      "time": "15:47:45",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
     {
       "id": "dos-b980f757",
       "time": "15:47:48",
@@ -858,6 +809,55 @@
       "addr": "0x002C0047",
       "tag": "MUTATE",
       "message": "[Batch 139/253] Proposed mutation for src/components/DosConsoleModal.tsx (risk: LOW)"
+    },
+    {
+      "id": "dos-819310f6",
+      "time": "15:50:46",
+      "addr": "0x005BA000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-2588cd7a",
+      "time": "15:50:51",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-589f8044",
+      "time": "15:50:51",
+      "addr": "0x005BC000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 1.32 MB (13.24%)."
+    },
+    {
+      "id": "dos-f8abbedc",
+      "time": "15:50:53",
+      "addr": "0x007CD32C",
+      "tag": "APPROVE",
+      "message": "Mutation applied to src/components/DosConsoleModal.tsx"
+    },
+    {
+      "id": "dos-ce55fccc",
+      "time": "15:50:54",
+      "addr": "0x003D0A96",
+      "tag": "HEALTH",
+      "message": "Auto-test: PASSED — 4 passed, 0 failed"
+    },
+    {
+      "id": "dos-87b78353",
+      "time": "15:50:54",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-4e33775c",
+      "time": "15:50:55",
+      "addr": "0x005BE000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
     }
   ]
 }
