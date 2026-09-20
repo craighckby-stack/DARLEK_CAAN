@@ -1,10 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:35:48.649Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:35:56.248Z]
 ======================================================================
 
-[15:28:11] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:28:11] [0x00737E76] [MUTATE    ] [Batch 74/253] Proposed mutation for patch.js (risk: LOW)
-[15:28:12] [0x00386000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
 [15:28:17] [0x00388000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.60 MB.
 [15:28:17] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
 [15:28:19] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
@@ -253,3 +250,6 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:35:48.649Z]
 [15:35:44] [0x0073AAD8] [APPROVE   ] Mutation applied to src/app/api/evolution/auto-test/README.md
 [15:35:44] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
 [15:35:45] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[15:35:48] [0x00444000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 565.7 KB (5.52%).
+[15:35:53] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:35:53] [0x00446000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
