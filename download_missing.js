@@ -1,3 +1,10 @@
+/**
+ * DARLEK CANN ARCHITECTURAL HEADER
+ * File: download_missing.js
+ * Role: Core system component participating in autonomous cognitive evolution cycles.
+ * Architecture: Type-safe modular unit with resilient state interfaces.
+ */
+
 /* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-24 [2026-09-20T03:01:35.706Z] */
 import { existsSync } from 'node:fs';
 import { readFile, mkdir, unlink, stat } from 'node:fs/promises';
