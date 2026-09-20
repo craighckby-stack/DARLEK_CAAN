@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:36:47.551Z`
+*Last Synchronized:* `2026-09-20T05:36:55.721Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,27 +14,34 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:36:52.718Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:36:52.717Z
+```
+
+### 2. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:36:44.548Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:36:44.548Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 3. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:36:44.132Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 101/253] Proposed mutation for src/app/api/evolution/debate/route.ts (risk: LOW) | TIME:2026-09-20T05:36:44.131Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:36:44.127Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 101/253] Proposed mutation for src/app/api/evolution/debate/route.ts (risk: LOW) | TIME:2026-09-20T05:36:44.126Z
 ```
 
-### 4. `src/app/api/evolution/coherence-gate/route.ts` (Gen 80)
+### 5. `src/app/api/evolution/coherence-gate/route.ts` (Gen 80)
 *Source:* `MUTATION:src/app/api/evolution/coherence-gate/route.ts` | *Indexed:* `2026-09-20T05:36:35.689Z`
 
 ```typescript
@@ -50,46 +57,39 @@ im
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:36:34.167Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:36:34.167Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:36:34.165Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:36:34.164Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:36:33.727Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:36:33.727Z
 ```
 
-### 8. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:36:33.724Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:36:33.723Z
 ```
 
-### 9. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:36:32.897Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to src/app/api/evolution/coherence-gate/route.ts | TIME:2026-09-20T05:36:32.897Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:36:32.894Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/app/api/evolution/coherence-gate/route.ts | TIME:2026-09-20T05:36:32.893Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
