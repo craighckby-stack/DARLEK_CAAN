@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789873586544_7efa3391",
+    "type": "MUTATE",
+    "description": "[Batch 42/253] Proposed mutation for fix.sh (risk: LOW)",
+    "timestamp": "2026-09-20T03:06:26.544Z"
+  },
+  {
+    "id": "rag_log_1789873586542_7ea0350c",
+    "type": "MUTATE",
+    "description": "[Batch 42/253] Proposed mutation for fix.sh (risk: LOW)",
+    "timestamp": "2026-09-20T03:06:26.542Z"
+  },
+  {
+    "id": "rag_log_1789873585005_6f36015f",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:06:25.004Z"
+  },
+  {
     "id": "rag_log_1789873577121_d2b7ad20",
     "type": "INFO",
     "description": "[NO-OP] Code saturation reached in batch for firestore.rules",
@@ -130,23 +148,5 @@
     "type": "APPROVE",
     "description": "Mutation applied to fetch_siphon.js",
     "timestamp": "2026-09-20T03:05:36.151Z"
-  },
-  {
-    "id": "rag_log_1789873534211_4318eba2",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:05:34.211Z"
-  },
-  {
-    "id": "rag_log_1789873525522_f5a6814e",
-    "type": "MUTATE",
-    "description": "[Batch 38/253] Proposed mutation for fetch_siphon.js (risk: LOW)",
-    "timestamp": "2026-09-20T03:05:25.522Z"
-  },
-  {
-    "id": "rag_log_1789873525520_000fe454",
-    "type": "MUTATE",
-    "description": "[Batch 38/253] Proposed mutation for fetch_siphon.js (risk: LOW)",
-    "timestamp": "2026-09-20T03:05:25.520Z"
   }
 ]

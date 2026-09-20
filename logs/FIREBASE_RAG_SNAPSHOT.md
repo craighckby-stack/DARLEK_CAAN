@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T03:06:20.135Z`
+*Last Synchronized:* `2026-09-20T03:06:29.548Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,48 +14,69 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:06:26.544Z`
+
+```typescript
+[LOG:MUTATE] [Batch 42/253] Proposed mutation for fix.sh (risk: LOW) | TIME:2026-09-20T03:06:26.544Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:06:26.542Z`
+
+```typescript
+[LOG:MUTATE] [Batch 42/253] Proposed mutation for fix.sh (risk: LOW) | TIME:2026-09-20T03:06:26.542Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:06:25.005Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:06:25.004Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:06:17.121Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for firestore.rules | TIME:2026-09-20T03:06:17.121Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:06:17.119Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for firestore.rules | TIME:2026-09-20T03:06:17.119Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:06:16.342Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:06:16.342Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:06:07.465Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for firebase-blueprint.json | TIME:2026-09-20T03:06:07.465Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:06:07.463Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for firebase-blueprint.json | TIME:2026-09-20T03:06:07.463Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:06:06.057Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:06:06.056Z
 ```
 
-### 7. `find_changed.js` (Gen 35)
+### 10. `find_changed.js` (Gen 35)
 *Source:* `MUTATION:find_changed.js` | *Indexed:* `2026-09-20T03:05:58.295Z`
 
 ```typescript
@@ -71,27 +92,6 @@
 const fs = require('fs');
 const https = require('http
 // ... [truncated]
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:05:57.889Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:05:57.889Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:05:57.887Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:05:57.887Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:05:57.631Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T03:05:57.630Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
