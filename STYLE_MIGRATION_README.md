@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-14 [2026-09-20T05:09:21.674Z] */
 # Style Migration Protocol
 
 > **Executive Summary:** This module automates the transition of UI tokens from legacy "Zinc" palettes to the modern "Glass-Emergent" design system (`darlek-cann-v3`) via deterministic regex mapping and atomic disk writes.
