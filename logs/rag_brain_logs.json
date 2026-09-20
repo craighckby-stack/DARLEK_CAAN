@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789872624458_3c3f7867",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T02:50:24.458Z"
+  },
+  {
+    "id": "rag_log_1789872620324_242944d9",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T02:50:20.324Z"
+  },
+  {
+    "id": "rag_log_1789872620318_c5b061fe",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T02:50:20.318Z"
+  },
+  {
+    "id": "rag_log_1789872620040_b7360279",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T02:50:20.040Z"
+  },
+  {
+    "id": "rag_log_1789872620037_58e17815",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T02:50:20.037Z"
+  },
+  {
+    "id": "rag_log_1789872619747_8c2daea6",
+    "type": "APPROVE",
+    "description": "Mutation applied to .gitignore",
+    "timestamp": "2026-09-20T02:50:19.747Z"
+  },
+  {
+    "id": "rag_log_1789872619744_e8b0bce9",
+    "type": "APPROVE",
+    "description": "Mutation applied to .gitignore",
+    "timestamp": "2026-09-20T02:50:19.744Z"
+  },
+  {
     "id": "rag_log_1789872616365_4fc1cadc",
     "type": "MUTATE",
     "description": "[Batch 2/253] Proposed mutation for .gitignore (risk: LOW)",
@@ -106,47 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: PASSED — 5 passed, 0 failed",
     "timestamp": "2026-09-20T02:49:02.180Z"
-  },
-  {
-    "id": "rag_log_1789872542179_e4a1043a",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T02:49:02.178Z"
-  },
-  {
-    "id": "rag_log_1789872541735_dc60e534",
-    "type": "APPROVE",
-    "description": "Mutation applied to .env.example",
-    "timestamp": "2026-09-20T02:49:01.735Z"
-  },
-  {
-    "id": "rag_log_1789872541733_6bb00496",
-    "type": "APPROVE",
-    "description": "Mutation applied to .env.example",
-    "timestamp": "2026-09-20T02:49:01.733Z"
-  },
-  {
-    "id": "rag_log_1789872539971_5a1dded7",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T02:48:59.971Z"
-  },
-  {
-    "id": "rag_log_1789872531132_29502c42",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T02:48:51.132Z"
-  },
-  {
-    "id": "rag_log_1789872530927_82401e47",
-    "type": "MUTATE",
-    "description": "[Batch 0/253] Proposed mutation for .env.example (risk: LOW)",
-    "timestamp": "2026-09-20T02:48:50.927Z"
-  },
-  {
-    "id": "rag_log_1789872530925_2a43456c",
-    "type": "MUTATE",
-    "description": "[Batch 0/253] Proposed mutation for .env.example (risk: LOW)",
-    "timestamp": "2026-09-20T02:48:50.925Z"
   }
 ]
