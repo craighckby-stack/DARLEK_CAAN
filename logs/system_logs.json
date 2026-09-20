@@ -1,12 +1,78 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T02:48:09.225Z",
+    "generatedAt": "2026-09-20T02:48:20.615Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789872497610_4794dba6",
+      "type": "SCAN",
+      "description": "Scanned craighckby-stack/DARLEK_CAAN — 254 files.",
+      "timestamp": "2026-09-20T02:48:17.610Z"
+    },
+    {
+      "id": "rag_log_1789872497609_6341a578",
+      "type": "SCAN",
+      "description": "Scanned craighckby-stack/DARLEK_CAAN — 254 files.",
+      "timestamp": "2026-09-20T02:48:17.609Z"
+    },
+    {
+      "id": "rag_log_1789872496979_18458074",
+      "type": "CONNECT",
+      "description": "Successfully loaded 29 user and 27 global designs in portfolio context.",
+      "timestamp": "2026-09-20T02:48:16.978Z"
+    },
+    {
+      "id": "rag_log_1789872496976_c4936be6",
+      "type": "CONNECT",
+      "description": "Successfully loaded 29 user and 27 global designs in portfolio context.",
+      "timestamp": "2026-09-20T02:48:16.976Z"
+    },
+    {
+      "id": "rag_log_1789872495135_5dca51d2",
+      "type": "CONNECT",
+      "description": "Retrieving user portfolio & design context...",
+      "timestamp": "2026-09-20T02:48:15.135Z"
+    },
+    {
+      "id": "rag_log_1789872495135_c6013eec",
+      "type": "CONNECT",
+      "description": "Retrieving user portfolio & design context...",
+      "timestamp": "2026-09-20T02:48:15.135Z"
+    },
+    {
+      "id": "rag_log_1789872495134_84d6795b",
+      "type": "CONNECT",
+      "description": "GitHub link established with craighckby-stack/DARLEK_CAAN",
+      "timestamp": "2026-09-20T02:48:15.134Z"
+    },
+    {
+      "id": "rag_log_1789872495133_76805fde",
+      "type": "CONNECT",
+      "description": "GitHub link established with craighckby-stack/DARLEK_CAAN",
+      "timestamp": "2026-09-20T02:48:15.133Z"
+    },
+    {
+      "id": "rag_log_1789872495027_50f85c89",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T02:48:15.027Z"
+    },
+    {
+      "id": "rag_log_1789872494566_f282027a",
+      "type": "CONNECT",
+      "description": "Verifying GitHub access key...",
+      "timestamp": "2026-09-20T02:48:14.566Z"
+    },
+    {
+      "id": "rag_log_1789872494566_56b77f82",
+      "type": "CONNECT",
+      "description": "Verifying GitHub access key...",
+      "timestamp": "2026-09-20T02:48:14.566Z"
+    },
     {
       "id": "rag_log_1789872486222_56d39c48",
       "type": "LOG_SYNC",
@@ -90,72 +156,6 @@
       "type": "CONNECT",
       "description": "Synced 29 user portfolios and 27 global architectures.",
       "timestamp": "2026-09-20T02:46:09.386Z"
-    },
-    {
-      "id": "rag_log_1789872163592_10c7fe27",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:42:43.592Z"
-    },
-    {
-      "id": "rag_log_1789872155072_87a4277b",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:42:35.072Z"
-    },
-    {
-      "id": "rag_log_1789872145454_06ca30a3",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:42:25.454Z"
-    },
-    {
-      "id": "rag_log_1789872135209_40590991",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:42:15.208Z"
-    },
-    {
-      "id": "rag_log_1789872124674_873c44c8",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:42:04.673Z"
-    },
-    {
-      "id": "rag_log_1789872114524_acf5c5fb",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:41:54.524Z"
-    },
-    {
-      "id": "rag_log_1789872106021_11fad334",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:41:46.021Z"
-    },
-    {
-      "id": "rag_log_1789872096416_64118de8",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:41:36.416Z"
-    },
-    {
-      "id": "rag_log_1789872087480_45b71b84",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:41:27.479Z"
-    },
-    {
-      "id": "rag_log_1789872078873_6c6a31c8",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:41:18.873Z"
-    },
-    {
-      "id": "rag_log_1789872069441_c3dc56a0",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:41:09.441Z"
     }
   ],
   "telemetryBuffer": [
@@ -228,6 +228,48 @@
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-4524c577",
+      "time": "12:48:14",
+      "addr": "0x002B944A",
+      "tag": "CONNECT",
+      "message": "Verifying GitHub access key..."
+    },
+    {
+      "id": "dos-c345233c",
+      "time": "12:48:15",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-075e482e",
+      "time": "12:48:15",
+      "addr": "0x00578240",
+      "tag": "CONNECT",
+      "message": "GitHub link established with craighckby-stack/DARLEK_CAAN"
+    },
+    {
+      "id": "dos-489e61dc",
+      "time": "12:48:15",
+      "addr": "0x008B0818",
+      "tag": "CONNECT",
+      "message": "Retrieving user portfolio & design context..."
+    },
+    {
+      "id": "dos-6212c3ed",
+      "time": "12:48:16",
+      "addr": "0x0057BCD9",
+      "tag": "CONNECT",
+      "message": "Successfully loaded 29 user and 27 global designs in portfolio context."
+    },
+    {
+      "id": "dos-da6c0d94",
+      "time": "12:48:17",
+      "addr": "0x003CF9A0",
+      "tag": "SCAN",
+      "message": "Scanned craighckby-stack/DARLEK_CAAN — 254 files."
     }
   ]
 }
