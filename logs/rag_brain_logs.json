@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789880558182_4017a4d0",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:02:38.181Z"
+  },
+  {
     "id": "rag_log_1789880549793_19b76e5f",
     "type": "MUTATE",
     "description": "[Batch 1/253] Proposed mutation for .github/PULL_REQUEST_TEMPLATE.md (risk: LOW)",
@@ -142,11 +148,5 @@
     "type": "CONNECT",
     "description": "GitHub link established with craighckby-stack/DARLEK_CAAN",
     "timestamp": "2026-09-20T05:01:55.584Z"
-  },
-  {
-    "id": "rag_log_1789880515583_9b8c3b13",
-    "type": "CONNECT",
-    "description": "GitHub link established with craighckby-stack/DARLEK_CAAN",
-    "timestamp": "2026-09-20T05:01:55.583Z"
   }
 ]

@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:02:32.801Z",
+    "generatedAt": "2026-09-20T05:02:41.187Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789880558182_4017a4d0",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:02:38.181Z"
+    },
     {
       "id": "rag_log_1789880549793_19b76e5f",
       "type": "MUTATE",
@@ -150,12 +156,6 @@
       "type": "CONNECT",
       "description": "GitHub link established with craighckby-stack/DARLEK_CAAN",
       "timestamp": "2026-09-20T05:01:55.584Z"
-    },
-    {
-      "id": "rag_log_1789880515583_9b8c3b13",
-      "type": "CONNECT",
-      "description": "GitHub link established with craighckby-stack/DARLEK_CAAN",
-      "timestamp": "2026-09-20T05:01:55.583Z"
     }
   ],
   "telemetryBuffer": [
@@ -543,6 +543,27 @@
       "addr": "0x00126000",
       "tag": "SANITY_OK",
       "message": "Emergency breaker: Health 93%, Drift 8%, Syntax clean."
+    },
+    {
+      "id": "dos-7b6de187",
+      "time": "15:02:36",
+      "addr": "0x00128000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.70 MB."
+    },
+    {
+      "id": "dos-ab9db4ba",
+      "time": "15:02:36",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-f5ed9add",
+      "time": "15:02:38",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }
