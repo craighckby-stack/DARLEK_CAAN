@@ -1,9 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T04:18:33.116Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T04:18:43.322Z]
 ======================================================================
 
-[14:02:24] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[14:02:32] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [14:02:33] [0x0080727C] [MUTATE    ] [Batch 181/253] Proposed mutation for src/lib/db.ts (risk: LOW)
 [14:02:42] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [14:02:44] [0x0063DC4C] [APPROVE   ] Mutation applied to src/lib/db.ts
@@ -253,3 +251,5 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T04:18:33.116Z]
 [14:18:27] [0x00135F6C] [APPROVE   ] Mutation applied to src/types/evolution.ts
 [14:18:29] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
 [14:18:30] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[14:18:38] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[14:18:40] [0x008003F0] [MUTATE    ] [Batch 222/253] Proposed mutation for src/types/kernel.d.ts (risk: LOW)
