@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:36:15.236Z",
+    "generatedAt": "2026-09-20T05:36:25.020Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789882581968_1f910fde",
+      "type": "MUTATE",
+      "description": "[Batch 100/253] Proposed mutation for src/app/api/evolution/coherence-gate/route.ts (risk: LOW)",
+      "timestamp": "2026-09-20T05:36:21.968Z"
+    },
+    {
+      "id": "rag_log_1789882581964_d68ae8dd",
+      "type": "MUTATE",
+      "description": "[Batch 100/253] Proposed mutation for src/app/api/evolution/coherence-gate/route.ts (risk: LOW)",
+      "timestamp": "2026-09-20T05:36:21.964Z"
+    },
+    {
+      "id": "rag_log_1789882580606_6003d944",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:36:20.606Z"
+    },
     {
       "id": "rag_log_1789882572210_29932cde",
       "type": "HEALTH",
@@ -138,62 +156,9 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T05:35:26.651Z"
-    },
-    {
-      "id": "rag_log_1789882522873_9003b820",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:35:22.873Z"
-    },
-    {
-      "id": "rag_log_1789882522871_435c38a5",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:35:22.871Z"
-    },
-    {
-      "id": "rag_log_1789882522490_9d71f957",
-      "type": "HEALTH",
-      "description": "Auto-test: REJECTED — 4 passed, 3 failed",
-      "timestamp": "2026-09-20T05:35:22.490Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-0ebe43c9",
-      "time": "15:33:11",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-fa19cbfa",
-      "time": "15:33:14",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-3a5aa389",
-      "time": "15:33:15",
-      "addr": "0x00404000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 273.4 KB (2.67%)."
-    },
-    {
-      "id": "dos-1554e82a",
-      "time": "15:33:19",
-      "addr": "0x00406000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
-    {
-      "id": "dos-14239e48",
-      "time": "15:33:21",
-      "addr": "0x001DD01C",
-      "tag": "MUTATE",
-      "message": "[Batch 92/253] Proposed mutation for src/api-routes.ts (risk: LOW)"
-    },
     {
       "id": "dos-88912ebc",
       "time": "15:33:21",
@@ -858,6 +823,41 @@
       "addr": "0x0044E000",
       "tag": "SANITY_OK",
       "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-6f12f885",
+      "time": "15:36:17",
+      "addr": "0x00450000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.28 MB."
+    },
+    {
+      "id": "dos-6d5ce5b5",
+      "time": "15:36:17",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-47352e2c",
+      "time": "15:36:20",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-50694e03",
+      "time": "15:36:21",
+      "addr": "0x003117C9",
+      "tag": "MUTATE",
+      "message": "[Batch 100/253] Proposed mutation for src/app/api/evolution/coherence-gate/route.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-e7e09483",
+      "time": "15:36:22",
+      "addr": "0x00452000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
     }
   ]
 }
