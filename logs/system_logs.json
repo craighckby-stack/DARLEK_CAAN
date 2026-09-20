@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T04:13:00.915Z",
+    "generatedAt": "2026-09-20T04:13:11.814Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789877588302_0d87b021",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T04:13:08.302Z"
+    },
+    {
+      "id": "rag_log_1789877588301_ca9962b2",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T04:13:08.301Z"
+    },
+    {
+      "id": "rag_log_1789877587583_b278e5cb",
+      "type": "HEALTH",
+      "description": "Auto-test: REJECTED — 4 passed, 1 failed",
+      "timestamp": "2026-09-20T04:13:07.583Z"
+    },
+    {
+      "id": "rag_log_1789877587582_876438a7",
+      "type": "HEALTH",
+      "description": "Auto-test: REJECTED — 4 passed, 1 failed",
+      "timestamp": "2026-09-20T04:13:07.582Z"
+    },
+    {
+      "id": "rag_log_1789877586694_b87a439b",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/lib/sanitizer.ts",
+      "timestamp": "2026-09-20T04:13:06.694Z"
+    },
+    {
+      "id": "rag_log_1789877586694_0910beab",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/lib/sanitizer.ts",
+      "timestamp": "2026-09-20T04:13:06.694Z"
+    },
+    {
+      "id": "rag_log_1789877586285_1a66a7be",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T04:13:06.285Z"
+    },
     {
       "id": "rag_log_1789877575839_5a6deb5f",
       "type": "MUTATE",
@@ -114,79 +156,9 @@
       "type": "HEALTH",
       "description": "Auto-test: PASSED — 5 passed, 0 failed",
       "timestamp": "2026-09-20T04:11:59.327Z"
-    },
-    {
-      "id": "rag_log_1789877519325_03d3f78d",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T04:11:59.325Z"
-    },
-    {
-      "id": "rag_log_1789877518406_243aa1f3",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/lib/safeStorage.ts",
-      "timestamp": "2026-09-20T04:11:58.406Z"
-    },
-    {
-      "id": "rag_log_1789877518405_c3feb05a",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/lib/safeStorage.ts",
-      "timestamp": "2026-09-20T04:11:58.405Z"
-    },
-    {
-      "id": "rag_log_1789877514846_26b8b35c",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T04:11:54.846Z"
-    },
-    {
-      "id": "rag_log_1789877506789_e3b215fa",
-      "type": "MUTATE",
-      "description": "[Batch 205/253] Proposed mutation for src/lib/safeStorage.ts (risk: LOW)",
-      "timestamp": "2026-09-20T04:11:46.789Z"
-    },
-    {
-      "id": "rag_log_1789877506788_51d15e96",
-      "type": "MUTATE",
-      "description": "[Batch 205/253] Proposed mutation for src/lib/safeStorage.ts (risk: LOW)",
-      "timestamp": "2026-09-20T04:11:46.788Z"
-    },
-    {
-      "id": "rag_log_1789877504553_2b1fdc3f",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T04:11:44.553Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-3385030d",
-      "time": "14:06:18",
-      "addr": "0x003D0A96",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 4 passed, 0 failed"
-    },
-    {
-      "id": "dos-ed002e59",
-      "time": "14:06:19",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-fd36045b",
-      "time": "14:06:28",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-311d45bb",
-      "time": "14:06:32",
-      "addr": "0x003706C5",
-      "tag": "MUTATE",
-      "message": "[Batch 191/253] Proposed mutation for src/lib/github.ts (risk: LOW)"
-    },
     {
       "id": "dos-9cdb9068",
       "time": "14:06:36",
@@ -858,6 +830,34 @@
       "addr": "0x001E2F9A",
       "tag": "MUTATE",
       "message": "[Batch 207/253] Proposed mutation for src/lib/sanitizer.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-040a2ece",
+      "time": "14:13:06",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-540a076b",
+      "time": "14:13:06",
+      "addr": "0x0085D120",
+      "tag": "APPROVE",
+      "message": "Mutation applied to src/lib/sanitizer.ts"
+    },
+    {
+      "id": "dos-ecf76928",
+      "time": "14:13:07",
+      "addr": "0x0074FAF3",
+      "tag": "HEALTH",
+      "message": "Auto-test: REJECTED — 4 passed, 1 failed"
+    },
+    {
+      "id": "dos-7387eca9",
+      "time": "14:13:08",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
     }
   ]
 }
