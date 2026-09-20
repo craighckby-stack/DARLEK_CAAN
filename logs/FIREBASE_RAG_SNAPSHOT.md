@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:29:30.732Z`
+*Last Synchronized:* `2026-09-20T04:29:44.102Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,85 +14,92 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:41.097Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:29:41.096Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:41.096Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:29:41.096Z
+```
+
+### 3. `update_prompts.sh` (Gen 219)
+*Source:* `MUTATION:update_prompts.sh` | *Indexed:* `2026-09-20T04:29:41.094Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-219 [2026-09-20T04:29:27.711Z] */
+#!/bin/bash
+sed -i 's/const systemPrompt = `You are ${agent.name}, a debate agent in the DARLEK CANN system. ${agent.role}/const systemPrompt = `[ROLE] You are a debate agent in the AHI Synthesis Loop.\\\n[PROFILE] ${agent.role}\\\n\\\n[DIRECTIVE] You MUST STRI
+// ... [truncated]
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:40.189Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:29:40.189Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:40.188Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:29:40.188Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:38.462Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to update_prompts.sh | TIME:2026-09-20T04:29:38.461Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:38.462Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to update_prompts.sh | TIME:2026-09-20T04:29:38.462Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:36.467Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:29:36.467Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:27.713Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 250/253] Proposed mutation for update_prompts.sh (risk: LOW) | TIME:2026-09-20T04:29:27.713Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:27.712Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 250/253] Proposed mutation for update_prompts.sh (risk: LOW) | TIME:2026-09-20T04:29:27.712Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:25.751Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `update_prompts.sh`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `219`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-219 with verified AST structural sanity.
 ```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:29:25.751Z
-```
-
-### 4. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:17.461Z`
-
-```typescript
-[LOG:INFO] [NO-OP] Code saturation reached in batch for update_agents.sh | TIME:2026-09-20T04:29:17.461Z
-```
-
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:17.459Z`
-
-```typescript
-[LOG:INFO] [NO-OP] Code saturation reached in batch for update_agents.sh | TIME:2026-09-20T04:29:17.458Z
-```
-
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:15.936Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:29:15.936Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:07.980Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:29:07.980Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:07.978Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:29:07.978Z
-```
-
-### 9. `updateStyles.js` (Gen 218)
-*Source:* `MUTATION:updateStyles.js` | *Indexed:* `2026-09-20T04:29:07.975Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-218 [2026-09-20T04:28:54.062Z] */
-import { readFileSync, writeFileSync } from 'node:fs';
-
-const FILE_PATH = 'src/App.tsx';
-
-// Pre-compile regular expressions and map targets into a single linear O(N) pass structure
-// to drastically reduce memory allocation, string generation churn, and CPU cy
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-219 [2026-09-20T04:29:27.711Z] */
+#!/bin/bash
+sed -i 's/const systemPrompt = `You are ${agent.name}, a debate agent in the DARLEK CANN system. ${agent.role}/const systemPrompt = `[ROLE] You are a debate agent in the AHI Synthesis Loop.\\\n[PROFILE] ${agent.role}\\\n\\\n[DIRECTIVE] You MUST STRI
 // ... [truncated]
 ```
 
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:07.082Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:29:07.082Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `updateStyles.js`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `updateStyles.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `218`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-218 with verified AST structural sanity.
@@ -107,7 +114,7 @@ const FILE_PATH = 'src/App.tsx';
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `updateModule.js`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `updateModule.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `217`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-217 with verified AST structural sanity.
@@ -122,7 +129,7 @@ const TARGET_CONTENT = `            {/* Dalek insentient Speech bubble area */}
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-worker.ts`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-worker.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `216`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-216 with verified AST structural sanity.
@@ -139,7 +146,7 @@ function formatErrorMessage(error: unknown): string {
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose.js`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `215`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-215 with verified AST structural sanity.
@@ -159,7 +166,7 @@ function formatErrorMessage(error: unknown): string {
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose-import.js`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose-import.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `214`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-214 with verified AST structural sanity.
@@ -177,7 +184,7 @@ const proposalPayload = {
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose-header.js`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose-header.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `213`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-213 with verified AST structural sanity.
@@ -196,7 +203,7 @@ const proposalPayload = {
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-pdf.js`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-pdf.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `212`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-212 with verified AST structural sanity.
@@ -210,7 +217,7 @@ const proposalPayload = {
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-parse2.js`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-parse2.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `211`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-211 with verified AST structural sanity.
@@ -230,7 +237,7 @@ const proposalPayload = {
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-parse.ts`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-parse.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `210`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-210 with verified AST structural sanity.
@@ -245,24 +252,6 @@ const proposalPayload = {
 export interface LlmAnalysisPayload {
   analysis?: string;
   riskScor
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-models.js`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `209`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-209 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-209 [2026-09-20T04:25:14.117Z] */
-import { GoogleGenAI } from '@google/genai';
-
-async function main() {
-  const key = process.env.GEMINI_API_KEY;
-  try {
-    const ai = new GoogleGenAI({ apiKey: key });
-    const response = await ai.models.list();
-    for await (const model of response) {
-     
 // ... [truncated]
 ```
 
