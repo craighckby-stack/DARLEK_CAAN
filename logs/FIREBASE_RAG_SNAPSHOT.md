@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:29:54.551Z`
+*Last Synchronized:* `2026-09-20T04:30:02.094Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,41 +14,48 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:59.003Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:29:59.003Z
+```
+
+### 2. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:51.486Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 251/253] Proposed mutation for update_propose.js (risk: LOW) | TIME:2026-09-20T04:29:51.486Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 3. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:51.485Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 251/253] Proposed mutation for update_propose.js (risk: LOW) | TIME:2026-09-20T04:29:51.485Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:50.392Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:29:50.392Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:41.097Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:29:41.096Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:41.096Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:29:41.096Z
 ```
 
-### 6. `update_prompts.sh` (Gen 219)
+### 7. `update_prompts.sh` (Gen 219)
 *Source:* `MUTATION:update_prompts.sh` | *Indexed:* `2026-09-20T04:29:41.094Z`
 
 ```typescript
@@ -58,32 +65,25 @@ sed -i 's/const systemPrompt = `You are ${agent.name}, a debate agent in the DAR
 // ... [truncated]
 ```
 
-### 7. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:40.189Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:29:40.189Z
 ```
 
-### 8. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:40.188Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:29:40.188Z
 ```
 
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:38.462Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to update_prompts.sh | TIME:2026-09-20T04:29:38.461Z
-```
-
 ### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:29:38.462Z`
 
 ```typescript
-[LOG:APPROVE] Mutation applied to update_prompts.sh | TIME:2026-09-20T04:29:38.462Z
+[LOG:APPROVE] Mutation applied to update_prompts.sh | TIME:2026-09-20T04:29:38.461Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
