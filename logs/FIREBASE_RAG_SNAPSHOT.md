@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:26:12.328Z`
+*Last Synchronized:* `2026-09-20T04:26:20.561Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,88 +14,110 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:26:17.525Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:26:17.525Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:26:14.889Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:26:14.889Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:26:14.886Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:26:14.886Z
+```
+
+### 4. `test-parse2.js` (Gen 211)
+*Source:* `MUTATION:test-parse2.js` | *Indexed:* `2026-09-20T04:26:14.877Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-211 [2026-09-20T04:26:00.735Z] */
+/**
+ * @file test-parse2.js
+ * @version 4.2.18
+ * @engine EMG Core v49 Neural Code and Documentation Optimizer Engine
+ */
+
+/**
+ * @typedef {Object} LlmParsedResponse
+ * @property {string} [analysis]
+ * @property {number} [riskScore]
+ * @property {string[]} [aff
+// ... [truncated]
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:26:13.996Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:26:13.996Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:26:13.995Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:26:13.994Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:26:12.450Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to test-parse2.js | TIME:2026-09-20T04:26:12.449Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:26:12.448Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to test-parse2.js | TIME:2026-09-20T04:26:12.448Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:26:09.175Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:26:09.175Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:26:01.422Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 240/253] Proposed mutation for test-parse2.js (risk: LOW) | TIME:2026-09-20T04:26:01.422Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:26:01.420Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-parse2.js`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `211`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-211 with verified AST structural sanity.
 ```typescript
-[LOG:MUTATE] [Batch 240/253] Proposed mutation for test-parse2.js (risk: LOW) | TIME:2026-09-20T04:26:01.420Z
-```
-
-### 4. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:58.736Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:25:58.736Z
-```
-
-### 5. `test-parse.ts` (Gen 210)
-*Source:* `MUTATION:test-parse.ts` | *Indexed:* `2026-09-20T04:25:50.475Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-210 [2026-09-20T04:25:37.066Z] */
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-211 [2026-09-20T04:26:00.735Z] */
 /**
- * File Path: "test-parse.ts"
- * EMG Core v49 Neural Code and Documentation Optimizer Engine
- * Sovereign Overhaul: Comprehensive Type-Safety, Performance, and Robust Error Handling.
+ * @file test-parse2.js
+ * @version 4.2.18
+ * @engine EMG Core v49 Neural Code and Documentation Optimizer Engine
  */
 
-export interface LlmAnalysisPayload {
-  analysis?: string;
-  riskScor
+/**
+ * @typedef {Object} LlmParsedResponse
+ * @property {string} [analysis]
+ * @property {number} [riskScore]
+ * @property {string[]} [aff
 // ... [truncated]
 ```
 
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:50.472Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:25:50.472Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:50.471Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:25:50.471Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:49.702Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:25:49.702Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:49.701Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:25:49.701Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:48.935Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to test-parse.ts | TIME:2026-09-20T04:25:48.935Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-parse.ts`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-parse.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `210`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-210 with verified AST structural sanity.
@@ -113,7 +135,7 @@ export interface LlmAnalysisPayload {
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-models.js`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-models.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `209`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-209 with verified AST structural sanity.
@@ -131,7 +153,7 @@ async function main() {
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy3.js`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy3.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `208`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-208 with verified AST structural sanity.
@@ -149,7 +171,7 @@ async function main() {
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy2.js`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy2.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `207`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-207 with verified AST structural sanity.
@@ -166,7 +188,7 @@ async function main() {
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy.js`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `206`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-206 with verified AST structural sanity.
@@ -182,7 +204,7 @@ const MAX_INP
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-genai.js`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-genai.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `205`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-205 with verified AST structural sanity.
@@ -202,7 +224,7 @@ const DEFAULT_MODEL = 'gem
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-gemini.js`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-gemini.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `204`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-204 with verified AST structural sanity.
@@ -220,7 +242,7 @@ async function main() {
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `tailwind.config.js`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `tailwind.config.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `203`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-203 with verified AST structural sanity.
@@ -242,7 +264,7 @@ export default {
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/siphon.ts`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/siphon.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `202`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-202 with verified AST structural sanity.
@@ -257,24 +279,6 @@ export default {
 export interface SiphonSource {
   readonly owner: string;
   r
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/error-parser.ts`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `201`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-201 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-201 [2026-09-20T04:22:04.860Z] */
-/**
- * @file src/utils/error-parser.ts
- * @module ErrorParser
- * @version 4.9.3
- * @description Type-safe system error parsing and normalization utility with strict runtime guarantees.
- */
-
-export interface SystemErrorPayload {
-  readonly operationType?: string
 // ... [truncated]
 ```
 
