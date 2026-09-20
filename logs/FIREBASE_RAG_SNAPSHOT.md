@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:03:14.004Z`
+*Last Synchronized:* `2026-09-20T04:03:23.767Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,27 +14,48 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:20.623Z`
+
+```typescript
+[LOG:MUTATE] [Batch 183/253] Proposed mutation for src/lib/diagnostic-registry.ts (risk: LOW) | TIME:2026-09-20T04:03:20.622Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:20.619Z`
+
+```typescript
+[LOG:MUTATE] [Batch 183/253] Proposed mutation for src/lib/diagnostic-registry.ts (risk: LOW) | TIME:2026-09-20T04:03:20.619Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:19.267Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:03:19.266Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:10.980Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:03:10.980Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:10.219Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:03:10.218Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:10.207Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:03:10.206Z
 ```
 
-### 4. `src/lib/defaultPostmortems.ts` (Gen 156)
+### 7. `src/lib/defaultPostmortems.ts` (Gen 156)
 *Source:* `MUTATION:src/lib/defaultPostmortems.ts` | *Indexed:* `2026-09-20T04:03:10.201Z`
 
 ```typescript
@@ -43,46 +64,25 @@ export const DEFAULT_POSTMORTEMS_MD = "# Neural Engine Post-Mortems\n\n## System
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:09.531Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: REJECTED — 4 passed, 2 failed | TIME:2026-09-20T04:03:09.530Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:09.529Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: REJECTED — 4 passed, 2 failed | TIME:2026-09-20T04:03:09.529Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:08.243Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to src/lib/defaultPostmortems.ts | TIME:2026-09-20T04:03:08.243Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:08.241Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/lib/defaultPostmortems.ts | TIME:2026-09-20T04:03:08.241Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:03:02.089Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:03:02.089Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:02:57.136Z`
-
-```typescript
-[LOG:MUTATE] [Batch 182/253] Proposed mutation for src/lib/defaultPostmortems.ts (risk: LOW) | TIME:2026-09-20T04:02:57.136Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
