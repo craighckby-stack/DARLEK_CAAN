@@ -1,12 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:58:17.302Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:58:26.931Z]
 ======================================================================
 
-[15:50:17] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:50:17] [0x005AE000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
-[15:50:19] [0x00797457] [MUTATE    ] [Batch 138/253] Proposed mutation for src/components/DebateChamber.tsx (risk: LOW)
-[15:50:22] [0x005B0000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 8.67 MB.
-[15:50:22] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
 [15:50:27] [0x005B2000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
 [15:50:28] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:50:30] [0x005ADDAB] [APPROVE   ] Mutation applied to src/components/DebateChamber.tsx
@@ -253,3 +248,8 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:58:17.302Z]
 [15:58:12] [0x003D0A96] [HEALTH    ] Auto-test: PASSED — 4 passed, 0 failed
 [15:58:13] [0x00674000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 859.4 KB (8.39%).
 [15:58:13] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[15:58:17] [0x00676000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
+[15:58:22] [0x00678000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.02 MB.
+[15:58:22] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
+[15:58:22] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:58:23] [0x00646269] [MUTATE    ] [Batch 160/253] Proposed mutation for src/components/ui/toast.tsx (risk: LOW)
