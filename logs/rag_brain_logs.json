@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789884268802_17e935a7",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T06:04:28.802Z"
+  },
+  {
     "id": "rag_log_1789884260817_26527270",
     "type": "MUTATE",
     "description": "[Batch 175/253] Proposed mutation for src/lib/archaeology-live-sync.ts (risk: LOW)",
@@ -142,11 +148,5 @@
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
     "timestamp": "2026-09-20T06:03:23.100Z"
-  },
-  {
-    "id": "rag_log_1789884203097_4ffb73e7",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T06:03:23.097Z"
   }
 ]
