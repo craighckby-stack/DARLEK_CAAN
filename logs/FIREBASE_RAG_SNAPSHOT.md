@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T06:04:40.302Z`
+*Last Synchronized:* `2026-09-20T06:04:49.284Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,13 +14,34 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:46.279Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T06:04:46.279Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:43.868Z`
+
+```typescript
+[LOG:MUTATE] [Batch 176/253] Proposed mutation for src/lib/ast-diff-gate.ts (risk: LOW) | TIME:2026-09-20T06:04:43.868Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:43.865Z`
+
+```typescript
+[LOG:MUTATE] [Batch 176/253] Proposed mutation for src/lib/ast-diff-gate.ts (risk: LOW) | TIME:2026-09-20T06:04:43.864Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:37.249Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T06:04:37.249Z
 ```
 
-### 2. `src/lib/archaeology-live-sync.ts` (Gen 152)
+### 5. `src/lib/archaeology-live-sync.ts` (Gen 152)
 *Source:* `MUTATION:src/lib/archaeology-live-sync.ts` | *Indexed:* `2026-09-20T06:04:34.468Z`
 
 ```typescript
@@ -32,60 +53,39 @@ import { safeSetLocalStorage, safeGetLocalStorage } from './sa
 // ... [truncated]
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:33.973Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T06:04:33.973Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:33.970Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T06:04:33.970Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:32.950Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: REJECTED — 4 passed, 2 failed | TIME:2026-09-20T06:04:32.950Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:32.947Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: REJECTED — 4 passed, 2 failed | TIME:2026-09-20T06:04:32.947Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:31.927Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to src/lib/archaeology-live-sync.ts | TIME:2026-09-20T06:04:31.926Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:31.924Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/lib/archaeology-live-sync.ts | TIME:2026-09-20T06:04:31.923Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:28.803Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T06:04:28.802Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:04:20.817Z`
-
-```typescript
-[LOG:MUTATE] [Batch 175/253] Proposed mutation for src/lib/archaeology-live-sync.ts (risk: LOW) | TIME:2026-09-20T06:04:20.817Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)

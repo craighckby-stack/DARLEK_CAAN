@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T06:04:40.302Z",
+    "generatedAt": "2026-09-20T06:04:49.284Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789884286279_15c6861c",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T06:04:46.279Z"
+    },
+    {
+      "id": "rag_log_1789884283868_bd19aea6",
+      "type": "MUTATE",
+      "description": "[Batch 176/253] Proposed mutation for src/lib/ast-diff-gate.ts (risk: LOW)",
+      "timestamp": "2026-09-20T06:04:43.868Z"
+    },
+    {
+      "id": "rag_log_1789884283864_0cc26fbb",
+      "type": "MUTATE",
+      "description": "[Batch 176/253] Proposed mutation for src/lib/ast-diff-gate.ts (risk: LOW)",
+      "timestamp": "2026-09-20T06:04:43.864Z"
+    },
     {
       "id": "rag_log_1789884277249_689190fa",
       "type": "LOG_SYNC",
@@ -138,62 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T06:03:47.146Z"
-    },
-    {
-      "id": "rag_log_1789884227144_4dc24cf7",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T06:03:47.144Z"
-    },
-    {
-      "id": "rag_log_1789884226111_4a046b4e",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T06:03:46.111Z"
-    },
-    {
-      "id": "rag_log_1789884226109_4df3c88a",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T06:03:46.109Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-a0ca0b8a",
-      "time": "16:01:34",
-      "addr": "0x006C8000",
-      "tag": "RAG_INDEX",
-      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.53 MB."
-    },
-    {
-      "id": "dos-73c44379",
-      "time": "16:01:34",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
-    {
-      "id": "dos-1ce01f3b",
-      "time": "16:01:36",
-      "addr": "0x0023B27D",
-      "tag": "MUTATE",
-      "message": "[Batch 168/253] Proposed mutation for src/hooks/useSystemBootstrap.ts (risk: LOW)"
-    },
-    {
-      "id": "dos-05e1bcc7",
-      "time": "16:01:37",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-8176db5f",
-      "time": "16:01:39",
-      "addr": "0x006CA000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
     {
       "id": "dos-4bd7e42e",
       "time": "16:01:43",
@@ -858,6 +823,41 @@
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-b5003d30",
+      "time": "16:04:41",
+      "addr": "0x00716000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-64948f5e",
+      "time": "16:04:43",
+      "addr": "0x0040F1F2",
+      "tag": "MUTATE",
+      "message": "[Batch 176/253] Proposed mutation for src/lib/ast-diff-gate.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-9bea85a2",
+      "time": "16:04:46",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-8a59cef6",
+      "time": "16:04:46",
+      "addr": "0x00718000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.50 MB."
+    },
+    {
+      "id": "dos-d8f0406d",
+      "time": "16:04:46",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
     }
   ]
 }

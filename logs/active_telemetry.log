@@ -1,12 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:04:40.302Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:04:49.284Z]
 ======================================================================
 
-[15:56:41] [0x0064E000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
-[15:56:46] [0x00650000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.13 MB.
-[15:56:46] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
-[15:56:49] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:56:50] [0x001C12D6] [MUTATE    ] [Batch 156/253] Proposed mutation for src/components/SnippetScanner.tsx (risk: LOW)
 [15:56:51] [0x00652000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
 [15:56:55] [0x00654000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 775.3 KB (7.57%).
 [15:56:59] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
@@ -253,3 +248,8 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:04:40.302Z]
 [16:04:33] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
 [16:04:36] [0x00714000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 677.5 KB (6.62%).
 [16:04:37] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[16:04:41] [0x00716000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
+[16:04:43] [0x0040F1F2] [MUTATE    ] [Batch 176/253] Proposed mutation for src/lib/ast-diff-gate.ts (risk: LOW)
+[16:04:46] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[16:04:46] [0x00718000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.50 MB.
+[16:04:46] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
