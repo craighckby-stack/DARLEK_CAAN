@@ -1,12 +1,72 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:25:53.375Z",
+    "generatedAt": "2026-09-20T05:26:07.072Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789881964068_81520560",
+      "type": "RAG_WRITE",
+      "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-9, rai...",
+      "timestamp": "2026-09-20T05:26:04.068Z"
+    },
+    {
+      "id": "rag_log_1789881964066_0e5494f6",
+      "type": "HOTSWAP_OK",
+      "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-8 [Source: RAG_GENE_HOTSWAP].",
+      "timestamp": "2026-09-20T05:26:04.066Z"
+    },
+    {
+      "id": "rag_log_1789881963412_d5261d3c",
+      "type": "HOTSWAP",
+      "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
+      "timestamp": "2026-09-20T05:26:03.412Z"
+    },
+    {
+      "id": "rag_log_1789881962325_041fb534",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:26:02.325Z"
+    },
+    {
+      "id": "rag_log_1789881962324_b79ff8d5",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:26:02.324Z"
+    },
+    {
+      "id": "rag_log_1789881961756_3dcfd0c0",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T05:26:01.756Z"
+    },
+    {
+      "id": "rag_log_1789881961755_88df9741",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T05:26:01.755Z"
+    },
+    {
+      "id": "rag_log_1789881961186_5b9f0f0f",
+      "type": "APPROVE",
+      "description": "Mutation applied to lib/env-validator.ts",
+      "timestamp": "2026-09-20T05:26:01.186Z"
+    },
+    {
+      "id": "rag_log_1789881961185_c7677a3d",
+      "type": "APPROVE",
+      "description": "Mutation applied to lib/env-validator.ts",
+      "timestamp": "2026-09-20T05:26:01.185Z"
+    },
+    {
+      "id": "rag_log_1789881958542_fb1b2faa",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:25:58.542Z"
+    },
     {
       "id": "rag_log_1789881950359_d2f1b28b",
       "type": "MUTATE",
@@ -96,139 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T05:25:19.979Z"
-    },
-    {
-      "id": "rag_log_1789881919978_783d5abf",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:25:19.978Z"
-    },
-    {
-      "id": "rag_log_1789881919193_4ccf17c3",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:25:19.193Z"
-    },
-    {
-      "id": "rag_log_1789881919192_503022c9",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:25:19.192Z"
-    },
-    {
-      "id": "rag_log_1789881918729_89ac2521",
-      "type": "APPROVE",
-      "description": "Mutation applied to get_git_log.js",
-      "timestamp": "2026-09-20T05:25:18.729Z"
-    },
-    {
-      "id": "rag_log_1789881918728_7671aa60",
-      "type": "APPROVE",
-      "description": "Mutation applied to get_git_log.js",
-      "timestamp": "2026-09-20T05:25:18.728Z"
-    },
-    {
-      "id": "rag_log_1789881915603_d03c3b20",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:25:15.603Z"
-    },
-    {
-      "id": "rag_log_1789881907990_539c1c31",
-      "type": "MUTATE",
-      "description": "[Batch 61/253] Proposed mutation for get_git_log.js (risk: LOW)",
-      "timestamp": "2026-09-20T05:25:07.990Z"
-    },
-    {
-      "id": "rag_log_1789881907988_22477b1d",
-      "type": "MUTATE",
-      "description": "[Batch 61/253] Proposed mutation for get_git_log.js (risk: LOW)",
-      "timestamp": "2026-09-20T05:25:07.988Z"
-    },
-    {
-      "id": "rag_log_1789881906496_3e94cb07",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:25:06.496Z"
-    },
-    {
-      "id": "rag_log_1789881898347_8b4acab3",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 4 issues (2 high)",
-      "timestamp": "2026-09-20T05:24:58.346Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-1323459d",
-      "time": "15:22:51",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
-    {
-      "id": "dos-81c7bb8e",
-      "time": "15:22:51",
-      "addr": "0x00760860",
-      "tag": "APPROVE",
-      "message": "Mutation applied to fix_prompt4.js"
-    },
-    {
-      "id": "dos-0264517b",
-      "time": "15:22:51",
-      "addr": "0x0074FAF3",
-      "tag": "HEALTH",
-      "message": "Auto-test: REJECTED — 4 passed, 1 failed"
-    },
-    {
-      "id": "dos-847f0afd",
-      "time": "15:22:51",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-7b55ae6b",
-      "time": "15:22:55",
-      "addr": "0x00302000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
-    {
-      "id": "dos-ae9a7341",
-      "time": "15:23:00",
-      "addr": "0x00304000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 471.2 KB (4.6%)."
-    },
-    {
-      "id": "dos-65b4e852",
-      "time": "15:23:01",
-      "addr": "0x0084B92F",
-      "tag": "INFO",
-      "message": "[NO-OP] Code saturation reached in batch for fix_prompt5.js"
-    },
-    {
-      "id": "dos-8195ac62",
-      "time": "15:23:01",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-c8a53361",
-      "time": "15:23:05",
-      "addr": "0x00306000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
-    {
-      "id": "dos-756eea3f",
-      "time": "15:23:09",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-df1fd640",
       "time": "15:23:10",
@@ -858,6 +788,76 @@
       "addr": "0x0033A732",
       "tag": "MUTATE",
       "message": "[Batch 63/253] Proposed mutation for lib/env-validator.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-d7a55356",
+      "time": "15:25:53",
+      "addr": "0x0034C000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 302.8 KB (2.96%)."
+    },
+    {
+      "id": "dos-97a4cf59",
+      "time": "15:25:58",
+      "addr": "0x0034E000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-8de4adbe",
+      "time": "15:25:58",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-459a96ff",
+      "time": "15:26:01",
+      "addr": "0x0020957D",
+      "tag": "APPROVE",
+      "message": "Mutation applied to lib/env-validator.ts"
+    },
+    {
+      "id": "dos-52f1ea56",
+      "time": "15:26:01",
+      "addr": "0x007EEE12",
+      "tag": "HEALTH",
+      "message": "Auto-test: PASSED — 5 passed, 0 failed"
+    },
+    {
+      "id": "dos-b91e81b8",
+      "time": "15:26:02",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-e5fbe2d6",
+      "time": "15:26:03",
+      "addr": "0x00350000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.63 MB."
+    },
+    {
+      "id": "dos-278426fe",
+      "time": "15:26:03",
+      "addr": "0x007FC719",
+      "tag": "HOTSWAP",
+      "message": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts"
+    },
+    {
+      "id": "dos-da4ae956",
+      "time": "15:26:04",
+      "addr": "0x007E5991",
+      "tag": "HOTSWAP_OK",
+      "message": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-8 [Source: RAG_GENE_HOTSWAP]."
+    },
+    {
+      "id": "dos-15bf61e7",
+      "time": "15:26:04",
+      "addr": "0x001B8777",
+      "tag": "RAG_WRITE",
+      "message": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-9, rai..."
     }
   ]
 }
