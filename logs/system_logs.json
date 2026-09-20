@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:56:53.877Z",
+    "generatedAt": "2026-09-20T03:57:03.734Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789876620620_5894f2e0",
+      "type": "MUTATE",
+      "description": "[Batch 167/253] Proposed mutation for src/hooks/useQuantumState.ts (risk: LOW)",
+      "timestamp": "2026-09-20T03:57:00.620Z"
+    },
+    {
+      "id": "rag_log_1789876620616_dab0bbc3",
+      "type": "MUTATE",
+      "description": "[Batch 167/253] Proposed mutation for src/hooks/useQuantumState.ts (risk: LOW)",
+      "timestamp": "2026-09-20T03:57:00.616Z"
+    },
+    {
+      "id": "rag_log_1789876619285_a99916aa",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:56:59.285Z"
+    },
     {
       "id": "rag_log_1789876610248_e14434f8",
       "type": "HEALTH",
@@ -138,41 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T03:56:04.411Z"
-    },
-    {
-      "id": "rag_log_1789876562854_3ef7c98b",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T03:56:02.854Z"
-    },
-    {
-      "id": "rag_log_1789876562853_80fc2ddf",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T03:56:02.853Z"
-    },
-    {
-      "id": "rag_log_1789876561603_24fc498f",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/hooks/useFolderScanner.ts",
-      "timestamp": "2026-09-20T03:56:01.603Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-2c100066",
-      "time": "13:50:31",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-dfd478be",
-      "time": "13:50:33",
-      "addr": "0x009319F6",
-      "tag": "APPROVE",
-      "message": "Mutation applied to src/components/MutationStatusIndicator.tsx"
-    },
     {
       "id": "dos-1bd176d6",
       "time": "13:50:34",
@@ -858,6 +844,20 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-e4a50f20",
+      "time": "13:56:59",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-e39055f1",
+      "time": "13:57:00",
+      "addr": "0x00957150",
+      "tag": "MUTATE",
+      "message": "[Batch 167/253] Proposed mutation for src/hooks/useQuantumState.ts (risk: LOW)"
     }
   ]
 }
