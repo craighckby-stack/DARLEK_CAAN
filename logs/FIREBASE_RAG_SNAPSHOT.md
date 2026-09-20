@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:19:29.087Z`
+*Last Synchronized:* `2026-09-20T04:19:42.226Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,86 +14,100 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:39.190Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:19:39.189Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:39.187Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:19:39.187Z
+```
+
+### 3. `src/types/omega-core.d.ts` (Gen 195)
+*Source:* `MUTATION:src/types/omega-core.d.ts` | *Indexed:* `2026-09-20T04:19:39.067Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-195 [2026-09-20T04:19:25.276Z] */
+/**
+ * @file omega-core.d.ts
+ * @module OmegaCore
+ * @description Darlek Caan type definitions and runtime boundary constraints for the Omega Core architecture.
+ *
+ * Provides core lifecycle status codes, telemetry state interfaces, execution configuration cont
+// ... [truncated]
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:38.391Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:19:38.391Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:38.390Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:19:38.390Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:36.909Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to src/types/omega-core.d.ts | TIME:2026-09-20T04:19:36.909Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:36.908Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to src/types/omega-core.d.ts | TIME:2026-09-20T04:19:36.908Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:34.877Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:19:34.877Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:26.044Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 224/253] Proposed mutation for src/types/omega-core.d.ts (risk: LOW) | TIME:2026-09-20T04:19:26.044Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:26.043Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 224/253] Proposed mutation for src/types/omega-core.d.ts (risk: LOW) | TIME:2026-09-20T04:19:26.042Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:24.859Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/omega-core.d.ts`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `195`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-195 with verified AST structural sanity.
 ```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:19:24.859Z
-```
-
-### 4. `src/types/manifest.d.ts` (Gen 194)
-*Source:* `MUTATION:src/types/manifest.d.ts` | *Indexed:* `2026-09-20T04:19:16.078Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-194 [2026-09-20T04:19:02.720Z] */
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-195 [2026-09-20T04:19:25.276Z] */
 /**
- * @file src/types/manifest.d.ts
- * @module DarlekCaanManifest
- * @description Sovereign type definitions for project manifests, enforcing strict readonly immutability and robust extensible literal structures with verified bounds.
- */
-
-// ==================
+ * @file omega-core.d.ts
+ * @module OmegaCore
+ * @description Darlek Caan type definitions and runtime boundary constraints for the Omega Core architecture.
+ *
+ * Provides core lifecycle status codes, telemetry state interfaces, execution configuration cont
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:15.558Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:19:15.557Z
-```
-
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:15.557Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:19:15.556Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:14.736Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:19:14.736Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:14.735Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:19:14.735Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:14.021Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/types/manifest.d.ts | TIME:2026-09-20T04:19:14.021Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:14.020Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/types/manifest.d.ts | TIME:2026-09-20T04:19:14.019Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/manifest.d.ts`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/manifest.d.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `194`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-194 with verified AST structural sanity.
@@ -109,7 +123,7 @@
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/kernel.d.ts`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/kernel.d.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `193`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-193 with verified AST structural sanity.
@@ -127,7 +141,7 @@
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/evolution.ts`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/evolution.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `192`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-192 with verified AST structural sanity.
@@ -144,7 +158,7 @@
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/brain-runtime.d.ts`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/brain-runtime.d.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `191`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-191 with verified AST structural sanity.
@@ -161,7 +175,7 @@
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types.ts`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `190`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-190 with verified AST structural sanity.
@@ -176,7 +190,7 @@
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/providers/SystemTelemetryProvider.tsx`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/providers/SystemTelemetryProvider.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `189`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-189 with verified AST structural sanity.
@@ -194,7 +208,7 @@ export interface SystemTelemetryContextType {
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/middleware/SecurityMiddleware.ts`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/middleware/SecurityMiddleware.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `188`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-188 with verified AST structural sanity.
@@ -211,7 +225,7 @@ export class SecurityMiddleware {
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/main.tsx`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/main.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `187`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-187 with verified AST structural sanity.
@@ -229,28 +243,12 @@ import { createRoot } from 'react
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/validator.ts`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/validator.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `186`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-186 with verified AST structural sanity.
 ```typescript
 and
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/utils.ts`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `185`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-185 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-185 [2026-09-20T04:15:18.128Z] */
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-/**
- * Merges conditional CSS class names using `clsx` and resolves Tailwind CSS class conflicts using `twMerge`.
- *
- * @param inputs - A variadic set of class values inclu
-// ... [truncated]
 ```
 
 ## 🛡️ Architectural Postmortems & Constraints
