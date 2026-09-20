@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:19:21.235Z`
+*Last Synchronized:* `2026-09-20T05:19:30.887Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,41 +14,62 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:27.859Z`
+
+```typescript
+[LOG:MUTATE] [Batch 44/253] Proposed mutation for fix3.js (risk: LOW) | TIME:2026-09-20T05:19:27.859Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:27.858Z`
+
+```typescript
+[LOG:MUTATE] [Batch 44/253] Proposed mutation for fix3.js (risk: LOW) | TIME:2026-09-20T05:19:27.858Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:26.118Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:19:26.118Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:18.227Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for fix2.js | TIME:2026-09-20T05:19:18.227Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:18.226Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for fix2.js | TIME:2026-09-20T05:19:18.226Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:17.407Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:19:17.406Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:08.792Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:19:08.792Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:08.791Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:19:08.791Z
 ```
 
-### 6. `fix.sh` (Gen 39)
+### 9. `fix.sh` (Gen 39)
 *Source:* `MUTATION:fix.sh` | *Indexed:* `2026-09-20T05:19:08.541Z`
 
 ```typescript
@@ -65,32 +86,11 @@ if [ -f "$TARGET_FILE" ]; then
 // ... [truncated]
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:08.231Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: REJECTED — 4 passed, 1 failed | TIME:2026-09-20T05:19:08.231Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:08.230Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: REJECTED — 4 passed, 1 failed | TIME:2026-09-20T05:19:08.230Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:07.791Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to fix.sh | TIME:2026-09-20T05:19:07.791Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:07.790Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to fix.sh | TIME:2026-09-20T05:19:07.790Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)

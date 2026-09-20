@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789881567859_78c67b10",
+    "type": "MUTATE",
+    "description": "[Batch 44/253] Proposed mutation for fix3.js (risk: LOW)",
+    "timestamp": "2026-09-20T05:19:27.859Z"
+  },
+  {
+    "id": "rag_log_1789881567858_fc43478b",
+    "type": "MUTATE",
+    "description": "[Batch 44/253] Proposed mutation for fix3.js (risk: LOW)",
+    "timestamp": "2026-09-20T05:19:27.858Z"
+  },
+  {
+    "id": "rag_log_1789881566118_bab05a6b",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:19:26.118Z"
+  },
+  {
     "id": "rag_log_1789881558227_9d01f5bf",
     "type": "INFO",
     "description": "[NO-OP] Code saturation reached in batch for fix2.js",
@@ -130,23 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 41/253] Proposed mutation for firestore.rules (risk: LOW)",
     "timestamp": "2026-09-20T05:18:35.348Z"
-  },
-  {
-    "id": "rag_log_1789881515346_49750281",
-    "type": "MUTATE",
-    "description": "[Batch 41/253] Proposed mutation for firestore.rules (risk: LOW)",
-    "timestamp": "2026-09-20T05:18:35.346Z"
-  },
-  {
-    "id": "rag_log_1789881507930_1960369f",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:18:27.930Z"
-  },
-  {
-    "id": "rag_log_1789881505994_ef25ec10",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for firebase-blueprint.json",
-    "timestamp": "2026-09-20T05:18:25.994Z"
   }
 ]
