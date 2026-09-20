@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789874624591_65092ad3",
+    "type": "INFO",
+    "description": "[NO-OP] Code saturation reached in batch for prisma/db-store.json",
+    "timestamp": "2026-09-20T03:23:44.591Z"
+  },
+  {
+    "id": "rag_log_1789874624590_be530801",
+    "type": "INFO",
+    "description": "[NO-OP] Code saturation reached in batch for prisma/db-store.json",
+    "timestamp": "2026-09-20T03:23:44.590Z"
+  },
+  {
+    "id": "rag_log_1789874624145_df4c8cc3",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:23:44.145Z"
+  },
+  {
     "id": "rag_log_1789874615325_ac09577a",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 1 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "INFO",
     "description": "[NO-OP] Code saturation reached in batch for package.json",
     "timestamp": "2026-09-20T03:22:52.355Z"
-  },
-  {
-    "id": "rag_log_1789874571712_62cd6df6",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:22:51.712Z"
-  },
-  {
-    "id": "rag_log_1789874562615_09459c2e",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for missing_files.json",
-    "timestamp": "2026-09-20T03:22:42.615Z"
-  },
-  {
-    "id": "rag_log_1789874562614_3d1cf727",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for missing_files.json",
-    "timestamp": "2026-09-20T03:22:42.614Z"
   }
 ]
