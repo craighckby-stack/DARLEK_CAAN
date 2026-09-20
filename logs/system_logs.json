@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T02:04:53.037Z",
+    "generatedAt": "2026-09-20T02:05:02.035Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789869898755_dff55c0d",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T02:04:58.755Z"
+    },
     {
       "id": "rag_log_1789869889533_4466a0ed",
       "type": "LOG_SYNC",
@@ -150,22 +156,9 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T02:01:25.246Z"
-    },
-    {
-      "id": "rag_log_1789869676957_456077ab",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:01:16.957Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "b3",
-      "time": "11:50:58",
-      "addr": "0x00401000",
-      "tag": "INIT",
-      "message": "DALEK CAAN KERNEL ENGINE INITIALIZED [OPT-IN OPERATOR CONTROL]"
-    },
     {
       "id": "b4",
       "time": "11:50:58",
@@ -855,6 +848,13 @@
     {
       "id": "dos-3b8f8c6c",
       "time": "12:04:49",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-665a4307",
+      "time": "12:04:58",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
