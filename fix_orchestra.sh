@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-43 [2026-09-20T03:09:00.333Z] */
 #!/bin/bash
 set -euo pipefail
 IFS=$'\n\t'
