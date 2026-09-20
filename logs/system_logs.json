@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:19:18.562Z",
+    "generatedAt": "2026-09-20T03:19:27.580Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789874364558_b93b796e",
+      "type": "MUTATE",
+      "description": "[Batch 64/253] Proposed mutation for logs/FIREBASE_RAG_SNAPSHOT.md (risk: LOW)",
+      "timestamp": "2026-09-20T03:19:24.558Z"
+    },
+    {
+      "id": "rag_log_1789874364556_ef8205c3",
+      "type": "MUTATE",
+      "description": "[Batch 64/253] Proposed mutation for logs/FIREBASE_RAG_SNAPSHOT.md (risk: LOW)",
+      "timestamp": "2026-09-20T03:19:24.556Z"
+    },
+    {
+      "id": "rag_log_1789874363934_bf367a35",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:19:23.934Z"
+    },
     {
       "id": "rag_log_1789874355365_7fc15175",
       "type": "HEALTH",
@@ -138,41 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T03:18:31.813Z"
-    },
-    {
-      "id": "rag_log_1789874311500_2e288030",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T03:18:31.500Z"
-    },
-    {
-      "id": "rag_log_1789874311499_84f779c9",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T03:18:31.499Z"
-    },
-    {
-      "id": "rag_log_1789874311124_3636467c",
-      "type": "APPROVE",
-      "description": "Mutation applied to get_git_log.js",
-      "timestamp": "2026-09-20T03:18:31.123Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-25966f74",
-      "time": "13:10:22",
-      "addr": "0x0074FAF3",
-      "tag": "HEALTH",
-      "message": "Auto-test: REJECTED — 4 passed, 1 failed"
-    },
-    {
-      "id": "dos-eee3403f",
-      "time": "13:10:23",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
     {
       "id": "dos-315b0c21",
       "time": "13:10:31",
@@ -858,6 +844,20 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-65b0524d",
+      "time": "13:19:23",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-d6e5afe8",
+      "time": "13:19:24",
+      "addr": "0x003E44C9",
+      "tag": "MUTATE",
+      "message": "[Batch 64/253] Proposed mutation for logs/FIREBASE_RAG_SNAPSHOT.md (risk: LOW)"
     }
   ]
 }
