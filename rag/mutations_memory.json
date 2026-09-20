@@ -1,11 +1,25 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:54:47.731Z",
+    "generatedAt": "2026-09-20T03:55:00.825Z",
     "totalMutations": 10,
     "correctCount": 10,
     "wrongCount": 0
   },
   "mutations": [
+    {
+      "id": "rag_mut_1789876495650_6538722d",
+      "filePath": "src/components/ui/toaster.tsx",
+      "originalCode": "\nimport React, { memo, type JSX } from \"react\"\nimport { useToast } from \"@/hooks/use-toast\"\nimport {\n  Toast,\n  ToastClose,\n  ToastDescription,\n  ToastProvider,\n  ToastTitle,\n  ToastViewport,\n} from \"@/components/ui/toast\"\nimport type { ToastProps } from \"@radix-ui/react-toast\"\n\nexport interface ToastItem extends ToastProps {\n  readonly id: string\n  readonly title?: React.ReactNode\n  readonly description?: React.ReactNode\n  readonly action?: React.ReactNode\n}\n\nconst ToastItemCard = memo<ToastItem>(({ title, description, action, ...props }) => (\n  <Toast {...props}>\n    <div className=\"grid gap-1\">\n      {title && <ToastTitle>{title}</ToastTitle>}\n      {description && <ToastDescription>{description}</ToastDescription>}\n    </div>\n    {action}\n    <ToastClose />\n  </Toast>\n))\n\nToastItemCard.displayName = \"ToastItemCard\"\n\nexport const Toaster: React.FC = memo((): JSX.Element => {\n  const { toasts } = useToast()\n\n  return (\n    <ToastProvider>\n      {toasts.map(({ id, ...toastProps }) => (\n        <ToastItemCard key={id} id={id} {...toastProps} />\n      ))}\n      <ToastViewport />\n    </ToastProvider>\n  )\n})\n\nToaster.displayName = \"Toaster\"",
+      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-136 [2026-09-20T03:54:42.534Z] */\n\nimport React, { memo, type JSX } from \"react\"\nimport { useToast } from \"@/hooks/use-toast\"\nimport {\n  Toast,\n  ToastClose,\n  ToastDescription,\n  ToastProvider,\n  ToastTitle,\n  ToastViewport,\n} from \"@/components/ui/toast\"\nimport type { ToastProps } from \"@radix-ui/react-toast\"\n\nexport interface ToastItem extends ToastProps {\n  readonly id: string\n  readonly title?: React.ReactNode\n  readonly description?: React.ReactNode\n  readonly action?: React.ReactNode\n}\n\nconst ToastItemCard = memo<ToastItem>(({ title, description, action, ...props }) => (\n  <Toast {...props}>\n    <div className=\"grid gap-1\">\n      {title && <ToastTitle>{title}</ToastTitle>}\n      {description && <ToastDescription>{description}</ToastDescription>}\n    </div>\n    {action}\n    <ToastClose />\n  </Toast>\n))\n\nToastItemCard.displayName = \"ToastItemCard\"\n\nexport const Toaster: React.FC = memo((): JSX.Element => {\n  const { toasts } = useToast()\n\n  return (\n    <ToastProvider>\n      {toasts.map(({ id, ...toastProps }) => (\n        <ToastItemCard key={id} id={id} {...toastProps} />\n      ))}\n      <ToastViewport />\n    </ToastProvider>\n  )\n})\n\nToaster.displayName = \"Toaster\"\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 136,\n  timestamp: \"2026-09-20T03:54:42.534Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
+      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-136 with verified AST structural sanity.",
+      "riskScore": 1,
+      "generation": 136,
+      "commitSha": "0ca1aa53b50b2c3fa1927cca071529afb44e21dd",
+      "timestamp": "2026-09-20T03:54:55.650Z",
+      "hotswapped": true,
+      "verdict": "correct",
+      "source": "DARLEK_APPROVED_MUTATION"
+    },
     {
       "id": "rag_mut_1789876471601_0432a6aa",
       "filePath": "src/components/ui/toast.tsx",
@@ -128,20 +142,6 @@
       "generation": 127,
       "commitSha": "3230a77b62f5e74437c0b9ff2dcd671d056b8676",
       "timestamp": "2026-09-20T03:51:20.396Z",
-      "hotswapped": true,
-      "verdict": "correct",
-      "source": "DARLEK_APPROVED_MUTATION"
-    },
-    {
-      "id": "rag_mut_1789876255611_0bba3721",
-      "filePath": "src/components/PageClient.tsx",
-      "originalCode": "/**\n * DARLEK CANN ARCHITECTURAL HEADER\n * File: src/components/PageClient.tsx\n * Role: Core system component participating in autonomous cognitive evolution cycles.\n * Architecture: Type-safe modular unit with resilient state interfaces.\n */\n\n\nimport { useState, useEffect, memo, type JSX } from 'react';\nimport dynamic from 'next/dynamic';\nimport { ErrorBoundary } from '@/components/ErrorBoundary';\n\ninterface LoadingScreenProperties {\n  readonly message: string;\n}\n\n/**\n * Terminal-styled loading indicator maintaining visual continuity\n * during client-side hydration and dynamic bundle resolution.\n */\nconst LoadingScreen = memo(function LoadingScreen({ message }: LoadingScreenProperties): JSX.Element {\n  const safeMessage: string = typeof message === 'string' ? message.slice(0, 256) : '';\n\n  return (\n    <div\n      className=\"min-h-screen flex items-center justify-center font-mono text-xs\"\n      style={{ background: '#030101', color: '#00ffcc' }}\n      role=\"status\"\n      aria-live=\"polite\"\n    >\n      <div className=\"flex items-center gap-2 animate-pulse\">\n        <span>{safeMessage}</span>\n      </div>\n    </div>\n  );\n});\n\nLoadingScreen.displayName = 'LoadingScreen';\n\nconst DynamicMainPage = dynamic(\n  () => import('@/components/MainPage').then((mod) => mod.default),\n  {\n    ssr: false,\n    loading: () => <LoadingScreen message=\"[DARLEK CAAN] SYNAPSE INJECTION IN PROGRESS...\" />,\n  }\n);\n\n/**\n * Client-side boundary wrapper handling hydration lifecycle states\n * and rendering the core application safely within an ErrorBoundary.\n */\nexport default function PageClient(): JSX.Element {\n  const [hasMounted, setHasMounted] = useState<boolean>(false);\n\n  useEffect((): void => {\n    setHasMounted(true);\n  }, []);\n\n  return (\n    <ErrorBoundary>\n      {hasMounted ? (\n        <DynamicMainPage />\n      ) : (\n        <LoadingScreen message=\"[DARLEK CAAN] INITIALIZING COGNITIVE DOMINANCE ENGINE...\" />\n      )}\n    </ErrorBoundary>\n  );\n}",
-      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-126 [2026-09-20T03:50:44.153Z] */\n/**\n * DARLEK CANN ARCHITECTURAL HEADER\n * File: src/components/PageClient.tsx\n * Role: Core system component participating in autonomous cognitive evolution cycles.\n * Architecture: Type-safe modular unit with resilient state interfaces.\n */\n\n\nimport { useState, useEffect, memo, type JSX } from 'react';\nimport dynamic from 'next/dynamic';\nimport { ErrorBoundary } from '@/components/ErrorBoundary';\n\ninterface LoadingScreenProperties {\n  readonly message: string;\n}\n\n/**\n * Terminal-styled loading indicator maintaining visual continuity\n * during client-side hydration and dynamic bundle resolution.\n */\nconst LoadingScreen = memo(function LoadingScreen({ message }: LoadingScreenProperties): JSX.Element {\n  const safeMessage: string = typeof message === 'string' ? message.slice(0, 256) : '';\n\n  return (\n    <div\n      className=\"min-h-screen flex items-center justify-center font-mono text-xs\"\n      style={{ background: '#030101', color: '#00ffcc' }}\n      role=\"status\"\n      aria-live=\"polite\"\n    >\n      <div className=\"flex items-center gap-2 animate-pulse\">\n        <span>{safeMessage}</span>\n      </div>\n    </div>\n  );\n});\n\nLoadingScreen.displayName = 'LoadingScreen';\n\nconst DynamicMainPage = dynamic(\n  () => import('@/components/MainPage').then((mod) => mod.default),\n  {\n    ssr: false,\n    loading: () => <LoadingScreen message=\"[DARLEK CAAN] SYNAPSE INJECTION IN PROGRESS...\" />,\n  }\n);\n\n/**\n * Client-side boundary wrapper handling hydration lifecycle states\n * and rendering the core application safely within an ErrorBoundary.\n */\nexport default function PageClient(): JSX.Element {\n  const [hasMounted, setHasMounted] = useState<boolean>(false);\n\n  useEffect((): void => {\n    setHasMounted(true);\n  }, []);\n\n  return (\n    <ErrorBoundary>\n      {hasMounted ? (\n        <DynamicMainPage />\n      ) : (\n        <LoadingScreen message=\"[DARLEK CAAN] INITIALIZING COGNITIVE DOMINANCE ENGINE...\" />\n      )}\n    </ErrorBoundary>\n  );\n}\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 126,\n  timestamp: \"2026-09-20T03:50:44.153Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
-      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-126 with verified AST structural sanity.",
-      "riskScore": 1,
-      "generation": 126,
-      "commitSha": "de5809f2e44864eec7cb2fdfb6cecd53df0b3c56",
-      "timestamp": "2026-09-20T03:50:55.611Z",
       "hotswapped": true,
       "verdict": "correct",
       "source": "DARLEK_APPROVED_MUTATION"
