@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789878616893_a71bb989",
+    "type": "MUTATE",
+    "description": "[Batch 252/253] Proposed mutation for vite.config.ts (risk: LOW)",
+    "timestamp": "2026-09-20T04:30:16.893Z"
+  },
+  {
+    "id": "rag_log_1789878616892_1982b328",
+    "type": "MUTATE",
+    "description": "[Batch 252/253] Proposed mutation for vite.config.ts (risk: LOW)",
+    "timestamp": "2026-09-20T04:30:16.892Z"
+  },
+  {
+    "id": "rag_log_1789878615722_ef4e1d2f",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T04:30:15.722Z"
+  },
+  {
     "id": "rag_log_1789878607327_e04c4184",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "INFO",
     "description": "[NO-OP] Code saturation reached in batch for update_agents.sh",
     "timestamp": "2026-09-20T04:29:17.461Z"
-  },
-  {
-    "id": "rag_log_1789878557458_dd56e98f",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for update_agents.sh",
-    "timestamp": "2026-09-20T04:29:17.458Z"
-  },
-  {
-    "id": "rag_log_1789878555936_81a52d39",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T04:29:15.936Z"
-  },
-  {
-    "id": "rag_log_1789878547980_5a220309",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T04:29:07.980Z"
   }
 ]
