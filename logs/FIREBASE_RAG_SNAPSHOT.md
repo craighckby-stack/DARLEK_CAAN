@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:28:03.329Z`
+*Last Synchronized:* `2026-09-20T04:28:14.131Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,90 +14,104 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:28:11.063Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:28:11.063Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:28:11.062Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:28:11.062Z
+```
+
+### 3. `test-worker.ts` (Gen 216)
+*Source:* `MUTATION:test-worker.ts` | *Indexed:* `2026-09-20T04:28:11.050Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-216 [2026-09-20T04:27:58.352Z] */
+import { Worker, isMainThread, parentPort } from 'node:worker_threads';
+import process from 'node:process';
+
+/**
+ * Formats an unknown error caught in try/catch blocks into a readable message.
+ */
+function formatErrorMessage(error: unknown): string {
+  return e
+// ... [truncated]
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:28:10.276Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:28:10.276Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:28:10.275Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:28:10.275Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:28:09.593Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to test-worker.ts | TIME:2026-09-20T04:28:09.592Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:28:09.593Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to test-worker.ts | TIME:2026-09-20T04:28:09.593Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:28:09.312Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:28:09.311Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:28:00.239Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:28:00.238Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:58.833Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 245/253] Proposed mutation for test-worker.ts (risk: LOW) | TIME:2026-09-20T04:27:58.833Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:58.832Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-worker.ts`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `216`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-216 with verified AST structural sanity.
 ```typescript
-[LOG:MUTATE] [Batch 245/253] Proposed mutation for test-worker.ts (risk: LOW) | TIME:2026-09-20T04:27:58.832Z
-```
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-216 [2026-09-20T04:27:58.352Z] */
+import { Worker, isMainThread, parentPort } from 'node:worker_threads';
+import process from 'node:process';
 
-### 4. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:52.935Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:27:52.934Z
-```
-
-### 5. `test-propose.js` (Gen 215)
-*Source:* `MUTATION:test-propose.js` | *Indexed:* `2026-09-20T04:27:49.318Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-215 [2026-09-20T04:27:35.651Z] */
 /**
- * @file test-propose.js
- * @description Sovereign client script for proposing evolution payloads with defensive bounds checking and input validation.
- * @version 4.0.1
+ * Formats an unknown error caught in try/catch blocks into a readable message.
  */
-
-'use strict';
-
-/**
- * @typedef {Object} EvolutionPayload
- * @property {string} file
+function formatErrorMessage(error: unknown): string {
+  return e
 // ... [truncated]
 ```
 
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:48.980Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:27:48.980Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:48.979Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:27:48.979Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:48.033Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:27:48.033Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:48.032Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:27:48.032Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:47.114Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to test-propose.js | TIME:2026-09-20T04:27:47.113Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose.js`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `215`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-215 with verified AST structural sanity.
@@ -117,7 +131,7 @@
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose-import.js`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose-import.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `214`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-214 with verified AST structural sanity.
@@ -135,7 +149,7 @@ const proposalPayload = {
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose-header.js`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose-header.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `213`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-213 with verified AST structural sanity.
@@ -154,7 +168,7 @@ const proposalPayload = {
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-pdf.js`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-pdf.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `212`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-212 with verified AST structural sanity.
@@ -168,7 +182,7 @@ const proposalPayload = {
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-parse2.js`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-parse2.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `211`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-211 with verified AST structural sanity.
@@ -188,7 +202,7 @@ const proposalPayload = {
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-parse.ts`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-parse.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `210`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-210 with verified AST structural sanity.
@@ -206,7 +220,7 @@ export interface LlmAnalysisPayload {
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-models.js`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-models.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `209`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-209 with verified AST structural sanity.
@@ -224,7 +238,7 @@ async function main() {
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy3.js`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy3.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `208`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-208 with verified AST structural sanity.
@@ -242,7 +256,7 @@ async function main() {
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy2.js`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy2.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `207`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-207 with verified AST structural sanity.
@@ -256,22 +270,6 @@ async function main() {
 
 /**
  * Parses an
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy.js`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `206`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-206 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-206 [2026-09-20T04:24:01.493Z] */
-/**
- * EMG Core v49 Neural Code and Documentation Optimizer Engine
- * File Path: "test-greedy.js"
- * Optimization Goal: READABILITY - Focus on pristine modern idioms, descriptive naming, modular decomposition, and clean architectural clarity.
- */
-
-const MAX_INP
 // ... [truncated]
 ```
 
