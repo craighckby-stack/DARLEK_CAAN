@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789874691693_b4d4057b",
+    "type": "INFO",
+    "description": "[NO-OP] Code saturation reached in batch for rag/mutations_memory.json",
+    "timestamp": "2026-09-20T03:24:51.693Z"
+  },
+  {
+    "id": "rag_log_1789874691692_bc212b43",
+    "type": "INFO",
+    "description": "[NO-OP] Code saturation reached in batch for rag/mutations_memory.json",
+    "timestamp": "2026-09-20T03:24:51.692Z"
+  },
+  {
+    "id": "rag_log_1789874689714_831bfb27",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:24:49.714Z"
+  },
+  {
     "id": "rag_log_1789874681632_7ec18085",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 77/253] Proposed mutation for prisma/schema.prisma (risk: LOW)",
     "timestamp": "2026-09-20T03:23:56.107Z"
-  },
-  {
-    "id": "rag_log_1789874636106_0999785d",
-    "type": "MUTATE",
-    "description": "[Batch 77/253] Proposed mutation for prisma/schema.prisma (risk: LOW)",
-    "timestamp": "2026-09-20T03:23:56.106Z"
-  },
-  {
-    "id": "rag_log_1789874633246_f182c337",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:23:53.246Z"
-  },
-  {
-    "id": "rag_log_1789874624591_65092ad3",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for prisma/db-store.json",
-    "timestamp": "2026-09-20T03:23:44.591Z"
   }
 ]
