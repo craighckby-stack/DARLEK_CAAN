@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789883260535_8a0c764a",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:47:40.535Z"
+  },
+  {
     "id": "rag_log_1789883252905_91982b78",
     "type": "MUTATE",
     "description": "[Batch 131/253] Proposed mutation for src/app/page.tsx (risk: LOW)",
@@ -142,11 +148,5 @@
     "type": "RAG_WRITE",
     "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-11, ra...",
     "timestamp": "2026-09-20T05:46:52.399Z"
-  },
-  {
-    "id": "rag_log_1789883212396_7b9a7699",
-    "type": "HOTSWAP_OK",
-    "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-10 [Source: RAG_GENE_HOTSWAP].",
-    "timestamp": "2026-09-20T05:46:52.396Z"
   }
 ]

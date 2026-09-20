@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:47:35.985Z",
+    "generatedAt": "2026-09-20T05:47:43.550Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789883260535_8a0c764a",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:47:40.535Z"
+    },
     {
       "id": "rag_log_1789883252905_91982b78",
       "type": "MUTATE",
@@ -150,29 +156,9 @@
       "type": "RAG_WRITE",
       "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-11, ra...",
       "timestamp": "2026-09-20T05:46:52.399Z"
-    },
-    {
-      "id": "rag_log_1789883212396_7b9a7699",
-      "type": "HOTSWAP_OK",
-      "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-10 [Source: RAG_GENE_HOTSWAP].",
-      "timestamp": "2026-09-20T05:46:52.396Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-084bcafe",
-      "time": "15:44:36",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
-    {
-      "id": "dos-f3983524",
-      "time": "15:44:41",
-      "addr": "0x00522000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
     {
       "id": "dos-85c3e998",
       "time": "15:44:43",
@@ -858,6 +844,20 @@
       "addr": "0x0056A000",
       "tag": "AST_WATCH",
       "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-bb54502b",
+      "time": "15:47:39",
+      "addr": "0x0056C000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 371.9 KB (3.63%)."
+    },
+    {
+      "id": "dos-fd39bf23",
+      "time": "15:47:40",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }
