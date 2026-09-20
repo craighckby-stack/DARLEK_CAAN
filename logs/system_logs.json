@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:28:57.442Z",
+    "generatedAt": "2026-09-20T05:29:06.730Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789882143728_e7791554",
+      "type": "MUTATE",
+      "description": "[Batch 77/253] Proposed mutation for prisma/schema.prisma (risk: LOW)",
+      "timestamp": "2026-09-20T05:29:03.728Z"
+    },
+    {
+      "id": "rag_log_1789882143727_6dbe806f",
+      "type": "MUTATE",
+      "description": "[Batch 77/253] Proposed mutation for prisma/schema.prisma (risk: LOW)",
+      "timestamp": "2026-09-20T05:29:03.727Z"
+    },
+    {
+      "id": "rag_log_1789882142025_db3b0af1",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:29:02.025Z"
+    },
     {
       "id": "rag_log_1789882134440_89810305",
       "type": "LOG_SYNC",
@@ -138,55 +156,9 @@
       "type": "MUTATE",
       "description": "[Batch 74/253] Proposed mutation for patch.js (risk: LOW)",
       "timestamp": "2026-09-20T05:28:11.339Z"
-    },
-    {
-      "id": "rag_log_1789882091004_1b64db17",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:28:11.004Z"
-    },
-    {
-      "id": "rag_log_1789882082104_2fd9d5ea",
-      "type": "INFO",
-      "description": "[NO-OP] Code saturation reached in batch for package.json",
-      "timestamp": "2026-09-20T05:28:02.104Z"
-    },
-    {
-      "id": "rag_log_1789882082104_4d5e5fec",
-      "type": "INFO",
-      "description": "[NO-OP] Code saturation reached in batch for package.json",
-      "timestamp": "2026-09-20T05:28:02.104Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-4d427f72",
-      "time": "15:25:48",
-      "addr": "0x0034A000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
-    {
-      "id": "dos-b82c3f2d",
-      "time": "15:25:49",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-f1e1ce06",
-      "time": "15:25:50",
-      "addr": "0x0033A732",
-      "tag": "MUTATE",
-      "message": "[Batch 63/253] Proposed mutation for lib/env-validator.ts (risk: LOW)"
-    },
-    {
-      "id": "dos-d7a55356",
-      "time": "15:25:53",
-      "addr": "0x0034C000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 302.8 KB (2.96%)."
-    },
     {
       "id": "dos-97a4cf59",
       "time": "15:25:58",
@@ -858,6 +830,34 @@
       "addr": "0x002B4AF9",
       "tag": "LOCK_WAIT",
       "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-fa5f3d45",
+      "time": "15:29:00",
+      "addr": "0x0039A000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-c04af0d9",
+      "time": "15:29:02",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-849b6f62",
+      "time": "15:29:03",
+      "addr": "0x0087AD1F",
+      "tag": "MUTATE",
+      "message": "[Batch 77/253] Proposed mutation for prisma/schema.prisma (risk: LOW)"
+    },
+    {
+      "id": "dos-d961553e",
+      "time": "15:29:05",
+      "addr": "0x0039C000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 384.9 KB (3.76%)."
     }
   ]
 }
