@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:23:35.407Z",
+    "generatedAt": "2026-09-20T05:23:43.019Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789881820008_1d35bfc0",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:23:40.008Z"
+    },
     {
       "id": "rag_log_1789881812377_b4af507e",
       "type": "MUTATE",
@@ -150,29 +156,9 @@
       "type": "MUTATE",
       "description": "[Batch 53/253] Proposed mutation for fix_prompt4.js (risk: LOW)",
       "timestamp": "2026-09-20T05:22:40.475Z"
-    },
-    {
-      "id": "rag_log_1789881760473_09106115",
-      "type": "MUTATE",
-      "description": "[Batch 53/253] Proposed mutation for fix_prompt4.js (risk: LOW)",
-      "timestamp": "2026-09-20T05:22:40.473Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-8874e2ed",
-      "time": "15:20:31",
-      "addr": "0x0010B761",
-      "tag": "MUTATE",
-      "message": "[Batch 47/253] Proposed mutation for fix6.js (risk: LOW)"
-    },
-    {
-      "id": "dos-bec30f39",
-      "time": "15:20:31",
-      "addr": "0x002C6000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
     {
       "id": "dos-5bc33a4e",
       "time": "15:20:36",
@@ -858,6 +844,20 @@
       "addr": "0x00312000",
       "tag": "AST_WATCH",
       "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-6f9f6844",
+      "time": "15:23:39",
+      "addr": "0x00314000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 377.0 KB (3.68%)."
+    },
+    {
+      "id": "dos-6053e6b5",
+      "time": "15:23:40",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }
