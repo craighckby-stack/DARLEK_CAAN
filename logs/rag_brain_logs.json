@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789871950393_7b630228",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T02:39:10.393Z"
+  },
+  {
+    "id": "rag_log_1789871945341_7b785aa9",
+    "type": "SYSTEM",
+    "description": "System reboot initiated. Recycling cognitive engines and purging cache...",
+    "timestamp": "2026-09-20T02:39:05.341Z"
+  },
+  {
+    "id": "rag_log_1789871945340_75be82ab",
+    "type": "SYSTEM",
+    "description": "System reboot initiated. Recycling cognitive engines and purging cache...",
+    "timestamp": "2026-09-20T02:39:05.340Z"
+  },
+  {
     "id": "rag_log_1789871941600_7a55512a",
     "type": "CONNECT",
     "description": "Synced 29 user portfolios and 27 global architectures.",
@@ -130,23 +148,5 @@
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
     "timestamp": "2026-09-20T02:36:07.771Z"
-  },
-  {
-    "id": "rag_log_1789871746688_2dc5e280",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T02:35:46.688Z"
-  },
-  {
-    "id": "rag_log_1789871737572_8e1409dc",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T02:35:37.572Z"
-  },
-  {
-    "id": "rag_log_1789871728851_d0f20c47",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T02:35:28.851Z"
   }
 ]
