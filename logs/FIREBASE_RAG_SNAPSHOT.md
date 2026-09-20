@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:22:45.346Z`
+*Last Synchronized:* `2026-09-20T04:22:55.832Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,20 +14,41 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:22:52.802Z`
+
+```typescript
+[LOG:MUTATE] [Batch 232/253] Proposed mutation for tailwind.config.js (risk: LOW) | TIME:2026-09-20T04:22:52.801Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:22:52.798Z`
+
+```typescript
+[LOG:MUTATE] [Batch 232/253] Proposed mutation for tailwind.config.js (risk: LOW) | TIME:2026-09-20T04:22:52.798Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:22:50.742Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:22:50.742Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:22:42.332Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:22:42.330Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:22:42.326Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:22:42.326Z
 ```
 
-### 3. `src/utils/siphon.ts` (Gen 202)
+### 6. `src/utils/siphon.ts` (Gen 202)
 *Source:* `MUTATION:src/utils/siphon.ts` | *Indexed:* `2026-09-20T04:22:42.115Z`
 
 ```typescript
@@ -44,53 +65,32 @@ export interface SiphonSource {
 // ... [truncated]
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:22:41.449Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:22:41.449Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:22:41.448Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:22:41.448Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:22:40.067Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to src/utils/siphon.ts | TIME:2026-09-20T04:22:40.067Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:22:40.066Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to src/utils/siphon.ts | TIME:2026-09-20T04:22:40.066Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:22:38.888Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:22:38.887Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:22:28.489Z`
-
-```typescript
-[LOG:MUTATE] [Batch 231/253] Proposed mutation for src/utils/siphon.ts (risk: LOW) | TIME:2026-09-20T04:22:28.489Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:22:28.466Z`
-
-```typescript
-[LOG:MUTATE] [Batch 231/253] Proposed mutation for src/utils/siphon.ts (risk: LOW) | TIME:2026-09-20T04:22:28.466Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
