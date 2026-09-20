@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T02:51:14.105Z",
+    "generatedAt": "2026-09-20T02:51:24.108Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789872680136_39116b0e",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T02:51:20.136Z"
+    },
     {
       "id": "rag_log_1789872670341_6ea8fcd3",
       "type": "LOG_SYNC",
@@ -150,12 +156,6 @@
       "type": "MUTATE",
       "description": "[Batch 1/253] Proposed mutation for .github/PULL_REQUEST_TEMPLATE.md (risk: LOW)",
       "timestamp": "2026-09-20T02:49:39.325Z"
-    },
-    {
-      "id": "rag_log_1789872571542_6cb8fcb1",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:49:31.542Z"
     }
   ],
   "telemetryBuffer": [
@@ -463,6 +463,13 @@
     {
       "id": "dos-8dbe9d40",
       "time": "12:51:10",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-d6b514da",
+      "time": "12:51:20",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
