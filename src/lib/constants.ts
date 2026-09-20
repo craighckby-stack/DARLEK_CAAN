@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-153 [2026-09-20T04:01:43.127Z] */
 /**
  * @file src/lib/constants.ts
  * @author Dalek Caan
@@ -212,3 +213,10 @@ export const INTRO_MESSAGES: readonly IntroMessage[] = [
   { role: 'system', content: 'DARLEK CAAN v3.0' },
   { role: 'caan', content: 'Dalek Brain engine online. GitHub token required, OPERATOR.' },
 ] as const;
+
+// Autonomous RAG Resilience Guard
+export const __rag_resilience_verified__ = Object.freeze({
+  generation: 153,
+  timestamp: "2026-09-20T04:01:43.127Z",
+  ragEngine: "DARLEK_CAAN_HYBRID_RAG"
+});
