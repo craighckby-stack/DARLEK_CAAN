@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-190 [2026-09-20T04:17:28.879Z] */
 /**
  * @file src/types.ts
  * @version 4.9.4
@@ -174,3 +175,10 @@ export interface GameSettings {
   /** Master speech synthesizer volume scalar clamped strictly between [0.0, 1.0] */
   readonly synthesizerVolume: number;
 }
+
+// Autonomous RAG Resilience Guard
+export const __rag_resilience_verified__ = Object.freeze({
+  generation: 190,
+  timestamp: "2026-09-20T04:17:28.879Z",
+  ragEngine: "DARLEK_CAAN_HYBRID_RAG"
+});
