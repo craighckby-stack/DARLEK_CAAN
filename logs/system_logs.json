@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:33:37.040Z",
+    "generatedAt": "2026-09-20T05:33:45.727Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789882422663_f9044936",
+      "type": "MUTATE",
+      "description": "[Batch 93/253] Proposed mutation for src/app/api/README.md (risk: LOW)",
+      "timestamp": "2026-09-20T05:33:42.663Z"
+    },
+    {
+      "id": "rag_log_1789882422662_2a4e9c14",
+      "type": "MUTATE",
+      "description": "[Batch 93/253] Proposed mutation for src/app/api/README.md (risk: LOW)",
+      "timestamp": "2026-09-20T05:33:42.662Z"
+    },
+    {
+      "id": "rag_log_1789882421505_a1fba32c",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:33:41.505Z"
+    },
     {
       "id": "rag_log_1789882413312_239e41f8",
       "type": "HEALTH",
@@ -138,62 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T05:32:49.693Z"
-    },
-    {
-      "id": "rag_log_1789882369691_001a4a29",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:32:49.691Z"
-    },
-    {
-      "id": "rag_log_1789882369212_e7fd0f7e",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 4 passed, 0 failed",
-      "timestamp": "2026-09-20T05:32:49.212Z"
-    },
-    {
-      "id": "rag_log_1789882369203_ba122768",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 4 passed, 0 failed",
-      "timestamp": "2026-09-20T05:32:49.203Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-8c86aabe",
-      "time": "15:30:41",
-      "addr": "0x003C4000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 450.2 KB (4.4%)."
-    },
-    {
-      "id": "dos-0f2ce258",
-      "time": "15:30:42",
-      "addr": "0x0030E514",
-      "tag": "INFO",
-      "message": "[NO-OP] Code saturation reached in batch for remote_blobs.json"
-    },
-    {
-      "id": "dos-ceb2532f",
-      "time": "15:30:42",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-72da660b",
-      "time": "15:30:46",
-      "addr": "0x003C6000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
-    {
-      "id": "dos-6a94a985",
-      "time": "15:30:51",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-b8935d42",
       "time": "15:30:51",
@@ -858,6 +823,41 @@
       "addr": "0x0040C000",
       "tag": "MEM_POOL",
       "message": "Allocated quota: 10.00 MB. Used: 291.2 KB (2.84%)."
+    },
+    {
+      "id": "dos-18f7abaf",
+      "time": "15:33:39",
+      "addr": "0x0040E000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-7604f23d",
+      "time": "15:33:41",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-07596090",
+      "time": "15:33:42",
+      "addr": "0x006D3E75",
+      "tag": "MUTATE",
+      "message": "[Batch 93/253] Proposed mutation for src/app/api/README.md (risk: LOW)"
+    },
+    {
+      "id": "dos-90d77c91",
+      "time": "15:33:43",
+      "addr": "0x00410000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.72 MB."
+    },
+    {
+      "id": "dos-6668b68a",
+      "time": "15:33:43",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
     }
   ]
 }
