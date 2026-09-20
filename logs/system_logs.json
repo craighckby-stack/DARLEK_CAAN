@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:15:39.562Z",
+    "generatedAt": "2026-09-20T03:15:46.817Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789874143784_7a9d9f4a",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:15:43.784Z"
+    },
     {
       "id": "rag_log_1789874136520_cdef484c",
       "type": "LOG_SYNC",
@@ -150,22 +156,9 @@
       "type": "MUTATE",
       "description": "[Batch 58/253] Proposed mutation for fix_propose.js (risk: LOW)",
       "timestamp": "2026-09-20T03:12:25.966Z"
-    },
-    {
-      "id": "rag_log_1789873945964_6134602b",
-      "type": "MUTATE",
-      "description": "[Batch 58/253] Proposed mutation for fix_propose.js (risk: LOW)",
-      "timestamp": "2026-09-20T03:12:25.964Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-27717aea",
-      "time": "13:07:53",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-adb201dc",
       "time": "13:07:54",
@@ -855,6 +848,13 @@
     {
       "id": "dos-fc68b2ac",
       "time": "13:15:36",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-0a9cb198",
+      "time": "13:15:43",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
