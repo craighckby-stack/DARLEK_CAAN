@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789873186550_824dbd5a",
+    "type": "MUTATE",
+    "description": "[Batch 23/253] Proposed mutation for docs/ARCHITECTURE.md (risk: LOW)",
+    "timestamp": "2026-09-20T02:59:46.550Z"
+  },
+  {
+    "id": "rag_log_1789873186548_5be779b6",
+    "type": "MUTATE",
+    "description": "[Batch 23/253] Proposed mutation for docs/ARCHITECTURE.md (risk: LOW)",
+    "timestamp": "2026-09-20T02:59:46.548Z"
+  },
+  {
+    "id": "rag_log_1789873185236_d4d5b5d5",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T02:59:45.236Z"
+  },
+  {
     "id": "rag_log_1789873176411_8b2d6606",
     "type": "INFO",
     "description": "[NO-OP] Code saturation reached in batch for components.json",
@@ -130,23 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: PASSED — 5 passed, 0 failed",
     "timestamp": "2026-09-20T02:58:42.369Z"
-  },
-  {
-    "id": "rag_log_1789873122368_0fa35761",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T02:58:42.368Z"
-  },
-  {
-    "id": "rag_log_1789873121525_300f83b4",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T02:58:41.525Z"
-  },
-  {
-    "id": "rag_log_1789873121313_a507f258",
-    "type": "APPROVE",
-    "description": "Mutation applied to bun.lock",
-    "timestamp": "2026-09-20T02:58:41.313Z"
   }
 ]
