@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T01:53:14.465Z",
+    "generatedAt": "2026-09-20T01:53:22.991Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789869199981_66dcc543",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T01:53:19.981Z"
+    },
     {
       "id": "rag_log_1789869191461_cc8e565b",
       "type": "LOG_SYNC",
@@ -150,12 +156,6 @@
       "type": "ERROR",
       "description": "Network exception encountered: Unexpected token '<', \"<!doctype \"... is not valid JSON",
       "timestamp": "2026-09-20T00:25:24.421Z"
-    },
-    {
-      "id": "rag_log_1789863924418_26f1b436",
-      "type": "ERROR",
-      "description": "Network exception encountered: Unexpected token '<', \"<!doctype \"... is not valid JSON",
-      "timestamp": "2026-09-20T00:25:24.418Z"
     }
   ],
   "telemetryBuffer": [
@@ -309,6 +309,13 @@
     {
       "id": "dos-48655fa6",
       "time": "11:53:11",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-39765c85",
+      "time": "11:53:19",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
