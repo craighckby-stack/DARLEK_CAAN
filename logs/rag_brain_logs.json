@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789877514846_26b8b35c",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T04:11:54.846Z"
+  },
+  {
     "id": "rag_log_1789877506789_e3b215fa",
     "type": "MUTATE",
     "description": "[Batch 205/253] Proposed mutation for src/lib/safeStorage.ts (risk: LOW)",
@@ -142,11 +148,5 @@
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
     "timestamp": "2026-09-20T04:10:52.017Z"
-  },
-  {
-    "id": "rag_log_1789877443435_c5df6eb2",
-    "type": "MUTATE",
-    "description": "[Batch 202/253] Proposed mutation for src/lib/persistence-layer.ts (risk: LOW)",
-    "timestamp": "2026-09-20T04:10:43.435Z"
   }
 ]
