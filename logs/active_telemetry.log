@@ -1,12 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:25:01.511Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:25:10.994Z]
 ======================================================================
 
-[15:17:19] [0x00276000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
-[15:17:20] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:17:22] [0x00361834] [MUTATE    ] [Batch 37/253] Proposed mutation for fetch_repo.js (risk: LOW)
-[15:17:24] [0x00278000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.50 MB.
-[15:17:24] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
 [15:17:29] [0x0027A000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
 [15:17:30] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:17:32] [0x001CE61B] [APPROVE   ] Mutation applied to fetch_repo.js
@@ -253,3 +248,8 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:25:01.511Z]
 [15:24:58] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
 [15:24:58] [0x0048B62E] [HEALTH    ] Post-mutation analysis: 4 issues (2 high)
 [15:25:00] [0x00336000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
+[15:25:05] [0x00338000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.71 MB.
+[15:25:05] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
+[15:25:06] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:25:07] [0x0042162A] [MUTATE    ] [Batch 61/253] Proposed mutation for get_git_log.js (risk: LOW)
+[15:25:10] [0x0033A000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.

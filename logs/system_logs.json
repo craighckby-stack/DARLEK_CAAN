@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:25:01.511Z",
+    "generatedAt": "2026-09-20T05:25:10.994Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789881907990_539c1c31",
+      "type": "MUTATE",
+      "description": "[Batch 61/253] Proposed mutation for get_git_log.js (risk: LOW)",
+      "timestamp": "2026-09-20T05:25:07.990Z"
+    },
+    {
+      "id": "rag_log_1789881907988_22477b1d",
+      "type": "MUTATE",
+      "description": "[Batch 61/253] Proposed mutation for get_git_log.js (risk: LOW)",
+      "timestamp": "2026-09-20T05:25:07.988Z"
+    },
+    {
+      "id": "rag_log_1789881906496_3e94cb07",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:25:06.496Z"
+    },
     {
       "id": "rag_log_1789881898346_c2ee034e",
       "type": "HEALTH",
@@ -138,62 +156,9 @@
       "type": "INFO",
       "description": "[NO-OP] Code saturation reached in batch for fix_propose.js",
       "timestamp": "2026-09-20T05:24:17.128Z"
-    },
-    {
-      "id": "rag_log_1789881857127_0c2cb34f",
-      "type": "INFO",
-      "description": "[NO-OP] Code saturation reached in batch for fix_propose.js",
-      "timestamp": "2026-09-20T05:24:17.127Z"
-    },
-    {
-      "id": "rag_log_1789881848111_09d7b776",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:24:08.111Z"
-    },
-    {
-      "id": "rag_log_1789881848110_89aa141b",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:24:08.110Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-7a3c79fe",
-      "time": "15:21:57",
-      "addr": "0x005C2889",
-      "tag": "MUTATE",
-      "message": "[Batch 51/253] Proposed mutation for fix_prompt2.js (risk: LOW)"
-    },
-    {
-      "id": "dos-7c800156",
-      "time": "15:21:58",
-      "addr": "0x002EA000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
-    {
-      "id": "dos-f114d42f",
-      "time": "15:22:03",
-      "addr": "0x002EC000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 343.7 KB (3.36%)."
-    },
-    {
-      "id": "dos-01269313",
-      "time": "15:22:06",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-90781e6f",
-      "time": "15:22:07",
-      "addr": "0x002EE000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
     {
       "id": "dos-b29b4e01",
       "time": "15:22:08",
@@ -858,6 +823,41 @@
       "addr": "0x00336000",
       "tag": "SANITY_OK",
       "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-b5f7b3bd",
+      "time": "15:25:05",
+      "addr": "0x00338000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.71 MB."
+    },
+    {
+      "id": "dos-f5828453",
+      "time": "15:25:05",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-da70d4a2",
+      "time": "15:25:06",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-2b5ac261",
+      "time": "15:25:07",
+      "addr": "0x0042162A",
+      "tag": "MUTATE",
+      "message": "[Batch 61/253] Proposed mutation for get_git_log.js (risk: LOW)"
+    },
+    {
+      "id": "dos-78a68e3f",
+      "time": "15:25:10",
+      "addr": "0x0033A000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
     }
   ]
 }
