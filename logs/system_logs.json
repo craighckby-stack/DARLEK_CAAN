@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:23:04.381Z",
+    "generatedAt": "2026-09-20T05:23:14.204Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789881791198_b1429a95",
+      "type": "MUTATE",
+      "description": "[Batch 55/253] Proposed mutation for fix_prompt6.js (risk: LOW)",
+      "timestamp": "2026-09-20T05:23:11.198Z"
+    },
+    {
+      "id": "rag_log_1789881791197_7bf1d971",
+      "type": "MUTATE",
+      "description": "[Batch 55/253] Proposed mutation for fix_prompt6.js (risk: LOW)",
+      "timestamp": "2026-09-20T05:23:11.197Z"
+    },
+    {
+      "id": "rag_log_1789881789153_84cfdf6c",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:23:09.153Z"
+    },
     {
       "id": "rag_log_1789881781350_756dea15",
       "type": "LOG_SYNC",
@@ -138,62 +156,9 @@
       "type": "MUTATE",
       "description": "[Batch 52/253] Proposed mutation for fix_prompt3.js (risk: LOW)",
       "timestamp": "2026-09-20T05:22:18.696Z"
-    },
-    {
-      "id": "rag_log_1789881738654_ad840c1e",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:22:18.654Z"
-    },
-    {
-      "id": "rag_log_1789881729534_b2e812eb",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:22:09.534Z"
-    },
-    {
-      "id": "rag_log_1789881729533_86b1ce79",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:22:09.533Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-a26a8026",
-      "time": "15:19:59",
-      "addr": "0x0073EE1B",
-      "tag": "APPROVE",
-      "message": "Mutation applied to fix4.js"
-    },
-    {
-      "id": "dos-a74dd93b",
-      "time": "15:20:00",
-      "addr": "0x0074FAF3",
-      "tag": "HEALTH",
-      "message": "Auto-test: REJECTED — 4 passed, 1 failed"
-    },
-    {
-      "id": "dos-e491bc98",
-      "time": "15:20:00",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-0bebffeb",
-      "time": "15:20:03",
-      "addr": "0x002BA000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
-    {
-      "id": "dos-bbe580a5",
-      "time": "15:20:07",
-      "addr": "0x002BC000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 359.7 KB (3.51%)."
-    },
     {
       "id": "dos-417e0c90",
       "time": "15:20:09",
@@ -858,6 +823,41 @@
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-c8a53361",
+      "time": "15:23:05",
+      "addr": "0x00306000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-756eea3f",
+      "time": "15:23:09",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-df1fd640",
+      "time": "15:23:10",
+      "addr": "0x00308000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.63 MB."
+    },
+    {
+      "id": "dos-da6a72e5",
+      "time": "15:23:10",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-e571df0c",
+      "time": "15:23:11",
+      "addr": "0x0014F557",
+      "tag": "MUTATE",
+      "message": "[Batch 55/253] Proposed mutation for fix_prompt6.js (risk: LOW)"
     }
   ]
 }
