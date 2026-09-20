@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:30:11.886Z",
+    "generatedAt": "2026-09-20T05:30:21.131Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789882218108_61cd9bf0",
+      "type": "MUTATE",
+      "description": "[Batch 82/253] Proposed mutation for remote_App.tsx (risk: LOW)",
+      "timestamp": "2026-09-20T05:30:18.108Z"
+    },
+    {
+      "id": "rag_log_1789882218107_6142f5f3",
+      "type": "MUTATE",
+      "description": "[Batch 82/253] Proposed mutation for remote_App.tsx (risk: LOW)",
+      "timestamp": "2026-09-20T05:30:18.107Z"
+    },
+    {
+      "id": "rag_log_1789882217382_72f2a7a8",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:30:17.382Z"
+    },
     {
       "id": "rag_log_1789882208857_939f1a53",
       "type": "INFO",
@@ -138,62 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T05:29:15.706Z"
-    },
-    {
-      "id": "rag_log_1789882155062_5b4d59f5",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:29:15.062Z"
-    },
-    {
-      "id": "rag_log_1789882155061_d51950bb",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:29:15.061Z"
-    },
-    {
-      "id": "rag_log_1789882154421_08b1ebe6",
-      "type": "APPROVE",
-      "description": "Mutation applied to prisma/schema.prisma",
-      "timestamp": "2026-09-20T05:29:14.421Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-f9dba8fe",
-      "time": "15:26:53",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-06fa2712",
-      "time": "15:26:55",
-      "addr": "0x00366000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
-    {
-      "id": "dos-b4b3e344",
-      "time": "15:26:57",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-cc19e332",
-      "time": "15:27:00",
-      "addr": "0x00368000",
-      "tag": "RAG_INDEX",
-      "message": "RAG memory vector aligned. Total chunks: 15, Free: 8.98 MB."
-    },
-    {
-      "id": "dos-1603cfb8",
-      "time": "15:27:00",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
     {
       "id": "dos-b6087a6b",
       "time": "15:27:03",
@@ -858,6 +823,41 @@
       "addr": "0x003C1780",
       "tag": "INFO",
       "message": "[NO-OP] Code saturation reached in batch for rag/rag_knowledge_base.json"
+    },
+    {
+      "id": "dos-2775ad5c",
+      "time": "15:30:12",
+      "addr": "0x003B8000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.59 MB."
+    },
+    {
+      "id": "dos-398205f2",
+      "time": "15:30:12",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-a15b397e",
+      "time": "15:30:17",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-690e0824",
+      "time": "15:30:17",
+      "addr": "0x003BA000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-2ffc18ba",
+      "time": "15:30:18",
+      "addr": "0x00622D93",
+      "tag": "MUTATE",
+      "message": "[Batch 82/253] Proposed mutation for remote_App.tsx (risk: LOW)"
     }
   ]
 }
