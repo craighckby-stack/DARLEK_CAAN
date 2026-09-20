@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789873143753_3a045711",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T02:59:03.753Z"
+  },
+  {
+    "id": "rag_log_1789873143571_bbf037b9",
+    "type": "MUTATE",
+    "description": "[Batch 20/253] Proposed mutation for check_github_page.js (risk: LOW)",
+    "timestamp": "2026-09-20T02:59:03.570Z"
+  },
+  {
+    "id": "rag_log_1789873143533_87619398",
+    "type": "MUTATE",
+    "description": "[Batch 20/253] Proposed mutation for check_github_page.js (risk: LOW)",
+    "timestamp": "2026-09-20T02:59:03.533Z"
+  },
+  {
     "id": "rag_log_1789873133323_fc2a2402",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 17/253] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW)",
     "timestamp": "2026-09-20T02:58:04.636Z"
-  },
-  {
-    "id": "rag_log_1789873084634_2b6b2af9",
-    "type": "MUTATE",
-    "description": "[Batch 17/253] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW)",
-    "timestamp": "2026-09-20T02:58:04.634Z"
-  },
-  {
-    "id": "rag_log_1789873083426_92dd3407",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T02:58:03.426Z"
-  },
-  {
-    "id": "rag_log_1789873075112_9d72283a",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T02:57:55.112Z"
   }
 ]
