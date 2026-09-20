@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789876174426_41990bdf",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:49:34.426Z"
+  },
+  {
+    "id": "rag_log_1789876172625_9d50b635",
+    "type": "MUTATE",
+    "description": "[Batch 148/253] Proposed mutation for src/components/MutationDiffView.tsx (risk: LOW)",
+    "timestamp": "2026-09-20T03:49:32.625Z"
+  },
+  {
+    "id": "rag_log_1789876172622_a0dfda97",
+    "type": "MUTATE",
+    "description": "[Batch 148/253] Proposed mutation for src/components/MutationDiffView.tsx (risk: LOW)",
+    "timestamp": "2026-09-20T03:49:32.622Z"
+  },
+  {
     "id": "rag_log_1789876166519_121dcdf5",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 145/253] Proposed mutation for src/components/HmrErrorHandler.tsx (risk: LOW)",
     "timestamp": "2026-09-20T03:48:32.858Z"
-  },
-  {
-    "id": "rag_log_1789876112849_04f7f795",
-    "type": "MUTATE",
-    "description": "[Batch 145/253] Proposed mutation for src/components/HmrErrorHandler.tsx (risk: LOW)",
-    "timestamp": "2026-09-20T03:48:32.849Z"
-  },
-  {
-    "id": "rag_log_1789876112140_deac44c2",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:48:32.140Z"
-  },
-  {
-    "id": "rag_log_1789876102389_bb9a85d3",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T03:48:22.389Z"
   }
 ]
