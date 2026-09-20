@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:53:03.131Z",
+    "generatedAt": "2026-09-20T03:53:11.585Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789876388534_e7c462fd",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:53:08.534Z"
+    },
+    {
+      "id": "rag_log_1789876387512_894b7009",
+      "type": "MUTATE",
+      "description": "[Batch 157/253] Proposed mutation for src/components/SoundEngine.ts (risk: LOW)",
+      "timestamp": "2026-09-20T03:53:07.512Z"
+    },
+    {
+      "id": "rag_log_1789876387508_317f1afc",
+      "type": "MUTATE",
+      "description": "[Batch 157/253] Proposed mutation for src/components/SoundEngine.ts (risk: LOW)",
+      "timestamp": "2026-09-20T03:53:07.508Z"
+    },
     {
       "id": "rag_log_1789876380124_ac23290f",
       "type": "LOG_SYNC",
@@ -138,41 +156,9 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T03:52:13.177Z"
-    },
-    {
-      "id": "rag_log_1789876328755_70c53dc5",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:52:08.755Z"
-    },
-    {
-      "id": "rag_log_1789876328754_0c5e582b",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:52:08.754Z"
-    },
-    {
-      "id": "rag_log_1789876327947_71a7a2c9",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T03:52:07.947Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-b7f5d983",
-      "time": "13:46:40",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-4898c971",
-      "time": "13:46:44",
-      "addr": "0x007CDA35",
-      "tag": "MUTATE",
-      "message": "[Batch 140/253] Proposed mutation for src/components/ErrorBoundary.tsx (risk: LOW)"
-    },
     {
       "id": "dos-dc80230e",
       "time": "13:46:50",
@@ -855,6 +841,20 @@
     {
       "id": "dos-38581352",
       "time": "13:53:00",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-143951fb",
+      "time": "13:53:07",
+      "addr": "0x0064E6FE",
+      "tag": "MUTATE",
+      "message": "[Batch 157/253] Proposed mutation for src/components/SoundEngine.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-0dafd43a",
+      "time": "13:53:08",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
