@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:30:01.893Z`
+*Last Synchronized:* `2026-09-20T05:30:11.886Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,81 +14,73 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:30:08.857Z`
+
+```typescript
+[LOG:INFO] [NO-OP] Code saturation reached in batch for rag/rag_knowledge_base.json | TIME:2026-09-20T05:30:08.857Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:30:08.856Z`
+
+```typescript
+[LOG:INFO] [NO-OP] Code saturation reached in batch for rag/rag_knowledge_base.json | TIME:2026-09-20T05:30:08.855Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:30:07.514Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:30:07.513Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:58.868Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:29:58.868Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:58.553Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for rag/mutations_memory.json | TIME:2026-09-20T05:29:58.553Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:58.552Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for rag/mutations_memory.json | TIME:2026-09-20T05:29:58.552Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:50.256Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:29:50.255Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:48.177Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for rag/learning_postmortems.json | TIME:2026-09-20T05:29:48.177Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:48.176Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for rag/learning_postmortems.json | TIME:2026-09-20T05:29:48.175Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:41.938Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:29:41.937Z
-```
-
-### 8. `public/placeholder.txt` (Gen 63)
-*Source:* `MUTATION:public/placeholder.txt` | *Indexed:* `2026-09-20T05:29:38.497Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-63 [2026-09-20T05:29:26.265Z] */
-# Public Assets Directory (`public/`)
-
-> **EMG Core v49 Execution:** Optimized for rapid comprehension, clean asset governance, and high-performance frontend delivery.
-
-## Executive Summary
-
-The `public/` directory stores raw, unprocessed static assets—including
-// ... [truncated]
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:38.288Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:29:38.288Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:29:38.287Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:29:38.287Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
