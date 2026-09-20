@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:59:37.138Z",
+    "generatedAt": "2026-09-20T03:59:44.773Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789876781736_367614bd",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:59:41.736Z"
+    },
     {
       "id": "rag_log_1789876773810_eaa9475c",
       "type": "HEALTH",
@@ -150,22 +156,9 @@
       "type": "HEALTH",
       "description": "Auto-test: PASSED — 5 passed, 0 failed",
       "timestamp": "2026-09-20T03:58:47.212Z"
-    },
-    {
-      "id": "rag_log_1789876726573_031d016d",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/index.css",
-      "timestamp": "2026-09-20T03:58:46.573Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-603f66b1",
-      "time": "13:53:18",
-      "addr": "0x0082721A",
-      "tag": "APPROVE",
-      "message": "Mutation applied to src/components/SoundEngine.ts"
-    },
     {
       "id": "dos-7c1538a3",
       "time": "13:53:19",
@@ -858,6 +851,13 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-52538be6",
+      "time": "13:59:41",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }
