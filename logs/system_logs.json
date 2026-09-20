@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:33:01.844Z",
+    "generatedAt": "2026-09-20T05:33:09.522Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789882386456_17a4a12c",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:33:06.456Z"
+    },
     {
       "id": "rag_log_1789882378807_c2a9e74d",
       "type": "MUTATE",
@@ -150,36 +156,9 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T05:32:08.145Z"
-    },
-    {
-      "id": "rag_log_1789882326325_f628a866",
-      "type": "MUTATE",
-      "description": "[Batch 88/253] Proposed mutation for restore_repo_fast.js (risk: LOW)",
-      "timestamp": "2026-09-20T05:32:06.325Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-82860286",
-      "time": "15:29:58",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-57314101",
-      "time": "15:30:03",
-      "addr": "0x003B4000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 420.1 KB (4.1%)."
-    },
-    {
-      "id": "dos-0dea5924",
-      "time": "15:30:07",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-ee02df4f",
       "time": "15:30:07",
@@ -858,6 +837,27 @@
       "addr": "0x003FE000",
       "tag": "SANITY_OK",
       "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-432e96c1",
+      "time": "15:33:05",
+      "addr": "0x00400000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.73 MB."
+    },
+    {
+      "id": "dos-a8f33990",
+      "time": "15:33:05",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-b60e4b7b",
+      "time": "15:33:06",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }

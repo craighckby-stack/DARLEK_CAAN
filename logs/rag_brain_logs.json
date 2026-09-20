@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789882386456_17a4a12c",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:33:06.456Z"
+  },
+  {
     "id": "rag_log_1789882378807_c2a9e74d",
     "type": "MUTATE",
     "description": "[Batch 91/253] Proposed mutation for src/App.tsx (risk: LOW)",
@@ -142,11 +148,5 @@
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
     "timestamp": "2026-09-20T05:32:08.145Z"
-  },
-  {
-    "id": "rag_log_1789882326325_f628a866",
-    "type": "MUTATE",
-    "description": "[Batch 88/253] Proposed mutation for restore_repo_fast.js (risk: LOW)",
-    "timestamp": "2026-09-20T05:32:06.325Z"
   }
 ]
