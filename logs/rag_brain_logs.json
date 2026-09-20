@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789881609964_fe0a0b8f",
+    "type": "MUTATE",
+    "description": "[Batch 46/253] Proposed mutation for fix5.js (risk: LOW)",
+    "timestamp": "2026-09-20T05:20:09.964Z"
+  },
+  {
+    "id": "rag_log_1789881609963_fc094a8c",
+    "type": "MUTATE",
+    "description": "[Batch 46/253] Proposed mutation for fix5.js (risk: LOW)",
+    "timestamp": "2026-09-20T05:20:09.963Z"
+  },
+  {
+    "id": "rag_log_1789881609960_36e9612d",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:20:09.960Z"
+  },
+  {
     "id": "rag_log_1789881600610_a6f3678d",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "INFO",
     "description": "[NO-OP] Code saturation reached in batch for fix2.js",
     "timestamp": "2026-09-20T05:19:18.226Z"
-  },
-  {
-    "id": "rag_log_1789881557406_0b25edc3",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:19:17.406Z"
-  },
-  {
-    "id": "rag_log_1789881548792_858298be",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T05:19:08.792Z"
-  },
-  {
-    "id": "rag_log_1789881548791_dac53373",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T05:19:08.791Z"
   }
 ]
