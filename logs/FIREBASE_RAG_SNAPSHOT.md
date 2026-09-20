@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T00:25:27.431Z`
+*Last Synchronized:* `2026-09-20T00:25:37.897Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,34 +14,62 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:34.891Z`
+
+```typescript
+[LOG:CONNECT] Synced 29 user portfolios and 27 global architectures. | TIME:2026-09-20T00:25:34.891Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:34.889Z`
+
+```typescript
+[LOG:CONNECT] Synced 29 user portfolios and 27 global architectures. | TIME:2026-09-20T00:25:34.888Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:30.675Z`
+
+```typescript
+[LOG:SYSTEM] Bypassed access portal: Autonomous cognitive pipeline initiated with local cyber core modules. | TIME:2026-09-20T00:25:30.675Z
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:30.672Z`
+
+```typescript
+[LOG:SYSTEM] Bypassed access portal: Autonomous cognitive pipeline initiated with local cyber core modules. | TIME:2026-09-20T00:25:30.671Z
+```
+
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:24.421Z`
 
 ```typescript
 [LOG:ERROR] Network exception encountered: Unexpected token '<', "<!doctype "... is not valid JSON | TIME:2026-09-20T00:25:24.421Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:24.419Z`
 
 ```typescript
 [LOG:ERROR] Network exception encountered: Unexpected token '<', "<!doctype "... is not valid JSON | TIME:2026-09-20T00:25:24.418Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:24.173Z`
 
 ```typescript
 [LOG:CONNECT] Verifying GitHub access key... | TIME:2026-09-20T00:25:24.173Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:24.167Z`
 
 ```typescript
 [LOG:CONNECT] Verifying GitHub access key... | TIME:2026-09-20T00:25:24.166Z
 ```
 
-### 5. `assets/.aistudio/SECURITY_PROTOCOL.md` (Gen 16)
+### 9. `assets/.aistudio/SECURITY_PROTOCOL.md` (Gen 16)
 *Source:* `REJECTED_MUTATION:assets/.aistudio/SECURITY_PROTOCOL.md` | *Indexed:* `2026-09-20T00:24:52.986Z`
 
 ```typescript
@@ -56,39 +84,11 @@
 // ... [truncated]
 ```
 
-### 6. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:24:51.484Z`
 
 ```typescript
 [LOG:REJECT] Coherence Gate blocked mutation for assets/.aistudio/SECURITY_PROTOCOL.md. Logged to Firebase as 'wrong' failure exemplar. | TIME:2026-09-20T00:24:51.484Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:24:51.483Z`
-
-```typescript
-[LOG:REJECT] Coherence Gate blocked mutation for assets/.aistudio/SECURITY_PROTOCOL.md. Logged to Firebase as 'wrong' failure exemplar. | TIME:2026-09-20T00:24:51.482Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:54:52.298Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-19T22:54:52.297Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:54:49.373Z`
-
-```typescript
-[LOG:MUTATE] [Batch 17/243] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW) | TIME:2026-09-19T22:54:49.372Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-19T22:54:49.359Z`
-
-```typescript
-[LOG:MUTATE] [Batch 17/243] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW) | TIME:2026-09-19T22:54:49.358Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
