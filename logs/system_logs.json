@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:30:45.258Z",
+    "generatedAt": "2026-09-20T05:30:54.829Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789882251764_40fe3539",
+      "type": "MUTATE",
+      "description": "[Batch 84/253] Proposed mutation for remote_main.tsx (risk: LOW)",
+      "timestamp": "2026-09-20T05:30:51.764Z"
+    },
+    {
+      "id": "rag_log_1789882251763_114a2b09",
+      "type": "MUTATE",
+      "description": "[Batch 84/253] Proposed mutation for remote_main.tsx (risk: LOW)",
+      "timestamp": "2026-09-20T05:30:51.763Z"
+    },
+    {
+      "id": "rag_log_1789882251026_79e7de56",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:30:51.026Z"
+    },
     {
       "id": "rag_log_1789882242242_72a67b0b",
       "type": "LOG_SYNC",
@@ -138,62 +156,9 @@
       "type": "INFO",
       "description": "[NO-OP] Code saturation reached in batch for rag/learning_postmortems.json",
       "timestamp": "2026-09-20T05:29:48.177Z"
-    },
-    {
-      "id": "rag_log_1789882188175_0ffef35e",
-      "type": "INFO",
-      "description": "[NO-OP] Code saturation reached in batch for rag/learning_postmortems.json",
-      "timestamp": "2026-09-20T05:29:48.175Z"
-    },
-    {
-      "id": "rag_log_1789882181937_17d43315",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:29:41.937Z"
-    },
-    {
-      "id": "rag_log_1789882178288_eed53292",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:29:38.288Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-36297846",
-      "time": "15:27:33",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-42071065",
-      "time": "15:27:33",
-      "addr": "0x0013EF82",
-      "tag": "INFO",
-      "message": "[NO-OP] Code saturation reached in batch for logs/system_logs.json"
-    },
-    {
-      "id": "dos-9eb81266",
-      "time": "15:27:34",
-      "addr": "0x00376000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
-    {
-      "id": "dos-dce52721",
-      "time": "15:27:39",
-      "addr": "0x00378000",
-      "tag": "RAG_INDEX",
-      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.15 MB."
-    },
-    {
-      "id": "dos-a4626ede",
-      "time": "15:27:39",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
     {
       "id": "dos-8ab8400c",
       "time": "15:27:42",
@@ -858,6 +823,41 @@
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-72da660b",
+      "time": "15:30:46",
+      "addr": "0x003C6000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-6a94a985",
+      "time": "15:30:51",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-b8935d42",
+      "time": "15:30:51",
+      "addr": "0x003C8000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.56 MB."
+    },
+    {
+      "id": "dos-f2c64aea",
+      "time": "15:30:51",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-fe86d670",
+      "time": "15:30:51",
+      "addr": "0x0058AA75",
+      "tag": "MUTATE",
+      "message": "[Batch 84/253] Proposed mutation for remote_main.tsx (risk: LOW)"
     }
   ]
 }
