@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T04:20:09.646Z",
+    "generatedAt": "2026-09-20T04:20:18.665Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789878015576_f635fe6a",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T04:20:15.576Z"
+    },
+    {
+      "id": "rag_log_1789878014245_007fbd8f",
+      "type": "MUTATE",
+      "description": "[Batch 226/253] Proposed mutation for src/types/orchestrator.d.ts (risk: LOW)",
+      "timestamp": "2026-09-20T04:20:14.245Z"
+    },
+    {
+      "id": "rag_log_1789878014243_56c06031",
+      "type": "MUTATE",
+      "description": "[Batch 226/253] Proposed mutation for src/types/orchestrator.d.ts (risk: LOW)",
+      "timestamp": "2026-09-20T04:20:14.243Z"
+    },
     {
       "id": "rag_log_1789878006573_73c1d316",
       "type": "LOG_SYNC",
@@ -138,41 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T04:19:15.557Z"
-    },
-    {
-      "id": "rag_log_1789877955556_6d4f4202",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T04:19:15.556Z"
-    },
-    {
-      "id": "rag_log_1789877954736_a6362214",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T04:19:14.736Z"
-    },
-    {
-      "id": "rag_log_1789877954735_7b3542dd",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T04:19:14.735Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-3effa82d",
-      "time": "14:13:54",
-      "addr": "0x005D63E0",
-      "tag": "APPROVE",
-      "message": "Mutation applied to src/lib/scanner.ts"
-    },
-    {
-      "id": "dos-3f04eede",
-      "time": "14:13:55",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
     {
       "id": "dos-303afab2",
       "time": "14:13:56",
@@ -855,6 +841,20 @@
     {
       "id": "dos-8332cdb9",
       "time": "14:20:06",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-150cd9e9",
+      "time": "14:20:14",
+      "addr": "0x003739F1",
+      "tag": "MUTATE",
+      "message": "[Batch 226/253] Proposed mutation for src/types/orchestrator.d.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-538e9205",
+      "time": "14:20:15",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
