@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789874552354_4d357d1d",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T03:22:32.354Z"
+  },
+  {
+    "id": "rag_log_1789874552353_e4dcb704",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T03:22:32.353Z"
+  },
+  {
+    "id": "rag_log_1789874551434_f0fd9cf4",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T03:22:31.434Z"
+  },
+  {
+    "id": "rag_log_1789874551433_90c1dc6e",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T03:22:31.433Z"
+  },
+  {
+    "id": "rag_log_1789874551054_1df1be43",
+    "type": "APPROVE",
+    "description": "Mutation applied to metadata.json",
+    "timestamp": "2026-09-20T03:22:31.054Z"
+  },
+  {
+    "id": "rag_log_1789874551053_020b16ff",
+    "type": "APPROVE",
+    "description": "Mutation applied to metadata.json",
+    "timestamp": "2026-09-20T03:22:31.053Z"
+  },
+  {
+    "id": "rag_log_1789874550132_00eeb6b5",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:22:30.132Z"
+  },
+  {
     "id": "rag_log_1789874541835_c391f3e5",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -106,47 +148,5 @@
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
     "timestamp": "2026-09-20T03:20:43.664Z"
-  },
-  {
-    "id": "rag_log_1789874440462_94da4094",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for logs/mutations.json",
-    "timestamp": "2026-09-20T03:20:40.461Z"
-  },
-  {
-    "id": "rag_log_1789874440455_664767f6",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for logs/mutations.json",
-    "timestamp": "2026-09-20T03:20:40.455Z"
-  },
-  {
-    "id": "rag_log_1789874434408_86ee83ec",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:20:34.408Z"
-  },
-  {
-    "id": "rag_log_1789874430150_73bc7a64",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for logs/learning_logs.json",
-    "timestamp": "2026-09-20T03:20:30.150Z"
-  },
-  {
-    "id": "rag_log_1789874430143_6a81b84b",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for logs/learning_logs.json",
-    "timestamp": "2026-09-20T03:20:30.143Z"
-  },
-  {
-    "id": "rag_log_1789874424701_a196b5bc",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:20:24.701Z"
-  },
-  {
-    "id": "rag_log_1789874420686_4163c4e5",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T03:20:20.686Z"
   }
 ]
