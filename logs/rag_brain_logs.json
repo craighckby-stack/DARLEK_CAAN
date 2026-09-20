@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789880665007_c03ea29b",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:04:25.007Z"
+  },
+  {
+    "id": "rag_log_1789880663375_f65cb76c",
+    "type": "MUTATE",
+    "description": "[Batch 4/253] Proposed mutation for .next_dev/cache/webpack/client-development/8.pack.gz_ (risk: LOW)",
+    "timestamp": "2026-09-20T05:04:23.375Z"
+  },
+  {
+    "id": "rag_log_1789880663323_0bd2ec04",
+    "type": "MUTATE",
+    "description": "[Batch 4/253] Proposed mutation for .next_dev/cache/webpack/client-development/8.pack.gz_ (risk: LOW)",
+    "timestamp": "2026-09-20T05:04:23.323Z"
+  },
+  {
     "id": "rag_log_1789880649644_10f644b1",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 2/253] Proposed mutation for .gitignore (risk: LOW)",
     "timestamp": "2026-09-20T05:02:53.849Z"
-  },
-  {
-    "id": "rag_log_1789880573846_3707664b",
-    "type": "MUTATE",
-    "description": "[Batch 2/253] Proposed mutation for .gitignore (risk: LOW)",
-    "timestamp": "2026-09-20T05:02:53.846Z"
-  },
-  {
-    "id": "rag_log_1789880566485_de216208",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:02:46.485Z"
-  },
-  {
-    "id": "rag_log_1789880562274_f85e1090",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T05:02:42.274Z"
   }
 ]
