@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789880549793_19b76e5f",
+    "type": "MUTATE",
+    "description": "[Batch 1/253] Proposed mutation for .github/PULL_REQUEST_TEMPLATE.md (risk: LOW)",
+    "timestamp": "2026-09-20T05:02:29.793Z"
+  },
+  {
+    "id": "rag_log_1789880549791_8971aaca",
+    "type": "MUTATE",
+    "description": "[Batch 1/253] Proposed mutation for .github/PULL_REQUEST_TEMPLATE.md (risk: LOW)",
+    "timestamp": "2026-09-20T05:02:29.791Z"
+  },
+  {
+    "id": "rag_log_1789880549067_575b3950",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:02:29.067Z"
+  },
+  {
     "id": "rag_log_1789880540791_bd3ac0aa",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "CONNECT",
     "description": "GitHub link established with craighckby-stack/DARLEK_CAAN",
     "timestamp": "2026-09-20T05:01:55.583Z"
-  },
-  {
-    "id": "rag_log_1789880514946_433b1b2b",
-    "type": "CONNECT",
-    "description": "Verifying GitHub access key...",
-    "timestamp": "2026-09-20T05:01:54.946Z"
-  },
-  {
-    "id": "rag_log_1789880514945_48370cec",
-    "type": "CONNECT",
-    "description": "Verifying GitHub access key...",
-    "timestamp": "2026-09-20T05:01:54.945Z"
-  },
-  {
-    "id": "rag_log_1789880508910_003c174d",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:01:48.910Z"
   }
 ]

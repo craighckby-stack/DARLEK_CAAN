@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:02:23.800Z",
+    "generatedAt": "2026-09-20T05:02:32.801Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789880549793_19b76e5f",
+      "type": "MUTATE",
+      "description": "[Batch 1/253] Proposed mutation for .github/PULL_REQUEST_TEMPLATE.md (risk: LOW)",
+      "timestamp": "2026-09-20T05:02:29.793Z"
+    },
+    {
+      "id": "rag_log_1789880549791_8971aaca",
+      "type": "MUTATE",
+      "description": "[Batch 1/253] Proposed mutation for .github/PULL_REQUEST_TEMPLATE.md (risk: LOW)",
+      "timestamp": "2026-09-20T05:02:29.791Z"
+    },
+    {
+      "id": "rag_log_1789880549067_575b3950",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:02:29.067Z"
+    },
     {
       "id": "rag_log_1789880540791_bd3ac0aa",
       "type": "HEALTH",
@@ -138,24 +156,6 @@
       "type": "CONNECT",
       "description": "GitHub link established with craighckby-stack/DARLEK_CAAN",
       "timestamp": "2026-09-20T05:01:55.583Z"
-    },
-    {
-      "id": "rag_log_1789880514946_433b1b2b",
-      "type": "CONNECT",
-      "description": "Verifying GitHub access key...",
-      "timestamp": "2026-09-20T05:01:54.946Z"
-    },
-    {
-      "id": "rag_log_1789880514945_48370cec",
-      "type": "CONNECT",
-      "description": "Verifying GitHub access key...",
-      "timestamp": "2026-09-20T05:01:54.945Z"
-    },
-    {
-      "id": "rag_log_1789880508910_003c174d",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:01:48.910Z"
     }
   ],
   "telemetryBuffer": [
@@ -515,6 +515,34 @@
       "addr": "0x00122000",
       "tag": "AST_WATCH",
       "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-34ae235f",
+      "time": "15:02:27",
+      "addr": "0x00124000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 323.3 KB (3.16%)."
+    },
+    {
+      "id": "dos-68c5d4a9",
+      "time": "15:02:29",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-a7d97a27",
+      "time": "15:02:29",
+      "addr": "0x001F5ECF",
+      "tag": "MUTATE",
+      "message": "[Batch 1/253] Proposed mutation for .github/PULL_REQUEST_TEMPLATE.md (risk: LOW)"
+    },
+    {
+      "id": "dos-6ce55f41",
+      "time": "15:02:31",
+      "addr": "0x00126000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 93%, Drift 8%, Syntax clean."
     }
   ]
 }
