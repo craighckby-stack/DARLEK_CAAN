@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789870886106_d1daf1d5",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T02:21:26.106Z"
+  },
+  {
     "id": "rag_log_1789870877398_dc2661b1",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -142,11 +148,5 @@
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
     "timestamp": "2026-09-20T02:18:27.422Z"
-  },
-  {
-    "id": "rag_log_1789870700051_d1387739",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T02:18:20.051Z"
   }
 ]
