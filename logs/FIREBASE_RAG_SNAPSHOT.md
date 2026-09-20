@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:19:42.226Z`
+*Last Synchronized:* `2026-09-20T04:19:53.091Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,20 +14,41 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:50.009Z`
+
+```typescript
+[LOG:MUTATE] [Batch 225/253] Proposed mutation for src/types/omega.d.ts (risk: LOW) | TIME:2026-09-20T04:19:50.009Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:50.007Z`
+
+```typescript
+[LOG:MUTATE] [Batch 225/253] Proposed mutation for src/types/omega.d.ts (risk: LOW) | TIME:2026-09-20T04:19:50.007Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:47.952Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:19:47.952Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:39.190Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:19:39.189Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:39.187Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:19:39.187Z
 ```
 
-### 3. `src/types/omega-core.d.ts` (Gen 195)
+### 6. `src/types/omega-core.d.ts` (Gen 195)
 *Source:* `MUTATION:src/types/omega-core.d.ts` | *Indexed:* `2026-09-20T04:19:39.067Z`
 
 ```typescript
@@ -41,53 +62,32 @@
 // ... [truncated]
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:38.391Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:19:38.391Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:38.390Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:19:38.390Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:36.909Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to src/types/omega-core.d.ts | TIME:2026-09-20T04:19:36.909Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:36.908Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to src/types/omega-core.d.ts | TIME:2026-09-20T04:19:36.908Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:34.877Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:19:34.877Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:26.044Z`
-
-```typescript
-[LOG:MUTATE] [Batch 224/253] Proposed mutation for src/types/omega-core.d.ts (risk: LOW) | TIME:2026-09-20T04:19:26.044Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:19:26.043Z`
-
-```typescript
-[LOG:MUTATE] [Batch 224/253] Proposed mutation for src/types/omega-core.d.ts (risk: LOW) | TIME:2026-09-20T04:19:26.042Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
