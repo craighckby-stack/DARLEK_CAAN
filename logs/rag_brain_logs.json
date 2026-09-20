@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789884089939_caaf4657",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T06:01:29.939Z"
+  },
+  {
+    "id": "rag_log_1789884086657_40555078",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T06:01:26.657Z"
+  },
+  {
+    "id": "rag_log_1789884086655_9227f600",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T06:01:26.655Z"
+  },
+  {
+    "id": "rag_log_1789884085776_43e75b13",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T06:01:25.776Z"
+  },
+  {
+    "id": "rag_log_1789884085774_f402aa19",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T06:01:25.774Z"
+  },
+  {
+    "id": "rag_log_1789884084851_6c615f1f",
+    "type": "APPROVE",
+    "description": "Mutation applied to src/hooks/useQuantumState.ts",
+    "timestamp": "2026-09-20T06:01:24.851Z"
+  },
+  {
+    "id": "rag_log_1789884084849_149cf678",
+    "type": "APPROVE",
+    "description": "Mutation applied to src/hooks/useQuantumState.ts",
+    "timestamp": "2026-09-20T06:01:24.849Z"
+  },
+  {
     "id": "rag_log_1789884081586_5b49b31b",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -106,47 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: REJECTED — 4 passed, 2 failed",
     "timestamp": "2026-09-20T06:00:39.350Z"
-  },
-  {
-    "id": "rag_log_1789884039347_ba01c322",
-    "type": "HEALTH",
-    "description": "Auto-test: REJECTED — 4 passed, 2 failed",
-    "timestamp": "2026-09-20T06:00:39.347Z"
-  },
-  {
-    "id": "rag_log_1789884037745_fc1ca624",
-    "type": "APPROVE",
-    "description": "Mutation applied to src/hooks/useGithubScanner.ts",
-    "timestamp": "2026-09-20T06:00:37.745Z"
-  },
-  {
-    "id": "rag_log_1789884037741_5cea034f",
-    "type": "APPROVE",
-    "description": "Mutation applied to src/hooks/useGithubScanner.ts",
-    "timestamp": "2026-09-20T06:00:37.741Z"
-  },
-  {
-    "id": "rag_log_1789884034110_976ec381",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T06:00:34.110Z"
-  },
-  {
-    "id": "rag_log_1789884026428_984c6216",
-    "type": "MUTATE",
-    "description": "[Batch 165/253] Proposed mutation for src/hooks/useGithubScanner.ts (risk: LOW)",
-    "timestamp": "2026-09-20T06:00:26.428Z"
-  },
-  {
-    "id": "rag_log_1789884026424_8ae9a75a",
-    "type": "MUTATE",
-    "description": "[Batch 165/253] Proposed mutation for src/hooks/useGithubScanner.ts (risk: LOW)",
-    "timestamp": "2026-09-20T06:00:26.424Z"
-  },
-  {
-    "id": "rag_log_1789884025153_3c88a976",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T06:00:25.153Z"
   }
 ]
