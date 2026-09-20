@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:18:59.523Z`
+*Last Synchronized:* `2026-09-20T05:19:11.801Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,90 +14,106 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:08.792Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:19:08.792Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:08.791Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:19:08.791Z
+```
+
+### 3. `fix.sh` (Gen 39)
+*Source:* `MUTATION:fix.sh` | *Indexed:* `2026-09-20T05:19:08.541Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-39 [2026-09-20T05:18:56.513Z] */
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+TARGET_FILE="src/app/api/evolution/debate/route.ts"
+
+if [ -f "$TARGET_FILE" ]; then
+  sed -i 's/stance"}`;          const systemPrompt/stance"}`;\n          const systemPrompt/g' "$TARGET_FILE"
+  sed -i 's/}`;`;/}`;/g' 
+// ... [truncated]
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:08.231Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: REJECTED — 4 passed, 1 failed | TIME:2026-09-20T05:19:08.231Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:08.230Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: REJECTED — 4 passed, 1 failed | TIME:2026-09-20T05:19:08.230Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:07.791Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to fix.sh | TIME:2026-09-20T05:19:07.791Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:07.790Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to fix.sh | TIME:2026-09-20T05:19:07.790Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:19:04.946Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:19:04.946Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:18:56.514Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 42/253] Proposed mutation for fix.sh (risk: LOW) | TIME:2026-09-20T05:18:56.514Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:18:56.513Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 42/253] Proposed mutation for fix.sh (risk: LOW) | TIME:2026-09-20T05:18:56.513Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:18:55.627Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fix.sh`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `39`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-39 with verified AST structural sanity.
 ```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:18:55.627Z
-```
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-39 [2026-09-20T05:18:56.513Z] */
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
 
-### 4. `firestore.rules` (Gen 38)
-*Source:* `MUTATION:firestore.rules` | *Indexed:* `2026-09-20T05:18:47.532Z`
+TARGET_FILE="src/app/api/evolution/debate/route.ts"
 
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-38 [2026-09-20T05:18:35.345Z] */
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    // 1. Default-deny catch-all safety net
-    match /{document=**} {
-      allow read, write: if false;
-    }
-
-    // Helper functions
-    function isValidId(id) {
-      r
+if [ -f "$TARGET_FILE" ]; then
+  sed -i 's/stance"}`;          const systemPrompt/stance"}`;\n          const systemPrompt/g' "$TARGET_FILE"
+  sed -i 's/}`;`;/}`;/g' 
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:18:46.981Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:18:46.981Z
-```
-
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:18:46.979Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:18:46.979Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:18:46.696Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:18:46.696Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:18:46.695Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:18:46.694Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:18:46.167Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to firestore.rules | TIME:2026-09-20T05:18:46.166Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:18:46.165Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to firestore.rules | TIME:2026-09-20T05:18:46.165Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `firestore.rules`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `firestore.rules`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `38`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-38 with verified AST structural sanity.
@@ -117,7 +133,7 @@ service cloud.firestore {
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `find_changed.js`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `find_changed.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `37`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-37 with verified AST structural sanity.
@@ -136,7 +152,7 @@ const https = require('http
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_siphon.js`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_siphon.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `36`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-36 with verified AST structural sanity.
@@ -155,7 +171,7 @@ con
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_repo.js`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_repo.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `35`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-35 with verified AST structural sanity.
@@ -174,7 +190,7 @@ const https = requi
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_remote_app.js`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_remote_app.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `34`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-34 with verified AST structural sanity.
@@ -194,7 +210,7 @@ const https = requi
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_readme.js`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_readme.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `33`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-33 with verified AST structural sanity.
@@ -213,7 +229,7 @@ const https = require('node
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_missing.js`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_missing.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `32`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-32 with verified AST structural sanity.
@@ -228,7 +244,7 @@ const https = require('node
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_engine.js`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `fetch_engine.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `31`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-31 with verified AST structural sanity.
@@ -249,7 +265,7 @@ con
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `examples/websocket/server.ts`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `examples/websocket/server.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `30`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-30 with verified AST structural sanity.
@@ -261,29 +277,6 @@ con
  * Role: Core system component participating in autonomous cognitive evolution cycles.
  * Architecture: Type-safe modular unit with resilient state interfaces.
  * Optimized for maximum
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `examples/websocket/frontend.tsx`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `29`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-29 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-29 [2026-09-20T05:15:11.610Z] */
-'use client';
-
-import {
-  useEffect,
-  useState,
-  useRef,
-  useCallback,
-  useMemo,
-  type ReactElement,
-  type KeyboardEvent,
-  type ChangeEvent,
-} from 'react';
-import { io, type Socket } from 'socket.io-client';
-import { Button } from '@/components/ui/button
 // ... [truncated]
 ```
 
