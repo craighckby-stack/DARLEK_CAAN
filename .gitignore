@@ -1,218 +1,125 @@
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-4 [2026-09-20T05:02:53.842Z] */
-# Dependency directories
-node_modules/
-.pnpm-store/
-jspm_packages/
-web_modules/
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-20 [2026-09-20T08:44:02.434Z] */
+# Sovereign Evolution Engine v89.1 - Repository Filter
+# Project: Kevin Mitnick's God Virus Research Project
 
-# Next.js build output
-.next/
-out/
-.turbo/
-.vercel/
-
-# Production build output
-dist/
-build/
-
-# Environment variables
+# --- [ CORE ENVIRONMENT & SECURITY ] ---
+# Never commit active secrets or environment overrides
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-.env*.local
-.env.backup
-.env.vault
-*.env
-*.env.*
-!*.env.example
-!*.env.template
-
-# Firebase configs containing API keys
-firebase-applet-config.json
-firebase-debug.log*
-firestore-debug.log*
-ui-debug.log*
-*serviceAccountKey*.json
-*service-account*.json
-
-# Credentials, Keys and Certificates
+!.env.example
 *.pem
 *.key
-*.cert
-*.crt
-*.pfx
-*.p12
-id_rsa
-id_dsa
-id_ecdsa
-id_ed25519
 *.pub
+*.cert
+*.p12
+*.pfx
+*.jks
+*.kdbx
+id_rsa*
+.ssh/
+.aws/
+.netrc
+_netrc
+oauth*.json
 secrets/
 credentials.json
-token.json
+.npmrc
 
-# Local databases and SQLite
-*.db
+# --- [ DEPENDENCIES & RUNTIMES ] ---
+# Node.js / JavaScript
+node_modules/
+jspm_packages/
+.npm/
+.yarn/cache/
+.pnp.*
+
+# Python / Research Scripts
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.tox/
+.pytest_cache/
+.mypy_cache/
+
+# --- [ BUILD, DISTRIBUTION & RELAY ] ---
+# High-performance build targets and Relay Chain state
+build/
+dist/
+out/
+target/
+.relay_chain/
+build_relay.state
+system_fingerprint.json
+*.exe
+*.dll
+*.so
+*.dylib
 *.sqlite
 *.sqlite3
-*.sqlite-journal
-*.sqlite3-journal
-*.db-shm
-*.db-wal
+*.db
 
-# IDEs and Editors
-.idea/
-.vscode/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-*.swo
-*.swn
-*.bak
-*~
-.DS_Store
-
-# Logs
+# --- [ DIAGNOSTICS & TELEMETRY ] ---
+# Test coverage and execution logs
+coverage/
+.nyc_output/
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
 lerna-debug.log*
-logs/
-*.log
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+*.dmp
+*.core
+*.crash
 
-# OS Files
-Thumbs.db
-ehthumbs.db
-[Dd]esktop.ini
+# --- [ RESEARCH ARTIFACTS (HAT SPECTRUM) ] ---
+# Prevent accidental leakage of captures or payloads
+*.pcap
+*.pcapng
+*.pcap.gz
+payloads/bin/
+malware_samples/
+analysis_dumps/
+memory_dumps/
+*.bin
+*.hex
+*.shc
+*.apk
+*.dex
+
+# --- [ IDE & EDITOR METADATA ] ---
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains (IntelliJ, WebStorm, etc.)
+.idea/
+*.iml
+
+# General Editor noise
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# --- [ OS SPECIFIC ] ---
+.DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
-
-# Testing and Coverage
-coverage/
-*.lcov
-.nyc_output/
-playwright-report/
-test-results/
-cypress/videos/
-cypress/screenshots/
-
-# TypeScript Cache
-*.tsbuildinfo
-next-env.d.ts.bak
-
-# DARLEK CAAN Defensive Enhancements - Additional Sensitive Files & Backups
-*.bak.*
-*.backup
-*.bkp
-*.old
-*.orig
-*~
-.cache/
-.parcel-cache/
-.eslintcache
-.stylelintcache
-.vite/
-.temp/
-.tmp/
-tmp/
-temp/
-.auth/
-auth.json
-session.json
-*.pem.*
-*.key.*
-passwords.txt
-api_keys.json
-
-# DARLEK CAAN Synthesis G-7: Package Manager Auth & Token Leakage Defense
-.npmrc
-!*.npmrc.example
-.yarnrc
-.yarnrc.yml
-!*.yarnrc.example
-npm-token*
-.yarn/build-state.yml
-.yarn/install-state.gz
-
-# Cloud, Infrastructure & Secret Management Exclusions
-.aws/
-.azure/
-.gcloud/
-.wrangler/
-.serverless/
-.terraform/
-*.tfstate
-*.tfstate.*
-*.tfvars
-*.tfvars.json
-*.override.tf
-*.override.tf.json
-k8s-secrets*.yaml
-k8s-secrets*.yml
-kubeconfig
-kubeconfig.*
-.kube/
-
-# Signing Keystores, Cryptographic Containers & Key Rings
-*.keystore
-*.jks
-*.mobileprovision
-*.provisionprofile
-*.der
-*.csr
-*.kdb
-*.asc
-gpg.conf
-secring.*
-
-# Database Dumps, Snapshots & Diagnostic Memory Dumps
-*.sql
-*.sql.gz
-*.dump
-*.rdb
-*.heapsnapshot
-*.heapdump
-*.cpuprofile
-core
-core.*
-*.core
-
-# Security Scanners & Incident Audit Dumps
-gitleaks-report.*
-trivy-results.*
-snyk-report.*
-semgrep-results.*
-audit-report.*
-
-# DARLEK CAAN Synthesis G-8: AI, Container, REPL & Local Config Leakage Defense
-docker-compose.override.yml
-docker-compose.override.yaml
-.docker/
-.aider*
-.copilot/
-.cursor/
-chatgpt_history.json
-.node_repl_history
-.bash_history
-.zsh_history
-.python_history
-config.local.js
-config.local.ts
-config.local.json
-local.json
-.venv/
-venv/
-__pycache__/
-*.py[cod]
-client_secret*.json
-*.htpasswd
-oauth.json
-*.pcap
-*.pcapng
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+.fuse_hidden*
