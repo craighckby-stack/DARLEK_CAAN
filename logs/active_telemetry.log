@@ -1,9 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T03:17:30.685Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T03:17:38.598Z]
 ======================================================================
 
-[12:59:26] [0x00193293] [INFO      ] [NO-OP] Code saturation reached in batch for compare.js
-[12:59:35] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [12:59:36] [0x0024AB0B] [INFO      ] [NO-OP] Code saturation reached in batch for components.json
 [12:59:45] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [12:59:46] [0x009950B6] [MUTATE    ] [Batch 23/253] Proposed mutation for docs/ARCHITECTURE.md (risk: LOW)
@@ -253,3 +251,5 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T03:17:30.685Z]
 [13:17:11] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [13:17:19] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [13:17:27] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[13:17:35] [0x00786632] [ERROR     ] Mutation apply failed: Server error (200): Non-JSON response received (possible route crash or payload limit).
+[13:17:35] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]

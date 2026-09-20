@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789874255596_86ae48f6",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:17:35.596Z"
+  },
+  {
+    "id": "rag_log_1789874255132_2a684e3b",
+    "type": "ERROR",
+    "description": "Mutation apply failed: Server error (200): Non-JSON response received (possible route crash or payload limit).",
+    "timestamp": "2026-09-20T03:17:35.132Z"
+  },
+  {
+    "id": "rag_log_1789874255132_2b715ca3",
+    "type": "ERROR",
+    "description": "Mutation apply failed: Server error (200): Non-JSON response received (possible route crash or payload limit).",
+    "timestamp": "2026-09-20T03:17:35.132Z"
+  },
+  {
     "id": "rag_log_1789874247656_729b62f3",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
     "timestamp": "2026-09-20T03:14:39.402Z"
-  },
-  {
-    "id": "rag_log_1789874071338_00e528db",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:14:31.338Z"
-  },
-  {
-    "id": "rag_log_1789874061993_0aaec7aa",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:14:21.993Z"
-  },
-  {
-    "id": "rag_log_1789874053981_286231dc",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:14:13.980Z"
   }
 ]
