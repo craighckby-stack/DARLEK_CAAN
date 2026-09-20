@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T06:00:45.857Z",
+    "generatedAt": "2026-09-20T06:00:54.661Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789884051577_d82c909a",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T06:00:51.577Z"
+    },
+    {
+      "id": "rag_log_1789884050049_a4e371b8",
+      "type": "MUTATE",
+      "description": "[Batch 166/253] Proposed mutation for src/hooks/useMutationData.ts (risk: LOW)",
+      "timestamp": "2026-09-20T06:00:50.049Z"
+    },
+    {
+      "id": "rag_log_1789884050044_e993bade",
+      "type": "MUTATE",
+      "description": "[Batch 166/253] Proposed mutation for src/hooks/useMutationData.ts (risk: LOW)",
+      "timestamp": "2026-09-20T06:00:50.044Z"
+    },
     {
       "id": "rag_log_1789884042768_8239e232",
       "type": "LOG_SYNC",
@@ -138,55 +156,9 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T05:59:55.173Z"
-    },
-    {
-      "id": "rag_log_1789883986237_a6d75204",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:59:46.237Z"
-    },
-    {
-      "id": "rag_log_1789883986235_7525a020",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:59:46.235Z"
-    },
-    {
-      "id": "rag_log_1789883985355_6d419b59",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:59:45.355Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-752d1114",
-      "time": "15:57:34",
-      "addr": "0x00664000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 1.18 MB (11.84%)."
-    },
-    {
-      "id": "dos-85ba3c72",
-      "time": "15:57:35",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-6a7fb1d6",
-      "time": "15:57:36",
-      "addr": "0x00791666",
-      "tag": "MUTATE",
-      "message": "[Batch 158/253] Proposed mutation for src/components/StatusBar.tsx (risk: LOW)"
-    },
-    {
-      "id": "dos-7a7ef899",
-      "time": "15:57:39",
-      "addr": "0x00666000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
     {
       "id": "dos-022409e4",
       "time": "15:57:43",
@@ -855,6 +827,34 @@
     {
       "id": "dos-ff0a97b0",
       "time": "16:00:42",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-0d0f8eed",
+      "time": "16:00:46",
+      "addr": "0x006B4000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 792.7 KB (7.74%)."
+    },
+    {
+      "id": "dos-c166f311",
+      "time": "16:00:50",
+      "addr": "0x00661100",
+      "tag": "MUTATE",
+      "message": "[Batch 166/253] Proposed mutation for src/hooks/useMutationData.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-5930ea27",
+      "time": "16:00:51",
+      "addr": "0x006B6000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-8f383ae7",
+      "time": "16:00:51",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
