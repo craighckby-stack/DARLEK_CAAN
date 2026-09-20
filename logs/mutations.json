@@ -1,11 +1,25 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T04:22:55.832Z",
+    "generatedAt": "2026-09-20T04:23:08.937Z",
     "totalMutations": 10,
     "correctCount": 10,
     "wrongCount": 0
   },
   "mutations": [
+    {
+      "id": "rag_mut_1789878183795_a55250c2",
+      "filePath": "tailwind.config.js",
+      "originalCode": "import tailwindcssAnimate from 'tailwindcss-animate';\n\n/** @type {import('tailwindcss').Config} */\nexport default {\n  darkMode: [\"class\"],\n  content: [\n    \"./index.html\",\n    \"./src/**/*.{js,ts,jsx,tsx}\",\n  ],\n  theme: {\n    extend: {\n      colors: {\n        background: \"var(--background)\",\n        foreground: \"var(--foreground)\",\n        card: {\n          DEFAULT: \"var(--card)\",\n          foreground: \"var(--card-foreground)\",\n        },\n        popover: {\n          DEFAULT: \"var(--popover)\",\n          foreground: \"var(--popover-foreground)\",\n        },\n        primary: {\n          DEFAULT: \"var(--primary)\",\n          foreground: \"var(--primary-foreground)\",\n        },\n        secondary: {\n          DEFAULT: \"var(--secondary)\",\n          foreground: \"var(--secondary-foreground)\",\n        },\n        muted: {\n          DEFAULT: \"var(--muted)\",\n          foreground: \"var(--muted-foreground)\",\n        },\n        accent: {\n          DEFAULT: \"var(--accent)\",\n          foreground: \"var(--accent-foreground)\",\n        },\n        destructive: {\n          DEFAULT: \"var(--destructive)\",\n          foreground: \"var(--destructive-foreground)\",\n        },\n        border: \"var(--border)\",\n        input: \"var(--input)\",\n        ring: \"var(--ring)\",\n      },\n      borderRadius: {\n        lg: \"var(--radius)\",\n        md: \"calc(var(--radius) - 2px)\",\n        sm: \"calc(var(--radius) - 4px)\",\n      },\n      fontFamily: {\n        orbitron: ['var(--font-orbitron)', 'Orbitron', 'sans-serif'],\n        share: ['var(--font-share-tech-mono)', 'Share Tech Mono', 'monospace'],\n        mono: ['var(--font-share-tech-mono)', 'Share Tech Mono', 'JetBrains Mono', 'monospace'],\n      },\n    },\n  },\n  plugins: [tailwindcssAnimate],\n};\n",
+      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-203 [2026-09-20T04:22:52.244Z] */\nimport tailwindcssAnimate from 'tailwindcss-animate';\n\n/** @type {import('tailwindcss').Config} */\nexport default {\n  darkMode: [\"class\"],\n  content: [\n    \"./index.html\",\n    \"./src/**/*.{js,ts,jsx,tsx}\",\n  ],\n  theme: {\n    extend: {\n      colors: {\n        background: \"var(--background)\",\n        foreground: \"var(--foreground)\",\n        card: {\n          DEFAULT: \"var(--card)\",\n          foreground: \"var(--card-foreground)\",\n        },\n        popover: {\n          DEFAULT: \"var(--popover)\",\n          foreground: \"var(--popover-foreground)\",\n        },\n        primary: {\n          DEFAULT: \"var(--primary)\",\n          foreground: \"var(--primary-foreground)\",\n        },\n        secondary: {\n          DEFAULT: \"var(--secondary)\",\n          foreground: \"var(--secondary-foreground)\",\n        },\n        muted: {\n          DEFAULT: \"var(--muted)\",\n          foreground: \"var(--muted-foreground)\",\n        },\n        accent: {\n          DEFAULT: \"var(--accent)\",\n          foreground: \"var(--accent-foreground)\",\n        },\n        destructive: {\n          DEFAULT: \"var(--destructive)\",\n          foreground: \"var(--destructive-foreground)\",\n        },\n        border: \"var(--border)\",\n        input: \"var(--input)\",\n        ring: \"var(--ring)\",\n      },\n      borderRadius: {\n        lg: \"var(--radius)\",\n        md: \"calc(var(--radius) - 2px)\",\n        sm: \"calc(var(--radius) - 4px)\",\n      },\n      fontFamily: {\n        orbitron: ['var(--font-orbitron)', 'Orbitron', 'sans-serif'],\n        share: ['var(--font-share-tech-mono)', 'Share Tech Mono', 'monospace'],\n        mono: ['var(--font-share-tech-mono)', 'Share Tech Mono', 'JetBrains Mono', 'monospace'],\n      },\n    },\n  },\n  plugins: [tailwindcssAnimate],\n};\n\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 203,\n  timestamp: \"2026-09-20T04:22:52.244Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
+      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-203 with verified AST structural sanity.",
+      "riskScore": 1,
+      "generation": 203,
+      "commitSha": "7a007769dd309ea5ad0c60808dd338b4a0b84e80",
+      "timestamp": "2026-09-20T04:23:03.795Z",
+      "hotswapped": true,
+      "verdict": "correct",
+      "source": "DARLEK_APPROVED_MUTATION"
+    },
     {
       "id": "rag_mut_1789878160068_bbc5954d",
       "filePath": "src/utils/siphon.ts",
@@ -128,20 +142,6 @@
       "generation": 194,
       "commitSha": "2aca03cc725903b74698748c73bdf7027911f879",
       "timestamp": "2026-09-20T04:19:14.021Z",
-      "hotswapped": true,
-      "verdict": "correct",
-      "source": "DARLEK_APPROVED_MUTATION"
-    },
-    {
-      "id": "rag_mut_1789877931046_e71efc38",
-      "filePath": "src/types/kernel.d.ts",
-      "originalCode": "/**\n * @file src/types/kernel.d.ts\n * @version 4.9.1-CORE\n * @description Darlek Caan Type Definitions & Telemetry Schemas.\n * @optimizer EMG Core v49 Neural Code and Documentation Optimizer Engine\n */\n\n/**\n * Enumeration representing the operational health states of the kernel and its subsystems.\n */\nexport const enum SystemStatus {\n  /** Subsystem is fully operational and performing within baseline nominal parameters. */\n  OPERATIONAL = 'OPERATIONAL',\n\n  /** Subsystem is functioning with degraded capabilities, elevated latency, or partial fault tolerance. */\n  DEGRADED = 'DEGRADED',\n\n  /** Subsystem has encountered severe faults requiring immediate isolation or failover recovery. */\n  CRITICAL = 'CRITICAL',\n}\n\n/**\n * Immutable telemetry payload capturing discrete operational metrics and diagnostic states.\n */\nexport interface SystemTelemetry {\n  /** Epoch timestamp in milliseconds indicating when the telemetry event was captured. */\n  readonly timestamp: number;\n\n  /** Canonical name or identifier of the reporting subsystem/module. */\n  readonly module: string;\n\n  /** Health evaluation status of the reporting subsystem at the recorded timestamp. */\n  readonly status: SystemStatus;\n}\n\n/**\n * Immutable configuration schema governing kernel initialization and runtime execution behavior.\n */\nexport interface KernelConfig {\n  /** Semantic version string of the host kernel runtime (e.g., '4.9.0-CORE'). */\n  readonly version: string;\n\n  /** Flag enabling extended diagnostic logging, tracing, and assertion verification. */\n  readonly debugMode: boolean;\n}",
-      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-193 [2026-09-20T04:18:39.638Z] */\n/**\n * @file src/types/kernel.d.ts\n * @version 4.9.1-CORE\n * @description Darlek Caan Type Definitions & Telemetry Schemas.\n * @optimizer EMG Core v49 Neural Code and Documentation Optimizer Engine\n */\n\n/**\n * Enumeration representing the operational health states of the kernel and its subsystems.\n */\nexport const enum SystemStatus {\n  /** Subsystem is fully operational and performing within baseline nominal parameters. */\n  OPERATIONAL = 'OPERATIONAL',\n\n  /** Subsystem is functioning with degraded capabilities, elevated latency, or partial fault tolerance. */\n  DEGRADED = 'DEGRADED',\n\n  /** Subsystem has encountered severe faults requiring immediate isolation or failover recovery. */\n  CRITICAL = 'CRITICAL',\n}\n\n/**\n * Immutable telemetry payload capturing discrete operational metrics and diagnostic states.\n */\nexport interface SystemTelemetry {\n  /** Epoch timestamp in milliseconds indicating when the telemetry event was captured. */\n  readonly timestamp: number;\n\n  /** Canonical name or identifier of the reporting subsystem/module. */\n  readonly module: string;\n\n  /** Health evaluation status of the reporting subsystem at the recorded timestamp. */\n  readonly status: SystemStatus;\n}\n\n/**\n * Immutable configuration schema governing kernel initialization and runtime execution behavior.\n */\nexport interface KernelConfig {\n  /** Semantic version string of the host kernel runtime (e.g., '4.9.0-CORE'). */\n  readonly version: string;\n\n  /** Flag enabling extended diagnostic logging, tracing, and assertion verification. */\n  readonly debugMode: boolean;\n}\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 193,\n  timestamp: \"2026-09-20T04:18:39.638Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
-      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-193 with verified AST structural sanity.",
-      "riskScore": 1,
-      "generation": 193,
-      "commitSha": "86653c15c04507dbb45d629e9b11d7282a49acca",
-      "timestamp": "2026-09-20T04:18:51.046Z",
       "hotswapped": true,
       "verdict": "correct",
       "source": "DARLEK_APPROVED_MUTATION"
