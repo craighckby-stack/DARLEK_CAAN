@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:24:29.061Z`
+*Last Synchronized:* `2026-09-20T04:24:37.117Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,41 +14,48 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:24:34.109Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:24:34.109Z
+```
+
+### 2. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:24:26.041Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 236/253] Proposed mutation for test-greedy2.js (risk: LOW) | TIME:2026-09-20T04:24:26.040Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 3. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:24:26.039Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 236/253] Proposed mutation for test-greedy2.js (risk: LOW) | TIME:2026-09-20T04:24:26.039Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:24:24.225Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:24:24.225Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:24:14.541Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:24:14.541Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:24:14.540Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:24:14.540Z
 ```
 
-### 6. `test-greedy.js` (Gen 206)
+### 7. `test-greedy.js` (Gen 206)
 *Source:* `MUTATION:test-greedy.js` | *Indexed:* `2026-09-20T04:24:14.536Z`
 
 ```typescript
@@ -63,32 +70,25 @@ const MAX_INP
 // ... [truncated]
 ```
 
-### 7. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:24:13.639Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: REJECTED — 4 passed, 1 failed | TIME:2026-09-20T04:24:13.639Z
 ```
 
-### 8. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:24:13.638Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: REJECTED — 4 passed, 1 failed | TIME:2026-09-20T04:24:13.638Z
 ```
 
-### 9. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:24:12.851Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to test-greedy.js | TIME:2026-09-20T04:24:12.851Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:24:12.850Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to test-greedy.js | TIME:2026-09-20T04:24:12.850Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)

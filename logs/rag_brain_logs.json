@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789878274109_14c704fb",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T04:24:34.109Z"
+  },
+  {
     "id": "rag_log_1789878266040_f7e05d04",
     "type": "MUTATE",
     "description": "[Batch 236/253] Proposed mutation for test-greedy2.js (risk: LOW)",
@@ -142,11 +148,5 @@
     "type": "HEALTH",
     "description": "Post-mutation analysis: 1 issues (0 high)",
     "timestamp": "2026-09-20T04:23:28.456Z"
-  },
-  {
-    "id": "rag_log_1789878208454_91253f98",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 1 issues (0 high)",
-    "timestamp": "2026-09-20T04:23:28.454Z"
   }
 ]
