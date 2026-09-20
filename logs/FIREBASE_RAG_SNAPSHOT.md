@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:09:54.764Z`
+*Last Synchronized:* `2026-09-20T04:10:04.467Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,20 +14,41 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:10:00.807Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:10:00.807Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:54.867Z`
+
+```typescript
+[LOG:MUTATE] [Batch 200/253] Proposed mutation for src/lib/next-mock.ts (risk: LOW) | TIME:2026-09-20T04:09:54.867Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:54.866Z`
+
+```typescript
+[LOG:MUTATE] [Batch 200/253] Proposed mutation for src/lib/next-mock.ts (risk: LOW) | TIME:2026-09-20T04:09:54.865Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:51.685Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:09:51.685Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:43.208Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:09:43.207Z
 ```
 
-### 3. `src/lib/neural_codec.ts` (Gen 172)
+### 6. `src/lib/neural_codec.ts` (Gen 172)
 *Source:* `MUTATION:src/lib/neural_codec.ts` | *Indexed:* `2026-09-20T04:09:43.113Z`
 
 ```typescript
@@ -43,53 +64,32 @@ const TEXT_DECODER = new TextDecoder();
 // ... [truncated]
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:42.678Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:09:42.677Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:42.678Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:09:42.678Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:41.828Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:09:41.828Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:41.827Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:09:41.827Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:40.313Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/lib/neural_codec.ts | TIME:2026-09-20T04:09:40.313Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:40.312Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/lib/neural_codec.ts | TIME:2026-09-20T04:09:40.312Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:09:29.682Z`
-
-```typescript
-[LOG:MUTATE] [Batch 199/253] Proposed mutation for src/lib/neural_codec.ts (risk: LOW) | TIME:2026-09-20T04:09:29.681Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)

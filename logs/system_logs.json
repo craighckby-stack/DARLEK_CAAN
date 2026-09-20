@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T04:09:54.764Z",
+    "generatedAt": "2026-09-20T04:10:04.467Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789877400807_fc322807",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T04:10:00.807Z"
+    },
+    {
+      "id": "rag_log_1789877394867_ca65f679",
+      "type": "MUTATE",
+      "description": "[Batch 200/253] Proposed mutation for src/lib/next-mock.ts (risk: LOW)",
+      "timestamp": "2026-09-20T04:09:54.867Z"
+    },
+    {
+      "id": "rag_log_1789877394865_496d95de",
+      "type": "MUTATE",
+      "description": "[Batch 200/253] Proposed mutation for src/lib/next-mock.ts (risk: LOW)",
+      "timestamp": "2026-09-20T04:09:54.865Z"
+    },
     {
       "id": "rag_log_1789877391685_0e89b84c",
       "type": "LOG_SYNC",
@@ -138,41 +156,9 @@
       "type": "INFO",
       "description": "[NO-OP] Code saturation reached in batch for src/lib/msDosEngine.ts",
       "timestamp": "2026-09-20T04:08:56.606Z"
-    },
-    {
-      "id": "rag_log_1789877336603_a83f5c2f",
-      "type": "INFO",
-      "description": "[NO-OP] Code saturation reached in batch for src/lib/msDosEngine.ts",
-      "timestamp": "2026-09-20T04:08:56.603Z"
-    },
-    {
-      "id": "rag_log_1789877335438_3c97e8be",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T04:08:55.438Z"
-    },
-    {
-      "id": "rag_log_1789877325917_0675ac32",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T04:08:45.916Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-c5482a7c",
-      "time": "14:03:40",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-6e7c644e",
-      "time": "14:03:44",
-      "addr": "0x00778249",
-      "tag": "MUTATE",
-      "message": "[Batch 184/253] Proposed mutation for src/lib/diagnostic-utils.ts (risk: LOW)"
-    },
     {
       "id": "dos-dfcda5c8",
       "time": "14:03:48",
@@ -855,6 +841,20 @@
     {
       "id": "dos-db1a150b",
       "time": "14:09:51",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-9965e639",
+      "time": "14:09:54",
+      "addr": "0x0042CB1E",
+      "tag": "MUTATE",
+      "message": "[Batch 200/253] Proposed mutation for src/lib/next-mock.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-0410b49a",
+      "time": "14:10:00",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
