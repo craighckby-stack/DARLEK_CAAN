@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789875677859_942297a6",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:41:17.859Z"
+  },
+  {
+    "id": "rag_log_1789875673574_8033f76a",
+    "type": "MUTATE",
+    "description": "[Batch 126/253] Proposed mutation for src/app/api/validate/route.ts (risk: LOW)",
+    "timestamp": "2026-09-20T03:41:13.574Z"
+  },
+  {
+    "id": "rag_log_1789875673571_7133d6b0",
+    "type": "MUTATE",
+    "description": "[Batch 126/253] Proposed mutation for src/app/api/validate/route.ts (risk: LOW)",
+    "timestamp": "2026-09-20T03:41:13.571Z"
+  },
+  {
     "id": "rag_log_1789875669780_2cdf865b",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
     "timestamp": "2026-09-20T03:40:22.724Z"
-  },
-  {
-    "id": "rag_log_1789875614594_49882806",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for src/app/api/setup/test-connection/route.ts",
-    "timestamp": "2026-09-20T03:40:14.594Z"
-  },
-  {
-    "id": "rag_log_1789875614593_277305e7",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for src/app/api/setup/test-connection/route.ts",
-    "timestamp": "2026-09-20T03:40:14.593Z"
-  },
-  {
-    "id": "rag_log_1789875613943_41b6e10b",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:40:13.943Z"
   }
 ]
