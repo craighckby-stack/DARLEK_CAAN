@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789872690088_4f205173",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T02:51:30.087Z"
+  },
+  {
     "id": "rag_log_1789872680136_39116b0e",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -142,11 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 1/253] Proposed mutation for .github/PULL_REQUEST_TEMPLATE.md (risk: LOW)",
     "timestamp": "2026-09-20T02:49:39.327Z"
-  },
-  {
-    "id": "rag_log_1789872579325_6ac9df98",
-    "type": "MUTATE",
-    "description": "[Batch 1/253] Proposed mutation for .github/PULL_REQUEST_TEMPLATE.md (risk: LOW)",
-    "timestamp": "2026-09-20T02:49:39.325Z"
   }
 ]
