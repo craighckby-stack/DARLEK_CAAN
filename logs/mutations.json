@@ -1,11 +1,25 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:28:36.130Z",
+    "generatedAt": "2026-09-20T05:28:49.447Z",
     "totalMutations": 10,
     "correctCount": 10,
     "wrongCount": 0
   },
   "mutations": [
+    {
+      "id": "rag_mut_1789882124112_0c04102c",
+      "filePath": "postcss.config.mjs",
+      "originalCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-61 [2026-09-20T03:23:23.121Z] */\nexport default {\n  plugins: {\n    tailwindcss: {},\n    autoprefixer: {},\n  },\n};\n",
+      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-61 [2026-09-20T05:28:33.122Z] */\nexport default {\n  plugins: {\n    tailwindcss: {},\n    autoprefixer: {},\n  },\n};\n",
+      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-61 with verified AST structural sanity.",
+      "riskScore": 1,
+      "generation": 61,
+      "commitSha": "4fb386377e2ade01f2693f2f1da703c08e698ab6",
+      "timestamp": "2026-09-20T05:28:44.112Z",
+      "hotswapped": true,
+      "verdict": "correct",
+      "source": "DARLEK_APPROVED_MUTATION"
+    },
     {
       "id": "rag_mut_1789882102167_5cd6d191",
       "filePath": "patch.js",
@@ -127,20 +141,6 @@
       "generation": 53,
       "commitSha": "f29cc1e99965815f26249254f38626e816d128c8",
       "timestamp": "2026-09-20T05:24:37.725Z",
-      "hotswapped": true,
-      "verdict": "correct",
-      "source": "DARLEK_APPROVED_MUTATION"
-    },
-    {
-      "id": "rag_mut_1789881847025_8f93b2a6",
-      "filePath": "fix_prompt8.js",
-      "originalCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-51 [2026-09-20T03:12:03.087Z] */\n/**\n * DARLEK CANN ARCHITECTURAL HEADER\n * File: fix_prompt8.js\n * Role: Core system component participating in autonomous cognitive evolution cycles.\n * Architecture: Type-safe modular unit with resilient state interfaces.\n */\n\n'use strict';\n\nconst { readFileSync, writeFileSync } = require('node:fs');\nconst path = require('node:path');\n\n/** @type {string} */\nconst TARGET_FILE_PATH = 'src/app/api/evolution/propose/route.ts';\n\n/**\n * @typedef {Object} FormattingReplacement\n * @property {RegExp} pattern\n * @property {string} replacement\n */\n\n/** @type {ReadonlyArray<FormattingReplacement>} */\nconst FORMATTING_REPLACEMENTS = Object.freeze([\n    {\n        pattern: /\\\\`\\\\`\\\\`json\\{/g,\n        replacement: '\\\\`\\\\`\\\\`json\\\\n{',\n    },\n    {\n        pattern: /\\}\\\\`\\\\`\\\\`\\\\`\\\\`\\\\`tsx/g,\n        replacement: '}\\\\n\\\\`\\\\`\\\\`\\\\n\\\\n\\\\`\\\\`\\\\`tsx\\\\n',\n    },\n]);\n\n/**\n * Applies a sequence of regex transformations to string content efficiently.\n * \n * @param {string} content - The source string to transform.\n * @returns {string} The transformed string.\n */\nfunction applyFormattingTransforms(content) {\n    if (typeof content !== 'string') {\n        throw new TypeError('Expected content to be a string.');\n    }\n\n    return FORMATTING_REPLACEMENTS.reduce(\n        (acc, { pattern, replacement }) => acc.replace(pattern, replacement),\n        content\n    );\n}\n\n/**\n * Normalizes code block formatting within the target file with robust error handling and path traversal defense.\n * \n * @param {string} filePath - Path to the target file.\n * @throws {Error} If file read/write operations fail or path resolution is unsafe.\n */\nfunction normalizeCodeBlockFormatting(filePath) {\n    if (typeof filePath !== 'string' || filePath.trim() === '') {\n        throw new TypeError('Expected a valid non-empty file path string.');\n    }\n\n    // Defensive path validation to mitigate arbitrary file access / path traversal\n    const resolvedPath = path.resolve(filePath);\n    const resolvedBase = path.resolve(process.cwd());\n    if (!resolvedPath.startsWith(resolvedBase)) {\n        throw new Error(`Security Violation: Path traversal detected outside working directory for \"${filePath}\".`);\n    }\n\n    try {\n        const originalContent = readFileSync(resolvedPath, 'utf8');\n        const normalizedContent = applyFormattingTransforms(originalContent);\n\n        if (originalContent !== normalizedContent) {\n            writeFileSync(resolvedPath, normalizedContent, 'utf8');\n        }\n    } catch (error) {\n        const err = /** @type {Error} */ (error);\n        throw new Error(`Failed to normalize code block formatting for \"${filePath}\": ${err.message}`);\n    }\n}\n\nnormalizeCodeBlockFormatting(TARGET_FILE_PATH);\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 51,\n  timestamp: \"2026-09-20T03:12:03.087Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
-      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-52 [2026-09-20T05:23:54.031Z] */\n/**\n * DARLEK CANN ARCHITECTURAL HEADER\n * File: fix_prompt8.js\n * Role: Core system component participating in autonomous cognitive evolution cycles.\n * Architecture: Type-safe modular unit with resilient state interfaces.\n */\n\n'use strict';\n\nconst { readFileSync, writeFileSync } = require('node:fs');\nconst path = require('node:path');\n\n/** @type {string} */\nconst TARGET_FILE_PATH = 'src/app/api/evolution/propose/route.ts';\n\n/**\n * @typedef {Object} FormattingReplacement\n * @property {RegExp} pattern\n * @property {string} replacement\n */\n\n/** @type {ReadonlyArray<FormattingReplacement>} */\nconst FORMATTING_REPLACEMENTS = Object.freeze([\n    {\n        pattern: /\\\\`\\\\`\\\\`json\\{/g,\n        replacement: '\\\\`\\\\`\\\\`json\\\\n{',\n    },\n    {\n        pattern: /\\}\\\\`\\\\`\\\\`\\\\`\\\\`\\\\`tsx/g,\n        replacement: '}\\\\n\\\\`\\\\`\\\\`\\\\n\\\\n\\\\`\\\\`\\\\`tsx\\\\n',\n    },\n]);\n\n/**\n * Applies a sequence of regex transformations to string content efficiently.\n * \n * @param {string} content - The source string to transform.\n * @returns {string} The transformed string.\n */\nfunction applyFormattingTransforms(content) {\n    if (typeof content !== 'string') {\n        throw new TypeError('Expected content to be a string.');\n    }\n\n    return FORMATTING_REPLACEMENTS.reduce(\n        (acc, { pattern, replacement }) => acc.replace(pattern, replacement),\n        content\n    );\n}\n\n/**\n * Normalizes code block formatting within the target file with robust error handling and path traversal defense.\n * \n * @param {string} filePath - Path to the target file.\n * @throws {Error} If file read/write operations fail or path resolution is unsafe.\n */\nfunction normalizeCodeBlockFormatting(filePath) {\n    if (typeof filePath !== 'string' || filePath.trim() === '') {\n        throw new TypeError('Expected a valid non-empty file path string.');\n    }\n\n    // Defensive path validation to mitigate arbitrary file access / path traversal\n    const resolvedPath = path.resolve(filePath);\n    const resolvedBase = path.resolve(process.cwd());\n    if (!resolvedPath.startsWith(resolvedBase)) {\n        throw new Error(`Security Violation: Path traversal detected outside working directory for \"${filePath}\".`);\n    }\n\n    try {\n        const originalContent = readFileSync(resolvedPath, 'utf8');\n        const normalizedContent = applyFormattingTransforms(originalContent);\n\n        if (originalContent !== normalizedContent) {\n            writeFileSync(resolvedPath, normalizedContent, 'utf8');\n        }\n    } catch (error) {\n        const err = /** @type {Error} */ (error);\n        throw new Error(`Failed to normalize code block formatting for \"${filePath}\": ${err.message}`);\n    }\n}\n\nnormalizeCodeBlockFormatting(TARGET_FILE_PATH);\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 51,\n  timestamp: \"2026-09-20T03:12:03.087Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n\n}])",
-      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-52 with verified AST structural sanity.",
-      "riskScore": 1,
-      "generation": 52,
-      "commitSha": "faaf62d15d15ceb9e98237e776a3c477b46b8349",
-      "timestamp": "2026-09-20T05:24:07.025Z",
       "hotswapped": true,
       "verdict": "correct",
       "source": "DARLEK_APPROVED_MUTATION"
