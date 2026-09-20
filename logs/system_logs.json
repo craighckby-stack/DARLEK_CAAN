@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T06:01:52.982Z",
+    "generatedAt": "2026-09-20T06:02:03.393Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789884120329_f4b722a4",
+      "type": "MUTATE",
+      "description": "[Batch 169/253] Proposed mutation for src/hooks/useSystemOrchestrator.ts (risk: LOW)",
+      "timestamp": "2026-09-20T06:02:00.329Z"
+    },
+    {
+      "id": "rag_log_1789884120327_97b20d0a",
+      "type": "MUTATE",
+      "description": "[Batch 169/253] Proposed mutation for src/hooks/useSystemOrchestrator.ts (risk: LOW)",
+      "timestamp": "2026-09-20T06:02:00.327Z"
+    },
+    {
+      "id": "rag_log_1789884117595_2524ccf6",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T06:01:57.595Z"
+    },
     {
       "id": "rag_log_1789884109930_e862ad13",
       "type": "HEALTH",
@@ -138,69 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T06:01:03.439Z"
-    },
-    {
-      "id": "rag_log_1789884063434_9001ac2c",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T06:01:03.434Z"
-    },
-    {
-      "id": "rag_log_1789884062329_fd334a26",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T06:01:02.329Z"
-    },
-    {
-      "id": "rag_log_1789884062311_4fb0bdbe",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T06:01:02.311Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-9befa53e",
-      "time": "15:58:41",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
-    {
-      "id": "dos-0f59a1ea",
-      "time": "15:58:45",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-cab7c508",
-      "time": "15:58:46",
-      "addr": "0x00682000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
-    {
-      "id": "dos-67c9ca16",
-      "time": "15:58:47",
-      "addr": "0x0079C95A",
-      "tag": "MUTATE",
-      "message": "[Batch 161/253] Proposed mutation for src/components/ui/toaster.tsx (risk: LOW)"
-    },
-    {
-      "id": "dos-bfcd72a7",
-      "time": "15:58:51",
-      "addr": "0x00684000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 905.7 KB (8.84%)."
-    },
-    {
-      "id": "dos-7e528593",
-      "time": "15:58:55",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-e83f748e",
       "time": "15:58:56",
@@ -858,6 +816,48 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-23b01168",
+      "time": "16:01:53",
+      "addr": "0x006D0000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.59 MB."
+    },
+    {
+      "id": "dos-992230d7",
+      "time": "16:01:53",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-68748d3f",
+      "time": "16:01:57",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-c0dd9e09",
+      "time": "16:01:58",
+      "addr": "0x006D2000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-fb700dfb",
+      "time": "16:02:00",
+      "addr": "0x0042C8C7",
+      "tag": "MUTATE",
+      "message": "[Batch 169/253] Proposed mutation for src/hooks/useSystemOrchestrator.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-98e814ad",
+      "time": "16:02:03",
+      "addr": "0x006D4000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 390.0 KB (3.81%)."
     }
   ]
 }
