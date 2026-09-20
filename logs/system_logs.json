@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:27:45.774Z",
+    "generatedAt": "2026-09-20T05:27:55.518Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789882072489_f02611e2",
+      "type": "INFO",
+      "description": "[NO-OP] Code saturation reached in batch for missing_files.json",
+      "timestamp": "2026-09-20T05:27:52.489Z"
+    },
+    {
+      "id": "rag_log_1789882072488_68a7d4a9",
+      "type": "INFO",
+      "description": "[NO-OP] Code saturation reached in batch for missing_files.json",
+      "timestamp": "2026-09-20T05:27:52.488Z"
+    },
+    {
+      "id": "rag_log_1789882070845_ab9672c0",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:27:50.845Z"
+    },
     {
       "id": "rag_log_1789882062765_6c5ad64b",
       "type": "INFO",
@@ -138,55 +156,9 @@
       "type": "APPROVE",
       "description": "Mutation applied to logs/active_telemetry.log",
       "timestamp": "2026-09-20T05:26:52.287Z"
-    },
-    {
-      "id": "rag_log_1789882009119_6a8522ea",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:26:49.119Z"
-    },
-    {
-      "id": "rag_log_1789882001066_9991176b",
-      "type": "MUTATE",
-      "description": "[Batch 66/253] Proposed mutation for logs/active_telemetry.log (risk: LOW)",
-      "timestamp": "2026-09-20T05:26:41.066Z"
-    },
-    {
-      "id": "rag_log_1789882001063_80fe8d48",
-      "type": "MUTATE",
-      "description": "[Batch 66/253] Proposed mutation for logs/active_telemetry.log (risk: LOW)",
-      "timestamp": "2026-09-20T05:26:41.063Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-14b58e7b",
-      "time": "15:24:41",
-      "addr": "0x0032E000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
-    {
-      "id": "dos-b23925f6",
-      "time": "15:24:46",
-      "addr": "0x00330000",
-      "tag": "RAG_INDEX",
-      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.66 MB."
-    },
-    {
-      "id": "dos-0dea06cb",
-      "time": "15:24:46",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
-    {
-      "id": "dos-db7b63ab",
-      "time": "15:24:46",
-      "addr": "0x0084CED9",
-      "tag": "MUTATE",
-      "message": "[Batch 60/253] Proposed mutation for generate-routes.js (risk: LOW)"
-    },
     {
       "id": "dos-d4829ddf",
       "time": "15:24:47",
@@ -858,6 +830,34 @@
       "addr": "0x0037A000",
       "tag": "AST_WATCH",
       "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-2dfbbe50",
+      "time": "15:27:48",
+      "addr": "0x0037C000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 406.8 KB (3.97%)."
+    },
+    {
+      "id": "dos-d0b9ab6f",
+      "time": "15:27:50",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-35d017fd",
+      "time": "15:27:52",
+      "addr": "0x0013653B",
+      "tag": "INFO",
+      "message": "[NO-OP] Code saturation reached in batch for missing_files.json"
+    },
+    {
+      "id": "dos-f531c150",
+      "time": "15:27:53",
+      "addr": "0x0037E000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
     }
   ]
 }

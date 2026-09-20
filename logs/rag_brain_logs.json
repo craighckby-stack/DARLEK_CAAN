@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789882072489_f02611e2",
+    "type": "INFO",
+    "description": "[NO-OP] Code saturation reached in batch for missing_files.json",
+    "timestamp": "2026-09-20T05:27:52.489Z"
+  },
+  {
+    "id": "rag_log_1789882072488_68a7d4a9",
+    "type": "INFO",
+    "description": "[NO-OP] Code saturation reached in batch for missing_files.json",
+    "timestamp": "2026-09-20T05:27:52.488Z"
+  },
+  {
+    "id": "rag_log_1789882070845_ab9672c0",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:27:50.845Z"
+  },
+  {
     "id": "rag_log_1789882062765_6c5ad64b",
     "type": "INFO",
     "description": "[NO-OP] Code saturation reached in batch for metadata.json",
@@ -130,23 +148,5 @@
     "type": "APPROVE",
     "description": "Mutation applied to logs/active_telemetry.log",
     "timestamp": "2026-09-20T05:26:52.287Z"
-  },
-  {
-    "id": "rag_log_1789882009119_6a8522ea",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:26:49.119Z"
-  },
-  {
-    "id": "rag_log_1789882001066_9991176b",
-    "type": "MUTATE",
-    "description": "[Batch 66/253] Proposed mutation for logs/active_telemetry.log (risk: LOW)",
-    "timestamp": "2026-09-20T05:26:41.066Z"
-  },
-  {
-    "id": "rag_log_1789882001063_80fe8d48",
-    "type": "MUTATE",
-    "description": "[Batch 66/253] Proposed mutation for logs/active_telemetry.log (risk: LOW)",
-    "timestamp": "2026-09-20T05:26:41.063Z"
   }
 ]
