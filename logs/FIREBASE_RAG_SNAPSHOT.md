@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:27:47.097Z`
+*Last Synchronized:* `2026-09-20T04:27:56.008Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,88 +14,110 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:52.935Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:27:52.934Z
+```
+
+### 2. `test-propose.js` (Gen 215)
+*Source:* `MUTATION:test-propose.js` | *Indexed:* `2026-09-20T04:27:49.318Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-215 [2026-09-20T04:27:35.651Z] */
+/**
+ * @file test-propose.js
+ * @description Sovereign client script for proposing evolution payloads with defensive bounds checking and input validation.
+ * @version 4.0.1
+ */
+
+'use strict';
+
+/**
+ * @typedef {Object} EvolutionPayload
+ * @property {string} file
+// ... [truncated]
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:48.980Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:27:48.980Z
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:48.979Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:27:48.979Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:48.033Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:27:48.033Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:48.032Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:27:48.032Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:47.114Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to test-propose.js | TIME:2026-09-20T04:27:47.113Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:47.114Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to test-propose.js | TIME:2026-09-20T04:27:47.114Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:44.011Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:27:44.011Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:36.237Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 244/253] Proposed mutation for test-propose.js (risk: LOW) | TIME:2026-09-20T04:27:36.237Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:36.236Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose.js`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `215`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-215 with verified AST structural sanity.
 ```typescript
-[LOG:MUTATE] [Batch 244/253] Proposed mutation for test-propose.js (risk: LOW) | TIME:2026-09-20T04:27:36.236Z
-```
-
-### 4. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:34.610Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:27:34.609Z
-```
-
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:25.623Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:27:25.622Z
-```
-
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:25.621Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:27:25.621Z
-```
-
-### 7. `test-propose-import.js` (Gen 214)
-*Source:* `MUTATION:test-propose-import.js` | *Indexed:* `2026-09-20T04:27:25.482Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-214 [2026-09-20T04:27:11.635Z] */
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-215 [2026-09-20T04:27:35.651Z] */
 /**
- * @file test-propose-import.js
- * @description Test utility for submitting an evolution proposal to the local API endpoint.
+ * @file test-propose.js
+ * @description Sovereign client script for proposing evolution payloads with defensive bounds checking and input validation.
+ * @version 4.0.1
  */
 
-const EVOLUTION_PROPOSAL_ENDPOINT = 'http://localhost:3000/api/evolution/propose';
+'use strict';
 
-const proposalPayload = {
-  fileContent: "i
+/**
+ * @typedef {Object} EvolutionPayload
+ * @property {string} file
 // ... [truncated]
 ```
 
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:24.848Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:27:24.848Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:24.847Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:27:24.846Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:27:23.165Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to test-propose-import.js | TIME:2026-09-20T04:27:23.165Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose-import.js`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose-import.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `214`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-214 with verified AST structural sanity.
@@ -113,7 +135,7 @@ const proposalPayload = {
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose-header.js`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-propose-header.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `213`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-213 with verified AST structural sanity.
@@ -132,7 +154,7 @@ const proposalPayload = {
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-pdf.js`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-pdf.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `212`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-212 with verified AST structural sanity.
@@ -146,7 +168,7 @@ const proposalPayload = {
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-parse2.js`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-parse2.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `211`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-211 with verified AST structural sanity.
@@ -166,7 +188,7 @@ const proposalPayload = {
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-parse.ts`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-parse.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `210`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-210 with verified AST structural sanity.
@@ -184,7 +206,7 @@ export interface LlmAnalysisPayload {
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-models.js`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-models.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `209`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-209 with verified AST structural sanity.
@@ -202,7 +224,7 @@ async function main() {
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy3.js`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy3.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `208`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-208 with verified AST structural sanity.
@@ -220,7 +242,7 @@ async function main() {
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy2.js`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy2.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `207`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-207 with verified AST structural sanity.
@@ -237,7 +259,7 @@ async function main() {
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy.js`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `206`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-206 with verified AST structural sanity.
@@ -250,26 +272,6 @@ async function main() {
  */
 
 const MAX_INP
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-genai.js`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `205`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-205 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-205 [2026-09-20T04:23:38.350Z] */
-/**
- * @file test-genai.js
- * @description Gemini API interaction utility providing test content generation with cached client instantiation.
- * @version 3.0.0-EMG
- */
-
-'use strict';
-
-const { GoogleGenAI } = require('@google/genai');
-
-const DEFAULT_MODEL = 'gem
 // ... [truncated]
 ```
 
