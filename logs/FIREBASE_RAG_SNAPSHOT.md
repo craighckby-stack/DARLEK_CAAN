@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:59:59.217Z`
+*Last Synchronized:* `2026-09-20T06:00:12.538Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,89 +14,100 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:09.501Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T06:00:09.501Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:09.497Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T06:00:09.497Z
+```
+
+### 3. `src/hooks/useFolderScanner.ts` (Gen 141)
+*Source:* `MUTATION:src/hooks/useFolderScanner.ts` | *Indexed:* `2026-09-20T06:00:09.390Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-141 [2026-09-20T05:59:56.143Z] */
+import { useState, useRef, useCallback, useEffect, startTransition, Dispatch, SetStateAction } from 'react';
+import { sanitizeContent, Finding, isSkippableFile } from '@/lib/scanner';
+import JSZip from 'jszip';
+
+export interface FolderScanFileResult {
+  readonl
+// ... [truncated]
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:08.574Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T06:00:08.574Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:08.572Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T06:00:08.572Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:06.984Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to src/hooks/useFolderScanner.ts | TIME:2026-09-20T06:00:06.984Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:06.983Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to src/hooks/useFolderScanner.ts | TIME:2026-09-20T06:00:06.982Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T06:00:05.676Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T06:00:05.675Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:59:56.151Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 164/253] Proposed mutation for src/hooks/useFolderScanner.ts (risk: LOW) | TIME:2026-09-20T05:59:56.151Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:59:56.148Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 164/253] Proposed mutation for src/hooks/useFolderScanner.ts (risk: LOW) | TIME:2026-09-20T05:59:56.148Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:59:55.173Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/hooks/useFolderScanner.ts`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `141`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-141 with verified AST structural sanity.
 ```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:59:55.173Z
-```
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-141 [2026-09-20T05:59:56.143Z] */
+import { useState, useRef, useCallback, useEffect, startTransition, Dispatch, SetStateAction } from 'react';
+import { sanitizeContent, Finding, isSkippableFile } from '@/lib/scanner';
+import JSZip from 'jszip';
 
-### 4. `src/hooks/useAgentOrchestra.ts` (Gen 140)
-*Source:* `MUTATION:src/hooks/useAgentOrchestra.ts` | *Indexed:* `2026-09-20T05:59:46.724Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-140 [2026-09-20T05:59:33.682Z] */
-import { useState, useCallback, useRef, useMemo } from 'react';
-
-export type OrchestraStatus = 'IDLE' | `EXECUTING_${string}`;
-
-export interface UseAgentOrchestraReturn {
-  readonly status: OrchestraStatus;
-  readonly dispatch: (action: string) => void;
-}
-
-cons
+export interface FolderScanFileResult {
+  readonl
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:59:46.237Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:59:46.237Z
-```
-
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:59:46.236Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:59:46.235Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:59:45.355Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:59:45.355Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:59:45.353Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:59:45.353Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:59:44.431Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/hooks/useAgentOrchestra.ts | TIME:2026-09-20T05:59:44.431Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:59:44.429Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/hooks/useAgentOrchestra.ts | TIME:2026-09-20T05:59:44.429Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/hooks/useAgentOrchestra.ts`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/hooks/useAgentOrchestra.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `140`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-140 with verified AST structural sanity.
@@ -115,7 +126,7 @@ cons
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/hooks/use-toast.ts`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/hooks/use-toast.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `139`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-139 with verified AST structural sanity.
@@ -139,7 +150,7 @@ type ToasterToast = ToastProps & {
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/ui/toaster.tsx`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/ui/toaster.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `138`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-138 with verified AST structural sanity.
@@ -160,7 +171,7 @@ import type { ToastProps } from "@radi
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/ui/toast.tsx`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/ui/toast.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `137`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-137 with verified AST structural sanity.
@@ -178,7 +189,7 @@ import { cn } from "@/lib/utils"
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/TemporalParadoxLog.tsx`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/TemporalParadoxLog.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `136`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-136 with verified AST structural sanity.
@@ -195,7 +206,7 @@ import Re
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/StatusBar.tsx`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/StatusBar.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `135`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-135 with verified AST structural sanity.
@@ -213,7 +224,7 @@ import React, { u
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/SoundEngine.ts`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/SoundEngine.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `134`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-134 with verified AST structural sanity.
@@ -230,7 +241,7 @@ import React, { u
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/SnippetScanner.tsx`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/SnippetScanner.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `133`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-133 with verified AST structural sanity.
@@ -244,7 +255,7 @@ import Co
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/SaturationModal.tsx`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/SaturationModal.tsx`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `132`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-132 with verified AST structural sanity.
@@ -257,24 +268,6 @@ import Co
  */
 
 import React, { useCallback, useEffect, useId, useState, t
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/components/SaturationMetrics.tsx`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `131`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-131 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-131 [2026-09-20T05:56:02.364Z] */
-/**
- * DARLEK CANN ARCHITECTURAL HEADER
- * File: src/components/SaturationMetrics.tsx
- * Role: Core system component participating in autonomous cognitive evolution cycles.
- * Architecture: Type-safe modular unit with resilient state interfaces.
- */
-
-
-import Re
 // ... [truncated]
 ```
 

@@ -1,13 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:59:59.218Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:00:12.538Z]
 ======================================================================
 
-[15:51:58] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:52:03] [0x005DA000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
-[15:52:05] [0x005BDF1A] [APPROVE   ] Mutation applied to src/components/EvolutionLog.tsx
-[15:52:06] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
-[15:52:07] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
-[15:52:07] [0x005DC000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 926.2 KB (9.05%).
 [15:52:12] [0x005DE000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
 [15:52:16] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:52:16] [0x005AB65F] [MUTATE    ] [Batch 143/253] Proposed mutation for src/components/FolderScanner.tsx (risk: LOW)
@@ -253,3 +247,9 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:59:59.218Z]
 [15:59:56] [0x00142DAB] [MUTATE    ] [Batch 164/253] Proposed mutation for src/hooks/useFolderScanner.ts (risk: LOW)
 [15:59:58] [0x006A0000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.40 MB.
 [15:59:58] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
+[16:00:03] [0x006A2000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[16:00:05] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[16:00:06] [0x005CAFB6] [APPROVE   ] Mutation applied to src/hooks/useFolderScanner.ts
+[16:00:08] [0x006A4000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 538.2 KB (5.26%).
+[16:00:08] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
+[16:00:09] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
