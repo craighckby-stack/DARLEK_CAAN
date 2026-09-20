@@ -1,12 +1,84 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:46:48.570Z",
+    "generatedAt": "2026-09-20T05:46:57.780Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789883214687_d0c98c9b",
+      "type": "MUTATE",
+      "description": "[Batch 129/253] Proposed mutation for src/app/layout.tsx (risk: LOW)",
+      "timestamp": "2026-09-20T05:46:54.687Z"
+    },
+    {
+      "id": "rag_log_1789883214684_0de81349",
+      "type": "MUTATE",
+      "description": "[Batch 129/253] Proposed mutation for src/app/layout.tsx (risk: LOW)",
+      "timestamp": "2026-09-20T05:46:54.684Z"
+    },
+    {
+      "id": "rag_log_1789883213211_077c74b3",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:46:53.211Z"
+    },
+    {
+      "id": "rag_log_1789883212399_ddb3186b",
+      "type": "RAG_WRITE",
+      "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-11, ra...",
+      "timestamp": "2026-09-20T05:46:52.399Z"
+    },
+    {
+      "id": "rag_log_1789883212396_7b9a7699",
+      "type": "HOTSWAP_OK",
+      "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-10 [Source: RAG_GENE_HOTSWAP].",
+      "timestamp": "2026-09-20T05:46:52.396Z"
+    },
+    {
+      "id": "rag_log_1789883211518_afee8c93",
+      "type": "HOTSWAP",
+      "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
+      "timestamp": "2026-09-20T05:46:51.518Z"
+    },
+    {
+      "id": "rag_log_1789883210641_bb189145",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:46:50.641Z"
+    },
+    {
+      "id": "rag_log_1789883210640_1d1525e8",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T05:46:50.640Z"
+    },
+    {
+      "id": "rag_log_1789883210110_859022e2",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T05:46:50.110Z"
+    },
+    {
+      "id": "rag_log_1789883210095_f7a3c1b6",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T05:46:50.095Z"
+    },
+    {
+      "id": "rag_log_1789883209462_346d0f59",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/app/globals.css",
+      "timestamp": "2026-09-20T05:46:49.462Z"
+    },
+    {
+      "id": "rag_log_1789883209460_de9ec33d",
+      "type": "APPROVE",
+      "description": "Mutation applied to src/app/globals.css",
+      "timestamp": "2026-09-20T05:46:49.460Z"
+    },
     {
       "id": "rag_log_1789883205556_27ce2959",
       "type": "LOG_SYNC",
@@ -84,151 +156,9 @@
       "type": "MUTATE",
       "description": "[Batch 127/253] Proposed mutation for src/app/error.tsx (risk: LOW)",
       "timestamp": "2026-09-20T05:46:15.004Z"
-    },
-    {
-      "id": "rag_log_1789883174605_f90326bd",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:46:14.605Z"
-    },
-    {
-      "id": "rag_log_1789883165234_1edbf289",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:46:05.234Z"
-    },
-    {
-      "id": "rag_log_1789883165232_e32d95a7",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:46:05.232Z"
-    },
-    {
-      "id": "rag_log_1789883164568_56a5817d",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:46:04.568Z"
-    },
-    {
-      "id": "rag_log_1789883164566_4ef8d5f0",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:46:04.566Z"
-    },
-    {
-      "id": "rag_log_1789883163606_4281ca2c",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/app/api/validate/route.ts",
-      "timestamp": "2026-09-20T05:46:03.606Z"
-    },
-    {
-      "id": "rag_log_1789883163605_aa9138fe",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/app/api/validate/route.ts",
-      "timestamp": "2026-09-20T05:46:03.605Z"
-    },
-    {
-      "id": "rag_log_1789883160682_cb033150",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:46:00.682Z"
-    },
-    {
-      "id": "rag_log_1789883152470_081103fb",
-      "type": "MUTATE",
-      "description": "[Batch 126/253] Proposed mutation for src/app/api/validate/route.ts (risk: LOW)",
-      "timestamp": "2026-09-20T05:45:52.470Z"
-    },
-    {
-      "id": "rag_log_1789883152467_93e3dcf0",
-      "type": "MUTATE",
-      "description": "[Batch 126/253] Proposed mutation for src/app/api/validate/route.ts (risk: LOW)",
-      "timestamp": "2026-09-20T05:45:52.467Z"
-    },
-    {
-      "id": "rag_log_1789883151023_d58f05c8",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T05:45:51.023Z"
-    },
-    {
-      "id": "rag_log_1789883142353_bfddf48e",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:45:42.353Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-312c6d1e",
-      "time": "15:43:39",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
-    {
-      "id": "dos-0659d524",
-      "time": "15:43:43",
-      "addr": "0x0050A000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
-    {
-      "id": "dos-6a4ae306",
-      "time": "15:43:46",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-f80c8f5d",
-      "time": "15:43:48",
-      "addr": "0x0050C000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 785.5 KB (7.67%)."
-    },
-    {
-      "id": "dos-af90a82a",
-      "time": "15:43:49",
-      "addr": "0x00239A6F",
-      "tag": "APPROVE",
-      "message": "Mutation applied to src/app/api/github/write-file/route.ts"
-    },
-    {
-      "id": "dos-94991b93",
-      "time": "15:43:50",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
-    {
-      "id": "dos-a0537466",
-      "time": "15:43:50",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-5469c489",
-      "time": "15:43:53",
-      "addr": "0x0050E000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
-    {
-      "id": "dos-cbaaeb4d",
-      "time": "15:43:58",
-      "addr": "0x00510000",
-      "tag": "RAG_INDEX",
-      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.07 MB."
-    },
-    {
-      "id": "dos-80a4fe3d",
-      "time": "15:43:58",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
     {
       "id": "dos-0d7b9026",
       "time": "15:43:59",
@@ -858,6 +788,76 @@
       "addr": "0x00556000",
       "tag": "SANITY_OK",
       "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-31bc1e7f",
+      "time": "15:46:49",
+      "addr": "0x00178EF8",
+      "tag": "APPROVE",
+      "message": "Mutation applied to src/app/globals.css"
+    },
+    {
+      "id": "dos-cc157ba3",
+      "time": "15:46:50",
+      "addr": "0x007EEE12",
+      "tag": "HEALTH",
+      "message": "Auto-test: PASSED — 5 passed, 0 failed"
+    },
+    {
+      "id": "dos-29fd0d39",
+      "time": "15:46:50",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-3908bad6",
+      "time": "15:46:51",
+      "addr": "0x00558000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.63 MB."
+    },
+    {
+      "id": "dos-4db12381",
+      "time": "15:46:51",
+      "addr": "0x007FC719",
+      "tag": "HOTSWAP",
+      "message": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts"
+    },
+    {
+      "id": "dos-806670e2",
+      "time": "15:46:52",
+      "addr": "0x00376FBA",
+      "tag": "HOTSWAP_OK",
+      "message": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-10 [Source: RAG_GENE_HOTSWAP]."
+    },
+    {
+      "id": "dos-aee21dec",
+      "time": "15:46:52",
+      "addr": "0x00374118",
+      "tag": "RAG_WRITE",
+      "message": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-11, ra..."
+    },
+    {
+      "id": "dos-a368673b",
+      "time": "15:46:53",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-c2be6b2e",
+      "time": "15:46:54",
+      "addr": "0x008C9C76",
+      "tag": "MUTATE",
+      "message": "[Batch 129/253] Proposed mutation for src/app/layout.tsx (risk: LOW)"
+    },
+    {
+      "id": "dos-069d487a",
+      "time": "15:46:56",
+      "addr": "0x0055A000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
     }
   ]
 }
