@@ -1,5 +1,59 @@
 [
   {
+    "id": "rag_log_1789863924421_86e9c725",
+    "type": "ERROR",
+    "description": "Network exception encountered: Unexpected token '<', \"<!doctype \"... is not valid JSON",
+    "timestamp": "2026-09-20T00:25:24.421Z"
+  },
+  {
+    "id": "rag_log_1789863924418_26f1b436",
+    "type": "ERROR",
+    "description": "Network exception encountered: Unexpected token '<', \"<!doctype \"... is not valid JSON",
+    "timestamp": "2026-09-20T00:25:24.418Z"
+  },
+  {
+    "id": "rag_log_1789863924173_32b3b3e9",
+    "type": "CONNECT",
+    "description": "Verifying GitHub access key...",
+    "timestamp": "2026-09-20T00:25:24.173Z"
+  },
+  {
+    "id": "rag_log_1789863924166_be27fad8",
+    "type": "CONNECT",
+    "description": "Verifying GitHub access key...",
+    "timestamp": "2026-09-20T00:25:24.166Z"
+  },
+  {
+    "id": "rag_log_1789863891484_2fdfea87",
+    "type": "REJECT",
+    "description": "Coherence Gate blocked mutation for assets/.aistudio/SECURITY_PROTOCOL.md. Logged to Firebase as 'wrong' failure exemplar.",
+    "timestamp": "2026-09-20T00:24:51.484Z"
+  },
+  {
+    "id": "rag_log_1789863891482_df613b0a",
+    "type": "REJECT",
+    "description": "Coherence Gate blocked mutation for assets/.aistudio/SECURITY_PROTOCOL.md. Logged to Firebase as 'wrong' failure exemplar.",
+    "timestamp": "2026-09-20T00:24:51.482Z"
+  },
+  {
+    "id": "rag_log_1789858492297_10573dbf",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-19T22:54:52.297Z"
+  },
+  {
+    "id": "rag_log_1789858489372_9408b3ff",
+    "type": "MUTATE",
+    "description": "[Batch 17/243] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW)",
+    "timestamp": "2026-09-19T22:54:49.372Z"
+  },
+  {
+    "id": "rag_log_1789858489358_28b2163c",
+    "type": "MUTATE",
+    "description": "[Batch 17/243] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW)",
+    "timestamp": "2026-09-19T22:54:49.358Z"
+  },
+  {
     "id": "rag_log_1789858481244_4b469c0f",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -94,59 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: PASSED — 5 passed, 0 failed",
     "timestamp": "2026-09-19T22:48:12.116Z"
-  },
-  {
-    "id": "rag_log_1789858092114_1f1672a8",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-19T22:48:12.114Z"
-  },
-  {
-    "id": "rag_log_1789858091524_0abff328",
-    "type": "APPROVE",
-    "description": "Mutation applied to assets/.aistudio/ARCHITECTURE.md",
-    "timestamp": "2026-09-19T22:48:11.524Z"
-  },
-  {
-    "id": "rag_log_1789858091518_091570b6",
-    "type": "APPROVE",
-    "description": "Mutation applied to assets/.aistudio/ARCHITECTURE.md",
-    "timestamp": "2026-09-19T22:48:11.518Z"
-  },
-  {
-    "id": "rag_log_1789858090235_d869e2d6",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-19T22:48:10.235Z"
-  },
-  {
-    "id": "rag_log_1789858081768_00f4c950",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-19T22:48:01.768Z"
-  },
-  {
-    "id": "rag_log_1789858080450_20d839bc",
-    "type": "MUTATE",
-    "description": "[Batch 15/243] Proposed mutation for assets/.aistudio/ARCHITECTURE.md (risk: LOW)",
-    "timestamp": "2026-09-19T22:48:00.450Z"
-  },
-  {
-    "id": "rag_log_1789858080448_5bd9509f",
-    "type": "MUTATE",
-    "description": "[Batch 15/243] Proposed mutation for assets/.aistudio/ARCHITECTURE.md (risk: LOW)",
-    "timestamp": "2026-09-19T22:48:00.448Z"
-  },
-  {
-    "id": "rag_log_1789858071557_9a70cb31",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-19T22:47:51.557Z"
-  },
-  {
-    "id": "rag_log_1789858069684_08219c42",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-19T22:47:49.684Z"
   }
 ]

@@ -1,12 +1,66 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-19T22:54:44.762Z",
+    "generatedAt": "2026-09-20T00:25:27.431Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789863924421_86e9c725",
+      "type": "ERROR",
+      "description": "Network exception encountered: Unexpected token '<', \"<!doctype \"... is not valid JSON",
+      "timestamp": "2026-09-20T00:25:24.421Z"
+    },
+    {
+      "id": "rag_log_1789863924418_26f1b436",
+      "type": "ERROR",
+      "description": "Network exception encountered: Unexpected token '<', \"<!doctype \"... is not valid JSON",
+      "timestamp": "2026-09-20T00:25:24.418Z"
+    },
+    {
+      "id": "rag_log_1789863924173_32b3b3e9",
+      "type": "CONNECT",
+      "description": "Verifying GitHub access key...",
+      "timestamp": "2026-09-20T00:25:24.173Z"
+    },
+    {
+      "id": "rag_log_1789863924166_be27fad8",
+      "type": "CONNECT",
+      "description": "Verifying GitHub access key...",
+      "timestamp": "2026-09-20T00:25:24.166Z"
+    },
+    {
+      "id": "rag_log_1789863891484_2fdfea87",
+      "type": "REJECT",
+      "description": "Coherence Gate blocked mutation for assets/.aistudio/SECURITY_PROTOCOL.md. Logged to Firebase as 'wrong' failure exemplar.",
+      "timestamp": "2026-09-20T00:24:51.484Z"
+    },
+    {
+      "id": "rag_log_1789863891482_df613b0a",
+      "type": "REJECT",
+      "description": "Coherence Gate blocked mutation for assets/.aistudio/SECURITY_PROTOCOL.md. Logged to Firebase as 'wrong' failure exemplar.",
+      "timestamp": "2026-09-20T00:24:51.482Z"
+    },
+    {
+      "id": "rag_log_1789858492297_10573dbf",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-19T22:54:52.297Z"
+    },
+    {
+      "id": "rag_log_1789858489372_9408b3ff",
+      "type": "MUTATE",
+      "description": "[Batch 17/243] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW)",
+      "timestamp": "2026-09-19T22:54:49.372Z"
+    },
+    {
+      "id": "rag_log_1789858489358_28b2163c",
+      "type": "MUTATE",
+      "description": "[Batch 17/243] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW)",
+      "timestamp": "2026-09-19T22:54:49.358Z"
+    },
     {
       "id": "rag_log_1789858481244_4b469c0f",
       "type": "LOG_SYNC",
@@ -102,98 +156,9 @@
       "type": "HEALTH",
       "description": "Auto-test: PASSED — 5 passed, 0 failed",
       "timestamp": "2026-09-19T22:48:12.116Z"
-    },
-    {
-      "id": "rag_log_1789858092114_1f1672a8",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-19T22:48:12.114Z"
-    },
-    {
-      "id": "rag_log_1789858091524_0abff328",
-      "type": "APPROVE",
-      "description": "Mutation applied to assets/.aistudio/ARCHITECTURE.md",
-      "timestamp": "2026-09-19T22:48:11.524Z"
-    },
-    {
-      "id": "rag_log_1789858091518_091570b6",
-      "type": "APPROVE",
-      "description": "Mutation applied to assets/.aistudio/ARCHITECTURE.md",
-      "timestamp": "2026-09-19T22:48:11.518Z"
-    },
-    {
-      "id": "rag_log_1789858090235_d869e2d6",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-19T22:48:10.235Z"
-    },
-    {
-      "id": "rag_log_1789858081768_00f4c950",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-19T22:48:01.768Z"
-    },
-    {
-      "id": "rag_log_1789858080450_20d839bc",
-      "type": "MUTATE",
-      "description": "[Batch 15/243] Proposed mutation for assets/.aistudio/ARCHITECTURE.md (risk: LOW)",
-      "timestamp": "2026-09-19T22:48:00.450Z"
-    },
-    {
-      "id": "rag_log_1789858080448_5bd9509f",
-      "type": "MUTATE",
-      "description": "[Batch 15/243] Proposed mutation for assets/.aistudio/ARCHITECTURE.md (risk: LOW)",
-      "timestamp": "2026-09-19T22:48:00.448Z"
-    },
-    {
-      "id": "rag_log_1789858071557_9a70cb31",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-19T22:47:51.557Z"
-    },
-    {
-      "id": "rag_log_1789858069684_08219c42",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-19T22:47:49.684Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-d051bd69",
-      "time": "08:41:28",
-      "addr": "0x009DBBB8",
-      "tag": "APPROVE",
-      "message": "Mutation applied to .env.example"
-    },
-    {
-      "id": "dos-a721679d",
-      "time": "08:41:28",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
-    {
-      "id": "dos-2d5adceb",
-      "time": "08:41:29",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-a23329dd",
-      "time": "08:41:38",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-327cbcb8",
-      "time": "08:41:39",
-      "addr": "0x009EFDCA",
-      "tag": "MUTATE",
-      "message": "[Batch 1/243] Proposed mutation for .github/PULL_REQUEST_TEMPLATE.md (risk: LOW)"
-    },
     {
       "id": "dos-66617de5",
       "time": "08:41:48",
@@ -858,6 +823,41 @@
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-1c960a49",
+      "time": "08:54:49",
+      "addr": "0x00727BFF",
+      "tag": "MUTATE",
+      "message": "[Batch 17/243] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW)"
+    },
+    {
+      "id": "dos-4888f9e7",
+      "time": "08:54:52",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-fae3055b",
+      "time": "10:24:51",
+      "addr": "0x00858606",
+      "tag": "REJECT",
+      "message": "Coherence Gate blocked mutation for assets/.aistudio/SECURITY_PROTOCOL.md. Logged to Firebase as 'wrong' failure exemplar."
+    },
+    {
+      "id": "dos-82a5a777",
+      "time": "10:25:24",
+      "addr": "0x002B944A",
+      "tag": "CONNECT",
+      "message": "Verifying GitHub access key..."
+    },
+    {
+      "id": "dos-99df3ae6",
+      "time": "10:25:24",
+      "addr": "0x0064D87F",
+      "tag": "ERROR",
+      "message": "Network exception encountered: Unexpected token '<', \"<!doctype \"... is not valid JSON"
     }
   ]
 }

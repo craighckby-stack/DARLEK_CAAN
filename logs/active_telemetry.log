@@ -1,5 +1,5 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-19T22:54:44.763Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T00:25:27.431Z]
 ======================================================================
 
 [00:00:00] [0x00400000] [BOOT      ] Microsoft(R) MS-DOS(R) Version 6.22
@@ -127,3 +127,8 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-19T22:54:44.763Z]
 [08:54:22] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [08:54:32] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [08:54:41] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[08:54:49] [0x00727BFF] [MUTATE    ] [Batch 17/243] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW)
+[08:54:52] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[10:24:51] [0x00858606] [REJECT    ] Coherence Gate blocked mutation for assets/.aistudio/SECURITY_PROTOCOL.md. Logged to Firebase as 'wrong' failure exemplar.
+[10:25:24] [0x002B944A] [CONNECT   ] Verifying GitHub access key...
+[10:25:24] [0x0064D87F] [ERROR     ] Network exception encountered: Unexpected token '<', "<!doctype "... is not valid JSON
