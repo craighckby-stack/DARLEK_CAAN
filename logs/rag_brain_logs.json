@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789873333381_6118330c",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:02:13.381Z"
+  },
+  {
+    "id": "rag_log_1789873331461_3dc7faff",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T03:02:11.461Z"
+  },
+  {
+    "id": "rag_log_1789873331459_952d646e",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T03:02:11.459Z"
+  },
+  {
+    "id": "rag_log_1789873330708_fe1b42eb",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T03:02:10.708Z"
+  },
+  {
+    "id": "rag_log_1789873330707_dbeacc94",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T03:02:10.707Z"
+  },
+  {
+    "id": "rag_log_1789873330428_25d3165a",
+    "type": "APPROVE",
+    "description": "Mutation applied to download_page.js",
+    "timestamp": "2026-09-20T03:02:10.428Z"
+  },
+  {
+    "id": "rag_log_1789873330425_b330836a",
+    "type": "APPROVE",
+    "description": "Mutation applied to download_page.js",
+    "timestamp": "2026-09-20T03:02:10.425Z"
+  },
+  {
     "id": "rag_log_1789873324374_1e105455",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -106,47 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: PASSED — 5 passed, 0 failed",
     "timestamp": "2026-09-20T03:01:25.744Z"
-  },
-  {
-    "id": "rag_log_1789873285451_653618af",
-    "type": "APPROVE",
-    "description": "Mutation applied to download_changed_fast.js",
-    "timestamp": "2026-09-20T03:01:25.451Z"
-  },
-  {
-    "id": "rag_log_1789873285449_3d2c746c",
-    "type": "APPROVE",
-    "description": "Mutation applied to download_changed_fast.js",
-    "timestamp": "2026-09-20T03:01:25.449Z"
-  },
-  {
-    "id": "rag_log_1789873283612_71e2df62",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:01:23.612Z"
-  },
-  {
-    "id": "rag_log_1789873274378_d3fae82d",
-    "type": "MUTATE",
-    "description": "[Batch 27/253] Proposed mutation for download_changed_fast.js (risk: LOW)",
-    "timestamp": "2026-09-20T03:01:14.378Z"
-  },
-  {
-    "id": "rag_log_1789873274376_34ff2af4",
-    "type": "MUTATE",
-    "description": "[Batch 27/253] Proposed mutation for download_changed_fast.js (risk: LOW)",
-    "timestamp": "2026-09-20T03:01:14.376Z"
-  },
-  {
-    "id": "rag_log_1789873274098_a1d7b65b",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:01:14.098Z"
-  },
-  {
-    "id": "rag_log_1789873264476_d1bb7513",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T03:01:04.476Z"
   }
 ]
