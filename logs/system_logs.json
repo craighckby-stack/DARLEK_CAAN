@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:25:22.633Z",
+    "generatedAt": "2026-09-20T03:25:31.026Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789874728003_c224ae05",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:25:28.003Z"
+    },
+    {
+      "id": "rag_log_1789874726443_618b5a1a",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T03:25:26.443Z"
+    },
+    {
+      "id": "rag_log_1789874726442_ccba7f60",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T03:25:26.442Z"
+    },
+    {
+      "id": "rag_log_1789874725530_98428fe9",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 4 passed, 0 failed",
+      "timestamp": "2026-09-20T03:25:25.530Z"
+    },
+    {
+      "id": "rag_log_1789874725529_38276771",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 4 passed, 0 failed",
+      "timestamp": "2026-09-20T03:25:25.529Z"
+    },
+    {
+      "id": "rag_log_1789874725222_bd6d3d85",
+      "type": "APPROVE",
+      "description": "Mutation applied to remote_App.tsx",
+      "timestamp": "2026-09-20T03:25:25.222Z"
+    },
+    {
+      "id": "rag_log_1789874725221_36ca3ba2",
+      "type": "APPROVE",
+      "description": "Mutation applied to remote_App.tsx",
+      "timestamp": "2026-09-20T03:25:25.221Z"
+    },
     {
       "id": "rag_log_1789874719590_fe8d2acf",
       "type": "LOG_SYNC",
@@ -114,79 +156,9 @@
       "type": "HEALTH",
       "description": "Auto-test: PASSED — 5 passed, 0 failed",
       "timestamp": "2026-09-20T03:24:28.558Z"
-    },
-    {
-      "id": "rag_log_1789874668240_34f14c95",
-      "type": "APPROVE",
-      "description": "Mutation applied to public/placeholder.txt",
-      "timestamp": "2026-09-20T03:24:28.240Z"
-    },
-    {
-      "id": "rag_log_1789874668239_fc8d5016",
-      "type": "APPROVE",
-      "description": "Mutation applied to public/placeholder.txt",
-      "timestamp": "2026-09-20T03:24:28.239Z"
-    },
-    {
-      "id": "rag_log_1789874665168_b3e18a33",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:24:25.168Z"
-    },
-    {
-      "id": "rag_log_1789874657373_43bd20d1",
-      "type": "MUTATE",
-      "description": "[Batch 78/253] Proposed mutation for public/placeholder.txt (risk: LOW)",
-      "timestamp": "2026-09-20T03:24:17.373Z"
-    },
-    {
-      "id": "rag_log_1789874657371_7ee95760",
-      "type": "MUTATE",
-      "description": "[Batch 78/253] Proposed mutation for public/placeholder.txt (risk: LOW)",
-      "timestamp": "2026-09-20T03:24:17.371Z"
-    },
-    {
-      "id": "rag_log_1789874656212_107ad26e",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:24:16.212Z"
-    },
-    {
-      "id": "rag_log_1789874648016_f3986f7b",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:24:08.016Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-0c9f8bc8",
-      "time": "13:18:07",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-8e60fa1e",
-      "time": "13:18:15",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-ec01d78e",
-      "time": "13:18:20",
-      "addr": "0x0042162A",
-      "tag": "MUTATE",
-      "message": "[Batch 61/253] Proposed mutation for get_git_log.js (risk: LOW)"
-    },
-    {
-      "id": "dos-cb572be4",
-      "time": "13:18:23",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-19cf2b3f",
       "time": "13:18:31",
@@ -855,6 +827,34 @@
     {
       "id": "dos-88df03af",
       "time": "13:25:19",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-f3c4ca2a",
+      "time": "13:25:25",
+      "addr": "0x007587B7",
+      "tag": "APPROVE",
+      "message": "Mutation applied to remote_App.tsx"
+    },
+    {
+      "id": "dos-7f08e5ec",
+      "time": "13:25:25",
+      "addr": "0x003D0A96",
+      "tag": "HEALTH",
+      "message": "Auto-test: PASSED — 4 passed, 0 failed"
+    },
+    {
+      "id": "dos-30db284f",
+      "time": "13:25:26",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-30201aa3",
+      "time": "13:25:28",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
