@@ -1,5 +1,29 @@
 [
   {
+    "id": "rag_log_1789880481152_db8715e8",
+    "type": "RAG_WRITE",
+    "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-2, rai...",
+    "timestamp": "2026-09-20T05:01:21.152Z"
+  },
+  {
+    "id": "rag_log_1789880481149_608e5918",
+    "type": "HOTSWAP_OK",
+    "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-1 [Source: RAG_GENE_HOTSWAP].",
+    "timestamp": "2026-09-20T05:01:21.149Z"
+  },
+  {
+    "id": "rag_log_1789880480732_a67ab088",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:01:20.732Z"
+  },
+  {
+    "id": "rag_log_1789880480208_1ce2afbf",
+    "type": "HOTSWAP",
+    "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
+    "timestamp": "2026-09-20T05:01:20.208Z"
+  },
+  {
     "id": "rag_log_1789880472165_313e8a49",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -124,29 +148,5 @@
     "type": "SYSTEM",
     "description": "Bypassed access portal: Autonomous cognitive pipeline initiated with local cyber core modules.",
     "timestamp": "2026-09-20T04:41:43.057Z"
-  },
-  {
-    "id": "rag_log_1789879297963_1ef2ed26",
-    "type": "ERROR",
-    "description": "Network exception encountered: Unexpected token '<', \"<!doctype \"... is not valid JSON",
-    "timestamp": "2026-09-20T04:41:37.963Z"
-  },
-  {
-    "id": "rag_log_1789879297962_838415f0",
-    "type": "ERROR",
-    "description": "Network exception encountered: Unexpected token '<', \"<!doctype \"... is not valid JSON",
-    "timestamp": "2026-09-20T04:41:37.962Z"
-  },
-  {
-    "id": "rag_log_1789879297664_84ef7289",
-    "type": "CONNECT",
-    "description": "Verifying GitHub access key...",
-    "timestamp": "2026-09-20T04:41:37.664Z"
-  },
-  {
-    "id": "rag_log_1789879297663_75cd57f3",
-    "type": "CONNECT",
-    "description": "Verifying GitHub access key...",
-    "timestamp": "2026-09-20T04:41:37.663Z"
   }
 ]

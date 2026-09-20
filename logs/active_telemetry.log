@@ -1,5 +1,5 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:01:15.172Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:01:25.105Z]
 ======================================================================
 
 [00:00:00] [0x00400000] [BOOT      ] Microsoft(R) MS-DOS(R) Version 6.22
@@ -13,3 +13,8 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:01:15.172Z]
 [15:01:10] [0x00104000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 211.3 KB (2.06%).
 [15:01:12] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:01:15] [0x00106000] [SANITY_OK ] Emergency breaker: Health 89%, Drift 11%, Syntax clean.
+[15:01:19] [0x00108000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.79 MB.
+[15:01:20] [0x007FC719] [HOTSWAP   ] Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts
+[15:01:20] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:01:21] [0x007F19CF] [HOTSWAP_OK] HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-1 [Source: RAG_GENE_HOTSWAP].
+[15:01:21] [0x004C7E57] [RAG_WRITE ] Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-2, rai...
