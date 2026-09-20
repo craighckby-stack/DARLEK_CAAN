@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:25:17.746Z`
+*Last Synchronized:* `2026-09-20T04:25:30.582Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -13,89 +13,107 @@
 
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
-### 1. `system.log` (Gen 1)
+### 1. `test-models.js` (Gen 209)
+*Source:* `MUTATION:test-models.js` | *Indexed:* `2026-09-20T04:25:27.565Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-209 [2026-09-20T04:25:14.117Z] */
+import { GoogleGenAI } from '@google/genai';
+
+async function main() {
+  const key = process.env.GEMINI_API_KEY;
+  try {
+    const ai = new GoogleGenAI({ apiKey: key });
+    const response = await ai.models.list();
+    for await (const model of response) {
+     
+// ... [truncated]
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:27.080Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 1 issues (0 high) | TIME:2026-09-20T04:25:27.080Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:27.079Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 1 issues (0 high) | TIME:2026-09-20T04:25:27.078Z
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:26.307Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:25:26.307Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:26.306Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:25:26.305Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:25.523Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to test-models.js | TIME:2026-09-20T04:25:25.520Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:25.514Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to test-models.js | TIME:2026-09-20T04:25:25.513Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:24.122Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:25:24.121Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:14.671Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 238/253] Proposed mutation for test-models.js (risk: LOW) | TIME:2026-09-20T04:25:14.671Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:14.669Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 238/253] Proposed mutation for test-models.js (risk: LOW) | TIME:2026-09-20T04:25:14.668Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:13.083Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-models.js`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `209`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-209 with verified AST structural sanity.
 ```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:25:13.083Z
-```
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-209 [2026-09-20T04:25:14.117Z] */
+import { GoogleGenAI } from '@google/genai';
 
-### 4. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:04.273Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:25:04.273Z
-```
-
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:04.271Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:25:04.270Z
-```
-
-### 6. `test-greedy3.js` (Gen 208)
-*Source:* `MUTATION:test-greedy3.js` | *Indexed:* `2026-09-20T04:25:03.410Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-208 [2026-09-20T04:24:48.456Z] */
-/**
- * @file test-greedy3.js
- * @version 4.1.0
- * @author EMG Core v49 Neural Code and Documentation Optimizer Engine
- * @description Modernized LLM response parser emphasizing readability, modular decomposition, and clean architectural clarity.
- */
-
-/**
- * @ty
+async function main() {
+  const key = process.env.GEMINI_API_KEY;
+  try {
+    const ai = new GoogleGenAI({ apiKey: key });
+    const response = await ai.models.list();
+    for await (const model of response) {
+     
 // ... [truncated]
 ```
 
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:03.308Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: REJECTED — 3 passed, 2 failed | TIME:2026-09-20T04:25:03.308Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:03.307Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: REJECTED — 3 passed, 2 failed | TIME:2026-09-20T04:25:03.306Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:01.617Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to test-greedy3.js | TIME:2026-09-20T04:25:01.617Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:25:01.616Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to test-greedy3.js | TIME:2026-09-20T04:25:01.616Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy3.js`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy3.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `208`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-208 with verified AST structural sanity.
@@ -113,7 +131,7 @@
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy2.js`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy2.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `207`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-207 with verified AST structural sanity.
@@ -130,7 +148,7 @@
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy.js`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-greedy.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `206`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-206 with verified AST structural sanity.
@@ -146,7 +164,7 @@ const MAX_INP
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-genai.js`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-genai.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `205`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-205 with verified AST structural sanity.
@@ -166,7 +184,7 @@ const DEFAULT_MODEL = 'gem
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-gemini.js`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-gemini.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `204`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-204 with verified AST structural sanity.
@@ -184,7 +202,7 @@ async function main() {
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `tailwind.config.js`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `tailwind.config.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `203`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-203 with verified AST structural sanity.
@@ -206,7 +224,7 @@ export default {
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/siphon.ts`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/siphon.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `202`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-202 with verified AST structural sanity.
@@ -224,7 +242,7 @@ export interface SiphonSource {
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/error-parser.ts`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/error-parser.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `201`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-201 with verified AST structural sanity.
@@ -242,7 +260,7 @@ export interface SystemErrorPayload {
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/cognitive-engine.ts`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/cognitive-engine.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `200`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-200 with verified AST structural sanity.
@@ -252,25 +270,6 @@ export interface SystemErrorPayload {
 // cognitive-engine.ts — Fully Typed Autonomous Cognitive Core & Alignment V3 Engine
 // =============================================================================
 // Autonomous 
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/system.d.ts`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `199`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-199 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-199 [2026-09-20T04:21:01.430Z] */
-/**
- * @fileoverview Core system runtime configuration, orchestrator definitions, and recursive utility types.
- * @module types/system
- */
-
-/**
- * Operational runtime environments in which the system engine executes.
- */
-export const enum SystemMode {
-  /** Loc
 // ... [truncated]
 ```
 

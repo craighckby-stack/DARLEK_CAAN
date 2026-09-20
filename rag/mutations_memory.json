@@ -1,11 +1,25 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T04:25:17.746Z",
+    "generatedAt": "2026-09-20T04:25:30.582Z",
     "totalMutations": 10,
     "correctCount": 10,
     "wrongCount": 0
   },
   "mutations": [
+    {
+      "id": "rag_mut_1789878325525_0ece9012",
+      "filePath": "test-models.js",
+      "originalCode": "import { GoogleGenAI } from '@google/genai';\n\nasync function main() {\n  const key = process.env.GEMINI_API_KEY;\n  try {\n    const ai = new GoogleGenAI({ apiKey: key });\n    const response = await ai.models.list();\n    for await (const model of response) {\n      console.log(model.name);\n    }\n  } catch (err) {\n    console.log(\"Error:\", err.message);\n  }\n}\nmain();\n",
+      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-209 [2026-09-20T04:25:14.117Z] */\nimport { GoogleGenAI } from '@google/genai';\n\nasync function main() {\n  const key = process.env.GEMINI_API_KEY;\n  try {\n    const ai = new GoogleGenAI({ apiKey: key });\n    const response = await ai.models.list();\n    for await (const model of response) {\n      console.log(model.name);\n    }\n  } catch (err) {\n    console.log(\"Error:\", err.message);\n  }\n}\nmain();\n\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 209,\n  timestamp: \"2026-09-20T04:25:14.117Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
+      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-209 with verified AST structural sanity.",
+      "riskScore": 1,
+      "generation": 209,
+      "commitSha": "4ef20a05318f9e1783b5bc5710003729cec95d4a",
+      "timestamp": "2026-09-20T04:25:25.525Z",
+      "hotswapped": true,
+      "verdict": "correct",
+      "source": "DARLEK_APPROVED_MUTATION"
+    },
     {
       "id": "rag_mut_1789878301617_fe4b8459",
       "filePath": "test-greedy3.js",
@@ -128,20 +142,6 @@
       "generation": 200,
       "commitSha": "2a5a0e15b92be854abe3fe1c95a92d1033207161",
       "timestamp": "2026-09-20T04:21:47.505Z",
-      "hotswapped": true,
-      "verdict": "correct",
-      "source": "DARLEK_APPROVED_MUTATION"
-    },
-    {
-      "id": "rag_mut_1789878073092_7f65f5ac",
-      "filePath": "src/types/system.d.ts",
-      "originalCode": "/**\n * @fileoverview Core system runtime configuration, orchestrator definitions, and recursive utility types.\n * @module types/system\n */\n\n/**\n * Operational runtime environments in which the system engine executes.\n */\nexport const enum SystemMode {\n  /** Local development and debugging environment. */\n  Development = 'development',\n  /** Live production environment with strict performance optimization. */\n  Production = 'production',\n  /** Pre-production staging and integration testing environment. */\n  Staging = 'staging',\n}\n\n/**\n * Fundamental configuration contract governing global engine parameters.\n */\nexport interface SystemConfig {\n  /** Semantic version string representing the current system engine build. */\n  readonly version: string;\n  /** Active deployment environment mode. */\n  readonly mode: SystemMode;\n  /** Flag denoting whether detailed diagnostic telemetry and debug routines are active. */\n  readonly debug: boolean;\n}\n\n/**\n * Initialization properties required to instantiate and schedule an Agent Orchestrator.\n */\nexport interface AgentOrchestratorProps {\n  /** Unique string identifier assigned to the orchestrator instance. */\n  readonly orchestratorId: string;\n  /** Execution priority weighting used for task scheduling and resource allocation. */\n  readonly priority: number;\n}\n\n/**\n * Terminal reference types that are bypassed during deep immutability mapping.\n */\nexport type DeepReadonlyTerminal =\n  | Function\n  | Date\n  | RegExp\n  | Map<unknown, unknown>\n  | Set<unknown>;\n\n/**\n * Recursively transforms all nested properties of a given type `T` into immutable (`readonly`) fields,\n * preserving built-in objects, functional constructs, and primitive scalar values.\n *\n * @template T - The target type structure to deeply enforce read-only semantics upon.\n */\nexport type DeepReadonly<T> = T extends DeepReadonlyTerminal\n  ? T\n  : T extends object\n    ? { readonly [K in keyof T]: DeepReadonly<T[K]> }\n    : T;",
-      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-199 [2026-09-20T04:21:01.430Z] */\n/**\n * @fileoverview Core system runtime configuration, orchestrator definitions, and recursive utility types.\n * @module types/system\n */\n\n/**\n * Operational runtime environments in which the system engine executes.\n */\nexport const enum SystemMode {\n  /** Local development and debugging environment. */\n  Development = 'development',\n  /** Live production environment with strict performance optimization. */\n  Production = 'production',\n  /** Pre-production staging and integration testing environment. */\n  Staging = 'staging',\n}\n\n/**\n * Fundamental configuration contract governing global engine parameters.\n */\nexport interface SystemConfig {\n  /** Semantic version string representing the current system engine build. */\n  readonly version: string;\n  /** Active deployment environment mode. */\n  readonly mode: SystemMode;\n  /** Flag denoting whether detailed diagnostic telemetry and debug routines are active. */\n  readonly debug: boolean;\n}\n\n/**\n * Initialization properties required to instantiate and schedule an Agent Orchestrator.\n */\nexport interface AgentOrchestratorProps {\n  /** Unique string identifier assigned to the orchestrator instance. */\n  readonly orchestratorId: string;\n  /** Execution priority weighting used for task scheduling and resource allocation. */\n  readonly priority: number;\n}\n\n/**\n * Terminal reference types that are bypassed during deep immutability mapping.\n */\nexport type DeepReadonlyTerminal =\n  | Function\n  | Date\n  | RegExp\n  | Map<unknown, unknown>\n  | Set<unknown>;\n\n/**\n * Recursively transforms all nested properties of a given type `T` into immutable (`readonly`) fields,\n * preserving built-in objects, functional constructs, and primitive scalar values.\n *\n * @template T - The target type structure to deeply enforce read-only semantics upon.\n */\nexport type DeepReadonly<T> = T extends DeepReadonlyTerminal\n  ? T\n  : T extends object\n    ? { readonly [K in keyof T]: DeepReadonly<T[K]> }\n    : T;\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 199,\n  timestamp: \"2026-09-20T04:21:01.430Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
-      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-199 with verified AST structural sanity.",
-      "riskScore": 1,
-      "generation": 199,
-      "commitSha": "e08c23ba7fcc99adf5dc08f937a97cd7910f9e76",
-      "timestamp": "2026-09-20T04:21:13.092Z",
       "hotswapped": true,
       "verdict": "correct",
       "source": "DARLEK_APPROVED_MUTATION"
