@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T04:23:19.164Z",
+    "generatedAt": "2026-09-20T04:23:31.488Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789878208456_fce0497d",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 1 issues (0 high)",
+      "timestamp": "2026-09-20T04:23:28.456Z"
+    },
+    {
+      "id": "rag_log_1789878208454_91253f98",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 1 issues (0 high)",
+      "timestamp": "2026-09-20T04:23:28.454Z"
+    },
+    {
+      "id": "rag_log_1789878207589_f90dd4a7",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T04:23:27.589Z"
+    },
+    {
+      "id": "rag_log_1789878207582_b1cbfc0b",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T04:23:27.582Z"
+    },
+    {
+      "id": "rag_log_1789878206827_c8ec349b",
+      "type": "APPROVE",
+      "description": "Mutation applied to test-gemini.js",
+      "timestamp": "2026-09-20T04:23:26.827Z"
+    },
+    {
+      "id": "rag_log_1789878206826_385faa35",
+      "type": "APPROVE",
+      "description": "Mutation applied to test-gemini.js",
+      "timestamp": "2026-09-20T04:23:26.826Z"
+    },
+    {
+      "id": "rag_log_1789878204068_2f1c5c31",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T04:23:24.068Z"
+    },
     {
       "id": "rag_log_1789878196096_80418161",
       "type": "MUTATE",
@@ -114,79 +156,9 @@
       "type": "APPROVE",
       "description": "Mutation applied to src/utils/siphon.ts",
       "timestamp": "2026-09-20T04:22:40.067Z"
-    },
-    {
-      "id": "rag_log_1789878160066_7a53e3db",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/utils/siphon.ts",
-      "timestamp": "2026-09-20T04:22:40.066Z"
-    },
-    {
-      "id": "rag_log_1789878158887_a266d5cf",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T04:22:38.887Z"
-    },
-    {
-      "id": "rag_log_1789878148489_fa9a994b",
-      "type": "MUTATE",
-      "description": "[Batch 231/253] Proposed mutation for src/utils/siphon.ts (risk: LOW)",
-      "timestamp": "2026-09-20T04:22:28.489Z"
-    },
-    {
-      "id": "rag_log_1789878148466_946bf368",
-      "type": "MUTATE",
-      "description": "[Batch 231/253] Proposed mutation for src/utils/siphon.ts (risk: LOW)",
-      "timestamp": "2026-09-20T04:22:28.466Z"
-    },
-    {
-      "id": "rag_log_1789878147310_7b247ce8",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T04:22:27.310Z"
-    },
-    {
-      "id": "rag_log_1789878138233_a05cd44b",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T04:22:18.233Z"
-    },
-    {
-      "id": "rag_log_1789878138222_8fe2a962",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T04:22:18.222Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-caacf40f",
-      "time": "14:16:54",
-      "addr": "0x007035A9",
-      "tag": "APPROVE",
-      "message": "Mutation applied to src/middleware/SecurityMiddleware.ts"
-    },
-    {
-      "id": "dos-83a78e7a",
-      "time": "14:16:54",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
-    {
-      "id": "dos-0fce95a5",
-      "time": "14:16:55",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-b5f83b05",
-      "time": "14:16:56",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-6c628226",
       "time": "14:17:04",
@@ -858,6 +830,34 @@
       "addr": "0x001EBD5A",
       "tag": "MUTATE",
       "message": "[Batch 233/253] Proposed mutation for test-gemini.js (risk: LOW)"
+    },
+    {
+      "id": "dos-14b8966e",
+      "time": "14:23:24",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-10d66812",
+      "time": "14:23:26",
+      "addr": "0x0041E1F5",
+      "tag": "APPROVE",
+      "message": "Mutation applied to test-gemini.js"
+    },
+    {
+      "id": "dos-79bb0445",
+      "time": "14:23:27",
+      "addr": "0x007EEE12",
+      "tag": "HEALTH",
+      "message": "Auto-test: PASSED — 5 passed, 0 failed"
+    },
+    {
+      "id": "dos-ac7ebe76",
+      "time": "14:23:28",
+      "addr": "0x002EA506",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 1 issues (0 high)"
     }
   ]
 }

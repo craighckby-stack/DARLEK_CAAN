@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:23:19.164Z`
+*Last Synchronized:* `2026-09-20T04:23:31.488Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -13,93 +13,107 @@
 
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
-### 1. `system.log` (Gen 1)
+### 1. `test-gemini.js` (Gen 204)
+*Source:* `MUTATION:test-gemini.js` | *Indexed:* `2026-09-20T04:23:28.463Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-204 [2026-09-20T04:23:15.454Z] */
+import { GoogleGenAI } from '@google/genai';
+
+async function main() {
+  const key = process.env.GEMINI_API_KEY;
+  try {
+    const ai = new GoogleGenAI({ apiKey: key });
+    const res = await ai.models.generateContent({
+      model: 'gemini-3.6-flash',
+      con
+// ... [truncated]
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:28.456Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 1 issues (0 high) | TIME:2026-09-20T04:23:28.456Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:28.455Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 1 issues (0 high) | TIME:2026-09-20T04:23:28.454Z
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:27.589Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:23:27.589Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:27.582Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:23:27.582Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:26.827Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to test-gemini.js | TIME:2026-09-20T04:23:26.827Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:26.826Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to test-gemini.js | TIME:2026-09-20T04:23:26.826Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:24.069Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:23:24.068Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:16.097Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 233/253] Proposed mutation for test-gemini.js (risk: LOW) | TIME:2026-09-20T04:23:16.096Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:16.094Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 233/253] Proposed mutation for test-gemini.js (risk: LOW) | TIME:2026-09-20T04:23:16.094Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:14.898Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `test-gemini.js`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `204`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-204 with verified AST structural sanity.
 ```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:23:14.898Z
-```
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-204 [2026-09-20T04:23:15.454Z] */
+import { GoogleGenAI } from '@google/genai';
 
-### 4. `tailwind.config.js` (Gen 203)
-*Source:* `MUTATION:tailwind.config.js` | *Indexed:* `2026-09-20T04:23:05.848Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-203 [2026-09-20T04:22:52.244Z] */
-import tailwindcssAnimate from 'tailwindcss-animate';
-
-/** @type {import('tailwindcss').Config} */
-export default {
-  darkMode: ["class"],
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        b
+async function main() {
+  const key = process.env.GEMINI_API_KEY;
+  try {
+    const ai = new GoogleGenAI({ apiKey: key });
+    const res = await ai.models.generateContent({
+      model: 'gemini-3.6-flash',
+      con
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:05.308Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:23:05.307Z
-```
-
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:05.302Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:23:05.302Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:04.548Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:23:04.548Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:04.545Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:23:04.545Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:03.792Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to tailwind.config.js | TIME:2026-09-20T04:23:03.792Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:23:03.789Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to tailwind.config.js | TIME:2026-09-20T04:23:03.789Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `tailwind.config.js`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `tailwind.config.js`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `203`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-203 with verified AST structural sanity.
@@ -121,7 +135,7 @@ export default {
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/siphon.ts`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/siphon.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `202`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-202 with verified AST structural sanity.
@@ -139,7 +153,7 @@ export interface SiphonSource {
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/error-parser.ts`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/error-parser.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `201`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-201 with verified AST structural sanity.
@@ -157,7 +171,7 @@ export interface SystemErrorPayload {
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/cognitive-engine.ts`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/utils/cognitive-engine.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `200`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-200 with verified AST structural sanity.
@@ -170,7 +184,7 @@ export interface SystemErrorPayload {
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/system.d.ts`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/system.d.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `199`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-199 with verified AST structural sanity.
@@ -189,7 +203,7 @@ export const enum SystemMode {
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/repository.ts`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/repository.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `198`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-198 with verified AST structural sanity.
@@ -207,7 +221,7 @@ export const enum SystemMode {
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/orchestrator.d.ts`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/orchestrator.d.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `197`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-197 with verified AST structural sanity.
@@ -221,7 +235,7 @@ export const enum SystemMode {
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/omega.d.ts`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/omega.d.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `196`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-196 with verified AST structural sanity.
@@ -238,7 +252,7 @@ export const enum SystemMode {
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/omega-core.d.ts`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/omega-core.d.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `195`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-195 with verified AST structural sanity.
@@ -250,22 +264,6 @@ export const enum SystemMode {
  * @description Darlek Caan type definitions and runtime boundary constraints for the Omega Core architecture.
  *
  * Provides core lifecycle status codes, telemetry state interfaces, execution configuration cont
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/types/manifest.d.ts`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `194`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-194 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-194 [2026-09-20T04:19:02.720Z] */
-/**
- * @file src/types/manifest.d.ts
- * @module DarlekCaanManifest
- * @description Sovereign type definitions for project manifests, enforcing strict readonly immutability and robust extensible literal structures with verified bounds.
- */
-
-// ==================
 // ... [truncated]
 ```
 
