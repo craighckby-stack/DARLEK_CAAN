@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T02:48:20.615Z",
+    "generatedAt": "2026-09-20T02:48:29.289Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789872506283_18556110",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T02:48:26.283Z"
+    },
     {
       "id": "rag_log_1789872497610_4794dba6",
       "type": "SCAN",
@@ -150,12 +156,6 @@
       "type": "CONNECT",
       "description": "Synced 29 user portfolios and 27 global architectures.",
       "timestamp": "2026-09-20T02:46:09.389Z"
-    },
-    {
-      "id": "rag_log_1789872369387_ea858314",
-      "type": "CONNECT",
-      "description": "Synced 29 user portfolios and 27 global architectures.",
-      "timestamp": "2026-09-20T02:46:09.386Z"
     }
   ],
   "telemetryBuffer": [
@@ -270,6 +270,13 @@
       "addr": "0x003CF9A0",
       "tag": "SCAN",
       "message": "Scanned craighckby-stack/DARLEK_CAAN — 254 files."
+    },
+    {
+      "id": "dos-0edca4cb",
+      "time": "12:48:26",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }

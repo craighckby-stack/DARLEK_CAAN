@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T02:48:20.615Z`
+*Last Synchronized:* `2026-09-20T02:48:29.289Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,38 +14,38 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:48:26.284Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:48:26.283Z
+```
+
+### 2. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:48:17.610Z`
 
 ```typescript
 [LOG:SCAN] Scanned craighckby-stack/DARLEK_CAAN — 254 files. | TIME:2026-09-20T02:48:17.610Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 3. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:48:17.609Z`
 
 ```typescript
 [LOG:SCAN] Scanned craighckby-stack/DARLEK_CAAN — 254 files. | TIME:2026-09-20T02:48:17.609Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:48:16.979Z`
 
 ```typescript
 [LOG:CONNECT] Successfully loaded 29 user and 27 global designs in portfolio context. | TIME:2026-09-20T02:48:16.978Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:48:16.977Z`
 
 ```typescript
 [LOG:CONNECT] Successfully loaded 29 user and 27 global designs in portfolio context. | TIME:2026-09-20T02:48:16.976Z
-```
-
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:48:15.135Z`
-
-```typescript
-[LOG:CONNECT] Retrieving user portfolio & design context... | TIME:2026-09-20T02:48:15.135Z
 ```
 
 ### 6. `system.log` (Gen 1)
@@ -56,31 +56,31 @@
 ```
 
 ### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:48:15.134Z`
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:48:15.135Z`
 
 ```typescript
-[LOG:CONNECT] GitHub link established with craighckby-stack/DARLEK_CAAN | TIME:2026-09-20T02:48:15.133Z
+[LOG:CONNECT] Retrieving user portfolio & design context... | TIME:2026-09-20T02:48:15.135Z
 ```
 
 ### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:48:15.134Z`
 
 ```typescript
-[LOG:CONNECT] GitHub link established with craighckby-stack/DARLEK_CAAN | TIME:2026-09-20T02:48:15.134Z
+[LOG:CONNECT] GitHub link established with craighckby-stack/DARLEK_CAAN | TIME:2026-09-20T02:48:15.133Z
 ```
 
 ### 9. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:48:15.134Z`
+
+```typescript
+[LOG:CONNECT] GitHub link established with craighckby-stack/DARLEK_CAAN | TIME:2026-09-20T02:48:15.134Z
+```
+
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:48:15.028Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:48:15.027Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:48:14.567Z`
-
-```typescript
-[LOG:CONNECT] Verifying GitHub access key... | TIME:2026-09-20T02:48:14.566Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
