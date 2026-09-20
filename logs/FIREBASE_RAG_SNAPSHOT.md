@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T02:16:35.046Z`
+*Last Synchronized:* `2026-09-20T02:16:44.036Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,73 +14,73 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:16:40.196Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:16:40.196Z
+```
+
+### 2. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:16:31.711Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:16:31.710Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 3. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:16:22.584Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:16:22.582Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:16:13.574Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:16:13.573Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:16:04.668Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:16:04.668Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:15:55.756Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:15:55.755Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:15:46.643Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:15:46.642Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:15:37.739Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:15:37.738Z
 ```
 
-### 8. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:15:26.372Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:15:26.371Z
 ```
 
-### 9. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:15:17.778Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:15:17.777Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T02:15:08.855Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T02:15:08.854Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
