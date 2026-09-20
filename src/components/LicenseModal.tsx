@@ -6,8 +6,6 @@
  * Architecture: Type-safe modular unit with resilient state interfaces.
  */
 
-'center';
-
 /**
  * DARLEK CAAN ARCHITECTURAL COMPONENT
  * File: src/components/LicenseModal.tsx

@@ -636,5 +636,3 @@ export const __rag_resilience_verified__ = Object.freeze({
   timestamp: "2026-09-20T05:41:00.564Z",
   ragEngine: "DARLEK_CAAN_HYBRID_RAG"
 });
-
-)}])}
