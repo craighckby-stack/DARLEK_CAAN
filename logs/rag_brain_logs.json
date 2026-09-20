@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789882043798_87886b87",
+    "type": "INFO",
+    "description": "[NO-OP] Code saturation reached in batch for logs/rag_brain_logs.json",
+    "timestamp": "2026-09-20T05:27:23.798Z"
+  },
+  {
+    "id": "rag_log_1789882043794_17f4279a",
+    "type": "INFO",
+    "description": "[NO-OP] Code saturation reached in batch for logs/rag_brain_logs.json",
+    "timestamp": "2026-09-20T05:27:23.794Z"
+  },
+  {
+    "id": "rag_log_1789882042592_99868d66",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:27:22.592Z"
+  },
+  {
     "id": "rag_log_1789882034647_aebb254c",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "APPROVE",
     "description": "Mutation applied to logs/POSTMORTEMS.md",
     "timestamp": "2026-09-20T05:26:30.149Z"
-  },
-  {
-    "id": "rag_log_1789881990147_7520575c",
-    "type": "APPROVE",
-    "description": "Mutation applied to logs/POSTMORTEMS.md",
-    "timestamp": "2026-09-20T05:26:30.147Z"
-  },
-  {
-    "id": "rag_log_1789881983285_64b30187",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:26:23.285Z"
-  },
-  {
-    "id": "rag_log_1789881978272_1d14e10e",
-    "type": "MUTATE",
-    "description": "[Batch 65/253] Proposed mutation for logs/POSTMORTEMS.md (risk: LOW)",
-    "timestamp": "2026-09-20T05:26:18.272Z"
   }
 ]
