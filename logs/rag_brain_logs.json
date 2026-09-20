@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789881185634_1504a18e",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T05:13:05.634Z"
+  },
+  {
+    "id": "rag_log_1789881185632_c7f15a65",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T05:13:05.632Z"
+  },
+  {
+    "id": "rag_log_1789881184933_2071fc4f",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T05:13:04.933Z"
+  },
+  {
+    "id": "rag_log_1789881184930_678ed842",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T05:13:04.930Z"
+  },
+  {
+    "id": "rag_log_1789881184659_4bacc89b",
+    "type": "APPROVE",
+    "description": "Mutation applied to docs/ARCHITECTURE_MANIFESTO.md",
+    "timestamp": "2026-09-20T05:13:04.659Z"
+  },
+  {
+    "id": "rag_log_1789881184657_0d414e29",
+    "type": "APPROVE",
+    "description": "Mutation applied to docs/ARCHITECTURE_MANIFESTO.md",
+    "timestamp": "2026-09-20T05:13:04.657Z"
+  },
+  {
+    "id": "rag_log_1789881183438_fc5afa21",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:13:03.438Z"
+  },
+  {
     "id": "rag_log_1789881173961_af92351a",
     "type": "MUTATE",
     "description": "[Batch 24/253] Proposed mutation for docs/ARCHITECTURE_MANIFESTO.md (risk: LOW)",
@@ -106,47 +148,5 @@
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
     "timestamp": "2026-09-20T05:12:14.002Z"
-  },
-  {
-    "id": "rag_log_1789881133165_be61d528",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T05:12:13.165Z"
-  },
-  {
-    "id": "rag_log_1789881133164_17bdd768",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T05:12:13.164Z"
-  },
-  {
-    "id": "rag_log_1789881132849_0c5f9fc7",
-    "type": "APPROVE",
-    "description": "Mutation applied to compare.js",
-    "timestamp": "2026-09-20T05:12:12.849Z"
-  },
-  {
-    "id": "rag_log_1789881132848_f66c68f2",
-    "type": "APPROVE",
-    "description": "Mutation applied to compare.js",
-    "timestamp": "2026-09-20T05:12:12.848Z"
-  },
-  {
-    "id": "rag_log_1789881124656_97675c02",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T05:12:04.656Z"
-  },
-  {
-    "id": "rag_log_1789881121632_e37b562f",
-    "type": "MUTATE",
-    "description": "[Batch 21/253] Proposed mutation for compare.js (risk: LOW)",
-    "timestamp": "2026-09-20T05:12:01.632Z"
-  },
-  {
-    "id": "rag_log_1789881121630_6b656374",
-    "type": "MUTATE",
-    "description": "[Batch 21/253] Proposed mutation for compare.js (risk: LOW)",
-    "timestamp": "2026-09-20T05:12:01.630Z"
   }
 ]
