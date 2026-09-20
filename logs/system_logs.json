@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T02:35:23.013Z",
+    "generatedAt": "2026-09-20T02:35:32.025Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789871728851_d0f20c47",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T02:35:28.851Z"
+    },
     {
       "id": "rag_log_1789871719653_205ee386",
       "type": "LOG_SYNC",
@@ -150,12 +156,6 @@
       "type": "SCAN",
       "description": "Scanned craighckby-stack/DARLEK_CAAN — 254 files.",
       "timestamp": "2026-09-20T02:27:37.001Z"
-    },
-    {
-      "id": "rag_log_1789871250658_5aa89999",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:27:30.658Z"
     }
   ],
   "telemetryBuffer": [
@@ -274,6 +274,13 @@
     {
       "id": "dos-a4e5d8e4",
       "time": "12:35:19",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-774a7dc0",
+      "time": "12:35:28",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"

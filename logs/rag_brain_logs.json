@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789871728851_d0f20c47",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T02:35:28.851Z"
+  },
+  {
     "id": "rag_log_1789871719653_205ee386",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -142,11 +148,5 @@
     "type": "SCAN",
     "description": "Scanned craighckby-stack/DARLEK_CAAN — 254 files.",
     "timestamp": "2026-09-20T02:27:37.001Z"
-  },
-  {
-    "id": "rag_log_1789871250658_5aa89999",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T02:27:30.658Z"
   }
 ]
