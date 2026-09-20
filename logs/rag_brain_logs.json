@@ -1,5 +1,47 @@
 [
   {
+    "id": "rag_log_1789878026932_2677c2ea",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T04:20:26.932Z"
+  },
+  {
+    "id": "rag_log_1789878026931_df6525bc",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T04:20:26.931Z"
+  },
+  {
+    "id": "rag_log_1789878026203_97fa6744",
+    "type": "HEALTH",
+    "description": "Auto-test: REJECTED — 4 passed, 1 failed",
+    "timestamp": "2026-09-20T04:20:26.203Z"
+  },
+  {
+    "id": "rag_log_1789878026202_19b8be60",
+    "type": "HEALTH",
+    "description": "Auto-test: REJECTED — 4 passed, 1 failed",
+    "timestamp": "2026-09-20T04:20:26.202Z"
+  },
+  {
+    "id": "rag_log_1789878025464_a6e2cb4d",
+    "type": "APPROVE",
+    "description": "Mutation applied to src/types/orchestrator.d.ts",
+    "timestamp": "2026-09-20T04:20:25.464Z"
+  },
+  {
+    "id": "rag_log_1789878025463_d91b84cd",
+    "type": "APPROVE",
+    "description": "Mutation applied to src/types/orchestrator.d.ts",
+    "timestamp": "2026-09-20T04:20:25.463Z"
+  },
+  {
+    "id": "rag_log_1789878024433_ae4adbfb",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T04:20:24.433Z"
+  },
+  {
     "id": "rag_log_1789878015576_f635fe6a",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -106,47 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: PASSED — 5 passed, 0 failed",
     "timestamp": "2026-09-20T04:19:38.390Z"
-  },
-  {
-    "id": "rag_log_1789877976909_7ae61cf7",
-    "type": "APPROVE",
-    "description": "Mutation applied to src/types/omega-core.d.ts",
-    "timestamp": "2026-09-20T04:19:36.909Z"
-  },
-  {
-    "id": "rag_log_1789877976908_8b2b5b9e",
-    "type": "APPROVE",
-    "description": "Mutation applied to src/types/omega-core.d.ts",
-    "timestamp": "2026-09-20T04:19:36.908Z"
-  },
-  {
-    "id": "rag_log_1789877974877_2e51af61",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T04:19:34.877Z"
-  },
-  {
-    "id": "rag_log_1789877966044_8b909764",
-    "type": "MUTATE",
-    "description": "[Batch 224/253] Proposed mutation for src/types/omega-core.d.ts (risk: LOW)",
-    "timestamp": "2026-09-20T04:19:26.044Z"
-  },
-  {
-    "id": "rag_log_1789877966042_c505c6c9",
-    "type": "MUTATE",
-    "description": "[Batch 224/253] Proposed mutation for src/types/omega-core.d.ts (risk: LOW)",
-    "timestamp": "2026-09-20T04:19:26.042Z"
-  },
-  {
-    "id": "rag_log_1789877964859_9f3a2301",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T04:19:24.859Z"
-  },
-  {
-    "id": "rag_log_1789877955557_a4ccab19",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T04:19:15.557Z"
   }
 ]

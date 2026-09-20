@@ -1,11 +1,25 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T04:20:18.665Z",
+    "generatedAt": "2026-09-20T04:20:29.981Z",
     "totalMutations": 10,
     "correctCount": 10,
     "wrongCount": 0
   },
   "mutations": [
+    {
+      "id": "rag_mut_1789878025465_b693400d",
+      "filePath": "src/types/orchestrator.d.ts",
+      "originalCode": "/**\n * @file src/types/orchestrator.d.ts\n * @module DarlekCaanOrchestrator\n * @description Darlek Caan type definitions for orchestrator agents and system states.\n * Maximizes type-safety, memory efficiency through readonly modifiers, and runtime predictability.\n */\n\n/**\n * Functional operational roles assigned to orchestrator agents.\n */\nexport const enum AgentRole {\n  /** Master orchestration agent directing workflow and resource allocation. */\n  CONTROLLER = 'controller',\n\n  /** Execution agent performing specialized computational tasks. */\n  WORKER = 'worker',\n\n  /** Passive telemetry and monitoring agent observing operational integrity. */\n  OBSERVER = 'observer',\n}\n\n/**\n * Operational life-cycle status indicators for the orchestrator system.\n */\nexport const enum SystemStatus {\n  /** System is operational and actively dispatching tasks. */\n  ACTIVE = 'active',\n\n  /** System is idle, awaiting external activation triggers. */\n  DORMANT = 'dormant',\n\n  /** System is executing dynamic reconfiguration and state evolution. */\n  EVOLVING = 'evolving',\n}\n\n/**\n * Configuration profile defining an individual orchestrator agent.\n */\nexport interface AgentConfig {\n  /** Unique Darlek Caan identifier for the agent. */\n  readonly id: string;\n\n  /** Operational role and privilege tier. */\n  readonly role: AgentRole;\n\n  /** Scheduling priority score for task assignment queues. */\n  readonly priority: number;\n\n  /** Flag indicating whether the agent allocates an isolated working memory buffer. */\n  readonly memoryBuffer: boolean;\n}\n\n/**\n * Snapshot representing the holistic state of the orchestrator ecosystem.\n */\nexport interface SystemState {\n  /** Current systemic life-cycle status. */\n  readonly status: SystemStatus;\n\n  /** ISO 8601 timestamp string representing the last state synchronization. */\n  readonly lastSync: string;\n\n  /** Immutable collection of currently active agent configurations. */\n  readonly activeAgents: readonly AgentConfig[];\n}",
+      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-197 [2026-09-20T04:20:13.626Z] */\n/**\n * @file src/types/orchestrator.d.ts\n * @module DarlekCaanOrchestrator\n * @description Darlek Caan type definitions for orchestrator agents and system states.\n * Maximizes type-safety, memory efficiency through readonly modifiers, and runtime predictability.\n */\n\n/**\n * Functional operational roles assigned to orchestrator agents.\n */\nexport const enum AgentRole {\n  /** Master orchestration agent directing workflow and resource allocation. */\n  CONTROLLER = 'controller',\n\n  /** Execution agent performing specialized computational tasks. */\n  WORKER = 'worker',\n\n  /** Passive telemetry and monitoring agent observing operational integrity. */\n  OBSERVER = 'observer',\n}\n\n/**\n * Operational life-cycle status indicators for the orchestrator system.\n */\nexport const enum SystemStatus {\n  /** System is operational and actively dispatching tasks. */\n  ACTIVE = 'active',\n\n  /** System is idle, awaiting external activation triggers. */\n  DORMANT = 'dormant',\n\n  /** System is executing dynamic reconfiguration and state evolution. */\n  EVOLVING = 'evolving',\n}\n\n/**\n * Configuration profile defining an individual orchestrator agent.\n */\nexport interface AgentConfig {\n  /** Unique Darlek Caan identifier for the agent. */\n  readonly id: string;\n\n  /** Operational role and privilege tier. */\n  readonly role: AgentRole;\n\n  /** Scheduling priority score for task assignment queues. */\n  readonly priority: number;\n\n  /** Flag indicating whether the agent allocates an isolated working memory buffer. */\n  readonly memoryBuffer: boolean;\n}\n\n/**\n * Snapshot representing the holistic state of the orchestrator ecosystem.\n */\nexport interface SystemState {\n  /** Current systemic life-cycle status. */\n  readonly status: SystemStatus;\n\n  /** ISO 8601 timestamp string representing the last state synchronization. */\n  readonly lastSync: string;\n\n  /** Immutable collection of currently active agent configurations. */\n  readonly activeAgents: readonly AgentConfig[];\n}\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 197,\n  timestamp: \"2026-09-20T04:20:13.626Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
+      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-197 with verified AST structural sanity.",
+      "riskScore": 1,
+      "generation": 197,
+      "commitSha": "e1858945eb638f9c81af0c5ac1427e9acb242b57",
+      "timestamp": "2026-09-20T04:20:25.465Z",
+      "hotswapped": true,
+      "verdict": "correct",
+      "source": "DARLEK_APPROVED_MUTATION"
+    },
     {
       "id": "rag_mut_1789878002465_fb48f7fe",
       "filePath": "src/types/omega.d.ts",
@@ -128,20 +142,6 @@
       "generation": 188,
       "commitSha": "7df3ae02c22e37187826db8d3bb45725b6a40ebb",
       "timestamp": "2026-09-20T04:16:54.312Z",
-      "hotswapped": true,
-      "verdict": "correct",
-      "source": "DARLEK_APPROVED_MUTATION"
-    },
-    {
-      "id": "rag_mut_1789877782164_8241f8f6",
-      "filePath": "src/main.tsx",
-      "originalCode": "/**\n * DARLEK CAAN ARCHITECTURAL HEADER\n * File: src/main.tsx\n * Role: Core application bootstrap and mounting entrypoint.\n * Architecture: Type-safe modular unit with resilient state interfaces.\n */\n\nimport React from 'react';\nimport { createRoot } from 'react-dom/client';\nimport App from './App';\nimport './index.css';\n\nconst container = document.getElementById('root');\nif (container) {\n  const root = createRoot(container);\n  root.render(\n    <React.StrictMode>\n      <App />\n    </React.StrictMode>\n  );\n}\n",
-      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-187 [2026-09-20T04:16:10.133Z] */\n/**\n * DARLEK CAAN ARCHITECTURAL HEADER\n * File: src/main.tsx\n * Role: Core application bootstrap and mounting entrypoint.\n * Architecture: Type-safe modular unit with resilient state interfaces.\n */\n\nimport React from 'react';\nimport { createRoot } from 'react-dom/client';\nimport App from './App';\nimport './index.css';\n\nconst container = document.getElementById('root');\nif (container) {\n  const root = createRoot(container);\n  root.render(\n    <React.StrictMode>\n      <App />\n    </React.StrictMode>\n  );\n}\n\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 187,\n  timestamp: \"2026-09-20T04:16:10.133Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
-      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-187 with verified AST structural sanity.",
-      "riskScore": 1,
-      "generation": 187,
-      "commitSha": "c2ce603f60e9e3e83c9cff4ebbd60c2c71b6f341",
-      "timestamp": "2026-09-20T04:16:22.164Z",
       "hotswapped": true,
       "verdict": "correct",
       "source": "DARLEK_APPROVED_MUTATION"
