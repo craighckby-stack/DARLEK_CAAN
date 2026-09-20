@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:07:08.149Z",
+    "generatedAt": "2026-09-20T03:07:15.672Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789873632662_7df3c968",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:07:12.662Z"
+    },
+    {
+      "id": "rag_log_1789873631179_10828e59",
+      "type": "MUTATE",
+      "description": "[Batch 44/253] Proposed mutation for fix3.js (risk: LOW)",
+      "timestamp": "2026-09-20T03:07:11.179Z"
+    },
+    {
+      "id": "rag_log_1789873631178_0e2f909b",
+      "type": "MUTATE",
+      "description": "[Batch 44/253] Proposed mutation for fix3.js (risk: LOW)",
+      "timestamp": "2026-09-20T03:07:11.178Z"
+    },
     {
       "id": "rag_log_1789873625138_82647d11",
       "type": "LOG_SYNC",
@@ -138,41 +156,9 @@
       "type": "INFO",
       "description": "[NO-OP] Code saturation reached in batch for firestore.rules",
       "timestamp": "2026-09-20T03:06:17.121Z"
-    },
-    {
-      "id": "rag_log_1789873577119_52ae4492",
-      "type": "INFO",
-      "description": "[NO-OP] Code saturation reached in batch for firestore.rules",
-      "timestamp": "2026-09-20T03:06:17.119Z"
-    },
-    {
-      "id": "rag_log_1789873576342_8df85391",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:06:16.342Z"
-    },
-    {
-      "id": "rag_log_1789873567465_0f16e749",
-      "type": "INFO",
-      "description": "[NO-OP] Code saturation reached in batch for firebase-blueprint.json",
-      "timestamp": "2026-09-20T03:06:07.465Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-51b3ecb1",
-      "time": "13:01:03",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
-    {
-      "id": "dos-7d20bbd8",
-      "time": "13:01:04",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
     {
       "id": "dos-7e5ba253",
       "time": "13:01:14",
@@ -855,6 +841,20 @@
     {
       "id": "dos-2b087cdc",
       "time": "13:07:05",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-e9dddd60",
+      "time": "13:07:11",
+      "addr": "0x001B3795",
+      "tag": "MUTATE",
+      "message": "[Batch 44/253] Proposed mutation for fix3.js (risk: LOW)"
+    },
+    {
+      "id": "dos-423a5b59",
+      "time": "13:07:12",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
