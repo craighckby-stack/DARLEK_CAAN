@@ -1,13 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:04:31.820Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:04:40.302Z]
 ======================================================================
 
-[15:56:31] [0x0064A000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
-[15:56:32] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:56:36] [0x0064C000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 898.9 KB (8.78%).
-[15:56:38] [0x00609E44] [APPROVE   ] Mutation applied to src/components/SaturationModal.tsx
-[15:56:39] [0x003D0A96] [HEALTH    ] Auto-test: PASSED — 4 passed, 0 failed
-[15:56:40] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
 [15:56:41] [0x0064E000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
 [15:56:46] [0x00650000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.13 MB.
 [15:56:46] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
@@ -253,3 +247,9 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T06:04:31.820Z]
 [16:04:27] [0x00710000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.47 MB.
 [16:04:27] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
 [16:04:28] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[16:04:31] [0x00141725] [APPROVE   ] Mutation applied to src/lib/archaeology-live-sync.ts
+[16:04:32] [0x00712000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[16:04:32] [0x0046288B] [HEALTH    ] Auto-test: REJECTED — 4 passed, 2 failed
+[16:04:33] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[16:04:36] [0x00714000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 677.5 KB (6.62%).
+[16:04:37] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
