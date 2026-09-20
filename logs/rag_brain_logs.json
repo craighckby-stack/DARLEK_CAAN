@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789873434057_345d56ba",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:03:54.057Z"
+  },
+  {
+    "id": "rag_log_1789873433124_653bed0a",
+    "type": "MUTATE",
+    "description": "[Batch 34/253] Proposed mutation for fetch_missing.js (risk: LOW)",
+    "timestamp": "2026-09-20T03:03:53.124Z"
+  },
+  {
+    "id": "rag_log_1789873433121_14124b13",
+    "type": "MUTATE",
+    "description": "[Batch 34/253] Proposed mutation for fetch_missing.js (risk: LOW)",
+    "timestamp": "2026-09-20T03:03:53.121Z"
+  },
+  {
     "id": "rag_log_1789873425943_45defa5d",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
     "timestamp": "2026-09-20T03:02:55.584Z"
-  },
-  {
-    "id": "rag_log_1789873375583_a869a84d",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T03:02:55.583Z"
-  },
-  {
-    "id": "rag_log_1789873375319_8fd8b2f9",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 4 passed, 0 failed",
-    "timestamp": "2026-09-20T03:02:55.319Z"
-  },
-  {
-    "id": "rag_log_1789873375318_3cfc71f0",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 4 passed, 0 failed",
-    "timestamp": "2026-09-20T03:02:55.317Z"
   }
 ]
