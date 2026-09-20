@@ -1,4 +1,4 @@
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-138 [2026-09-20T03:55:48.946Z] */
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-141 [2026-09-20T05:59:56.143Z] */
 import { useState, useRef, useCallback, useEffect, startTransition, Dispatch, SetStateAction } from 'react';
 import { sanitizeContent, Finding, isSkippableFile } from '@/lib/scanner';
 import JSZip from 'jszip';
