@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T02:53:03.103Z",
+    "generatedAt": "2026-09-20T02:53:11.516Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789872788510_b1f9f96a",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T02:53:08.510Z"
+    },
+    {
+      "id": "rag_log_1789872783147_cfd880ef",
+      "type": "MUTATE",
+      "description": "[Batch 5/253] Proposed mutation for .next_dev/server/app/api/brain/route_client-reference-manifest.js (risk: LOW)",
+      "timestamp": "2026-09-20T02:53:03.147Z"
+    },
+    {
+      "id": "rag_log_1789872783146_7509e5f5",
+      "type": "MUTATE",
+      "description": "[Batch 5/253] Proposed mutation for .next_dev/server/app/api/brain/route_client-reference-manifest.js (risk: LOW)",
+      "timestamp": "2026-09-20T02:53:03.146Z"
+    },
     {
       "id": "rag_log_1789872780098_e6d35a95",
       "type": "LOG_SYNC",
@@ -138,24 +156,6 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T02:50:20.324Z"
-    },
-    {
-      "id": "rag_log_1789872620318_c5b061fe",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T02:50:20.318Z"
-    },
-    {
-      "id": "rag_log_1789872620040_b7360279",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T02:50:20.040Z"
-    },
-    {
-      "id": "rag_log_1789872620037_58e17815",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T02:50:20.037Z"
     }
   ],
   "telemetryBuffer": [
@@ -554,6 +554,20 @@
     {
       "id": "dos-c8eda08b",
       "time": "12:53:00",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-c98f2ef1",
+      "time": "12:53:03",
+      "addr": "0x0051E209",
+      "tag": "MUTATE",
+      "message": "[Batch 5/253] Proposed mutation for .next_dev/server/app/api/brain/route_client-reference-manifest.js (risk: LOW)"
+    },
+    {
+      "id": "dos-273900c5",
+      "time": "12:53:08",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
