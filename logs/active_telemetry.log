@@ -1,12 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:46:30.720Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:46:40.983Z]
 ======================================================================
 
-[15:38:41] [0x0048C000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 897.9 KB (8.77%).
-[15:38:42] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
-[15:38:42] [0x0015E051] [MUTATE    ] [Batch 107/253] Proposed mutation for src/app/api/extract-text/route.ts (risk: LOW)
-[15:38:46] [0x0048E000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
-[15:38:50] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:38:51] [0x00490000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.16 MB.
 [15:38:51] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
 [15:38:53] [0x008CC8EF] [APPROVE   ] Mutation applied to src/app/api/extract-text/route.ts
@@ -253,3 +248,8 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:46:30.720Z]
 [15:46:26] [0x003D0A96] [HEALTH    ] Auto-test: PASSED — 4 passed, 0 failed
 [15:46:27] [0x0054E000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
 [15:46:27] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[15:46:32] [0x00550000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.54 MB.
+[15:46:32] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
+[15:46:35] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:46:36] [0x00552000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[15:46:37] [0x001AA4AF] [MUTATE    ] [Batch 128/253] Proposed mutation for src/app/globals.css (risk: LOW)

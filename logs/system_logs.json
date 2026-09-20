@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:46:30.720Z",
+    "generatedAt": "2026-09-20T05:46:40.983Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789883197891_1f977304",
+      "type": "MUTATE",
+      "description": "[Batch 128/253] Proposed mutation for src/app/globals.css (risk: LOW)",
+      "timestamp": "2026-09-20T05:46:37.891Z"
+    },
+    {
+      "id": "rag_log_1789883197889_7191875a",
+      "type": "MUTATE",
+      "description": "[Batch 128/253] Proposed mutation for src/app/globals.css (risk: LOW)",
+      "timestamp": "2026-09-20T05:46:37.889Z"
+    },
+    {
+      "id": "rag_log_1789883195537_afced52d",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:46:35.537Z"
+    },
     {
       "id": "rag_log_1789883187397_7ba71ba2",
       "type": "HEALTH",
@@ -138,62 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T05:45:42.351Z"
-    },
-    {
-      "id": "rag_log_1789883141716_9ce04312",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:45:41.716Z"
-    },
-    {
-      "id": "rag_log_1789883141713_fac2a43c",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:45:41.713Z"
-    },
-    {
-      "id": "rag_log_1789883141133_c01ccd3b",
-      "type": "APPROVE",
-      "description": "Mutation applied to src/app/api/system/scaffold/route.ts",
-      "timestamp": "2026-09-20T05:45:41.133Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-c7a7735c",
-      "time": "15:43:27",
-      "addr": "0x00386585",
-      "tag": "APPROVE",
-      "message": "Mutation applied to src/app/api/github/user-repos/route.ts"
-    },
-    {
-      "id": "dos-ea75944e",
-      "time": "15:43:27",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
-    {
-      "id": "dos-dc14c12d",
-      "time": "15:43:28",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-3f392d99",
-      "time": "15:43:29",
-      "addr": "0x00504000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 878.6 KB (8.58%)."
-    },
-    {
-      "id": "dos-1ca9be90",
-      "time": "15:43:34",
-      "addr": "0x00506000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
     {
       "id": "dos-5c3facc9",
       "time": "15:43:36",
@@ -858,6 +823,41 @@
       "addr": "0x0094C83C",
       "tag": "HEALTH",
       "message": "Post-mutation analysis: 0 issues (0 high)"
+    },
+    {
+      "id": "dos-f94ae987",
+      "time": "15:46:32",
+      "addr": "0x00550000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.54 MB."
+    },
+    {
+      "id": "dos-d216bf9e",
+      "time": "15:46:32",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-0c0540f0",
+      "time": "15:46:35",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-22af1d67",
+      "time": "15:46:36",
+      "addr": "0x00552000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-5ccb1939",
+      "time": "15:46:37",
+      "addr": "0x001AA4AF",
+      "tag": "MUTATE",
+      "message": "[Batch 128/253] Proposed mutation for src/app/globals.css (risk: LOW)"
     }
   ]
 }
