@@ -1,11 +1,25 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T04:27:15.413Z",
+    "generatedAt": "2026-09-20T04:27:28.740Z",
     "totalMutations": 10,
     "correctCount": 10,
     "wrongCount": 0
   },
   "mutations": [
+    {
+      "id": "rag_mut_1789878443166_19eda42a",
+      "filePath": "test-propose-import.js",
+      "originalCode": "/**\n * @file test-propose-import.js\n * @description Test utility for submitting an evolution proposal to the local API endpoint.\n */\n\nconst EVOLUTION_PROPOSAL_ENDPOINT = 'http://localhost:3000/api/evolution/propose';\n\nconst proposalPayload = {\n  fileContent: \"import { something } from 'somewhere';\\nexport const hello = 'world';\",\n  filePath: 'src/test.ts',\n  apiKeys: {},\n  sessionId: 'test-session',\n};\n\nasync function submitEvolutionProposal() {\n  try {\n    const response = await fetch(EVOLUTION_PROPOSAL_ENDPOINT, {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json',\n      },\n      body: JSON.stringify(proposalPayload),\n    });\n\n    if (!response.ok) {\n      throw new Error(`HTTP error! status: ${response.status}`);\n    }\n\n    const data = await response.json();\n    console.log('Proposed Code:', data.proposedCode);\n  } catch (error) {\n    console.error('Failed to submit evolution proposal:', error);\n  }\n}\n\nsubmitEvolutionProposal();",
+      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-214 [2026-09-20T04:27:11.635Z] */\n/**\n * @file test-propose-import.js\n * @description Test utility for submitting an evolution proposal to the local API endpoint.\n */\n\nconst EVOLUTION_PROPOSAL_ENDPOINT = 'http://localhost:3000/api/evolution/propose';\n\nconst proposalPayload = {\n  fileContent: \"import { something } from 'somewhere';\\nexport const hello = 'world';\",\n  filePath: 'src/test.ts',\n  apiKeys: {},\n  sessionId: 'test-session',\n};\n\nasync function submitEvolutionProposal() {\n  try {\n    const response = await fetch(EVOLUTION_PROPOSAL_ENDPOINT, {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json',\n      },\n      body: JSON.stringify(proposalPayload),\n    });\n\n    if (!response.ok) {\n      throw new Error(`HTTP error! status: ${response.status}`);\n    }\n\n    const data = await response.json();\n    console.log('Proposed Code:', data.proposedCode);\n  } catch (error) {\n    console.error('Failed to submit evolution proposal:', error);\n  }\n}\n\nsubmitEvolutionProposal();\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 214,\n  timestamp: \"2026-09-20T04:27:11.635Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
+      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-214 with verified AST structural sanity.",
+      "riskScore": 1,
+      "generation": 214,
+      "commitSha": "7c6ff6551de68255d5fc49af5f8248a1c86581e2",
+      "timestamp": "2026-09-20T04:27:23.166Z",
+      "hotswapped": true,
+      "verdict": "correct",
+      "source": "DARLEK_APPROVED_MUTATION"
+    },
     {
       "id": "rag_mut_1789878420594_69151069",
       "filePath": "test-propose-header.js",
@@ -128,20 +142,6 @@
       "generation": 205,
       "commitSha": "173f66b1b53cadd82f7ff629614f97df30ddfc8a",
       "timestamp": "2026-09-20T04:23:49.679Z",
-      "hotswapped": true,
-      "verdict": "correct",
-      "source": "DARLEK_APPROVED_MUTATION"
-    },
-    {
-      "id": "rag_mut_1789878206828_557adec6",
-      "filePath": "test-gemini.js",
-      "originalCode": "import { GoogleGenAI } from '@google/genai';\n\nasync function main() {\n  const key = process.env.GEMINI_API_KEY;\n  try {\n    const ai = new GoogleGenAI({ apiKey: key });\n    const res = await ai.models.generateContent({\n      model: 'gemini-3.6-flash',\n      contents: 'Hello',\n    });\n    console.log(\"Response:\", res.text);\n  } catch (err) {\n    console.log(\"Error type:\", err.constructor.name);\n    console.log(\"Error msg:\", err.message);\n  }\n}\nmain();\n",
-      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-204 [2026-09-20T04:23:15.454Z] */\nimport { GoogleGenAI } from '@google/genai';\n\nasync function main() {\n  const key = process.env.GEMINI_API_KEY;\n  try {\n    const ai = new GoogleGenAI({ apiKey: key });\n    const res = await ai.models.generateContent({\n      model: 'gemini-3.6-flash',\n      contents: 'Hello',\n    });\n    console.log(\"Response:\", res.text);\n  } catch (err) {\n    console.log(\"Error type:\", err.constructor.name);\n    console.log(\"Error msg:\", err.message);\n  }\n}\nmain();\n\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 204,\n  timestamp: \"2026-09-20T04:23:15.454Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
-      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-204 with verified AST structural sanity.",
-      "riskScore": 1,
-      "generation": 204,
-      "commitSha": "a0205539a3d6203b83289a9696a54953587716b6",
-      "timestamp": "2026-09-20T04:23:26.828Z",
       "hotswapped": true,
       "verdict": "correct",
       "source": "DARLEK_APPROVED_MUTATION"
