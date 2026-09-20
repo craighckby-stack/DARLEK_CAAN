@@ -1,11 +1,25 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T04:01:31.083Z",
+    "generatedAt": "2026-09-20T04:01:39.365Z",
     "totalMutations": 10,
     "correctCount": 10,
     "wrongCount": 0
   },
   "mutations": [
+    {
+      "id": "rag_mut_1789876891269_a968c383",
+      "filePath": "src/lib/config.ts",
+      "originalCode": "export const RAG_RETRIEVAL_ENABLED =\n  (typeof process === \"undefined\" || process.env?.NEXT_PUBLIC_RAG_RETRIEVAL_ENABLED !== \"false\") &&\n  !(typeof import.meta !== \"undefined\" && import.meta.env?.VITE_RAG_RETRIEVAL_ENABLED === \"false\");\n\nexport const AUTONOMOUS_HOTSWAP_ENABLED =\n  (typeof import.meta !== \"undefined\" && import.meta.env?.VITE_AUTONOMOUS_HOTSWAP_ENABLED === \"true\") ||\n  (typeof process !== \"undefined\" && process.env?.AUTONOMOUS_HOTSWAP_ENABLED === \"true\");\n",
+      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-152 [2026-09-20T04:01:19.319Z] */\nexport const RAG_RETRIEVAL_ENABLED =\n  (typeof process === \"undefined\" || process.env?.NEXT_PUBLIC_RAG_RETRIEVAL_ENABLED !== \"false\") &&\n  !(typeof import.meta !== \"undefined\" && import.meta.env?.VITE_RAG_RETRIEVAL_ENABLED === \"false\");\n\nexport const AUTONOMOUS_HOTSWAP_ENABLED =\n  (typeof import.meta !== \"undefined\" && import.meta.env?.VITE_AUTONOMOUS_HOTSWAP_ENABLED === \"true\") ||\n  (typeof process !== \"undefined\" && process.env?.AUTONOMOUS_HOTSWAP_ENABLED === \"true\");\n\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 152,\n  timestamp: \"2026-09-20T04:01:19.319Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
+      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-152 with verified AST structural sanity.",
+      "riskScore": 1,
+      "generation": 152,
+      "commitSha": "9f35cfe270bb396fe0aeedb80d773d71f1214770",
+      "timestamp": "2026-09-20T04:01:31.269Z",
+      "hotswapped": true,
+      "verdict": "correct",
+      "source": "DARLEK_APPROVED_MUTATION"
+    },
     {
       "id": "rag_mut_1789876867443_597b4d5f",
       "filePath": "src/lib/binaryShield.ts",
@@ -128,20 +142,6 @@
       "generation": 143,
       "commitSha": "771b215a873f694f8f82589b95e2046a88691836",
       "timestamp": "2026-09-20T03:57:58.835Z",
-      "hotswapped": true,
-      "verdict": "correct",
-      "source": "DARLEK_APPROVED_MUTATION"
-    },
-    {
-      "id": "rag_mut_1789876656326_e1a80b31",
-      "filePath": "src/hooks/useSystemBootstrap.ts",
-      "originalCode": "/**\n * @file useSystemBootstrap.ts\n * @module Hooks\n * @description EMG Core v50 optimized hook for tracking system bootstrap lifecycle events.\n * Implements pristine readability, modular decomposition, and strict TypeScript safety contracts.\n */\n\nimport { useEffect, useState, startTransition, useCallback, useRef } from 'react';\n\nconst SYSTEM_READY_EVENT = 'system-ready' as const;\nconst LISTENER_OPTIONS: AddEventListenerOptions = { passive: true } as const;\n\nexport type UseSystemBootstrapReturn = boolean;\n\n/**\n * Subscribes to the window system readiness lifecycle event with guaranteed reference stability.\n */\nconst useSystemReadinessSubscription = (onReady: () => void): void => {\n  const onReadyRef = useRef(onReady);\n\n  useEffect(() => {\n    onReadyRef.current = onReady;\n  }, [onReady]);\n\n  useEffect(() => {\n    const handleEvent = (): void => {\n      try {\n        onReadyRef.current();\n      } catch (error: unknown) {\n        console.error('[EMG Core v50] Error executing system readiness handler:', error);\n      }\n    };\n\n    try {\n      window.addEventListener(SYSTEM_READY_EVENT, handleEvent, LISTENER_OPTIONS);\n    } catch (error: unknown) {\n      console.error('[EMG Core v50] Failed to attach system readiness listener:', error);\n    }\n    \n    return () => {\n      try {\n        window.removeEventListener(SYSTEM_READY_EVENT, handleEvent, LISTENER_OPTIONS);\n      } catch (error: unknown) {\n        console.error('[EMG Core v50] Failed to remove system readiness listener:', error);\n      }\n    };\n  }, []);\n};\n\n/**\n * Custom hook to observe system bootstrap readiness state via window events using concurrent transitions.\n */\nexport const useSystemBootstrap = (): UseSystemBootstrapReturn => {\n  const [isSystemReady, setIsSystemReady] = useState<boolean>(false);\n\n  const handleSystemReady = useCallback((): void => {\n    startTransition(() => {\n      setIsSystemReady(true);\n    });\n  }, []);\n\n  useSystemReadinessSubscription(handleSystemReady);\n\n  return isSystemReady;\n};",
-      "mutatedCode": "/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-142 [2026-09-20T03:57:24.631Z] */\n/**\n * @file useSystemBootstrap.ts\n * @module Hooks\n * @description EMG Core v50 optimized hook for tracking system bootstrap lifecycle events.\n * Implements pristine readability, modular decomposition, and strict TypeScript safety contracts.\n */\n\nimport { useEffect, useState, startTransition, useCallback, useRef } from 'react';\n\nconst SYSTEM_READY_EVENT = 'system-ready' as const;\nconst LISTENER_OPTIONS: AddEventListenerOptions = { passive: true } as const;\n\nexport type UseSystemBootstrapReturn = boolean;\n\n/**\n * Subscribes to the window system readiness lifecycle event with guaranteed reference stability.\n */\nconst useSystemReadinessSubscription = (onReady: () => void): void => {\n  const onReadyRef = useRef(onReady);\n\n  useEffect(() => {\n    onReadyRef.current = onReady;\n  }, [onReady]);\n\n  useEffect(() => {\n    const handleEvent = (): void => {\n      try {\n        onReadyRef.current();\n      } catch (error: unknown) {\n        console.error('[EMG Core v50] Error executing system readiness handler:', error);\n      }\n    };\n\n    try {\n      window.addEventListener(SYSTEM_READY_EVENT, handleEvent, LISTENER_OPTIONS);\n    } catch (error: unknown) {\n      console.error('[EMG Core v50] Failed to attach system readiness listener:', error);\n    }\n    \n    return () => {\n      try {\n        window.removeEventListener(SYSTEM_READY_EVENT, handleEvent, LISTENER_OPTIONS);\n      } catch (error: unknown) {\n        console.error('[EMG Core v50] Failed to remove system readiness listener:', error);\n      }\n    };\n  }, []);\n};\n\n/**\n * Custom hook to observe system bootstrap readiness state via window events using concurrent transitions.\n */\nexport const useSystemBootstrap = (): UseSystemBootstrapReturn => {\n  const [isSystemReady, setIsSystemReady] = useState<boolean>(false);\n\n  const handleSystemReady = useCallback((): void => {\n    startTransition(() => {\n      setIsSystemReady(true);\n    });\n  }, []);\n\n  useSystemReadinessSubscription(handleSystemReady);\n\n  return isSystemReady;\n};\n\n// Autonomous RAG Resilience Guard\nexport const __rag_resilience_verified__ = Object.freeze({\n  generation: 142,\n  timestamp: \"2026-09-20T03:57:24.631Z\",\n  ragEngine: \"DARLEK_CAAN_HYBRID_RAG\"\n});\n",
-      "rationale": "RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-142 with verified AST structural sanity.",
-      "riskScore": 1,
-      "generation": 142,
-      "commitSha": "91ef0c0a8ec8beacaf2640fa1d6616ebd03eb918",
-      "timestamp": "2026-09-20T03:57:36.326Z",
       "hotswapped": true,
       "verdict": "correct",
       "source": "DARLEK_APPROVED_MUTATION"
