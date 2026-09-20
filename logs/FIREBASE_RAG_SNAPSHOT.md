@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:13:21.579Z`
+*Last Synchronized:* `2026-09-20T04:13:35.073Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -13,85 +13,107 @@
 
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
-### 1. `system.log` (Gen 1)
+### 1. `src/lib/scanner-utils.ts` (Gen 180)
+*Source:* `MUTATION:src/lib/scanner-utils.ts` | *Indexed:* `2026-09-20T04:13:31.995Z`
+
+```typescript
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-180 [2026-09-20T04:13:17.928Z] */
+/**
+ * @file src/lib/scanner-utils.ts
+ * @module ScannerUtils
+ * @description Darlek Caan utility functions for file path classification and scan metrics aggregation.
+ */
+
+export interface ScannableFile {
+  readonly size?: number;
+  readonly [key: string]: unkn
+// ... [truncated]
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:31.578Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:13:31.578Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:31.576Z`
+
+```typescript
+[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:13:31.576Z
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:30.835Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:13:30.835Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:30.833Z`
+
+```typescript
+[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:13:30.833Z
+```
+
+### 6. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:30.153Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to src/lib/scanner-utils.ts | TIME:2026-09-20T04:13:30.153Z
+```
+
+### 7. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:30.151Z`
+
+```typescript
+[LOG:APPROVE] Mutation applied to src/lib/scanner-utils.ts | TIME:2026-09-20T04:13:30.150Z
+```
+
+### 8. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:28.177Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:13:28.177Z
+```
+
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:18.576Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 208/253] Proposed mutation for src/lib/scanner-utils.ts (risk: LOW) | TIME:2026-09-20T04:13:18.575Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:18.574Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 208/253] Proposed mutation for src/lib/scanner-utils.ts (risk: LOW) | TIME:2026-09-20T04:13:18.573Z
 ```
 
-### 3. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:17.727Z`
+## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
+### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/scanner-utils.ts`
+- **Verdict:** `correct`
+- **Risk Score:** `1` | **Gen:** `180`
+- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-180 with verified AST structural sanity.
 ```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:13:17.727Z
-```
-
-### 4. `src/lib/sanitizer.ts` (Gen 179)
-*Source:* `MUTATION:src/lib/sanitizer.ts` | *Indexed:* `2026-09-20T04:13:08.745Z`
-
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-179 [2026-09-20T04:12:55.070Z] */
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-180 [2026-09-20T04:13:17.928Z] */
 /**
- * DARLEK CANN ARCHITECTURAL HEADER
- * File: src/lib/sanitizer.ts
- * Role: Auto-sanitization utility for detecting, redacting, and purging leaked API keys and Git tokens.
- * Architecture: Type-safe modular unit with resilient regex matching and zero-leak gu
+ * @file src/lib/scanner-utils.ts
+ * @module ScannerUtils
+ * @description Darlek Caan utility functions for file path classification and scan metrics aggregation.
+ */
+
+export interface ScannableFile {
+  readonly size?: number;
+  readonly [key: string]: unkn
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:08.302Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:13:08.302Z
-```
-
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:08.301Z`
-
-```typescript
-[LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:13:08.301Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:07.583Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: REJECTED — 4 passed, 1 failed | TIME:2026-09-20T04:13:07.583Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:07.582Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: REJECTED — 4 passed, 1 failed | TIME:2026-09-20T04:13:07.582Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:06.694Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/lib/sanitizer.ts | TIME:2026-09-20T04:13:06.694Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:06.694Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/lib/sanitizer.ts | TIME:2026-09-20T04:13:06.694Z
-```
-
-## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
-
-### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/sanitizer.ts`
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/sanitizer.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `179`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-179 with verified AST structural sanity.
@@ -105,7 +127,7 @@
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/sandbox.ts`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/sandbox.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `178`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-178 with verified AST structural sanity.
@@ -122,7 +144,7 @@ export interface SandboxResult {
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/safeStorage.ts`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/safeStorage.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `177`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-177 with verified AST structural sanity.
@@ -138,7 +160,7 @@ import { doc, getDoc, setDoc } from 'firebase/firestore';
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/safe-json.ts`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/safe-json.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `176`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-176 with verified AST structural sanity.
@@ -158,7 +180,7 @@ const MAX_ERROR_SNIPPET_LENGTH = 200;
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/persistence-layer.ts`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/persistence-layer.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `175`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-175 with verified AST structural sanity.
@@ -175,7 +197,7 @@ import { commitTo
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/omega-bootstrap.ts`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/omega-bootstrap.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `174`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-174 with verified AST structural sanity.
@@ -192,7 +214,7 @@ export type O
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/next-mock.ts`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/next-mock.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `173`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-173 with verified AST structural sanity.
@@ -210,7 +232,7 @@ export class NextResponse extends Response {
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neural_codec.ts`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neural_codec.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `172`
 - **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-172 with verified AST structural sanity.
@@ -227,7 +249,7 @@ const TEXT_DECODER = new TextDecoder();
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `1` | **Gen:** `171`
 - **Rationale:** RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-172, raised power ceiling to 22500, and validated functional sequence hotswapping.
@@ -244,23 +266,6 @@ export interface NeuralGeneState {
   activeConsensus: string;
   isOptimized: boolean;
   lastMu
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/main-worker.ts`
-- **Verdict:** `correct`
-- **Risk Score:** `1` | **Gen:** `170`
-- **Rationale:** RAG Pattern Refinement: Synthesized zero-leak resilience guards and updated generational telemetry index to G-170 with verified AST structural sanity.
-```typescript
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-170 [2026-09-20T04:08:32.626Z] */
-import { runAstDiffGate, AstDiffResult } from './ast-diff-gate';
-import { validateStructuralSanity, StructuralSanityResult } from './structural-sanity-guard';
-
-/**
- * Represents a generic repository or code file structure.
- */
-export interface CodeFile {
-  read
 // ... [truncated]
 ```
 
