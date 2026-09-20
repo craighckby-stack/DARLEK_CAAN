@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:13:11.814Z`
+*Last Synchronized:* `2026-09-20T04:13:21.579Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -13,7 +13,28 @@
 
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
-### 1. `src/lib/sanitizer.ts` (Gen 179)
+### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:18.576Z`
+
+```typescript
+[LOG:MUTATE] [Batch 208/253] Proposed mutation for src/lib/scanner-utils.ts (risk: LOW) | TIME:2026-09-20T04:13:18.575Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:18.574Z`
+
+```typescript
+[LOG:MUTATE] [Batch 208/253] Proposed mutation for src/lib/scanner-utils.ts (risk: LOW) | TIME:2026-09-20T04:13:18.573Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:17.727Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:13:17.727Z
+```
+
+### 4. `src/lib/sanitizer.ts` (Gen 179)
 *Source:* `MUTATION:src/lib/sanitizer.ts` | *Indexed:* `2026-09-20T04:13:08.745Z`
 
 ```typescript
@@ -26,67 +47,46 @@
 // ... [truncated]
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:08.302Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:13:08.302Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:08.301Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:13:08.301Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:07.583Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: REJECTED — 4 passed, 1 failed | TIME:2026-09-20T04:13:07.583Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:07.582Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: REJECTED — 4 passed, 1 failed | TIME:2026-09-20T04:13:07.582Z
 ```
 
-### 6. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:06.694Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/lib/sanitizer.ts | TIME:2026-09-20T04:13:06.694Z
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:06.694Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/lib/sanitizer.ts | TIME:2026-09-20T04:13:06.694Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:06.285Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:13:06.285Z
-```
-
 ### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:12:55.839Z`
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:06.694Z`
 
 ```typescript
-[LOG:MUTATE] [Batch 207/253] Proposed mutation for src/lib/sanitizer.ts (risk: LOW) | TIME:2026-09-20T04:12:55.839Z
+[LOG:APPROVE] Mutation applied to src/lib/sanitizer.ts | TIME:2026-09-20T04:13:06.694Z
 ```
 
 ### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:12:55.830Z`
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:13:06.694Z`
 
 ```typescript
-[LOG:MUTATE] [Batch 207/253] Proposed mutation for src/lib/sanitizer.ts (risk: LOW) | TIME:2026-09-20T04:12:55.828Z
+[LOG:APPROVE] Mutation applied to src/lib/sanitizer.ts | TIME:2026-09-20T04:13:06.694Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
