@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:02:49.495Z",
+    "generatedAt": "2026-09-20T05:02:57.558Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789880574551_e745adaa",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:02:54.551Z"
+    },
+    {
+      "id": "rag_log_1789880573849_dd0cb7be",
+      "type": "MUTATE",
+      "description": "[Batch 2/253] Proposed mutation for .gitignore (risk: LOW)",
+      "timestamp": "2026-09-20T05:02:53.849Z"
+    },
+    {
+      "id": "rag_log_1789880573846_3707664b",
+      "type": "MUTATE",
+      "description": "[Batch 2/253] Proposed mutation for .gitignore (risk: LOW)",
+      "timestamp": "2026-09-20T05:02:53.846Z"
+    },
     {
       "id": "rag_log_1789880566485_de216208",
       "type": "LOG_SYNC",
@@ -138,24 +156,6 @@
       "type": "RAG_WRITE",
       "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-4, rai...",
       "timestamp": "2026-09-20T05:01:59.153Z"
-    },
-    {
-      "id": "rag_log_1789880519152_8ffff29b",
-      "type": "HOTSWAP_OK",
-      "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-3 [Source: RAG_GENE_HOTSWAP].",
-      "timestamp": "2026-09-20T05:01:59.152Z"
-    },
-    {
-      "id": "rag_log_1789880518903_db575bdc",
-      "type": "SCAN",
-      "description": "Scanned craighckby-stack/DARLEK_CAAN — 254 files.",
-      "timestamp": "2026-09-20T05:01:58.903Z"
-    },
-    {
-      "id": "rag_log_1789880518904_bc81761d",
-      "type": "SCAN",
-      "description": "Scanned craighckby-stack/DARLEK_CAAN — 254 files.",
-      "timestamp": "2026-09-20T05:01:58.903Z"
     }
   ],
   "telemetryBuffer": [
@@ -606,6 +606,41 @@
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-6d73c8ba",
+      "time": "15:02:51",
+      "addr": "0x0012E000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 93%, Drift 8%, Syntax clean."
+    },
+    {
+      "id": "dos-c8016827",
+      "time": "15:02:53",
+      "addr": "0x0038A50B",
+      "tag": "MUTATE",
+      "message": "[Batch 2/253] Proposed mutation for .gitignore (risk: LOW)"
+    },
+    {
+      "id": "dos-ddd0bfd7",
+      "time": "15:02:54",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-255dab37",
+      "time": "15:02:55",
+      "addr": "0x00130000",
+      "tag": "RAG_INDEX",
+      "message": "RAG memory vector aligned. Total chunks: 15, Free: 9.61 MB."
+    },
+    {
+      "id": "dos-37fca20c",
+      "time": "15:02:55",
+      "addr": "0x002B4AF9",
+      "tag": "LOCK_WAIT",
+      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
     }
   ]
 }

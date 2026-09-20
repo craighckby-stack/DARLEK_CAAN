@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789880574551_e745adaa",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:02:54.551Z"
+  },
+  {
+    "id": "rag_log_1789880573849_dd0cb7be",
+    "type": "MUTATE",
+    "description": "[Batch 2/253] Proposed mutation for .gitignore (risk: LOW)",
+    "timestamp": "2026-09-20T05:02:53.849Z"
+  },
+  {
+    "id": "rag_log_1789880573846_3707664b",
+    "type": "MUTATE",
+    "description": "[Batch 2/253] Proposed mutation for .gitignore (risk: LOW)",
+    "timestamp": "2026-09-20T05:02:53.846Z"
+  },
+  {
     "id": "rag_log_1789880566485_de216208",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "RAG_WRITE",
     "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-4, rai...",
     "timestamp": "2026-09-20T05:01:59.153Z"
-  },
-  {
-    "id": "rag_log_1789880519152_8ffff29b",
-    "type": "HOTSWAP_OK",
-    "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-3 [Source: RAG_GENE_HOTSWAP].",
-    "timestamp": "2026-09-20T05:01:59.152Z"
-  },
-  {
-    "id": "rag_log_1789880518903_db575bdc",
-    "type": "SCAN",
-    "description": "Scanned craighckby-stack/DARLEK_CAAN — 254 files.",
-    "timestamp": "2026-09-20T05:01:58.903Z"
-  },
-  {
-    "id": "rag_log_1789880518904_bc81761d",
-    "type": "SCAN",
-    "description": "Scanned craighckby-stack/DARLEK_CAAN — 254 files.",
-    "timestamp": "2026-09-20T05:01:58.903Z"
   }
 ]
