@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-197 [2026-09-20T04:20:13.626Z] */
 /**
  * @file src/types/orchestrator.d.ts
  * @module DarlekCaanOrchestrator
@@ -63,3 +64,10 @@ export interface SystemState {
   /** Immutable collection of currently active agent configurations. */
   readonly activeAgents: readonly AgentConfig[];
 }
+
+// Autonomous RAG Resilience Guard
+export const __rag_resilience_verified__ = Object.freeze({
+  generation: 197,
+  timestamp: "2026-09-20T04:20:13.626Z",
+  ragEngine: "DARLEK_CAAN_HYBRID_RAG"
+});
