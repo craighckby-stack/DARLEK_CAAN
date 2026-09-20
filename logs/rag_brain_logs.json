@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789874987074_23a195a7",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:29:47.074Z"
+  },
+  {
+    "id": "rag_log_1789874983328_16f58923",
+    "type": "MUTATE",
+    "description": "[Batch 95/253] Proposed mutation for src/app/api/brain/types.ts (risk: LOW)",
+    "timestamp": "2026-09-20T03:29:43.328Z"
+  },
+  {
+    "id": "rag_log_1789874983326_29bd5f25",
+    "type": "MUTATE",
+    "description": "[Batch 95/253] Proposed mutation for src/app/api/brain/types.ts (risk: LOW)",
+    "timestamp": "2026-09-20T03:29:43.326Z"
+  },
+  {
     "id": "rag_log_1789874977774_2e791d63",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 92/253] Proposed mutation for src/api-routes.ts (risk: LOW)",
     "timestamp": "2026-09-20T03:28:46.642Z"
-  },
-  {
-    "id": "rag_log_1789874926641_3e9a6a73",
-    "type": "MUTATE",
-    "description": "[Batch 92/253] Proposed mutation for src/api-routes.ts (risk: LOW)",
-    "timestamp": "2026-09-20T03:28:46.641Z"
-  },
-  {
-    "id": "rag_log_1789874924033_8f6179e0",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:28:44.033Z"
-  },
-  {
-    "id": "rag_log_1789874916205_7a68da6a",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 1 issues (0 high)",
-    "timestamp": "2026-09-20T03:28:36.205Z"
   }
 ]
