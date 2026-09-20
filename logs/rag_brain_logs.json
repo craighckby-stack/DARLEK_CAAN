@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789874020962_faadc692",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:13:40.962Z"
+  },
+  {
     "id": "rag_log_1789874012340_52a90d09",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -142,11 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: PASSED — 5 passed, 0 failed",
     "timestamp": "2026-09-20T03:11:53.170Z"
-  },
-  {
-    "id": "rag_log_1789873913168_de192ba9",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T03:11:53.168Z"
   }
 ]
