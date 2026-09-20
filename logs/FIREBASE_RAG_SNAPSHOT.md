@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:21:58.702Z`
+*Last Synchronized:* `2026-09-20T04:22:09.915Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -13,7 +13,28 @@
 
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
-### 1. `src/utils/cognitive-engine.ts` (Gen 200)
+### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:22:06.799Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:22:06.799Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:22:05.510Z`
+
+```typescript
+[LOG:MUTATE] [Batch 230/253] Proposed mutation for src/utils/error-parser.ts (risk: LOW) | TIME:2026-09-20T04:22:05.510Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:22:05.496Z`
+
+```typescript
+[LOG:MUTATE] [Batch 230/253] Proposed mutation for src/utils/error-parser.ts (risk: LOW) | TIME:2026-09-20T04:22:05.495Z
+```
+
+### 4. `src/utils/cognitive-engine.ts` (Gen 200)
 *Source:* `MUTATION:src/utils/cognitive-engine.ts` | *Indexed:* `2026-09-20T04:21:55.644Z`
 
 ```typescript
@@ -25,67 +46,46 @@
 // ... [truncated]
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:21:55.253Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:21:55.253Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:21:55.252Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:21:55.252Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:21:54.280Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: REJECTED — 3 passed, 2 failed | TIME:2026-09-20T04:21:54.280Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:21:54.279Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: REJECTED — 3 passed, 2 failed | TIME:2026-09-20T04:21:54.279Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:21:54.273Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:21:54.272Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:21:47.501Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to src/utils/cognitive-engine.ts | TIME:2026-09-20T04:21:47.500Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:21:47.495Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/utils/cognitive-engine.ts | TIME:2026-09-20T04:21:47.494Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:21:35.178Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:21:35.177Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:21:27.206Z`
-
-```typescript
-[LOG:MUTATE] [Batch 229/253] Proposed mutation for src/utils/cognitive-engine.ts (risk: LOW) | TIME:2026-09-20T04:21:27.205Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
