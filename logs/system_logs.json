@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:29:44.980Z",
+    "generatedAt": "2026-09-20T05:29:53.263Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789882190255_8ab0f7e7",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:29:50.255Z"
+    },
+    {
+      "id": "rag_log_1789882188177_85db0c93",
+      "type": "INFO",
+      "description": "[NO-OP] Code saturation reached in batch for rag/learning_postmortems.json",
+      "timestamp": "2026-09-20T05:29:48.177Z"
+    },
+    {
+      "id": "rag_log_1789882188175_0ffef35e",
+      "type": "INFO",
+      "description": "[NO-OP] Code saturation reached in batch for rag/learning_postmortems.json",
+      "timestamp": "2026-09-20T05:29:48.175Z"
+    },
     {
       "id": "rag_log_1789882181937_17d43315",
       "type": "LOG_SYNC",
@@ -138,48 +156,9 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T05:28:54.440Z"
-    },
-    {
-      "id": "rag_log_1789882134218_5d6add4c",
-      "type": "INFO",
-      "description": "[NO-OP] Code saturation reached in batch for prisma/db-store.json",
-      "timestamp": "2026-09-20T05:28:54.218Z"
-    },
-    {
-      "id": "rag_log_1789882134217_873da13f",
-      "type": "INFO",
-      "description": "[NO-OP] Code saturation reached in batch for prisma/db-store.json",
-      "timestamp": "2026-09-20T05:28:54.217Z"
-    },
-    {
-      "id": "rag_log_1789882125047_c028ff7d",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:28:45.047Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-a6f59d47",
-      "time": "15:26:30",
-      "addr": "0x0094C83C",
-      "tag": "HEALTH",
-      "message": "Post-mutation analysis: 0 issues (0 high)"
-    },
-    {
-      "id": "dos-b6949839",
-      "time": "15:26:31",
-      "addr": "0x0035C000",
-      "tag": "MEM_POOL",
-      "message": "Allocated quota: 10.00 MB. Used: 454.8 KB (4.44%)."
-    },
-    {
-      "id": "dos-06a1dfa5",
-      "time": "15:26:36",
-      "addr": "0x0035E000",
-      "tag": "SANITY_OK",
-      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
-    },
     {
       "id": "dos-f5c551ee",
       "time": "15:26:39",
@@ -858,6 +837,27 @@
       "addr": "0x003AC000",
       "tag": "MEM_POOL",
       "message": "Allocated quota: 10.00 MB. Used: 467.0 KB (4.56%)."
+    },
+    {
+      "id": "dos-92509dad",
+      "time": "15:29:48",
+      "addr": "0x00361736",
+      "tag": "INFO",
+      "message": "[NO-OP] Code saturation reached in batch for rag/learning_postmortems.json"
+    },
+    {
+      "id": "dos-41bdcdaa",
+      "time": "15:29:48",
+      "addr": "0x003AE000",
+      "tag": "SANITY_OK",
+      "message": "Emergency breaker: Health 100%, Drift 0%, Syntax clean."
+    },
+    {
+      "id": "dos-72472a45",
+      "time": "15:29:50",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }
