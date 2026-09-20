@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:32:31.221Z`
+*Last Synchronized:* `2026-09-20T05:32:40.858Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,27 +14,48 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:37.814Z`
+
+```typescript
+[LOG:MUTATE] [Batch 90/253] Proposed mutation for server.ts (risk: LOW) | TIME:2026-09-20T05:32:37.813Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:37.812Z`
+
+```typescript
+[LOG:MUTATE] [Batch 90/253] Proposed mutation for server.ts (risk: LOW) | TIME:2026-09-20T05:32:37.811Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:36.046Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:32:36.046Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:28.161Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for robust_parser.js | TIME:2026-09-20T05:32:28.160Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:28.158Z`
 
 ```typescript
 [LOG:INFO] [NO-OP] Code saturation reached in batch for robust_parser.js | TIME:2026-09-20T05:32:28.158Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:26.639Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:32:26.639Z
 ```
 
-### 4. `restore_repo_fast.js` (Gen 69)
+### 7. `restore_repo_fast.js` (Gen 69)
 *Source:* `MUTATION:restore_repo_fast.js` | *Indexed:* `2026-09-20T05:32:18.877Z`
 
 ```typescript
@@ -47,46 +68,25 @@
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:18.660Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:32:18.660Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:18.659Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T05:32:18.659Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:17.769Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:32:17.769Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:17.768Z`
-
-```typescript
-[LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T05:32:17.767Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:17.332Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to restore_repo_fast.js | TIME:2026-09-20T05:32:17.332Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:32:17.329Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to restore_repo_fast.js | TIME:2026-09-20T05:32:17.329Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)

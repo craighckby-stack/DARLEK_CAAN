@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789882357813_a8250250",
+    "type": "MUTATE",
+    "description": "[Batch 90/253] Proposed mutation for server.ts (risk: LOW)",
+    "timestamp": "2026-09-20T05:32:37.813Z"
+  },
+  {
+    "id": "rag_log_1789882357811_751670c9",
+    "type": "MUTATE",
+    "description": "[Batch 90/253] Proposed mutation for server.ts (risk: LOW)",
+    "timestamp": "2026-09-20T05:32:37.811Z"
+  },
+  {
+    "id": "rag_log_1789882356046_e1875906",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:32:36.046Z"
+  },
+  {
     "id": "rag_log_1789882348160_323243ab",
     "type": "INFO",
     "description": "[NO-OP] Code saturation reached in batch for robust_parser.js",
@@ -130,23 +148,5 @@
     "type": "MUTATE",
     "description": "[Batch 87/253] Proposed mutation for restore_repo.js (risk: LOW)",
     "timestamp": "2026-09-20T05:31:52.384Z"
-  },
-  {
-    "id": "rag_log_1789882309848_b970d915",
-    "type": "RAG_WRITE",
-    "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-10, ra...",
-    "timestamp": "2026-09-20T05:31:49.848Z"
-  },
-  {
-    "id": "rag_log_1789882309847_0346aac2",
-    "type": "HOTSWAP_OK",
-    "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-9 [Source: RAG_GENE_HOTSWAP].",
-    "timestamp": "2026-09-20T05:31:49.847Z"
-  },
-  {
-    "id": "rag_log_1789882309093_70482a2d",
-    "type": "HOTSWAP",
-    "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
-    "timestamp": "2026-09-20T05:31:49.092Z"
   }
 ]
