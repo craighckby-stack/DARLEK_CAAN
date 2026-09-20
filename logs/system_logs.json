@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:26:10.416Z",
+    "generatedAt": "2026-09-20T03:26:22.298Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789874779284_69bb6edd",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T03:26:19.284Z"
+    },
+    {
+      "id": "rag_log_1789874779282_88f68b81",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T03:26:19.282Z"
+    },
+    {
+      "id": "rag_log_1789874778654_81fb9744",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T03:26:18.654Z"
+    },
+    {
+      "id": "rag_log_1789874778653_b484b692",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T03:26:18.653Z"
+    },
+    {
+      "id": "rag_log_1789874778053_0d6750cd",
+      "type": "APPROVE",
+      "description": "Mutation applied to remote_tree.txt",
+      "timestamp": "2026-09-20T03:26:18.053Z"
+    },
+    {
+      "id": "rag_log_1789874778052_b31b61b0",
+      "type": "APPROVE",
+      "description": "Mutation applied to remote_tree.txt",
+      "timestamp": "2026-09-20T03:26:18.052Z"
+    },
+    {
+      "id": "rag_log_1789874775507_94751b3b",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:26:15.507Z"
+    },
     {
       "id": "rag_log_1789874767409_82ca86f5",
       "type": "MUTATE",
@@ -114,79 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T03:25:26.443Z"
-    },
-    {
-      "id": "rag_log_1789874726442_ccba7f60",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:25:26.442Z"
-    },
-    {
-      "id": "rag_log_1789874725530_98428fe9",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 4 passed, 0 failed",
-      "timestamp": "2026-09-20T03:25:25.530Z"
-    },
-    {
-      "id": "rag_log_1789874725529_38276771",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 4 passed, 0 failed",
-      "timestamp": "2026-09-20T03:25:25.529Z"
-    },
-    {
-      "id": "rag_log_1789874725222_bd6d3d85",
-      "type": "APPROVE",
-      "description": "Mutation applied to remote_App.tsx",
-      "timestamp": "2026-09-20T03:25:25.222Z"
-    },
-    {
-      "id": "rag_log_1789874725221_36ca3ba2",
-      "type": "APPROVE",
-      "description": "Mutation applied to remote_App.tsx",
-      "timestamp": "2026-09-20T03:25:25.221Z"
-    },
-    {
-      "id": "rag_log_1789874719590_fe8d2acf",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T03:25:19.590Z"
-    },
-    {
-      "id": "rag_log_1789874714390_98155d80",
-      "type": "MUTATE",
-      "description": "[Batch 82/253] Proposed mutation for remote_App.tsx (risk: LOW)",
-      "timestamp": "2026-09-20T03:25:14.390Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-57f70f13",
-      "time": "13:19:02",
-      "addr": "0x0033A732",
-      "tag": "MUTATE",
-      "message": "[Batch 63/253] Proposed mutation for lib/env-validator.ts (risk: LOW)"
-    },
-    {
-      "id": "dos-92454e8c",
-      "time": "13:19:11",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-818f6d8e",
-      "time": "13:19:13",
-      "addr": "0x0020957D",
-      "tag": "APPROVE",
-      "message": "Mutation applied to lib/env-validator.ts"
-    },
-    {
-      "id": "dos-fee056ca",
-      "time": "13:19:14",
-      "addr": "0x007EEE12",
-      "tag": "HEALTH",
-      "message": "Auto-test: PASSED — 5 passed, 0 failed"
-    },
     {
       "id": "dos-8b9b707c",
       "time": "13:19:15",
@@ -858,6 +830,34 @@
       "addr": "0x0044D6E9",
       "tag": "MUTATE",
       "message": "[Batch 85/253] Proposed mutation for remote_tree.txt (risk: LOW)"
+    },
+    {
+      "id": "dos-b937f6ea",
+      "time": "13:26:15",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-7ba1a3af",
+      "time": "13:26:18",
+      "addr": "0x0085965F",
+      "tag": "APPROVE",
+      "message": "Mutation applied to remote_tree.txt"
+    },
+    {
+      "id": "dos-b5d92f20",
+      "time": "13:26:18",
+      "addr": "0x007EEE12",
+      "tag": "HEALTH",
+      "message": "Auto-test: PASSED — 5 passed, 0 failed"
+    },
+    {
+      "id": "dos-5d0192a9",
+      "time": "13:26:19",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
     }
   ]
 }
