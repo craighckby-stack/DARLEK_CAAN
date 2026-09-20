@@ -1,3 +1,10 @@
+/**
+ * DARLEK CANN ARCHITECTURAL HEADER
+ * File: src/lib/config.ts
+ * Role: Core system component participating in autonomous cognitive evolution cycles.
+ * Architecture: Type-safe modular unit with resilient state interfaces.
+ */
+
 /* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-152 [2026-09-20T04:01:19.319Z] */
 export const RAG_RETRIEVAL_ENABLED =
   (typeof process === "undefined" || process.env?.NEXT_PUBLIC_RAG_RETRIEVAL_ENABLED !== "false") &&
