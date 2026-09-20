@@ -1,5 +1,59 @@
 [
   {
+    "id": "rag_log_1789878632591_d62c6a3b",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T04:30:32.591Z"
+  },
+  {
+    "id": "rag_log_1789878630470_be2a2102",
+    "type": "SYSTEM",
+    "description": "Batch complete.",
+    "timestamp": "2026-09-20T04:30:30.470Z"
+  },
+  {
+    "id": "rag_log_1789878630469_b0fae4f4",
+    "type": "SYSTEM",
+    "description": "Batch complete.",
+    "timestamp": "2026-09-20T04:30:30.469Z"
+  },
+  {
+    "id": "rag_log_1789878630088_b12115a5",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T04:30:30.088Z"
+  },
+  {
+    "id": "rag_log_1789878630087_9539acc4",
+    "type": "HEALTH",
+    "description": "Post-mutation analysis: 0 issues (0 high)",
+    "timestamp": "2026-09-20T04:30:30.087Z"
+  },
+  {
+    "id": "rag_log_1789878629376_0ced2749",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T04:30:29.376Z"
+  },
+  {
+    "id": "rag_log_1789878629375_8ef4ed48",
+    "type": "HEALTH",
+    "description": "Auto-test: PASSED — 5 passed, 0 failed",
+    "timestamp": "2026-09-20T04:30:29.375Z"
+  },
+  {
+    "id": "rag_log_1789878628521_bc90daee",
+    "type": "APPROVE",
+    "description": "Mutation applied to vite.config.ts",
+    "timestamp": "2026-09-20T04:30:28.521Z"
+  },
+  {
+    "id": "rag_log_1789878628520_ad2edabc",
+    "type": "APPROVE",
+    "description": "Mutation applied to vite.config.ts",
+    "timestamp": "2026-09-20T04:30:28.520Z"
+  },
+  {
     "id": "rag_log_1789878624863_b6a24ec6",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -90,63 +144,9 @@
     "timestamp": "2026-09-20T04:29:50.392Z"
   },
   {
-    "id": "rag_log_1789878581096_697d8e56",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T04:29:41.096Z"
-  },
-  {
     "id": "rag_log_1789878581097_4a4b47cb",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
     "timestamp": "2026-09-20T04:29:41.096Z"
-  },
-  {
-    "id": "rag_log_1789878580189_2b4e6bca",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T04:29:40.189Z"
-  },
-  {
-    "id": "rag_log_1789878580188_790d8de1",
-    "type": "HEALTH",
-    "description": "Auto-test: PASSED — 5 passed, 0 failed",
-    "timestamp": "2026-09-20T04:29:40.188Z"
-  },
-  {
-    "id": "rag_log_1789878578462_c58af693",
-    "type": "APPROVE",
-    "description": "Mutation applied to update_prompts.sh",
-    "timestamp": "2026-09-20T04:29:38.462Z"
-  },
-  {
-    "id": "rag_log_1789878578461_20288ebb",
-    "type": "APPROVE",
-    "description": "Mutation applied to update_prompts.sh",
-    "timestamp": "2026-09-20T04:29:38.461Z"
-  },
-  {
-    "id": "rag_log_1789878576467_37b81a42",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T04:29:36.467Z"
-  },
-  {
-    "id": "rag_log_1789878567713_79680a70",
-    "type": "MUTATE",
-    "description": "[Batch 250/253] Proposed mutation for update_prompts.sh (risk: LOW)",
-    "timestamp": "2026-09-20T04:29:27.713Z"
-  },
-  {
-    "id": "rag_log_1789878567712_85e0be00",
-    "type": "MUTATE",
-    "description": "[Batch 250/253] Proposed mutation for update_prompts.sh (risk: LOW)",
-    "timestamp": "2026-09-20T04:29:27.712Z"
-  },
-  {
-    "id": "rag_log_1789878565751_728c091b",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T04:29:25.751Z"
   }
 ]
