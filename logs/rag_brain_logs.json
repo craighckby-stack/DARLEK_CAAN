@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789869061085_769a4446",
+    "type": "CONNECT",
+    "description": "Synced 29 user portfolios and 27 global architectures.",
+    "timestamp": "2026-09-20T01:51:01.085Z"
+  },
+  {
+    "id": "rag_log_1789869061077_fe72c6a1",
+    "type": "CONNECT",
+    "description": "Synced 29 user portfolios and 27 global architectures.",
+    "timestamp": "2026-09-20T01:51:01.077Z"
+  },
+  {
+    "id": "rag_log_1789865669555_7806b07b",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T00:54:29.555Z"
+  },
+  {
     "id": "rag_log_1789863943229_a1e68ed4",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -130,23 +148,5 @@
     "type": "HEALTH",
     "description": "Auto-test: PASSED — 5 passed, 0 failed",
     "timestamp": "2026-09-19T22:54:03.914Z"
-  },
-  {
-    "id": "rag_log_1789858443472_685ae83c",
-    "type": "APPROVE",
-    "description": "Mutation applied to assets/.aistudio/README.md",
-    "timestamp": "2026-09-19T22:54:03.472Z"
-  },
-  {
-    "id": "rag_log_1789858443463_cb900314",
-    "type": "APPROVE",
-    "description": "Mutation applied to assets/.aistudio/README.md",
-    "timestamp": "2026-09-19T22:54:03.463Z"
-  },
-  {
-    "id": "rag_log_1789858441716_4c1a9064",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-19T22:54:01.716Z"
   }
 ]

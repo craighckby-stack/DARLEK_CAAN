@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T00:25:46.459Z`
+*Last Synchronized:* `2026-09-20T01:51:04.112Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,81 +14,73 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T01:51:01.085Z`
+
+```typescript
+[LOG:CONNECT] Synced 29 user portfolios and 27 global architectures. | TIME:2026-09-20T01:51:01.085Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T01:51:01.079Z`
+
+```typescript
+[LOG:CONNECT] Synced 29 user portfolios and 27 global architectures. | TIME:2026-09-20T01:51:01.077Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:54:29.556Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T00:54:29.555Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:43.229Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T00:25:43.229Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:34.891Z`
 
 ```typescript
 [LOG:CONNECT] Synced 29 user portfolios and 27 global architectures. | TIME:2026-09-20T00:25:34.891Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:34.889Z`
 
 ```typescript
 [LOG:CONNECT] Synced 29 user portfolios and 27 global architectures. | TIME:2026-09-20T00:25:34.888Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:30.675Z`
 
 ```typescript
 [LOG:SYSTEM] Bypassed access portal: Autonomous cognitive pipeline initiated with local cyber core modules. | TIME:2026-09-20T00:25:30.675Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:30.672Z`
 
 ```typescript
 [LOG:SYSTEM] Bypassed access portal: Autonomous cognitive pipeline initiated with local cyber core modules. | TIME:2026-09-20T00:25:30.671Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:24.421Z`
 
 ```typescript
 [LOG:ERROR] Network exception encountered: Unexpected token '<', "<!doctype "... is not valid JSON | TIME:2026-09-20T00:25:24.421Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:24.419Z`
 
 ```typescript
 [LOG:ERROR] Network exception encountered: Unexpected token '<', "<!doctype "... is not valid JSON | TIME:2026-09-20T00:25:24.418Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:24.173Z`
-
-```typescript
-[LOG:CONNECT] Verifying GitHub access key... | TIME:2026-09-20T00:25:24.173Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T00:25:24.167Z`
-
-```typescript
-[LOG:CONNECT] Verifying GitHub access key... | TIME:2026-09-20T00:25:24.166Z
-```
-
-### 10. `assets/.aistudio/SECURITY_PROTOCOL.md` (Gen 16)
-*Source:* `REJECTED_MUTATION:assets/.aistudio/SECURITY_PROTOCOL.md` | *Indexed:* `2026-09-20T00:24:52.986Z`
-
-```typescript
-// [NEGATIVE EXEMPLAR - REJECTED PATTERN - DO NOT REPEAT]
-// REASON: COHERENCE GATE BLOCKED
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-16 [2026-09-19T22:54:49.354Z] */
-# OMEGA ARCHITECTURE SECURITY PROTOCOL
-
-> **Directive Level:** Sovereign-01  
-> **Enforcement Scope:** `Darlek Caan` Self-Refactoring & Ingestion Pipeline  
-> **Target Su
-// ... [truncated]
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
