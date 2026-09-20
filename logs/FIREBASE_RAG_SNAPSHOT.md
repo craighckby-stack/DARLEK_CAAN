@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T04:14:57.202Z`
+*Last Synchronized:* `2026-09-20T04:15:06.399Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,27 +14,34 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:15:03.362Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:15:03.362Z
+```
+
+### 2. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:14:54.144Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 212/253] Proposed mutation for src/lib/types.ts (risk: LOW) | TIME:2026-09-20T04:14:54.144Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 3. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:14:54.143Z`
 
 ```typescript
 [LOG:MUTATE] [Batch 212/253] Proposed mutation for src/lib/types.ts (risk: LOW) | TIME:2026-09-20T04:14:54.143Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:14:52.744Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T04:14:52.743Z
 ```
 
-### 4. `src/lib/telemetry.ts` (Gen 183)
+### 5. `src/lib/telemetry.ts` (Gen 183)
 *Source:* `MUTATION:src/lib/telemetry.ts` | *Indexed:* `2026-09-20T04:14:44.197Z`
 
 ```typescript
@@ -49,46 +56,39 @@
 // ... [truncated]
 ```
 
-### 5. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:14:43.581Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:14:43.581Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:14:43.579Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T04:14:43.579Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:14:42.894Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:14:42.894Z
 ```
 
-### 8. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:14:42.891Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T04:14:42.891Z
 ```
 
-### 9. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:14:42.200Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to src/lib/telemetry.ts | TIME:2026-09-20T04:14:42.200Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:14:42.198Z`
-
-```typescript
-[LOG:APPROVE] Mutation applied to src/lib/telemetry.ts | TIME:2026-09-20T04:14:42.198Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
