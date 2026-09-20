@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789877998542_a5ec3698",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T04:19:58.542Z"
+  },
+  {
     "id": "rag_log_1789877990009_0ccdb902",
     "type": "MUTATE",
     "description": "[Batch 225/253] Proposed mutation for src/types/omega.d.ts (risk: LOW)",
@@ -142,11 +148,5 @@
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
     "timestamp": "2026-09-20T04:18:52.624Z"
-  },
-  {
-    "id": "rag_log_1789877932623_82c9f91e",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T04:18:52.623Z"
   }
 ]
