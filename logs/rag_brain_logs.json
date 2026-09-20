@@ -1,5 +1,29 @@
 [
   {
+    "id": "rag_log_1789891497587_bfd48ad4",
+    "type": "RAG_WRITE",
+    "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-27, ra...",
+    "timestamp": "2026-09-20T08:04:57.587Z"
+  },
+  {
+    "id": "rag_log_1789891497585_1affd6ee",
+    "type": "HOTSWAP_OK",
+    "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-26 [Source: RAG_GENE_HOTSWAP].",
+    "timestamp": "2026-09-20T08:04:57.585Z"
+  },
+  {
+    "id": "rag_log_1789891495108_7899b4c3",
+    "type": "HOTSWAP",
+    "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
+    "timestamp": "2026-09-20T08:04:55.108Z"
+  },
+  {
+    "id": "rag_log_1789891494292_926923df",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T08:04:54.292Z"
+  },
+  {
     "id": "rag_log_1789891486399_7b9b3632",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -124,29 +148,5 @@
     "type": "HOTSWAP",
     "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
     "timestamp": "2026-09-20T07:57:01.730Z"
-  },
-  {
-    "id": "rag_log_1789891005470_cf926ce8",
-    "type": "RAG_WRITE",
-    "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-20, ra...",
-    "timestamp": "2026-09-20T07:56:45.470Z"
-  },
-  {
-    "id": "rag_log_1789891005468_3042b524",
-    "type": "HOTSWAP_OK",
-    "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-19 [Source: RAG_GENE_HOTSWAP].",
-    "timestamp": "2026-09-20T07:56:45.468Z"
-  },
-  {
-    "id": "rag_log_1789891002685_61de1b41",
-    "type": "HOTSWAP",
-    "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
-    "timestamp": "2026-09-20T07:56:42.685Z"
-  },
-  {
-    "id": "rag_log_1789890998308_65c3482c",
-    "type": "SYSTEM",
-    "description": "Batch complete.",
-    "timestamp": "2026-09-20T07:56:38.308Z"
   }
 ]

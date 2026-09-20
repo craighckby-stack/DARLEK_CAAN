@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T08:04:49.410Z`
+*Last Synchronized:* `2026-09-20T08:05:00.591Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,102 +14,110 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T08:04:57.588Z`
+
+```typescript
+[LOG:RAG_WRITE] Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-27, ra... | TIME:2026-09-20T08:04:57.587Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T08:04:57.586Z`
+
+```typescript
+[LOG:HOTSWAP_OK] HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-26 [Source: RAG_GENE_HOTSWAP]. | TIME:2026-09-20T08:04:57.585Z
+```
+
+### 3. `src/lib/neuralActiveGene.ts` (Gen 26)
+*Source:* `MUTATION:src/lib/neuralActiveGene.ts` | *Indexed:* `2026-09-20T08:04:57.582Z`
+
+```typescript
+/**
+ * @file src/lib/neuralActiveGene.ts
+ * @description Active neural gene evolved and hotswapped autonomously via DARLEK CAAN RAG Engine.
+ * Generation: G-27 | RAG Vector Anchored | Hotswap Verified
+ */
+
+export interface NeuralGeneState {
+  generation: number;
+  dalekPowerLevel: number;
+  activeConsensus: string;
+  isOptimized: boolean;
+  lastMut
+// ... [truncated]
+```
+
+### 4. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T08:04:55.109Z`
+
+```typescript
+[LOG:HOTSWAP] Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts | TIME:2026-09-20T08:04:55.108Z
+```
+
+### 5. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T08:04:54.293Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T08:04:54.292Z
+```
+
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T08:04:46.400Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T08:04:46.399Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T08:04:37.744Z`
 
 ```typescript
 [LOG:CONNECT] Synced 28 user portfolios and 27 global architectures. | TIME:2026-09-20T08:04:37.744Z
 ```
 
-### 3. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T08:04:37.741Z`
 
 ```typescript
 [LOG:CONNECT] Synced 28 user portfolios and 27 global architectures. | TIME:2026-09-20T08:04:37.739Z
 ```
 
-### 4. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T07:58:38.706Z`
 
 ```typescript
 [LOG:RAG_WRITE] Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-26, ra... | TIME:2026-09-20T07:58:38.705Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T07:58:38.701Z`
 
 ```typescript
 [LOG:HOTSWAP_OK] HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-25 [Source: RAG_GENE_HOTSWAP]. | TIME:2026-09-20T07:58:38.700Z
 ```
 
-### 6. `src/lib/neuralActiveGene.ts` (Gen 25)
-*Source:* `MUTATION:src/lib/neuralActiveGene.ts` | *Indexed:* `2026-09-20T07:58:38.693Z`
-
-```typescript
-/**
- * @file src/lib/neuralActiveGene.ts
- * @description Active neural gene evolved and hotswapped autonomously via DARLEK CAAN RAG Engine.
- * Generation: G-26 | RAG Vector Anchored | Hotswap Verified
- */
-
-export interface NeuralGeneState {
-  generation: number;
-  dalekPowerLevel: number;
-  activeConsensus: string;
-  isOptimized: boolean;
-  lastMut
-// ... [truncated]
-```
-
-### 7. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T07:58:37.761Z`
-
-```typescript
-[LOG:HOTSWAP] Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts | TIME:2026-09-20T07:58:37.760Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T07:58:19.716Z`
-
-```typescript
-[LOG:RAG_WRITE] Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-25, ra... | TIME:2026-09-20T07:58:19.716Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T07:58:19.712Z`
-
-```typescript
-[LOG:HOTSWAP_OK] HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-24 [Source: RAG_GENE_HOTSWAP]. | TIME:2026-09-20T07:58:19.712Z
-```
-
-### 10. `src/lib/neuralActiveGene.ts` (Gen 24)
-*Source:* `MUTATION:src/lib/neuralActiveGene.ts` | *Indexed:* `2026-09-20T07:58:19.701Z`
-
-```typescript
-/**
- * @file src/lib/neuralActiveGene.ts
- * @description Active neural gene evolved and hotswapped autonomously via DARLEK CAAN RAG Engine.
- * Generation: G-25 | RAG Vector Anchored | Hotswap Verified
- */
-
-export interface NeuralGeneState {
-  generation: number;
-  dalekPowerLevel: number;
-  activeConsensus: string;
-  isOptimized: boolean;
-  lastMut
-// ... [truncated]
-```
-
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
 
 ### 1. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
+- **Verdict:** `correct`
+- **Risk Score:** `0.12` | **Gen:** `26`
+- **Rationale:** RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-27, raised power ceiling to 4375, and validated functional sequence hotswapping.
+```typescript
+/**
+ * @file src/lib/neuralActiveGene.ts
+ * @description Active neural gene evolved and hotswapped autonomously via DARLEK CAAN RAG Engine.
+ * Generation: G-27 | RAG Vector Anchored | Hotswap Verified
+ */
+
+export interface NeuralGeneState {
+  generation: number;
+  dalekPowerLevel: number;
+  activeConsensus: string;
+  isOptimized: boolean;
+  lastMut
+// ... [truncated]
+```
+
+### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `0.12` | **Gen:** `25`
 - **Rationale:** RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-26, raised power ceiling to 4250, and validated functional sequence hotswapping.
@@ -129,7 +137,7 @@ export interface NeuralGeneState {
 // ... [truncated]
 ```
 
-### 2. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
+### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `0.12` | **Gen:** `24`
 - **Rationale:** RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-25, raised power ceiling to 4125, and validated functional sequence hotswapping.
@@ -149,7 +157,7 @@ export interface NeuralGeneState {
 // ... [truncated]
 ```
 
-### 3. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
+### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `0.12` | **Gen:** `23`
 - **Rationale:** RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-24, raised power ceiling to 4000, and validated functional sequence hotswapping.
@@ -169,7 +177,7 @@ export interface NeuralGeneState {
 // ... [truncated]
 ```
 
-### 4. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
+### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `0.12` | **Gen:** `22`
 - **Rationale:** RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-23, raised power ceiling to 3875, and validated functional sequence hotswapping.
@@ -189,7 +197,7 @@ export interface NeuralGeneState {
 // ... [truncated]
 ```
 
-### 5. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
+### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `0.12` | **Gen:** `21`
 - **Rationale:** RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-22, raised power ceiling to 3750, and validated functional sequence hotswapping.
@@ -209,7 +217,7 @@ export interface NeuralGeneState {
 // ... [truncated]
 ```
 
-### 6. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
+### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `0.12` | **Gen:** `20`
 - **Rationale:** RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-21, raised power ceiling to 3625, and validated functional sequence hotswapping.
@@ -229,7 +237,7 @@ export interface NeuralGeneState {
 // ... [truncated]
 ```
 
-### 7. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
+### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `0.12` | **Gen:** `19`
 - **Rationale:** RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-20, raised power ceiling to 3500, and validated functional sequence hotswapping.
@@ -249,7 +257,7 @@ export interface NeuralGeneState {
 // ... [truncated]
 ```
 
-### 8. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
+### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `0.12` | **Gen:** `18`
 - **Rationale:** RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-19, raised power ceiling to 3375, and validated functional sequence hotswapping.
@@ -269,7 +277,7 @@ export interface NeuralGeneState {
 // ... [truncated]
 ```
 
-### 9. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
+### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
 - **Verdict:** `correct`
 - **Risk Score:** `0.12` | **Gen:** `17`
 - **Rationale:** RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-18, raised power ceiling to 3250, and validated functional sequence hotswapping.
@@ -278,26 +286,6 @@ export interface NeuralGeneState {
  * @file src/lib/neuralActiveGene.ts
  * @description Active neural gene evolved and hotswapped autonomously via DARLEK CAAN RAG Engine.
  * Generation: G-18 | RAG Vector Anchored | Hotswap Verified
- */
-
-export interface NeuralGeneState {
-  generation: number;
-  dalekPowerLevel: number;
-  activeConsensus: string;
-  isOptimized: boolean;
-  lastMut
-// ... [truncated]
-```
-
-### 10. ✅ [POSITIVE EXEMPLAR - APPROVED FIX]: `src/lib/neuralActiveGene.ts`
-- **Verdict:** `correct`
-- **Risk Score:** `0.12` | **Gen:** `16`
-- **Rationale:** RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-17, raised power ceiling to 3125, and validated functional sequence hotswapping.
-```typescript
-/**
- * @file src/lib/neuralActiveGene.ts
- * @description Active neural gene evolved and hotswapped autonomously via DARLEK CAAN RAG Engine.
- * Generation: G-17 | RAG Vector Anchored | Hotswap Verified
  */
 
 export interface NeuralGeneState {
