@@ -1,14 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:36:55.722Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:37:04.321Z]
 ======================================================================
 
-[15:29:14] [0x0090A774] [APPROVE   ] Mutation applied to prisma/schema.prisma
-[15:29:15] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
-[15:29:15] [0x003A0000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.62 MB.
-[15:29:15] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
-[15:29:15] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
-[15:29:19] [0x003A2000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
-[15:29:24] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:29:24] [0x003A4000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 433.4 KB (4.23%).
 [15:29:26] [0x00151A9A] [MUTATE    ] [Batch 78/253] Proposed mutation for public/placeholder.txt (risk: LOW)
 [15:29:29] [0x003A6000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
@@ -253,3 +246,10 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:36:55.722Z]
 [15:36:46] [0x0045C000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 594.1 KB (5.8%).
 [15:36:51] [0x0045E000] [SANITY_OK ] Emergency breaker: Health 100%, Drift 0%, Syntax clean.
 [15:36:52] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:36:55] [0x003F9F9F] [APPROVE   ] Mutation applied to src/app/api/evolution/debate/route.ts
+[15:36:56] [0x00460000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 9.42 MB.
+[15:36:56] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
+[15:36:56] [0x0097545B] [HEALTH    ] Auto-test: REJECTED — 4 passed, 3 failed
+[15:36:56] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
+[15:37:00] [0x00462000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[15:37:01] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
