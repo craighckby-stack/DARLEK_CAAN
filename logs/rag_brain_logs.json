@@ -1,5 +1,29 @@
 [
   {
+    "id": "rag_log_1789880501043_abcd326e",
+    "type": "RAG_WRITE",
+    "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-3, rai...",
+    "timestamp": "2026-09-20T05:01:41.043Z"
+  },
+  {
+    "id": "rag_log_1789880501042_c2851189",
+    "type": "HOTSWAP_OK",
+    "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-2 [Source: RAG_GENE_HOTSWAP].",
+    "timestamp": "2026-09-20T05:01:41.042Z"
+  },
+  {
+    "id": "rag_log_1789880499491_1219a2c2",
+    "type": "HOTSWAP",
+    "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
+    "timestamp": "2026-09-20T05:01:39.491Z"
+  },
+  {
+    "id": "rag_log_1789880498374_7b2b3199",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:01:38.373Z"
+  },
+  {
     "id": "rag_log_1789880489907_87b40661",
     "type": "LOG_SYNC",
     "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
@@ -124,29 +148,5 @@
     "type": "REJECT",
     "description": "Coherence Gate blocked mutation for src/lib/githubLogSync.ts. Logged to Firebase as 'wrong' failure exemplar.",
     "timestamp": "2026-09-20T04:41:49.192Z"
-  },
-  {
-    "id": "rag_log_1789879309188_598ea0f2",
-    "type": "REJECT",
-    "description": "Coherence Gate blocked mutation for src/lib/githubLogSync.ts. Logged to Firebase as 'wrong' failure exemplar.",
-    "timestamp": "2026-09-20T04:41:49.188Z"
-  },
-  {
-    "id": "rag_log_1789879308614_f7dc5d5a",
-    "type": "MUTATE",
-    "description": "[Batch 0/4] Proposed mutation for src/lib/githubLogSync.ts (risk: LOW)",
-    "timestamp": "2026-09-20T04:41:48.614Z"
-  },
-  {
-    "id": "rag_log_1789879308611_6769e8aa",
-    "type": "MUTATE",
-    "description": "[Batch 0/4] Proposed mutation for src/lib/githubLogSync.ts (risk: LOW)",
-    "timestamp": "2026-09-20T04:41:48.611Z"
-  },
-  {
-    "id": "rag_log_1789879303059_94b0fa59",
-    "type": "SYSTEM",
-    "description": "Bypassed access portal: Autonomous cognitive pipeline initiated with local cyber core modules.",
-    "timestamp": "2026-09-20T04:41:43.059Z"
   }
 ]
