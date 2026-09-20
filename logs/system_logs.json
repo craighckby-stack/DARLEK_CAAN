@@ -1,12 +1,54 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T02:58:07.639Z",
+    "generatedAt": "2026-09-20T02:58:19.843Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789873096735_62faa071",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T02:58:16.735Z"
+    },
+    {
+      "id": "rag_log_1789873096734_a5aacac0",
+      "type": "HEALTH",
+      "description": "Post-mutation analysis: 0 issues (0 high)",
+      "timestamp": "2026-09-20T02:58:16.733Z"
+    },
+    {
+      "id": "rag_log_1789873095862_1e89bdb3",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T02:58:15.862Z"
+    },
+    {
+      "id": "rag_log_1789873095861_025a8b76",
+      "type": "HEALTH",
+      "description": "Auto-test: PASSED — 5 passed, 0 failed",
+      "timestamp": "2026-09-20T02:58:15.861Z"
+    },
+    {
+      "id": "rag_log_1789873095411_2f1f6c8d",
+      "type": "APPROVE",
+      "description": "Mutation applied to assets/.aistudio/SECURITY_PROTOCOL.md",
+      "timestamp": "2026-09-20T02:58:15.411Z"
+    },
+    {
+      "id": "rag_log_1789873095409_2f6e28f7",
+      "type": "APPROVE",
+      "description": "Mutation applied to assets/.aistudio/SECURITY_PROTOCOL.md",
+      "timestamp": "2026-09-20T02:58:15.409Z"
+    },
+    {
+      "id": "rag_log_1789873093048_21c69999",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T02:58:13.048Z"
+    },
     {
       "id": "rag_log_1789873084636_3d696cdc",
       "type": "MUTATE",
@@ -114,79 +156,9 @@
       "type": "APPROVE",
       "description": "Mutation applied to assets/.aistudio/ARCHITECTURE.md",
       "timestamp": "2026-09-20T02:57:32.911Z"
-    },
-    {
-      "id": "rag_log_1789873052910_3cf6b6ac",
-      "type": "APPROVE",
-      "description": "Mutation applied to assets/.aistudio/ARCHITECTURE.md",
-      "timestamp": "2026-09-20T02:57:32.910Z"
-    },
-    {
-      "id": "rag_log_1789873051987_ba488bb0",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:57:31.987Z"
-    },
-    {
-      "id": "rag_log_1789873042663_88eeff5e",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:57:22.663Z"
-    },
-    {
-      "id": "rag_log_1789873042030_15074baa",
-      "type": "MUTATE",
-      "description": "[Batch 15/253] Proposed mutation for assets/.aistudio/ARCHITECTURE.md (risk: LOW)",
-      "timestamp": "2026-09-20T02:57:22.030Z"
-    },
-    {
-      "id": "rag_log_1789873042029_0cd8b2d5",
-      "type": "MUTATE",
-      "description": "[Batch 15/253] Proposed mutation for assets/.aistudio/ARCHITECTURE.md (risk: LOW)",
-      "timestamp": "2026-09-20T02:57:22.029Z"
-    },
-    {
-      "id": "rag_log_1789873033911_f7f7fe5e",
-      "type": "LOG_SYNC",
-      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-      "timestamp": "2026-09-20T02:57:13.911Z"
-    },
-    {
-      "id": "rag_log_1789873031826_a0d0a632",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T02:57:11.825Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-f6ead53d",
-      "time": "12:50:24",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-2decb458",
-      "time": "12:50:34",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-1f5b0c5d",
-      "time": "12:50:42",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
-    {
-      "id": "dos-8215d089",
-      "time": "12:50:51",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-5dad1e2e",
       "time": "12:51:00",
@@ -858,6 +830,34 @@
       "addr": "0x0060A71C",
       "tag": "MUTATE",
       "message": "[Batch 17/253] Proposed mutation for assets/.aistudio/SECURITY_PROTOCOL.md (risk: LOW)"
+    },
+    {
+      "id": "dos-09bafe03",
+      "time": "12:58:13",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-0a925fe3",
+      "time": "12:58:15",
+      "addr": "0x00997F36",
+      "tag": "APPROVE",
+      "message": "Mutation applied to assets/.aistudio/SECURITY_PROTOCOL.md"
+    },
+    {
+      "id": "dos-47723e67",
+      "time": "12:58:15",
+      "addr": "0x007EEE12",
+      "tag": "HEALTH",
+      "message": "Auto-test: PASSED — 5 passed, 0 failed"
+    },
+    {
+      "id": "dos-53d2cd42",
+      "time": "12:58:16",
+      "addr": "0x0094C83C",
+      "tag": "HEALTH",
+      "message": "Post-mutation analysis: 0 issues (0 high)"
     }
   ]
 }
