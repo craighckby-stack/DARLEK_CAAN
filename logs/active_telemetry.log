@@ -1,0 +1,12 @@
+======================================================================
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T08:04:40.766Z]
+======================================================================
+
+[00:00:00] [0x00400000] [BOOT      ] Microsoft(R) MS-DOS(R) Version 6.22
+[00:00:00] [0x00400004] [BOOT      ] (C)Copyright Microsoft Corp 1981-1994.
+[18:04:35] [0x00401000] [INIT      ] DALEK CAAN KERNEL ENGINE INITIALIZED [OPT-IN OPERATOR CONTROL]
+[18:04:35] [0x00401020] [RAG_SYNC  ] RAG PERSISTENCE: Mutation telemetry indexed on event
+[18:04:35] [0x00401040] [HOTSWAP   ] AUTONOMOUS HOTSWAP: ACTIVE
+[18:04:35] [0x00401060] [SYS       ] Type HELP for commands. Running in safe mode.
+[18:04:37] [0x005AFD74] [CONNECT   ] Synced 28 user portfolios and 27 global architectures.
+[18:04:40] [0x00102000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 0.

@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "generatedAt": "2026-09-20T08:04:40.763Z",
+    "engine": "DARLEK_CAAN_RAG_KERNEL",
+    "totalLogs": 40,
+    "totalMutations": 10,
+    "totalBrainChunks": 15
+  },
+  "systemLogs": [
+    {
+      "id": "rag_log_1789891477744_0019c5f4",
+      "type": "CONNECT",
+      "description": "Synced 28 user portfolios and 27 global architectures.",
+      "timestamp": "2026-09-20T08:04:37.744Z"
+    },
+    {
+      "id": "rag_log_1789891477739_4dfe4368",
+      "type": "CONNECT",
+      "description": "Synced 28 user portfolios and 27 global architectures.",
+      "timestamp": "2026-09-20T08:04:37.739Z"
+    },
+    {
+      "id": "rag_log_1789891118705_a49f641f",
+      "type": "RAG_WRITE",
+      "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-26, ra...",
+      "timestamp": "2026-09-20T07:58:38.705Z"
+    },
+    {
+      "id": "rag_log_1789891118700_d44109bb",
+      "type": "HOTSWAP_OK",
+      "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-25 [Source: RAG_GENE_HOTSWAP].",
+      "timestamp": "2026-09-20T07:58:38.700Z"
+    },
+    {
+      "id": "rag_log_1789891117760_3b4b8ede",
+      "type": "HOTSWAP",
+      "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
+      "timestamp": "2026-09-20T07:58:37.760Z"
+    },
+    {
+      "id": "rag_log_1789891099716_f23daac1",
+      "type": "RAG_WRITE",
+      "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-25, ra...",
+      "timestamp": "2026-09-20T07:58:19.716Z"
+    },
+    {
+      "id": "rag_log_1789891099712_7b0ab984",
+      "type": "HOTSWAP_OK",
+      "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-24 [Source: RAG_GENE_HOTSWAP].",
+      "timestamp": "2026-09-20T07:58:19.712Z"
+    },
+    {
+      "id": "rag_log_1789891098811_5c942780",
+      "type": "HOTSWAP",
+      "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
+      "timestamp": "2026-09-20T07:58:18.811Z"
+    },
+    {
+      "id": "rag_log_1789891080631_7b055d8b",
+      "type": "RAG_WRITE",
+      "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-24, ra...",
+      "timestamp": "2026-09-20T07:58:00.631Z"
+    },
+    {
+      "id": "rag_log_1789891080625_9e7a69d6",
+      "type": "HOTSWAP_OK",
+      "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-23 [Source: RAG_GENE_HOTSWAP].",
+      "timestamp": "2026-09-20T07:58:00.625Z"
+    },
+    {
+      "id": "rag_log_1789891079762_601d3fe0",
+      "type": "HOTSWAP",
+      "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
+      "timestamp": "2026-09-20T07:57:59.762Z"
+    },
+    {
+      "id": "rag_log_1789891060743_f643dbf1",
+      "type": "RAG_WRITE",
+      "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-23, ra...",
+      "timestamp": "2026-09-20T07:57:40.743Z"
+    },
+    {
+      "id": "rag_log_1789891060740_424a38fe",
+      "type": "HOTSWAP_OK",
+      "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-22 [Source: RAG_GENE_HOTSWAP].",
+      "timestamp": "2026-09-20T07:57:40.740Z"
+    },
+    {
+      "id": "rag_log_1789891059804_d267d1ea",
+      "type": "HOTSWAP",
+      "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
+      "timestamp": "2026-09-20T07:57:39.804Z"
+    },
+    {
+      "id": "rag_log_1789891041758_33885171",
+      "type": "RAG_WRITE",
+      "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-22, ra...",
+      "timestamp": "2026-09-20T07:57:21.758Z"
+    },
+    {
+      "id": "rag_log_1789891041757_b3cf2b6e",
+      "type": "HOTSWAP_OK",
+      "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-21 [Source: RAG_GENE_HOTSWAP].",
+      "timestamp": "2026-09-20T07:57:21.757Z"
+    },
+    {
+      "id": "rag_log_1789891040761_79195bcd",
+      "type": "HOTSWAP",
+      "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
+      "timestamp": "2026-09-20T07:57:20.761Z"
+    },
+    {
+      "id": "rag_log_1789891022579_7c4743c3",
+      "type": "RAG_WRITE",
+      "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-21, ra...",
+      "timestamp": "2026-09-20T07:57:02.579Z"
+    },
+    {
+      "id": "rag_log_1789891022576_3c007ed7",
+      "type": "HOTSWAP_OK",
+      "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-20 [Source: RAG_GENE_HOTSWAP].",
+      "timestamp": "2026-09-20T07:57:02.576Z"
+    },
+    {
+      "id": "rag_log_1789891021730_d4f72cab",
+      "type": "HOTSWAP",
+      "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
+      "timestamp": "2026-09-20T07:57:01.730Z"
+    },
+    {
+      "id": "rag_log_1789891005470_cf926ce8",
+      "type": "RAG_WRITE",
+      "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-20, ra...",
+      "timestamp": "2026-09-20T07:56:45.470Z"
+    },
+    {
+      "id": "rag_log_1789891005468_3042b524",
+      "type": "HOTSWAP_OK",
+      "description": "HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-19 [Source: RAG_GENE_HOTSWAP].",
+      "timestamp": "2026-09-20T07:56:45.468Z"
+    },
+    {
+      "id": "rag_log_1789891002685_61de1b41",
+      "type": "HOTSWAP",
+      "description": "Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts",
+      "timestamp": "2026-09-20T07:56:42.685Z"
+    },
+    {
+      "id": "rag_log_1789890998308_65c3482c",
+      "type": "SYSTEM",
+      "description": "Batch complete.",
+      "timestamp": "2026-09-20T07:56:38.308Z"
+    },
+    {
+      "id": "rag_log_1789890998306_fba99a86",
+      "type": "SYSTEM",
+      "description": "Batch complete.",
+      "timestamp": "2026-09-20T07:56:38.306Z"
+    }
+  ],
+  "telemetryBuffer": [
+    {
+      "id": "b1",
+      "time": "00:00:00",
+      "addr": "0x00400000",
+      "tag": "BOOT",
+      "message": "Microsoft(R) MS-DOS(R) Version 6.22"
+    },
+    {
+      "id": "b2",
+      "time": "00:00:00",
+      "addr": "0x00400004",
+      "tag": "BOOT",
+      "message": "(C)Copyright Microsoft Corp 1981-1994."
+    },
+    {
+      "id": "b3",
+      "time": "18:04:35",
+      "addr": "0x00401000",
+      "tag": "INIT",
+      "message": "DALEK CAAN KERNEL ENGINE INITIALIZED [OPT-IN OPERATOR CONTROL]"
+    },
+    {
+      "id": "b4",
+      "time": "18:04:35",
+      "addr": "0x00401020",
+      "tag": "RAG_SYNC",
+      "message": "RAG PERSISTENCE: Mutation telemetry indexed on event"
+    },
+    {
+      "id": "b5",
+      "time": "18:04:35",
+      "addr": "0x00401040",
+      "tag": "HOTSWAP",
+      "message": "AUTONOMOUS HOTSWAP: ACTIVE"
+    },
+    {
+      "id": "b6",
+      "time": "18:04:35",
+      "addr": "0x00401060",
+      "tag": "SYS",
+      "message": "Type HELP for commands. Running in safe mode."
+    },
+    {
+      "id": "dos-44007b5c",
+      "time": "18:04:37",
+      "addr": "0x005AFD74",
+      "tag": "CONNECT",
+      "message": "Synced 28 user portfolios and 27 global architectures."
+    },
+    {
+      "id": "dos-01e27d03",
+      "time": "18:04:40",
+      "addr": "0x00102000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 0."
+    }
+  ]
+}
