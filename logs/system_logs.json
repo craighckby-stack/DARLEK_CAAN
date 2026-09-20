@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:15:30.017Z",
+    "generatedAt": "2026-09-20T05:15:37.993Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789881334982_5f5a34fa",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:15:34.982Z"
+    },
+    {
+      "id": "rag_log_1789881332331_5c28de63",
+      "type": "MUTATE",
+      "description": "[Batch 32/253] Proposed mutation for examples/websocket/server.ts (risk: LOW)",
+      "timestamp": "2026-09-20T05:15:32.331Z"
+    },
+    {
+      "id": "rag_log_1789881332328_79caf9e9",
+      "type": "MUTATE",
+      "description": "[Batch 32/253] Proposed mutation for examples/websocket/server.ts (risk: LOW)",
+      "timestamp": "2026-09-20T05:15:32.328Z"
+    },
     {
       "id": "rag_log_1789881327007_ed4dd57a",
       "type": "LOG_SYNC",
@@ -138,48 +156,9 @@
       "type": "HEALTH",
       "description": "Post-mutation analysis: 0 issues (0 high)",
       "timestamp": "2026-09-20T05:14:41.199Z"
-    },
-    {
-      "id": "rag_log_1789881281197_d026cf19",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T05:14:41.197Z"
-    },
-    {
-      "id": "rag_log_1789881280861_cbf92ba8",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:14:40.861Z"
-    },
-    {
-      "id": "rag_log_1789881280859_73938b15",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T05:14:40.859Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-86a13a60",
-      "time": "15:12:36",
-      "addr": "0x00200000",
-      "tag": "RAG_INDEX",
-      "message": "RAG memory vector aligned. Total chunks: 15, Free: 8.57 MB."
-    },
-    {
-      "id": "dos-6109a417",
-      "time": "15:12:36",
-      "addr": "0x002B4AF9",
-      "tag": "LOCK_WAIT",
-      "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
-    },
-    {
-      "id": "dos-8d40e427",
-      "time": "15:12:41",
-      "addr": "0x00202000",
-      "tag": "AST_WATCH",
-      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
-    },
     {
       "id": "dos-5627ec68",
       "time": "15:12:43",
@@ -858,6 +837,27 @@
       "addr": "0x002B4AF9",
       "tag": "LOCK_WAIT",
       "message": "Autonomous hotswap deferred: system busy with [batch-evolution]."
+    },
+    {
+      "id": "dos-0282d5bb",
+      "time": "15:15:32",
+      "addr": "0x0031A30E",
+      "tag": "MUTATE",
+      "message": "[Batch 32/253] Proposed mutation for examples/websocket/server.ts (risk: LOW)"
+    },
+    {
+      "id": "dos-69917865",
+      "time": "15:15:34",
+      "addr": "0x0024A000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-9686edb6",
+      "time": "15:15:34",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
     }
   ]
 }
