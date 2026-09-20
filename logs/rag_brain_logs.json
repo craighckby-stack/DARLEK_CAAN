@@ -1,5 +1,23 @@
 [
   {
+    "id": "rag_log_1789874789426_73b0ff71",
+    "type": "MUTATE",
+    "description": "[Batch 86/253] Proposed mutation for renameVars.js (risk: LOW)",
+    "timestamp": "2026-09-20T03:26:29.426Z"
+  },
+  {
+    "id": "rag_log_1789874789424_a5d37d11",
+    "type": "MUTATE",
+    "description": "[Batch 86/253] Proposed mutation for renameVars.js (risk: LOW)",
+    "timestamp": "2026-09-20T03:26:29.424Z"
+  },
+  {
+    "id": "rag_log_1789874788168_1d53a0d8",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T03:26:28.168Z"
+  },
+  {
     "id": "rag_log_1789874779284_69bb6edd",
     "type": "HEALTH",
     "description": "Post-mutation analysis: 0 issues (0 high)",
@@ -130,23 +148,5 @@
     "type": "INFO",
     "description": "[NO-OP] Code saturation reached in batch for remote_blobs.json",
     "timestamp": "2026-09-20T03:25:36.630Z"
-  },
-  {
-    "id": "rag_log_1789874736628_21e4f957",
-    "type": "INFO",
-    "description": "[NO-OP] Code saturation reached in batch for remote_blobs.json",
-    "timestamp": "2026-09-20T03:25:36.628Z"
-  },
-  {
-    "id": "rag_log_1789874728003_c224ae05",
-    "type": "LOG_SYNC",
-    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
-    "timestamp": "2026-09-20T03:25:28.003Z"
-  },
-  {
-    "id": "rag_log_1789874726443_618b5a1a",
-    "type": "HEALTH",
-    "description": "Post-mutation analysis: 0 issues (0 high)",
-    "timestamp": "2026-09-20T03:25:26.443Z"
   }
 ]

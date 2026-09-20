@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T03:26:22.298Z`
+*Last Synchronized:* `2026-09-20T03:26:32.442Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,20 +14,41 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:26:29.426Z`
+
+```typescript
+[LOG:MUTATE] [Batch 86/253] Proposed mutation for renameVars.js (risk: LOW) | TIME:2026-09-20T03:26:29.426Z
+```
+
+### 2. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:26:29.425Z`
+
+```typescript
+[LOG:MUTATE] [Batch 86/253] Proposed mutation for renameVars.js (risk: LOW) | TIME:2026-09-20T03:26:29.424Z
+```
+
+### 3. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:26:28.168Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:26:28.168Z
+```
+
+### 4. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:26:19.284Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:26:19.284Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:26:19.283Z`
 
 ```typescript
 [LOG:HEALTH] Post-mutation analysis: 0 issues (0 high) | TIME:2026-09-20T03:26:19.282Z
 ```
 
-### 3. `remote_tree.txt` (Gen 66)
+### 6. `remote_tree.txt` (Gen 66)
 *Source:* `MUTATION:remote_tree.txt` | *Indexed:* `2026-09-20T03:26:19.067Z`
 
 ```typescript
@@ -44,53 +65,32 @@ remote_repository/
 // ... [truncated]
 ```
 
-### 4. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:26:18.654Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T03:26:18.654Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:26:18.653Z`
 
 ```typescript
 [LOG:HEALTH] Auto-test: PASSED — 5 passed, 0 failed | TIME:2026-09-20T03:26:18.653Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:26:18.053Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to remote_tree.txt | TIME:2026-09-20T03:26:18.053Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 10. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:26:18.052Z`
 
 ```typescript
 [LOG:APPROVE] Mutation applied to remote_tree.txt | TIME:2026-09-20T03:26:18.052Z
-```
-
-### 8. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:26:15.507Z`
-
-```typescript
-[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T03:26:15.507Z
-```
-
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:26:07.409Z`
-
-```typescript
-[LOG:MUTATE] [Batch 85/253] Proposed mutation for remote_tree.txt (risk: LOW) | TIME:2026-09-20T03:26:07.409Z
-```
-
-### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T03:26:07.408Z`
-
-```typescript
-[LOG:MUTATE] [Batch 85/253] Proposed mutation for remote_tree.txt (risk: LOW) | TIME:2026-09-20T03:26:07.408Z
 ```
 
 ## 🧬 Mutation Exemplars (Deterministic Pattern Memory)
