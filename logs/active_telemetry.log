@@ -1,10 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:13:54.007Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:14:02.887Z]
 ======================================================================
 
-[15:04:12] [0x00150000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 264.7 KB.
-[15:04:12] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
-[15:04:17] [0x00152000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
 [15:04:23] [0x002257E7] [MUTATE    ] [Batch 4/253] Proposed mutation for .next_dev/cache/webpack/client-development/8.pack.gz_ (risk: LOW)
 [15:04:24] [0x00154000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 9.69 MB (96.94%).
 [15:04:25] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
@@ -253,3 +250,6 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:13:54.007Z]
 [15:13:50] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
 [15:13:53] [0x00220000] [RAG_INDEX ] RAG memory vector aligned. Total chunks: 15, Free: 8.33 MB.
 [15:13:53] [0x002B4AF9] [LOCK_WAIT ] Autonomous hotswap deferred: system busy with [batch-evolution].
+[15:13:58] [0x00222000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[15:13:59] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
+[15:13:59] [0x0056B269] [MUTATE    ] [Batch 27/253] Proposed mutation for download_changed_fast.js (risk: LOW)
