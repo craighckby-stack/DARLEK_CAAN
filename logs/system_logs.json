@@ -1,12 +1,30 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T03:30:47.951Z",
+    "generatedAt": "2026-09-20T03:30:56.455Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789875053385_072f3e8d",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T03:30:53.385Z"
+    },
+    {
+      "id": "rag_log_1789875051020_109e5e38",
+      "type": "MUTATE",
+      "description": "[Batch 98/253] Proposed mutation for src/app/api/evolution/auto-test/README.md (risk: LOW)",
+      "timestamp": "2026-09-20T03:30:51.020Z"
+    },
+    {
+      "id": "rag_log_1789875051015_fa14b53f",
+      "type": "MUTATE",
+      "description": "[Batch 98/253] Proposed mutation for src/app/api/evolution/auto-test/README.md (risk: LOW)",
+      "timestamp": "2026-09-20T03:30:51.015Z"
+    },
     {
       "id": "rag_log_1789875044923_ddd5ba37",
       "type": "LOG_SYNC",
@@ -138,41 +156,9 @@
       "type": "LOG_SYNC",
       "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
       "timestamp": "2026-09-20T03:29:55.140Z"
-    },
-    {
-      "id": "rag_log_1789874994876_a602b2b4",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:29:54.876Z"
-    },
-    {
-      "id": "rag_log_1789874994875_f6ef5975",
-      "type": "HEALTH",
-      "description": "Post-mutation analysis: 0 issues (0 high)",
-      "timestamp": "2026-09-20T03:29:54.875Z"
-    },
-    {
-      "id": "rag_log_1789874994498_907a27d9",
-      "type": "HEALTH",
-      "description": "Auto-test: PASSED — 5 passed, 0 failed",
-      "timestamp": "2026-09-20T03:29:54.498Z"
     }
   ],
   "telemetryBuffer": [
-    {
-      "id": "dos-6428dfe7",
-      "time": "13:24:40",
-      "addr": "0x00361736",
-      "tag": "INFO",
-      "message": "[NO-OP] Code saturation reached in batch for rag/learning_postmortems.json"
-    },
-    {
-      "id": "dos-71c43f49",
-      "time": "13:24:41",
-      "addr": "0x00138A7D",
-      "tag": "LOG_SYNC",
-      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
-    },
     {
       "id": "dos-f330d3bd",
       "time": "13:24:49",
@@ -855,6 +841,20 @@
     {
       "id": "dos-e3fbfafc",
       "time": "13:30:44",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-693feef1",
+      "time": "13:30:51",
+      "addr": "0x0081776C",
+      "tag": "MUTATE",
+      "message": "[Batch 98/253] Proposed mutation for src/app/api/evolution/auto-test/README.md (risk: LOW)"
+    },
+    {
+      "id": "dos-c664ab91",
+      "time": "13:30:53",
       "addr": "0x00138A7D",
       "tag": "LOG_SYNC",
       "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
