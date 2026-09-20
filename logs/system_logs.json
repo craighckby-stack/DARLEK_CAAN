@@ -1,12 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-20T05:01:25.104Z",
+    "generatedAt": "2026-09-20T05:01:33.105Z",
     "engine": "DARLEK_CAAN_RAG_KERNEL",
     "totalLogs": 40,
     "totalMutations": 10,
     "totalBrainChunks": 15
   },
   "systemLogs": [
+    {
+      "id": "rag_log_1789880489907_87b40661",
+      "type": "LOG_SYNC",
+      "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+      "timestamp": "2026-09-20T05:01:29.907Z"
+    },
     {
       "id": "rag_log_1789880481152_db8715e8",
       "type": "RAG_WRITE",
@@ -150,12 +156,6 @@
       "type": "SYSTEM",
       "description": "Bypassed access portal: Autonomous cognitive pipeline initiated with local cyber core modules.",
       "timestamp": "2026-09-20T04:41:43.059Z"
-    },
-    {
-      "id": "rag_log_1789879303057_cb4c8f1b",
-      "type": "SYSTEM",
-      "description": "Bypassed access portal: Autonomous cognitive pipeline initiated with local cyber core modules.",
-      "timestamp": "2026-09-20T04:41:43.057Z"
     }
   ],
   "telemetryBuffer": [
@@ -270,6 +270,27 @@
       "addr": "0x004C7E57",
       "tag": "RAG_WRITE",
       "message": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-2, rai..."
+    },
+    {
+      "id": "dos-0650c8fe",
+      "time": "15:01:25",
+      "addr": "0x0010A000",
+      "tag": "AST_WATCH",
+      "message": "Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8."
+    },
+    {
+      "id": "dos-6ce8a45d",
+      "time": "15:01:29",
+      "addr": "0x00138A7D",
+      "tag": "LOG_SYNC",
+      "message": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]"
+    },
+    {
+      "id": "dos-537bf1f7",
+      "time": "15:01:30",
+      "addr": "0x0010C000",
+      "tag": "MEM_POOL",
+      "message": "Allocated quota: 10.00 MB. Used: 220.3 KB (2.15%)."
     }
   ]
 }

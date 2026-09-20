@@ -1,5 +1,11 @@
 [
   {
+    "id": "rag_log_1789880489907_87b40661",
+    "type": "LOG_SYNC",
+    "description": "Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]",
+    "timestamp": "2026-09-20T05:01:29.907Z"
+  },
+  {
     "id": "rag_log_1789880481152_db8715e8",
     "type": "RAG_WRITE",
     "description": "Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-2, rai...",
@@ -142,11 +148,5 @@
     "type": "SYSTEM",
     "description": "Bypassed access portal: Autonomous cognitive pipeline initiated with local cyber core modules.",
     "timestamp": "2026-09-20T04:41:43.059Z"
-  },
-  {
-    "id": "rag_log_1789879303057_cb4c8f1b",
-    "type": "SYSTEM",
-    "description": "Bypassed access portal: Autonomous cognitive pipeline initiated with local cyber core modules.",
-    "timestamp": "2026-09-20T04:41:43.057Z"
   }
 ]

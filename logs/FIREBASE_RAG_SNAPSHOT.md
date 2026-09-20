@@ -1,7 +1,7 @@
 # DARLEK CAAN RAG KNOWLEDGE SNAPSHOT
 
 *Autonomous Live Mirror from Firebase Firestore & Local Vector Store*
-*Last Synchronized:* `2026-09-20T05:01:25.104Z`
+*Last Synchronized:* `2026-09-20T05:01:33.105Z`
 
 ## 📊 Knowledge Base Metrics
 
@@ -14,20 +14,27 @@
 ## 🧠 Recent Knowledge Chunks (dalek_rag_brain)
 
 ### 1. `system.log` (Gen 1)
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:01:29.908Z`
+
+```typescript
+[LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:01:29.907Z
+```
+
+### 2. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:01:21.153Z`
 
 ```typescript
 [LOG:RAG_WRITE] Mutation permanently indexed in RAG Brain. Rationale: RAG Gene Synthesizer: Evolved neural gene parameters to Generation G-2, rai... | TIME:2026-09-20T05:01:21.152Z
 ```
 
-### 2. `system.log` (Gen 1)
+### 3. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:01:21.149Z`
 
 ```typescript
 [LOG:HOTSWAP_OK] HOTSWAP SUCCESS: src/lib/neuralActiveGene.ts replaced with Gen G-1 [Source: RAG_GENE_HOTSWAP]. | TIME:2026-09-20T05:01:21.149Z
 ```
 
-### 3. `src/lib/neuralActiveGene.ts` (Gen 1)
+### 4. `src/lib/neuralActiveGene.ts` (Gen 1)
 *Source:* `MUTATION:src/lib/neuralActiveGene.ts` | *Indexed:* `2026-09-20T05:01:21.145Z`
 
 ```typescript
@@ -46,50 +53,43 @@ export interface NeuralGeneState {
 // ... [truncated]
 ```
 
-### 4. `system.log` (Gen 1)
+### 5. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:01:20.733Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:01:20.732Z
 ```
 
-### 5. `system.log` (Gen 1)
+### 6. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:01:20.209Z`
 
 ```typescript
 [LOG:HOTSWAP] Starting autonomous hotswap sequence for: src/lib/neuralActiveGene.ts | TIME:2026-09-20T05:01:20.208Z
 ```
 
-### 6. `system.log` (Gen 1)
+### 7. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:01:12.165Z`
 
 ```typescript
 [LOG:LOG_SYNC] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed] | TIME:2026-09-20T05:01:12.165Z
 ```
 
-### 7. `system.log` (Gen 1)
+### 8. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:01:03.141Z`
 
 ```typescript
 [LOG:CONNECT] Synced 29 user portfolios and 27 global architectures. | TIME:2026-09-20T05:01:03.141Z
 ```
 
-### 8. `system.log` (Gen 1)
+### 9. `system.log` (Gen 1)
 *Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T05:01:03.138Z`
 
 ```typescript
 [LOG:CONNECT] Synced 29 user portfolios and 27 global architectures. | TIME:2026-09-20T05:01:03.136Z
 ```
 
-### 9. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:41:59.681Z`
-
-```typescript
-[LOG:SYSTEM] Batch complete. | TIME:2026-09-20T04:41:59.680Z
-```
-
 ### 10. `system.log` (Gen 1)
-*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:41:59.680Z`
+*Source:* `SYSTEM_LOG` | *Indexed:* `2026-09-20T04:41:59.681Z`
 
 ```typescript
 [LOG:SYSTEM] Batch complete. | TIME:2026-09-20T04:41:59.680Z
