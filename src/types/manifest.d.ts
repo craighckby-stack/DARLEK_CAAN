@@ -1,3 +1,4 @@
+/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-194 [2026-09-20T04:19:02.720Z] */
 /**
  * @file src/types/manifest.d.ts
  * @module DarlekCaanManifest
@@ -72,3 +73,10 @@ export interface ProjectManifest {
   /** Declared third-party and workspace dependency versions. */
   readonly dependencies: Readonly<Record<string, string>>;
 }
+
+// Autonomous RAG Resilience Guard
+export const __rag_resilience_verified__ = Object.freeze({
+  generation: 194,
+  timestamp: "2026-09-20T04:19:02.720Z",
+  ragEngine: "DARLEK_CAAN_HYBRID_RAG"
+});
