@@ -1,9 +1,7 @@
 ======================================================================
-DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:51:44.187Z]
+DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:51:53.183Z]
 ======================================================================
 
-[15:44:03] [0x00512000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
-[15:44:07] [0x00514000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 951.1 KB (9.29%).
 [15:44:08] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
 [15:44:11] [0x00400A08] [APPROVE   ] Mutation applied to src/app/api/learning-logs/sync/route.ts
 [15:44:12] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
@@ -253,3 +251,5 @@ DARLEK CAAN CONTINUOUS TELEMETRY LOG BUFFER [SYNCED: 2026-09-20T05:51:44.187Z]
 [15:51:40] [0x007EEE12] [HEALTH    ] Auto-test: PASSED — 5 passed, 0 failed
 [15:51:40] [0x0094C83C] [HEALTH    ] Post-mutation analysis: 0 issues (0 high)
 [15:51:43] [0x005D2000] [AST_WATCH ] Codebase watcher: active file trees verified normal. Mutations: 10, Hotswaps: 8.
+[15:51:48] [0x005D4000] [MEM_POOL  ] Allocated quota: 10.00 MB. Used: 1.15 MB (11.49%).
+[15:51:50] [0x00138A7D] [LOG_SYNC  ] Firebase RAG & system memory auto-stored in craighckby-stack/DARLEK_CAAN under 'rag/' & 'logs/' [10 files committed]
