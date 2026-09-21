@@ -7,8 +7,7 @@
  */
 
 
-import { useState, useEffect, memo, type JSX } from 'react';
-import dynamic from 'next/dynamic';
+import { useState, useEffect, memo, type JSX, lazy, Suspense } from 'react';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 
 interface LoadingScreenProperties {
@@ -38,13 +37,7 @@ const LoadingScreen = memo(function LoadingScreen({ message }: LoadingScreenProp
 
 LoadingScreen.displayName = 'LoadingScreen';
 
-const DynamicMainPage = dynamic(
-  () => import('@/components/MainPage').then((mod) => mod.default),
-  {
-    ssr: false,
-    loading: () => <LoadingScreen message="[DARLEK CAAN] SYNAPSE INJECTION IN PROGRESS..." />,
-  }
-);
+const MainPage = lazy(() => import('@/components/MainPage'));
 
 /**
  * Client-side boundary wrapper handling hydration lifecycle states
@@ -60,7 +53,9 @@ export default function PageClient(): JSX.Element {
   return (
     <ErrorBoundary>
       {hasMounted ? (
-        <DynamicMainPage />
+        <Suspense fallback={<LoadingScreen message="[DARLEK CAAN] SYNAPSE INJECTION IN PROGRESS..." />}>
+          <MainPage />
+        </Suspense>
       ) : (
         <LoadingScreen message="[DARLEK CAAN] INITIALIZING COGNITIVE DOMINANCE ENGINE..." />
       )}

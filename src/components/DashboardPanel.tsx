@@ -269,108 +269,108 @@ export default function DashboardPanel({
       />
 
       {/* RAG Brain Health Monitor Panel */}
-      <div className="dalek-panel rounded-lg p-4 space-y-4">
-        <div className="dalek-panel-header py-1 px-1 flex flex-wrap items-center justify-between gap-2">
+      <div className="dalek-panel rounded-xl p-4 space-y-4 bg-[#0f141c]/90 border border-white/[0.08] shadow-lg">
+        <div className="dalek-panel-header py-1 px-1 flex flex-wrap items-center justify-between gap-2 border-b border-white/[0.08]">
           <div className="flex items-center gap-2">
-            <HeartPulse size={14} className="text-[#ff2020] animate-pulse" />
-            <span style={{ fontSize: '11px', fontFamily: 'var(--font-orbitron), sans-serif', color: COLORS.pureWhite }}>
-              RAG BRAIN COGNITIVE HEALTH
+            <HeartPulse size={14} className="text-rose-400 animate-pulse" />
+            <span className="font-sans text-xs font-semibold tracking-wide text-slate-200">
+              COGNITIVE HEALTH & MEMORY
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1.5 px-2 py-0.5 rounded border border-white/30 bg-white/10 text-white font-mono text-[9.5px] font-bold shadow-[0_0_8px_rgba(255,255,255,0.1)]">
-              <Brain size={12} className="text-[#ff2020] animate-pulse" />
-              <span>ABILITY: <span className="text-white text-[11px] font-extrabold">{ragMetrics.mutationCount}m / {ragMetrics.hotswapCount}h</span></span>
+            <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-md border border-white/10 bg-white/5 text-slate-200 font-mono text-[10px] font-semibold">
+              <Brain size={12} className="text-rose-400" />
+              <span>MUTATIONS: <span className="text-white font-bold">{ragMetrics.mutationCount}m / {ragMetrics.hotswapCount}h</span></span>
             </div>
-            <span className="text-[8px] font-mono text-gray-400 uppercase hidden sm:inline">Resilience: ACTIVE</span>
+            <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-1.5 py-0.5 rounded uppercase hidden sm:inline">Online</span>
           </div>
         </div>
 
-        <div style={{ background: '#080808', border: `1px solid ${COLORS.panelBorder}` }} className="p-3 rounded-sm space-y-3">
+        <div className="p-3.5 rounded-lg bg-white/[0.02] border border-white/[0.06] space-y-3.5">
           {/* Cognitive State Rating Banner */}
-          <div className="flex flex-wrap items-center justify-between text-[9px] font-mono border-b border-white/[0.04] pb-2 text-gray-400">
+          <div className="flex flex-wrap items-center justify-between text-[10px] font-mono border-b border-white/[0.06] pb-2 text-slate-400">
             <div className="flex items-center gap-1.5">
-              <Zap size={11} className="text-[#ff2020]" />
-              <span>REJECTIONS: <span className="text-white font-bold">{ragMetrics.rejectionCount}</span></span>
+              <Zap size={12} className="text-amber-400" />
+              <span>REJECTIONS: <span className="text-slate-200 font-bold">{ragMetrics.rejectionCount}</span></span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-white font-bold flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" /> REAL MEASUREMENTS ONLINE
+              <span className="text-slate-300 font-medium flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" /> Live Telemetry
               </span>
             </div>
           </div>
 
           {/* RAG Space Available Meter */}
-          <div className="p-2.5 rounded bg-black/60 border border-white/10 space-y-2">
-            <div className="flex items-center justify-between text-[9.5px] font-mono">
-              <div className="flex items-center gap-1.5 text-white font-bold">
-                <HardDrive size={11} className="text-[#ff2020]" />
-                <span>RAG STORAGE ALLOCATION</span>
+          <div className="p-3 rounded-lg bg-white/[0.02] border border-white/[0.06] space-y-2">
+            <div className="flex items-center justify-between text-[10px] font-mono">
+              <div className="flex items-center gap-1.5 text-slate-200 font-medium">
+                <HardDrive size={12} className="text-sky-400" />
+                <span>STORAGE ALLOCATION</span>
               </div>
-              <div className="flex items-center gap-2 text-gray-300">
+              <div className="flex items-center gap-2 text-slate-300">
                 <span>AVAILABLE: <span className="text-white font-bold">{ragMetrics.availableFormatted}</span></span>
-                <span className="text-gray-400 font-bold">({ragMetrics.availablePercent}% FREE)</span>
+                <span className="text-slate-400 font-medium">({ragMetrics.availablePercent}% FREE)</span>
               </div>
             </div>
 
             {/* Storage Progress Bar */}
-            <div className="w-full bg-gray-950 rounded-full h-2 overflow-hidden border border-white/15 flex">
+            <div className="w-full bg-slate-900 rounded-full h-2 overflow-hidden border border-white/10 flex">
               <div 
-                className="h-full bg-gradient-to-r from-[#ff2020] to-[#ffffff] transition-all duration-500 relative"
+                className="h-full bg-gradient-to-r from-rose-500 to-sky-400 transition-all duration-500 relative"
                 style={{ width: `${Math.max(1.5, Math.min(100, ragMetrics.usedPercent))}%` }}
               >
                 <div className="absolute inset-0 bg-white/20 animate-pulse" />
               </div>
               <div 
-                className="h-full bg-neutral-900"
+                className="h-full bg-slate-800"
                 style={{ width: `${Math.max(0, 100 - ragMetrics.usedPercent)}%` }}
               />
             </div>
 
-            <div className="flex items-center justify-between text-[8px] font-mono text-gray-400">
-              <span>USED: {ragMetrics.usedFormatted} / {ragMetrics.totalLimitFormatted} (Dedicated Quota)</span>
-              <span>BUFFER HEADROOM: {ragMetrics.availableFormatted}</span>
+            <div className="flex items-center justify-between text-[9px] font-mono text-slate-400">
+              <span>USED: {ragMetrics.usedFormatted} / {ragMetrics.totalLimitFormatted}</span>
+              <span>HEADROOM: {ragMetrics.availableFormatted}</span>
             </div>
           </div>
 
           {/* 4-Quadrant Real-Time Telemetry Cards */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
-            <div className="p-2 rounded bg-black/60 border border-white/10 space-y-0.5">
-              <div className="text-[8px] font-mono text-gray-400 uppercase flex items-center gap-1">
-                <Brain size={9} className="text-[#ff2020]" />
-                <span>ABILITY</span>
+            <div className="p-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06] space-y-0.5">
+              <div className="text-[9px] font-mono text-slate-400 uppercase flex items-center gap-1">
+                <Brain size={11} className="text-rose-400" />
+                <span>MUTATIONS</span>
               </div>
-              <div className="text-sm font-mono font-bold text-white">{ragMetrics.mutationCount}</div>
-              <div className="text-[7.5px] font-mono text-gray-400 truncate">{ragMetrics.hotswapCount} hotswapped</div>
+              <div className="text-base font-mono font-bold text-white">{ragMetrics.mutationCount}</div>
+              <div className="text-[8px] font-mono text-slate-400 truncate">{ragMetrics.hotswapCount} hotswapped</div>
             </div>
 
-            <div className="p-2 rounded bg-black/60 border border-white/10 space-y-0.5">
-              <div className="text-[8px] font-mono text-gray-400 uppercase flex items-center gap-1">
-                <HardDrive size={9} className="text-white" />
-                <span>SPACE FREE</span>
+            <div className="p-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06] space-y-0.5">
+              <div className="text-[9px] font-mono text-slate-400 uppercase flex items-center gap-1">
+                <HardDrive size={11} className="text-sky-400" />
+                <span>FREE SPACE</span>
               </div>
-              <div className="text-sm font-mono font-bold text-white">{ragMetrics.availablePercent}%</div>
-              <div className="text-[7.5px] font-mono text-gray-400 truncate">{ragMetrics.availableFormatted} free</div>
+              <div className="text-base font-mono font-bold text-white">{ragMetrics.availablePercent}%</div>
+              <div className="text-[8px] font-mono text-slate-400 truncate">{ragMetrics.availableFormatted} free</div>
             </div>
 
-            <div className="p-2 rounded bg-black/60 border border-white/10 space-y-0.5">
-              <div className="text-[8px] font-mono text-gray-400 uppercase flex items-center gap-1">
-                <HeartPulse size={9} className="text-[#ff2020]" />
+            <div className="p-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06] space-y-0.5">
+              <div className="text-[9px] font-mono text-slate-400 uppercase flex items-center gap-1">
+                <HeartPulse size={11} className="text-emerald-400" />
                 <span>HEALTH</span>
               </div>
-              <div className="text-sm font-mono font-bold text-white">{ragMetrics.health}%</div>
-              <div className="text-[7.5px] font-mono text-red-400 truncate">Drift: {ragMetrics.drift}%</div>
+              <div className="text-base font-mono font-bold text-white">{ragMetrics.health}%</div>
+              <div className="text-[8px] font-mono text-amber-400 truncate">Drift: {ragMetrics.drift}%</div>
             </div>
 
-            <div className="p-2 rounded bg-black/60 border border-white/10 space-y-0.5">
-              <div className="text-[8px] font-mono text-gray-400 uppercase flex items-center gap-1">
-                <Database size={9} className="text-white" />
+            <div className="p-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06] space-y-0.5">
+              <div className="text-[9px] font-mono text-slate-400 uppercase flex items-center gap-1">
+                <Database size={11} className="text-purple-400" />
                 <span>SYNAPSES</span>
               </div>
-              <div className="text-sm font-mono font-bold text-white">
+              <div className="text-base font-mono font-bold text-white">
                 {ragMetrics.chunkCount + ragMetrics.logCount + ragMetrics.mutationCount}
               </div>
-              <div className="text-[7.5px] font-mono text-gray-400 truncate">
+              <div className="text-[8px] font-mono text-slate-400 truncate">
                 {ragMetrics.chunkCount}c • {ragMetrics.logCount}l • {ragMetrics.mutationCount}m
               </div>
             </div>
@@ -379,25 +379,25 @@ export default function DashboardPanel({
           {/* Area Chart Visualization */}
           <div className="h-[130px] w-full relative pt-1">
             {ragMetrics.drift > 30 && (
-              <div className="absolute top-2 left-1/2 -translate-x-1/2 z-50 bg-red-950/80 border border-red-500 text-white px-3 py-1.5 rounded shadow-[0_0_10px_rgba(255,32,32,0.4)] backdrop-blur-md flex items-center gap-2 animate-pulse">
-                 <AlertCircle size={12} className="text-[#ff2020]" />
-                 <span className="text-[9px] font-bold uppercase tracking-wider whitespace-nowrap">Warning: Dalek cognition is becoming unstable</span>
+              <div className="absolute top-2 left-1/2 -translate-x-1/2 z-50 bg-rose-950/80 border border-rose-500 text-white px-3 py-1.5 rounded-lg shadow-lg backdrop-blur-md flex items-center gap-2 animate-pulse">
+                 <AlertCircle size={12} className="text-rose-400" />
+                 <span className="text-[10px] font-semibold uppercase tracking-wide whitespace-nowrap">Warning: Cognitive drift elevated</span>
               </div>
             )}
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={ragBrainHealthHistory} margin={{ top: 10, right: 5, left: -25, bottom: 0 }}>
                 <defs>
                   <linearGradient id="panelColorHealth" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#ffffff" stopOpacity={0.4}/>
-                    <stop offset="95%" stopColor="#ffffff" stopOpacity={0}/>
+                    <stop offset="5%" stopColor="#38bdf8" stopOpacity={0.4}/>
+                    <stop offset="95%" stopColor="#38bdf8" stopOpacity={0}/>
                   </linearGradient>
                   <linearGradient id="panelColorDrift" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#ff2020" stopOpacity={0.3}/>
-                    <stop offset="95%" stopColor="#ff2020" stopOpacity={0}/>
+                    <stop offset="5%" stopColor="#f43f5e" stopOpacity={0.3}/>
+                    <stop offset="95%" stopColor="#f43f5e" stopOpacity={0}/>
                   </linearGradient>
                   <linearGradient id="panelColorRecovery" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#ff4444" stopOpacity={0.4}/>
-                    <stop offset="95%" stopColor="#ff4444" stopOpacity={0}/>
+                    <stop offset="5%" stopColor="#f59e0b" stopOpacity={0.4}/>
+                    <stop offset="95%" stopColor="#f59e0b" stopOpacity={0}/>
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
@@ -405,7 +405,7 @@ export default function DashboardPanel({
                   dataKey="time" 
                   stroke="rgba(255,255,255,0.3)" 
                   fontSize={8} 
-                  fontFamily="monospace"
+                  fontFamily="monospace" 
                   tickLine={false} 
                 />
                 <YAxis 
@@ -468,25 +468,26 @@ export default function DashboardPanel({
       </div>
 
       {/* Real-time Evolution Activity Monitor */}
-      <div className="dalek-panel rounded-lg p-4 space-y-4">
-        <div className="dalek-panel-header py-2 px-1 flex items-center justify-between">
+      <div className="dalek-panel rounded-xl p-4 space-y-4 bg-[#0f141c]/90 border border-white/[0.08] shadow-lg">
+        <div className="dalek-panel-header py-1 px-1 flex items-center justify-between border-b border-white/[0.08]">
           <div className="flex items-center gap-2">
-            <Cpu size={14} style={{ color: batchMode ? COLORS.pureWhite : COLORS.dalekRed }} />
-            <span style={{ fontSize: '11px', fontFamily: 'var(--font-orbitron), sans-serif' }}>LIVE OPERATION MONITOR</span>
+            <Cpu size={14} className="text-sky-400" />
+            <span className="font-sans text-xs font-semibold tracking-wide text-slate-200">OPERATION MONITOR</span>
           </div>
           <span
-            className="px-1.5 py-0.5 rounded text-[8px] font-sans font-bold select-none pulse-red"
-            style={{
-              background: batchMode ? 'rgba(255,255,255,0.1)' : 'rgba(255,32,32,0.1)',
-              color: batchMode ? COLORS.pureWhite : COLORS.dalekRed,
-              border: `1px solid ${batchMode ? COLORS.pureWhite : COLORS.dalekRed}30`,
-            }}
+            className={`px-2 py-0.5 rounded-full text-[10px] font-sans font-medium select-none ${
+              batchMode 
+                ? 'bg-sky-500/10 border border-sky-500/30 text-sky-400' 
+                : isLoading 
+                ? 'bg-amber-500/10 border border-amber-500/30 text-amber-400 animate-pulse' 
+                : 'bg-white/5 border border-white/10 text-slate-400'
+            }`}
           >
-            {batchMode ? 'BATCH CYCLE ONLINE' : isLoading ? 'THINKING' : 'STANDBY'}
+            {batchMode ? 'Batch Cycle Active' : isLoading ? 'Processing...' : 'Standby'}
           </span>
         </div>
 
-        <div style={{ background: '#080808', border: `1px solid ${COLORS.panelBorder}` }} className="p-3 rounded-sm space-y-3">
+        <div className="p-3.5 rounded-lg bg-white/[0.02] border border-white/[0.06] space-y-3.5">
           {batchMode ? (
             <div className="space-y-3">
               <div className="flex items-center justify-between text-[10px] font-mono">

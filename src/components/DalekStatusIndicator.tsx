@@ -34,8 +34,11 @@ const KNOWN_STATUS_CONFIGS: Readonly<Record<'connected' | 'offline', StatusConfi
 const BASE_INDICATOR_CLASSES: string = 'text-[10px] uppercase tracking-widest';
 
 const resolveStatusConfiguration = (status: DalekStatus): StatusConfiguration => {
-  if (status === 'connected' || status === 'offline') {
-    return KNOWN_STATUS_CONFIGS[status];
+  if (status === 'connected') {
+    return KNOWN_STATUS_CONFIGS.connected;
+  }
+  if (status === 'offline') {
+    return KNOWN_STATUS_CONFIGS.offline;
   }
 
   const safeStatus: string = typeof status === 'string' && status.length > 0 

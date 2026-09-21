@@ -80,7 +80,7 @@ async function fetchSessionMutations(sessionId: string): Promise<string[]> {
       orderBy: { createdAt: 'desc' },
       select: { filePath: true },
     });
-    return mutations.map((mutation) => mutation.filePath);
+    return mutations.map((mutation: any) => mutation.filePath);
   } catch {
     return [];
   }

@@ -5,15 +5,18 @@
  * Architecture: Hard Invariant of the data model and execution path.
  */
 
-export type SourceLifecycleState =
-  | 'DISCOVERED'
-  | 'LICENSE_VERIFIED'
-  | 'RETENTION_AUTHORIZED'
-  | 'PROCESSED'
-  | 'STORED'
-  | 'EXPIRED_OR_REVOKED'
-  | 'PURGED'
-  | 'PURGE_VERIFIED';
+export const SourceLifecycleState = {
+  DISCOVERED: 'DISCOVERED',
+  LICENSE_VERIFIED: 'LICENSE_VERIFIED',
+  RETENTION_AUTHORIZED: 'RETENTION_AUTHORIZED',
+  PROCESSED: 'PROCESSED',
+  STORED: 'STORED',
+  EXPIRED_OR_REVOKED: 'EXPIRED_OR_REVOKED',
+  PURGED: 'PURGED',
+  PURGE_VERIFIED: 'PURGE_VERIFIED',
+} as const;
+
+export type SourceLifecycleState = (typeof SourceLifecycleState)[keyof typeof SourceLifecycleState];
 
 export interface LifecycleTransition {
   readonly timestamp: string;
@@ -25,6 +28,7 @@ export interface LifecycleTransition {
 
 export interface RetentionAuthorizationRecord {
   readonly authorizationId: string;
+  readonly decisionId: string;
   readonly repo: string;
   readonly filePath: string;
   readonly contentHash: string;
@@ -33,11 +37,14 @@ export interface RetentionAuthorizationRecord {
   readonly retentionAllowed: boolean;
   readonly authorizedBy: string;
   lifecycleState: SourceLifecycleState;
+  readonly state: SourceLifecycleState;
   readonly retentionExpiry: string | null;
   readonly auditLog: LifecycleTransition[];
   readonly createdAt: string;
   updatedAt: string;
 }
+
+export type CodeLifecycleRecord = RetentionAuthorizationRecord;
 
 const PERMISSIVE_LICENSES = new Set([
   'mit',
@@ -142,6 +149,15 @@ export function verifyLicenseCompatibility(rawLicense?: string): {
   };
 }
 
+export interface GateResult {
+  authorized: boolean;
+  record: RetentionAuthorizationRecord;
+  decisionId: string;
+  state: SourceLifecycleState;
+  contentHash: string;
+  error?: string;
+}
+
 /**
  * Core Authoritative Retention Gate:
  * Evaluates and certifies a source-code write or mutation operation.
@@ -152,34 +168,64 @@ export function authorizeSourceCodeOperation(params: {
   content: string;
   licenseType?: string;
   authorizedBy?: string;
+  actor?: string;
   initialState?: SourceLifecycleState;
   reason?: string;
-}): {
-  authorized: boolean;
-  record: RetentionAuthorizationRecord;
-  error?: string;
-} {
-  const { repo, filePath, content, licenseType = 'MIT', authorizedBy = 'DARLEK_CAAN_CORE', initialState, reason } = params;
+}): GateResult {
+  const { repo, filePath, content, licenseType = 'MIT', authorizedBy, actor, initialState, reason } = params;
+  const effectiveActor = actor || authorizedBy || 'DARLEK_CAAN_CORE';
+
+  const contentHash = calculateContentHash(content || '');
+
+  if (!repo || !filePath || !content || !effectiveActor) {
+    const deniedRecord: RetentionAuthorizationRecord = {
+      authorizationId: `AUTH_INVALID_${Date.now()}`,
+      decisionId: `AUTH_INVALID_${Date.now()}`,
+      repo: repo || '',
+      filePath: filePath || '',
+      contentHash,
+      licenseType: licenseType || 'NONE',
+      licenseCategory: 'RESTRICTED',
+      retentionAllowed: false,
+      authorizedBy: effectiveActor,
+      lifecycleState: 'EXPIRED_OR_REVOKED',
+      state: 'EXPIRED_OR_REVOKED',
+      retentionExpiry: new Date().toISOString(),
+      auditLog: [],
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+    return {
+      authorized: false,
+      record: deniedRecord,
+      decisionId: deniedRecord.authorizationId,
+      state: deniedRecord.lifecycleState,
+      contentHash: deniedRecord.contentHash,
+      error: 'Invalid arguments: repo, filePath, content, and actor must be non-empty',
+    };
+  }
 
   const licenseEval = verifyLicenseCompatibility(licenseType);
   if (!licenseEval.retentionAllowed) {
     const deniedRecord: RetentionAuthorizationRecord = {
       authorizationId: `AUTH_DENIED_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+      decisionId: `AUTH_DENIED_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
       repo,
       filePath,
-      contentHash: calculateContentHash(content),
+      contentHash,
       licenseType,
       licenseCategory: licenseEval.category,
       retentionAllowed: false,
-      authorizedBy,
+      authorizedBy: effectiveActor,
       lifecycleState: 'EXPIRED_OR_REVOKED',
+      state: 'EXPIRED_OR_REVOKED',
       retentionExpiry: new Date().toISOString(),
       auditLog: [
         {
           timestamp: new Date().toISOString(),
           fromState: 'DISCOVERED',
           toState: 'EXPIRED_OR_REVOKED',
-          actor: authorizedBy,
+          actor: effectiveActor,
           reason: `Access Denied: ${licenseEval.reason}`,
         },
       ],
@@ -190,40 +236,44 @@ export function authorizeSourceCodeOperation(params: {
     return {
       authorized: false,
       record: deniedRecord,
+      decisionId: deniedRecord.authorizationId,
+      state: deniedRecord.lifecycleState,
+      contentHash: deniedRecord.contentHash,
       error: `Retention Gatekeeper Violation: ${licenseEval.reason}`,
     };
   }
 
   const now = new Date().toISOString();
   const authId = `AUTH_CAAN_${Date.now()}_${Math.random().toString(36).slice(2, 9).toUpperCase()}`;
-  const contentHash = calculateContentHash(content);
 
   const startState: SourceLifecycleState = initialState || 'RETENTION_AUTHORIZED';
 
   const record: RetentionAuthorizationRecord = {
     authorizationId: authId,
+    decisionId: authId,
     repo,
     filePath,
     contentHash,
     licenseType,
     licenseCategory: licenseEval.category,
     retentionAllowed: true,
-    authorizedBy,
+    authorizedBy: effectiveActor,
     lifecycleState: startState,
+    state: startState,
     retentionExpiry: null, // Indefinite under permissive authorized terms
     auditLog: [
       {
         timestamp: now,
         fromState: 'DISCOVERED',
         toState: 'LICENSE_VERIFIED',
-        actor: authorizedBy,
+        actor: effectiveActor,
         reason: 'Automated license compatibility verification passed.',
       },
       {
         timestamp: now,
         fromState: 'LICENSE_VERIFIED',
         toState: startState,
-        actor: authorizedBy,
+        actor: effectiveActor,
         reason: reason || 'Authorized by DARLEK CAAN Central Retention Policy.',
       },
     ],
@@ -236,6 +286,9 @@ export function authorizeSourceCodeOperation(params: {
   return {
     authorized: true,
     record,
+    decisionId: record.authorizationId,
+    state: record.lifecycleState,
+    contentHash: record.contentHash,
   };
 }
 
@@ -292,14 +345,20 @@ export async function enforceRetentionGate(params: {
   authorizationId?: string;
   licenseType?: string;
   actor?: string;
-}): Promise<{ authorized: boolean; record: RetentionAuthorizationRecord; error?: string }> {
+}): Promise<GateResult> {
   // If an existing valid token is provided, verify it
   if (params.authorizationId) {
     const existing = RETENTION_REGISTRY.get(params.authorizationId);
     if (existing && existing.retentionAllowed && existing.lifecycleState !== 'EXPIRED_OR_REVOKED' && existing.lifecycleState !== 'PURGED') {
       // Advance to PROCESSED / STORED state
       transitionLifecycleState(params.authorizationId, 'STORED', params.actor || 'API_GATE', 'Verified active authorization token during write');
-      return { authorized: true, record: existing };
+      return {
+        authorized: true,
+        record: existing,
+        decisionId: existing.authorizationId,
+        state: existing.lifecycleState,
+        contentHash: existing.contentHash,
+      };
     }
   }
 

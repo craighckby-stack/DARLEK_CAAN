@@ -642,49 +642,26 @@ export default function ChatPanel({
       }}
     >
       {/* Chat header */}
-      <div
-        className="px-4 py-3 flex items-center justify-between flex-shrink-0"
-        style={{
-          borderBottom: `1px solid rgba(255, 32, 32, 0.15)`,
-          background: 'linear-gradient(180deg, rgba(17, 0, 0, 0.6) 0%, transparent 100%)',
-        }}
-      >
-        <div className="flex items-center gap-3">
-          <div
-            className="w-3 h-3 rounded-full dalek-eye-stalk flex-shrink-0"
-            style={{ background: COLORS.dalekRed }}
-          />
-          <span
-            style={{
-              fontFamily: 'var(--font-orbitron), sans-serif',
-              fontSize: '11px',
-              fontWeight: 600,
-              letterSpacing: '0.15em',
-              color: COLORS.dalekRed,
-            }}
-          >
-            COMMUNICATION CHANNEL
+      <div className="px-4 py-3 flex items-center justify-between flex-shrink-0 border-b border-white/[0.08] bg-[#0c1017]">
+        <div className="flex items-center gap-2.5">
+          <div className="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.6)] flex-shrink-0" />
+          <span className="font-sans text-xs font-semibold tracking-wide text-slate-200">
+            INTELLIGENCE CONSOLE
           </span>
         </div>
         <div className="flex items-center gap-2">
           {systemState.setupComplete && (
             <button
               onClick={() => setIsBugInspectorOpen(true)}
-              className="px-2.5 py-1 rounded bg-[#200a0a] hover:bg-[#300f0f] border border-red-700/60 text-red-300 hover:text-red-200 text-[10px] font-mono flex items-center gap-1.5 transition-all shadow-sm group"
+              className="px-2.5 py-1 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30 text-rose-300 text-[11px] font-sans font-medium flex items-center gap-1.5 transition-all cursor-pointer"
               title="Open Bug Inspector & Autonomous Repair"
             >
-              <Bug size={12} className="text-red-400 group-hover:scale-110 transition-transform" />
-              <span>BUG INSPECTOR</span>
+              <Bug size={12} className="text-rose-400" />
+              <span>Bug Inspector</span>
             </button>
           )}
-          <span
-            style={{
-              fontFamily: 'var(--font-orbitron), sans-serif',
-              fontSize: '10px',
-              color: COLORS.textMuted,
-            }}
-          >
-            {messages.length} MSGS
+          <span className="font-mono text-[11px] text-slate-400 px-2 py-0.5 rounded bg-white/5 border border-white/5">
+            {messages.length} msgs
           </span>
         </div>
       </div>

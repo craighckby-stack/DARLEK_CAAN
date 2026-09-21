@@ -32,10 +32,10 @@ const PROVIDERS: readonly ProviderConfig[] = [
 ] as const;
 
 const STATUS_COLORS = {
-  connected: COLORS.cyan,
-  error: COLORS.dalekRed,
-  testing: COLORS.gold,
-  default: '#333',
+  connected: '#10b981',
+  error: '#f43f5e',
+  testing: '#f59e0b',
+  default: '#64748b',
 } as const;
 
 const STATUS_TEXTS = {
@@ -94,25 +94,24 @@ export default function StatusBar({
   }, [userReposCount]);
 
   return (
-    <div className="dalek-panel rounded-lg p-4 space-y-4">
-      <div className="dalek-panel-header py-2 px-1 flex items-center gap-2">
-        <Activity size={14} style={{ color: COLORS.dalekRed }} />
-        <span style={{ fontSize: '11px' }}>SYSTEM STATUS</span>
+    <div className="dalek-panel rounded-xl p-4 space-y-4 bg-[#0f141c]/90 border border-white/[0.08] shadow-lg">
+      <div className="dalek-panel-header py-1 px-1 flex items-center justify-between border-b border-white/[0.08]">
+        <div className="flex items-center gap-2">
+          <Activity size={14} className="text-rose-400" />
+          <span className="font-sans text-xs font-semibold tracking-wide text-slate-200">SYSTEM STATUS</span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="text-[10px] text-emerald-400 font-mono">LIVE</span>
+        </div>
       </div>
 
       {/* Connection indicators */}
       <div className="space-y-2">
-        <span
-          style={{
-            fontSize: '9px',
-            color: COLORS.textMuted,
-            fontFamily: 'var(--font-orbitron), sans-serif',
-            letterSpacing: '0.12em',
-          }}
-        >
-          API CONNECTIONS
+        <span className="text-[10px] font-sans font-semibold tracking-wider text-slate-400 uppercase">
+          API Services
         </span>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 gap-2">
           {PROVIDERS.map(({ id, label }) => {
             const status = connectionStatus?.[id];
             const statusColor = STATUS_COLORS[status as keyof typeof STATUS_COLORS] || STATUS_COLORS.default;
@@ -122,27 +121,18 @@ export default function StatusBar({
             return (
               <div
                 key={id}
-                className="flex items-center gap-2 px-3 py-2 rounded-sm"
-                style={{ background: '#080808', border: `1px solid ${COLORS.panelBorder}` }}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/[0.03] border border-white/[0.06] hover:border-white/10 transition-colors"
               >
                 <div
-                  className={`w-2 h-2 rounded-full flex-shrink-0 ${isConnected ? 'pulse-cyan' : ''}`}
+                  className={`w-2 h-2 rounded-full flex-shrink-0 ${isConnected ? 'bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.6)]' : ''}`}
                   style={{
-                    background: statusColor,
-                    boxShadow: isConnected ? `0 0 4px ${statusColor}` : 'none',
+                    background: isConnected ? '#10b981' : statusColor,
                   }}
                 />
-                <span
-                  style={{
-                    fontSize: '9px',
-                    color: isConnected ? '#ccc' : COLORS.textDim,
-                    fontFamily: 'var(--font-orbitron), sans-serif',
-                    letterSpacing: '0.05em',
-                  }}
-                >
+                <span className="text-xs font-sans font-medium text-slate-300">
                   {label}
                 </span>
-                <span className="ml-auto" style={{ fontSize: '8px', color: statusColor }}>
+                <span className="ml-auto text-[10px] font-mono font-medium" style={{ color: statusColor }}>
                   {statusText}
                 </span>
               </div>
@@ -153,32 +143,16 @@ export default function StatusBar({
 
       {/* Repo info */}
       <div className="space-y-2">
-        <span
-          style={{
-            fontSize: '9px',
-            color: COLORS.textMuted,
-            fontFamily: 'var(--font-orbitron), sans-serif',
-            letterSpacing: '0.12em',
-          }}
-        >
-          TARGET
+        <span className="text-[10px] font-sans font-semibold tracking-wider text-slate-400 uppercase">
+          Active Workspace
         </span>
-        <div
-          className="flex items-center gap-2 px-3 py-2 rounded-sm"
-          style={{ background: '#080808', border: `1px solid ${COLORS.panelBorder}` }}
-        >
-          <GitBranch size={12} style={{ color: COLORS.gold }} />
-          <span
-            style={{
-              fontSize: '11px',
-              color: COLORS.gold,
-              fontFamily: 'var(--font-share-tech-mono), monospace',
-            }}
-          >
+        <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/[0.03] border border-white/[0.06]">
+          <GitBranch size={13} className="text-amber-400 shrink-0" />
+          <span className="text-xs font-mono text-slate-200 truncate">
             {targetRepoLabel}
           </span>
           {branchLabel && (
-            <span className="ml-auto" style={{ fontSize: '9px', color: COLORS.textMuted }}>
+            <span className="ml-auto text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-slate-400 border border-white/5 shrink-0">
               {branchLabel}
             </span>
           )}
@@ -188,35 +162,16 @@ export default function StatusBar({
       {/* Portfolio Status */}
       {typeof safeUserReposCount === 'number' && safeUserReposCount > 0 && (
         <div className="space-y-2 animate-fade-in">
-          <span
-            style={{
-              fontSize: '9px',
-              color: COLORS.textMuted,
-              fontFamily: 'var(--font-orbitron), sans-serif',
-              letterSpacing: '0.12em',
-            }}
-          >
-            PORTFOLIO & SIPHON CONTEXT
+          <span className="text-[10px] font-sans font-semibold tracking-wider text-slate-400 uppercase">
+            Portfolio & Context
           </span>
-          <div
-            className="flex items-center gap-2 px-3 py-2 rounded-sm"
-            style={{ background: '#080808', border: `1px solid ${COLORS.panelBorder}` }}
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span
-              style={{
-                fontSize: '10px',
-                color: '#10b981',
-                fontFamily: 'var(--font-share-tech-mono), monospace',
-              }}
-            >
-              {safeUserReposCount} GLOBAL/USER SIPHONS
+          <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-xs font-mono text-emerald-300 font-medium">
+              {safeUserReposCount} Active Repositories
             </span>
-            <span
-              className="ml-auto text-emerald-500/80 uppercase"
-              style={{ fontSize: '7.5px', fontFamily: 'var(--font-orbitron), sans-serif' }}
-            >
-              active context
+            <span className="ml-auto text-[10px] font-sans px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 uppercase font-medium">
+              Synced
             </span>
           </div>
         </div>
@@ -224,93 +179,38 @@ export default function StatusBar({
 
       {/* Stats grid */}
       <div className="grid grid-cols-2 gap-2">
-        <div
-          className="px-3 py-2 rounded-sm"
-          style={{ background: '#080808', border: `1px solid ${COLORS.panelBorder}` }}
-        >
-          <div className="flex items-center gap-1 mb-1">
-            <RotateCw size={10} style={{ color: COLORS.purple }} />
-            <span
-              style={{
-                fontSize: '8px',
-                color: COLORS.textMuted,
-                fontFamily: 'var(--font-orbitron), sans-serif',
-                letterSpacing: '0.1em',
-              }}
-            >
-              CYCLE
-            </span>
+        <div className="p-3 rounded-lg bg-white/[0.03] border border-white/[0.06]">
+          <div className="flex items-center gap-1.5 mb-1 text-slate-400">
+            <RotateCw size={12} className="text-purple-400" />
+            <span className="text-[10px] font-sans font-semibold tracking-wider uppercase">Cycle</span>
           </div>
-          <span
-            style={{
-              fontSize: '16px',
-              fontWeight: 700,
-              color: COLORS.purple,
-              fontFamily: 'var(--font-orbitron), sans-serif',
-            }}
-          >
+          <span className="text-lg font-bold font-mono text-purple-300">
             {safeEvolutionCycle}
           </span>
         </div>
-        <div
-          className="px-3 py-2 rounded-sm"
-          style={{ background: '#080808', border: `1px solid ${COLORS.panelBorder}` }}
-        >
-          <div className="flex items-center gap-1 mb-1">
-            <Activity size={10} style={{ color: healthColor }} />
-            <span
-              style={{
-                fontSize: '8px',
-                color: COLORS.textMuted,
-                fontFamily: 'var(--font-orbitron), sans-serif',
-                letterSpacing: '0.1em',
-              }}
-            >
-              HEALTH
-            </span>
+        <div className="p-3 rounded-lg bg-white/[0.03] border border-white/[0.06]">
+          <div className="flex items-center gap-1.5 mb-1 text-slate-400">
+            <Activity size={12} style={{ color: healthColor }} />
+            <span className="text-[10px] font-sans font-semibold tracking-wider uppercase">Health</span>
           </div>
           <span
-            style={{
-              fontSize: '11px',
-              fontWeight: 700,
-              color: healthColor,
-              textTransform: 'uppercase',
-              fontFamily: 'var(--font-orbitron), sans-serif',
-            }}
+            className="text-xs font-bold uppercase font-mono tracking-wide"
+            style={{ color: healthColor }}
           >
             {overallHealth}
           </span>
         </div>
-        <div
-          className="px-3 py-2 rounded-sm col-span-2"
-          style={{ background: '#080808', border: `1px solid ${COLORS.panelBorder}` }}
-        >
-          <div className="flex items-center gap-1 mb-1">
-            <Clock size={10} style={{ color: COLORS.textMuted }} />
-            <span
-              style={{
-                fontSize: '8px',
-                color: COLORS.textMuted,
-                fontFamily: 'var(--font-orbitron), sans-serif',
-                letterSpacing: '0.1em',
-              }}
-            >
-              TIMELINE
-            </span>
+        <div className="p-3 rounded-lg bg-white/[0.03] border border-white/[0.06] col-span-2">
+          <div className="flex items-center gap-1.5 mb-1 text-slate-400">
+            <Clock size={12} className="text-amber-400" />
+            <span className="text-[10px] font-sans font-semibold tracking-wider uppercase">Session Timeline</span>
           </div>
-          <div className="flex items-center gap-3">
-            <span
-              style={{
-                fontSize: '10px',
-                color: COLORS.gold,
-                fontFamily: 'var(--font-orbitron), sans-serif',
-                fontWeight: 600,
-              }}
-            >
-              ALPHA
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-mono font-medium text-amber-300">
+              Alpha Timeline
             </span>
-            <span style={{ fontSize: '9px', color: COLORS.textDim }}>
-              Session: {sessionTime}
+            <span className="text-xs font-mono text-slate-400">
+              Active: {sessionTime}
             </span>
           </div>
         </div>

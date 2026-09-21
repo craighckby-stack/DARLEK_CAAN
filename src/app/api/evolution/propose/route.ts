@@ -513,7 +513,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         });
         
         if (recentMutations.length > 0) {
-          appliedMutationsContext = `\n\nRECENT SYSTEM MUTATIONS (Context of what you have done so far in this session to help you integrate and align future mutations):\n${recentMutations.map((mutation) => `  - File: ${mutation.filePath} | Analysis: ${mutation.analysis}`).join('\n')}`;
+          appliedMutationsContext = `\n\nRECENT SYSTEM MUTATIONS (Context of what you have done so far in this session to help you integrate and align future mutations):\n${recentMutations.map((mutation: any) => `  - File: ${mutation.filePath} | Analysis: ${mutation.analysis}`).join('\n')}`;
         }
       } catch (error) {
         console.error('Error fetching mutation history:', error);

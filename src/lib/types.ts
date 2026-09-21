@@ -10,7 +10,7 @@
 // Core Communication & Identity Types
 // ─────────────────────────────────────────────
 
-export type MessageRole = 'caan' | 'operator' | 'system';
+export type MessageRole = 'caan' | 'operator' | 'system' | 'user' | 'assistant';
 
 export interface Message {
   readonly id: string;
@@ -19,9 +19,10 @@ export interface Message {
   readonly timestamp: Date;
 }
 
-export type ConnectionStatusValue = 'idle' | 'testing' | 'connected' | 'error';
+export type ConnectionStatusValue = 'idle' | 'testing' | 'connected' | 'error' | 'disconnected';
 
 export interface ApiKeys {
+  [key: string]: string | undefined;
   readonly github: string;
   readonly gemini?: string;
   readonly anthropic?: string;
@@ -95,7 +96,12 @@ export type EvolutionLogType =
   | 'SYSTEM' 
   | 'CONNECT' 
   | 'BACKUP' 
-  | 'INFO';
+  | 'INFO'
+  | 'MUTATION'
+  | 'ARCHAEOLOGY'
+  | 'RAG_SYNC'
+  | 'FIREBASE'
+  | string;
 
 export interface EvolutionLogEntry {
   readonly id: string;
@@ -239,7 +245,7 @@ export interface WriteFileBody {
 export interface DebateAgent {
   readonly id: string;
   readonly name: string;
-  readonly status: 'active' | 'idle';
+  readonly status: 'active' | 'idle' | 'inactive' | 'suspended';
   readonly color: string;
   readonly icon: string;
 }

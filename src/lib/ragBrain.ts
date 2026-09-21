@@ -143,7 +143,7 @@ function binaryToText(binary: string): string {
   return result;
 }
 
-interface BrainChunk {
+export interface BrainChunk {
   readonly id: string;
   readonly sourceName: string;
   readonly fileName: string;
@@ -513,7 +513,15 @@ export interface HotswappedFileEntry {
   readonly sha?: string;
   readonly generation: number;
   readonly hotswappedAt: string;
-  readonly mutationSource: 'RAG_SYNTHESIS' | 'LLM_MUTATION' | 'NEURAL_GENE_HOTSWAP';
+  readonly mutationSource:
+    | 'RAG_SYNTHESIS'
+    | 'LLM_MUTATION'
+    | 'NEURAL_GENE_HOTSWAP'
+    | 'RAG_MUTATION_EXEMPLAR'
+    | 'RAG_GENE_HOTSWAP'
+    | 'RAG_LLM_SYNTHESIS'
+    | 'RAG_SAME_FILE_EVOLUTION'
+    | string;
 }
 
 export function getAllHotswappedFiles(): Record<string, HotswappedFileEntry> {

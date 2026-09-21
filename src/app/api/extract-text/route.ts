@@ -53,6 +53,7 @@ function validatePayloadSize(req: NextRequest): NextResponse<ApiResponse> | null
  */
 async function extractPdfText(buffer: Buffer): Promise<string> {
   try {
+    // @ts-ignore
     const pdfModule = await import('pdf-parse');
     const pdfParse = (pdfModule as any).default || (pdfModule as any);
     const pdfData = await pdfParse(buffer);

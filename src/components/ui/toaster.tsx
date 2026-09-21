@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/toast"
 import type { ToastProps } from "@radix-ui/react-toast"
 
-export interface ToastItem extends ToastProps {
+export interface ToastItem extends Omit<ToastProps, "title" | "description"> {
   readonly id: string
   readonly title?: React.ReactNode
   readonly description?: React.ReactNode

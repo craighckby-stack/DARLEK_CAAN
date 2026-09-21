@@ -11,8 +11,6 @@ import React, { useState, useMemo, useRef } from 'react';
 import { useFolderScanner, FolderScanFileResult } from '@/hooks/useFolderScanner';
 import { Finding } from '@/lib/scanner';
 import { Folder, Upload, Shield, Play, Square, Download, Filter, Search, Eye, Copy, Check, X, FileCode, AlertTriangle, RefreshCw, Trash2, Archive } from 'lucide-react';
-import CodeMirror from '@uiw/react-codemirror';
-import { javascript } from '@codemirror/lang-javascript';
 
 export default function FolderScanner() {
   const {
@@ -506,23 +504,12 @@ export default function FolderScanner() {
               </button>
             </div>
 
-            <div className="flex-1 overflow-auto max-h-[500px]">
-              <CodeMirror
-                value={
-                  viewMode === 'sanitized'
-                    ? activeFinding.sanitized || ''
-                    : activeFinding.content || ''
-                }
-                extensions={[javascript({ jsx: true, typescript: true })]}
-                theme="dark"
-                readOnly={true}
-                basicSetup={{
-                  lineNumbers: true,
-                  foldGutter: true,
-                  highlightActiveLine: false,
-                }}
-                style={{ fontSize: '12px' }}
-              />
+            <div className="flex-1 overflow-auto max-h-[500px] p-3 font-mono text-xs text-neutral-200 bg-neutral-950/90 rounded border border-neutral-800">
+              <pre className="whitespace-pre-wrap break-all leading-relaxed font-mono">
+                {viewMode === 'sanitized'
+                  ? activeFinding.sanitized || ''
+                  : activeFinding.content || ''}
+              </pre>
             </div>
           </div>
         </div>

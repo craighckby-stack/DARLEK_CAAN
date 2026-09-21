@@ -20,11 +20,11 @@ const createQuantumState = <T extends Record<string, unknown>>(initialValue: T):
 /**
  * Validates that the upcoming state satisfies object-shape requirements.
  */
-const validateNextState = <T>(nextState: unknown): asserts nextState is T => {
+function validateNextState<T>(nextState: unknown): asserts nextState is T {
   if (nextState === null || typeof nextState !== 'object') {
     throw new Error('Quantum updater must return a valid object state.');
   }
-};
+}
 
 /**
  * React hook for managing timestamped state transitions with structural validation and error safety.

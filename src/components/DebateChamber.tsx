@@ -55,7 +55,7 @@ const AgentItem = React.memo(function AgentItem({
   const isAgentActive = agent.status === 'active';
   const voteType = agent.vote?.vote;
   
-  let voteColor = COLORS.gold;
+  let voteColor: string = COLORS.gold;
   let voteIcon = '\u25CB';
   let voteLabel = 'ABSTAIN';
 

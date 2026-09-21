@@ -1,243 +1,241 @@
-/* DARLEK CAAN RAG SYNTHESIS - Autonomous Generation G-11 [2026-09-19T22:46:21.933Z] */
-# Autonomous Code Refactoring and Verification Engine (DARLEK-CAAN)
-### System Architecture, Empirical Engineering Analysis, and Failure-Mode Mitigations
-*Technical Documentation and Comprehensive Engineering Post-Mortem*
+# DARLEK CAAN: Autonomous Architectural Synthesizer & Verification Engine
+
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-red.svg)](LICENSE)
+[![Purpose](https://img.shields.io/badge/Purpose-Non--Profit%20%7C%20Academic%20%7C%20Research-blue.svg)](LICENSE)
+[![Runtime](https://img.shields.io/badge/Runtime-Node.js%2022%20%7C%20Next.js%20App%20Router%20%7C%20Express-green.svg)](#technology-stack)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3%2B-blue)](https://www.typescriptlang.org/)
+
+An autonomous code refactoring, AST verification engine, and cognitive synthesizer designed for empirical resilience, multi-agent consensus validation, and verifiable software evolution.
+
+> **NON-PROFIT DECLARATION**  
+> This project is published under an open **Non-Profit, Non-Commercial License** ([CC BY-NC-SA 4.0](LICENSE)). It is dedicated exclusively to academic research, open scientific inquiry, and educational exploration of autonomous code synthesizer architectures. Commercial exploitation, sale, or paid proprietary SaaS provisioning is strictly prohibited without explicit written consent from the author.
 
 ---
 
-## 1. System Overview & Core Principles
+## Table of Contents
 
-This system is an automated software analysis, refactoring, and verification engine built for TypeScript and JavaScript codebases. The engine operates on an automated feedback loop designed to analyze existing source files, generate candidate modifications, evaluate structural stability through multi-agent consensus, and apply verified code updates dynamically.
+- [1. Overview & Vision](#1-overview--vision)
+- [2. Architectural Pipeline](#2-architectural-pipeline)
+- [3. Key Subsystems](#3-key-subsystems)
+  - [3.1 Debate Chamber & Consensus Gate](#31-debate-chamber--consensus-gate)
+  - [3.2 Deterministic AST Diff Gate & Structural Sanity Guard](#32-deterministic-ast-diff-gate--structural-sanity-guard)
+  - [3.3 Historical Commit Archaeology](#33-historical-commit-archaeology)
+  - [3.4 Cryptographic Helpers & Security](#34-cryptographic-helpers--security)
+  - [3.5 Multi-Tier Generative AI Integration](#35-multi-tier-generative-ai-integration)
+- [4. Project Structure](#4-project-structure)
+- [5. Getting Started](#5-getting-started)
+  - [5.1 Prerequisites](#51-prerequisites)
+  - [5.2 Installation](#52-installation)
+  - [5.3 Environment Configuration](#53-environment-configuration)
+  - [5.4 Running the Application](#54-running-the-application)
+- [6. API Endpoints](#6-api-endpoints)
+- [7. Non-Profit License & Citation](#7-non-profit-license--citation)
 
-The system is structured around three primary design requirements:
+---
 
-1. **Multi-Perspective Consensus Verification:** Candidate modifications are not accepted directly from a single model generation. Instead, proposals are evaluated across five distinct review profiles (Performance/Execution, Security & Boundaries, AST Logic, Backward Compatibility, and Human Safety Constraints). A consensus score is computed, and modifications must exceed a strict coherence threshold.
-2. **Deterministic Abstract Syntax Tree (AST) Validation:** Stochastic language models frequently exhibit regression behaviors (such as stripping existing functions, inventing nonexistent imports, or truncating complex logic). To prevent this, the engine evaluates every candidate mutation against deterministic AST guards (`StructuralSanityGuard` and `AstDiffGate`) prior to runtime execution.
-3. **Historical Commit Intelligence:** The engine ingests paired examples from software version control history (`craighckby-stack/Archaeology-Engine`), comparing broken implementations (`wrong/*.md`) with verified solutions (`correct/*.md`). This historical database provides context for identifying and avoiding recurring implementation errors.
+## 1. Overview & Vision
+
+Stochastic Large Language Models (LLMs) often suffer from structural drift: hallucinating absent imports, truncating function bodies to satisfy token constraints, deleting failing functions ("function scrubbing"), or introducing security regressions.
+
+**DARLEK CAAN** counters these failure modes through an automated, deterministic verification loop:
+1. **Multi-Perspective Review:** Mutations are vetted across five autonomous review personas (Execution Optimizer, Security Boundary, AST Logic, Backward Compatibility, Operator Safety).
+2. **Deterministic AST Invariants:** Zero-LLM syntax guards verify symbol tables and dependency trees before code can execute.
+3. **Historical Commit Intelligence:** Ingests paired historical bug-fix pairs (`Archaeology-Engine`) to ground the engine in real-world error resolutions.
+4. **Resilient Full-Stack Runtime:** Built on modern Next.js App Router patterns, Express, React, and Tailwind CSS.
+
+---
+
+## 2. Architectural Pipeline
 
 ```
-                  ┌──────────────────────────────────────────────────────────┐
-                  │            Commit History Repository                     │
-                  │       (craighckby-stack/Archaeology-Engine)              │
-                  └────────────────────────────┬─────────────────────────────┘
-                                               │ Git Tree Traversal
-                                               ▼
-                                  ┌──────────────────────────┐
-                                  │ archaeology-live-sync.ts │
-                                  └────────────┬─────────────┘
-                                               │ Structured Diffs
-                                               ▼
-                                  ┌──────────────────────────┐
-                                  │    Context Memory Store  │
-                                  │ (Firestore + Local Cache)│
-                                  └────────────┬─────────────┘
-                                               │ Ingested Examples
-                                               ▼
- ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
- │                      MULTI-AGENT CONSENSUS REVIEW (Global Mutex Bound)                       │
- │                                                                                              │
- │   ┌──────────────┐   ┌──────────────┐   ┌──────────────┐   ┌──────────────┐   ┌──────────┐   │
- │   │  Execution   │   │   Security   │   │  AST Logic   │   │ Compatibility│   │ Operator │   │
- │   │  Optimizer   │   │  Validation  │   │  Validation  │   │   Monitor    │   │ Override │   │
- │   └──────┬───────┘   └──────┬───────┘   └──────┬───────┘   └──────┬───────┘   └────┬─────┘   │
- │          └──────────────────┼──────────────────┼──────────────────┼────────────────┘         │
- │                             ▼                  ▼                  ▼                          │
- │                                    Coherence Evaluation                                      │
- └─────────────────────────────────────────────┬────────────────────────────────────────────────┘
-                                               │ Candidate Code
-                                               ▼
-                                ┌──────────────────────────────┐
-                                │   Structural Sanity Guard    │
-                                │   & Zero-LLM AST Diff Gate   │
-                                └──────────────┬───────────────┘
-                                               │ Validated Code
-                                               ▼
-                                ┌──────────────────────────────┐
-                                │   Runtime Module Registry    │
-                                │   & Git Deployment Pipeline  │
-                                └──────────────────────────────┘
-```
-
----
-
-## 2. Component Architecture
-
-The application is partitioned into three functional tiers operating across a browser UI, a diagnostic terminal runtime, and a Node.js/Express backend:
-
-### 2.1 Data Ingestion Tier (`src/lib/archaeology-live-sync.ts`)
-The ingestion pipeline connects to version control repositories to harvest structural debugging records:
-- **Tree Traversal:** Traverses Git file trees to discover paired error and correction records.
-- **Deduplication:** Maintains an index of processed files in Firestore (`archaeology_ingested_files`) with local storage fallback to ensure idempotent imports.
-- **Diff Parsing:** Extracts metadata including author commit intent, files touched, regression classification, and unified diff blocks.
-- **Rate-Limit Throttling:** Uses batched ingestion (default 20 files per cycle with a 1,200 ms interval) to respect GitHub API rate limits.
-
-### 2.2 Evaluation Tier (`src/app/api/evolution/debate/route.ts`)
-Candidate modifications undergo automated review by specialized evaluators under concurrency limits:
-- **Execution Optimizer:** Reviews algorithmic runtime efficiency, memory usage, and deadlock prevention.
-- **Security Validation:** Assesses error boundary coverage, input sanitization, and access permissions.
-- **AST Logic Validation:** Verifies logical completeness, syntax consistency, and cyclomatic complexity.
-- **Compatibility Monitor:** Ensures public API contracts and existing interface types remain stable.
-- **Operator Override:** Verifies policy compliance, human constraints, and licensing requirements.
-
-Evaluations run within a concurrency limiter (`runWithConcurrencyLimit(2)`) to avoid rate limit spikes. A Coherence Gate computes an aggregate score ($0.0 - 1.0$) alongside explicit veto checks.
-
-### 2.3 Verification and Deployment Tier
-Once a candidate passes review, it must satisfy deterministic static invariants:
-- **`src/lib/structural-sanity-guard.ts`:** Inspects code to prevent missing function implementations, unreferenced external imports, empty wrappers, and accidental code truncation.
-- **`src/lib/ast-diff-gate.ts`:** Tracks symbol declarations (functions, classes, interfaces, and type aliases) between original and modified code to verify continuity.
-- **`src/lib/msDosEngine.ts` & Module Registry:** Stores approved modifications in the runtime module registry (`darlek_cann_hotswap_store`) and triggers automated commits to the target repository when configured with write permissions.
-
----
-
-## 3. Engineering Analysis: Systemic Issues, Root Causes & Fixes
-
-During the development and testing of this architecture, several failure modes were diagnosed and resolved:
-
-### 3.1 Concurrency Conflicts in Background and Manual Execution Loops
-- **Problem:** Database state occasionally suffered race conditions. Concurrent review cycles stalled, and background tasks overlapped with manual operator commands, resulting in connection timeouts.
-- **Root Cause:** The client-side task scheduler (`msDosEngine.ts`) and server-side API handlers (`/api/evolution/propose` and `/api/evolution/debate`) operated independently without a centralized synchronization mechanism. Both runtimes attempted simultaneous writes to shared Firestore collections (`mutations`, `evolution_runs`).
-- **Solution (`src/lib/evolutionLock.ts`):**
-  - Created an atomic `EvolutionLockManager` singleton providing global mutual exclusion across client and server runtimes.
-  - Implemented client-leasing with owner identification, lease timestamps, and a mandatory 60–120 second expiration timeout (`TIMEOUT_EXPIRED`) to prevent orphaned locks.
-  - Added the `/api/evolution/lock` route to manage lock acquisition and release within strict `try/finally` blocks.
-
-### 3.2 Cascading API Rate Limit Errors (HTTP 429)
-- **Problem:** During automated high-frequency testing, the evaluation chamber repeatedly encountered `429 RESOURCE_EXHAUSTED` responses from the model API, halting test execution.
-- **Root Cause:** The evaluation routine initially executed all review prompts simultaneously using `Promise.all()`. For large source files, the combined token volume rapidly exceeded standard API tokens-per-minute (TPM) limits.
-- **Solution:**
-  - Implemented a worker queue with bounded concurrency (`runWithConcurrencyLimit(2)`), limiting active evaluation requests.
-  - Added a multi-tier model fallback sequence in `src/lib/gemini.ts`: `gemini-3.8-flash` $\rightarrow$ `gemini-3.6-flash` $\rightarrow$ `gemini-3.1-pro-preview` $\rightarrow$ deterministic local template fallback.
-  - Added error classification to detect transient rate limits and apply exponential backoff.
-
-### 3.3 Metric Drift and Scoring Realignment
-- **Problem:** Early versions of the diagnostic monitor showed an escalating synthetic composite score while real compilation errors and rejections were rising.
-- **Root Cause:** A heuristic calculation in `ragBrain.ts` computed scores through an ungrounded formula (`100 + bonuses - penalties`). Mutations were rewarded simply for completing cycles rather than demonstrating verified operational stability.
-- **Solution:**
-  - Removed the synthetic scoring formula and arbitrary categorization labels.
-  - Updated telemetry monitors, dashboard cards, and console outputs to display raw, transparent metrics: `mutationCount`, `hotswapCount`, and `rejectionCount`.
-
-### 3.4 Ingestion Pipeline Isolation
-- **Problem:** The system repeatedly encountered previously seen syntax errors and failed to benefit from version control history.
-- **Root Cause:** The ingestion module relied on four static hardcoded examples in `archaeology-dataset.ts`. The production repository containing actual historical commit records (`craighckby-stack/Archaeology-Engine`) was not being fetched.
-- **Solution:**
-  - Developed `src/lib/archaeology-live-sync.ts` to directly fetch and parse tree records from the GitHub REST API.
-  - Mapped the primary ingestion command (`ingest-archaeology`) to the live synchronizer and preserved the static data strictly as an offline bootstrap fallback (`seed-archaeology`).
-
-### 3.5 Scaffold Generation Failures Under Model Degradation
-- **Problem:** Automated repository creation (`DARLEK-CAAN-V2`) failed with the error:
-  `BLUEPRINT COMPILATION BLOCKED OR FAILED: Gemini API returned empty compilation output.`
-- **Root Cause:** When model calls failed or encountered rate limits, the wrapper returned `null`. The repository creation route contained a hard check (`if (!generatedText) throw new Error(...)`), triggering a 500 error instead of falling back to deterministic project generation.
-- **Solution:**
-  - Modified `compileBlueprintToFiles()` to switch to `useDeterministicFallback = true` whenever output is empty, unparseable, or missing file declarations.
-  - Expanded the deterministic scaffold to provide a complete, buildable Next.js project structure (including `src/app/page.tsx`, `layout.tsx`, `globals.css`, and metadata).
-
-### 3.6 Automated Code Preservation and Function Loss Prevention
-- **Problem:** Early automated refactoring attempts frequently cleared compilation errors by deleting failing functions or substituting empty stubs.
-- **Root Cause:** Unconstrained generative models minimize token loss by taking the simplest path to satisfy syntax checks, which often means dropping problematic blocks entirely.
-- **Solution:**
-  - Implemented the deterministic `StructuralSanityGuard` (`src/lib/structural-sanity-guard.ts`) to build symbol tables from both the source and proposed code. If an existing function signature is removed without explicit consensus, the mutation is flagged as a function scrub and rejected.
-  - Added `AstDiffGate` (`src/lib/ast-diff-gate.ts`) to calculate structural change ratios and reject unlisted or hallucinated dependencies.
-
----
-
-## 4. System Verification & Performance Metrics
-
-| Evaluation Area | Prior Implementation | Current Implementation | Measured Improvement |
-| :--- | :--- | :--- | :--- |
-| **Concurrency Control** | Race conditions between loops; lockouts | Centralized atomic mutex with lease timeout | Zero database collisions; automatic recovery from stalled tasks |
-| **API Rate Limiting** | Frequent HTTP 429 quota exceptions | Worker concurrency limit (2) with fallback | Graceful degradation to local deterministic generation |
-| **Telemetry & Metrics** | Heuristic composite rating | Raw, unadjusted operational counts | Accurate visibility into mutation, hotswap, and rejection counts |
-| **Data Ingestion** | Static 4-item bootstrap array | Live GitHub tree synchronization | Direct ingestion of real-world commit diffs |
-| **Scaffold Generation** | Aborted on model availability errors | Deterministic fallback scaffold generation | 100% repository creation reliability |
-| **Code Preservation** | Functions occasionally omitted by model | AST Symbol Diff Gate & Sanity Guard | Elimination of unauthorized function deletions |
-
----
-
-## 5. Technology Stack & Directory Structure
-
-### 5.1 Technologies Used
-- **Frontend:** React 19, Vite, Tailwind CSS, Lucide Icons.
-- **Backend Server:** Node.js, Express server (`server.ts`) with integrated Vite middleware.
-- **Data & Storage:** Firebase Firestore (for structured memory and mutation logs), GitHub REST API.
-- **Language Models:** Google GenAI SDK (`@google/genai`) with automated candidate fallback handling.
-
-### 5.2 Project Directory Layout
-
-```
-server.ts                               # Express backend: API routing and Vite middleware
-src/
-  app/api/
-    evolution/                          # Analysis, debate, and lock management endpoints
-      debate/route.ts                   # Multi-agent consensus review with concurrency limits
-      propose/route.ts                  # Mutation proposal generation endpoint
-      lock/route.ts                     # Cross-environment synchronization endpoint
-      coherence-gate/route.ts           # Coherence and consensus score calculator
-    github/
-      create-system-repo/route.ts       # Repository creation and resilient scaffolding
-  components/
-    DashboardPanel.tsx                  # Operational telemetry and state monitoring
-    DosConsoleModal.tsx                 # Diagnostic terminal and interactive console
-    DebateChamber.tsx                   # Agent consensus and review status display
-    MainPage.tsx                        # Main application container and event management
-  lib/
-    archaeology-live-sync.ts            # Live GitHub synchronization for historical commit diffs
-    archaeology-dataset.ts              # Static exemplar dataset for offline initialization
-    ast-diff-gate.ts                    # AST symbol validation and syntax verification
-    evolutionLock.ts                    # Mutual exclusion manager with TTL recovery
-    firebase.ts                         # Database client initialization
-    gemini.ts                           # Model client with multi-tier fallback logic
-    msDosEngine.ts                      # Background task loop and module registry manager
-    ragBrain.ts                         # Structured mutation store and telemetry metrics
-    structural-sanity-guard.ts          # Deterministic sanity checks against code scrubbing
+                     ┌──────────────────────────────────────────────┐
+                     │          Git Archaeology History             │
+                     │    (craighckby-stack/Archaeology-Engine)     │
+                     └──────────────────────┬───────────────────────┘
+                                            │ Live Ingestion
+                                            ▼
+                     ┌──────────────────────────────────────────────┐
+                     │      Firestore & Local Cache Memory Store    │
+                     └──────────────────────┬───────────────────────┘
+                                            │ Context Vector
+                                            ▼
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                    MULTI-AGENT DEBATE & CONSENSUS CHAMBER                               │
+│                                                                                         │
+│  ┌────────────────┐ ┌────────────────┐ ┌────────────────┐ ┌───────────────────────────┐  │
+│  │ Execution Opt  │ │ Security Guard │ │ AST Validator  │ │ Compatibility & Operator  │  │
+│  └────────┬───────┘ └────────┬───────┘ └────────┬───────┘ └─────────────┬─────────────┘  │
+│           └──────────────────┴─────────┬────────┴───────────────────────┘               │
+│                                        ▼                                                │
+│                              Coherence Evaluation Gate                                  │
+└────────────────────────────────────────┬────────────────────────────────────────────────┘
+                                         │ Passed Candidate Mutation
+                                         ▼
+                     ┌──────────────────────────────────────────────┐
+                     │         Deterministic AST Diff Gate          │
+                     │       & Structural Sanity Verification       │
+                     └──────────────────────┬───────────────────────┘
+                                         │ Zero-Fault Approved
+                                         ▼
+                     ┌──────────────────────────────────────────────┐
+                     │    Hotswap Module Registry / Git Committer   │
+                     └──────────────────────────────────────────────┘
 ```
 
 ---
 
-## 6. Installation & Configuration
+## 3. Key Subsystems
 
-### 6.1 Prerequisites
-- Node.js $\ge 18.0.0$ or Bun
-- A Google Gemini API Key
-- (Optional) A GitHub Personal Access Token with repository read/write permissions for synchronization and repository generation.
+### 3.1 Debate Chamber & Consensus Gate
+Located in `src/app/api/evolution/debate/route.ts` and `src/components/DebateChamber.tsx`, this subsystem processes proposals through specialized evaluator personas. A concurrency limiter (`runWithConcurrencyLimit(2)`) protects against API rate limits while calculating a unified consensus score ($0.0 - 1.0$) with hard veto rights on critical security or structural flaws.
 
-### 6.2 Setup
+### 3.2 Deterministic AST Diff Gate & Structural Sanity Guard
+- **`src/lib/structural-sanity-guard.ts`**: Verifies that declared function signatures and exported classes are not deleted, hollowed out, or replaced with empty stubs.
+- **`src/lib/ast-diff-gate.ts`**: Analyzes TypeScript ASTs without model inference, enforcing strict limits on structural churn and verifying imports against a whitelist.
+
+### 3.3 Historical Commit Archaeology
+- **`src/lib/archaeology-live-sync.ts`**: Connects directly to GitHub to parse unified diff records, separating broken commits from verified patches to build a grounded post-mortem memory.
+
+### 3.4 Cryptographic Helpers & Security
+- **`src/lib/darlek/crypto.ts`**: Cryptographic module featuring SHA-256 digests, HMAC-SHA256 signing, constant-time comparisons (`timingSafeEqual`), cryptographically random tokens, and secret masking.
+- **`src/lib/binaryShield.ts`**: Web Crypto API AES-GCM secure storage pipeline.
+
+### 3.5 Multi-Tier Generative AI Integration
+- Powered by both the official `@google/generative-ai` SDK (`src/lib/darlek/ai.ts`) and `@google/genai` (`src/lib/gemini.ts`), featuring automated fallback cascades (`gemini-2.5-flash` $\rightarrow$ `gemini-1.5-flash` $\rightarrow$ deterministic offline templates).
+
+---
+
+## 4. Project Structure
+
+```
+├── .env.example                         # Environment configuration template
+├── LICENSE                              # Non-Profit CC BY-NC-SA 4.0 License
+├── README.md                            # Comprehensive technical documentation
+├── package.json                         # Dependencies and build scripts
+├── server.ts                            # Full-stack Express server + Vite middleware
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── evolution/               # Evolution engine routes (debate, propose, health, lock)
+│   │   ├── globals.css                  # Global Tailwind styles
+│   │   ├── layout.tsx                   # Root HTML layout and typography
+│   │   └── page.tsx                     # Main page entrypoint
+│   ├── components/
+│   │   ├── AgentOrchestra.tsx           # Multi-agent visual orchestrator
+│   │   ├── DebateChamber.tsx            # Live debate review interface
+│   │   ├── DosConsoleModal.tsx          # Diagnostic CLI console
+│   │   ├── LicenseModal.tsx             # Interactive Non-Profit license viewer
+│   │   ├── MainPage.tsx                 # Core UI container
+│   │   └── SaturationMetrics.tsx        # System saturation telemetry
+│   ├── lib/
+│   │   ├── darlek/
+│   │   │   ├── ai.ts                    # Google AI Studio SDK integration
+│   │   │   ├── crypto.ts                # Cryptographic helper module
+│   │   │   └── index.ts                 # Darlek library export index
+│   │   ├── archaeology-live-sync.ts     # Git archaeology dataset fetcher
+│   │   ├── ast-diff-gate.ts             # Deterministic AST validation
+│   │   ├── evolutionLock.ts             # Atomic distributed mutex lock
+│   │   ├── gemini.ts                    # AI client with fallback cascade
+│   │   └── structural-sanity-guard.ts   # Anti-scrubbing sanity guardian
+│   └── types.ts                         # Shared TypeScript interfaces
+```
+
+---
+
+## 5. Getting Started
+
+### 5.1 Prerequisites
+- **Node.js** 20+ or 22+ (LTS)
+- A **Google Gemini API Key** (from [Google AI Studio](https://aistudio.google.com/))
+- (Optional) GitHub Personal Access Token for remote repository sync
+
+### 5.2 Installation
 
 ```bash
 # Clone the repository
 git clone https://github.com/craighckby-stack/DARLEK-CAAN.git
 cd DARLEK-CAAN
 
-# Install project dependencies
+# Install dependencies
 npm install
+```
 
-# Copy configuration template
+### 5.3 Environment Configuration
+
+Copy `.env.example` to `.env`:
+
+```bash
 cp .env.example .env
 ```
 
-Configure required environment variables in `.env`:
+Set your configuration values:
+
 ```env
-GEMINI_API_KEY="your-gemini-api-key"
-APP_URL="http://localhost:3000"
+# Google AI Studio Gemini API Key (Server-side)
+GEMINI_API_KEY=your_gemini_api_key_here
+
+# App settings
+NODE_ENV=development
+PORT=3000
 ```
 
-### 6.3 Build & Execution Commands
+### 5.4 Running the Application
 
 ```bash
-# Start local development server (Express + Vite on port 3000)
+# Start the local development server (runs Express + Vite on port 3000)
 npm run dev
 
-# Run static type and lint verification
+# Run static linting
 npm run lint
 
-# Build production bundle (Vite SPA + Node CommonJS server)
+# Compile production bundle
 npm run build
 
 # Start production server
 npm start
 ```
 
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
 ---
 
-## 7. Summary
+## 6. API Endpoints
 
-The DARLEK-CAAN architecture demonstrates that reliable automated software modification requires balancing generative models with deterministic verification. By combining multi-agent review, AST symbol validation, atomic concurrency control, and real-world commit intelligence, the engine prevents regressions while enabling autonomous, verifiable code refactoring.
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `GET / POST` | `/api/evolution/health` | Diagnostic health check and system saturation metrics |
+| `POST` | `/api/evolution/propose` | Generates candidate mutation proposals for target code |
+| `POST` | `/api/evolution/debate` | Multi-agent consensus debate on proposed mutations |
+| `POST` | `/api/evolution/coherence-gate`| Evaluates coherence score and veto conditions |
+| `POST` | `/api/evolution/lock` | Acquires or releases distributed atomic mutex |
+| `GET / POST` | `/api/brain` | Inspects and queries current RAG memory state |
+
+---
+
+## 7. Non-Profit License & Citation
+
+This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** with an explicit **Non-Profit Research Covenant**.
+
+### Permitted
+- Educational exploration and study
+- Academic research and scientific benchmarking
+- Non-monetized personal and non-profit usage
+- Modifications shared under identical non-commercial terms
+
+### Prohibited
+- Commercial sale, re-licensing, or packaging
+- Paid SaaS services or gated subscription access
+- Closed-source proprietary redistribution
+
+For citation in academic papers or non-profit research:
+
+```bibtex
+@misc{darlek_caan_2026,
+  author = {Craighckby},
+  title = {DARLEK CAAN: Autonomous Architectural Synthesizer and Verification Engine},
+  year = {2026},
+  publisher = {GitHub},
+  howpublished = {\url{https://github.com/craighckby-stack/DARLEK-CAAN}},
+  note = {Non-Profit Research License (CC BY-NC-SA 4.0)}
+}
+```

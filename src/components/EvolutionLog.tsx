@@ -9,7 +9,7 @@
 
 import React, { memo } from 'react';
 import type { EvolutionLogEntry } from '@/lib/types';
-import { COLORS, LOG_TYPE_ICONS, LOG_TYPE_COLORS } from '@/lib/constants';
+import { COLORS, LOG_TYPE_ICONS, LOG_TYPE_COLORS, type ColorValue } from '@/lib/constants';
 import { ScrollText } from 'lucide-react';
 
 export interface EvolutionLogProps {
@@ -46,8 +46,8 @@ function formatTimestamp(timestamp: string | number | Date): string {
  * Renders an individual entry row in the evolution log with memory safety and strict validation.
  */
 const LogRow = memo(function LogRow({ entry }: LogRowProps) {
-  const accentColor = LOG_TYPE_COLORS[entry.type] ?? COLORS.textDim;
-  const logIcon = LOG_TYPE_ICONS[entry.type] ?? '●';
+  const accentColor = (LOG_TYPE_COLORS as Record<string, ColorValue>)[entry.type] ?? COLORS.textDim;
+  const logIcon = (LOG_TYPE_ICONS as Record<string, string>)[entry.type] ?? '●';
   const formattedTimestamp = formatTimestamp(entry.timestamp);
 
   return (

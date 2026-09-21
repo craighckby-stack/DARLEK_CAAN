@@ -73,7 +73,7 @@ export interface QuickActionsProps {
 interface ActionDefinition {
   readonly id: string;
   readonly label: string;
-  readonly icon: React.ComponentType<{ readonly size?: number; readonly className?: string }>;
+  readonly icon: React.ComponentType<{ readonly size?: number | string; readonly className?: string } | any>;
   readonly color: string;
 }
 
@@ -83,25 +83,25 @@ interface ActionDefinition {
 
 const QUICK_ACTION_REGISTRY: ActionDefinition[] = [
   { id: 'scan', label: 'SCAN REPOSITORY', icon: Search, color: COLORS.cyan },
-  { id: 'bugs', label: 'BUG INSPECTOR', icon: Bug, color: '#ff0033' },
+  { id: 'bugs', label: 'BUG INSPECTOR', icon: Bug, color: '#f43f5e' },
   { id: 'analyze', label: 'ANALYZE FILE', icon: FileCode, color: COLORS.gold },
   { id: 'propose', label: 'PROPOSE MUTATION', icon: Dna, color: COLORS.purple },
-  { id: 'propose-all', label: 'SELECT ALL', icon: ListChecks, color: '#00ccff' },
-  { id: 'bulk-commit', label: 'BULK COMMIT', icon: GitCommit, color: '#33ffaa' },
+  { id: 'propose-all', label: 'SELECT ALL', icon: ListChecks, color: '#38bdf8' },
+  { id: 'bulk-commit', label: 'BULK COMMIT', icon: GitCommit, color: '#34d399' },
   { id: 'create-file', label: 'CREATE FILE', icon: FileCode, color: COLORS.green },
-  { id: 'recalibrate-dna', label: 'RECALIBRATE DNA', icon: Dna, color: '#00ffaa' },
-  { id: 'resume-save', label: 'RESUME PENDING SAVE', icon: RotateCcw, color: '#ffaa00' },
-  { id: 'health', label: 'HEALTH CHECK', icon: Heart, color: COLORS.dalekRed },
+  { id: 'recalibrate-dna', label: 'RECALIBRATE DNA', icon: Dna, color: '#2dd4bf' },
+  { id: 'resume-save', label: 'RESUME PENDING SAVE', icon: RotateCcw, color: '#f59e0b' },
+  { id: 'health', label: 'HEALTH CHECK', icon: Heart, color: '#38bdf8' },
   { id: 'saturation', label: 'VIEW SATURATION', icon: Eye, color: COLORS.electricBlue },
   { id: 'debate', label: 'DEBATE CHAMBER', icon: Users, color: COLORS.purple },
   { id: 'orchestra', label: 'ORCHESTRA', icon: Radio, color: COLORS.gold },
   { id: 'push-enhancements', label: 'PUSH FILES', icon: Upload, color: COLORS.green },
-  { id: 'deploy-new-repo', label: 'DEPLOY NEW REPO', icon: Rocket, color: '#ff6600' },
-  { id: 'undo-mutation', label: 'UNDO MUTATION', icon: Undo2, color: '#ff3366' },
-  { id: 'ingest-archaeology', label: 'INGEST ARCHAEOLOGY', icon: FileCode, color: '#00ffff' },
-  { id: 'sync-rag-to-github', label: 'AUTO-STORE RAG TO GITHUB', icon: Upload, color: '#00ffcc' },
-  { id: 'empty-firebase', label: 'EMPTY FIREBASE', icon: Trash2, color: '#ff0055' },
-  { id: 'reboot-system', label: 'REBOOT SYSTEM', icon: RotateCcw, color: '#ff00ff' },
+  { id: 'deploy-new-repo', label: 'DEPLOY NEW REPO', icon: Rocket, color: '#f97316' },
+  { id: 'undo-mutation', label: 'UNDO MUTATION', icon: Undo2, color: '#fb7185' },
+  { id: 'ingest-archaeology', label: 'INGEST ARCHAEOLOGY', icon: FileCode, color: '#22d3ee' },
+  { id: 'sync-rag-to-github', label: 'AUTO-STORE RAG TO GITHUB', icon: Upload, color: '#06b6d4' },
+  { id: 'empty-firebase', label: 'EMPTY FIREBASE', icon: Trash2, color: '#f43f5e' },
+  { id: 'reboot-system', label: 'REBOOT SYSTEM', icon: RotateCcw, color: '#a855f7' },
 ];
 
 const PRESET_CYCLES = [1, 5, 10] as const;
@@ -443,8 +443,8 @@ export default function QuickActions({
             {autoApproveRisk !== undefined && onAutoApproveRiskChange && (
               <ControlToggle
                 active={autoApproveRisk === 'hallucinate' || (hallucinationLevel !== undefined && hallucinationLevel >= 75)}
-                activeColor="#c800ff"
-                label="HALLUCINATE"
+                activeColor="#06b6d4"
+                label="ADAPTIVE FREEDOM"
                 icon={<Sparkles size={9} />}
                 onToggle={() => {
                   if (autoApproveRisk === 'hallucinate') {
@@ -455,14 +455,14 @@ export default function QuickActions({
                     onHallucinationLevelChange?.(85);
                   }
                 }}
-                title={autoApproveRisk === 'hallucinate' ? 'Hallucination Mode ON — radical architectural leaps & zero limits' : 'Hallucination Mode OFF — standard controlled thresholds'}
+                title={autoApproveRisk === 'hallucinate' ? 'Adaptive Learning Freedom ON — creative synthesis & autonomous architectural adaptation' : 'Adaptive Learning Freedom OFF — standard baseline thresholds'}
               />
             )}
 
             {autoPauseOnSaturation !== undefined && onToggleAutoPauseOnSaturation && (
               <ControlToggle
                 active={autoPauseOnSaturation}
-                activeColor="#ffaa00"
+                activeColor="#f59e0b"
                 label="SATURATION GUARD"
                 icon={<ShieldAlert size={9} />}
                 onToggle={onToggleAutoPauseOnSaturation}
@@ -473,7 +473,7 @@ export default function QuickActions({
             {autoSkipSaturated !== undefined && onToggleAutoSkipSaturated && (
               <ControlToggle
                 active={autoSkipSaturated}
-                activeColor="#00e5ff"
+                activeColor="#38bdf8"
                 label="SATURATION BLACKLIST"
                 icon={<Ban size={9} />}
                 onToggle={onToggleAutoSkipSaturated}
@@ -485,23 +485,23 @@ export default function QuickActions({
               <button
                 type="button"
                 onClick={handleLazyAssClick}
-                className="flex items-center gap-1 px-1.5 py-0.5 rounded-sm transition-all duration-200 cursor-pointer text-[#ff00a0] bg-pink-950/15 border border-[#ff00a0]/30 hover:border-[#ff00a0] hover:bg-pink-950/30 font-bold active:scale-95 shadow-[0_0_8px_rgba(255,0,160,0.1)] hover:shadow-[0_0_12px_rgba(255,0,160,0.35)]"
+                className="flex items-center gap-1 px-1.5 py-0.5 rounded-sm transition-all duration-200 cursor-pointer text-sky-300 bg-sky-950/40 border border-sky-500/30 hover:border-sky-400 hover:bg-sky-900/40 font-bold active:scale-95 shadow-[0_0_8px_rgba(56,189,248,0.15)] hover:shadow-[0_0_12px_rgba(56,189,248,0.3)]"
                 style={{
                   fontFamily: 'var(--font-orbitron), sans-serif',
                   fontSize: '7px',
                   letterSpacing: '0.05em',
                 }}
-                title="LAZY ASS CYCLE: Auto-Approve ON, Auto-Debate ON, Cycles = 5"
+                title="AUTONOMOUS RUN CYCLE: Auto-Approve ON, Auto-Debate ON, Cycles = 5"
               >
-                <Rocket size={8} className="text-[#ff00a0] animate-bounce" />
-                <span>LAZY ASS MODE (5 CYCLES) 🚀</span>
+                <Rocket size={8} className="text-sky-400 animate-bounce" />
+                <span>AUTO SPRINT (5 CYCLES) ⚡</span>
               </button>
             )}
           </div>
         </div>
 
         {/* Reconfiguration Panel */}
-        <div id="reconfigure-button" className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-1.5 p-2 bg-black/60 border border-red-950/20 rounded">
+        <div id="reconfigure-button" className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-1.5 p-2 bg-slate-900/70 border border-slate-800/80 rounded">
           
           {/* Risk Level Selector */}
           {autoApprove !== undefined && autoApproveRisk !== undefined && onAutoApproveRiskChange && (
@@ -509,31 +509,31 @@ export default function QuickActions({
               <span className="text-[7.5px] tracking-wider font-sans font-bold uppercase" style={{ color: COLORS.textMuted }}>
                 MAX AUTO-APPROVED RISK
               </span>
-              <div className="flex items-center gap-1.5 bg-black/40 p-1 rounded border border-white/5">
+              <div className="flex items-center gap-1.5 bg-slate-950/70 p-1 rounded border border-white/[0.06]">
                 {RISK_LEVELS.map((risk) => {
                   const isActive = autoApproveRisk === risk;
                   const isHallucinate = risk === 'hallucinate';
-                  const borderActiveColor = isHallucinate ? 'rgba(200, 0, 255, 0.4)' : risk === 'low' ? 'rgba(0, 204, 255, 0.4)' : risk === 'medium' ? 'rgba(255, 170, 0, 0.4)' : 'rgba(255, 51, 51, 0.4)';
-                  const bgActiveColor = isHallucinate ? 'rgba(200, 0, 255, 0.1)' : risk === 'low' ? 'rgba(0, 204, 255, 0.1)' : risk === 'medium' ? 'rgba(255, 170, 0, 0.1)' : 'rgba(255, 51, 51, 0.1)';
-                  const textActiveColor = isHallucinate ? '#c800ff' : risk === 'low' ? '#00ccff' : risk === 'medium' ? '#ffaa00' : '#ff3333';
+                  const borderActiveColor = isHallucinate ? 'rgba(6, 182, 212, 0.45)' : risk === 'low' ? 'rgba(56, 189, 248, 0.4)' : risk === 'medium' ? 'rgba(245, 158, 11, 0.4)' : 'rgba(244, 63, 94, 0.4)';
+                  const bgActiveColor = isHallucinate ? 'rgba(6, 182, 212, 0.15)' : risk === 'low' ? 'rgba(56, 189, 248, 0.12)' : risk === 'medium' ? 'rgba(245, 158, 11, 0.12)' : 'rgba(244, 63, 94, 0.12)';
+                  const textActiveColor = isHallucinate ? '#22d3ee' : risk === 'low' ? '#38bdf8' : risk === 'medium' ? '#f59e0b' : '#f43f5e';
                   
                   return (
                     <button
                       key={risk}
                       type="button"
                       onClick={() => onAutoApproveRiskChange(risk)}
-                      className={`flex-grow py-1 px-1 rounded text-[8px] font-mono tracking-wider transition-all duration-200 uppercase text-center font-bold cursor-pointer ${isHallucinate ? 'animate-pulse' : ''}`}
+                      className={`flex-grow py-1 px-1 rounded text-[8px] font-mono tracking-wider transition-all duration-200 uppercase text-center font-bold cursor-pointer ${isHallucinate && isActive ? 'animate-pulse' : ''}`}
                       style={{
-                        color: isActive ? textActiveColor : '#555',
+                        color: isActive ? textActiveColor : '#64748b',
                         background: isActive ? bgActiveColor : 'transparent',
                         borderColor: isActive ? borderActiveColor : 'transparent',
                         borderWidth: '1px',
                         borderStyle: 'solid',
-                        textShadow: isActive && isHallucinate ? '0 0 8px rgba(200, 0, 255, 0.6)' : 'none'
+                        textShadow: isActive && isHallucinate ? '0 0 8px rgba(6, 182, 212, 0.6)' : 'none'
                       }}
-                      title={isHallucinate ? 'Auto-approve ANY risk level & engage Hallucination Engine' : `Auto-approve mutations up to ${risk.toUpperCase()} risk`}
+                      title={isHallucinate ? 'Auto-approve ANY risk level & engage Adaptive Learning Freedom' : `Auto-approve mutations up to ${risk.toUpperCase()} risk`}
                     >
-                      {isHallucinate ? 'HALLUCINATE' : risk}
+                      {isHallucinate ? 'ADAPTIVE FREEDOM' : risk}
                     </button>
                   );
                 })}
@@ -546,9 +546,9 @@ export default function QuickActions({
             <div className="flex flex-col gap-1">
               <div className="flex items-center justify-between">
                 <span className="text-[7.5px] tracking-wider font-sans font-bold uppercase" style={{ color: COLORS.textMuted }}>
-                  HALLUCINATION {hallucinationLevel < 33 ? 'CONSERVATIVE' : hallucinationLevel < 66 ? 'ADAPTIVE' : 'CHAOTIC'}
+                  ADAPTIVE LEARNING FREEDOM: {hallucinationLevel < 33 ? 'CONSERVATIVE' : hallucinationLevel < 66 ? 'BALANCED' : 'MAX FREEDOM'}
                 </span>
-                <span className="text-[7.5px] font-mono font-bold text-[#c800ff]">
+                <span className="text-[7.5px] font-mono font-bold text-[#06b6d4]">
                   {hallucinationLevel}%
                 </span>
               </div>
@@ -558,13 +558,13 @@ export default function QuickActions({
                 max="100"
                 value={hallucinationLevel}
                 onChange={handleHallucinationChange}
-                className="w-full accent-[#c800ff] cursor-pointer"
+                className="w-full accent-[#06b6d4] cursor-pointer"
               />
               <div className="flex gap-1 mt-0.5">
                 {[
                   { label: 'CONSERVATIVE (20%)', val: 20 },
-                  { label: 'ADAPTIVE (50%)', val: 50 },
-                  { label: 'CHAOTIC (85%)', val: 85 },
+                  { label: 'BALANCED FREEDOM (50%)', val: 50 },
+                  { label: 'MAX DISCOVERY (85%)', val: 85 },
                 ].map((tier) => (
                   <button
                     key={tier.val}
@@ -574,8 +574,8 @@ export default function QuickActions({
                       (tier.val === 20 && hallucinationLevel < 33) ||
                       (tier.val === 50 && hallucinationLevel >= 33 && hallucinationLevel < 66) ||
                       (tier.val === 85 && hallucinationLevel >= 66)
-                        ? 'bg-[#c800ff]/20 text-[#c800ff] border-[#c800ff]/40 font-bold'
-                        : 'bg-white/[0.03] hover:bg-white/[0.08] text-gray-400 hover:text-white border-white/5'
+                        ? 'bg-[#06b6d4]/20 text-[#22d3ee] border-[#06b6d4]/50 font-bold shadow-[0_0_8px_rgba(6,182,212,0.25)]'
+                        : 'bg-white/[0.03] hover:bg-white/[0.08] text-slate-400 hover:text-white border-white/5'
                     }`}
                   >
                     {tier.label}

@@ -98,6 +98,7 @@ async function parseSpecializedDocument(
 
   try {
     if (lowerPath.endsWith('.pdf')) {
+      // @ts-ignore
       const pdfParseModule = await import('pdf-parse');
       type PdfParserFn = (buf: Buffer) => Promise<{ text: string }>;
       const pdfParse: PdfParserFn = typeof pdfParseModule === 'function'

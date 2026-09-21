@@ -49,7 +49,7 @@ function getErrorMessage(error: unknown): string {
  * @param {RequestInit} [options] - Optional native fetch initialization parameters.
  * @returns {Promise<ApiResult<T>>} A standardized, immutable API result envelope.
  */
-export async function safeApiFetch<T = unknown>(
+export async function safeApiFetch<T = any>(
   url: string,
   options?: RequestInit
 ): Promise<ApiResult<T>> {

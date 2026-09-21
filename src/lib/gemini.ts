@@ -145,6 +145,7 @@ function getGeminiClient(apiKey: string): GoogleGenAI {
 export interface GeminiCallConfig {
   model?: string;
   maxTokens?: number;
+  maxOutputTokens?: number;
   temperature?: number;
   responseMimeType?: string;
   responseSchema?: unknown;
@@ -387,7 +388,8 @@ export async function embedText(text: string, apiKey?: string): Promise<number[]
         model,
         contents: text,
       });
-      const values = response.embedding?.values || response.embeddings?.[0]?.values;
+      const rawRes = response as { embedding?: { values?: number[] }; embeddings?: Array<{ values?: number[] }> };
+      const values = rawRes.embedding?.values || rawRes.embeddings?.[0]?.values;
       if (Array.isArray(values) && values.length > 0) {
         return values;
       }

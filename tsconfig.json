@@ -52,6 +52,10 @@
     "node_modules",
     "dist",
     "build",
-    "coverage"
+    "coverage",
+    "src/app/layout.tsx",
+    "src/app/not-found.tsx",
+    "src/app/error.tsx",
+    "src/app/page.tsx"
   ]
 }

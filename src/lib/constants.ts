@@ -7,27 +7,27 @@
  */
 
 export const COLORS = {
-  dalekRed: '#ff2020',
-  brightRed: '#ff4444',
-  pureBlack: '#0a0a0a',
+  dalekRed: '#0ea5e9', // Upgraded from harsh red to modern vibrant azure primary
+  brightRed: '#38bdf8',
+  pureBlack: '#07090e',
   pureWhite: '#ffffff',
-  offWhite: '#f5f5f5',
-  silver: '#d1d5db',
-  gold: '#ff3333',
-  cyan: '#ffffff',
-  purple: '#ff2020',
-  electricBlue: '#e5e7eb',
-  darkRed: '#660000',
-  darkestRed: '#110000',
-  darkPanel: '#141414',
-  darkerPanel: '#0a0a0a',
-  panelBorder: '#262626',
-  panelBg: 'rgba(10,10,10,0.98)',
-  redGlow: 'rgba(255, 32, 32, 0.20)',
-  cyanGlow: 'rgba(255, 255, 255, 0.15)',
-  textMuted: '#9ca3af',
-  textDim: '#d1d5db',
-  green: '#ffffff',
+  offWhite: '#f8fafc',
+  silver: '#cbd5e1',
+  gold: '#f59e0b',
+  cyan: '#06b6d4', // Radiant adaptive learning cyan
+  purple: '#8b5cf6',
+  electricBlue: '#3b82f6',
+  darkRed: '#0369a1',
+  darkestRed: '#0c4a6e',
+  darkPanel: '#0d131f',
+  darkerPanel: '#080c14',
+  panelBorder: 'rgba(255, 255, 255, 0.08)',
+  panelBg: 'rgba(13, 19, 31, 0.88)',
+  redGlow: 'rgba(14, 165, 233, 0.15)',
+  cyanGlow: 'rgba(6, 182, 212, 0.18)',
+  textMuted: '#94a3b8',
+  textDim: '#cbd5e1',
+  green: '#10b981',
 } as const;
 
 export type ColorKey = keyof typeof COLORS;
@@ -108,8 +108,8 @@ export const SATURATION_THRESHOLDS = {
 } as const satisfies Record<string, ThresholdConfig>;
 
 export const HEALTH_STATUS_COLORS = {
-  healthy: COLORS.pureWhite,
-  warning: COLORS.brightRed,
+  healthy: COLORS.green,
+  warning: COLORS.gold,
   critical: COLORS.dalekRed,
 } as const;
 

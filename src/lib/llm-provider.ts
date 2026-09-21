@@ -9,7 +9,9 @@
  */
 
 // Safe fallback stub for optional SDK
-const ZAI = {
+const ZAI: {
+  create: () => Promise<any>;
+} = {
   create: async () => {
     throw new Error('SDK provider not available in this environment');
   },

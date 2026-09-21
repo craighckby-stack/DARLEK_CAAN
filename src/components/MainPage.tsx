@@ -22,6 +22,7 @@ import { ingestArchaeologyDatasetToFirebase, ARCHAEOLOGY_PAIRS } from '@/lib/arc
 import { syncArchaeologyRagFromGitHub } from '@/lib/archaeology-live-sync';
 import type {
   Message,
+  MessageRole,
   SystemState,
   EvolutionLogEntry,
   GitHubFile,
@@ -73,7 +74,7 @@ function createId(): string {
   return `id_${timestamp}_${perf}`;
 }
 
-function createMessage(role: 'caan' | 'operator' | 'system', content: string): Message {
+function createMessage(role: MessageRole, content: string): Message {
   return { id: createId(), role, content, timestamp: new Date() };
 }
 
@@ -531,11 +532,6 @@ export default function Home() {
           }
         })
         .catch(() => {});
-
-      const savedCenterView = localStorage.getItem('darlek_cann_center_view');
-      if (savedCenterView === 'files' || savedCenterView === 'cognitive') {
-        setCenterView(savedCenterView);
-      }
 
       const savedActiveTab = localStorage.getItem('darlek_cann_active_tab');
       if (savedActiveTab === 'chat' || savedActiveTab === 'dashboard' || savedActiveTab === 'controls') {
@@ -1568,10 +1564,10 @@ export default function Home() {
   const runCoherenceGate = useCallback(
     async (
       riskScore: number,
-      affectedFiles: string[],
+      affectedFiles: readonly string[] | string[],
       saturation: SystemState['saturation'],
       bypassGate?: boolean,
-      mutationContext?: { originalCode?: string; proposedCode?: string; filePath?: string; repoFiles?: string[]; newFiles?: Array<{ path: string; content?: string }> }
+      mutationContext?: { originalCode?: string; proposedCode?: string; filePath?: string; repoFiles?: string[]; newFiles?: ReadonlyArray<{ readonly path: string; readonly content?: string }> | Array<{ path: string; content?: string }> }
     ): Promise<boolean> => {
       try {
         const res = await fetch('/api/evolution/coherence-gate', {
@@ -4780,9 +4776,9 @@ export default function Home() {
       if (isRiskApproved) {
         const timer = setTimeout(() => {
           if (autoApproveRisk === 'hallucinate') {
-            addSystemMessage('LLM HALLUCINATING: Analyzing code patterns using subconscious neural pathways...');
-            addSystemMessage('LLM HALLUCINATING: Evaluating high-dimensional logic permutations...');
-            addSystemMessage('LLM HALLUCINATING: Decided mutation is optimal based on quantum probability.');
+            addSystemMessage('ADAPTIVE LEARNING: Analyzing code patterns using autonomous neural pathways...');
+            addSystemMessage('ADAPTIVE LEARNING: Evaluating high-dimensional logic permutations...');
+            addSystemMessage('ADAPTIVE LEARNING: Decided mutation is optimal based on cognitive probability.');
           }
           handleMutationDecision('approve');
         }, 500);
@@ -4791,6 +4787,7 @@ export default function Home() {
         console.log(`[Auto Approve Gate] Mutation risk score (${pendingMutation.riskScore}) exceeds selected threshold level (${autoApproveRisk.toUpperCase()}). Pausing for operator manual check.`);
       }
     }
+    return;
   }, [autoApprove, autoApproveRisk, pendingMutation, handleMutationDecision]);
 
   // Lazy Ass pending start useEffect
@@ -4802,6 +4799,7 @@ export default function Home() {
       }, 500);
       return () => clearTimeout(timer);
     }
+    return;
   }, [lazyAssPendingStart, scannedFiles, isLoading]);
 
   // Batch mode continuation useEffect
@@ -5508,8 +5506,7 @@ export default function Home() {
 
   return (
     <div
-      className="h-screen w-full overflow-hidden relative flex flex-col scanline-overlay grid-overlay vignette"
-      style={{ background: COLORS.pureBlack }}
+      className="h-screen w-full overflow-hidden relative flex flex-col bg-[#090a0f] text-slate-100"
     >
       {/* ── Reboot overlay ── */}
       {rebootStatus === 'rebooting' && (
@@ -5709,177 +5706,68 @@ export default function Home() {
       )}
 
       {/* ── Header ── */}
-      <header
-        className="relative flex items-center justify-between px-3 sm:px-6 py-2 flex-shrink-0 min-h-[48px] h-auto flex-wrap sm:flex-nowrap gap-2"
-        style={{
-          borderBottom: '1px solid rgba(255, 32, 32, 0.15)',
-          background:
-            'linear-gradient(180deg, #0d0000 0%, #050000 80%, transparent 100%)',
-        }}
-      >
+      <header className="relative flex items-center justify-between px-3 sm:px-6 py-2.5 flex-shrink-0 min-h-[52px] h-auto flex-wrap sm:flex-nowrap gap-3 bg-[#090a0f]/90 backdrop-blur-md border-b border-white/[0.08]">
         <div className="flex items-center gap-2 sm:gap-4">
-          <div className="flex items-center gap-2">
-            <Shield
-              size={16}
-              style={{ color: COLORS.dalekRed }}
-              className="flex-shrink-0"
-            />
-            <h1
-              className="title-glow hidden sm:block"
-              style={{
-                fontFamily: 'var(--font-orbitron), sans-serif',
-                fontWeight: 800,
-                fontSize: '14px',
-                letterSpacing: '0.25em',
-                color: COLORS.dalekRed,
-              }}
-            >
+          <div className="flex items-center gap-2.5">
+            <div className="p-1.5 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center">
+              <Shield size={16} className="shrink-0" />
+            </div>
+            <h1 className="font-sans font-bold text-sm sm:text-base tracking-wide text-white">
               DARLEK CAAN
             </h1>
-            <span
-              className="sm:hidden"
-              style={{
-                fontFamily: 'var(--font-orbitron), sans-serif',
-                fontWeight: 800,
-                fontSize: '11px',
-                letterSpacing: '0.15em',
-                color: COLORS.dalekRed,
-              }}
-            >
-              DARLEK CAAN
-            </span>
           </div>
-          <span
-            className="hidden md:block"
-            style={{
-              fontSize: '9px',
-              color: COLORS.gold,
-              fontFamily: 'var(--font-orbitron), sans-serif',
-              letterSpacing: '0.12em',
-            }}
-          >
+          <span className="hidden md:inline-flex items-center px-2 py-0.5 rounded-md bg-amber-500/10 border border-amber-500/20 text-amber-300 font-mono text-[10px] font-semibold">
             v3.0
           </span>
-          <span
-            className="hidden lg:block"
-            style={{
-              fontSize: '9px',
-              color: COLORS.textMuted,
-              fontFamily: 'var(--font-orbitron), sans-serif',
-              letterSpacing: '0.1em',
-            }}
-          >
-            · INELASTIC NIHILIST ENGINE
+          <span className="hidden lg:inline-flex text-[11px] text-slate-400 font-sans tracking-normal">
+            Autonomous Architectural Synthesizer & Verification Engine
           </span>
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-4 ml-auto">
+        <div className="flex items-center gap-2 sm:gap-3 ml-auto">
           {batchMode && (
-            <div className="flex items-center gap-1.5">
-              <div
-                className="w-1.5 h-1.5 rounded-full animate-pulse"
-                style={{ background: '#00ccff' }}
-              />
-              <span
-                style={{
-                  fontSize: '8px',
-                  color: '#00ccff',
-                  fontFamily: 'var(--font-orbitron), sans-serif',
-                  letterSpacing: '0.08em',
-                }}
-              >
-                BATCH {batchProgress}/{batchQueue.length}
-              </span>
+            <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-sky-500/10 border border-sky-500/20 text-sky-400 text-[10px] font-mono">
+              <div className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
+              <span>BATCH {batchProgress}/{batchQueue.length}</span>
             </div>
           )}
           {mutationsApplied > 0 && (
-            <div className="hidden sm:flex items-center gap-1.5">
-              <Zap size={10} style={{ color: COLORS.green }} />
-              <span
-                style={{
-                  fontSize: '8px',
-                  color: COLORS.green,
-                  fontFamily: 'var(--font-orbitron), sans-serif',
-                  letterSpacing: '0.08em',
-                }}
-              >
-                {mutationsApplied} MUTATED
-              </span>
+            <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-mono">
+              <Zap size={11} className="text-emerald-400" />
+              <span>{mutationsApplied} MUTATED</span>
             </div>
           )}
           {pendingMutation && (
-            <div className="flex items-center gap-1.5">
-              <div
-                className="w-1.5 h-1.5 rounded-full pulse-gold"
-                style={{ background: COLORS.gold }}
-              />
-              <span
-                style={{
-                  fontSize: '8px',
-                  color: COLORS.gold,
-                  fontFamily: 'var(--font-orbitron), sans-serif',
-                  letterSpacing: '0.08em',
-                }}
-              >
-                PENDING
-              </span>
+            <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-amber-500/10 border border-amber-500/20 text-amber-400 text-[10px] font-mono">
+              <div className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              <span>PENDING REVIEW</span>
             </div>
           )}
-          <div className="hidden md:flex items-center gap-2">
-            <Zap size={11} style={{ color: COLORS.gold }} />
-            <span
-              style={{
-                fontSize: '8px',
-                color: COLORS.gold,
-                fontFamily: 'var(--font-orbitron), sans-serif',
-                letterSpacing: '0.1em',
-              }}
-            >
-              TIMELINE: ALPHA
-            </span>
-          </div>
+
           {systemState.setupComplete && (
             <button
               id="reconfigure-button"
               onClick={() => {
                 setSystemState((prev) => ({ ...prev, setupComplete: false }));
               }}
-              className="flex items-center gap-1 px-2 py-1 rounded border border-[#00ffcc]/30 hover:border-[#00ffcc] bg-cyan-950/20 text-cyan-400 hover:text-white cursor-pointer transition-colors text-[8px]"
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white cursor-pointer transition-all text-[11px] font-medium"
               title="Change Personal Access Token, profile owner, target repo, or branch"
-              style={{
-                fontFamily: 'var(--font-orbitron), sans-serif',
-                letterSpacing: '0.05em',
-              }}
             >
-              <Settings size={10} className="text-[#00ffcc] shrink-0" />
-              <span className="hidden sm:inline">SET TOKEN / CONFIGURE</span>
-              <span className="sm:hidden font-semibold">CONFIG</span>
+              <Settings size={12} className="text-sky-400 shrink-0" />
+              <span className="hidden sm:inline">Settings</span>
+              <span className="sm:hidden">Config</span>
             </button>
           )}
 
           {/* Hidden translate container hook */}
           <div id="translate" className="hidden" />
 
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-white/10 bg-white/5 text-[11px] font-medium font-sans">
             <div
-              className={`w-2 h-2 rounded-full ${systemState.setupComplete ? 'pulse-cyan' : 'pulse-red'}`}
-              style={{
-                background: systemState.setupComplete
-                  ? COLORS.cyan
-                  : COLORS.dalekRed,
-              }}
+              className={`w-2 h-2 rounded-full ${systemState.setupComplete ? 'bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.5)]' : 'bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.5)]'}`}
             />
-            <span
-              className="text-[8px] whitespace-nowrap"
-              style={{
-                color: systemState.setupComplete
-                  ? COLORS.cyan
-                  : COLORS.dalekRed,
-                fontFamily: 'var(--font-orbitron), sans-serif',
-                letterSpacing: '0.1em',
-              }}
-            >
-              {systemState.setupComplete ? 'OPERATIONAL' : 'SETUP'}
+            <span className={systemState.setupComplete ? 'text-emerald-400' : 'text-rose-400'}>
+              {systemState.setupComplete ? 'Operational' : 'Setup Required'}
             </span>
           </div>
         </div>
@@ -5888,56 +5776,53 @@ export default function Home() {
       {/* ── Mobile View Selector Tabs ── */}
       {systemState.setupComplete && (
         <div 
-          className="lg:hidden flex items-center justify-between gap-1 border-b border-red-900/30 bg-[#070000] px-2 py-1.5 flex-shrink-0 z-10 w-full min-h-[42px]"
+          className="lg:hidden flex items-center justify-between gap-1.5 border-b border-white/[0.08] bg-[#090a0f] px-3 py-2 flex-shrink-0 z-10 w-full min-h-[44px]"
         >
           <button
             onClick={() => setActiveTab('chat')}
             type="button"
-            className={`flex-1 min-w-0 flex items-center justify-center gap-1 px-1.5 py-1.5 rounded text-[10px] sm:text-[11px] whitespace-nowrap cursor-pointer transition-all duration-200 ${
+            className={`flex-1 min-w-0 flex items-center justify-center gap-1.5 px-2 py-1.5 rounded-lg text-xs whitespace-nowrap cursor-pointer transition-all duration-200 font-sans ${
               activeTab === 'chat' 
-                ? 'text-[#ff2020] bg-red-950/40 border border-red-500/40 shadow-[0_0_8px_rgba(255,32,32,0.2)] font-bold' 
-                : 'text-gray-400 border border-transparent hover:text-gray-200 bg-neutral-950/40'
+                ? 'text-rose-400 bg-rose-500/10 border border-rose-500/30 shadow-sm font-semibold' 
+                : 'text-slate-400 border border-transparent hover:text-slate-200 bg-white/[0.03]'
             }`}
-            style={{ fontFamily: 'var(--font-orbitron), sans-serif', letterSpacing: '0.04em' }}
           >
-            <MessageSquare size={12} className={activeTab === 'chat' ? 'text-[#ff2020] shrink-0' : 'text-gray-400 shrink-0'} />
-            <span className="truncate">CHAT</span>
+            <MessageSquare size={13} className={activeTab === 'chat' ? 'text-rose-400 shrink-0' : 'text-slate-400 shrink-0'} />
+            <span className="truncate">Chat</span>
             {pendingMutation && (
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ffaa00] animate-pulse shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse shrink-0" />
             )}
           </button>
 
           <button
             onClick={() => setActiveTab('dashboard')}
             type="button"
-            className={`flex-1 min-w-0 flex items-center justify-center gap-1 px-1.5 py-1.5 rounded text-[10px] sm:text-[11px] whitespace-nowrap cursor-pointer transition-all duration-200 ${
+            className={`flex-1 min-w-0 flex items-center justify-center gap-1.5 px-2 py-1.5 rounded-lg text-xs whitespace-nowrap cursor-pointer transition-all duration-200 font-sans ${
               activeTab === 'dashboard'
-                ? 'text-[#ffaa00] bg-amber-950/40 border border-amber-500/40 shadow-[0_0_8px_rgba(255,170,0,0.2)] font-bold'
-                : 'text-gray-400 border border-transparent hover:text-gray-200 bg-neutral-950/40'
+                ? 'text-amber-400 bg-amber-500/10 border border-amber-500/30 shadow-sm font-semibold'
+                : 'text-slate-400 border border-transparent hover:text-slate-200 bg-white/[0.03]'
             }`}
-            style={{ fontFamily: 'var(--font-orbitron), sans-serif', letterSpacing: '0.04em' }}
           >
-            <Activity size={12} className={activeTab === 'dashboard' ? 'text-[#ffaa00] shrink-0' : 'text-gray-400 shrink-0'} />
-            <span className="truncate">DASHBOARD</span>
+            <Activity size={13} className={activeTab === 'dashboard' ? 'text-amber-400 shrink-0' : 'text-slate-400 shrink-0'} />
+            <span className="truncate">Dashboard</span>
             {overallHealth !== 'healthy' && (
-              <span className={`w-1.5 h-1.5 rounded-full ${overallHealth === 'critical' ? 'bg-[#ff2020]' : 'bg-[#ffaa00]'} animate-pulse shrink-0`} />
+              <span className={`w-1.5 h-1.5 rounded-full ${overallHealth === 'critical' ? 'bg-rose-500' : 'bg-amber-400'} animate-pulse shrink-0`} />
             )}
           </button>
 
           <button
             onClick={() => setActiveTab('controls')}
             type="button"
-            className={`flex-1 min-w-0 flex items-center justify-center gap-1 px-1.5 py-1.5 rounded text-[10px] sm:text-[11px] whitespace-nowrap cursor-pointer transition-all duration-200 ${
+            className={`flex-1 min-w-0 flex items-center justify-center gap-1.5 px-2 py-1.5 rounded-lg text-xs whitespace-nowrap cursor-pointer transition-all duration-200 font-sans ${
               activeTab === 'controls'
-                ? 'text-[#00ffcc] bg-cyan-950/40 border border-cyan-500/40 shadow-[0_0_8px_rgba(0,255,204,0.2)] font-bold'
-                : 'text-gray-400 border border-transparent hover:text-gray-200 bg-neutral-950/40'
+                ? 'text-sky-400 bg-sky-500/10 border border-sky-500/30 shadow-sm font-semibold'
+                : 'text-slate-400 border border-transparent hover:text-slate-200 bg-white/[0.03]'
             }`}
-            style={{ fontFamily: 'var(--font-orbitron), sans-serif', letterSpacing: '0.04em' }}
           >
-            <Sliders size={12} className={activeTab === 'controls' ? 'text-[#00ffcc] shrink-0' : 'text-gray-400 shrink-0'} />
-            <span className="truncate">CONTROLS</span>
+            <Sliders size={13} className={activeTab === 'controls' ? 'text-sky-400 shrink-0' : 'text-slate-400 shrink-0'} />
+            <span className="truncate">Controls</span>
             {batchMode && (
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00ccff] animate-pulse shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse shrink-0" />
             )}
           </button>
         </div>

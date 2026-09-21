@@ -344,7 +344,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     const appliedMutationsContext =
       recentMutations && recentMutations.length > 0
         ? `\n\nRECENT SYSTEM MUTATIONS (Context of what you have done so far in this session):\n${recentMutations
-            .map((m) => `  - File: ${m.filePath} | Analysis: ${m.analysis}`)
+            .map((m: any) => `  - File: ${m.filePath} | Analysis: ${m.analysis}`)
             .join('\n')}`
         : '';
 

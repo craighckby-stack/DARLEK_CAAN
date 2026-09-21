@@ -122,60 +122,25 @@ export default function ChatMessage({ message }: ChatMessageProps): JSX.Element 
   if (message.role === 'system') {
     return (
       <div className="message-animate flex justify-center py-1">
-        <div
-          className="px-4 py-2 text-center max-w-md"
-          style={{
-            background: 'rgba(0, 255, 204, 0.03)',
-            border: '1px solid rgba(0, 255, 204, 0.1)',
-            borderRadius: '2px',
-          }}
-        >
-          <div
-            className="flex items-center justify-center gap-2 mb-1"
-            style={{
-              fontFamily: 'var(--font-orbitron), sans-serif',
-              fontSize: '8px',
-              fontWeight: 700,
-              letterSpacing: '0.15em',
-              color: COLORS.cyan,
-            }}
-          >
-            <span>&#9673;</span>
+        <div className="px-4 py-2 text-center max-w-lg rounded-xl bg-sky-500/5 border border-sky-500/15 shadow-sm">
+          <div className="flex items-center justify-center gap-1.5 mb-1 text-[10px] font-mono font-semibold tracking-wider text-sky-400 uppercase">
+            <span>●</span>
             <span>SYSTEM NOTIFICATION</span>
-            <span>&#9673;</span>
+            <span>●</span>
           </div>
-          <p
-            style={{
-              fontSize: '11px',
-              lineHeight: '1.5',
-              color: COLORS.cyan,
-              fontFamily: 'var(--font-share-tech-mono), monospace',
-              whiteSpace: 'pre-wrap',
-            }}
-          >
+          <p className="text-xs leading-relaxed text-slate-300 font-mono whitespace-pre-wrap">
             {shouldShow}
           </p>
           {isLong && (
             <button
               type="button"
               onClick={handleToggle}
-              className="flex items-center justify-center gap-1 mx-auto mt-1.5 px-2 py-0.5 rounded-sm transition-all"
-              style={{
-                fontSize: '9px',
-                fontFamily: 'var(--font-orbitron), sans-serif',
-                letterSpacing: '0.08em',
-                color: COLORS.cyan,
-                background: 'rgba(0, 255, 204, 0.06)',
-                border: '1px solid rgba(0, 255, 204, 0.15)',
-                cursor: 'pointer',
-              }}
-              onMouseEnter={(e) => handleMouseEnter(e, 'rgba(0, 255, 204, 0.12)')}
-              onMouseLeave={(e) => handleMouseLeave(e, 'rgba(0, 255, 204, 0.06)')}
+              className="inline-flex items-center justify-center gap-1 mx-auto mt-2 px-2.5 py-1 rounded-md text-[11px] font-sans font-medium text-sky-400 bg-sky-500/10 border border-sky-500/20 hover:bg-sky-500/20 transition-all cursor-pointer"
             >
               {expanded ? (
-                <><ChevronDown size={10} /><span>COLLAPSE</span></>
+                <><ChevronDown size={12} /><span>Collapse</span></>
               ) : (
-                <><ChevronRight size={10} /><span>EXPAND (+{hiddenLines} lines)</span></>
+                <><ChevronRight size={12} /><span>Expand (+{hiddenLines} lines)</span></>
               )}
             </button>
           )}
@@ -187,57 +152,29 @@ export default function ChatMessage({ message }: ChatMessageProps): JSX.Element 
   if (message.role === 'caan') {
     return (
       <div className="message-animate flex justify-start">
-        <div className="chat-caan rounded-lg p-3 mr-6 sm:mr-12 max-w-[90%] sm:max-w-[85%]">
-          <div className="flex items-center gap-2 mb-2">
-            <div
-              className="w-2.5 h-2.5 rounded-full flex-shrink-0 pulse-red"
-              style={{ background: COLORS.dalekRed }}
-            />
-            <span
-              style={{
-                fontFamily: 'var(--font-orbitron), sans-serif',
-                fontSize: '9px',
-                fontWeight: 700,
-                letterSpacing: '0.12em',
-                color: COLORS.dalekRed,
-              }}
-            >
+        <div className="rounded-2xl p-4 mr-4 sm:mr-10 max-w-[92%] sm:max-w-[85%] bg-[#0f141c] border border-white/[0.08] shadow-md space-y-2">
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.6)] flex-shrink-0" />
+            <span className="font-sans text-xs font-semibold text-rose-400 tracking-wide">
               DARLEK CAAN
             </span>
-            <span style={{ fontSize: '8px', color: COLORS.textMuted }} suppressHydrationWarning>{timeStr}</span>
+            <span className="text-[10px] text-slate-500 font-mono ml-auto" suppressHydrationWarning>
+              {timeStr}
+            </span>
           </div>
-          <p
-            style={{
-              fontSize: '13px',
-              lineHeight: '1.7',
-              whiteSpace: 'pre-wrap',
-              fontFamily: 'var(--font-share-tech-mono), monospace',
-              color: '#e8e8e8',
-            }}
-          >
+          <p className="text-sm leading-relaxed text-slate-200 font-sans whitespace-pre-wrap">
             {shouldShow}
           </p>
           {isLong && (
             <button
               type="button"
               onClick={handleToggle}
-              className="flex items-center gap-1 mt-2 px-2 py-0.5 rounded-sm transition-all"
-              style={{
-                fontSize: '9px',
-                fontFamily: 'var(--font-orbitron), sans-serif',
-                letterSpacing: '0.08em',
-                color: COLORS.dalekRed,
-                background: 'rgba(255, 32, 32, 0.06)',
-                border: '1px solid rgba(255, 32, 32, 0.15)',
-                cursor: 'pointer',
-              }}
-              onMouseEnter={(e) => handleMouseEnter(e, 'rgba(255, 32, 32, 0.12)')}
-              onMouseLeave={(e) => handleMouseLeave(e, 'rgba(255, 32, 32, 0.06)')}
+              className="inline-flex items-center gap-1 mt-1 px-2.5 py-1 rounded-md text-[11px] font-sans font-medium text-rose-400 bg-rose-500/10 border border-rose-500/20 hover:bg-rose-500/20 transition-all cursor-pointer"
             >
               {expanded ? (
-                <><ChevronDown size={10} /><span>COLLAPSE</span></>
+                <><ChevronDown size={12} /><span>Collapse</span></>
               ) : (
-                <><ChevronRight size={10} /><span>EXPAND (+{hiddenLines} lines)</span></>
+                <><ChevronRight size={12} /><span>Expand (+{hiddenLines} lines)</span></>
               )}
             </button>
           )}
@@ -248,57 +185,29 @@ export default function ChatMessage({ message }: ChatMessageProps): JSX.Element 
 
   return (
     <div className="message-animate flex justify-end">
-      <div className="chat-operator rounded-lg p-3 ml-6 sm:ml-12 max-w-[90%] sm:max-w-[85%]">
-        <div className="flex items-center gap-2 mb-2 justify-end">
-          <span style={{ fontSize: '8px', color: COLORS.textMuted }} suppressHydrationWarning>{timeStr}</span>
-          <span
-            style={{
-              fontFamily: 'var(--font-orbitron), sans-serif',
-              fontSize: '9px',
-              fontWeight: 700,
-              letterSpacing: '0.12em',
-              color: COLORS.gold,
-            }}
-          >
+      <div className="rounded-2xl p-4 ml-4 sm:ml-10 max-w-[92%] sm:max-w-[85%] bg-[#151d2a] border border-white/10 shadow-md space-y-2">
+        <div className="flex items-center gap-2 justify-end">
+          <span className="text-[10px] text-slate-400 font-mono mr-auto" suppressHydrationWarning>
+            {timeStr}
+          </span>
+          <span className="font-sans text-xs font-semibold text-amber-400 tracking-wide">
             OPERATOR
           </span>
-          <div
-            className="w-2.5 h-2.5 rounded-full flex-shrink-0"
-            style={{ background: COLORS.gold }}
-          />
+          <div className="w-2 h-2 rounded-full bg-amber-400 flex-shrink-0" />
         </div>
-        <p
-          style={{
-            fontSize: '13px',
-            lineHeight: '1.7',
-            whiteSpace: 'pre-wrap',
-            fontFamily: 'var(--font-share-tech-mono), monospace',
-            color: '#ffffff',
-          }}
-        >
+        <p className="text-sm leading-relaxed text-slate-100 font-sans whitespace-pre-wrap">
           {shouldShow}
         </p>
         {isLong && (
           <button
             type="button"
             onClick={handleToggle}
-            className="flex items-center gap-1 mt-2 ml-auto px-2 py-0.5 rounded-sm transition-all"
-            style={{
-              fontSize: '9px',
-              fontFamily: 'var(--font-orbitron), sans-serif',
-              letterSpacing: '0.08em',
-              color: COLORS.gold,
-              background: 'rgba(255, 170, 0, 0.06)',
-              border: '1px solid rgba(255, 170, 0, 0.15)',
-              cursor: 'pointer',
-            }}
-            onMouseEnter={(e) => handleMouseEnter(e, 'rgba(255, 170, 0, 0.12)')}
-            onMouseLeave={(e) => handleMouseLeave(e, 'rgba(255, 170, 0, 0.06)')}
+            className="inline-flex items-center gap-1 mt-1 ml-auto px-2.5 py-1 rounded-md text-[11px] font-sans font-medium text-amber-400 bg-amber-500/10 border border-amber-500/20 hover:bg-amber-500/20 transition-all cursor-pointer"
           >
             {expanded ? (
-              <><ChevronDown size={10} /><span>COLLAPSE</span></>
+              <><ChevronDown size={12} /><span>Collapse</span></>
             ) : (
-              <><ChevronRight size={10} /><span>EXPAND (+{hiddenLines} lines)</span></>
+              <><ChevronRight size={12} /><span>Expand (+{hiddenLines} lines)</span></>
             )}
           </button>
         )}

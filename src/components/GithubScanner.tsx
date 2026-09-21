@@ -10,8 +10,6 @@ import React, { useState, useMemo } from 'react';
 import { useGithubScanner, ScanResult } from '@/hooks/useGithubScanner';
 import { Shield, Play, Square, Download, Filter, Search, Eye, Copy, Check, X, FileCode, AlertTriangle, ArrowRight, Settings, Key, RefreshCw, Trash2, GitCommit, Folder, FileText } from 'lucide-react';
 import { Finding } from '@/lib/scanner';
-import CodeMirror from '@uiw/react-codemirror';
-import { javascript } from '@codemirror/lang-javascript';
 import SnippetScanner from '@/components/SnippetScanner';
 import FolderScanner from '@/components/FolderScanner';
 import { useToast } from '@/hooks/use-toast';
@@ -100,7 +98,7 @@ export default function GithubScanner({ token: initialToken, owner: initialOwner
   };
 
   const flatFindings = useMemo(() => {
-    const all: ActiveFindingState[] = [];
+    const all: (Finding & { file: string; content?: string; sanitized?: string })[] = [];
     results.forEach((res: ScanResult) => {
       res.findings.forEach(f => {
         all.push({ ...f, file: res.file, content: res.content, sanitized: res.sanitized });
@@ -830,19 +828,10 @@ echo "git push origin --force --all"
 
                 <div>
                   <span className="text-gray-500 block text-xs mb-1">Surrounding Code Snippet:</span>
-                  <div className="border border-gray-800 rounded overflow-hidden">
-                    <CodeMirror
-                      value={activeFinding.finding.snippet}
-                      extensions={[javascript()]}
-                      theme="dark"
-                      editable={false}
-                      basicSetup={{
-                        lineNumbers: false,
-                        foldGutter: false,
-                        highlightActiveLine: false
-                      }}
-                      className="text-xs"
-                    />
+                  <div className="border border-gray-800 rounded overflow-hidden bg-neutral-950 p-2.5 max-h-48 overflow-y-auto">
+                    <pre className="text-xs font-mono whitespace-pre-wrap break-all text-neutral-200">
+                      {activeFinding.finding.snippet}
+                    </pre>
                   </div>
                 </div>
               </div>
@@ -868,18 +857,10 @@ echo "git push origin --force --all"
                     </div>
                   </div>
 
-                  <div className="bg-black rounded-lg border border-gray-800 overflow-hidden max-h-72 overflow-y-auto">
-                    <CodeMirror
-                      value={viewMode === 'original' ? activeFinding.content : (activeFinding.sanitized || activeFinding.content)}
-                      extensions={[javascript()]}
-                      theme="dark"
-                      editable={false}
-                      className="text-xs font-mono"
-                      basicSetup={{
-                        highlightActiveLine: true,
-                        highlightSelectionMatches: true,
-                      }}
-                    />
+                  <div className="bg-neutral-950 rounded-lg border border-gray-800 p-3 max-h-72 overflow-y-auto">
+                    <pre className="text-xs font-mono whitespace-pre-wrap break-all text-neutral-200">
+                      {viewMode === 'original' ? activeFinding.content : (activeFinding.sanitized || activeFinding.content)}
+                    </pre>
                   </div>
                 </div>
               )}

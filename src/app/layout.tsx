@@ -19,12 +19,16 @@ import Script from "next/script";
 import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 
-const APP_METADATA_BASE_URL = new URL("https://git-secret-sanitizer.local");
+const APP_METADATA_BASE_URL = new URL("https://darlek-caan.local");
 const APP_LOGO_ICON_URL = "https://z-cdn.chatglm.cn/z-ai/static/logo.svg";
 
 export const metadata: Metadata = {
-  title: "Git Secret & PII Sanitizer",
-  description: "Deep PII and Secret Scanner for GitHub repositories.",
+  title: "DARLEK CAAN - Autonomous Architectural Synthesizer",
+  description: "Autonomous Code Refactoring, Verification Engine & Cognitive Synthesizer with Enforced Retention Policies & Security Hardening.",
+  openGraph: {
+    title: "DARLEK CAAN - Autonomous Architectural Synthesizer",
+    description: "Autonomous Code Refactoring, Verification Engine & Cognitive Synthesizer with Enforced Retention Policies & Security Hardening.",
+  },
   icons: {
     icon: APP_LOGO_ICON_URL,
   },
@@ -32,7 +36,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#07090e",
   width: "device-width",
   initialScale: 1,
 };
@@ -44,7 +48,6 @@ interface RootLayoutProps {
 const DOCUMENT_BODY_INLINE_STYLES = {
   direction: "ltr" as const,
   textAlign: "left" as const,
-  fontFamily: "var(--font-share-tech-mono), monospace",
 };
 
 /**
@@ -78,7 +81,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
       </head>
       <body
         dir="ltr"
-        className="antialiased min-h-screen bg-black text-[#e0e0e0] font-mono overflow-x-hidden m-0 p-0"
+        className="antialiased min-h-screen bg-[#07090e] text-slate-100 font-sans selection:bg-rose-500/20 selection:text-rose-200 overflow-x-hidden m-0 p-0"
         style={DOCUMENT_BODY_INLINE_STYLES}
       >
         {children}

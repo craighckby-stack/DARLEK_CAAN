@@ -319,7 +319,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       temperature: 0.7,
     });
 
-    const fallbackChat = dalekBrainChat(enhancedSystemPrompt, processedMessage, history ? [...history] : undefined);
+    const fallbackChat = dalekBrainChat(enhancedSystemPrompt, processedMessage, history ? [...history] : []);
     const content = result.text || fallbackChat || 'Processing error. Try again.';
 
     return NextResponse.json({

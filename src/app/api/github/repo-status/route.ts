@@ -113,7 +113,6 @@ async function fetchGitHubCommitData(
   try {
     const response = await fetch(url, { 
       headers,
-      next: { revalidate: 60 },
     });
 
     if (!response.ok) {

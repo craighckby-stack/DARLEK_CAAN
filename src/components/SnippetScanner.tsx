@@ -3,8 +3,6 @@
 import React, { useState, useMemo, useCallback, JSX } from 'react';
 import { sanitizeContent, Finding, SENSITIVE_PATTERNS } from '@/lib/scanner';
 import { Shield, Sparkles, Copy, Check, Download, AlertTriangle, FileCode, Trash2 } from 'lucide-react';
-import CodeMirror from '@uiw/react-codemirror';
-import { javascript } from '@codemirror/lang-javascript';
 
 interface PresetSnippet {
   readonly label: string;
@@ -221,19 +219,14 @@ export default function SnippetScanner(): JSX.Element {
             </div>
           </div>
 
-          <div className="flex-1 overflow-auto max-h-[450px]">
-            <CodeMirror
-              value={sanitized || '// Paste code on the left to see sanitized output here'}
-              extensions={[javascript({ jsx: true, typescript: true })]}
-              theme="dark"
-              readOnly={true}
-              basicSetup={{
-                lineNumbers: true,
-                foldGutter: true,
-                highlightActiveLine: false,
-              }}
-              style={{ fontSize: '12px' }}
-            />
+          <div className="flex-1 overflow-auto max-h-[450px] p-3 font-mono text-xs text-slate-200 bg-slate-950/80">
+            {sanitized ? (
+              <pre className="whitespace-pre-wrap font-mono leading-relaxed">
+                <code>{sanitized}</code>
+              </pre>
+            ) : (
+              <span className="text-slate-500 italic">// Paste code on the left to see sanitized output here</span>
+            )}
           </div>
         </div>
       </section>

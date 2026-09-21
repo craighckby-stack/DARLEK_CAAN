@@ -2,8 +2,8 @@
 import express from 'express';
 import http from 'http';
 import path from 'path';
-import { apiRoutes } from './src/api-routes.ts';
-import { NextRequest } from './src/lib/next-mock.ts';
+import { apiRoutes } from './src/api-routes';
+import { NextRequest } from './src/lib/next-mock';
 
 async function createNextMockRequest(req: express.Request): Promise<any> {
   const url = new URL(req.url, `http://${req.headers.host}`);

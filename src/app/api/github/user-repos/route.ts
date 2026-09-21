@@ -235,7 +235,7 @@ export async function GET(): Promise<NextResponse> {
 
 export async function POST(req: NextRequest): Promise<NextResponse> {
   try {
-    const body = await safeReqJson(req, {});
+    const body = await safeReqJson<Record<string, any>>(req, {});
     const token = typeof body?.token === 'string' ? body.token.trim() : '';
 
     const repositoryMap = new Map<string, SanitizedRepository>();
