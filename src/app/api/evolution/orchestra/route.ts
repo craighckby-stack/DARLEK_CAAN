@@ -16,61 +16,61 @@ import type { ApiKeys } from '@/lib/types';
 // ─────────────────────────────────────────────
 
 export interface AgentConfig {
-  id: string;
-  name: string;
-  color: string;
-  icon: string;
-  systemInstruction: string;
+  readonly id: string;
+  readonly name: string;
+  readonly color: string;
+  readonly icon: string;
+  readonly systemInstruction: string;
 }
 
 export interface OrchestraRequestBody {
-  mode?: 'parallel' | 'debate';
-  topic?: string;
-  rounds?: number;
-  apiKeys?: ApiKeys;
-  agentConfigs?: AgentConfig[];
+  readonly mode?: 'parallel' | 'debate';
+  readonly topic?: string;
+  readonly rounds?: number;
+  readonly apiKeys?: ApiKeys;
+  readonly agentConfigs?: AgentConfig[];
 }
 
 export interface AgentCallResult {
-  agentId: string;
-  agentName: string;
-  response: string;
-  provider: string;
-  latencyMs: number;
-  error: string | null;
+  readonly agentId: string;
+  readonly agentName: string;
+  readonly response: string;
+  readonly provider: string;
+  readonly latencyMs: number;
+  readonly error: string | null;
 }
 
 export interface OrchestraLog {
-  timestamp: string;
-  type: 'call' | 'response' | 'error' | 'info';
-  agent?: string | undefined;
-  provider?: string | undefined;
-  message: string;
-  latencyMs?: number | undefined;
+  readonly timestamp: string;
+  readonly type: 'call' | 'response' | 'error' | 'info';
+  readonly agent?: string | undefined;
+  readonly provider?: string | undefined;
+  readonly message: string;
+  readonly latencyMs?: number | undefined;
 }
 
 export interface AgentResponseItem {
-  agentId: string;
-  agentName: string;
-  status: string;
-  response: string;
-  provider: string;
-  timestamp: string;
-  latencyMs: number;
+  readonly agentId: string;
+  readonly agentName: string;
+  readonly status: string;
+  readonly response: string;
+  readonly provider: string;
+  readonly timestamp: string;
+  readonly latencyMs: number;
 }
 
 export interface DebateTurn {
-  round: number;
-  responses: AgentResponseItem[];
+  readonly round: number;
+  readonly responses: AgentResponseItem[];
 }
 
 // ─────────────────────────────────────────────
 // Constants & Fallback Configs
 // ─────────────────────────────────────────────
 
-export const dynamic = 'force-dynamic';
+export const dynamic: string = 'force-dynamic';
 
-const DEFAULT_AGENTS: AgentConfig[] = [
+const DEFAULT_AGENTS: readonly AgentConfig[] = [
   {
     id: 'architect',
     name: 'ARCHITECT',
@@ -103,7 +103,7 @@ const getCurrentTimestamp = (): string => new Date().toISOString();
 function createLog(
   type: OrchestraLog['type'],
   message: string,
-  options?: { agent?: string | undefined; provider?: string | undefined; latencyMs?: number | undefined }
+  options?: { readonly agent?: string | undefined; readonly provider?: string | undefined; readonly latencyMs?: number | undefined }
 ): OrchestraLog {
   return {
     timestamp: getCurrentTimestamp(),
@@ -166,7 +166,7 @@ async function executeParallelAgentCall(
       };
     }
   } catch (err) {
-    const errorMessage = err instanceof Error ? err.message : 'Unknown execution error';
+    const errorMessage: string = err instanceof Error ? err.message : 'Unknown execution error';
     logs.push(
       createLog('error', `${agent.name} execution error: ${errorMessage}`, {
         agent: agent.name,
@@ -194,12 +194,12 @@ export async function GET(): Promise<NextResponse> {
 
 export async function POST(req: NextRequest): Promise<NextResponse> {
   try {
-    const body = await safeReqJson<OrchestraRequestBody>(req, {});
-    const mode = body.mode ?? 'parallel';
-    const topic = body.topic ?? '';
-    const requestedRounds = body.rounds ?? 1;
+    const body: OrchestraRequestBody = await safeReqJson<OrchestraRequestBody>(req, {});
+    const mode: 'parallel' | 'debate' = body.mode ?? 'parallel';
+    const topic: string = body.topic ?? '';
+    const requestedRounds: number = body.rounds ?? 1;
     const apiKeys: ApiKeys = body.apiKeys ?? { github: '' };
-    const agentConfigs = body.agentConfigs;
+    const agentConfigs: AgentConfig[] | undefined = body.agentConfigs;
 
     if (!topic || topic.trim().length < 3) {
       return NextResponse.json({ error: 'Topic is required (minimum 3 characters).' }, { status: 400 });
@@ -209,12 +209,12 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       return NextResponse.json({ error: 'Mode must be "parallel" or "debate".' }, { status: 400 });
     }
 
-    const agents: AgentConfig[] = agentConfigs?.length ? agentConfigs : DEFAULT_AGENTS;
-    const effectiveRounds = Math.min(Math.max(1, requestedRounds), 100);
+    const agents: readonly AgentConfig[] = agentConfigs?.length ? agentConfigs : DEFAULT_AGENTS;
+    const effectiveRounds: number = Math.min(Math.max(1, requestedRounds), 100);
     const logs: OrchestraLog[] = [];
 
-    const geminiKey = apiKeys.gemini || getDefaultGeminiKey();
-    const truncatedTopic = topic.length > 60 ? `${topic.slice(0, 60)}...` : topic;
+    const geminiKey: string = apiKeys.gemini || getDefaultGeminiKey();
+    const truncatedTopic: string = topic.length > 60 ? `${topic.slice(0, 60)}...` : topic;
 
     logs.push(
       createLog(
@@ -229,8 +229,8 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         agents.map((agent) => executeParallelAgentCall(agent, topic, geminiKey, logs))
       );
 
-      let successfulCount = 0;
-      let totalLatency = 0;
+      let successfulCount: number = 0;
+      let totalLatency: number = 0;
       const mappedAgents = results.map((r) => {
         if (r.response) successfulCount++;
         totalLatency += r.latencyMs;
@@ -273,7 +273,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       for (const agent of agents) {
         logs.push(createLog('call', `Round ${round} — ${agent.name} thinking...`, { agent: agent.name }));
 
-        const conversationHistory: Array<{ role: string; parts: Array<{ text: string }> }> = [];
+        const conversationHistory: Array<{ readonly role: string; readonly parts: Array<{ readonly text: string }> }> = [];
 
         for (const turn of debateTurns) {
           for (const resp of turn.responses) {
@@ -286,14 +286,14 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
           }
         }
 
-        const isFirstTurn = round === 1 && debateTurns.length === 0;
-        const currentPrompt = isFirstTurn
+        const isFirstTurn: boolean = round === 1 && debateTurns.length === 0;
+        const currentPrompt: string = isFirstTurn
           ? `Analyze the following topic from your unique perspective as ${agent.name}.\n\nTOPIC:\n${topic}\n\nProvide your analysis. Be specific, insightful, and substantive.`
           : `The orchestra is in debate mode, Round ${round}/${effectiveRounds}.\n\nORIGINAL TOPIC:\n${topic}\n\n--- YOUR TURN (${agent.name}, Round ${round}) ---\nReview the prior discussion. You may:\n- Build upon points you agree with\n- Challenge positions you disagree with\n- Introduce new perspectives or data\n- Synthesize the discussion toward consensus or highlight irreconcilable differences\n\nRespond as ${agent.name}. Be substantive and move the discussion forward.`;
 
         conversationHistory.push({ role: 'user', parts: [{ text: currentPrompt }] });
 
-        let executionResult;
+        let executionResult: { readonly text?: string; readonly provider?: string; readonly latencyMs?: number; readonly error?: string };
         try {
           executionResult = isFirstTurn
             ? await callLlm({
@@ -305,7 +305,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
               })
             : await callLlmMultiTurn(agent.systemInstruction, conversationHistory, geminiKey, 1024);
         } catch (err) {
-          const errorMessage = err instanceof Error ? err.message : 'Provider failure';
+          const errorMessage: string = err instanceof Error ? err.message : 'Provider failure';
           executionResult = {
             text: '',
             provider: 'System',
@@ -314,8 +314,8 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
           };
         }
 
-        const responseText = executionResult.text || `[${agent.name} was unable to respond — LLM unavailable]`;
-        const providerName = executionResult.provider || 'None';
+        const responseText: string = executionResult.text || `[${agent.name} was unable to respond — LLM unavailable]`;
+        const providerName: string = executionResult.provider || 'None';
 
         turnResponses.push({
           agentId: agent.id,
@@ -343,7 +343,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       debateTurns.push({ round, responses: turnResponses });
     }
 
-    const totalDebateResponses = debateTurns.reduce(
+    const totalDebateResponses: number = debateTurns.reduce(
       (count, turn) => count + turn.responses.filter((r) => r.status === 'responded').length,
       0
     );
@@ -363,13 +363,17 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     });
   } catch (error) {
     console.error('[Orchestra] Critical Engine Error:', error);
-    const errorMessage = error instanceof Error ? error.message : 'Unknown fatal error';
+    const errorMessage: string = error instanceof Error ? error.message : 'Unknown fatal error';
     return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
 
 // Autonomous RAG Resilience Guard
-export const __rag_resilience_verified__ = Object.freeze({
+export const __rag_resilience_verified__: Readonly<{
+  readonly generation: number;
+  readonly timestamp: string;
+  readonly ragEngine: string;
+}> = Object.freeze({
   generation: 85,
   timestamp: "2026-09-20T03:33:32.536Z",
   ragEngine: "DARLEK_CAAN_HYBRID_RAG"
