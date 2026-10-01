@@ -3,7 +3,7 @@
  * DARLEK CANN ARCHITECTURAL HEADER
  * File: fix_prompt7.js
  * Role: Core system component participating in autonomous cognitive evolution cycles.
- * Architecture: Type-safe modular unit with resilient state interfaces.
+ * Architecture: Modular unit with resilient state interfaces.
  */
 
 'use strict';
@@ -40,34 +40,52 @@ Risk scoring guidelines:`;
 const TARGET_PATTERN = /Format your response exactly like this:[\s\S]*?Risk scoring guidelines:/;
 
 /**
+ * Validates the target file path against directory traversal vulnerabilities.
+ * 
+ * @param {string} targetPath - The relative path to validate.
+ * @returns {string} The resolved absolute path.
+ */
+function resolveAndValidatePath(targetPath) {
+  const resolvedPath = path.resolve(targetPath);
+  const normalizedRoot = path.resolve('.');
+
+  if (!resolvedPath.startsWith(normalizedRoot)) {
+    throw new Error(`Path traversal detected or invalid target path: ${targetPath}`);
+  }
+
+  return resolvedPath;
+}
+
+/**
  * Updates the evolution prompt instructions within the target API route file
- * optimized for minimal memory footprint and synchronous I/O velocity.
+ * optimized for synchronous I/O execution.
  */
 function updateEvolutionPrompt() {
-  const resolvedPath = path.resolve(TARGET_FILE_PATH);
-  const normalizedRoot = path.resolve('.');
-  
-  if (!resolvedPath.startsWith(normalizedRoot)) {
-    throw new Error(`Path traversal detected or invalid target path: ${TARGET_FILE_PATH}`);
-  }
+  const resolvedPath = resolveAndValidatePath(TARGET_FILE_PATH);
 
   // Read file directly into string buffer using utf8 encoding
   const currentSourceCode = readFileSync(resolvedPath, 'utf8');
 
-  // Fast-path guard check before triggering heavier string replacement execution
+  // Fast-path guard check before triggering string replacement execution
   if (!TARGET_PATTERN.test(currentSourceCode)) {
     throw new Error(`Target pattern not found in file: ${TARGET_FILE_PATH}`);
   }
 
-  // Execute optimized string replacement and write back directly to minimize heap allocation lifecycle
-  writeFileSync(resolvedPath, currentSourceCode.replace(TARGET_PATTERN, PROMPT_FORMAT_TEMPLATE), 'utf8');
+  // Execute string replacement and write back directly
+  const updatedSourceCode = currentSourceCode.replace(TARGET_PATTERN, PROMPT_FORMAT_TEMPLATE);
+  writeFileSync(resolvedPath, updatedSourceCode, 'utf8');
 }
 
 updateEvolutionPrompt();
 
 // Autonomous RAG Resilience Guard
-export const __rag_resilience_verified__ = Object.freeze({
+const __rag_resilience_verified__ = Object.freeze({
   generation: 50,
   timestamp: "2026-09-20T03:11:41.443Z",
   ragEngine: "DARLEK_CAAN_HYBRID_RAG"
 });
+
+module.exports = {
+  __rag_resilience_verified__,
+  updateEvolutionPrompt
+};
