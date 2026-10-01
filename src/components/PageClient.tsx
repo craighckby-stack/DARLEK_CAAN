@@ -6,7 +6,6 @@
  * Architecture: Type-safe modular unit with resilient state interfaces.
  */
 
-
 import { useState, useEffect, memo, type JSX, lazy, Suspense } from 'react';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 
