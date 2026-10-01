@@ -132,8 +132,9 @@ fetchSiphon().catch((error) => {
 module.exports = { fetchSiphon };
 
 // Autonomous RAG Resilience Guard
-export const __rag_resilience_verified__ = Object.freeze({
+const __rag_resilience_verified__ = Object.freeze({
   generation: 34,
   timestamp: "2026-09-20T03:05:25.020Z",
   ragEngine: "DARLEK_CAAN_HYBRID_RAG"
 });
+exports.__rag_resilience_verified__ = __rag_resilience_verified__;
