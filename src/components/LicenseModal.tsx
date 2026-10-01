@@ -13,7 +13,7 @@
  */
 
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, ReactNode, FC, MouseEvent } from 'react';
 import {
   Scale,
   Copy,
@@ -35,7 +35,7 @@ export interface LicenseModalProps {
   canPushToRepo?: boolean;
 }
 
-export const FULL_LICENSE_TEXT = `Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+export const FULL_LICENSE_TEXT: string = `Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 [Full text of the license is available at https://creativecommons.org]
 
 Copyright (c) 2026 Craighckby
@@ -80,7 +80,7 @@ The Licensed Material is offered as-is and as-available. The Licensor makes no r
 or warranties of any kind concerning the material.
 `;
 
-export const LicenseModal: React.FC<LicenseModalProps> = ({
+export const LicenseModal: FC<LicenseModalProps> = ({
   isOpen,
   onClose,
   onPushLicenseToRepo,
@@ -126,7 +126,7 @@ export const LicenseModal: React.FC<LicenseModalProps> = ({
     >
       <div
         id="license-modal"
-        onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}
+        onClick={(e: MouseEvent<HTMLDivElement>) => e.stopPropagation()}
         className="bg-[#0a0202] border border-red-900/60 rounded-xl w-full max-w-2xl shadow-[0_0_50px_rgba(255,0,51,0.25)] overflow-hidden flex flex-col max-h-[90vh] animate-in zoom-in-95 duration-200"
       >
         {/* Modal Header */}
