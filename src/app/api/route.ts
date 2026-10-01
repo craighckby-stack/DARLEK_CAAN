@@ -64,7 +64,7 @@ function resolveErrorMessage(error: unknown): string {
 }
 
 /**
- * Handles GET requests to the root API endpoint with hardened memory efficiency and error handling.
+ * Handles GET requests to the root API endpoint with memory efficiency and error handling.
  */
 export async function GET(_request: NextRequest): Promise<NextResponse<ApiResponse>> {
   try {
