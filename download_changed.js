@@ -85,7 +85,7 @@ export function getSanitizedFilePath(rawPath) {
 }
 
 /**
- * Fetches remote file content via standard fetch API with enforced 15s timeout and memory limits.
+ * Fetches remote file content via standard fetch API with enforced timeout and memory limits.
  * @param {string} url - Target URL to fetch content from.
  * @returns {Promise<string>} Decoded string content from remote response.
  */
