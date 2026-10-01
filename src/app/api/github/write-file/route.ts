@@ -275,9 +275,9 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       console.warn(`[Write File] Issue (${response.status}) on ${sanitizedPathLog}. Re-verifying branch & live SHA...`);
       await ensureBranchExists(token, owner, repo, branch);
       
-      const liveSha = await getFileSha(token, owner, repo, branch, cleanPath);
-      if (liveSha) {
-        bodyPayload.sha = liveSha;
+      const refreshedLiveSha = await getFileSha(token, owner, repo, branch, cleanPath);
+      if (refreshedLiveSha) {
+        bodyPayload.sha = refreshedLiveSha;
       } else {
         delete bodyPayload.sha;
       }
