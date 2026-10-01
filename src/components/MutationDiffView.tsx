@@ -86,12 +86,12 @@ export default function MutationDiffView({
   const handleToggleOriginal = useCallback(() => setShowOriginal(prev => !prev), []);
   const handleToggleProposed = useCallback(() => setShowProposed(prev => !prev), []);
   
-  const handlePathInputChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    onPathChange?.(e.target.value);
+  const handlePathInputChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+    onPathChange?.(event.target.value);
   }, [onPathChange]);
 
-  const handleBranchInputChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    onBranchChange?.(e.target.value || '');
+  const handleBranchInputChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+    onBranchChange?.(event.target.value || '');
   }, [onBranchChange]);
 
   const hasValidDebateProposals = useMemo(() => {
@@ -190,18 +190,18 @@ export default function MutationDiffView({
           <div className="space-y-1.5 pt-1">
             <span className="text-[8px] text-[#ffaa00] font-bold uppercase tracking-wider block">Debate Agent Proposed Structures:</span>
             <div className="flex flex-col gap-1.5 max-h-[120px] overflow-y-auto pr-1 select-none">
-              {debateVotes.map((v, idx) => {
-                const prop = v?.structuralProposal;
-                if (!prop || !prop.newPath) return null;
-                const matchesCurrent = prop.newPath === mutation.filePath && prop.branch === (mutation.targetBranch || '');
-                const key = `${v.agentId ?? 'agent'}-${idx}`;
+              {debateVotes.map((voteItem, idx) => {
+                const proposal = voteItem?.structuralProposal;
+                if (!proposal || !proposal.newPath) return null;
+                const matchesCurrent = proposal.newPath === mutation.filePath && proposal.branch === (mutation.targetBranch || '');
+                const key = `${voteItem.agentId ?? 'agent'}-${idx}`;
                 return (
                   <button
                     key={key}
                     type="button"
                     onClick={() => {
-                      if (onPathChange && prop.newPath) onPathChange(prop.newPath);
-                      if (onBranchChange) onBranchChange(prop.branch || '');
+                      if (onPathChange && proposal.newPath) onPathChange(proposal.newPath);
+                      if (onBranchChange) onBranchChange(proposal.branch || '');
                     }}
                     className="w-full text-left p-1.5 rounded flex items-center justify-between text-[9px] font-mono transition-all border shrink-0 cursor-pointer"
                     style={{
@@ -212,15 +212,15 @@ export default function MutationDiffView({
                     id={`debate-proposal-pill-${key}`}
                   >
                     <div className="flex flex-col min-w-0">
-                      <span className="font-bold text-[8px] text-gray-400">{v.agentName ?? 'Unknown Agent'} ({prop.type?.toUpperCase() ?? 'PROP'}):</span>
-                      <span className="text-gray-200 mt-0.5 truncate max-w-[280px] block" title={prop.newPath}>
-                        {prop.newPath}
+                      <span className="font-bold text-[8px] text-gray-400">{voteItem.agentName ?? 'Unknown Agent'} ({proposal.type?.toUpperCase() ?? 'PROP'}):</span>
+                      <span className="text-gray-200 mt-0.5 truncate max-w-[280px] block" title={proposal.newPath}>
+                        {proposal.newPath}
                       </span>
                     </div>
-                    {prop.branch && (
-                      <span className="px-1 py-0.5 rounded bg-purple/10 text-purple border border-purple/20 text-[7px] max-w-[120px] truncate block ml-2" title={prop.branch}>
+                    {proposal.branch && (
+                      <span className="px-1 py-0.5 rounded bg-purple/10 text-purple border border-purple/20 text-[7px] max-w-[120px] truncate block ml-2" title={proposal.branch}>
                         <GitBranch size={8} className="inline mr-0.5" />
-                        {prop.branch}
+                        {proposal.branch}
                       </span>
                     )}
                   </button>
@@ -267,9 +267,9 @@ export default function MutationDiffView({
           >
             AFFECTED FILES ({mutation.affectedFiles.length})
           </span>
-          {mutation.affectedFiles.map((f) => (
-            <div key={f} style={{ fontSize: '10px', color: COLORS.textDim, fontFamily: 'var(--font-share-tech-mono), monospace' }}>
-              • {f}
+          {mutation.affectedFiles.map((file) => (
+            <div key={file} style={{ fontSize: '10px', color: COLORS.textDim, fontFamily: 'var(--font-share-tech-mono), monospace' }}>
+              • {file}
             </div>
           ))}
         </div>
