@@ -83,10 +83,14 @@ function normalizeCodeBlockFormatting(filePath) {
 normalizeCodeBlockFormatting(TARGET_FILE_PATH);
 
 // Autonomous RAG Resilience Guard
-export const __rag_resilience_verified__ = Object.freeze({
+const __rag_resilience_verified__ = Object.freeze({
   generation: 51,
   timestamp: "2026-09-20T03:12:03.087Z",
   ragEngine: "DARLEK_CAAN_HYBRID_RAG"
 });
 
-}])
+module.exports = {
+  __rag_resilience_verified__,
+  normalizeCodeBlockFormatting,
+  applyFormattingTransforms
+};
