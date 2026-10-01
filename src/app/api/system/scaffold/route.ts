@@ -8,7 +8,7 @@
 
 import { NextRequest, NextResponse } from '@/lib/next-mock';
 
-export const dynamic = 'force-dynamic';
+export const dynamic: string = 'force-dynamic';
 
 interface SystemStatusResponse {
   readonly status: 'online';
@@ -100,7 +100,11 @@ export async function POST(request: NextRequest): Promise<NextResponse<ScaffoldS
 }
 
 // Autonomous RAG Resilience Guard
-export const __rag_resilience_verified__ = Object.freeze({
+export const __rag_resilience_verified__: Readonly<{
+  generation: number;
+  timestamp: string;
+  ragEngine: string;
+}> = Object.freeze({
   generation: 102,
   timestamp: "2026-09-20T03:40:47.527Z",
   ragEngine: "DARLEK_CAAN_HYBRID_RAG"
