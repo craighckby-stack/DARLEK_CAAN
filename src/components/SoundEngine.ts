@@ -29,23 +29,23 @@ function getAudioContext(): AudioContext {
 
 export function initAudioEngine(): void {
   try {
-    const ctx = getAudioContext();
+    const ctx: AudioContext = getAudioContext();
     if (ctx.state === 'suspended') {
       void ctx.resume();
     }
     
-    const oscillator = ctx.createOscillator();
-    const gainNode = ctx.createGain();
+    const oscillator: OscillatorNode = ctx.createOscillator();
+    const gainNode: GainNode = ctx.createGain();
     gainNode.gain.value = 0;
     oscillator.connect(gainNode);
     gainNode.connect(ctx.destination);
     
-    const now = ctx.currentTime;
+    const now: number = ctx.currentTime;
     oscillator.start(now);
     oscillator.stop(now + 0.001);
 
     if (typeof window !== 'undefined' && window.speechSynthesis) {
-      const utterance = new SpeechSynthesisUtterance(' ');
+      const utterance: SpeechSynthesisUtterance = new SpeechSynthesisUtterance(' ');
       utterance.volume = 0;
       window.speechSynthesis.speak(utterance);
     }
@@ -64,22 +64,22 @@ export function playSynthSound(
   if (muted) return;
 
   try {
-    const ctx = getAudioContext();
-    const now = ctx.currentTime;
+    const ctx: AudioContext = getAudioContext();
+    const now: number = ctx.currentTime;
 
-    const mainGain = ctx.createGain();
+    const mainGain: GainNode = ctx.createGain();
     mainGain.gain.setValueAtTime(0, now);
     mainGain.gain.linearRampToValueAtTime(volume * 0.3, now + 0.01);
     mainGain.connect(ctx.destination);
 
     switch (type) {
       case 'move': {
-        const oscillator = ctx.createOscillator();
+        const oscillator: OscillatorNode = ctx.createOscillator();
         oscillator.type = 'triangle';
         oscillator.frequency.setValueAtTime(350, now);
         oscillator.frequency.exponentialRampToValueAtTime(700, now + 0.08);
 
-        const filter = ctx.createBiquadFilter();
+        const filter: BiquadFilterNode = ctx.createBiquadFilter();
         filter.type = 'lowpass';
         filter.frequency.setValueAtTime(1200, now);
 
@@ -93,19 +93,19 @@ export function playSynthSound(
       }
 
       case 'capture': {
-        const oscillator = ctx.createOscillator();
+        const oscillator: OscillatorNode = ctx.createOscillator();
         oscillator.type = 'sawtooth';
         oscillator.frequency.setValueAtTime(1200, now);
         oscillator.frequency.exponentialRampToValueAtTime(80, now + 0.25);
 
-        const modulator = ctx.createOscillator();
+        const modulator: OscillatorNode = ctx.createOscillator();
         modulator.type = 'sine';
         modulator.frequency.value = 45;
         
-        const modGain = ctx.createGain();
+        const modGain: GainNode = ctx.createGain();
         modGain.gain.value = 500;
 
-        const filter = ctx.createBiquadFilter();
+        const filter: BiquadFilterNode = ctx.createBiquadFilter();
         filter.type = 'bandpass';
         filter.frequency.setValueAtTime(1500, now);
         filter.frequency.exponentialRampToValueAtTime(200, now + 0.22);
@@ -128,15 +128,15 @@ export function playSynthSound(
       }
 
       case 'check': {
-        const oscPrimary = ctx.createOscillator();
-        const oscSecondary = ctx.createOscillator();
+        const oscPrimary: OscillatorNode = ctx.createOscillator();
+        const oscSecondary: OscillatorNode = ctx.createOscillator();
         oscPrimary.type = 'sine';
         oscSecondary.type = 'sawtooth';
 
         oscPrimary.frequency.value = 660;
         oscSecondary.frequency.value = 440;
 
-        const filter = ctx.createBiquadFilter();
+        const filter: BiquadFilterNode = ctx.createBiquadFilter();
         filter.type = 'peaking';
         filter.Q.value = 10;
         filter.frequency.value = 550;
@@ -160,8 +160,8 @@ export function playSynthSound(
       }
 
       case 'checkmate': {
-        const oscillator = ctx.createOscillator();
-        const subOscillator = ctx.createOscillator();
+        const oscillator: OscillatorNode = ctx.createOscillator();
+        const subOscillator: OscillatorNode = ctx.createOscillator();
         oscillator.type = 'sawtooth';
         subOscillator.type = 'sine';
 
@@ -170,7 +170,7 @@ export function playSynthSound(
         subOscillator.frequency.setValueAtTime(90, now);
         subOscillator.frequency.linearRampToValueAtTime(30, now + 0.9);
 
-        const filter = ctx.createBiquadFilter();
+        const filter: BiquadFilterNode = ctx.createBiquadFilter();
         filter.type = 'lowpass';
         filter.frequency.value = 250;
 
@@ -190,14 +190,14 @@ export function playSynthSound(
       }
 
       case 'victory': {
-        const tempo = 0.08;
-        ARPEGGIO_NOTES.forEach((freq, idx) => {
-          const oscillator = ctx.createOscillator();
+        const tempo: number = 0.08;
+        ARPEGGIO_NOTES.forEach((freq: number, idx: number) => {
+          const oscillator: OscillatorNode = ctx.createOscillator();
           oscillator.type = 'square';
           oscillator.frequency.value = freq;
 
-          const bitGain = ctx.createGain();
-          const startTime = now + idx * tempo;
+          const bitGain: GainNode = ctx.createGain();
+          const startTime: number = now + idx * tempo;
           
           bitGain.gain.setValueAtTime(0, startTime);
           bitGain.gain.linearRampToValueAtTime(volume * 0.3, startTime + 0.01);
@@ -213,7 +213,7 @@ export function playSynthSound(
       }
 
       case 'blip': {
-        const oscillator = ctx.createOscillator();
+        const oscillator: OscillatorNode = ctx.createOscillator();
         oscillator.type = 'sine';
         oscillator.frequency.setValueAtTime(880, now);
         oscillator.frequency.linearRampToValueAtTime(600, now + 0.05);
@@ -227,13 +227,13 @@ export function playSynthSound(
 
       case 'alarm': {
         for (let i = 0; i < 3; i++) {
-          const pulseStartTime = now + i * 0.12;
-          const oscillator = ctx.createOscillator();
+          const pulseStartTime: number = now + i * 0.12;
+          const oscillator: OscillatorNode = ctx.createOscillator();
           oscillator.type = 'triangle';
           oscillator.frequency.setValueAtTime(800 - i * 100, pulseStartTime);
           oscillator.frequency.linearRampToValueAtTime(100, pulseStartTime + 0.1);
 
-          const pulseGain = ctx.createGain();
+          const pulseGain: GainNode = ctx.createGain();
           pulseGain.gain.setValueAtTime(0, pulseStartTime);
           pulseGain.gain.linearRampToValueAtTime(volume * 0.3, pulseStartTime + 0.01);
           pulseGain.gain.exponentialRampToValueAtTime(0.001, pulseStartTime + 0.11);
@@ -320,7 +320,7 @@ export function speakDalekText(
   onEndCallback?: () => void, 
   chronosLoad: number = 0
 ): void {
-  const activeChronos = chronosLoad || globalChronosLoadValue;
+  const activeChronos: number = chronosLoad || globalChronosLoadValue;
   if (muted || typeof window === 'undefined' || !window.speechSynthesis) {
     onEndCallback?.();
     return;
@@ -330,7 +330,7 @@ export function speakDalekText(
     window.speechSynthesis.cancel();
     cleanupSpeechAudio();
 
-    const cleanedText = text
+    const cleanedText: string = text
       .replace(BRACKET_REGEX, "")
       .replace(QUOTE_REGEX, "")
       .trim();
@@ -340,21 +340,21 @@ export function speakDalekText(
       return;
     }
 
-    const utterance = new SpeechSynthesisUtterance(cleanedText);
+    const utterance: SpeechSynthesisUtterance = new SpeechSynthesisUtterance(cleanedText);
     utterance.volume = volume;
     
-    const chronosPercentage = activeChronos / 100;
+    const chronosPercentage: number = activeChronos / 100;
     utterance.pitch = 1.35 + (chronosPercentage * 0.45);
     utterance.rate = 1.0 + (chronosPercentage * 0.5);
 
-    const availableVoices = window.speechSynthesis.getVoices();
-    const ukVoice = availableVoices.find(v => 
+    const availableVoices: SpeechSynthesisVoice[] = window.speechSynthesis.getVoices();
+    const ukVoice: SpeechSynthesisVoice | undefined = availableVoices.find((v: SpeechSynthesisVoice) => 
       v.lang.includes('GB') || 
       v.lang.includes('en-GB') || 
       v.name.toLowerCase().includes('google uk') || 
       v.name.toLowerCase().includes('british')
     );
-    const englishVoice = availableVoices.find(v => v.lang.startsWith('en'));
+    const englishVoice: SpeechSynthesisVoice | undefined = availableVoices.find((v: SpeechSynthesisVoice) => v.lang.startsWith('en'));
     
     if (ukVoice) {
       utterance.voice = ukVoice;
@@ -362,10 +362,10 @@ export function speakDalekText(
       utterance.voice = englishVoice;
     }
 
-    utterance.onstart = () => {
+    utterance.onstart = (): void => {
       try {
-        const ctx = getAudioContext();
-        const now = ctx.currentTime;
+        const ctx: AudioContext = getAudioContext();
+        const now: number = ctx.currentTime;
 
         speechGainNode = ctx.createGain();
         speechGainNode.gain.setValueAtTime(0, now);
@@ -373,12 +373,12 @@ export function speakDalekText(
 
         speechOscillator = ctx.createOscillator();
         speechOscillator.type = 'sawtooth';
-        const carrierFrequency = 120 + chronosPercentage * 150;
+        const carrierFrequency: number = 120 + chronosPercentage * 150;
         speechOscillator.frequency.setValueAtTime(carrierFrequency, now);
 
         speechModulator = ctx.createOscillator();
         speechModulator.type = 'sine';
-        const lfoFrequency = 30 + chronosPercentage * 70;
+        const lfoFrequency: number = 30 + chronosPercentage * 70;
         speechModulator.frequency.value = lfoFrequency;
 
         speechModGain = ctx.createGain();
@@ -397,14 +397,14 @@ export function speakDalekText(
       }
     };
 
-    utterance.onend = () => {
+    utterance.onend = (): void => {
       if (speechGainNode) {
         try {
-          const ctx = getAudioContext();
-          const now = ctx.currentTime;
+          const ctx: AudioContext = getAudioContext();
+          const now: number = ctx.currentTime;
           speechGainNode.gain.setValueAtTime(speechGainNode.gain.value, now);
           speechGainNode.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
-          setTimeout(() => {
+          setTimeout((): void => {
             cleanupSpeechAudio();
             onEndCallback?.();
           }, 60);
@@ -418,7 +418,7 @@ export function speakDalekText(
       }
     };
 
-    utterance.onerror = () => {
+    utterance.onerror = (): void => {
       cleanupSpeechAudio();
       onEndCallback?.();
     };
@@ -437,7 +437,7 @@ export function speakJesusText(
   onEndCallback?: () => void, 
   chronosLoad: number = 0
 ): void {
-  const activeChronos = chronosLoad || globalChronosLoadValue;
+  const activeChronos: number = chronosLoad || globalChronosLoadValue;
   if (muted || typeof window === 'undefined' || !window.speechSynthesis) {
     onEndCallback?.();
     return;
@@ -447,7 +447,7 @@ export function speakJesusText(
     window.speechSynthesis.cancel();
     cleanupSpeechAudio();
 
-    const cleanedText = text
+    const cleanedText: string = text
       .replace(BRACKET_REGEX, "")
       .replace(QUOTE_REGEX, "")
       .trim();
@@ -457,15 +457,15 @@ export function speakJesusText(
       return;
     }
 
-    const utterance = new SpeechSynthesisUtterance(cleanedText);
+    const utterance: SpeechSynthesisUtterance = new SpeechSynthesisUtterance(cleanedText);
     utterance.volume = volume;
     
-    const chronosPercentage = activeChronos / 100;
+    const chronosPercentage: number = activeChronos / 100;
     utterance.pitch = 0.85 + (chronosPercentage * 0.35);
     utterance.rate = 0.85 + (chronosPercentage * 0.40);
 
-    const availableVoices = window.speechSynthesis.getVoices();
-    const usVoice = availableVoices.find(v => 
+    const availableVoices: SpeechSynthesisVoice[] = window.speechSynthesis.getVoices();
+    const usVoice: SpeechSynthesisVoice | undefined = availableVoices.find((v: SpeechSynthesisVoice) => 
       v.lang.includes('US') || 
       v.lang.includes('en-US') || 
       v.name.toLowerCase().includes('google us') || 
@@ -473,7 +473,7 @@ export function speakJesusText(
       v.name.toLowerCase().includes('guy') || 
       v.name.toLowerCase().includes('male')
     );
-    const englishVoice = availableVoices.find(v => v.lang.startsWith('en'));
+    const englishVoice: SpeechSynthesisVoice | undefined = availableVoices.find((v: SpeechSynthesisVoice) => v.lang.startsWith('en'));
 
     if (usVoice) {
       utterance.voice = usVoice;
@@ -481,10 +481,10 @@ export function speakJesusText(
       utterance.voice = englishVoice;
     }
 
-    utterance.onstart = () => {
+    utterance.onstart = (): void => {
       try {
-        const ctx = getAudioContext();
-        const now = ctx.currentTime;
+        const ctx: AudioContext = getAudioContext();
+        const now: number = ctx.currentTime;
 
         celestialGainNode = ctx.createGain();
         celestialGainNode.gain.setValueAtTime(0, now);
@@ -510,14 +510,14 @@ export function speakJesusText(
       }
     };
 
-    utterance.onend = () => {
+    utterance.onend = (): void => {
       if (celestialGainNode) {
         try {
-          const ctx = getAudioContext();
-          const now = ctx.currentTime;
+          const ctx: AudioContext = getAudioContext();
+          const now: number = ctx.currentTime;
           celestialGainNode.gain.setValueAtTime(celestialGainNode.gain.value, now);
           celestialGainNode.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
-          setTimeout(() => {
+          setTimeout((): void => {
             cleanupSpeechAudio();
             onEndCallback?.();
           }, 110);
@@ -531,7 +531,7 @@ export function speakJesusText(
       }
     };
 
-    utterance.onerror = () => {
+    utterance.onerror = (): void => {
       cleanupSpeechAudio();
       onEndCallback?.();
     };
