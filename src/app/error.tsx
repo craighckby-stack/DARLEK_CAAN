@@ -23,17 +23,25 @@ interface ErrorContainerProps {
   readonly onReset: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
-const FALLBACK_ERROR_MESSAGE = 'An unexpected error occurred.';
+interface ErrorMessageProps {
+  readonly message: string;
+}
+
+interface ResetButtonProps {
+  readonly onClick: (event: MouseEvent<HTMLButtonElement>) => void;
+}
+
+const FALLBACK_ERROR_MESSAGE: string = 'An unexpected error occurred.';
 
 const ErrorHeading = (): JSX.Element => (
   <h2 className="mb-2 font-bold text-red-500">SYSTEM ERROR</h2>
 );
 
-const ErrorMessage = ({ message }: { readonly message: string }): JSX.Element => (
+const ErrorMessage = ({ message }: ErrorMessageProps): JSX.Element => (
   <p className="mb-4 text-xs text-gray-400">{message}</p>
 );
 
-const ResetButton = ({ onClick }: { readonly onClick: (event: MouseEvent<HTMLButtonElement>) => void }): JSX.Element => (
+const ResetButton = ({ onClick }: ResetButtonProps): JSX.Element => (
   <button
     type="button"
     onClick={onClick}
@@ -61,7 +69,7 @@ export default function ErrorBoundary({ error, reset }: ErrorBoundaryProps): JSX
     reset();
   }, [reset]);
 
-  const activeErrorMessage = error.message || FALLBACK_ERROR_MESSAGE;
+  const activeErrorMessage: string = error.message || FALLBACK_ERROR_MESSAGE;
 
   return (
     <main 
