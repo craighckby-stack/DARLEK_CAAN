@@ -45,7 +45,8 @@ function validateAndParseUrl(inputUrl) {
   try {
     parsedUrl = new URL(inputUrl);
   } catch (err) {
-    throw new Error(`Invalid URL format: ${err instanceof Error ? err.message : String(err)}`);
+    const errorMessage = err instanceof Error ? err.message : String(err);
+    throw new Error(`Invalid URL format: ${errorMessage}`);
   }
 
   if (parsedUrl.protocol !== 'https:') {
@@ -82,7 +83,8 @@ function consumeResponseStream(response) {
 
     response.on('end', () => {
       try {
-        resolve(Buffer.concat(chunks, totalBytesReceived).toString('utf8'));
+        const assembledBuffer = Buffer.concat(chunks, totalBytesReceived);
+        resolve(assembledBuffer.toString('utf8'));
       } catch (parseError) {
         reject(parseError);
       }
@@ -140,10 +142,11 @@ function fetchRepositoryData(targetUrl = DEFAULT_CONFIG.url) {
  */
 (async function execute() {
   try {
-    const data = await fetchRepositoryData();
-    console.log(data);
+    const repositoryData = await fetchRepositoryData();
+    console.log(repositoryData);
   } catch (err) {
-    console.log(err instanceof Error ? err.message : String(err));
+    const errorMessage = err instanceof Error ? err.message : String(err);
+    console.log(errorMessage);
   }
 })();
 
