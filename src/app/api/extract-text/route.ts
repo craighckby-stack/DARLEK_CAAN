@@ -20,7 +20,6 @@ export type ApiResponse = SuccessResponse | ErrorResponse;
 
 const MAX_PAYLOAD_SIZE_BYTES = 25 * 1024 * 1024; // 25MB safety boundary
 
-// Cached static JSON responses for minimal memory allocation and faster GC turnaround
 const ONLINE_RESPONSE: NextResponse<ApiResponse> = NextResponse.json({ 
   status: 'online', 
   service: 'EXTRACT_TEXT_API', 
@@ -49,7 +48,7 @@ function validatePayloadSize(req: NextRequest): NextResponse<ApiResponse> | null
 }
 
 /**
- * Extracts text content from a PDF buffer, using robust fallback strategies if parsing fails.
+ * Extracts text content from a PDF buffer, using fallback strategies if parsing fails.
  */
 async function extractPdfText(buffer: Buffer): Promise<string> {
   try {
@@ -126,7 +125,6 @@ export async function POST(req: NextRequest): Promise<NextResponse<ApiResponse>>
 
     const contentType = req.headers.get('content-type') ?? '';
 
-    // Handle JSON payloads
     if (contentType.includes('application/json')) {
       const body = (await req.json().catch(() => null)) as { text?: string } | null;
       if (typeof body?.text === 'string' && body.text.length > 0) {
@@ -135,7 +133,6 @@ export async function POST(req: NextRequest): Promise<NextResponse<ApiResponse>>
       return NO_TEXT_RESPONSE;
     }
 
-    // Handle raw text payloads
     if (!contentType.includes('multipart/form-data') && !contentType.includes('application/x-www-form-urlencoded')) {
       const rawText = await req.text().catch(() => '');
       if (typeof rawText === 'string' && rawText.length > 0) {
@@ -144,7 +141,6 @@ export async function POST(req: NextRequest): Promise<NextResponse<ApiResponse>>
       return NO_PAYLOAD_RESPONSE;
     }
 
-    // Handle multipart form-data file uploads
     const formData = await req.formData();
     const file = formData.get('file');
 
