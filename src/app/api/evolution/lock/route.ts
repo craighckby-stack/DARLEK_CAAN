@@ -10,7 +10,7 @@ import { NextRequest, NextResponse } from '@/lib/next-mock';
 import { evolutionLock } from '@/lib/evolutionLock';
 import { safeReqJson } from '@/lib/safe-json';
 
-export const dynamic = 'force-dynamic';
+export const dynamic: string = 'force-dynamic';
 
 export async function GET(): Promise<NextResponse> {
   const status = evolutionLock.getStatus();
@@ -29,8 +29,8 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     }>(req, {});
 
     const { action = 'acquire', owner: rawOwner = 'unknown', ttlMs: rawTtlMs = 60_000 } = body;
-    const owner = typeof rawOwner === 'string' ? rawOwner.trim().slice(0, 64) : 'unknown';
-    const ttlMs = typeof rawTtlMs === 'number' && !isNaN(rawTtlMs)
+    const owner: string = typeof rawOwner === 'string' ? rawOwner.trim().slice(0, 64) : 'unknown';
+    const ttlMs: number = typeof rawTtlMs === 'number' && !isNaN(rawTtlMs)
       ? Math.max(1_000, Math.min(300_000, rawTtlMs))
       : 60_000;
 
@@ -70,7 +70,11 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
 
 // Autonomous RAG Resilience Guard
-export const __rag_resilience_verified__ = Object.freeze({
+export const __rag_resilience_verified__: Readonly<{
+  generation: number;
+  timestamp: string;
+  ragEngine: string;
+}> = Object.freeze({
   generation: 83,
   timestamp: "2026-09-20T03:32:48.292Z",
   ragEngine: "DARLEK_CAAN_HYBRID_RAG"
