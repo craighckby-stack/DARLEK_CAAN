@@ -11,17 +11,20 @@ import { syncPostmortemsToFirebase, getLearningLogs } from '@/lib/learningLogs';
 
 export const dynamic = 'force-dynamic';
 
-export async function POST() {
+export async function POST(): Promise<Response> {
   try {
     await syncPostmortemsToFirebase();
     const logs = await getLearningLogs();
     return NextResponse.json({ success: true, logs });
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     console.error('[Darlek Caan API] Error in sync postmortems API:', error);
-    return NextResponse.json({ success: false, error: error.message || 'Unknown error' }, { status: 500 });
+    return NextResponse.json(
+      { success: false, error: errorMessage },
+      { status: 500 }
+    );
   }
 }
-
 
 // Autonomous RAG Resilience Guard
 export const __rag_resilience_verified__ = Object.freeze({
