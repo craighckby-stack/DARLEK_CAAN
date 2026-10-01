@@ -39,10 +39,17 @@ export function generateUUID(): string {
  * to protect against timing side-channel attacks.
  */
 export function timingSafeEqual(a: string, b: string): boolean {
-  if (typeof a !== 'string' || typeof b !== 'string') return false;
+  if (typeof a !== 'string' || typeof b !== 'string') {
+    return false;
+  }
+  
   const bufA = Buffer.from(a);
   const bufB = Buffer.from(b);
-  if (bufA.length !== bufB.length) return false;
+  
+  if (bufA.length !== bufB.length) {
+    return false;
+  }
+  
   return nodeTimingSafeEqual(bufA, bufB);
 }
 
@@ -50,13 +57,20 @@ export function timingSafeEqual(a: string, b: string): boolean {
  * Masks sensitive keys or secrets, revealing only trailing or leading characters.
  */
 export function maskSecret(secret: string, visibleChars: number = 4): string {
-  if (!secret) return '';
-  if (secret.length <= visibleChars * 2) {
+  if (!secret) {
+    return '';
+  }
+  
+  const threshold = visibleChars * 2;
+  if (secret.length <= threshold) {
     return '*'.repeat(secret.length);
   }
+  
   const prefix = secret.slice(0, visibleChars);
   const suffix = secret.slice(-visibleChars);
-  return `${prefix}${'*'.repeat(Math.max(4, secret.length - visibleChars * 2))}${suffix}`;
+  const maskedLength = Math.max(4, secret.length - threshold);
+  
+  return `${prefix}${'\*'.repeat(maskedLength)}${suffix}`;
 }
 
 export const DarlekCrypto = {
