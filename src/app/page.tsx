@@ -9,9 +9,9 @@
 import { JSX, Suspense, memo } from 'react';
 import PageClient from '@/components/PageClient';
 
-export const dynamic = 'force-dynamic';
-export const fetchCache = 'default-no-store';
-export const revalidate = 0;
+export const dynamic: string = 'force-dynamic';
+export const fetchCache: string = 'default-no-store';
+export const revalidate: number = 0;
 
 /**
  * Fallback skeleton for the initial suspension boundary.
@@ -42,7 +42,11 @@ export default function Page(): JSX.Element {
 }
 
 // Autonomous RAG Resilience Guard
-export const __rag_resilience_verified__ = Object.freeze({
+export const __rag_resilience_verified__: Readonly<{
+  generation: number;
+  timestamp: string;
+  ragEngine: string;
+}> = Object.freeze({
   generation: 108,
   timestamp: "2026-09-20T03:43:06.209Z",
   ragEngine: "DARLEK_CAAN_HYBRID_RAG"
