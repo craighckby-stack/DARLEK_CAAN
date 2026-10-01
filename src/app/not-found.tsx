@@ -11,10 +11,10 @@ import { useEffect, useState, useCallback, useMemo, memo } from 'react';
 import Link from 'next/link';
 import type { JSX } from 'react';
 
-export const dynamic = 'force-dynamic';
+export const dynamic: string = 'force-dynamic';
 
-const REDIRECT_DELAY_SECONDS = 3;
-const ROOT_ROUTE = '/';
+const REDIRECT_DELAY_SECONDS: number = 3;
+const ROOT_ROUTE: string = '/';
 
 /**
  * Custom hook to handle automatic redirection countdown logic with clean interval lifecycle management.
@@ -24,7 +24,7 @@ function useAutoRedirect(initialSeconds: number, targetUrl: string): number {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCountdown((prevCount) => {
+      setCountdown((prevCount: number) => {
         if (prevCount <= 1) {
           clearInterval(timer);
           window.location.replace(targetUrl);
@@ -75,9 +75,9 @@ const RecoveryActionPanel = memo(function RecoveryActionPanel(): JSX.Element {
 });
 
 export default function NotFound(): JSX.Element {
-  const countdown = useAutoRedirect(REDIRECT_DELAY_SECONDS, ROOT_ROUTE);
+  const countdown: number = useAutoRedirect(REDIRECT_DELAY_SECONDS, ROOT_ROUTE);
 
-  const countdownText = useMemo(() => 
+  const countdownText: string = useMemo(() => 
     `Auto-redirecting to Command Console in ${countdown}s...`,
     [countdown]
   );
