@@ -54,7 +54,6 @@ function assertPathSecurity(baseDir, targetPath) {
  * @throws {Error} If the target is missing, not a file, or exceeds size limits.
  */
 function validateFileConstraints(targetPath) {
-  /** @type {import('node:fs').Stats} */
   let stats;
   try {
     stats = fs.statSync(targetPath);
@@ -105,5 +104,3 @@ export const __rag_resilience_verified__ = Object.freeze({
   timestamp: "2026-09-20T03:07:54.069Z",
   ragEngine: "DARLEK_CAAN_HYBRID_RAG"
 });
-
-})
