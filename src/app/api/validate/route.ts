@@ -32,9 +32,9 @@ interface ErrorResponse {
   error: string;
 }
 
-const DEFAULT_FILE_NAME = 'source.tsx';
-const SUPPORTED_TS_REGEX = /\.(ts|tsx)$/i;
-const SUPPORTED_JS_REGEX = /\.(js|jsx|mjs|cjs)$/i;
+const DEFAULT_FILE_NAME: string = 'source.tsx';
+const SUPPORTED_TS_REGEX: RegExp = /\.(ts|tsx)$/i;
+const SUPPORTED_JS_REGEX: RegExp = /\.(js|jsx|mjs|cjs)$/i;
 
 /**
  * Determines the appropriate TypeScript ScriptKind based on file extension.
@@ -67,18 +67,18 @@ export async function POST(req: NextRequest): Promise<NextResponse<SuccessRespon
       return NextResponse.json({ error: 'Source code is required.' }, { status: 400 });
     }
 
-    const normalizedFileName = typeof filePath === 'string' && filePath.trim() ? filePath.trim() : DEFAULT_FILE_NAME;
-    const isTypescriptFile = SUPPORTED_TS_REGEX.test(normalizedFileName);
-    const isJavascriptFile = SUPPORTED_JS_REGEX.test(normalizedFileName);
+    const normalizedFileName: string = typeof filePath === 'string' && filePath.trim() ? filePath.trim() : DEFAULT_FILE_NAME;
+    const isTypescriptFile: boolean = SUPPORTED_TS_REGEX.test(normalizedFileName);
+    const isJavascriptFile: boolean = SUPPORTED_JS_REGEX.test(normalizedFileName);
 
     if (!isTypescriptFile && !isJavascriptFile) {
       return NextResponse.json({ valid: true, diagnostics: [] });
     }
 
-    const isJsxSupported = normalizedFileName.endsWith('.tsx') || normalizedFileName.endsWith('.jsx');
-    const scriptKind = resolveScriptKind(normalizedFileName);
+    const isJsxSupported: boolean = normalizedFileName.endsWith('.tsx') || normalizedFileName.endsWith('.jsx');
+    const scriptKind: ts.ScriptKind = resolveScriptKind(normalizedFileName);
 
-    const sourceFile = ts.createSourceFile(
+    const sourceFile: ts.SourceFile = ts.createSourceFile(
       normalizedFileName,
       code,
       ts.ScriptTarget.Latest,
@@ -99,16 +99,16 @@ export async function POST(req: NextRequest): Promise<NextResponse<SuccessRespon
       compilerOptions.jsx = ts.JsxEmit.ReactJSX;
     }
 
-    const transpileResult = ts.transpileModule(code, {
+    const transpileResult: ts.TranspileOutput = ts.transpileModule(code, {
       compilerOptions,
       reportDiagnostics: true,
       fileName: normalizedFileName,
     });
 
-    const allDiagnostics = [...parseDiagnostics, ...(transpileResult.diagnostics ?? [])];
-    const uniqueDiagnosticsMap = new Map<string, DiagnosticItem>();
+    const allDiagnostics: ts.Diagnostic[] = [...parseDiagnostics, ...(transpileResult.diagnostics ?? [])];
+    const uniqueDiagnosticsMap: Map<string, DiagnosticItem> = new Map<string, DiagnosticItem>();
     
-    const codeLines = code.split(/\r?\n/);
+    const codeLines: string[] = code.split(/\r?\n/);
 
     for (const diagnostic of allDiagnostics) {
       // Skip compiler options configuration errors not related to user source code (5052, 6046)
@@ -116,13 +116,13 @@ export async function POST(req: NextRequest): Promise<NextResponse<SuccessRespon
         continue;
       }
 
-      const startPosition = diagnostic.start ?? 0;
+      const startPosition: number = diagnostic.start ?? 0;
       const { line, character } = sourceFile.getLineAndCharacterOfPosition(startPosition);
-      const diagnosticMessage = ts.flattenDiagnosticMessageText(diagnostic.messageText, '\n');
-      const diagnosticKey = `${line}:${character}:${diagnostic.code}:${diagnosticMessage}`;
+      const diagnosticMessage: string = ts.flattenDiagnosticMessageText(diagnostic.messageText, '\n');
+      const diagnosticKey: string = `${line}:${character}:${diagnostic.code}:${diagnosticMessage}`;
 
       if (!uniqueDiagnosticsMap.has(diagnosticKey)) {
-        const lineText = codeLines[line] ?? '';
+        const lineText: string = codeLines[line] ?? '';
         uniqueDiagnosticsMap.set(diagnosticKey, {
           line: line + 1,
           column: character + 1,
@@ -134,22 +134,26 @@ export async function POST(req: NextRequest): Promise<NextResponse<SuccessRespon
       }
     }
 
-    const diagnostics = Array.from(uniqueDiagnosticsMap.values());
-    const hasErrors = diagnostics.some((diagnostic) => diagnostic.severity === 'error');
+    const diagnostics: DiagnosticItem[] = Array.from(uniqueDiagnosticsMap.values());
+    const hasErrors: boolean = diagnostics.some((diagnostic: DiagnosticItem) => diagnostic.severity === 'error');
 
     return NextResponse.json({
       valid: !hasErrors,
       diagnostics,
     });
   } catch (err: unknown) {
-    const errorMessage = err instanceof Error ? err.message : 'Failed to validate source code.';
+    const errorMessage: string = err instanceof Error ? err.message : 'Failed to validate source code.';
     console.error('Validation route error:', err);
     return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
 
 // Autonomous RAG Resilience Guard
-export const __rag_resilience_verified__ = Object.freeze({
+export const __rag_resilience_verified__: Readonly<{
+  generation: number;
+  timestamp: string;
+  ragEngine: string;
+}> = Object.freeze({
   generation: 105,
   timestamp: "2026-09-20T05:45:52.464Z",
   ragEngine: "DARLEK_CAAN_HYBRID_RAG"
