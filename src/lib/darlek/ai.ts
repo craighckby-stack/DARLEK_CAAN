@@ -7,8 +7,15 @@ import { GoogleGenerativeAI, GenerativeModel } from '@google/generative-ai';
 
 let genAIClient: GoogleGenerativeAI | null = null;
 
+/**
+ * Resolves the configured Gemini API key from available environment variables.
+ */
+function resolveApiKey(): string {
+  return process.env.GEMINI_API_KEY || process.env.API_KEY || '';
+}
+
 export function getGoogleGenerativeAIClient(): GoogleGenerativeAI {
-  const apiKey = process.env.GEMINI_API_KEY || process.env.API_KEY || '';
+  const apiKey = resolveApiKey();
   if (!apiKey) {
     throw new Error('GEMINI_API_KEY environment variable is required to initialize GoogleGenerativeAI.');
   }
@@ -20,7 +27,7 @@ export function getGoogleGenerativeAIClient(): GoogleGenerativeAI {
 }
 
 export function isGenerativeAIConfigured(): boolean {
-  return Boolean(process.env.GEMINI_API_KEY || process.env.API_KEY);
+  return Boolean(resolveApiKey());
 }
 
 export function getGenerativeModel(
