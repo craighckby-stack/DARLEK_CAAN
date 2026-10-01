@@ -12,7 +12,7 @@ import { dalekBrainChat } from '@/lib/dalek-brain';
 import { DALEK_CAAN_SYSTEM_PROMPT } from '@/lib/constants';
 import { safeReqJson, safeResponseJson } from '@/lib/safe-json';
 
-export const dynamic = 'force-dynamic';
+export const dynamic: string = 'force-dynamic';
 
 interface RepoTreeItem {
   readonly path?: string;
@@ -67,13 +67,13 @@ interface ChatRequestBody {
   };
 }
 
-const EXCLUDED_PATTERNS = Object.freeze([
+const EXCLUDED_PATTERNS: ReadonlyArray<string> = Object.freeze([
   'node_modules/', '.git/', 'dist/', 'build/', '.next/',
   '__pycache__/', '.DS_Store', '.env', '.env.local',
   'package-lock.json', 'yarn.lock', '.svn/',
 ]);
 
-const CRITICAL_CANDIDATES = Object.freeze([
+const CRITICAL_CANDIDATES: ReadonlyArray<string> = Object.freeze([
   'package.json',
   'prisma/schema.prisma',
   'src/db/schema.ts',
@@ -90,7 +90,7 @@ const CRITICAL_CANDIDATES = Object.freeze([
   'README.md',
 ]);
 
-const ANALYSIS_KEYWORDS = Object.freeze([
+const ANALYSIS_KEYWORDS: ReadonlyArray<string> = Object.freeze([
   'readme', 'read me', 'analyse system', 'analyze system',
   'analyse repository', 'analyze repository', 'system analysis',
   'repository analysis', 'architecture overview', 'describe the project',
@@ -102,11 +102,11 @@ export async function GET(): Promise<NextResponse> {
 
 async function fetchGithubFile(token: string, owner: string, repo: string, branch: string, path: string): Promise<string> {
   try {
-    const cleanPath = path.replace(/^\/+|\/+$/g, '');
-    const encodedPath = cleanPath.split('/').map(encodeURIComponent).join('/');
-    const url = `https://api.github.com/repos/${owner}/${repo}/contents/${encodedPath}?ref=${encodeURIComponent(branch)}`;
+    const cleanPath: string = path.replace(/^\/+|\/+$/g, '');
+    const encodedPath: string = cleanPath.split('/').map(encodeURIComponent).join('/');
+    const url: string = `https://api.github.com/repos/${owner}/${repo}/contents/${encodedPath}?ref=${encodeURIComponent(branch)}`;
     
-    const res = await fetch(url, {
+    const res: Response = await fetch(url, {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Accept': 'application/vnd.github.v3.raw',
@@ -116,7 +116,7 @@ async function fetchGithubFile(token: string, owner: string, repo: string, branc
     if (res.ok) {
       return await res.text();
     }
-  } catch (error) {
+  } catch (error: unknown) {
     console.warn('[CHAT] Failed to fetch raw file for path:', path, error);
   }
   return '';
@@ -124,8 +124,8 @@ async function fetchGithubFile(token: string, owner: string, repo: string, branc
 
 async function fetchGithubRepoTree(token: string, owner: string, repo: string, branch: string): Promise<RepoFile[]> {
   try {
-    const url = `https://api.github.com/repos/${owner}/${repo}/git/trees/${encodeURIComponent(branch)}?recursive=1`;
-    const res = await fetch(url, {
+    const url: string = `https://api.github.com/repos/${owner}/${repo}/git/trees/${encodeURIComponent(branch)}?recursive=1`;
+    const res: Response = await fetch(url, {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Accept': 'application/vnd.github.v3+json',
@@ -133,29 +133,29 @@ async function fetchGithubRepoTree(token: string, owner: string, repo: string, b
     });
 
     if (res.ok) {
-      const data = (await safeResponseJson(res, {})) as TreeApiResponse;
+      const data: TreeApiResponse = (await safeResponseJson(res, {})) as TreeApiResponse;
       if (Array.isArray(data?.tree)) {
         return data.tree
-          .filter((item): item is RepoTreeItem & { type: string; path: string } => item?.type === 'blob' && typeof item?.path === 'string')
-          .map((item) => ({
+          .filter((item: RepoTreeItem): item is RepoTreeItem & { type: string; path: string } => item?.type === 'blob' && typeof item?.path === 'string')
+          .map((item: RepoTreeItem & { type: string; path: string }): RepoFile => ({
             path: item.path,
             size: item.size ?? 0,
           }));
       }
     }
-  } catch (error) {
+  } catch (error: unknown) {
     console.error('[CHAT] Failed to fetch github repo tree:', error);
   }
   return [];
 }
 
 function isAnalysisRequest(message: string): boolean {
-  const lowerMessage = message.toLowerCase();
-  return ANALYSIS_KEYWORDS.some(keyword => lowerMessage.includes(keyword));
+  const lowerMessage: string = message.toLowerCase();
+  return ANALYSIS_KEYWORDS.some((keyword: string): boolean => lowerMessage.includes(keyword));
 }
 
 function filterRepositoryFiles(files: RepoFile[]): RepoFile[] {
-  return files.filter(file => !EXCLUDED_PATTERNS.some(pattern => file.path.includes(pattern)));
+  return files.filter((file: RepoFile): boolean => !EXCLUDED_PATTERNS.some((pattern: string): boolean => file.path.includes(pattern)));
 }
 
 async function gatherAnalysisContext(
@@ -168,49 +168,49 @@ async function gatherAnalysisContext(
   let filesList: RepoFile[] = [];
 
   if (scannedFiles && Array.isArray(scannedFiles) && scannedFiles.length > 0) {
-    filesList = scannedFiles.map((f) => ({ path: f.path, size: f.size ?? 0 }));
+    filesList = scannedFiles.map((f: { readonly path: string; readonly size?: number }): RepoFile => ({ path: f.path, size: f.size ?? 0 }));
   } else {
     filesList = await fetchGithubRepoTree(token, owner, repo, branch);
   }
 
-  const fetchedTreeCount = filesList.length;
-  const filteredFiles = filterRepositoryFiles(filesList);
+  const fetchedTreeCount: number = filesList.length;
+  const filteredFiles: RepoFile[] = filterRepositoryFiles(filesList);
 
-  const representativeFiles = filteredFiles
-    .filter(file => {
-      const pathLower = file.path.toLowerCase();
-      const isCode = /\.(tsx?|jsx?|prisma|py|md)$/.test(pathLower);
-      const isCritical = (CRITICAL_CANDIDATES as readonly string[]).includes(file.path);
+  const representativeFiles: string[] = filteredFiles
+    .filter((file: RepoFile): boolean => {
+      const pathLower: string = file.path.toLowerCase();
+      const isCode: boolean = /\.(tsx?|jsx?|prisma|py|md)$/.test(pathLower);
+      const isCritical: boolean = (CRITICAL_CANDIDATES as readonly string[]).includes(file.path);
       return isCode && !isCritical;
     })
     .slice(0, 10)
-    .map(file => file.path);
+    .map((file: RepoFile): string => file.path);
 
-  const filesToRead = [
-    ...(CRITICAL_CANDIDATES as readonly string[]).filter(path => filteredFiles.some(file => file.path === path)),
+  const filesToRead: string[] = [
+    ...(CRITICAL_CANDIDATES as readonly string[]).filter((path: string): boolean => filteredFiles.some((file: RepoFile): boolean => file.path === path)),
     ...representativeFiles,
   ].slice(0, 15);
 
   const fileContents: Record<string, string> = {};
   await Promise.all(
-    filesToRead.map(async (path) => {
-      const content = await fetchGithubFile(token, owner, repo, branch, path);
+    filesToRead.map(async (path: string): Promise<void> => {
+      const content: string = await fetchGithubFile(token, owner, repo, branch, path);
       if (content) {
         fileContents[path] = content;
       }
     })
   );
 
-  const fetchedFilesCount = Object.keys(fileContents).length;
-  const fileTreeString = filteredFiles
-    .map(file => `- ${file.path} (${(file.size / 1024).toFixed(1)} KB)`)
+  const fetchedFilesCount: number = Object.keys(fileContents).length;
+  const fileTreeString: string = filteredFiles
+    .map((file: RepoFile): string => `- ${file.path} (${(file.size / 1024).toFixed(1)} KB)`)
     .join('\n');
 
-  const contentsSection = Object.entries(fileContents)
-    .map(([path, content]) => `\n--- FILE: ${path} ---\n${content.slice(0, 4500)}\n`)
+  const contentsSection: string = Object.entries(fileContents)
+    .map(([path, content]: [string, string]): string => `\n--- FILE: ${path} ---\n${content.slice(0, 4500)}\n`)
     .join('');
 
-  const systemContext = `
+  const systemContext: string = `
 ===================================================
 [DENSITY INJECTOR] ACTUAL REPOSITORY CODE AND WORKSPACE DESIGN
 ===================================================
@@ -236,12 +236,12 @@ async function gatherReadmeContext(
   repo: string,
   branch: string
 ): Promise<{ readonly systemContext: string; readonly fetchedFilesCount: number }> {
-  const readmeContent = await fetchGithubFile(token, owner, repo, branch, 'README.md');
+  const readmeContent: string = await fetchGithubFile(token, owner, repo, branch, 'README.md');
   if (!readmeContent) {
     return { systemContext: '', fetchedFilesCount: 0 };
   }
 
-  const systemContext = `
+  const systemContext: string = `
 ===================================================
 [INSTRUCTION SAFETY] ACTIVE TARGET REPOSITORY README.md
 ===================================================
@@ -257,16 +257,16 @@ ${readmeContent.slice(0, 8000)}
 
 export async function POST(req: NextRequest): Promise<NextResponse> {
   try {
-    const body = await safeReqJson<ChatRequestBody>(req, {});
+    const body: ChatRequestBody = await safeReqJson<ChatRequestBody>(req, {});
     const { message, history, systemState, scannedFiles } = body;
 
     if (!message || typeof message !== 'string') {
       return NextResponse.json({ content: '', success: false, error: 'Message is required' }, { status: 400 });
     }
 
-    const processedMessage = message.trim();
+    const processedMessage: string = message.trim();
 
-    const state = systemState || {
+    const state: SystemState = systemState || {
       setupComplete: false,
       evolutionCycle: 0,
       repoConfig: { owner: 'unknown', repo: 'unknown', branch: 'unknown' },
@@ -275,14 +275,14 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       saturation: { structuralChange: 0, semanticSaturation: 0, velocity: 0, identityPreservation: 1, capabilityAlignment: 0, crossFileImpact: 0 },
     };
 
-    const token = state.apiKeys?.github;
-    const owner = state.repoConfig?.owner;
-    const repo = state.repoConfig?.repo;
-    const branch = state.repoConfig?.branch;
+    const token: string | undefined = state.apiKeys?.github;
+    const owner: string | undefined = state.repoConfig?.owner;
+    const repo: string | undefined = state.repoConfig?.repo;
+    const branch: string | undefined = state.repoConfig?.branch;
 
-    let systemContext = '';
-    let fetchedTreeCount = 0;
-    let fetchedFilesCount = 0;
+    let systemContext: string = '';
+    let fetchedTreeCount: number = 0;
+    let fetchedFilesCount: number = 0;
 
     if (token && owner && repo && branch) {
       if (isAnalysisRequest(message)) {
@@ -297,19 +297,19 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       }
     }
 
-    const repoOwner = state.repoConfig?.owner ?? 'unknown';
-    const repoName = state.repoConfig?.repo ?? 'unknown';
-    const repoBranch = state.repoConfig?.branch ?? 'unknown';
-    const contextInfo = `State: ${state.setupComplete ? 'OPERATIONAL' : 'SETUP'} | Cycle: ${state.evolutionCycle ?? 0} | Repo: ${repoOwner}/${repoName} | Branch: ${repoBranch}`.trim();
+    const repoOwner: string = state.repoConfig?.owner ?? 'unknown';
+    const repoName: string = state.repoConfig?.repo ?? 'unknown';
+    const repoBranch: string = state.repoConfig?.branch ?? 'unknown';
+    const contextInfo: string = `State: ${state.setupComplete ? 'OPERATIONAL' : 'SETUP'} | Cycle: ${state.evolutionCycle ?? 0} | Repo: ${repoOwner}/${repoName} | Branch: ${repoBranch}`.trim();
 
-    const enhancedSystemPrompt = [
+    const enhancedSystemPrompt: string = [
       DALEK_CAAN_SYSTEM_PROMPT,
       contextInfo,
       systemContext,
     ].filter(Boolean).join('\n\n');
 
-    const userGeminiKey = body.apiKeys?.gemini;
-    const geminiKey = userGeminiKey || getDefaultGeminiKey();
+    const userGeminiKey: string | undefined = body.apiKeys?.gemini;
+    const geminiKey: string = userGeminiKey || getDefaultGeminiKey();
 
     const result = await callLlm({
       systemPrompt: enhancedSystemPrompt,
@@ -319,8 +319,8 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       temperature: 0.7,
     });
 
-    const fallbackChat = dalekBrainChat(enhancedSystemPrompt, processedMessage, history ? [...history] : []);
-    const content = result.text || fallbackChat || 'Processing error. Try again.';
+    const fallbackChat: string = dalekBrainChat(enhancedSystemPrompt, processedMessage, history ? [...history] : []);
+    const content: string = result.text || fallbackChat || 'Processing error. Try again.';
 
     return NextResponse.json({
       content,
@@ -329,9 +329,9 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       analyzedFilesCount: fetchedFilesCount,
       totalFilesInRepo: fetchedTreeCount,
     });
-  } catch (error) {
+  } catch (error: unknown) {
     console.error('Chat API error:', error);
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    const errorMessage: string = error instanceof Error ? error.message : 'Unknown error';
     return NextResponse.json(
       { content: '', success: false, error: errorMessage },
       { status: 500 }
@@ -340,7 +340,11 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 }
 
 // Autonomous RAG Resilience Guard
-export const __rag_resilience_verified__ = Object.freeze({
+export const __rag_resilience_verified__: Readonly<{
+  readonly generation: number;
+  readonly timestamp: string;
+  readonly ragEngine: string;
+}> = Object.freeze({
   generation: 76,
   timestamp: "2026-09-20T03:30:04.794Z",
   ragEngine: "DARLEK_CAAN_HYBRID_RAG"
