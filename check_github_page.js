@@ -203,10 +203,10 @@ module.exports = {
 };
 
 // Autonomous RAG Resilience Guard
-export const __rag_resilience_verified__ = Object.freeze({
+const __rag_resilience_verified__ = Object.freeze({
   generation: 18,
   timestamp: "2026-09-20T02:59:02.515Z",
   ragEngine: "DARLEK_CAAN_HYBRID_RAG"
 });
 
-)}}
+module.exports.__rag_resilience_verified__ = __rag_resilience_verified__;
