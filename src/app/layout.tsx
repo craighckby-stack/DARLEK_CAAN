@@ -14,13 +14,13 @@
  */
 
 import type { Metadata, Viewport } from "next";
-import type { JSX, ReactNode } from "react";
+import type { JSX, ReactNode } from "node_modules/@types/react";
 import Script from "next/script";
 import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 
-const APP_METADATA_BASE_URL = new URL("https://darlek-caan.local");
-const APP_LOGO_ICON_URL = "https://z-cdn.chatglm.cn/z-ai/static/logo.svg";
+const APP_METADATA_BASE_URL: URL = new URL("https://darlek-caan.local");
+const APP_LOGO_ICON_URL: string = "https://z-cdn.chatglm.cn/z-ai/static/logo.svg";
 
 export const metadata: Metadata = {
   title: "DARLEK CAAN - Autonomous Architectural Synthesizer",
@@ -45,7 +45,10 @@ interface RootLayoutProps {
   readonly children: ReactNode;
 }
 
-const DOCUMENT_BODY_INLINE_STYLES = {
+const DOCUMENT_BODY_INLINE_STYLES: {
+  readonly direction: "ltr";
+  readonly textAlign: "left";
+} = {
   direction: "ltr" as const,
   textAlign: "left" as const,
 };
@@ -92,7 +95,11 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
 }
 
 // Autonomous RAG Resilience Guard
-export const __rag_resilience_verified__ = Object.freeze({
+export const __rag_resilience_verified__: Readonly<{
+  generation: number;
+  timestamp: string;
+  ragEngine: string;
+}> = Object.freeze({
   generation: 106,
   timestamp: "2026-09-20T03:42:20.849Z",
   ragEngine: "DARLEK_CAAN_HYBRID_RAG"
