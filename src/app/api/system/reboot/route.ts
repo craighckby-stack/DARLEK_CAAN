@@ -12,8 +12,8 @@ import path from 'path';
 import { db } from '@/lib/db';
 import { safeReqJson } from '@/lib/safe-json';
 
-export const maxDuration = 120;
-export const dynamic = 'force-dynamic';
+export const maxDuration: number = 120;
+export const dynamic: string = 'force-dynamic';
 
 export interface RebootFileResult {
   file: string;
@@ -59,8 +59,8 @@ const ALLOWED_ROOT_FILES: ReadonlySet<string> = new Set([
 ]);
 
 const SOURCE_EXTENSIONS: ReadonlySet<string> = new Set(['.ts', '.tsx', '.js', '.jsx', '.css', '.json', '.html']);
-const RATE_LIMIT_DELAY_MS = 300;
-const FETCH_TIMEOUT_MS = 8000;
+const RATE_LIMIT_DELAY_MS: number = 300;
+const FETCH_TIMEOUT_MS: number = 8000;
 
 function isAllowedFile(filePath: string): boolean {
   return filePath.startsWith('src/') || filePath.startsWith('public/') || ALLOWED_ROOT_FILES.has(filePath);
@@ -80,7 +80,7 @@ async function fetchSessionMutations(sessionId: string): Promise<string[]> {
       orderBy: { createdAt: 'desc' },
       select: { filePath: true },
     });
-    return mutations.map((mutation: any) => mutation.filePath);
+    return mutations.map((mutation: { filePath: string }) => mutation.filePath);
   } catch {
     return [];
   }
@@ -95,7 +95,7 @@ function isValidSourcePath(filePath: string): boolean {
     return false;
   }
 
-  const extension = path.extname(filePath).toLowerCase();
+  const extension: string = path.extname(filePath).toLowerCase();
   if (SOURCE_EXTENSIONS.has(extension)) {
     return true;
   }
@@ -116,8 +116,8 @@ async function fetchRepositoryTreeSources(
   branch: string,
   token: string
 ): Promise<string[]> {
-  const treeUrl = `https://api.github.com/repos/${owner}/${repo}/git/trees/${encodeURIComponent(branch)}?recursive=1`;
-  const response = await fetch(treeUrl, { headers: createGitHubHeaders(token) });
+  const treeUrl: string = `https://api.github.com/repos/${owner}/${repo}/git/trees/${encodeURIComponent(branch)}?recursive=1`;
+  const response: Response = await fetch(treeUrl, { headers: createGitHubHeaders(token) });
 
   if (!response.ok) {
     return [];
@@ -130,14 +130,14 @@ async function fetchRepositoryTreeSources(
   }
 
   return treeItems
-    .filter((item) => item.type === 'blob' && isValidSourcePath(item.path))
-    .map((item) => item.path);
+    .filter((item: GitHubTreeItem) => item.type === 'blob' && isValidSourcePath(item.path))
+    .map((item: GitHubTreeItem) => item.path);
 }
 
 async function createTimestampedBackupDir(projectRoot: string): Promise<{ backupDir: string; timestamp: string }> {
-  const now = new Date();
-  const timestamp = now.toISOString().replace(/[:.]/g, '-').slice(0, 19);
-  const backupDir = path.join(projectRoot, '.darleK-backups', `pre-reboot-${timestamp}`);
+  const now: Date = new Date();
+  const timestamp: string = now.toISOString().replace(/[:.]/g, '-').slice(0, 19);
+  const backupDir: string = path.join(projectRoot, '.darleK-backups', `pre-reboot-${timestamp}`);
   await fs.mkdir(backupDir, { recursive: true });
   return { backupDir, timestamp };
 }
@@ -149,13 +149,13 @@ async function fetchGitHubFileContent(
   branch: string,
   token: string
 ): Promise<string> {
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+  const controller: AbortController = new AbortController();
+  const timeoutId: NodeJS.Timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
 
   try {
-    const fileUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${encodeURIComponent(filePath)}?ref=${encodeURIComponent(branch)}`;
+    const fileUrl: string = `https://api.github.com/repos/${owner}/${repo}/contents/${encodeURIComponent(filePath)}?ref=${encodeURIComponent(branch)}`;
 
-    const response = await fetch(fileUrl, {
+    const response: Response = await fetch(fileUrl, {
       headers: createGitHubHeaders(token),
       signal: controller.signal,
     });
@@ -191,7 +191,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       );
     }
 
-    let mutatedFiles = sessionId ? await fetchSessionMutations(sessionId) : [];
+    let mutatedFiles: string[] = sessionId ? await fetchSessionMutations(sessionId) : [];
 
     if (mutatedFiles.length === 0) {
       mutatedFiles = await fetchRepositoryTreeSources(owner, repo, branch, token);
@@ -208,13 +208,13 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       });
     }
 
-    const projectRoot = process.cwd();
+    const projectRoot: string = process.cwd();
     const { backupDir, timestamp } = await createTimestampedBackupDir(projectRoot);
 
     const results: RebootFileResult[] = [];
-    let updatedCount = 0;
-    let failedCount = 0;
-    let skippedCount = 0;
+    let updatedCount: number = 0;
+    let failedCount: number = 0;
+    let skippedCount: number = 0;
 
     for (const [index, filePath] of mutatedFiles.entries()) {
       if (!isAllowedFile(filePath)) {
@@ -225,7 +225,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
       try {
         if (index > 0) {
-          await new Promise((resolve) => setTimeout(resolve, RATE_LIMIT_DELAY_MS));
+          await new Promise<void>((resolve: () => void) => setTimeout(resolve, RATE_LIMIT_DELAY_MS));
         }
 
         const [newContent, fileExistsInfo] = await Promise.all([
@@ -233,10 +233,10 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
           fs.stat(path.join(projectRoot, filePath)).then(() => true).catch(() => false)
         ]);
 
-        const localPath = path.join(projectRoot, filePath);
+        const localPath: string = path.join(projectRoot, filePath);
 
         if (fileExistsInfo) {
-          const backupPath = path.join(backupDir, filePath);
+          const backupPath: string = path.join(backupDir, filePath);
           await fs.mkdir(path.dirname(backupPath), { recursive: true });
           
           const [existingContent] = await Promise.all([
@@ -257,7 +257,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
         results.push({ file: filePath, status: 'updated' });
       } catch (error: unknown) {
-        const errorMessage = error instanceof Error ? error.message : 'Unknown error encountered';
+        const errorMessage: string = error instanceof Error ? error.message : 'Unknown error encountered';
         results.push({ file: filePath, status: 'error', error: errorMessage });
         failedCount++;
       }
@@ -274,13 +274,17 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     });
   } catch (error: unknown) {
     console.error('System reboot encountered an unhandled error:', error);
-    const errorMessage = error instanceof Error ? error.message : 'Unknown server error';
+    const errorMessage: string = error instanceof Error ? error.message : 'Unknown server error';
     return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
 
 // Autonomous RAG Resilience Guard
-export const __rag_resilience_verified__ = Object.freeze({
+export const __rag_resilience_verified__: Readonly<{
+  generation: number;
+  timestamp: string;
+  ragEngine: string;
+}> = Object.freeze({
   generation: 101,
   timestamp: "2026-09-20T03:40:24.432Z",
   ragEngine: "DARLEK_CAAN_HYBRID_RAG"
