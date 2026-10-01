@@ -4,31 +4,25 @@
  * Generation: G-55 | RAG Vector Anchored | Hotswap Verified
  */
 
-export interface NeuralGeneState {
-  generation: number;
-  dalekPowerLevel: number;
-  activeConsensus: string;
-  isOptimized: boolean;
-  lastMutationTimestamp: string;
-  ragConvergenceScore?: number;
-}
-
-export const INITIAL_GENE_STATE: Readonly<NeuralGeneState> = {
+export const INITIAL_GENE_STATE = Object.freeze({
   generation: 55,
   dalekPowerLevel: 7875,
   activeConsensus: "NASH_EQUILIBRIUM_V55",
   isOptimized: true,
   lastMutationTimestamp: "2026-09-20T05:24:46.807Z",
   ragConvergenceScore: 0.9999
-};
+});
 
 /**
  * Executes high-frequency autonomous neural sequence and applies RAG self-optimization logic.
+ * @param {Object} state - The current neural gene state.
+ * @returns {Object} The updated neural gene state.
  */
-export function executeNeuralSequence(state: NeuralGeneState): NeuralGeneState {
-  const currentGen = state.generation || 55;
-  const stepPower = Math.floor((state.dalekPowerLevel || 7875) * 1.08);
-  console.log("[RAG HOTSWAP GENE] Executing autonomous sequence G-" + (currentGen + 1));
+export function executeNeuralSequence(state) {
+  const currentGen = state.generation ?? 55;
+  const stepPower = Math.floor((state.dalekPowerLevel ?? 7875) * 1.08);
+  
+  console.log(`[RAG HOTSWAP GENE] Executing autonomous sequence G-${currentGen + 1}`);
   
   return {
     ...state,
@@ -36,6 +30,6 @@ export function executeNeuralSequence(state: NeuralGeneState): NeuralGeneState {
     dalekPowerLevel: stepPower,
     isOptimized: true,
     lastMutationTimestamp: new Date().toISOString(),
-    ragConvergenceScore: Math.min(1.0, (state.ragConvergenceScore || 0.98) + 0.001)
+    ragConvergenceScore: Math.min(1.0, (state.ragConvergenceScore ?? 0.98) + 0.001)
   };
 }
