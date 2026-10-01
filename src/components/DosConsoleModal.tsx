@@ -6,7 +6,7 @@
  *       triggering autonomous file hotswaps, and visualizing RAG brain ingestion.
  */
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import type { SystemState } from '@/lib/types';
 import { Terminal, X, Minimize2, Maximize2, Play, Pause, Zap, Database, RefreshCw, ChevronUp, Brain, HardDrive } from 'lucide-react';
 import { msDosEngine, type DosLogLine, type MsDosEngineState } from '@/lib/msDosEngine';
@@ -47,7 +47,8 @@ export default function DosConsoleModal({
   // Focus input when opened and not docked
   useEffect(() => {
     if (isOpen && !isDocked) {
-      setTimeout(() => inputRef.current?.focus(), 100);
+      const timer = setTimeout(() => inputRef.current?.focus(), 100);
+      return () => clearTimeout(timer);
     }
   }, [isOpen, isDocked]);
 
@@ -73,9 +74,7 @@ export default function DosConsoleModal({
     }
   }, [engineState.lines, autoScroll, isOpen, isDocked]);
 
-  if (!isOpen) return null;
-
-  const handleCommandSubmit = async (e: React.FormEvent) => {
+  const handleCommandSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     const cmd = dosInput.trim();
     if (!cmd) return;
@@ -90,9 +89,9 @@ export default function DosConsoleModal({
     }
 
     await msDosEngine.executeCommand(cmd);
-  };
+  }, [dosInput, onClose]);
 
-  const handleKeyDownHistory = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDownHistory = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'ArrowUp') {
       e.preventDefault();
       if (commandHistory.length === 0) return;
@@ -112,7 +111,9 @@ export default function DosConsoleModal({
         setDosInput('');
       }
     }
-  };
+  }, [commandHistory, historyIndex]);
+
+  if (!isOpen) return null;
 
   // If docked, render a compact retro floating bottom bar so it's always running & visible
   if (isDocked) {
@@ -146,6 +147,8 @@ export default function DosConsoleModal({
       </div>
     );
   }
+
+  const ragMetrics = getRagBrainRealMetrics();
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80 backdrop-blur-xs animate-in fade-in duration-150">
@@ -240,21 +243,14 @@ export default function DosConsoleModal({
             <span>LAST FILE: {engineState.lastHotswappedFile || 'neuralActiveGene.ts'}</span>
           </div>
           <div className="flex items-center gap-3 text-white/70">
-            {(() => {
-              const rag = getRagBrainRealMetrics();
-              return (
-                <>
-                  <span className="text-[#00ffcc] font-bold flex items-center gap-1">
-                    <Brain size={10} />
-                    ABILITY: {rag.mutationCount}m / {rag.hotswapCount}h
-                  </span>
-                  <span className="text-emerald-300 flex items-center gap-1">
-                    <HardDrive size={10} />
-                    FREE: {rag.availableFormatted} ({rag.availablePercent}%)
-                  </span>
-                </>
-              );
-            })()}
+            <span className="text-[#00ffcc] font-bold flex items-center gap-1">
+              <Brain size={10} />
+              ABILITY: {ragMetrics.mutationCount}m / {ragMetrics.hotswapCount}h
+            </span>
+            <span className="text-emerald-300 flex items-center gap-1">
+              <HardDrive size={10} />
+              FREE: {ragMetrics.availableFormatted} ({ragMetrics.availablePercent}%)
+            </span>
             <span>REPO: {systemState.repoConfig?.repo || 'Autonomous Engine'}</span>
           </div>
         </div>
@@ -270,33 +266,36 @@ export default function DosConsoleModal({
           }}
           onClick={() => inputRef.current?.focus()}
         >
-          {engineState.lines.map((line) => (
-            <div
-              key={line.id}
-              className="flex gap-2 items-start break-all hover:bg-white/5 px-1 py-0.5 rounded"
-            >
-              <span className="text-white/50 shrink-0 font-mono text-[11px] sm:text-xs">
-                [{line.time}]
-              </span>
-              <span className="text-white/70 shrink-0 font-mono text-[11px] sm:text-xs min-w-[85px]">
-                [{line.addr}]
-              </span>
-              <span
-                className={`font-mono font-bold shrink-0 text-[11px] sm:text-xs ${
-                  line.tag.includes('HOTSWAP')
-                    ? 'text-yellow-400'
-                    : line.tag.includes('RAG')
-                    ? 'text-cyan-400'
-                    : line.tag.includes('ERR')
-                    ? 'text-red-400'
-                    : 'text-white'
-                }`}
+          {engineState.lines.map((line) => {
+            const isHotswap = line.tag.includes('HOTSWAP');
+            const isRag = line.tag.includes('RAG');
+            const isErr = line.tag.includes('ERR');
+            const tagColorClass = isHotswap
+              ? 'text-yellow-400'
+              : isRag
+              ? 'text-cyan-400'
+              : isErr
+              ? 'text-red-400'
+              : 'text-white';
+
+            return (
+              <div
+                key={line.id}
+                className="flex gap-2 items-start break-all hover:bg-white/5 px-1 py-0.5 rounded"
               >
-                [{line.tag}]
-              </span>
-              <span className="text-white font-mono flex-1 whitespace-pre-wrap">{line.message}</span>
-            </div>
-          ))}
+                <span className="text-white/50 shrink-0 font-mono text-[11px] sm:text-xs">
+                  [{line.time}]
+                </span>
+                <span className="text-white/70 shrink-0 font-mono text-[11px] sm:text-xs min-w-[85px]">
+                  [{line.addr}]
+                </span>
+                <span className={`font-mono font-bold shrink-0 text-[11px] sm:text-xs ${tagColorClass}`}>
+                  [{line.tag}]
+                </span>
+                <span className="text-white font-mono flex-1 whitespace-pre-wrap">{line.message}</span>
+              </div>
+            );
+          })}
           <div ref={terminalEndRef} />
         </div>
 
@@ -332,7 +331,6 @@ export default function DosConsoleModal({
     </div>
   );
 }
-
 
 // Autonomous RAG Resilience Guard
 export const __rag_resilience_verified__ = Object.freeze({
