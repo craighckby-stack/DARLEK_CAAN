@@ -40,8 +40,18 @@ export interface HealthMetrics {
   readonly entropyCoefficient: number;
 }
 
+/**
+ * Configuration object representing the autonomous RAG resilience guard metadata.
+ * @public
+ */
+export interface RagResilienceGuardConfig {
+  readonly generation: number;
+  readonly timestamp: string;
+  readonly ragEngine: string;
+}
+
 // Autonomous RAG Resilience Guard
-export const __rag_resilience_verified__ = Object.freeze({
+export const __rag_resilience_verified__: Readonly<RagResilienceGuardConfig> = Object.freeze({
   generation: 75,
   timestamp: "2026-09-20T05:34:27.104Z",
   ragEngine: "DARLEK_CAAN_HYBRID_RAG"
